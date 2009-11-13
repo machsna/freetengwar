@@ -922,10 +922,16 @@ g_tengparen = ps("uniE067") {
  lbarap = point(551m,70m);
 };
 g_whtengwa_varone = ps("uniE039.var1") { 
+ uap = point(582m,1792m);
+ dap = point(582m,-128m);
 };
 g_whtengwa_vartwo = ps("uniE039.var2") { 
+ uap = point(570m,1792m);
+ dap = point(570m,-128m);
 };
 g_whtengwa = ps("uniE039") { 
+ uap = point(561m,1792m);
+ dap = point(561m,-128m);
 };
 g_hyarmen = ps("uniE028") { 
  uap = point(576m,1139m);

@@ -70,8 +70,9 @@ def draw_whtengwavarone(expr style, secstyle) =
     p2=z3{-dir a3}..z4{left}..z5{up}..tension 1.2..z6..tension 2 and 1.2..z7{up}..tension 1.2..z8{left}..{-dir a9}z9;
   fi
   draw_stroke(p2,ap2);
-%  setap("uap",(1/2[lpad,w-rpad],tex+apy));
-%  setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
+
+  setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
 enddef;
@@ -108,8 +109,8 @@ def draw_whtengwavartwo(expr style) =
 
   draw_stroke(p1,ap1);
 
-%  setap("uap",(1/2[lpad,w-rpad],tex+apy));
-%  setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
+  setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
 enddef;
@@ -144,8 +145,8 @@ def draw_whtengwavarthree(expr style) =
 
   draw_stroke(p1,ap1);
 
-%  setap("uap",(1/2[lpad,w-rpad],tex+apy));
-%  setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
+  setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
 enddef;
