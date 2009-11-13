@@ -4,7 +4,7 @@ FullName: Tengwar Telcontar
 FamilyName: Tengwar Telcontar
 Weight: Regular
 Copyright: Copyright (c) 2005-2009 by Johan Winge
-UComments: "2009-11-9: Created." 
+UComments: "2009-11-13: Created." 
 Version: 0.08
 ItalicAngle: 0
 UnderlinePosition: -204.8
@@ -15,12 +15,12 @@ LayerCount: 2
 Layer: 0 0 "Back"  1
 Layer: 1 0 "Fore"  0
 NeedsXUIDChange: 1
-XUID: [1021 763 582352140 9952821]
+XUID: [1021 713 769886896 6478148]
 OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
-CreationTime: 1257802213
-ModificationTime: 1257802664
+CreationTime: 1258147920
+ModificationTime: 1258148363
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
