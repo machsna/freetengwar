@@ -924,6 +924,7 @@ beginrefchr("uni0307.normal",0); % Combining dot above
 endchr;
 combinechr("uni0307","uni25CC","uap","uni0307.normal","dap")
 
+unlinkreferences:=true;
 beginrefchr("uni0308.normal",0); % Combining diaeresis
   setap("dot1",(-0.8pt,ex+1pt));
   setap("dot2",(0.8pt,ex+1pt));
@@ -940,6 +941,7 @@ beginrefchr("uni0308.narrow",0);
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
 endchr;
+unlinkreferences:=false;
 combinechr("uni0308","uni25CC","uap","uni0308.normal","dap")
 
 beginchr("uni030A.normal",0);

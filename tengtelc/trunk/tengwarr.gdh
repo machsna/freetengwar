@@ -11,14 +11,6 @@ g_zwnj = ps("uni200C") {
 };
 g_zwj = ps("uni200D") { 
 };
-g_prefeanoreanqu = ps("uniE037") { 
- uap = point(672m,1011m);
- dap = point(548m,-128m);
-};
-g_prefeanoreanqu_var = ps("uniE037.var") { 
- uap = point(630m,1011m);
- dap = point(548m,-128m);
-};
 g_longcarr = ps("uniE02C") { 
  lluuvap = point(348m,442m);
  lbarap = point(331m,70m);
@@ -921,6 +913,20 @@ g_tengparen = ps("uniE067") {
  lluuvap = point(545m,508m);
  lbarap = point(551m,70m);
 };
+g_prefeanoreanqu = ps("uniE037") { 
+ uap = point(672m,1011m);
+ dap = point(548m,-128m);
+};
+g_prefeanoreanqu_var = ps("uniE037.var") { 
+ uap = point(630m,1011m);
+ dap = point(548m,-128m);
+};
+g_startmodechange = ps("uniE06A") { 
+};
+g_endmodechange = ps("uniE06B") { 
+};
+g_bilboexclam = ps("uniE06C") { 
+};
 g_whtengwa_varone = ps("uniE039.var1") { 
  uap = point(582m,1792m);
  dap = point(582m,-128m);
@@ -1566,11 +1572,5 @@ g_tenginterrog = ps("uniE066") {
 g_tengtilde = ps("uniE068") { 
 };
 g_tengdbltilde = ps("uniE069") { 
-};
-g_startmodechange = ps("uniE06A") { 
-};
-g_endmodechange = ps("uniE06B") { 
-};
-g_bilboexclam = ps("uniE06C") { 
 };
 endtable;
