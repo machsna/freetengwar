@@ -31,6 +31,93 @@ numeric dotsize[];
 %dotsize1=0.98; dotsize2=1.00; dotsize3=1.04;
 dotsize1=1.02; dotsize2=1.04; dotsize3=1.09;
 
+def draw_prefeanoreanqu(expr style) =
+
+  padding(0.2pt,if style=descend: 0.8pt else: 0.7pt fi);
+  a2-2=a3+5=a4+5=a5+5=35;
+  use(a2); z3=rt(0,0);
+  use(a3); z4=rt(0,0);
+  z1=(w-rpad,0.3tex);
+  if style=descend:
+     x1-x2=0.5*xpart(z4-z3);
+     y2=-tdesc;
+  elseif style=curved:
+     z2=(0.3[x11,x1],-tdesc);
+  fi
+
+  a10=a11+2=a12+3=a13+10=a14-5=35;
+  use(a10); top z10=(if style=descend: 0.55 else: 0.5 fi [x11,x1],tex+o);
+  z11=(x13+0.65pt,0.50tex);
+  use(a12); bot z12=(0.27[x11,x1],0);
+  use(a13); bot z13=(lpad,0);
+
+  if style=descend:
+     ap1=ang(a12..a11..a10..a2..a3..a4..a5..a3);
+     p1=z12..z11{up}..z10{right}..z1{down}..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
+  elseif style=curved:
+     ap1=ang(a12..a11..a10..a2..a3);
+     p1=z12..z11{up}..z10{right}..z1{down}..{-dir a3}z2;
+  fi
+
+  use(a14); bot z14=find_telcoap(0,a14,180,subpath(2,infinity) of p1,subpath(2,infinity) of ap1);
+
+  ap2=ang(a13..a12..a14);
+  p2=z13..z12..z14;
+
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap2);
+
+  setap("uap",(x10,tex+apy));
+  setap("dap",(0.4[x11,x1],-apy));
+
+enddef;
+  
+beginchr(prefeanoreanqu,1.25en);
+   draw_prefeanoreanqu(descend);
+endchr;
+pause;
+beginchr(prefeanoreanqu_var,1.25en);
+   draw_prefeanoreanqu(curved);
+endchr;
+pause;
+
+beginchr(startmodechange,1.0en);
+  a1=a2=a3=a4=35;
+  x2-x1=1.15pt;
+  1/2[x1,x2]=1/2w;
+  x3=x1; x4=x2;
+  use(a1); top y1=top y2=tasc;
+  y1-y3=y2-y4=0.8tex;
+  p1=z1..z3;
+  p2=z2..z4;
+  draw_stroke(p1,ang(a1..a3));
+  draw_stroke(p2,ang(a2..a4));
+endchr;
+beginrefchr(endmodechange,1.05en);
+  setap("ap",(0,-tasc+1/4tex));
+  attach(startmodechange,"ap","origo");
+endchr;
+
+beginchr(bilboexclam,2en);
+  padding(1.0pt,1.0pt);
+  z1=(1/2w,1/2tex);
+  draw_diamond(1)(1.2);
+  
+  a2=35; a3=40; a4=40; a5=52; a6=37;
+  z3=(lpad,y1);
+  z4=(x1,tasc-1.3pt);
+  z5=(w-rpad,y1);
+
+%  p1=z4..botserif(4,3)(0.9pt,0.3*abs(z4-z3),-60,3,ang(a3..a2));
+  p1=z4..botserif(4,3)(0.9pt,0.3*abs(z4-z3),-60,9,ang(a3..a2));
+%  p2=z4..botserif(4,5)(0.4pt,0.2*abs(z4-z5),a3+180,0,ang(a5..a6));
+  p2=z4..botserif(4,5)(0.9pt,0.3*abs(z4-z5),a3+180,-3,ang(a5..a6));
+
+  draw_stroke(p1,ang(a4..a3..a2));
+  draw_stroke(p2,ang(a4..a5..a6));
+endchr;
+pause;
+
 def draw_whtengwavarone(expr style, secstyle) =
   padding(0.7pt,0.7pt);
 %  if style=normal:

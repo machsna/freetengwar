@@ -71,6 +71,7 @@ mf_char_c:=-1;            % Metafont character counter
 ref_char_c:=255;          % Reference character counter
 boolean isrefchar;
 boolean forgd; forgd:=true; % Output gdh-data?
+boolean unlinkreferences; unlinkreferences:=false;
 
 % Name lookup (return index)
 vardef ps.lu(expr s) =
@@ -136,7 +137,7 @@ enddef;
 def endchr =
   if tracing:
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
-    if isrefchar:
+    if isrefchar and unlinkreferences:
       message "pe: UnlinkReference(); RemoveOverlap();";
     else:
       message "pe: Autotrace(); AddExtrema();";% Simplify(2,1); AddExtrema();";
