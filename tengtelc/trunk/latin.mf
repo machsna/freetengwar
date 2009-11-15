@@ -911,37 +911,30 @@ endchr;
 combinechr("uni0301","uni25CC","uap","uni0301.normal","dap")
 pause;
 
-beginchr("diacriticdot",0);
-  z1=(0,0);
+beginchr("uni0307.normal",0); % Combining dot above
+  z1=(0,ex+1pt);
   draw_dot(1)(1);
-endchr;
-
-beginrefchr("uni0307.normal",0); % Combining dot above
-  setap("dot",(0,ex+1pt));
-  attach("diacriticdot","dot","origo");
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
 endchr;
 combinechr("uni0307","uni25CC","uap","uni0307.normal","dap")
 
-unlinkreferences:=true;
-beginrefchr("uni0308.normal",0); % Combining diaeresis
-  setap("dot1",(-0.8pt,ex+1pt));
-  setap("dot2",(0.8pt,ex+1pt));
-  attach("diacriticdot","dot1","origo");
-  attach("diacriticdot","dot2","origo");
+beginchr("uni0308.normal",0); % Combining diaeresis
+  z1=(-0.8pt,ex+1pt);
+  z2=(0.8pt,ex+1pt);
+  draw_dot(1)(1);
+  draw_dot(2)(1);
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
 endchr;
-beginrefchr("uni0308.narrow",0);
-  setap("dot1",(-0.7pt,ex+1pt));
-  setap("dot2",(0.7pt,ex+1pt));
-  attach("diacriticdot","dot1","origo");
-  attach("diacriticdot","dot2","origo");
+beginchr("uni0308.narrow",0);
+  z1=(-0.7pt,ex+1pt);
+  z2=(0.7pt,ex+1pt);
+  draw_dot(1)(1);
+  draw_dot(2)(1);
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
 endchr;
-unlinkreferences:=false;
 combinechr("uni0308","uni25CC","uap","uni0308.normal","dap")
 
 beginchr("uni030A.normal",0);
@@ -2033,7 +2026,7 @@ beginchr("less",0.8en);
 endchr;
 pause;
 beginchr("greater",0.8en);
-  padding(1.0pt,0.5pt);
+  padding(0.5pt,1.0pt);
   a1=a3=60;
   a2=a4=20;
   x1=w-rpad;

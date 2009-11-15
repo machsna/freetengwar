@@ -168,8 +168,6 @@ g_uni0301_normal = ps("uni0301.normal") {
 g_uni0301 = ps("uni0301") { 
  dap = point(563m,-128m);
 };
-g_diacriticdot = ps("diacriticdot") { 
-};
 g_uni0307_normal = ps("uni0307.normal") { 
  dap = point(0m,973m);
  uap = point(0m,1280m);
