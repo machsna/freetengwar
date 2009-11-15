@@ -8,11 +8,13 @@ le:=1.4ex/20;
 hg:=5le;
 
 %addalias("uni25A1","dottedbox");
-addalias("uniE000","dottedbox");
-addalias("uniE001","zwj");
-addalias("uniE002","zwnj");
-addalias("uniE003","zwsp");
-addalias("uniE004","nbsp");
+%addalias("uniE000","dottedbox");
+addalias("dottedbox","dottedbox");
+% These are the code points used in the Unicode Standard PDF files:
+addalias("uniE0A0","nbsp");
+addalias("uniE20B","zwsp");
+addalias("uniE20C","zwnj");
+addalias("uniE20D","zwj");
 
 beginchr(dottedbox,20le);
   padding(2le,2le);
@@ -162,3 +164,4 @@ pause;
 
 exit;
 end.
+

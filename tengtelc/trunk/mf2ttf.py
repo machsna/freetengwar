@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 ## Tengwar Telcontar - a Tengwar unicode typeface.
 ## Copyright (C) 2005-2009 Johan Winge
 ## 
