@@ -140,7 +140,8 @@ def endchr =
     if isrefchar and unlinkreferences:
       message "pe: UnlinkReference(); RemoveOverlap();";
     else:
-      message "pe: Autotrace(); AddExtrema();";% Simplify(2,1); AddExtrema();";
+      message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
+      message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
     fi
   fi
   ps[ps.n].width := w;
@@ -260,10 +261,7 @@ enddef;
 def exit =
   if tracing:
     message "gd: endtable;"; message "";
-    message "pe: SelectAll(); Simplify(128,2);";
     message "pe: Save($1+" & ditto & ".sfd" & ditto & ");";
-%    message "pe: RoundToInt(); SetFontOrder(2);";
-%    message "pe: Generate($1+" & ditto & ".ttf" & ditto & "," & ditto & ditto & ",152);";
     message "pe: Quit(0);";
     message "";
   fi

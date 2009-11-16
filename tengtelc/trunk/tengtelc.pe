@@ -79,8 +79,15 @@ Select("capteema4luuva"); Clear();
 Select("capteema4luuvar"); Clear();
 Reencode("unicode");
 Reencode("compacted");
-SelectAll(); Scale(125,0,0);
+SelectAll();
+Scale(125,0,0);
+AddExtrema();
+Simplify(0,2,0,0,1,5000);
 RoundToInt();
+Simplify(2,2,0,0,1,5000);
+AddExtrema();
+RoundToInt();
+Simplify(128,2,0,0,1,5000);
 ClearBackground();
 SetTTFName(0x409,3,"FontForge: " + $fullname + " " + $fontversion)
 SetTTFName(0x409,9,"Johan Winge")
