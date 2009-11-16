@@ -33,7 +33,7 @@ import os
 fn=sys.argv[1].strip();
 
 print "Running MetaFont."
-os.system("mf \"\\mode:=pixpt; mag:=200; input %s.mf\"" % fn)
+os.system("mf \"\\mode:=pixpt; mag:=300; input %s.mf\"" % fn)
 
 print "Generating enc, pe and gdh file."
 charnames=[]

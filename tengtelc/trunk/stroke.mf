@@ -98,7 +98,7 @@ vardef stretch(expr l, p)=
   ang(penangle 0 of p for i=1 upto l:..penangle length p*i/l of p endfor)
 enddef;
 
-treshold=if tracing: 0.15 else: 1.0 fi; % 0.15 for mag:=200 in mf2ttf.py
+treshold=if tracing: 0.10 else: 1.0 fi; % 0.15 for mag:=200 in mf2ttf.py
 def draw_stroke(expr stroke, angles) = begingroup
   def draw_substroke(expr t, tt) =
     v:=penangle t of angles;

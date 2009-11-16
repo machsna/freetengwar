@@ -291,16 +291,16 @@ g_idieresis_conl = ps("idieresis.conl") {
  uap = point(243m,1331m);
 };
 g_dotlessj = ps("uni0237") { 
- uap = point(259m,1024m);
+ uap = point(258m,1024m);
 };
 g_dotlessj_conl = ps("uni0237.conl") { 
- uap = point(259m,1024m);
+ uap = point(258m,1024m);
 };
 g_j = ps("j") { 
- uap = point(259m,1331m);
+ uap = point(258m,1331m);
 };
 g_j_conl = ps("j.conl") { 
- uap = point(259m,1331m);
+ uap = point(258m,1331m);
 };
 g_k = ps("k") { 
 };
