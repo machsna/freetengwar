@@ -12,8 +12,8 @@ ex#:=3.5pt#;
 en#:=3.1pt#;
 %asc#:=ex#+2.6pt#;
 asc#:=ex#+3.0pt#;
-%desc#:=2.7pt#;
-desc#:=2.8pt#;
+%desc#:=2.8pt#;
+desc#:=3.0pt#;
 
 % Tengwar
 tex#:=3.45pt#;

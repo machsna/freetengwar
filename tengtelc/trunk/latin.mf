@@ -706,7 +706,63 @@ beginchr("asciitilde",1.1en);
   labels(range 1 thru 2);
 endchr;
 
-pause;
+beginchr("AE",1.5en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(lpad,0);
+  z2=(0.4[x1,x7],asc);
+  y4=y2; y8=y5; z4-z2=z8-z5=z7-z6;
+  z6=(0.65[x1,x7],y1);
+  z7=(w-rpad,y6);
+  z5=whatever[z6,z2];
+  z3=whatever[z1,z2];
+  y3=y5=ex;
+  draw z1--z2--z6;
+  draw z2--z4;
+  draw z3--z8;
+  draw z6--z7;
+  labels(range 1 thru 8);
+endchr;
+
+beginchr("Oslash",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  z2=(w-rpad,0.5[y3,y1]);
+  bot z3=(x1,-o);
+  z4=(lpad,y2);
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  z5=(x4,y3);
+  z6=(x2,y1);
+  draw z5--z6;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("Eth",1.2en);
+  padding(1.2pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  z3=(w-rpad,0.45[y2,y1]);
+  draw z1--z2 & z2{right}..tension 0.75 and 1..z3{up}..tension 1 and 0.75..z1{left};
+  0.48[z2,z1]=0.4[z4,z5];
+  z5-z4=(0.8en,0);
+  draw z4--z5;
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("Thorn",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  x4=x5=x1;
+  y1-y4=y5-y2=0.25ex;
+  z3=(w-rpad,0.45[y2,y1]);
+  draw z1--z2;
+  draw z5{right}..tension 0.75 and 1..z3{up}..tension 1 and 0.75..z4{left};
+  labels(range 1 thru 5);
+endchr;
 
 
 beginchr("T",1.6en);
@@ -1235,7 +1291,24 @@ beginchr("d",0.95en);
   labels(range 1 thru 7);
 endchr;
 
-pause;
+beginchr("eth",0.95en);
+  padding(0.7pt,0.7pt);
+  use(35); top z1=(1/2[x4,x2],ex+o);
+  z2=(w-rpad,1/2ex);
+  bot z3=(1/2[x4,x2],-o);
+  z4=(lpad,1/2ex);
+  top z5=(0.1[x4,x2],asc);
+  z6=z5-0.3pt*dir(22);
+  p1=z6{dir 35}..tension 2..z5{right}..tension 1.9 and 1..z2{down}..z3{left};
+  t:=p1 heighttimes 0.65ex;
+  z7=point t of p1;
+  draw p1..z4{up}..z1{right}..{direction t of p1}z7;
+  t:=p1 heighttimes 0.57[ex,asc];
+  z8=point t of p1=0.52[z9,z10];
+  z10-z9=0.85en*dir 32;
+  draw z9--z10;
+  labels(range 1 thru 10);
+endchr;
 
 %beginchr("e",0.9en);
 %  padding(0.6pt,0.6pt);
@@ -1602,16 +1675,25 @@ beginchr("n.conl",0.80en);
 endchr;
 combinechr("ntilde","n","uap","uni0303.normal","dap");
 
-beginchr("o",0.95en);
+def draw_o(expr style) = 
   padding(0.7pt,0.7pt);
   use(35); top z1=(1/2[x4,x2],ex+o);
   z2=(w-rpad,1/2ex);
   bot z3=(1/2[x4,x2],-o);
   z4=(lpad,1/2ex);
   draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  if style=closed:
+    z5=(x4,y3);
+    z6=(x2,y1);
+    draw z5--z6;
+  fi
   setap("dap",(1/3[x3,lft x3],0-apy));
   setap("uap",(1/3[x1,rt x1],ex+apy));
   labels(range 1 thru 4);
+enddef;
+
+beginchr("o",0.95en);
+  draw_o(open);
 endchr;
 
 combinechr("ograve","o","uap","uni0300.normal","dap");
@@ -1621,11 +1703,15 @@ combinechr("otilde","o","uap","uni0303.normal","dap");
 combinechr("omacron","o","uap","uni0304.normal","dap");
 combinechr("odieresis","o","uap","uni0308.normal","dap");
 
+beginchr("oslash",0.95en);
+  draw_o(closed);
+endchr;
+
 def draw_p(expr style) =
   padding(1pt,0.7pt);
   a3=45; a4=36; a5=35; a6=35; a7=33;
-  z1=(lpad,ex); z2=(x1,-desc-o);
-  if style=normal:
+  z1=(lpad,if style=ascend: asc else: ex fi); z2=(x1,-desc-o);
+  if (style=normal) or (style=ascend):
 %    p1=ornpath(rounded,curved)(1,2); ap1=ornang(rounded,curved);
     ap1=ang(38..34..31..25..25..31);
     p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
@@ -1651,10 +1737,13 @@ enddef;
 beginchr("p",0.97en);
   draw_p(normal);
 endchr;
-pause;
 
 beginchr("p.conl",0.97en);
   draw_p(conleft);
+endchr;
+
+beginchr("thorn",0.97en);
+  draw_p(ascend);
 endchr;
 
 beginchr("q",0.95en);
