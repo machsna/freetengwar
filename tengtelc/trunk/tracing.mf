@@ -143,8 +143,10 @@ enddef;
 def endchr =
   if tracing:
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
-    if isrefchar and unlinkreferences:
-      unlinkref;
+    if isrefchar:
+      if unlinkreferences:
+        unlinkref;
+      fi
     else:
       message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
       message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
