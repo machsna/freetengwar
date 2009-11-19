@@ -363,15 +363,16 @@ beginchr("B",1.2en);
   labels(range 1 thru 5);
 endchr;
 
-beginchr("C",1.2en);
+beginchr("C",1.4en);
   padding(0.7pt,0.7pt);
   use(35);
-  z1=(w-rpad,0.85[y4,y2]);
+  z1=(0.9[x3,x5],0.85[y4,y2]);
   top z2=(0.6[x3,x1],asc);
   z3=(lpad,0.5asc);
   bot z4=(0.5[x3,x5],-o);
   z5=(w-rpad,0.3[y4,y2]);
   draw z1..z2{left}..z3{down}..z4{right}..z5;
+  setap("dap",(1/2w,-apy));
   labels(range 1 thru 5);
 endchr;
 
@@ -519,6 +520,12 @@ beginchr("O",1.4en);
   setap("uap",(1/2w,asc+apy));
   labels(range 1 thru 4);
 endchr;
+
+beginrefchr("OE",xpart(apt("O","rpad").pt)+xpart(apt("E","rpad").pt));
+  attach("O","origo","origo");
+  attach("E","rpad","lpad");
+endchr;
+%unlinkref;
 
 beginchr("Q",1.4en);
   padding(0.7pt,0.7pt);
@@ -1020,6 +1027,24 @@ beginrefchr("caron",1.1en);
 endchr;
 combinechr("uni030C","uni25CC","uap","uni030C.normal","dap")
 
+beginchr("uni0327.normal",0); % Cedilla
+  use(35);
+  z1=(0,0);
+  x2=0.15[x4,x3];
+  x3-x4=1.2pt;
+  y3=0.7[y4,y2];
+  y4=y2-0.9pt;
+  z2=z1-1.1pt*dir 65;
+  draw z1--z2 & z2..z3{down}..z4;
+  setap("uap",(0,-apy));
+  labels(range 1 thru 4);
+endchr;
+beginrefchr("cedilla",0.8en);
+  setap("dap",(1/2w,-apy));
+  attach("uni0327.normal","dap","uap");
+endchr;
+combinechr("uni0327","uni25CC","dap","uni0327.normal","uap")
+
 beginchr("uni0364.normal",0); % Combining overscript e
   a1=a2=a3-1=a4-2=a5-5=35;
   z1=(-0.5pt,y2-0.7pt);
@@ -1042,6 +1067,9 @@ combinechr("Atilde","A","uap","uni0303.normal","dap");
 combinechr("Amacron","A","uap","uni0304.normal","dap");
 combinechr("Adieresis","A","uap","uni0308.normal","dap");
 combinechr("Aring","A","uap","uni030A.normal","dap");
+
+combinechr("Ccedilla","C","dap","uni0327.normal","uap");
+pause;
 
 combinechr("Egrave","E","uap","uni0300.normal","dap");
 combinechr("Eacute","E","uap","uni0301.normal","dap");
@@ -1247,8 +1275,12 @@ beginchr("c",0.85en);
   use(a4); bot z4=(1/2[x3,x1],-o);
   z5=(x1,0.22ex);
   draw_stroke(z1..z2{left}..z3{down}..z4{right}..{dir a5}z5,ang(a1..a2..a3..a4..a5));
+  setap("dap",(x4,-apy));
   labels(range 0 thru 5);
 endchr;
+
+combinechr("ccedilla","c","dap","uni0327.normal","uap");
+pause;
 
 beginchr("d",0.95en);
   padding(0.7pt,1pt);
@@ -1275,9 +1307,13 @@ def draw_eth(expr style) =
   z2=(w-rpad,1/2ex);
   bot z3=(1/2[x4,x2],-o);
   z4=(lpad,1/2ex);
-  top z5=(0.1[x4,x2],asc);
+  top z5=(if style=closed: 0.1 elseif style=open: 0.3 fi [x4,x2],asc);
   z6=z5-0.3pt*dir(22);
-  p1=z6{dir 35}..tension 2..z5{right}..tension 1.9 and 1..z2{down}..z3{left};
+  if style=closed: 
+    p1=z6{dir 35}..tension 2..z5{right}..tension 1.9 and 1..z2{down}..z3{left};
+  elseif style=open:
+    p1=z6{dir 35}..z5{right}..z2{down}..z3{left};
+  fi
   t:=p1 heighttimes 0.65ex;
   z7=point t of p1;
   draw p1..z4{up}..z1{right}..{direction t of p1}z7;
@@ -1293,7 +1329,6 @@ enddef;
 beginchr("eth",0.95en);
   draw_eth(closed);
 endchr;
-pause;
 beginchr("partialdiff",0.95en);
   draw_eth(open);
 endchr;
@@ -1478,7 +1513,7 @@ beginrefchr("uniFB01",ps[ps.lu("f.dotlig")].width+ps[ps.lu("dotlessi.conl")].wid
   attach("f.dotlig","origo","origo");
   attach("dotlessi.conl","right","origo");
 endchr;
-unlinkref;
+%unlinkref;
 
 %beginrefchr("uniFB01.conleft",ps[ps.lu("f.conl_dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
 %  attach("f.conl_dotlig","origo","origo");
@@ -1592,7 +1627,7 @@ beginrefchr("uniFB02",ps[ps.lu("f")].width+ps[ps.lu("l.conl")].width);
   attach("f","origo","origo");
   attach("l.conl","right","origo");
 endchr;
-unlinkref;
+%unlinkref;
 
 def draw_m(expr style) =
   padding(1pt,0.85pt);
@@ -1696,6 +1731,12 @@ combinechr("odieresis","o","uap","uni0308.normal","dap");
 beginchr("oslash",0.95en);
   draw_o(closed);
 endchr;
+
+beginrefchr("oe",xpart(apt("o","rpad").pt)+xpart(apt("e","rpad").pt));
+  attach("o","origo","origo");
+  attach("e","rpad","lpad");
+endchr;
+%unlinkref;
 
 def draw_p(expr style) =
   padding(1pt,0.7pt);
