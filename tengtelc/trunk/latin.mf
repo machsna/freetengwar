@@ -778,7 +778,6 @@ beginchr("T",1.6en);
   z3=(lpad,y4); use(a4); top z4=(x1,asc); z5=(w-rpad,y4);
   draw_stroke(z3..z4..z5,ang(a3..a4..a5));
 endchr;
-pause;
 
 def draw_f(expr style,secstyle) =
   padding(0.3pt,0.9pt);
@@ -821,7 +820,6 @@ enddef;
 beginchr("f",0.45en);
   draw_f(normal,normal);
 endchr;
-pause;
 beginchr("f.conl",0.45en);
   draw_f(conleft,normal);
 endchr;
@@ -849,7 +847,6 @@ beginchr("longs",0.35en);
   draw_stroke(p2,ap2);
   labels(range 1 thru 4);
 endchr;
-pause;
 
 
 addalias("uni00A0","nbsp");
@@ -943,7 +940,6 @@ beginrefchr("tilde",1.1en);
   setap("uap",(1/2w,ex+apy));
   attach("uni0303.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni0303","uni25CC","uap","uni0303.normal","dap")
 
 def draw_macron(expr wide) =
@@ -965,7 +961,6 @@ beginrefchr("macron",1.1en);
   setap("uap",(1/2w,ex+apy));
   attach("uni0304.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni0304","uni25CC","uap","uni0304.normal","dap")
 
 beginchr("uni0307.normal",0); % Combining dot above
@@ -978,7 +973,6 @@ beginrefchr("dotaccent",0.6en);
   setap("uap",(1/2w,ex+apy));
   attach("uni0307.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni0307","uni25CC","uap","uni0307.normal","dap")
 
 beginchr("uni0308.normal",0); % Combining diaeresis
@@ -1001,7 +995,6 @@ beginrefchr("dieresis",1.1en);
   setap("uap",(1/2w,ex+apy));
   attach("uni0308.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni0308","uni25CC","uap","uni0308.normal","dap")
 
 beginchr("uni030A.normal",0);
@@ -1016,7 +1009,6 @@ beginrefchr("ring",0.8en);
   setap("uap",(1/2w,ex+apy));
   attach("uni030A.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni030A","uni25CC","uap","uni030A.normal","dap")
 
 beginchr("uni030C.normal",0); % Caron
@@ -1026,7 +1018,6 @@ beginrefchr("caron",1.1en);
   setap("uap",(1/2w,ex+apy));
   attach("uni030C.normal","uap","dap");
 endchr;
-pause;
 combinechr("uni030C","uni25CC","uap","uni030C.normal","dap")
 
 beginchr("uni0364.normal",0); % Combining overscript e
@@ -1185,8 +1176,6 @@ beginchr("a",0.95en);
   labels(range 1 thru 6);
 endchr;
 
-pause;
-
 combinechr("agrave","a","uap","uni0300.normal","dap");
 combinechr("aacute","a","uap","uni0301.normal","dap");
 combinechr("acircumflex","a","uap","uni0302.normal","dap");
@@ -1217,8 +1206,6 @@ beginchr("ae",1.55en);
   labels(range 1 thru 10);
 endchr;
 
-pause;
-
 def draw_b(expr style) =
   a7=45; z2=(x1,0);
   if style=normal:
@@ -1247,8 +1234,6 @@ beginchr("b",0.96en);
   draw_b(normal);
 endchr;
 
-pause;
-
 beginchr("b.conl",0.96en);
   draw_b(conleft);
 endchr;
@@ -1264,8 +1249,6 @@ beginchr("c",0.85en);
   draw_stroke(z1..z2{left}..z3{down}..z4{right}..{dir a5}z5,ang(a1..a2..a3..a4..a5));
   labels(range 0 thru 5);
 endchr;
-
-pause;
 
 beginchr("d",0.95en);
   padding(0.7pt,1pt);
@@ -1286,7 +1269,7 @@ beginchr("d",0.95en);
   labels(range 1 thru 7);
 endchr;
 
-beginchr("eth",0.95en);
+def draw_eth(expr style) =
   padding(0.7pt,0.7pt);
   use(35); top z1=(1/2[x4,x2],ex+o);
   z2=(w-rpad,1/2ex);
@@ -1298,12 +1281,23 @@ beginchr("eth",0.95en);
   t:=p1 heighttimes 0.65ex;
   z7=point t of p1;
   draw p1..z4{up}..z1{right}..{direction t of p1}z7;
-  t:=p1 heighttimes 0.57[ex,asc];
-  z8=point t of p1=0.52[z9,z10];
-  z10-z9=0.85en*dir 32;
-  draw z9--z10;
+  if style=closed:
+    use(50);
+    t:=p1 heighttimes 0.57[ex,asc];
+    z8=point t of p1=0.52[z9,z10];
+    z10-z9=0.85en*dir 32;
+    draw z9--z10;
+  fi
   labels(range 1 thru 10);
+enddef;
+beginchr("eth",0.95en);
+  draw_eth(closed);
 endchr;
+pause;
+beginchr("partialdiff",0.95en);
+  draw_eth(open);
+endchr;
+pause;
 
 %beginchr("e",0.9en);
 %  padding(0.6pt,0.6pt);
@@ -1438,7 +1432,6 @@ enddef;
 beginchr("h",0.80en);
   draw_h(normal);
 endchr;
-pause;
 
 beginchr("h.conl",0.80en);
   draw_h(conleft);
@@ -1455,7 +1448,6 @@ def draw_i(expr style) =
   fi
   setap("uap",(x1-0.1pt,ex+apy));
 enddef;
-pause;
 
 beginchr("dotlessi",0en);
   draw_i(normal);
@@ -1482,17 +1474,17 @@ combinechr("imacron.conl","dotlessi.conl","uap","uni0304.narrow","dap");
 combinechr("idieresis","dotlessi","uap","uni0308.narrow","dap");
 combinechr("idieresis.conl","dotlessi.conl","uap","uni0308.narrow","dap");
 
-%% fi-ligatures. These aren't used in the current GDL-program. Uncomment if you need them.
-%
-%beginrefchr("uniFB01",ps[ps.lu("f.dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
-%  attach("f.dotlig","origo","origo");
-%  attach("dotlessi.conl","right","origo");
-%endchr;
-%
+beginrefchr("uniFB01",ps[ps.lu("f.dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
+  attach("f.dotlig","origo","origo");
+  attach("dotlessi.conl","right","origo");
+endchr;
+unlinkref;
+
 %beginrefchr("uniFB01.conleft",ps[ps.lu("f.conl_dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
 %  attach("f.conl_dotlig","origo","origo");
 %  attach("dotlessi.conl","right","origo");
 %endchr;
+%unlinkref;
 
 def draw_j(expr style) =
   padding(-1pt,0.9pt);
@@ -1579,7 +1571,6 @@ enddef;
 beginchr("k",0.87en);
   draw_k(normal);
 endchr;
-pause;
 beginchr("k.conl",0.87en);
   draw_k(conleft);
 endchr;
@@ -1589,7 +1580,6 @@ beginchr("l",0en);
   z1=(w-rpad,asc); z2=(x1,0);
   draw_stroke(ornpath(rounded,narrcon)(1,2),ornang(rounded,narrcon));
 endchr;
-pause;
 
 beginchr("l.conl",0en);
   padding(xpart(conpoint2),1.0pt);
@@ -1597,6 +1587,12 @@ beginchr("l.conl",0en);
   ap1=ornang(noorn,narrcon); p1=ornpath(noorn,narrcon)(1,2);
   draw_stroke(p1,ang(conpenangle2..ap1));
 endchr;
+
+beginrefchr("uniFB02",ps[ps.lu("f")].width+ps[ps.lu("l.conl")].width);
+  attach("f","origo","origo");
+  attach("l.conl","right","origo");
+endchr;
+unlinkref;
 
 def draw_m(expr style) =
   padding(1pt,0.85pt);
@@ -1664,7 +1660,6 @@ enddef;
 beginchr("n",0.80en);
   draw_n(normal);
 endchr;
-pause;
 beginchr("n.conl",0.80en);
   draw_n(conleft);
 endchr;
@@ -1762,7 +1757,6 @@ beginchr("q",0.95en);
   draw_stroke(p2,ap2);
   labels(range 1 thru 7);
 endchr;
-pause;
 
 def draw_r(expr style) =
   padding(1pt,0.15pt);
@@ -1786,12 +1780,9 @@ def draw_r(expr style) =
   draw_stroke(z3..tension 1.5 and 1..z4{right}..z5{dir 10},ang(a3..a4..a5));
   labels(range 1 thru 6);
 enddef;
-
 beginchr("r",0.80en);
   draw_r(normal);
 endchr;
-pause;
-
 beginchr("r.conl",0.80en);
   draw_r(conleft);
 endchr;
@@ -1859,41 +1850,36 @@ def draw_t(expr style) =
   draw_stroke(z5--z6,ang(a5--a6));
   labels(range 1 thru 6);
 enddef;
-
 beginchr("t",0.85en);
   draw_t(normal);
 endchr;
-pause;
 beginchr("t.conl",0.85en);
   draw_t(conleft);
 endchr;
-pause;
 beginchr("t.conr",0.85en);
   draw_t(conright);
 endchr;
-pause;
 beginchr("t.conb",0.85en);
   draw_t(conboth);
 endchr;
-pause;
 
-beginchr("uniFB06",ps[ps.lu("s")].width+ps[ps.lu("t")].width); % st-ligature
-  padding(0,-0.1pt);
-  draw_stroke(s_path,s_apath);
-  a1=a2=a3=35; a4=45; a5=45; % a6=40;
-  z1=(0.35[x5,x6],0.1[ex,asc]);
-  z2=(x1,0.3ex);
-  use(a3); bot z3=(0.45[x2,x4],-o);
-  z4=(w-rpad,0.17ex);
-  use(a5); top z5=(x4-2.6pt,ex);
-%  use(a6); top z6=(0.8[x5,x4],ex);
-  a6=conpenangle1; z6=(w,0)+conpoint1;
-  ap1=ang(penangle 0 of s_apath..a1..a2..a3..a4);
-  p1=point 0 of s_path{direction 0 of s_path}..tension 0.8..z1{dir-87}..z2{down}..z3{right}..z4;
-  draw_stroke(p1,ap1);
-  draw_stroke(z5--z6,ang(a5--a6));
-  labels(range 1 thru 6);
-endchr;
+%beginchr("uniFB06",ps[ps.lu("s")].width+ps[ps.lu("t")].width); % st-ligature
+%  padding(0,-0.1pt);
+%  draw_stroke(s_path,s_apath);
+%  a1=a2=a3=35; a4=45; a5=45; % a6=40;
+%  z1=(0.35[x5,x6],0.1[ex,asc]);
+%  z2=(x1,0.3ex);
+%  use(a3); bot z3=(0.45[x2,x4],-o);
+%  z4=(w-rpad,0.17ex);
+%  use(a5); top z5=(x4-2.6pt,ex);
+%%  use(a6); top z6=(0.8[x5,x4],ex);
+%  a6=conpenangle1; z6=(w,0)+conpoint1;
+%  ap1=ang(penangle 0 of s_apath..a1..a2..a3..a4);
+%  p1=point 0 of s_path{direction 0 of s_path}..tension 0.8..z1{dir-87}..z2{down}..z3{right}..z4;
+%  draw_stroke(p1,ap1);
+%  draw_stroke(z5--z6,ang(a5--a6));
+%  labels(range 1 thru 6);
+%endchr;
 
 def draw_u(expr style) =
   padding(1pt,1pt);
@@ -2230,7 +2216,7 @@ beginchr("less",0.8en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
+
 beginchr("greater",0.8en);
   padding(0.5pt,1.0pt);
   a1=a3=60;
@@ -2248,7 +2234,6 @@ beginchr("greater",0.8en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
 
 beginchr("hyphen",0.7en);
   padding(0.4pt,0.4pt);
@@ -2268,7 +2253,6 @@ endchr;
 beginrefchr("uni2011",0.7en+0.8pt);
   attach("hyphen","origo","origo");
 endchr;
-pause;
 
 beginchr("endash",1ex);
   x1=0; x2=w;
@@ -2306,7 +2290,6 @@ beginchr("quotedbl",0.9en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
 
 beginchr("exclam",0.8en);
   z1=(1/2w,1/2tecil_w);
@@ -2335,7 +2318,7 @@ beginchr("question",0.95en);
   penlabels(range 0 thru 5);
 endchr;
 
-beginchr("uni204A",0.5ten);
+beginchr("uni204A",0.5ten); % Tironian et
   padding(1.4pt,0.7pt);
   a0=30;a1=40; a2=43;
   a3=35;
