@@ -1191,15 +1191,12 @@ enddef;
 beginchr(openanna,0.9ten);
   draw_openanna(normal);
 endchr;
-if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 beginchr(openanna_conl,0.9ten);
   draw_openanna(conleft);
 endchr;
-if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 beginchr(openanna_dec,0.9cten);
   draw_openanna(capital);
 endchr;
-if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 
 beginchr(bilbovilya,psc(vilya).width);
   attach(vilya,"origo","origo");
@@ -1209,9 +1206,6 @@ beginchr(bilbovilya,psc(vilya).width);
   z2=(x1,y1-0.4tex);
   draw_stroke(z1..z2,ang(a1..a2));
 endchr;
-if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
-pause;
-
 
 beginchr(silme_lig_harma,1ten);
   a1=harmaligappenangle;
