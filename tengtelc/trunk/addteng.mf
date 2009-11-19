@@ -1571,7 +1571,7 @@ beginrefchr(tenginterpthree,interpunctwidth);
   attach("tenginterpdot","dot2","origo");
   attach("tenginterpdot","dot3","origo");
 endchr;
-if tracing: message "pe: UnlinkReference();"; message""; fi
+unlinkref;
 
 beginrefchr(tenginterpfour,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
@@ -1584,7 +1584,7 @@ beginrefchr(tenginterpfour,0.8tex);
   attach("tenginterpdot","dot3","origo");
   attach("tenginterpdot","dot4","origo");
 endchr;
-if tracing: message "pe: UnlinkReference();"; message""; fi
+unlinkref;
 
 beginrefchr(tenginterpfive,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
@@ -1599,7 +1599,7 @@ beginrefchr(tenginterpfive,0.8tex);
   attach("tenginterpdot","dot4","origo");
   attach("tenginterpdot","dot5","origo");
 endchr;
-if tracing: message "pe: UnlinkReference();"; message""; fi
+unlinkref;
 
 beginchr(tengexlam,0.7tex);
   a1=a2=40; use(a1);
