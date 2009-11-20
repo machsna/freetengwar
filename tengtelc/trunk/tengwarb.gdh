@@ -1407,7 +1407,7 @@ g_wtengwa = ps("uniE031") {
 };
 g_wtengwa_desc = ps("uniE031.desc") { 
  uap = point(570m,1011m);
- dap = point(570m,-541m);
+ dap = point(570m,-576m);
 };
 g_hwestasin = ps("uniE029") { 
  uap = point(430m,1011m);
