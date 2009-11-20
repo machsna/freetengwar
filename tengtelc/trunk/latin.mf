@@ -1064,24 +1064,23 @@ combinechr("Agrave","A","uap","uni0300.normal","dap");
 combinechr("Aacute","A","uap","uni0301.normal","dap");
 combinechr("Acircumflex","A","uap","uni0302.normal","dap");
 combinechr("Atilde","A","uap","uni0303.normal","dap");
-combinechr("Amacron","A","uap","uni0304.normal","dap");
+%combinechr("Amacron","A","uap","uni0304.normal","dap");
 combinechr("Adieresis","A","uap","uni0308.normal","dap");
 combinechr("Aring","A","uap","uni030A.normal","dap");
 
 combinechr("Ccedilla","C","dap","uni0327.normal","uap");
-pause;
 
 combinechr("Egrave","E","uap","uni0300.normal","dap");
 combinechr("Eacute","E","uap","uni0301.normal","dap");
 combinechr("Ecircumflex","E","uap","uni0302.normal","dap");
-combinechr("Emacron","E","uap","uni0304.normal","dap");
+%combinechr("Emacron","E","uap","uni0304.normal","dap");
 combinechr("Edieresis","E","uap","uni0308.normal","dap");
 
 combinechr("Igrave","I","uap","uni0300.normal","dap");
 combinechr("Iacute","I","uap","uni0301.normal","dap");
 combinechr("Icircumflex","I","uap","uni0302.normal","dap");
-combinechr("Itilde","I","uap","uni0303.normal","dap");
-combinechr("Imacron","I","uap","uni0304.normal","dap");
+%combinechr("Itilde","I","uap","uni0303.normal","dap");
+%combinechr("Imacron","I","uap","uni0304.normal","dap");
 combinechr("Idieresis","I","uap","uni0308.normal","dap");
 
 combinechr("Ntilde","N","uap","uni0303.normal","dap");
@@ -1090,18 +1089,18 @@ combinechr("Ograve","O","uap","uni0300.normal","dap");
 combinechr("Oacute","O","uap","uni0301.normal","dap");
 combinechr("Ocircumflex","O","uap","uni0302.normal","dap");
 combinechr("Otilde","O","uap","uni0303.normal","dap");
-combinechr("Omacron","O","uap","uni0304.normal","dap");
+%combinechr("Omacron","O","uap","uni0304.normal","dap");
 combinechr("Odieresis","O","uap","uni0308.normal","dap");
 
 combinechr("Ugrave","U","uap","uni0300.normal","dap");
 combinechr("Uacute","U","uap","uni0301.normal","dap");
 combinechr("Ucircumflex","U","uap","uni0302.normal","dap");
-combinechr("Utilde","U","uap","uni0303.normal","dap");
-combinechr("Umacron","U","uap","uni0304.normal","dap");
+%combinechr("Utilde","U","uap","uni0303.normal","dap");
+%combinechr("Umacron","U","uap","uni0304.normal","dap");
 combinechr("Udieresis","U","uap","uni0308.normal","dap");
 
 combinechr("Yacute","Y","uap","uni0301.normal","dap");
-combinechr("Ycircumflex","Y","uap","uni0302.normal","dap");
+%combinechr("Ycircumflex","Y","uap","uni0302.normal","dap");
 combinechr("Ydieresis","Y","uap","uni0308.normal","dap");
 
 combinechr("Zcaron","Z","uap","uni030C.normal","dap");
@@ -1208,7 +1207,7 @@ combinechr("agrave","a","uap","uni0300.normal","dap");
 combinechr("aacute","a","uap","uni0301.normal","dap");
 combinechr("acircumflex","a","uap","uni0302.normal","dap");
 combinechr("atilde","a","uap","uni0303.normal","dap");
-combinechr("amacron","a","uap","uni0304.normal","dap");
+%combinechr("amacron","a","uap","uni0304.normal","dap");
 combinechr("adieresis","a","uap","uni0308.normal","dap");
 combinechr("aring","a","uap","uni030A.normal","dap");
 
@@ -1280,7 +1279,6 @@ beginchr("c",0.85en);
 endchr;
 
 combinechr("ccedilla","c","dap","uni0327.normal","uap");
-pause;
 
 beginchr("d",0.95en);
   padding(0.7pt,1pt);
@@ -1381,7 +1379,7 @@ endchr;
 combinechr("egrave","e","uap","uni0300.normal","dap");
 combinechr("eacute","e","uap","uni0301.normal","dap");
 combinechr("ecircumflex","e","uap","uni0302.normal","dap");
-combinechr("emacron","e","uap","uni0304.normal","dap");
+%combinechr("emacron","e","uap","uni0304.normal","dap");
 combinechr("edieresis","e","uap","uni0308.normal","dap");
 
 def draw_g(expr style)=
@@ -1502,10 +1500,10 @@ combinechr("iacute","dotlessi","uap","uni0301.normal","dap");
 combinechr("iacute.conl","dotlessi.conl","uap","uni0301.normal","dap");
 combinechr("icircumflex","dotlessi","uap","uni0302.normal","dap");
 combinechr("icircumflex.conl","dotlessi.conl","uap","uni0302.normal","dap");
-combinechr("itilde","dotlessi","uap","uni0303.narrow","dap");
-combinechr("itilde.conl","dotlessi.conl","uap","uni0303.narrow","dap");
-combinechr("imacron","dotlessi","uap","uni0304.narrow","dap");
-combinechr("imacron.conl","dotlessi.conl","uap","uni0304.narrow","dap");
+%combinechr("itilde","dotlessi","uap","uni0303.narrow","dap");
+%combinechr("itilde.conl","dotlessi.conl","uap","uni0303.narrow","dap");
+%combinechr("imacron","dotlessi","uap","uni0304.narrow","dap");
+%combinechr("imacron.conl","dotlessi.conl","uap","uni0304.narrow","dap");
 combinechr("idieresis","dotlessi","uap","uni0308.narrow","dap");
 combinechr("idieresis.conl","dotlessi.conl","uap","uni0308.narrow","dap");
 
@@ -1725,7 +1723,7 @@ combinechr("ograve","o","uap","uni0300.normal","dap");
 combinechr("oacute","o","uap","uni0301.normal","dap");
 combinechr("ocircumflex","o","uap","uni0302.normal","dap");
 combinechr("otilde","o","uap","uni0303.normal","dap");
-combinechr("omacron","o","uap","uni0304.normal","dap");
+%combinechr("omacron","o","uap","uni0304.normal","dap");
 combinechr("odieresis","o","uap","uni0308.normal","dap");
 
 beginchr("oslash",0.95en);
@@ -1960,10 +1958,10 @@ combinechr("uacute","u","uap","uni0301.normal","dap");
 combinechr("uacute.conl","u.conl","uap","uni0301.normal","dap");
 combinechr("ucircumflex","u","uap","uni0302.normal","dap");
 combinechr("ucircumflex.conl","u.conl","uap","uni0302.normal","dap");
-combinechr("utilde","u","uap","uni0303.normal","dap");
-combinechr("utilde.conl","u.conl","uap","uni0303.normal","dap");
-combinechr("umacron","u","uap","uni0304.normal","dap");
-combinechr("umacron.conl","u.conl","uap","uni0304.normal","dap");
+%combinechr("utilde","u","uap","uni0303.normal","dap");
+%combinechr("utilde.conl","u.conl","uap","uni0303.normal","dap");
+%combinechr("umacron","u","uap","uni0304.normal","dap");
+%combinechr("umacron.conl","u.conl","uap","uni0304.normal","dap");
 combinechr("udieresis","u","uap","uni0308.normal","dap");
 combinechr("udieresis.conl","u.conl","uap","uni0308.normal","dap");
 
@@ -2051,9 +2049,9 @@ beginchr("x",0.90en); %1.05
   draw_x(normal);
 endchr;
 
-beginchr("x.conl",0.90en);
-  draw_x(conleft);
-endchr;
+%beginchr("x.conl",0.90en);
+%  draw_x(conleft);
+%endchr;
 
 def draw_y(expr style) =
   padding(0.6pt,0.12pt);
@@ -2086,8 +2084,8 @@ endchr;
 
 combinechr("yacute","y","uap","uni0301.normal","dap");
 combinechr("yacute.conl","y.conl","uap","uni0301.normal","dap");
-combinechr("ycircumflex","y","uap","uni0302.normal","dap");
-combinechr("ycircumflex.conl","y.conl","uap","uni0302.normal","dap");
+%combinechr("ycircumflex","y","uap","uni0302.normal","dap");
+%combinechr("ycircumflex.conl","y.conl","uap","uni0302.normal","dap");
 combinechr("ydieresis","y","uap","uni0308.normal","dap");
 combinechr("ydieresis.conl","y.conl","uap","uni0308.normal","dap");
 

@@ -44,19 +44,25 @@ g_nine = ps("nine") {
 };
 g_at = ps("at") { 
 };
+g_A = ps("A") { 
+ uap = point(668m,1792m);
+};
 g_B = ps("B") { 
 };
 g_C = ps("C") { 
+ dap = point(735m,-128m);
 };
 g_D = ps("D") { 
 };
 g_E = ps("E") { 
+ uap = point(576m,1792m);
 };
 g_G = ps("G") { 
 };
 g_H = ps("H") { 
 };
 g_I = ps("I") { 
+ uap = point(457m,1792m);
 };
 g_J = ps("J") { 
 };
@@ -67,22 +73,30 @@ g_L = ps("L") {
 g_M = ps("M") { 
 };
 g_N = ps("N") { 
+ uap = point(616m,1792m);
 };
 g_O = ps("O") { 
+ uap = point(735m,1792m);
+};
+g_OE = ps("OE") { 
+ uap = point(1687m,1792m);
 };
 g_Q = ps("Q") { 
 };
 g_R = ps("R") { 
 };
 g_U = ps("U") { 
+ uap = point(616m,1792m);
 };
 g_V = ps("V") { 
 };
 g_X = ps("X") { 
 };
 g_Y = ps("Y") { 
+ uap = point(655m,1792m);
 };
 g_Z = ps("Z") { 
+ uap = point(616m,1792m);
 };
 g_bracketleft = ps("bracketleft") { 
 };
@@ -94,8 +108,6 @@ g_asciicircum = ps("asciicircum") {
 };
 g_underscore = ps("underscore") { 
 };
-g_grave = ps("grave") { 
-};
 g_braceleft = ps("braceleft") { 
 };
 g_bar = ps("bar") { 
@@ -103,6 +115,14 @@ g_bar = ps("bar") {
 g_braceright = ps("braceright") { 
 };
 g_asciitilde = ps("asciitilde") { 
+};
+g_AE = ps("AE") { 
+};
+g_Oslash = ps("Oslash") { 
+};
+g_Eth = ps("Eth") { 
+};
+g_Thorn = ps("Thorn") { 
 };
 g_T = ps("T") { 
 };
@@ -116,16 +136,6 @@ g_f_conl_dotlig = ps("f.conl_dotlig") {
 };
 g_longs = ps("longs") { 
 };
-g_u = ps("u") { 
- uap = point(573m,1024m);
-};
-g_u_conl = ps("u.conl") { 
- uap = point(573m,1024m);
-};
-g_x = ps("x") { 
-};
-g_x_conl = ps("x.conl") { 
-};
 g_nbsp = ps("uni00A0") { 
  uap = point(256m,1011m);
  dap = point(256m,-128m);
@@ -138,11 +148,37 @@ g_dottedcircle = ps("uni25CC") {
  uap = point(563m,1011m);
  dap = point(563m,-128m);
 };
+g_uni0300_normal = ps("uni0300.normal") { 
+ dap = point(0m,1024m);
+};
+g_grave = ps("grave") { 
+};
+g_uni0300 = ps("uni0300") { 
+ dap = point(563m,-128m);
+};
+g_uni0301_normal = ps("uni0301.normal") { 
+ dap = point(0m,1024m);
+};
+g_acute = ps("acute") { 
+};
+g_uni0301 = ps("uni0301") { 
+ dap = point(563m,-128m);
+};
+g_uni0302_normal = ps("uni0302.normal") { 
+ dap = point(0m,1024m);
+};
+g_circumflex = ps("circumflex") { 
+};
+g_uni0302 = ps("uni0302") { 
+ dap = point(563m,-128m);
+};
 g_uni0303_normal = ps("uni0303.normal") { 
  dap = point(0m,1024m);
 };
 g_uni0303_narrow = ps("uni0303.narrow") { 
  dap = point(0m,1024m);
+};
+g_tilde = ps("tilde") { 
 };
 g_uni0303 = ps("uni0303") { 
  dap = point(563m,-128m);
@@ -153,24 +189,17 @@ g_uni0304_normal = ps("uni0304.normal") {
 g_uni0304_narrow = ps("uni0304.narrow") { 
  dap = point(0m,1024m);
 };
+g_macron = ps("macron") { 
+};
 g_uni0304 = ps("uni0304") { 
- dap = point(563m,-128m);
-};
-g_uni0300_normal = ps("uni0300.normal") { 
- dap = point(0m,1024m);
-};
-g_uni0300 = ps("uni0300") { 
- dap = point(563m,-128m);
-};
-g_uni0301_normal = ps("uni0301.normal") { 
- dap = point(0m,1024m);
-};
-g_uni0301 = ps("uni0301") { 
  dap = point(563m,-128m);
 };
 g_uni0307_normal = ps("uni0307.normal") { 
  dap = point(0m,973m);
  uap = point(0m,1280m);
+};
+g_dotaccent = ps("dotaccent") { 
+ uap = point(238m,1331m);
 };
 g_uni0307 = ps("uni0307") { 
  uap = point(563m,1318m);
@@ -184,6 +213,9 @@ g_uni0308_narrow = ps("uni0308.narrow") {
  dap = point(0m,973m);
  uap = point(0m,1280m);
 };
+g_dieresis = ps("dieresis") { 
+ uap = point(436m,1331m);
+};
 g_uni0308 = ps("uni0308") { 
  uap = point(563m,1318m);
  dap = point(563m,-128m);
@@ -191,8 +223,26 @@ g_uni0308 = ps("uni0308") {
 g_uni030A_normal = ps("uni030A.normal") { 
  dap = point(0m,973m);
 };
+g_ring = ps("ring") { 
+};
 g_uni030A = ps("uni030A") { 
  dap = point(563m,-128m);
+};
+g_uni030C_normal = ps("uni030C.normal") { 
+ dap = point(0m,1024m);
+};
+g_caron = ps("caron") { 
+};
+g_uni030C = ps("uni030C") { 
+ dap = point(563m,-128m);
+};
+g_uni0327_normal = ps("uni0327.normal") { 
+ uap = point(0m,-128m);
+};
+g_cedilla = ps("cedilla") { 
+};
+g_uni0327 = ps("uni0327") { 
+ uap = point(563m,1011m);
 };
 g_uni0364_normal = ps("uni0364.normal") { 
  dap = point(-51m,922m);
@@ -200,13 +250,76 @@ g_uni0364_normal = ps("uni0364.normal") {
 g_uni0364 = ps("uni0364") { 
  dap = point(563m,-128m);
 };
-g_A = ps("A") { 
+g_Agrave = ps("Agrave") { 
+};
+g_Aacute = ps("Aacute") { 
+};
+g_Acircumflex = ps("Acircumflex") { 
+};
+g_Atilde = ps("Atilde") { 
+};
+g_Adieresis = ps("Adieresis") { 
+ uap = point(668m,2099m);
+};
+g_Aring = ps("Aring") { 
+};
+g_Ccedilla = ps("Ccedilla") { 
+};
+g_Egrave = ps("Egrave") { 
+};
+g_Eacute = ps("Eacute") { 
+};
+g_Ecircumflex = ps("Ecircumflex") { 
+};
+g_Edieresis = ps("Edieresis") { 
+ uap = point(576m,2099m);
+};
+g_Igrave = ps("Igrave") { 
+};
+g_Iacute = ps("Iacute") { 
+};
+g_Icircumflex = ps("Icircumflex") { 
+};
+g_Idieresis = ps("Idieresis") { 
+ uap = point(457m,2099m);
+};
+g_Ntilde = ps("Ntilde") { 
+};
+g_Ograve = ps("Ograve") { 
+};
+g_Oacute = ps("Oacute") { 
+};
+g_Ocircumflex = ps("Ocircumflex") { 
+};
+g_Otilde = ps("Otilde") { 
+};
+g_Odieresis = ps("Odieresis") { 
+ uap = point(735m,2099m);
+};
+g_Ugrave = ps("Ugrave") { 
+};
+g_Uacute = ps("Uacute") { 
+};
+g_Ucircumflex = ps("Ucircumflex") { 
+};
+g_Udieresis = ps("Udieresis") { 
+ uap = point(616m,2099m);
+};
+g_Yacute = ps("Yacute") { 
+};
+g_Ydieresis = ps("Ydieresis") { 
+ uap = point(655m,2099m);
+};
+g_Zcaron = ps("Zcaron") { 
 };
 g_F = ps("F") { 
 };
 g_P = ps("P") { 
 };
 g_S = ps("S") { 
+ uap = point(656m,1792m);
+};
+g_Scaron = ps("Scaron") { 
 };
 g_W = ps("W") { 
 };
@@ -217,9 +330,9 @@ g_agrave = ps("agrave") {
 };
 g_aacute = ps("aacute") { 
 };
-g_atilde = ps("atilde") { 
+g_acircumflex = ps("acircumflex") { 
 };
-g_amacron = ps("amacron") { 
+g_atilde = ps("atilde") { 
 };
 g_adieresis = ps("adieresis") { 
  uap = point(543m,1331m);
@@ -233,8 +346,15 @@ g_b = ps("b") {
 g_b_conl = ps("b.conl") { 
 };
 g_c = ps("c") { 
+ dap = point(491m,-128m);
+};
+g_ccedilla = ps("ccedilla") { 
 };
 g_d = ps("d") { 
+};
+g_eth = ps("eth") { 
+};
+g_partialdiff = ps("partialdiff") { 
 };
 g_e = ps("e") { 
  uap = point(546m,1024m);
@@ -243,7 +363,7 @@ g_egrave = ps("egrave") {
 };
 g_eacute = ps("eacute") { 
 };
-g_emacron = ps("emacron") { 
+g_ecircumflex = ps("ecircumflex") { 
 };
 g_edieresis = ps("edieresis") { 
  uap = point(546m,1331m);
@@ -276,19 +396,18 @@ g_iacute = ps("iacute") {
 };
 g_iacute_conl = ps("iacute.conl") { 
 };
-g_itilde = ps("itilde") { 
+g_icircumflex = ps("icircumflex") { 
 };
-g_itilde_conl = ps("itilde.conl") { 
-};
-g_imacron = ps("imacron") { 
-};
-g_imacron_conl = ps("imacron.conl") { 
+g_icircumflex_conl = ps("icircumflex.conl") { 
 };
 g_idieresis = ps("idieresis") { 
  uap = point(243m,1331m);
 };
 g_idieresis_conl = ps("idieresis.conl") { 
  uap = point(243m,1331m);
+};
+g_uniFB01 = ps("uniFB01") { 
+ uap = point(907m,1024m);
 };
 g_dotlessj = ps("uni0237") { 
  uap = point(258m,1024m);
@@ -309,6 +428,8 @@ g_k_conl = ps("k.conl") {
 g_l = ps("l") { 
 };
 g_l_conl = ps("l.conl") { 
+};
+g_uniFB02 = ps("uniFB02") { 
 };
 g_m = ps("m") { 
 };
@@ -332,19 +453,29 @@ g_ograve = ps("ograve") {
 g_oacute = ps("oacute") { 
  dap = point(517m,-128m);
 };
-g_otilde = ps("otilde") { 
+g_ocircumflex = ps("ocircumflex") { 
  dap = point(517m,-128m);
 };
-g_omacron = ps("omacron") { 
+g_otilde = ps("otilde") { 
  dap = point(517m,-128m);
 };
 g_odieresis = ps("odieresis") { 
  dap = point(517m,-128m);
  uap = point(595m,1331m);
 };
+g_oslash = ps("oslash") { 
+ dap = point(517m,-128m);
+ uap = point(595m,1024m);
+};
+g_oe = ps("oe") { 
+ dap = point(517m,-128m);
+ uap = point(1326m,1024m);
+};
 g_p = ps("p") { 
 };
 g_p_conl = ps("p.conl") { 
+};
+g_thorn = ps("thorn") { 
 };
 g_q = ps("q") { 
 };
@@ -355,6 +486,9 @@ g_r_conl = ps("r.conl") {
 g_r_round = ps("r.round") { 
 };
 g_s = ps("s") { 
+ uap = point(489m,1024m);
+};
+g_scaron = ps("scaron") { 
 };
 g_t = ps("t") { 
 };
@@ -364,7 +498,11 @@ g_t_conr = ps("t.conr") {
 };
 g_t_conb = ps("t.conb") { 
 };
-g_uniFB06 = ps("uniFB06") { 
+g_u = ps("u") { 
+ uap = point(573m,1024m);
+};
+g_u_conl = ps("u.conl") { 
+ uap = point(573m,1024m);
 };
 g_ugrave = ps("ugrave") { 
 };
@@ -374,13 +512,9 @@ g_uacute = ps("uacute") {
 };
 g_uacute_conl = ps("uacute.conl") { 
 };
-g_utilde = ps("utilde") { 
+g_ucircumflex = ps("ucircumflex") { 
 };
-g_utilde_conl = ps("utilde.conl") { 
-};
-g_umacron = ps("umacron") { 
-};
-g_umacron_conl = ps("umacron.conl") { 
+g_ucircumflex_conl = ps("ucircumflex.conl") { 
 };
 g_udieresis = ps("udieresis") { 
  uap = point(573m,1331m);
@@ -395,6 +529,8 @@ g_v_conl = ps("v.conl") {
 g_w = ps("w") { 
 };
 g_w_conl = ps("w.conl") { 
+};
+g_x = ps("x") { 
 };
 g_y = ps("y") { 
  uap = point(535m,1024m);
@@ -413,8 +549,12 @@ g_ydieresis_conl = ps("ydieresis.conl") {
  uap = point(535m,1331m);
 };
 g_z = ps("z") { 
+ uap = point(589m,1024m);
 };
 g_z_conl = ps("z.conl") { 
+ uap = point(461m,1024m);
+};
+g_zcaron = ps("zcaron") { 
 };
 g_interpunctdot = ps("interpunctdot") { 
 };

@@ -28,8 +28,8 @@
 table(glyph)
   c_latmayconr=(g_f,g_f_conl,g_g,g_t,     g_t_conl);
   c_latconr   =(g_f,g_f_conl,g_g,g_t_conr,g_t_conb);
-  c_latmayconl=(g_f,     g_i,     g_dotlessi,     g_j,     g_dotlessj,     g_m,     g_n,     g_p,     g_r,     g_t,     g_u,     g_v,     g_w,     g_x,     g_y,     g_z);
-  c_latconl   =(g_f_conl,g_i_conl,g_dotlessi_conl,g_j_conl,g_dotlessj_conl,g_m_conl,g_n_conl,g_p_conl,g_r_conl,g_t_conl,g_u_conl,g_v_conl,g_w_conl,g_x_conl,g_y_conl,g_z_conl);
+  c_latmayconl=(g_f,     g_i,     g_dotlessi,     g_j,     g_dotlessj,     g_m,     g_n,     g_p,     g_r,     g_t,     g_u,     g_v,     g_w,     g_y,     g_z);
+  c_latconl   =(g_f_conl,g_i_conl,g_dotlessi_conl,g_j_conl,g_dotlessj_conl,g_m_conl,g_n_conl,g_p_conl,g_r_conl,g_t_conl,g_u_conl,g_v_conl,g_w_conl,g_y_conl,g_z_conl);
 
   c_lathighconr=(g_f,g_f_conl,g_longs,g_F);
   c_latmayhighconl=(g_b,     g_h,     g_k,     g_l);
@@ -40,12 +40,12 @@ table(glyph)
   c_latmaydotligl=(g_i_conl,       g_j_conl);
   c_latdotligl   =(g_dotlessi_conl,g_dotlessj_conl);
 
-  c_isoldiac=(g_uni0300,g_uni0301,g_uni0303,g_uni0304,g_uni0307,g_uni0308,g_uni030A,g_uni0364);
-  c_diac=(g_uni0300_normal,g_uni0301_normal,g_uni0303_normal,g_uni0304_normal,g_uni0307_normal,g_uni0308_normal,g_uni030A_normal,g_uni0364_normal);
-  c_diacbase=(g_n,g_o,g_dotlessi,g_dottedcircle,g_dotlessi_conl,g_a,g_e,g_u,g_u_conl,g_y,g_y_conl);
+  c_isoldiac=(g_uni0300,g_uni0301,g_uni0302,g_uni0303,g_uni0304,g_uni0307,g_uni0308,g_uni030A,g_uni030C,g_uni0364);
+  c_diac=(g_uni0300_normal,g_uni0301_normal,g_uni0302_normal,g_uni0303_normal,g_uni0304_normal,g_uni0307_normal,g_uni0308_normal,g_uni030A_normal,g_uni030C_normal,g_uni0364_normal);
+  c_diacbase=(g_n,g_o,g_dotlessi,g_dottedcircle,g_dotlessi_conl,g_a,g_e,g_u,g_u_conl,g_y,g_y_conl,g_s,g_z,g_z_conl);
 
-  c_avariant=(g_a,g_aacute,g_agrave,g_adieresis,g_aring);
-  c_evariant=(g_e,g_eacute,g_egrave,g_edieresis);
+  c_avariant=(g_a,g_aacute,g_agrave,g_acircumflex,g_atilde,g_adieresis,g_aring);
+  c_evariant=(g_e,g_eacute,g_egrave,g_ecircumflex,g_edieresis);
 
 endtable;
 
