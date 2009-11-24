@@ -1543,12 +1543,12 @@ combinechr(shooktehta,dottedcircle,"dap",shooktehta_norm,"uap");
 interpunctwidth=0.6tex;
 interpunctsize=1.1;
 
-beginrefchr(tenginterpone,interpunctwidth);
+beginchr(tenginterpone,interpunctwidth);
   z1=1/2(w,tex);
   draw_diamond(1)(interpunctsize);
 endchr;
 
-beginrefchr(tenginterptwo,interpunctwidth);
+beginchr(tenginterptwo,interpunctwidth);
   x1=x2=1/2w;
   1/2[y1,y2]=1/2tex;
   y2=y1+w;
@@ -1556,7 +1556,7 @@ beginrefchr(tenginterptwo,interpunctwidth);
   draw_diamond(2)(interpunctsize);
 endchr;
 
-beginrefchr(tenginterpthree,interpunctwidth);
+beginchr(tenginterpthree,interpunctwidth);
   x1=x2=x3=1/2w;
   y1=0.2tex;
   y2=1/2[y1,y3];
@@ -1566,7 +1566,7 @@ beginrefchr(tenginterpthree,interpunctwidth);
   draw_diamond(3)(interpunctsize);
 endchr;
 
-beginrefchr(tenginterpfour,0.8tex);
+beginchr(tenginterpfour,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
   z1=(1/2[x3,x4],0.2tex);
   z2=(x1,0.8tex);
@@ -1578,7 +1578,7 @@ beginrefchr(tenginterpfour,0.8tex);
   draw_diamond(4)(interpunctsize);
 endchr;
 
-beginrefchr(tenginterpfive,1.0tex);
+beginchr(tenginterpfive,1.0tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
   z1=(1/2[x3,x4],0.2tex);
   z2=(x1,y1+w-lpad-rpad);
