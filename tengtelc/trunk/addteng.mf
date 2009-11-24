@@ -1540,66 +1540,57 @@ combinechr(shooktehta,dottedcircle,"dap",shooktehta_norm,"uap");
 %pause;
 
 
-
-beginchr("tenginterpdot",0);
-  z1=(0,0);
-  draw_diamond(1)(1.1);
-endchr;
-
 interpunctwidth=0.6tex;
+interpunctsize=1.1;
 
 beginrefchr(tenginterpone,interpunctwidth);
-  setap("dot",(1/2w,0.5tex));
-  attach("tenginterpdot","dot","origo");
+  z1=1/2(w,tex);
+  draw_diamond(1)(interpunctsize);
 endchr;
 
 beginrefchr(tenginterptwo,interpunctwidth);
-  setap("dot1",(1/2w,0.2tex));
-  setap("dot2",(1/2w,0.8tex));
-  attach("tenginterpdot","dot1","origo");
-  attach("tenginterpdot","dot2","origo");
+  x1=x2=1/2w;
+  1/2[y1,y2]=1/2tex;
+  y2=y1+w;
+  draw_diamond(1)(interpunctsize);
+  draw_diamond(2)(interpunctsize);
 endchr;
 
 beginrefchr(tenginterpthree,interpunctwidth);
-  setap("dot1",(1/2w,0.2tex));
-  setap("dot2",(1/2w,0.8tex));
-  setap("dot3",(1/2w,1.4tex));
-%  setap("dot1",(1/2w,0.1tex));
-%  setap("dot2",(1/2w,0.9tex));
-%  setap("dot3",(1/2w,0.5tex));
-  attach("tenginterpdot","dot1","origo");
-  attach("tenginterpdot","dot2","origo");
-  attach("tenginterpdot","dot3","origo");
+  x1=x2=x3=1/2w;
+  y1=0.2tex;
+  y2=1/2[y1,y3];
+  y3=1.2tex;
+  draw_diamond(1)(interpunctsize);
+  draw_diamond(2)(interpunctsize);
+  draw_diamond(3)(interpunctsize);
 endchr;
-unlinkref;
 
 beginrefchr(tenginterpfour,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
-  setap("dot1",(1/2w,0.2tex));
-  setap("dot2",(1/2w,0.8tex));
-  setap("dot3",(lpad,0.5tex));
-  setap("dot4",(w-rpad,0.5tex));
-  attach("tenginterpdot","dot1","origo");
-  attach("tenginterpdot","dot2","origo");
-  attach("tenginterpdot","dot3","origo");
-  attach("tenginterpdot","dot4","origo");
+  z1=(1/2[x3,x4],0.2tex);
+  z2=(x1,0.8tex);
+  z3=(lpad,1/2[y1,y2]);
+  z4=(w-rpad,y3);
+  draw_diamond(1)(interpunctsize);
+  draw_diamond(2)(interpunctsize);
+  draw_diamond(3)(interpunctsize);
+  draw_diamond(4)(interpunctsize);
 endchr;
-unlinkref;
 
-beginrefchr(tenginterpfive,0.8tex);
+beginrefchr(tenginterpfive,1.0tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
-  setap("dot1",(1/2w,0.1tex));
-  setap("dot2",(1/2w,0.9tex));
-  setap("dot3",(lpad,0.5tex));
-  setap("dot4",(w-rpad,0.5tex));
-  setap("dot5",(1/2w,0.5tex));
-  attach("tenginterpdot","dot1","origo");
-  attach("tenginterpdot","dot2","origo");
-  attach("tenginterpdot","dot3","origo");
-  attach("tenginterpdot","dot4","origo");
-  attach("tenginterpdot","dot5","origo");
+  z1=(1/2[x3,x4],0.2tex);
+  z2=(x1,y1+w-lpad-rpad);
+  z3=(lpad,y5);
+  z4=(w-rpad,y5);
+  z5=(x1,1/2[y1,y2]);
+  draw_diamond(1)(interpunctsize);
+  draw_diamond(2)(interpunctsize);
+  draw_diamond(3)(interpunctsize);
+  draw_diamond(4)(interpunctsize);
+  draw_diamond(5)(interpunctsize);
 endchr;
-unlinkref;
 
 beginchr(tengexlam,0.7tex);
   a1=a2=40; use(a1);
