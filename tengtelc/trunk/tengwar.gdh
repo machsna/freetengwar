@@ -29,7 +29,21 @@ table(feature)
   tengconnect {
     id=201;
     name.LG_USENG = string("Connect tengwar");
-    default = false;
+    default = some;
+    settings {
+      none {
+        value=0;
+        name.LG_USENG = string("Only when necessary");
+      }
+      some {
+        value=1;
+        name.LG_USENG = string("Sometimes");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("Whenever possible");
+      }
+    }
   }
   silmepref {
     id=202;
@@ -75,13 +89,32 @@ table(feature)
   }
   descwtengwa {
     id=204;
-    name.LG_USENG = string("Descending w-tengwa");
+    name.LG_USENG = string("Descending W-tengwa");
     default = true;
   }
   lowershook {
     id=205;
-    name.LG_USENG = string("Prefer low s-hook");
+    name.LG_USENG = string("Prefer low S-hook");
     default = true;
+  }
+  whtengwa {
+    id=206;
+    name.LG_USENG = string("WH-tengwa variant");
+    default = common;
+    settings {
+      common {
+        value=0;
+        name.LG_USENG = string("Normal");
+      }
+      roomen {
+        value=1;
+        name.LG_USENG = string("Roomen nuquerna");
+      }
+      hyarmen {
+        value=2;
+        name.LG_USENG = string("Mirrored Hyarmen");
+      }
+    }
   }
 endtable;
 
@@ -172,16 +205,17 @@ table(glyph)
              ExtThuule,ExtFormen,ExtHarma,ExtHwesta,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,
              Roomen,Arda,Lambe,Alda,Silme,SilmeNuq,Aare,AareNuq,Hyarmen,HwestaSin,Yanta,Uure,LongCarr,Halla,ShortCarr,
              Wtengwa,Atengwa,ConnCarr,Whtengwa,OpenAnna,PreFeaQu,Mhtengwa,BeleriandicMh,AngWhtengwa,Vaiya,SHook,
-             g_nbsp,g_dottedcircle);
+             g_dottedcircle);
 
-  MayConR=(g_calma,g_quesse,g_quesse_conl,g_anga,g_ungwe,g_ungwe_conl,g_noldo,g_nwalme,g_nwalme_conl,g_anna,g_vilya,g_vilya_conl,g_lambe,g_lambe_conl,g_alda,g_alda_conl,g_conncarr,g_uure);
-  DoConR=(g_calma_conr,g_quesse_conr,g_quesse_conb,g_anga_conr,g_ungwe_conr,g_ungwe_conb,g_noldo_conr,g_nwalme_conr,g_nwalme_conb,g_anna_conr,g_vilya_conr,g_vilya_conb,g_lambe_conr,g_lambe_conb,g_alda_conr,g_alda_conb,g_conncarr_conr,g_uure_conr);
-//  MayConL=(g_tinco,g_parma,g_quesse,g_ando,g_umbar,g_ungwe,g_hwesta,g_unque,g_nuumen,g_malta,g_nwalme,g_oore,g_vala,g_vilya,g_exthwesta,g_extunque,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_shook);
-//  DoConL=(g_tinco_conl,g_parma_conl,g_quesse_conl,g_ando_conl,g_umbar_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nuumen_conl,g_malta_conl,g_nwalme_conl,g_oore_conl,g_vala_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_shook_high);
-  MayConL=(g_tinco,g_parma,g_ando,g_umbar,g_nuumen,g_malta,g_oore,g_vala,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_openanna,g_shook);
-  DoConL=(g_tinco_conl,g_parma_conl,g_ando_conl,g_umbar_conl,g_nuumen_conl,g_malta_conl,g_oore_conl,g_vala_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_openanna_conl,g_shook_high);
-//  MayConLConnCarr=(g_quesse,g_ungwe,g_hwesta,g_unque,g_nwalme,g_vilya,g_exthwesta,g_extunque);
-//  DoConLConnCarr=(g_quesse_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nwalme_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl);
+  SomeMayConR=(g_calma,g_quesse,g_quesse_conl,g_anga,g_ungwe,g_ungwe_conl,g_noldo,g_nwalme,g_nwalme_conl,g_anna,g_vilya,g_vilya_conl,g_conncarr);
+  SomeDoConR=(g_calma_conr,g_quesse_conr,g_quesse_conb,g_anga_conr,g_ungwe_conr,g_ungwe_conb,g_noldo_conr,g_nwalme_conr,g_nwalme_conb,g_anna_conr,g_vilya_conr,g_vilya_conb,g_conncarr_conr);
+  MayConR=(SomeMayConR,g_lambe,g_lambe_conl,g_alda,g_alda_conl,g_uure);
+  DoConR=(SomeDoConR,g_lambe_conr,g_lambe_conb,g_alda_conr,g_alda_conb,g_uure_conr);
+
+  SomeMayConL=(g_tinco,g_parma,g_ando,g_umbar,g_nuumen,g_malta,g_oore,g_vala,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_openanna,g_shook);
+  SomeDoConL=(g_tinco_conl,g_parma_conl,g_ando_conl,g_umbar_conl,g_nuumen_conl,g_malta_conl,g_oore_conl,g_vala_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_openanna_conl,g_shook_high);
+  MayConL=(SomeMayConL,g_quesse,g_ungwe,g_hwesta,g_unque,g_nwalme,g_vilya,g_exthwesta,g_extunque);
+  DoConL=(SomeDoConL,g_quesse_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nwalme_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl);
 
   MayConRLow=(g_tinco,g_tinco_conl,g_ando,g_ando_conl,g_umbar,g_umbar_conl,g_parma,g_parma_conl,g_thuule,g_formen,g_harma,g_hwesta,g_hwesta_conl,g_anto,g_ampa,g_anca,g_unque,g_unque_conl,g_nuumen,g_nuumen_conl,g_malta,g_malta_conl,g_noldo,g_nwalme,g_nwalme_conl,g_oore,g_oore_conl,g_vala,g_vala_conl,g_anna,g_vilya,g_vilya_conl,g_shortcarr,g_shortcarr_conl,g_lambe,g_lambe_conl,g_hyarmen,g_yanta);
   DoConRLow=(g_tinco_conr,g_tinco_conb,g_ando_conr,g_ando_conb,g_umbar_conr,g_umbar_conb,g_parma_conr,g_parma_conb,g_thuule_conr,g_formen_conr,g_harma_conr,g_hwesta_conr,g_hwesta_conb,g_anto_conr,g_ampa_conr,g_anca_conr,g_unque_conr,g_unque_conr,g_nuumen_conr,g_nuumen_conb,g_malta_conr,g_malta_conb,g_noldo_conrbot,g_nwalme_conrbot,g_nwalme_conbbot,g_oore_conr,g_oore_conb,g_vala_conr,g_vala_conb,g_anna_conrbot,g_vilya_conrbot,g_vilya_conbbot,g_shortcarr_conr,g_shortcarr_conb,g_lambe_conrbot,g_lambe_conbbot,g_hyarmen_conr,g_yanta_conr);
@@ -209,9 +243,9 @@ table(glyph)
   //ZWJ=g_zwj;
   //ZWNJ=g_zwnj;
 
-  LatinVowels = (g_a,g_i,g_e,g_o,g_u);
-  LatinTehtar = (g_atehta,g_itehta,g_etehta,g_otehta,g_utehta);
-  LatinConsonants = (g_b,g_c,g_d,g_f,g_g,g_h,g_j,g_k,g_l,g_m,g_n,g_p,g_q,g_r,g_s,g_t,g_v,g_w,g_x,g_z);
+//  LatinVowels = (g_a,g_i,g_e,g_o,g_u);
+//  LatinTehtar = (g_atehta,g_itehta,g_etehta,g_otehta,g_utehta);
+//  LatinConsonants = (g_b,g_c,g_d,g_f,g_g,g_h,g_j,g_k,g_l,g_m,g_n,g_p,g_q,g_r,g_s,g_t,g_v,g_w,g_x,g_z);
 
 endtable;
 
@@ -228,9 +262,7 @@ endtable;
 table(sub)
 
   pass(1)
-    if (decteng==init)
-      Notdectengwar > dectengwar / g_space _ ;
-    elseif (decteng==all)
+    if (decteng==all || decteng==init)
       Notdectengwar > dectengwar;
     endif;
     g_zwj > g_zwj_hidden;
@@ -240,6 +272,10 @@ table(sub)
 
   // First rules that affect tengwar:
 
+    if (decteng==init)
+      dectengwar > Notdectengwar / (AnyTengwa,AnyTehta) ^ _ ;
+    endif;
+
     (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl) g_tinco_lig / ^ _ AnyIsolTehtar ZWJ _ ;
     g_silme > g_silme_lig_harma / ^ _ ZWJ Harma ;
     g_silme > g_silme_lig / ^ _ AnyIsolTehtar ZWJ AnyTengwa ;
@@ -247,13 +283,14 @@ table(sub)
     if (lowershook)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
-    if (tengconnect)
-      MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ? _ ;
-    else
-      MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar ZWJ? _ ;
-      g_conncarr MayConL > g_conncarr_conr DoConL / ^ _ AnyIsolTehtar ZWJ? _ ;
+    MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ _ ;
+    if (tengconnect==all)
+      MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar _ ;
+    elseif (tengconnect==some)
+      SomeMayConR SomeMayConL > SomeDoConR SomeDoConL / ^ _ AnyIsolTehtar  _ ;
     endif;
-//    g_conncarr MayConLConnCarr > g_conncarr_conr DoConLConnCarr / ^ _ AnyIsolTehtar ZWJ? _ ;
+    MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar _ ;
+    g_conncarr MayConL > g_conncarr_conr DoConL / ^ _ AnyIsolTehtar _ ;
     if (!lowershook)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
@@ -262,13 +299,16 @@ table(sub)
            / _ AnyIsolUpTehtar IsolDownTehtar ;
     if (silmepref==left)
       (g_silme,g_silme_lig,g_aare) > (g_silme_flat,g_silme_lig_flat,g_aare_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
-//      (g_silmenuq,g_aarenuq) > (g_silmenuq_flat,g_aarenuq_flat) / ^ _ AnyIsolDownTehtar IsolDownTehtar ;
     elseif (silmepref==right)
       (g_silme,g_silme_lig,g_aare) > (g_silme_open,g_silme_lig_open,g_aare_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
-//      (g_silmenuq,g_aarenuq) > (g_silmenuq_open,g_aarenuq_open) / ^ _ AnyIsolUpTehtar IsolDownTehtar ;
     endif;
     if (descwtengwa)
       g_wtengwa > g_wtengwa_desc;
+    endif;
+    if (whtengwa==roomen)
+       g_whtengwa > g_whtengwa_varone;
+    elseif (whtengwa==hyarmen)
+       g_whtengwa > g_whtengwa_vartwo;
     endif;
 
   // When none of the above rules match anymore, we proceed to the next character, possibly a tehta:
