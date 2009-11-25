@@ -52,19 +52,19 @@ table(feature)
     settings {
       left {
         value=0;
-        name.LG_USENG = string("Always to the left");
+        name.LG_USENG = string("To the left");
       }
-      prefleft {
-        value=1;
-        name.LG_USENG = string("Prefer left");
-      }
-      prefright {
-        value=2;
-        name.LG_USENG = string("Prefer right");
-      }
+//      prefleft {
+//        value=1;
+//        name.LG_USENG = string("Prefer left");
+//      }
+//      prefright {
+//        value=2;
+//        name.LG_USENG = string("Prefer right");
+//      }
       right {
         value=3;
-        name.LG_USENG = string("Always to the right");
+        name.LG_USENG = string("To the right");
       }
     }
   }
@@ -249,32 +249,34 @@ table(glyph)
 
 endtable;
 
-// We will deal with at most 4 uptehtar and 4 downtehtar. Change if the need arises.
+// We will deal with at most 4 tehtar. Change if the need arises.
+// This is very demanding, I'm afraid, both memory and time wise; hence the restriction.
+#define AnyIsolTehtar [[[[IsolTehtar]?IsolTehtar]?IsolTehtar]?IsolTehtar]?
+#define AnyIsolUpTehtar [[[IsolUpTehtar]?IsolUpTehtar]?IsolUpTehtar]?
+// If there is at least one uptehta, there can be only 2 downtehtar:
+#define AnyIsolDownTehtar [[IsolDownTehtar]?IsolDownTehtar]?
 
-#define AnyIsolTehtar [[[[[[[IsolTehtar]?IsolTehtar]?IsolTehtar]?IsolTehtar]?IsolTehtar]?IsolTehtar]?IsolTehtar]?
-#define AnyIsolUpTehtar [[[[IsolUpTehtar]?IsolUpTehtar]?IsolUpTehtar]?IsolUpTehtar]?
-#define AnyIsolDownTehtar [[[[IsolDownTehtar]?IsolDownTehtar]?IsolDownTehtar]?IsolDownTehtar]?
+#define AnyTehtar [[[AnyTehta]?AnyTehta]?AnyTehta]?
+#define AnyDownTehtar [[AnyDownTehta]?AnyDownTehta]?
 
-#define AnyTehtar [[[[[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-#define AnyUpTehtar [[[[AnyUpTehta]?AnyUpTehta]?AnyUpTehta]?AnyUpTehta]?
-#define AnyDownTehtar [[[[AnyDownTehta]?AnyDownTehta]?AnyDownTehta]?AnyDownTehta]?
+#define decadjusted user1
 
 table(sub)
 
   pass(1)
     if (decteng==all || decteng==init)
-      Notdectengwar > dectengwar;
+      Notdectengwar > dectengwar / ^ _ {decadjusted==false};
+    endif;
+    if (decteng==init)
+      dectengwar > Notdectengwar {decadjusted=true} / (AnyTengwa,IsolTehtar) ZWJ? ^ _ ;
     endif;
     g_zwj > g_zwj_hidden;
     g_zwnj > g_zwnj_hidden;
   endpass;
+
   pass(2)
 
   // First rules that affect tengwar:
-
-    if (decteng==init)
-      dectengwar > Notdectengwar / (AnyTengwa,AnyTehta) ^ _ ;
-    endif;
 
     (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl) g_tinco_lig / ^ _ AnyIsolTehtar ZWJ _ ;
     g_silme > g_silme_lig_harma / ^ _ ZWJ Harma ;
@@ -317,12 +319,12 @@ table(sub)
     IsolTehtar > CombTehtar / AnyTengwa ^ AnyTehtar _ ;
 
     // Sort the tehtar. This simplifies things further on.
-    AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @6 @1 @2 @3 @4 @5 / ^ _ _ _ _ _ _ ;
-    AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @5 @1 @2 @3 @4 / ^ _ _ _ _ _ ;
+//    AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @6 @1 @2 @3 @4 @5 / ^ _ _ _ _ _ _ ;
+//    AnyUpTehta AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @5 @1 @2 @3 @4 / ^ _ _ _ _ _ ;
     AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @4 @1 @2 @3 / ^ _ _ _ _ ;
     AnyUpTehta AnyUpTehta AnyDownTehta > @3 @1 @2 / ^ _ _ _ ;
     AnyUpTehta AnyDownTehta > @2 @1 / ^ _ _ ;
-  
+
     (g_underbar_norm) > g_underbar_roomen / Roomen _ ;
     (g_underbar_norm) > g_underbar_silme / (SilmeNuq,AareNuq) _ ;
     (g_overbar_norm) > g_overbar_silme / (Silme,Aare) AnyDownTehtar _ ;
@@ -349,10 +351,10 @@ table(sub)
     g_utehta_norm g_utehta_norm > g_utehta_double_norm _ / ^ _ _ ;
 
   endpass;
+
 endtable;
 
-
-#define attached user1
+#define attached user2
 
 table(pos)
 
