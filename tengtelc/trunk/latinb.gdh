@@ -136,6 +136,8 @@ g_f_conl_dotlig = ps("f.conl_dotlig") {
 };
 g_longs = ps("longs") { 
 };
+g_germandbls = ps("germandbls") { 
+};
 g_nbsp = ps("uni00A0") { 
  uap = point(256m,1011m);
  dap = point(256m,-128m);
@@ -442,6 +444,9 @@ g_n_conl = ps("n.conl") {
  uap = point(554m,1024m);
 };
 g_ntilde = ps("ntilde") { 
+};
+g_eng = ps("eng") { 
+ uap = point(554m,1024m);
 };
 g_o = ps("o") { 
  dap = point(517m,-128m);

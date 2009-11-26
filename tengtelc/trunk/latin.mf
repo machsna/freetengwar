@@ -837,24 +837,42 @@ beginchr("f.conl_dotlig",0.45en);
   draw_f(conleft,dotlig);
 endchr;
 
-beginchr("longs",0.35en);
-  padding(1.0pt,0.0pt);
-  a0=conpenangle2; a1=a2=35;
-%  z0=(x2+0.8en,1/2[ex,asc]);
-  z0=(w,0)+conpoint2;
+def draw_longs(expr style) =
+  padding(1.0pt,if style=normal: 0.0pt elseif style=double: 0.65pt fi);
+  a1=a2=35;
+  if style=normal:
+    a0=conpenangle2;
+    z0=(w,0)+conpoint2;
+  elseif style=double:
+    a0=a5=a6=a7=a8=35;
+    z0=(0.78[x2,x6],0.67[y5,y1]);
+    z5=(0.47[x2,x6],0.61[y7,y1]);
+    z6=(w-rpad,0.22[y7,y1]);
+    use(a7); bot z7=(0.40[x8,x6],-o);
+    x8=0.42[x2,x6]; z8=z7+whatever*dir(180-30);
+  fi
   use(a1); top z1=(0.7[x2,x0],asc);
   z2=(x3,0.25[ex,asc]);
   z3=(lpad,ex);
   z4=(x3,-o);
-%  p1=ornpath(rounded,curved)(3,4); ap1=ornang(rounded,curved);
   ap1=ang(38..34..31..25..25..31);
   p1=topserif(3,4)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(3,4)(0.5pt,0.07pt,0.5pt,20,ap1);
   draw_stroke(p1,ap1);
-  p2=z3a{up}..z2{up}..z1{right}..z0; ap2=ang(penangle 1 of ap1..a2..a1..a0);
-  draw_stroke(p2,ap2);
-  labels(range 1 thru 4);
+  if style=normal:
+    p2=z3a{up}..z2{up}..z1{right}..z0; ap2=ang(penangle 1 of ap1..a2..a1..a0);
+    draw_stroke(p2,ap2);
+  elseif style=double:
+    p2=z3a{up}..z2{up}..z1{right}..z0{down}..z5{down}..tension 1.5 and 0.8..z6{down}..z7{left}..z8; ap2=ang(penangle 1 of ap1..a2..a1..a0..a5..a6..a7..a8);
+    draw_stroke(p2,ap2);
+  fi
+  labels(range 1 thru 8);
+enddef;
+beginchr("longs",0.35en);
+  draw_longs(normal);
 endchr;
-
+beginchr("germandbls",1.1en);
+  draw_longs(double);
+endchr;
 
 addalias("uni00A0","nbsp");
 beginrefchr(nbsp,2pt);
@@ -1330,7 +1348,6 @@ endchr;
 beginchr("partialdiff",0.95en);
   draw_eth(open);
 endchr;
-pause;
 
 %beginchr("e",0.9en);
 %  padding(0.6pt,0.6pt);
@@ -1664,17 +1681,14 @@ beginchr("m.conl",1.5en);
   draw_m(conleft);
 endchr;
 
-def draw_n(expr style) =
+def draw_n(expr style, secstyle) =
   padding(1pt,0.85pt);
-  a3=45; a4=36; a5=35;
+  a3=45; a4=36; a5=35; a6=40; a7=42; a8=45;
   z1=(lpad,ex); z2=(x1,-o);
   if style=conleft:
-%    ap0=ornang(widecon,curved);
-%    p1=conpoint1{right}..ornpath(widecon,curved)(1,2); ap1=ang(conpenangle1..ap0);
     ap1=ang(conpenangle1..38..34..31..25..25..31);
     p1=conpoint1{right}..topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,20,ap1);
   else:
-%    p1=ornpath(rounded,curved)(1,2); ap1=ornang(rounded,curved);
     ap1=ang(38..34..31..25..25..31);
     p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,20,ap1);
   fi
@@ -1682,21 +1696,31 @@ def draw_n(expr style) =
   t=p1 heighttimes 0.65ex;
   z3=change_angle(point t of p1, penangle t of ap1+180, a3+180);
   use(a4); top z4=(0.6[x1,x5],ex);
-  z5=(w-rpad,0.65ex); z6=(x5,0);
-  p2=ornpath(noorn,narrcon)(5,6); ap2=ornang(noorn,narrcon);
-  draw_stroke(z3{curl 0.5}..z4{right}...{down}p2,ang(a3..a4..a5..ap2));
-
+  if secstyle=normal:
+     z5=(w-rpad,0.65ex); z6=(x5,0);
+     p2=ornpath(noorn,narrcon)(5,6); ap2=ornang(noorn,narrcon);
+     draw_stroke(z3{curl 0.5}..z4{right}...{down}p2,ang(a3..a4..a5..ap2));
+  elseif secstyle=descend:
+     z5=(w-rpad,0.55ex);
+     z6=(x5,-0.35desc);
+     use(a7); bot z7=(0.3[x1,x6],-desc);
+     z8=(lpad,whatever)=z7+(whatever,0) rotated (180-30);
+     draw_stroke(z3{curl 0.5}..z4{right}...z5{down}..z6{down}..z7{left}..z8,ang(a3..a4..a5..a6..a7..a8));
+  fi
   setap("uap",(1/2w,ex+apy));
-
-  labels(range 1 thru 6);
+  labels(range 1 thru 8);
 enddef;
 beginchr("n",0.80en);
-  draw_n(normal);
+  draw_n(normal,normal);
 endchr;
 beginchr("n.conl",0.80en);
-  draw_n(conleft);
+  draw_n(conleft,normal);
 endchr;
 combinechr("ntilde","n","uap","uni0303.normal","dap");
+
+beginchr("eng",0.80en);
+  draw_n(normal,descend);
+endchr;
 
 def draw_o(expr style) = 
   padding(0.7pt,0.7pt);

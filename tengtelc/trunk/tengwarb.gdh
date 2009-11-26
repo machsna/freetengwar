@@ -1553,8 +1553,6 @@ g_shooktehta = ps("uniE059") {
  uap = point(563m,1011m);
  dap = point(563m,-512m);
 };
-g_tenginterpdot = ps("tenginterpdot") { 
-};
 g_tenginterpone = ps("uniE060") { 
 };
 g_tenginterptwo = ps("uniE061") { 
