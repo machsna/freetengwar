@@ -41,28 +41,18 @@ def draw_telco(expr side, type, conn) =
      elseif type=short:
       a1-3=a2+1=a3+5=a4+8=a5+10=35;
      elseif type=extended:
-      a1-3=a2+1=a3+8=a4+10=a5=35;
+      a1-3=a2+1=a3+5=a4+5=a5+5=35;
      fi
   elseif side=rightside:
      if type=ascend:
-%       a1-6=a2-1=a3+2=a4-6=35;
        a1-6=a2-1=a3+2=a4-6=a5=35;
      elseif type=descend:
-%       a1+9=a2-1=a3+2=a4+9=35;
        a0+8=a1+8=a2-2=a3+5=a4+5=a5+5=35;
      elseif type=short:
-%       a1+9=a2+4=a3+1=a4-3=35;
        a0+8=a1+8=a2+4=a3+1=a4-3=a5=35;
      elseif type=extended:
-%       a1-3=a2+1=a3+5=a4+10=35;
-       a1-3=a2+1=a3+8=a4+10=a5=35;
+       a1-3=a2+1=a3+5=a4+5=a5+5=35;
      fi
-  fi
-
-  if (side=rightside) and ((type=descend) or (type=short)):
-    ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
-  else:
-    ap1=ang(a1..a2..a3..a4..a5..a3);
   fi
 
 %%  Due to the varying width of the stem, they often seem to lean backwards.
@@ -80,47 +70,37 @@ def draw_telco(expr side, type, conn) =
   y2=if (type=short) or (type=ascend): if side=rightside: 0 else: -o fi else: -tdesc fi;
 
   if side=leftside:
+    ap1=ang(a1..a2..a3..a4..a5..a3);
     if conn=normal:
       if type=descend:
-%%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
         p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=ascend:
-%%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=short:
-%%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=extended:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
     elseif conn=conleft:
       if type=descend:
-%%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=short:
-%%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.6pt,25,ap1);
       fi
     fi
   elseif side=rightside:
 %    if conn=normal:
       if type=ascend:
+        ap1=ang(a1..a2..a3..a4);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 180, 0, ap1);
       elseif type=descend:
-%%        p1=topserif(1,2)(0.3pt, 0.5tex, 20+180, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.15pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
+        ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
         p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.15pt, 0.3tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
+        ap1=ang(a2..a0..a1..a2..a3..a4);
         p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
       elseif type=extended:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+        ap1=ang(a1..a2..a3..a4..a5..a3);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       fi
 %    elseif conn=conright:
@@ -131,37 +111,35 @@ def draw_telco(expr side, type, conn) =
 %      fi
 %    fi
   elseif side=carrier:
+    if (type=ascend) and (conn=conright):
+      ap1=ang(a1..a2..a3..a4);
+    else:
+      ap1=ang(a1..a2..a3..a4..a5..a3);
+    fi
     if conn=normal:
       if type=descend:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       elseif type=ascend: % Halla
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=extended:
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
     elseif conn=conleft:
       if type=descend:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     elseif conn=conright:
       if type=ascend: % Halla
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     elseif conn=conboth:
       if type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     fi
@@ -170,32 +148,21 @@ def draw_telco(expr side, type, conn) =
   if (conn=conleft) or (conn=conboth):
     draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
   fi
-%  if (conn=conright) or (conn=conboth) or (conn=conrbot):
-%    if (type=descend) or (type=short) and (side=rightside):
-%      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
-%    else:
-%      draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
-%    fi
-%  fi
 
   if (conn=conright) or (conn=conboth) or (conn=conrbot):
     if (type=descend) or (type=short) and (side=rightside) and ((conn=conright) or (conn=conboth)):
-      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
+      draw_stroke(p1, ap1);
+      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 1 of ap1));
     elseif (conn=conrbot) or (conn=conright) and (type=ascend):
+      draw_stroke(p1, ap1);
       draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
     else: % Carrier
+      draw_stroke(subpath(0,2) of p1, subpath(0,2) of ap1);
+      draw_stroke(subpath(4,5) of p1, subpath(4,5) of ap1);
       draw_stroke((conpoint11+(w,0)){left}...point 4 of p1,ang(conpenangle11--penangle 4 of ap1));
     fi
-  fi
-
-
-
-  draw_stroke(p1,subpath (0,length p1) of ap1);
-
-  if (side=rightside) and ((type=descend) or (type=short)):
-    p2=subpath(1,infinity) of p1;
   else:
-    p2=p1;
+    draw_stroke(p1, ap1);
   fi
 
   z3=find_telcoap(conpoint3,conpenangle3,180,p1,ap1);
@@ -218,7 +185,6 @@ beginchr("telco_leftdown",0);
   draw_telco(leftside, descend, normal);
   luuvbardiff1:=xpart(z3-z4);
 endchr;
-pause;
 beginchr("telco_leftdown_conl",0);
   draw_telco(leftside, descend, conleft);
 endchr;
@@ -260,7 +226,6 @@ beginchr(shortcarr,0);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
-pause;
 beginchr(shortcarr_conl,0);
   draw_telco(carrier, short, conleft);
   setap("uap",(0.5[x1b,x1a],tex+apy));
@@ -271,17 +236,18 @@ beginchr(shortcarr_conr,0);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
+pause;
 beginchr(shortcarr_conb,0);
   draw_telco(carrier, short, conboth);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 
-beginchr(extendedtelco,0);
-  draw_telco(carrier, extended, normal);
-  setap("uap",(0.5[x1b,x1a],tasc+apy));
-  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
-endchr;
+%beginchr(extendedtelco,0);
+%  draw_telco(carrier, extended, normal);
+%  setap("uap",(0.5[x1b,x1a],tasc+apy));
+%  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
+%endchr;
 
 
 forgd:=false;
@@ -405,7 +371,7 @@ def draw_decrighttelco(expr style, secstyle) =
     if secstyle=1:
       z1=z4-whatever*dir40; y4=ctex+3o;
     elseif secstyle=2:
-      top y1=y4-o; y4=ctex;
+      top y1=y4; y4=ctex-o;
     fi
     y2=-ctdesc;
     ap0=ornang(noorn,curved) shifted (0,5); ap1=ang(a1..ap0);
@@ -446,6 +412,7 @@ endchr;
 beginchr("captelco_rightdown2",0);
   draw_decrighttelco(descend,2);
 endchr;
+pause;
 beginchr("captelco_rightup",0);
   draw_decrighttelco(ascend,0);
 endchr;
