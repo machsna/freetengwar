@@ -325,7 +325,9 @@ def draw_hyarmenyanta(expr style,secstyle) =
   if secstyle=conright:
     u:=p1 heighttimes 0.5ctex;
     draw_stroke(subpath(0,u) of p1,subpath(0,u) of ap1);
-    draw_stroke((conpoint11+(w,0)){left}...{-direction u of p1}point u of p1,ang(conpenangle11--penangle u of ap1));
+    a10=conpenangle11; use(a10); rt z10 = conpoint11+(w,0);
+    draw_stroke(z10{left}...{-direction u of p1}point u of p1,ang(a10--penangle u of ap1));
+    draw_connection(11,10,false);
   else:
     draw_stroke(p1,ap1);
   fi
@@ -343,7 +345,6 @@ enddef;
 beginchr(hyarmen,1.0ten);
   draw_hyarmenyanta(ascend,normal);
 endchr;
-pause;
 beginchr(hyarmen_conr,1.0ten);
   draw_hyarmenyanta(ascend,conright);
 endchr;
@@ -694,8 +695,10 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
     ap1=ang(a0..a1..a2);
     p1=topserif(1,2)(0.5pt,0.4*abs(z1-z2),25,3,ap1)..z2;
   elseif style=conleft:
-    ap1=ang(conpenangle7..a0..a1..a2);
-    p1=conpoint7{right}..topserif(1,2)(0.4pt,0.4*abs(z1-z2),0,4,ap1)..z2;
+    ap1=ang(a0..a1..a2);
+    p1=topserif(1,2)(0.4pt,0.4*abs(z1-z2),0,4,ap1)..z2;
+    z0=point 0 of p1;
+    draw_connection(7,0,true);
   fi
   draw_stroke(p1,ap1);
   t:=p1 heighttimes 0.55tex;
@@ -734,7 +737,6 @@ enddef;
 beginchr(roomen,1.0ten);
   draw_roomen(normal,1,normal,false);
 endchr;
-pause;
 beginchr(roomen_conl,1.0ten);
   draw_roomen(conleft,1,normal,false);
 endchr;
@@ -770,12 +772,14 @@ def draw_lambe(expr style, number) =
     a1=36; use(a1);
     x1=lpad-0.3pt; z1=z2+whatever*dir0.5;
   elseif (style=conleft) or (style=conboth) or (style=conbbot):
-    a1=conpenangle7; z1=conpoint7;
+    a1=conpenangle7; use(a1); lft z1=conpoint7;
+    draw_connection(7,1,true);
   fi
   if (style=normal) or (style=capital) or (style=conleft) or (style=conrbot) or (style=conbbot):
     a2=36; use(a2); top z2=(w-rpad+0.3pt,hgt);
   elseif (style=conright) or (style=conboth):
-    a2=conpenangle7; z2=(w,0)+conpoint7;
+    a2=conpenangle7; use(a2); rt z2=(w,0)+conpoint7;
+    draw_connection(7,2,false);
   fi
   ap1=ang(a1..a2);
   if (style=normal) or (style=conrbot):
@@ -800,10 +804,7 @@ def draw_lambe(expr style, number) =
       z6=(0.47[x5,x7],-0.56dpt);
       x7=w-rpad;
       z8=z7+0.7pt*dir(180-40); use(a8); bot y8=0;
-      a9=conpenangle11;
-      z9=(w,0)+conpoint11;
-      p3=z8..{right}z9;
-      ap3=ang(a8..a9);
+      draw_connection(11,8,false);
     else:
       z6=(0.47[x5,x7],-0.45dpt);
       z7=(w-rpad,0.65[y4,y6]);
@@ -827,9 +828,6 @@ def draw_lambe(expr style, number) =
     setap("dap",(x9-0.7pt,y6-0.7pt));
   fi
   draw_stroke(p2,ap2);
-  if (style=conrbot) or (style=conbbot):
-    draw_stroke(p3,ap3);
-  fi
   if style=capital:
     a12=50; x10=0.6[x5,x4]; x11=x10-0.6tecil_w;
     z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,1) of p2;
@@ -845,7 +843,6 @@ enddef;
 beginchr(lambe,1.5ten);
   draw_lambe(normal,1);
 endchr;
-pause;
 beginchr(lambe_conr,1.5ten);
   draw_lambe(conright,1);
 endchr;
@@ -861,7 +858,6 @@ endchr;
 beginchr(lambe_conrbot,1.5ten);
   draw_lambe(conrbot,1);
 endchr;
-pause;
 beginchr(lambe_conbbot,1.5ten);
   draw_lambe(conbbot,1);
 endchr;
@@ -1135,18 +1131,15 @@ def draw_uure(expr style) =
   setap("dap",(x4,-apy));
   penlabels(range 1 thru 4);
   if style=conright:
-    a5=conpenangle7; z5=(w,0)+conpoint7;
-    draw_stroke(z2..{right}z5,ang(a2..a5));
+    draw_connection(7,2,false);
   fi
 enddef;
 beginchr(uure,0.95ten);
   draw_uure(normal);
 endchr;
-pause;
 beginchr(uure_conr,0.95ten);
   draw_uure(conright);
 endchr;
-pause;
 
 def draw_atengwa(expr style) =
   numeric hgt; hgt=if style=capital: ctex else: tex fi;
@@ -1309,9 +1302,11 @@ endchr;
 def draw_shook(expr style) =
   padding(0pt,0.8pt);
   if style=normal:
-    a1=conpenangle7; z1=conpoint7;
+    a1=conpenangle7; use(a1); lft z1=conpoint7;
+    draw_connection(7,1,true);
   elseif style=lower:
-    a1=conpenangle11; z1=conpoint11;
+    a1=conpenangle11; use(a1); lft z1=conpoint11;
+    draw_connection(11,1,true);
   fi
   a2=a1; a3=a4=a5=35;
   use(a2); x2=x3-1.5pt; y2=y1;
@@ -1338,12 +1333,12 @@ def draw_conncarr(expr style) =
   draw_stroke(p1,ap1);
   a5=penangle (directiontime right of p1) of ap1; use(a5); top rt z5=z1;
   if style=conright:
-    a6=conpenangle7; z6=(w,0)+conpoint7;
+    draw_connection(7,5,false);
   else:
     a6=35; z6=(w+1.1pt,y5);
+    p2=z5..{right}z6; ap2=ang(a5..a6);
+    draw_stroke(p2,ap2);
   fi
-  p2=z5..{right}z6; ap2=ang(a5..a6);
-  draw_stroke(p2,ap2);
   setap("uap",(x1,tex+0.5pt));
   setap("dap",(x1,-0.5pt));
   penlabels(range 1 thru 6);
@@ -1354,7 +1349,7 @@ endchr;
 beginchr(conncarr_conr,0.7ten);
   draw_conncarr(conright);
 endchr;
-
+pause;
 
 def draw_longcarrtehta(expr sy)=
   a1=38; use(a1); top z1=(0,sy);

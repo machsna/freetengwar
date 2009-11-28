@@ -39,6 +39,20 @@ conpenangle9=45; conpoint9=(whatever,1/2ctex);                     % luuva, teem
 conpenangle10=35; use(conpenangle10); top conpoint10=(whatever,ctex);% closingbar teema 4, capital tengwar
 conpenangle11=35; use(conpenangle11); bot conpoint11=(0,0);        % Connecting tengwar, lower s-hook
 
+connoverlap=0.05pt;
+def draw_connection(suffix $$,$)(expr onleftside) =
+  use(conpenangle$$);
+  if onleftside: lft x$a=0; else: rt x$a=w; fi
+  y$a=ypart(conpoint$$);
+  z$b=(if onleftside: - else: w+ fi 2pt,y$a);
+  draw_stroke(z$..{if onleftside: left else: right fi}z$a--z$b,ang(a$..conpenangle$$--conpenangle$$));
+  use(90);
+  top z$c=bot z$d=(if onleftside: - else: w+ fi connoverlap,y$a);
+  y$e=y$c; y$f=y$d;
+  use(0);
+  x$e=x$f=if onleftside: lft else: rt fi x$b;
+  erase fill (z$c--z$d--z$f--z$e--cycle);
+enddef;
 
 def draw_dot(suffix $)(expr fact) =
 %  fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;

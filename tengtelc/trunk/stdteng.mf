@@ -34,14 +34,19 @@ def draw_telco(expr side, type, conn) =
   padding(lp,rp);
 
   if (side=leftside) or (side=carrier):
+     if (conn=conleft) or (conn=conboth):
+       a1=conpenangle7+1; a2=1/2[a1,a3];
+     else:
+       a1-3=a2+1=35;
+     fi
      if type=ascend:
-       a1-3=a2+1=a3+8=a4+10=a5+10=35;
+       a3+8=a4+10=a5+10=35;
      elseif type=descend:
-       a1-3=a2+1=a3+5=a4+5=a5+5=35;
+       a3+5=a4+5=a5+5=35;
      elseif type=short:
-      a1-3=a2+1=a3+5=a4+8=a5+10=35;
+       a3+5=a4+8=a5+10=35;
      elseif type=extended:
-      a1-3=a2+1=a3+5=a4+5=a5+5=35;
+       a3+5=a4+5=a5+5=35;
      fi
   elseif side=rightside:
      if type=ascend:
@@ -146,20 +151,24 @@ def draw_telco(expr side, type, conn) =
   fi
 
   if (conn=conleft) or (conn=conboth):
-    draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
+    z21=point 0 of p1; a21=penangle 0 of ap1;
+    draw_connection(7,21,true);
   fi
 
   if (conn=conright) or (conn=conboth) or (conn=conrbot):
     if (type=descend) or (type=short) and (side=rightside) and ((conn=conright) or (conn=conboth)):
       draw_stroke(p1, ap1);
-      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 1 of ap1));
+      z20=point 1 of p1; a20=penangle 1 of ap1;
+      draw_connection(7,20,false);
     elseif (conn=conrbot) or (conn=conright) and (type=ascend):
       draw_stroke(p1, ap1);
-      draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
+      z20=point infinity of p1; a20=penangle infinity of ap1;
+      draw_connection(11,20,false);
     else: % Carrier
       draw_stroke(subpath(0,2) of p1, subpath(0,2) of ap1);
       draw_stroke(subpath(4,5) of p1, subpath(4,5) of ap1);
-      draw_stroke((conpoint11+(w,0)){left}...point 4 of p1,ang(conpenangle11--penangle 4 of ap1));
+      z20=point 4 of p1; a20=penangle 4 of ap1;
+      draw_connection(11,20,false);
     fi
   else:
     draw_stroke(p1, ap1);
@@ -242,13 +251,12 @@ beginchr(shortcarr_conb,0);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
-
+pause;
 %beginchr(extendedtelco,0);
 %  draw_telco(carrier, extended, normal);
 %  setap("uap",(0.5[x1b,x1a],tasc+apy));
 %  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
 %endchr;
-
 
 forgd:=false;
 
@@ -256,39 +264,31 @@ beginchr("telco_rightdown",0);
   draw_telco(rightside, descend, normal);
   luuvbardiff3:=xpart(z5-z6);
 endchr;
-pause;
 beginchr("telco_rightdown_conr",0);
   draw_telco(rightside, descend, conright);
 endchr;
-pause;
 beginchr("telco_rightup",0);
   draw_telco(rightside, ascend, normal);
   luuvbardiff4:=xpart(z5-z6);
   setap("harmaligap",point 0 of p1); apt(ps.n,lastap).forgd:=false;
   harmaligappenangle=penangle 0 of ap1;
 endchr;
-pause;
 beginchr("telco_rightup_conr",0);
   draw_telco(rightside, ascend, conright);
 endchr;
-pause;
 beginchr("telco_rightshort",0);
   draw_telco(rightside, short, normal);
 %  luuvbardiff3:=luuvbardiff3+xpart(z5-z6);
 endchr;
-pause;
 beginchr("telco_rightshort_conr",0);
   draw_telco(rightside, short, conright);
 endchr;
 beginchr("telco_rightshort_conrbot",0);
   draw_telco(rightside, short, conrbot);
 endchr;
-pause;
 beginchr("telco_rightext",0);
   draw_telco(rightside, extended, normal);
 endchr;
-pause;
-
 
 
 def draw_declefttelco(expr sy,eya,eyb,h) =
@@ -412,7 +412,6 @@ endchr;
 beginchr("captelco_rightdown2",0);
   draw_decrighttelco(descend,2);
 endchr;
-pause;
 beginchr("captelco_rightup",0);
   draw_decrighttelco(ascend,0);
 endchr;
@@ -446,8 +445,9 @@ def draw_lowclosingbar(expr style) =
   elseif style=conright:
     a2=a1+6; a3=conpenangle11;
     use(a2); x2=x3-0.8pt; y2=0.8[bot y10,top 0];
-    z3=(w,0)+conpoint11;
+    use (a3); rt z3=(w,0)+conpoint11;
     p1=z1{dir5}..z2..z3{right}; ap1=ang(a1--a2--a3);
+    draw_connection(11,3,false);
   elseif style=descend:
     a2=a3=a4=a5=a1+6;
     use(a2); x2=x3-1.5pt; y2=0.8[bot y10,top 0];
@@ -469,11 +469,13 @@ def draw_highclosingbar(expr style,h,yap) =
     use(a2); top z2=(x1+0.2pt,h);
   else:
     a1=conpenangle7; a2=a1;
-    z1=conpoint7;
+    use(a1); lft z1=conpoint7;
+    draw_connection(7,1,true);
     z2=z1+(1pt,0pt);
   fi
   if (style=conright) or (style=conboth):
-    a4=conpenangle7; z4=(w,0)+conpoint7;
+    a4=conpenangle7; use(a4); rt z4=(w,0)+conpoint7;
+    draw_connection(7,4,false);
   else:
     a4=35; x4=w-rpad; z4=z3+whatever*dir15;
   fi
@@ -639,8 +641,7 @@ def draw_luuva(expr num, side, style, h, yap) =
     fi
   fi
   if style=conright:
-    p3=z11..((w,0)+conpoint11){right}; ap3=ang(a11..conpenangle11);
-    draw_stroke(p3,ap3);
+    draw_connection(11,11)(false);
   fi
   if side=leftside:
     setap("lluuvap",z1 transformed rot);
@@ -1143,14 +1144,17 @@ def draw_openanna(expr style) =
   fi
   z5=apt(ps.n,"rluuvap").pt;
   if style=conleft:
-    ap0=ornang(widecon,noorn);
-    ap1=ang(conpenangle7..ap0);
-    p0=conpoint7{right}..ornpath(widecon,noorn)(1,2);
+    a0=conpenangle7+1; a1=34;
+    ap0=ang(a0..a1);
+    p0=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap0);
+    z0=point 0 of p0;
+    draw_connection(7,0,true);
   else:
-    ap1=ornang(rounded,noorn); p0=ornpath(rounded,noorn)(1,2);
+    a0=38; a1=34;
+    ap0=ang(a0..a1);
+    p0=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap0);
   fi
-  p1=subpath(0,length p0-1) of p0..z3{down};
-  draw_stroke(p1..z4{right}..{curl0.3}z5,ang(ap1..a2..a4..a5));
+  draw_stroke(subpath(0,0.5) of p0..z3{down}..z4{right}..{curl0.3}z5,ang(subpath(0,0.5) of ap0..a2..a4..a5));
   labels(range 1 thru 7);
   setap("uap",(1/2[x1,x5],hgt+apy));
   setap("dap",(0.49w,-apy));
