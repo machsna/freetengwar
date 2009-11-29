@@ -1327,9 +1327,9 @@ endchr;
 
 def draw_conncarr(expr style) =
   padding(1.1pt,0);
-  z1=(lpad,tex); z2=(x1,-o);
-  ap1=ornang(rounded,narrcon);
-  p1=ornpath(rounded,narrcon)(1,2);
+  z1=(lpad,tex); z2=(x1,0);
+  ap1=ang(41..36..32..35);
+  p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.8pt, 0.3tex, 180+25, -1, ap1);
   draw_stroke(p1,ap1);
   a5=penangle (directiontime right of p1) of ap1; use(a5); top rt z5=z1;
   if style=conright:
@@ -1346,6 +1346,7 @@ enddef;
 beginchr(conncarr,0.7ten);
   draw_conncarr(normal);
 endchr;
+pause;
 beginchr(conncarr_conr,0.7ten);
   draw_conncarr(conright);
 endchr;
