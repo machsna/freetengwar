@@ -214,7 +214,7 @@ addaliasvars("shortcarr","conr","conl","conb","dec");
 
 addaliasvars("wtengwa","desc","conr");
 addaliasvars("atengwa","desc","dec");
-addaliasvars("conncarr","conr");
+addaliasvars("conncarr","long","conr");
 addaliasvars("openanna","conl","dec");
 addaliasvars("mhtengwa","dec");
 addaliasvars("beleriandicmh","dec");

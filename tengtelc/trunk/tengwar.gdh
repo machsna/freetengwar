@@ -198,7 +198,7 @@ table(glyph)
   StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa,g_tinco_lig,LargeInterp);
   StemDownRightTengwar=(Calma,Quesse,Anga,Ungwe,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silmenuq,g_aarenuq);
   StemDownLeftTengwar=(Tinco,Parma,Ando,Umbar,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,Roomen,Arda,AngWhtengwa);
-  NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr);
+  NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr,Atengwa);
 
   AnyTengwa=(Tinco,Parma,Calma,Quesse,Ando,Umbar,Anga,Ungwe,Thuule,Formen,Harma,Hwesta,
              Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,Oore,Vala,Anna,Vilya,
@@ -212,8 +212,8 @@ table(glyph)
   MayConR=(SomeMayConR,g_lambe,g_lambe_conl,g_alda,g_alda_conl,g_uure);
   DoConR=(SomeDoConR,g_lambe_conr,g_lambe_conb,g_alda_conr,g_alda_conb,g_uure_conr);
 
-  SomeMayConL=(g_tinco,g_parma,g_ando,g_umbar,g_nuumen,g_malta,g_oore,g_vala,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_openanna,g_shook);
-  SomeDoConL=(g_tinco_conl,g_parma_conl,g_ando_conl,g_umbar_conl,g_nuumen_conl,g_malta_conl,g_oore_conl,g_vala_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_openanna_conl,g_shook_high);
+  SomeMayConL=(g_tinco,g_parma,g_ando,g_umbar,g_nuumen,g_malta,g_oore,g_vala,g_roomen,g_arda,g_lambe,g_alda,g_shortcarr,g_longcarr,g_openanna,g_shook);
+  SomeDoConL=(g_tinco_conl,g_parma_conl,g_ando_conl,g_umbar_conl,g_nuumen_conl,g_malta_conl,g_oore_conl,g_vala_conl,g_roomen_conl,g_arda_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_openanna_conl,g_shook_high);
   MayConL=(SomeMayConL,g_quesse,g_ungwe,g_hwesta,g_unque,g_nwalme,g_vilya,g_exthwesta,g_extunque);
   DoConL=(SomeDoConL,g_quesse_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nwalme_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl);
 
@@ -293,6 +293,7 @@ table(sub)
     endif;
     MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar _ ;
     g_conncarr MayConL > g_conncarr_conr DoConL / ^ _ AnyIsolTehtar _ ;
+    g_conncarr > g_conncarr_long / ^ _ AnyIsolTehtar ZWJ? (Calma,Anga,Harma,Anca,Noldo,Anna,ExtHarma,ExtAnca,Hyarmen,g_whtengwa);
     if (!lowershook)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
@@ -313,6 +314,7 @@ table(sub)
        g_whtengwa > g_whtengwa_vartwo;
     endif;
 
+
   // When none of the above rules match anymore, we proceed to the next character, possibly a tehta:
 
     // Change "isolated" forms (i.e. on a dotted circle) to non-spacing forms:
@@ -330,12 +332,12 @@ table(sub)
     (g_overbar_norm) > g_overbar_silme / (Silme,Aare) AnyDownTehtar _ ;
     (g_overbar_norm,g_underbar_norm,g_otehta_norm,g_wtehta_norm,g_engytehta_norm) > (g_overbar_wide,g_underbar_wide,g_otehta_wide,g_wtehta_wide,g_engytehta_wide)
            / WideTengwar ^ AnyTehtar _ ;
-    g_otehta_norm > g_otehta_wide / (Tinco,Parma,Thuule,Formen,Oore,Vala) ^ AnyTehtar _ ;
+    g_otehta_norm > g_otehta_wide / (Tinco,Parma,Thuule,Formen,Oore,Vala,ExtThuule,ExtFormen,OpenAnna,BeleriandicMh) ^ AnyTehtar _ ;
     (g_otehta_norm,g_overbar_norm,g_underbar_norm,g_engytehta_norm) > (g_otehta_wide,g_overbar_lambe,g_underbar_lambe,g_engytehta_wide)
            / (Lambe,Alda) ^ AnyTehtar _ ;
     g_longcarrtehta_norm > g_longcarrtehta_lambe / Lambe g_underbar_lambe? ^ _ ;
     (g_downutehta_norm) > (g_downutehta_long) / (Roomen,Arda,Lambe,Alda,AngWhtengwa) UnderbarTehta? _ ;
-    (g_downutehta_norm) > (g_downutehta_narrow) / (Tinco,Parma,Calma,Quesse,Harma,Hwesta,Anna,Vilya,Silme,Aare,NarrowTengwar) UnderbarTehta? _ ;
+    (g_downutehta_norm) > (g_downutehta_narrow) / (Tinco,Parma,ExtThuule,ExtFormen) UnderbarTehta? _ ;
     (g_downutehta_norm) > (g_downutehta_wide) / WideTengwar UnderbarTehta? _ ;
     g_wtehta_norm > g_wtehta_narrow / (StemUpRightTengwar,StemUpLeftTengwar,NarrowTengwar) AnyTehtar _ ;
     (g_otehta_norm,g_otehta_double_norm) > (g_otehta_narrow,g_otehta_double_narrow)
@@ -402,28 +404,34 @@ table(pos)
   endpass;
 
   pass(3)
-//    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Calma,Anga,Harma,Anca,Noldo,Anna,Uure) {kern.x = +55m} / _ ^ AnyTehtar ZWJ _;
-//    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya) {kern.x = -5m} / _ ^ AnyTehtar ZWJ _;
-//    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -90m} / _ AnyTehtar ZWJ ^ _;
-//    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Lambe) {kern.x = -100m} / _ AnyTehtar ZWJ ^ _;
-//    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Silme) {kern.x = +20m} / _ AnyTehtar ZWJ ^ _;
-    (Roomen,Arda) Hyarmen {kern.x = -80m} / _ AnyTehtar ^ _;
-    (Roomen,Arda) Yanta {kern.x = -70m} / _ AnyTehtar ^ _;
-    Hyarmen Roomen {kern.x = -70m} / _ AnyTehtar ^ _;
-    Yanta Roomen {kern.x = -110m} / _ AnyTehtar ^ _;
-    g_conncarr (Calma,Anga,Harma,Anca,Noldo,Anna,ExtHarma,ExtAnca,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,Vaiya) {kern.x = -100m} / _ AnyTehtar ^ _;
-    (Roomen,Arda) g_utehta_norm {shift.x = -80m} / _ AnyDownTehtar ^ _;
-    (Roomen,Arda) g_otehta_norm {shift.x = -100m} / _ AnyDownTehtar ^ _;
-//    (Tinco,Parma,Thuule,Formen,Oore,Vala) g_otehta_norm {shift.x = 100m} / _ ^ _;  // -180
-    (Tinco,Thuule,Oore) g_otehta_wide {shift.x = -140m} / _ AnyDownTehtar ^ _;
-    (Parma,Formen,Vala) g_otehta_wide {shift.x = -110m} / _ AnyDownTehtar ^ _;
-    (ShortCarr,LongCarr) g_otehta_norm {shift.x = 90m} / _ AnyDownTehtar ^ _;
-    g_wtehta_norm g_atehta_norm {shift.x = 50m} / _ ^ _;
-    Hwesta g_utehta_norm {shift.x = -130m} / _ ^ _;
-    Hwesta g_otehta_narrow {shift.x = -125m} / _ ^ _;
-    Hwesta g_wtehta_narrow {shift.x = -60m} / _ ^ _;
-//    g_downotehta_norm {shift.x = -300m} / g_silme_lig_harma ZWJ Harma ^ _;
+    g_startmodechange g_endmodechange {kern.x = -793m};
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Calma,Anga,Harma,Anca,Noldo,Anna,Uure) {kern.x = +105m} / _ ^ AnyTehtar ZWJ _;
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya) {kern.x = +10m} / _ ^ AnyTehtar ZWJ _;
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -50m} / _ AnyTehtar ZWJ ^ _;
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Lambe) {kern.x = -90m} / _ AnyTehtar ZWJ ^ _;
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Silme) {kern.x = +115m} / _ AnyTehtar ZWJ ^ _;
 
+    (Roomen,Arda) (Hyarmen,Yanta) {kern.x = -150m} / _ AnyTehtar ^ _;
+    Hyarmen Roomen {kern.x = -110m} / _ AnyTehtar ^ _;
+    Yanta Roomen {kern.x = -160m} / _ AnyTehtar ^ _;
+    g_conncarr (SilmeNuq,AareNuq,HwestaSin,Yanta,Uure,Atengwa,Vaiya) {kern.x = -135m} / _ AnyTehtar ^ _;
+
+    (Roomen,Arda) g_utehta_norm {shift.x = -125m} / _ AnyDownTehtar ^ _;
+    (Roomen,Arda) g_otehta_norm {shift.x = -120m} / _ AnyDownTehtar ^ _;
+    (Tinco,Thuule,Oore,ExtThuule,BeleriandicMh) g_otehta_wide {shift.x = -190m} / _ AnyDownTehtar ^ _;
+    (Parma,Formen,Vala,ExtFormen,Unque,ExtUnque,OpenAnna) g_otehta_wide {shift.x = -170m} / _ AnyDownTehtar ^ _;
+    (Anga,Anca,Noldo,ExtAnca) g_otehta_wide {shift.x = -150m} / _ AnyDownTehtar ^ _;
+    (ShortCarr,LongCarr,Atengwa) g_otehta_norm {shift.x = 120m} / _ AnyDownTehtar ^ _;
+    (Hwesta,ExtHwesta) g_otehta_narrow {shift.x = -125m} / _ ^ _;
+    (Hwesta,ExtHwesta) g_utehta_norm {shift.x = -130m} / _ ^ _;
+    (Hwesta,ExtHwesta) g_wtehta_narrow {shift.x = -60m} / _ ^ _;
+    g_wtehta_norm g_atehta_norm {shift.x = 60m} / _ ^ _;
+
+    g_downotehta_norm {shift.x = -400m} / g_silme_lig_harma ZWJ Harma ^ _;
+    g_longcarrtehta_norm {shift.x = 90m; shift.y = 350m} / g_downutehta_long ^ _;
+    g_downatehta_norm {shift.x = -150m} g_longcarrtehta_norm {shift.x = 450m; shift.y = 460m};
+    (Hyarmen,Yanta) g_downitehta_norm {shift.y = 150m};
+    (g_silme_open,g_aare_open) g_itehta_norm {shift.x = -100m};
   endpass;
 
 endtable;

@@ -7,6 +7,8 @@
 \frenchspacing
 
 \font\tengtelc="Tengwar Telcontar/GR" at 15pt
+\font\tengtelcq="Tengwar Telcontar/GR:202=3" at 15pt
+\font\rcap="Tengwar Telcontar/GR:203=1" at 15pt
 \font\tengtelcsmall="Tengwar Telcontar/GR" at 10pt
 \font\tengtelcb="Tengwar Telcontar Bold/GR" at 15pt
 \font\bcap="Tengwar Telcontar Bold/GR:203=1" at 15pt
@@ -17,19 +19,23 @@
 \section*{Test case for Tengwar Telcontar}
 
 \subsection*{Namárië}
-\tengtelc
-      \\
-        \\
-     \\
-        \\
-   \\
-        \\
-       \\
-      \\
-     \\
-        \\
-       \\
-    
+\tengtelcq
+{\rcap }       \\
+        \\
+     \\
+ {\rcap }      \\
+  
+
+       \\
+  {\rcap  }    \\
+{\rcap }      \\
+     \\
+        \\
+    {\rcap }  {\rcap }
+
+{\rcap }   {\rcap }
+
+   {\rcap } 
 
 \subsection*{The King’s Letter}
 \begin{center}
@@ -45,25 +51,24 @@
     \\
     \\
   {\bcap }  \\
-   ‍  \\
-     {\bcap } 
+   ‍ 
 \end{center}
 
 \subsection*{Lowdham’s Manuscript}
 \tengtelc
      ‍  ‍  \\
-    ‍  ‍  \\
+    ‍....  ‍  \\
   ‍   ‍ ‍ ⁊   \\
-     \\
+...  ....   \\
           \\
   ‍   ⁊  ‍ ‍ \\
- ‍ ⁊   ‍   \\
-   ‍    \\
+ ‍ ⁊  . . . .   ‍   \\
+   ‍ . . . . .     \\
       ⁊    \\
    ‍   ‍  \\
       ⁊   \\
         \\
-  ‍ ‍    \\
+  ‍  .... ‍    \\
 
 \subsection*{Declaration of Human Rights}
 \tengtelcb
@@ -72,7 +77,7 @@
 \end{center}
 
 \subsection*{Latin alphabet}
-\tengtelc
+\tengtelcb
 When Frodo heard the voice he looked up, but he could
 see nothing through the thick entangled branches.
 Suddenly he felt a quiver in the gnarled tree trunk
@@ -84,8 +89,285 @@ and even as he looked, it took a stride towards him.
 \newpage
 
 \tengtelcsmall
-\newcommand{\tehtarow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
 \renewcommand{\arraystretch}{1.5}
+
+\newcommand{\tengwarow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
+
+\newcommand{\tengwarowb}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
+
+\newcommand{\tengwarowc}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
+
+\newcommand{\tengwarowd}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{‌}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{‌}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{‌}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{‌}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{‌}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{‌}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\tengwarow{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{‌}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{‌}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\tengwarowb{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{‌}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{‌}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\tengwarowc{}
+\end{tabular}}
+
+\noindent\makebox[\textwidth]{%
+\begin{tabular}{ccccccccccccccccccccccc}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{‌}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{‌}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\tengwarowd{}
+\end{tabular}}
+
+\newcommand{\tehtarow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\ }
 
 \noindent\makebox[\textwidth]{%
 \begin{tabular}{ccccccccccccccccccccccc}
