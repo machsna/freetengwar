@@ -612,13 +612,13 @@ endchr;
 beginchr("capclosingbar_high1",1.2cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high2",1.6cten);
+beginchr("capclosingbar_high2",1.6cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 beginchr("capclosingbar_high3",2.0cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high4",2.4cten);
+beginchr("capclosingbar_high4",2.4cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 
