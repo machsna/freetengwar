@@ -31,6 +31,60 @@ numeric dotsize[];
 %dotsize1=0.98; dotsize2=1.00; dotsize3=1.04;
 dotsize1=1.02; dotsize2=1.04; dotsize3=1.09;
 
+beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
+  padding(0.5pt,0.5pt);
+  a1=a2=a3+4=a4=35;
+  a5=30; a6=35;
+  use(a1); top y1=tex;
+  use(a4); top y4=tex+0.2pt;
+  x1=lpad;
+  use(a2); bot z2=(x5,0.25tex);
+  z3=(x6,y2);
+  x4=w-rpad;
+  use(a5); bot z5=(x1+0.3(y1-y2),0);
+  use(a6); bot z6=(x4-0.3(y1-y2),0);
+  p1=z1..tension 1 and 1.5..z2{-dir a2} & z2{dir 3}..z3{dir -1} & z3{dir (180-a3)}..tension 1.5 and 1..z4;
+  ap1=ang(a1..a2..a3..a4);
+
+  p2=z5{dir 3}..{dir 3}z6; ap2=ang(a5..a6);
+
+  x7=0.3[x2,x3]; x8=0.3[x3,x2];
+  t:=xpart(p1 intersectiontimes ((x7,0)--(x7,tex)));
+  y7=ypart(point t of p1); a7=penangle t of ap1;
+  t:=xpart(p1 intersectiontimes ((x8,0)--(x8,tex)));
+  y8=ypart(point t of p1); a8=penangle t of ap1;
+  z10=(1/2[x2,x3],asc+0.5pt); a10=35;
+  p3=z7{dir 110}..tension 1 and 1.5..z10 & z10..tension 1.5 and 1..{dir -110}z8;
+  ap3=ang(a7..a10..a8);
+
+  x9=x10;
+  t:=xpart(p1 intersectiontimes ((x9,0)--(x9,tex)));
+  y9=ypart(point t of p1); a9=45;
+  a11=55; use(a11); top z11=(x9,0.95tex);
+  p4=z9..z11; ap4=ang(a9..a11);
+
+  z12=z10+0.4tecil_w*dir80;
+
+  z13=(0.55[x8,x4],0.1[tex,asc]);
+  z14=(0.4[x6,x4],0.7[y13,asc]);
+  p5=z13{up}..z14; ap5=ang(45..35);
+
+  z15=(0.52[x7,x1],y13);
+  z16=(0.1[x5,x1],y14);
+  p6=z15{up}..z16; ap6=ang(135..155);
+
+  draw_stroke(p4,ap4);
+  erase fill (0,0)--(0,y9)--(w,y9)--(w,0)--cycle;
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap2);
+  draw_stroke(p3,ap3);
+  draw_stroke(p5,ap5);
+  draw_stroke(p6,ap6);
+  draw_diamond(12)(1.3);
+
+endchr;
+pause;
+
 def draw_prefeanoreanqu(expr style) =
 
   padding(0.2pt,if style=descend: 0.8pt else: 0.7pt fi);
