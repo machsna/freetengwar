@@ -104,7 +104,7 @@ table(feature)
     settings {
       common {
         value=0;
-        name.LG_USENG = string("Normal");
+        name.LG_USENG = string("Common");
       }
       roomen {
         value=1;
@@ -113,6 +113,25 @@ table(feature)
       hyarmen {
         value=2;
         name.LG_USENG = string("Mirrored Hyarmen");
+      }
+    }
+  }
+  ossetail {
+    id=207;
+    name.LG_USENG = string("Marked Osse");
+    default = none;
+    settings {
+      none {
+        value=0;
+        name.LG_USENG = string("Never");
+      }
+      final {
+        value=1;
+        name.LG_USENG = string("Word final");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("Always");
       }
     }
   }
@@ -270,6 +289,10 @@ table(sub)
     if (decteng==init)
       dectengwar > Notdectengwar {decadjusted=true} / (AnyTengwa,IsolTehtar) ZWJ? ^ _ ;
     endif;
+    if (ossetail==all || ossetail==final)
+      g_atengwa > g_atengwa_desc / ^ _ ;
+    endif;
+
     g_zwj > g_zwj_hidden;
     g_zwnj > g_zwnj_hidden;
   endpass;
@@ -312,6 +335,9 @@ table(sub)
        g_whtengwa > g_whtengwa_varone;
     elseif (whtengwa==hyarmen)
        g_whtengwa > g_whtengwa_vartwo;
+    endif;
+    if (ossetail==final)
+       g_atengwa_desc > g_atengwa / ^ _ AnyIsolUpTehtar ZWJ? AnyTengwa;
     endif;
 
 
