@@ -29,7 +29,7 @@ numeric dotsize[];
 %%dotsize1=0.87; dotsize2=0.92; dotsize3=0.95;
 %dotsize1=0.96; dotsize2=0.98; dotsize3=1.00;
 %dotsize1=0.98; dotsize2=1.00; dotsize3=1.04;
-dotsize1=1.02; dotsize2=1.04; dotsize3=1.09;
+dotsize1=1.03; dotsize2=1.04; dotsize3=1.09;
 
 beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
   padding(0.5pt,0.5pt);
@@ -464,7 +464,7 @@ combinechr(invatehta,dottedcircle,"uap",invatehta_norm,"dap");
 
 beginchr(ytehta_norm,0);
   y0=y1=tex+1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.55pt;
+  1/2[x0,x1]=0; x1-x0=1.50pt;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,tex+apy));
@@ -475,7 +475,7 @@ endchr;
 combinechr(ytehta,dottedcircle,"uap",ytehta_norm,"dap");
 beginchr(downytehta_norm,0);
   y0=y1=-1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.55pt;
+  1/2[x0,x1]=0; x1-x0=1.50pt;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,y0+y0+apy));
@@ -1595,11 +1595,13 @@ combinechr(shooktehta,dottedcircle,"dap",shooktehta_norm,"uap");
 
 
 interpunctwidth=0.6tex;
-interpunctsize=1.1;
 
 beginchr(tenginterpone,interpunctwidth);
   z1=1/2(w,tex);
   draw_diamond(1)(interpunctsize);
+endchr;
+beginrefchr("uni2E31",psc(tenginterpone).width);
+  attach(tenginterpone,"origo","origo");
 endchr;
 
 beginchr(tenginterptwo,interpunctwidth);
@@ -1609,18 +1611,24 @@ beginchr(tenginterptwo,interpunctwidth);
   draw_diamond(1)(interpunctsize);
   draw_diamond(2)(interpunctsize);
 endchr;
+beginrefchr("colon",psc(tenginterptwo).width);
+  attach(tenginterptwo,"origo","origo");
+endchr;
 
 beginchr(tenginterpthree,interpunctwidth);
   x1=x2=x3=1/2w;
-  y1=0.2tex;
+  y1=0.0tex;
   y2=1/2[y1,y3];
-  y3=1.2tex;
+  y3=1.0tex;
   draw_diamond(1)(interpunctsize);
   draw_diamond(2)(interpunctsize);
   draw_diamond(3)(interpunctsize);
 endchr;
+beginrefchr("uni205D",psc(tenginterpthree).width);
+  attach(tenginterpthree,"origo","origo");
+endchr;
 
-beginchr(tenginterptwoone,0.4tex);
+beginchr("uni10FB",0.4tex); % :.
   padding(0.5interpunctwidth,0.5interpunctwidth);
   z1=(lpad,0.2tex);
   z2=(x1,0.8tex);
@@ -1630,7 +1638,7 @@ beginchr(tenginterptwoone,0.4tex);
   draw_diamond(3)(interpunctsize);
 endchr;
 
-beginchr(tenginterptwotwo,2*interpunctwidth);
+beginchr("uni2E2C",2*interpunctwidth); % ::
   x1=x2=1/4w;
   x3=x4=3/4w;
   1/2[y1,y2]=1/2[y3,y4]=1/2tex;
@@ -1652,10 +1660,13 @@ beginchr(tenginterpfour,0.8tex);
   draw_diamond(3)(interpunctsize);
   draw_diamond(4)(interpunctsize);
 endchr;
+beginrefchr("uni2058",psc(tenginterpfour).width);
+  attach(tenginterpfour,"origo","origo");
+endchr;
 
 beginchr(tenginterpfive,1.0tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
-  z1=(1/2[x3,x4],0.2tex);
+  z1=(1/2[x3,x4],0.0tex);
   z2=(x1,y1+w-lpad-rpad);
   z3=(lpad,y5);
   z4=(w-rpad,y5);
@@ -1665,6 +1676,9 @@ beginchr(tenginterpfive,1.0tex);
   draw_diamond(3)(interpunctsize);
   draw_diamond(4)(interpunctsize);
   draw_diamond(5)(interpunctsize);
+endchr;
+beginrefchr("uni2E2D",psc(tenginterpfive).width);
+  attach(tenginterpfive,"origo","origo");
 endchr;
 
 beginchr(tengexlam,0.7tex);

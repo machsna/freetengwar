@@ -148,9 +148,9 @@ addaliasvars("shooktehta","norm");
 
 addalias(tengcb & "60","tenginterpone");
 addalias(tengcb & "61","tenginterptwo");
-addalias(tengcb & "62","tenginterpthree"); % uni205D
-addalias(tengcb & "63","tenginterpfour"); % uni2058
-addalias(tengcb & "64","tenginterpfive"); % uni2E2D
+addalias(tengcb & "62","tenginterpthree");
+addalias(tengcb & "63","tenginterpfour");
+addalias(tengcb & "64","tenginterpfive");
 addalias(tengcb & "65","tengexlam");
 addalias(tengcb & "66","tenginterrog");
 addalias(tengcb & "67","tengparen");
@@ -159,8 +159,6 @@ addalias(tengcb & "69","tengdbltilde");
 addalias(tengcb & "6A","startmodechange");
 addalias(tengcb & "6B","endmodechange");
 addalias(tengcb & "6C","bilboexclam");
-addalias(tengcb & "6D","tenginterptwoone");
-addalias("uni2E2C","tenginterptwotwo");
 
 addaliasvars("tinco", "conr","conl","conb","dec","lig");
 addaliasvars("parma", "conr","conl","conb","dec");

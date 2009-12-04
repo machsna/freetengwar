@@ -45,6 +45,8 @@ ascend=14; descend=15; short=16; updown=17; capital=18; extended=19;
 lower=20; single=21; double=22; nuquerna=23; carrier=24;
 conrbot=25; conbbot=26;
 
+interpunctsize=1.1;
+
 string font_ps_name, font_name, font_weight, font_copyright, font_version;
 
 font_copyright:="Copyright (c) 2005-2009 by Johan Winge";

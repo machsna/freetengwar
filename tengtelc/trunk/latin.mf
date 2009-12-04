@@ -25,7 +25,7 @@
 %% along with Tengwar Telcontar; if not, write to the Free Software
 %% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
-setspace(2pt);
+setspace(1.5pt);
 
 beginchr("numbersign",0.90en);
   padding(1.5pt,1.5pt);
@@ -2152,7 +2152,7 @@ combinechr("zcaron","z","uap","uni030C.normal","dap");
 
 beginchr("interpunctdot",0);
   z1=(0,0);
-  draw_dot(1)(1.1);
+  draw_dot(1)(interpunctsize);
 endchr;
 
 beginchr("interpunctcomma",0);
@@ -2181,13 +2181,13 @@ beginrefchr("comma",0.6en);
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("colon",0.6en);
-  ex-y1=y2; y1-y2=0.6ex; x1=x2=1/2w;
-  setap("ap1",z1);
-  setap("ap2",z2);
-  attach("interpunctdot","ap1","origo");
-  attach("interpunctdot","ap2","origo");
-endchr;
+%beginrefchr("colon",0.6en);
+%  ex-y1=y2; y1-y2=0.6ex; x1=x2=1/2w;
+%  setap("ap1",z1);
+%  setap("ap2",z2);
+%  attach("interpunctdot","ap1","origo");
+%  attach("interpunctdot","ap2","origo");
+%endchr;
 
 beginrefchr("semicolon",0.6en);
   setap("ap1",(1/2w,0.7ex));
