@@ -571,8 +571,6 @@ g_period = ps("period") {
 };
 g_comma = ps("comma") { 
 };
-g_colon = ps("colon") { 
-};
 g_semicolon = ps("semicolon") { 
 };
 g_quoteleft = ps("quoteleft") { 

@@ -628,8 +628,8 @@ g_quesse_conb = ps("uniE003.conb") {
  dap = point(584m,-128m);
 };
 g_quesse_dec = ps("uniE003.dec") { 
- uap = point(646m,1144m);
- dap = point(505m,-128m);
+ uap = point(711m,1144m);
+ dap = point(570m,-128m);
 };
 g_ungwe = ps("uniE007") { 
  lluuvap = point(1736m,442m);
@@ -656,8 +656,8 @@ g_ungwe_conb = ps("uniE007.conb") {
  dap = point(958m,-128m);
 };
 g_ungwe_dec = ps("uniE007.dec") { 
- uap = point(984m,1144m);
- dap = point(894m,-128m);
+ uap = point(1050m,1144m);
+ dap = point(960m,-128m);
 };
 g_hwesta = ps("uniE00B") { 
  lluuvap = point(1109m,442m);
@@ -740,8 +740,8 @@ g_vilya_conb = ps("uniE017.conb") {
  dap = point(658m,-128m);
 };
 g_vilya_dec = ps("uniE017.dec") { 
- uap = point(654m,1144m);
- dap = point(590m,-128m);
+ uap = point(719m,1144m);
+ dap = point(655m,-128m);
 };
 g_vilya_conrbot = ps("uniE017.conrbot") { 
  lluuvap = point(1098m,442m);
@@ -780,8 +780,8 @@ g_nwalme_conb = ps("uniE013.conb") {
  dap = point(981m,-128m);
 };
 g_nwalme_dec = ps("uniE013.dec") { 
- uap = point(992m,1144m);
- dap = point(928m,-128m);
+ uap = point(1058m,1144m);
+ dap = point(994m,-128m);
 };
 g_nwalme_conrbot = ps("uniE013.conrbot") { 
  lluuvap = point(1744m,442m);
@@ -905,6 +905,8 @@ g_tengparen = ps("uniE067") {
  lluuvap = point(598m,508m);
  lbarap = point(605m,83m);
 };
+g_uniF8FF = ps("uniF8FF") { 
+};
 g_prefeanoreanqu = ps("uniE037") { 
  uap = point(672m,1011m);
  dap = point(548m,-128m);
@@ -995,29 +997,29 @@ g_invatehta = ps("uniE056") {
 };
 g_ytehta_norm = ps("uniE042.norm") { 
  dap = point(0m,1011m);
- ldap = point(-326m,986m);
- rdap = point(326m,986m);
+ ldap = point(-320m,986m);
+ rdap = point(320m,986m);
  uap = point(0m,1318m);
 };
 g_ytehta = ps("uniE042") { 
  uap = point(563m,1318m);
  dap = point(563m,-128m);
- ldap = point(236m,986m);
- rdap = point(889m,986m);
+ ldap = point(243m,986m);
+ rdap = point(883m,986m);
 };
 g_downytehta_norm = ps("uniE043.norm") { 
  dap = point(0m,-435m);
  cap = point(0m,-282m);
  uap = point(0m,-128m);
- luap = point(-301m,-102m);
- ruap = point(301m,-102m);
+ luap = point(-294m,-102m);
+ ruap = point(294m,-102m);
 };
 g_downytehta = ps("uniE043") { 
  uap = point(563m,1011m);
  dap = point(563m,-435m);
  cap = point(563m,-282m);
- luap = point(262m,-102m);
- ruap = point(864m,-102m);
+ luap = point(268m,-102m);
+ ruap = point(857m,-102m);
 };
 g_itehta_norm = ps("uniE044.norm") { 
  dap = point(0m,1011m);
@@ -1554,17 +1556,27 @@ g_shooktehta = ps("uniE059") {
 };
 g_tenginterpone = ps("uniE060") { 
 };
+g_uni2E31 = ps("uni2E31") { 
+};
 g_tenginterptwo = ps("uniE061") { 
+};
+g_colon = ps("colon") { 
 };
 g_tenginterpthree = ps("uniE062") { 
 };
-g_tenginterptwoone = ps("uniE06D") { 
+g_uni205D = ps("uni205D") { 
 };
-g_tenginterptwotwo = ps("uni2E2C") { 
+g_uni10FB = ps("uni10FB") { 
+};
+g_uni2E2C = ps("uni2E2C") { 
 };
 g_tenginterpfour = ps("uniE063") { 
 };
+g_uni2058 = ps("uni2058") { 
+};
 g_tenginterpfive = ps("uniE064") { 
+};
+g_uni2E2D = ps("uni2E2D") { 
 };
 g_tengexlam = ps("uniE065") { 
 };

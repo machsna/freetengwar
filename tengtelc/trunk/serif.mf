@@ -59,11 +59,16 @@ def draw_dot(suffix $)(expr fact) =
  draw_diamond($)(fact);
 enddef;
 
+diamondconcavity=2;
 def draw_diamond(suffix $)(expr fact) =
   x$a=x$c=x$; y$b=y$d=y$;
   y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.6*fact*tecil_w; %0.58
-  k:= -0.75*fact+1; %0.25;
-  fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
+%  k:= -0.75*fact+1; %0.25; % What was I thinking here...?
+  k:=0.3-0.14*fact;
+  fill (k[z$a,z$b]{dir (-45-diamondconcavity)}..{dir (-45+diamondconcavity)}k[z$b,z$a]..
+        k[z$b,z$c]{dir (-135-diamondconcavity)}..{dir (-135+diamondconcavity)}k[z$c,z$b]..
+        k[z$c,z$d]{dir (135-diamondconcavity)}..{dir (135+diamondconcavity)}k[z$d,z$c]..
+        k[z$d,z$a]{dir (45-diamondconcavity)}..{dir (45+diamondconcavity)}k[z$a,z$d]..cycle);
 enddef;
 
 def sign(expr x) = x/abs(x) enddef;
