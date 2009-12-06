@@ -247,7 +247,7 @@ table(glyph)
   CombUpTehtar=(g_atehta_norm,g_ytehta_norm,g_itehta_norm,g_etehta_norm,g_otehta_norm,g_utehta_norm,g_overbar_norm,g_wtehta_norm,g_engytehta_norm,g_revetehta_norm,g_yantatehta_norm,g_invatehta_norm);
   CombDownTehtar=(g_downatehta_norm,g_downytehta_norm,g_downitehta_norm,g_downetehta_norm,g_dblunderstroke_norm,g_downotehta_norm,g_downutehta_norm,g_underbar_norm,g_longcarrtehta_norm,g_shooktehta_norm);
   CombTehtar=(CombUpTehtar,CombDownTehtar);
-  VarUpTehtar=(g_etehta_double_norm,g_otehta_wide,g_otehta_narrow,g_otehta_double_norm,g_otehta_double_wide,g_otehta_double_narrow,g_utehta_double_norm,g_overbar_wide,g_overbar_lambe,g_overbar_silme,g_wtehta_wide,g_wtehta_narrow,g_engytehta_wide);
+  VarUpTehtar=(g_etehta_double_norm,g_otehta_wide,g_otehta_narrow,g_otehta_double_norm,g_otehta_double_wide,g_otehta_double_narrow,g_utehta_double_norm,g_overbar_wide,g_overbar_lambe,g_overbar_silme,g_wtehta_wide,g_wtehta_narrow,g_engytehta_wide,g_otehtadot_norm,g_utehtadot_norm);
   VarDownTehtar=(g_downetehta_double_norm,g_downutehta_wide,g_downutehta_narrow,g_downutehta_long,g_underbar_wide,g_underbar_roomen,g_underbar_silme,g_underbar_lambe,g_longcarrtehta_lambe);
   VarTehtar=(VarUpTehtar,VarDownTehtar);
   AnyUpTehta=(CombUpTehtar,VarUpTehtar);
@@ -367,7 +367,7 @@ table(sub)
     (g_downutehta_norm) > (g_downutehta_wide) / WideTengwar UnderbarTehta? _ ;
     g_wtehta_norm > g_wtehta_narrow / (StemUpRightTengwar,StemUpLeftTengwar,NarrowTengwar) AnyTehtar _ ;
     (g_otehta_norm,g_otehta_double_norm) > (g_otehta_narrow,g_otehta_double_narrow)
-           / NarrowTengwar AnyTehtar _ AnyTehtar StemUpLeftTengwar;
+           / NarrowTengwar AnyTehtar ^ _ AnyTehtar StemUpLeftTengwar;
     (g_otehta_norm,g_otehta_double_norm) > (g_otehta_narrow,g_otehta_double_narrow) / StemUpRightTengwar AnyTehtar _ ;
  
     g_itehta_norm g_itehta_norm > g_ytehta_norm _ / ^ _ _ ;
@@ -377,6 +377,11 @@ table(sub)
     g_otehta_norm g_otehta_norm > g_otehta_double_norm _ / ^ _ _ ;
     g_otehta_wide g_otehta_wide > g_otehta_double_wide _ / ^ _ _ ;
     g_utehta_norm g_utehta_norm > g_utehta_double_norm _ / ^ _ _ ;
+
+    g_itehta_norm g_utehta_norm > g_utehtadot_norm _ / ^ _ _ ;
+    g_utehta_norm g_itehta_norm > g_utehtadot_norm _ / ^ _ _ ;
+    g_itehta_norm (g_otehta_narrow,g_otehta_norm,g_otehta_wide) > g_otehtadot_norm _ / ^ _ _ ;
+    (g_otehta_narrow,g_otehta_norm,g_otehta_wide) g_itehta_norm > g_otehtadot_norm _ / ^ _ _ ;
 
   endpass;
 
@@ -461,7 +466,7 @@ table(pos)
     g_startmodechange (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m};
     g_startmodechange (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m};
     g_startmodechange (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m};
-    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) g_endmodechange {kern.x = -150m};
+    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) g_endmodechange {kern.x = -150m} / _ AnyTehtar ^ _;
 
   endpass;
 
