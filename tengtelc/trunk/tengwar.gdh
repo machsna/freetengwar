@@ -430,7 +430,6 @@ table(pos)
   endpass;
 
   pass(3)
-    g_startmodechange g_endmodechange {kern.x = -793m};
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Calma,Anga,Harma,Anca,Noldo,Anna,Uure) {kern.x = +105m} / _ ^ AnyTehtar ZWJ _;
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya) {kern.x = +10m} / _ ^ AnyTehtar ZWJ _;
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -50m} / _ AnyTehtar ZWJ ^ _;
@@ -458,6 +457,12 @@ table(pos)
     g_downatehta_norm {shift.x = -150m} g_longcarrtehta_norm {shift.x = 450m; shift.y = 460m};
     (Hyarmen,Yanta) g_downitehta_norm {shift.y = 150m};
     (g_silme_open,g_aare_open) g_itehta_norm {shift.x = -100m};
+
+    g_startmodechange (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m};
+    g_startmodechange (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m};
+    g_startmodechange (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m};
+    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) g_endmodechange {kern.x = -150m};
+
   endpass;
 
 endtable;
