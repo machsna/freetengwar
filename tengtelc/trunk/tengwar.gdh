@@ -135,6 +135,22 @@ table(feature)
       }
     }
   }
+  underline {
+    id=208;
+    name.LG_USENG = string("Underline");
+    default = no;
+    settings {
+      no {
+        value=0;
+        name.LG_USENG = string("No");
+      }
+      yes {
+        value=1;
+        name.LG_USENG = string("Yes");
+      }
+    }
+  }
+
 endtable;
 
 table(glyph)
@@ -266,6 +282,19 @@ table(glyph)
 //  LatinTehtar = (g_atehta,g_itehta,g_etehta,g_otehta,g_utehta);
 //  LatinConsonants = (g_b,g_c,g_d,g_f,g_g,g_h,g_j,g_k,g_l,g_m,g_n,g_p,g_q,g_r,g_s,g_t,g_v,g_w,g_x,g_z);
 
+  Underlinees=(g_space,  g_tinco, g_tinco_conr,g_tinco_conl,g_tinco_conb, g_ando,  g_ando_conr,g_ando_conl,g_ando_conb, g_thuule,g_thuule_conr, g_anto,  g_anto_conr, g_oore,  g_oore_conr,g_oore_conl,g_oore_conb, g_nuumen,g_nuumen_conr,g_nuumen_conl,g_nuumen_conb, g_extthuule,g_extthuule_conr, g_extanto,g_extanto_conr);
+  Underliners=(g_ulinesp,g_uline0,g_uline0,    g_uline0,    g_uline0,     g_uline1,g_uline1,   g_uline1,   g_uline1,    g_uline2,g_uline2,      g_uline3,g_uline3,    g_uline4,g_uline4,   g_uline4,   g_uline4,    g_uline5,g_uline5,     g_uline5,     g_uline5,      g_uline6,   g_uline6,         g_uline7, g_uline7);
+  Underlinees+=(g_parma, g_parma_conr,g_parma_conl,g_parma_conb, g_umbar, g_umbar_conr,g_umbar_conl,g_umbar_conb, g_formen,g_formen_conr, g_ampa,  g_ampa_conr, g_vala,  g_vala_conr,g_vala_conl,g_vala_conb, g_malta, g_malta_conr,g_malta_conl,g_malta_conb, g_extformen,g_extformen_conr, g_extampa,g_extampa_conr);
+  Underliners+=(g_uline0,g_uline0,    g_uline0,    g_uline0,     g_uline1,g_uline1,    g_uline1,    g_uline1,     g_uline2,g_uline2,      g_uline3,g_uline3,    g_uline4,g_uline4,   g_uline4,   g_uline4,    g_uline5,g_uline5,    g_uline5,    g_uline5,     g_uline6,   g_uline6,         g_uline7, g_uline7);
+  Underlinees+=(g_calma,  g_calma_conr, g_anga,   g_anga_conr, g_harma, g_harma_conr, g_anca,  g_anca_conr, g_anna,  g_anna_conr,g_anna_conrbot, g_noldo, g_noldo_conr,g_noldo_conrbot, g_extharma, g_extanca);
+  Underliners+=(g_uline22,g_uline22,    g_uline23,g_uline23,   g_uline2,g_uline2,     g_uline3,g_uline3,    g_uline2,g_uline2,   g_uline2,       g_uline3,g_uline3,    g_uline3,        g_uline22,  g_uline23);
+  Underlinees+=(g_quesse, g_quesse_conr,g_quesse_conl,g_quesse_conb, g_ungwe,  g_ungwe_conr,g_ungwe_conl,g_ungwe_conb, g_hwesta,g_hwesta_conr,g_hwesta_conl,g_hwesta_conb, g_unque, g_unque_conr,g_unque_conl,g_unque_conb, g_vilya, g_vilya_conr,g_vilya_conl,g_vilya_conb,g_vilya_conrbot,g_vilya_conbbot,g_bilbovilya, g_nwalme,g_nwalme_conr,g_nwalme_conl,g_nwalme_conb,g_nwalme_conrbot,g_nwalme_conbbot, g_exthwesta,g_exthwesta_conl, g_extunque,g_extunque_conl);
+  Underliners+=(g_uline22,g_uline22,    g_uline22,    g_uline22,     g_uline23,g_uline23,   g_uline23,   g_uline23,    g_uline2,g_uline2,     g_uline2,     g_uline2,      g_uline3,g_uline3,    g_uline3,    g_uline3,     g_uline2,g_uline2,    g_uline2,    g_uline2,    g_uline2,       g_uline2,       g_uline2,     g_uline3,g_uline3,     g_uline3,     g_uline3,     g_uline3,        g_uline3,         g_uline22,  g_uline22,        g_uline23, g_uline23);
+  Underlinees+=(g_roomen, g_roomen_conl,g_roomen_open,g_roomen_conl_open, g_arda,   g_arda_conl,g_arda_open,g_arda_conl_open,g_lambe,  g_lambe_conr,g_lambe_conl,g_lambe_conb,g_lambe_conrbot,g_lambe_conbbot,g_alda,   g_alda_conr,g_alda_conl,g_alda_conb);
+  Underliners+=(g_uline32,g_uline32,    g_uline33,    g_uline33,          g_uline32,g_uline32,  g_uline33,  g_uline33,       g_uline34,g_uline34,   g_uline34,   g_uline34,   g_uline34,      g_uline34,      g_uline35,g_uline35,  g_uline35,  g_uline35);
+  Underlinees+=(g_silme,  g_silme_open,g_silme_flat,g_silme_lig,g_silme_lig_open,g_silme_lig_flat,g_silme_lig_harma,g_silmenuq,g_aare,   g_aare_open,g_aare_flat,g_aarenuq,g_hyarmen,g_hyarmen_conr,g_hwestasin,g_yanta,  g_yanta_conr,g_uure,   g_uure_conr,g_longcarr,g_longcarr_conl,g_halla,  g_shortcarr,g_shortcarr_conr,g_shortcarr_conl,g_shortcarr_conb);
+  Underliners+=(g_uline36,g_uline36,   g_uline36,   g_uline37,  g_uline37,       g_uline37,       g_uline37,        g_uline38, g_uline39,g_uline39,  g_uline39,  g_uline40,g_uline41,g_uline42,     g_uline43,  g_uline41,g_uline45,   g_uline46,g_uline47,  g_uline48, g_uline48,      g_uline49,g_uline49,  g_uline49,       g_uline49,       g_uline49   );
+
 endtable;
 
 // We will deal with at most 4 tehtar. Change if the need arises.
@@ -385,6 +414,13 @@ table(sub)
 
   endpass;
 
+  pass(3)
+    if (underline==yes)
+  //    Underlinees _ > Underliners:1 @1;
+      _ Underlinees > Underliners$2:2 @2;
+    endif;
+  endpass;
+
 endtable;
 
 #define attached user2
@@ -392,6 +428,11 @@ endtable;
 table(pos)
 
   pass(1)
+
+//    if (underline==yes)
+//      Underliners { attach{ to=@2; at=point(0m,0m); with=point(0m,0m) }; } Underlinees  / _ ^ _;
+//    endif;
+
     Lambe g_underbar_lambe { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@2; at=dap; with=uap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@1; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ _ _ {attached==false} ;
     Lambe g_underbar_lambe { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@2; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ _ {attached==false} ;
     Lambe AnyDownTehta { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@1; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ _ {attached==false} ;

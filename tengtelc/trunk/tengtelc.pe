@@ -1,10 +1,12 @@
 if ( $1=="regular" )
   Open("latinr.sfd")
   MergeFonts("tengwarr.sfd")
+  MergeFonts("underline.sfd")
   SetFontNames("tengtelc","Tengwar Telcontar","Tengwar Telcontar","Regular")
 elseif ( $1=="bold" )
   Open("latinb.sfd")
   MergeFonts("tengwarb.sfd")
+  MergeFonts("underline.sfd")
   SetFontNames("tengtelcb","Tengwar Telcontar","Tengwar Telcontar Bold","Bold")
 endif
 Select("telco_leftdown"); Clear();
