@@ -78,6 +78,7 @@ addalias(tengcb & "2D","halla");
 addalias(tengcb & "2E","shortcarr");
 addalias(tengcb & "2F","extendedtelco");
 
+addalias(tengcb & "30","mirroredosse");
 addalias(tengcb & "31","wtengwa");
 addalias(tengcb & "32","atengwa");
 addalias(tengcb & "34","conncarr");

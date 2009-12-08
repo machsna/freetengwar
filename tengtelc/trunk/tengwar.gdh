@@ -201,6 +201,7 @@ table(glyph)
   LongCarr=(g_longcarr,g_longcarr_conl,g_longcarr_dec);
   Halla=(g_halla,g_halla_dec);
   ShortCarr=(g_shortcarr,g_shortcarr_conr,g_shortcarr_conl,g_shortcarr_conb,g_shortcarr_dec);
+  MirroredOsse=(g_mirroredosse);
   Wtengwa=(g_wtengwa,g_wtengwa_desc);
   Atengwa=(g_atengwa,g_atengwa_dec,g_atengwa_desc);
   ConnCarr=(g_conncarr,g_conncarr_conr);
@@ -233,13 +234,13 @@ table(glyph)
   StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa,g_tinco_lig,LargeInterp);
   StemDownRightTengwar=(Calma,Quesse,Anga,Ungwe,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silmenuq,g_aarenuq);
   StemDownLeftTengwar=(Tinco,Parma,Ando,Umbar,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,Roomen,Arda,AngWhtengwa);
-  NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr,Atengwa);
+  NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr,Atengwa,MirroredOsse);
 
   AnyTengwa=(Tinco,Parma,Calma,Quesse,Ando,Umbar,Anga,Ungwe,Thuule,Formen,Harma,Hwesta,
              Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,Oore,Vala,Anna,Vilya,
              ExtThuule,ExtFormen,ExtHarma,ExtHwesta,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,
              Roomen,Arda,Lambe,Alda,Silme,SilmeNuq,Aare,AareNuq,Hyarmen,HwestaSin,Yanta,Uure,LongCarr,Halla,ShortCarr,
-             Wtengwa,Atengwa,ConnCarr,Whtengwa,OpenAnna,PreFeaQu,Mhtengwa,BeleriandicMh,AngWhtengwa,Vaiya,SHook,
+             MirroredOsse,Wtengwa,Atengwa,ConnCarr,Whtengwa,OpenAnna,PreFeaQu,Mhtengwa,BeleriandicMh,AngWhtengwa,Vaiya,SHook,
              g_dottedcircle);
 
   SomeMayConR=(g_calma,g_quesse,g_quesse_conl,g_anga,g_ungwe,g_ungwe_conl,g_noldo,g_nwalme,g_nwalme_conl,g_anna,g_vilya,g_vilya_conl,g_conncarr);
