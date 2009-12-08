@@ -79,6 +79,22 @@ beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
 endchr;
 pause;
 
+beginchr(mirroredosse,0.95en);
+  padding(0.6pt,0.7pt);
+  a1-10=a2-5=a3=a4=a5+3=35;
+  x1=lpad; z1=z2+whatever*dir 25; 
+  use(a2); top z2=(0.50[x1,x3],tex);
+  z3=(w-rpad,0.55tex);
+  use(a4); bot z4=(0.40[x5,x3],0);
+  x5=0.1[x1,x3]; z5=z4+whatever*dir (180-25); 
+  ap1=ang(a1..a2..a3..a4..a5);
+  p1=z1{dir a1}..z2{right}..z3{down}..tension 1.05..z4{left}..z5{curl 2};
+  draw_stroke(p1,ap1);
+  setap("uap",(x2,tex+apy));
+  setap("dap",(x4,-apy));
+endchr;
+pause;
+
 def draw_prefeanoreanqu(expr style) =
 
   padding(0.2pt,if style=descend: 0.8pt else: 0.7pt fi);
