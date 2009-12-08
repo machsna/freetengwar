@@ -295,6 +295,8 @@ table(glyph)
   Underliners+=(g_uline32,g_uline32,    g_uline33,    g_uline33,          g_uline32,g_uline32,  g_uline33,  g_uline33,       g_uline34,g_uline34,   g_uline34,   g_uline34,   g_uline34,      g_uline34,      g_uline35,g_uline35,  g_uline35,  g_uline35);
   Underlinees+=(g_silme,  g_silme_open,g_silme_flat,g_silme_lig,g_silme_lig_open,g_silme_lig_flat,g_silme_lig_harma,g_silmenuq,g_aare,   g_aare_open,g_aare_flat,g_aarenuq,g_hyarmen,g_hyarmen_conr,g_hwestasin,g_yanta,  g_yanta_conr,g_uure,   g_uure_conr,g_longcarr,g_longcarr_conl,g_halla,  g_shortcarr,g_shortcarr_conr,g_shortcarr_conl,g_shortcarr_conb);
   Underliners+=(g_uline36,g_uline36,   g_uline36,   g_uline37,  g_uline37,       g_uline37,       g_uline37,        g_uline38, g_uline39,g_uline39,  g_uline39,  g_uline40,g_uline41,g_uline42,     g_uline43,  g_uline41,g_uline45,   g_uline46,g_uline47,  g_uline48, g_uline48,      g_uline49,g_uline49,  g_uline49,       g_uline49,       g_uline49   );
+  Underlinees+=(g_tinco_dec,g_parma_dec);
+  Underliners+=(g_uline50,  g_uline50);
 
 endtable;
 
@@ -430,9 +432,9 @@ table(pos)
 
   pass(1)
 
-//    if (underline==yes)
-//      Underliners { attach{ to=@2; at=point(0m,0m); with=point(0m,0m) }; } Underlinees  / _ ^ _;
-//    endif;
+    if (underline==yes)
+      Underliners { attach{ to=@2; at=point(0m,0m); with=point(0m,0m) }; } Underlinees  / _ ^ _;
+    endif;
 
     Lambe g_underbar_lambe { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@2; at=dap; with=uap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@1; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ _ _ {attached==false} ;
     Lambe g_underbar_lambe { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; } AnyDownTehta { attach{ to=@2; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ _ {attached==false} ;

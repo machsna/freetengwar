@@ -30,11 +30,11 @@ font_ps_name:="tengtelcunderlines";
 font_name:="Tengwar Telcontar Underlines";
 font_weight:="Regular";
 input tracing;
-tecil_w = 0.40pt; tecil_h = 0.15pt;
+tecil_w = 0.41pt; tecil_h = 0.17pt;
 input stroke;
 
 ulineh = -1.1pt;
-curvelen = 0.4pt;
+curvelen = 0.5pt;
 
 vardef hexadecimal primary n =
   save m,s;
@@ -71,16 +71,16 @@ def drawunderline(expr startp, endp, isleft, isright) =
   if (x7>x3) and (x0<x4):
     x2-x0=x7-x5=curvelen;
     x1=x0; x6=x7;
-    z2-z1=z6-z5=whatever*dir15;
+    z2-z1=z6-z5=whatever*dir17;
     if x2>x3:
       p1=z0--z3;
     else:
-      p1=z1{dir 35}...{right}z2--z3;
+      p1=z1{dir 40}...{right}z2--z3;
     fi
     if x5<x4:
       p2=z4--z7;
     else:
-      p2=z4--z5{right}...{dir 35}z6;
+      p2=z4--z5{right}...{dir 40}z6;
     fi
     draw p1--p2;
   fi
@@ -103,7 +103,7 @@ def makeunderline(expr num,width)(text gaps) =
   fi
   setgdalias(psname, name);
   beginchr(psname,0);
-    use(35);
+    use(40);
     isleft:=true;
     startp:=0;
     for gap=gaps:
@@ -120,7 +120,7 @@ enddef;
 
 %These number could have been fetched automatically, but now I do it manually. So there.
 
-telco=275;
+telco=285;
 makeunderline("sp",307,); % Space
 makeunderline(0,1111,(250,telco)); % Tinco, Parma
 makeunderline(1,1626,(250,telco)); % Ando, Umbar
@@ -156,7 +156,7 @@ makeunderline(23,1587,(1380,telco)); % ExtAnca, Anga, Ungwe, ExtUnque
 %makeunderline(31,1593,(1390,telco)); % ExtUnque
 makeunderline(32,932,(330,230)); % Roomen, Arda
 makeunderline(33,932,(520,775)); % Roomen, Arda open
-makeunderline(34,1295,(560,870)); % Lambe
+makeunderline(34,1295,(560,890)); % Lambe
 makeunderline(35,1295,(900,560)); % Alda
 makeunderline(36,932,);          % Silme
 makeunderline(37,580,);          % SilmeLig
@@ -172,6 +172,7 @@ makeunderline(46,900,);          % Uure
 makeunderline(47,941,);          % Uure conr
 makeunderline(48,492,(270,telco));% Long carrier
 makeunderline(49,492,);           % Short carrier, Halla
+makeunderline(50,1325,(325,510)); % Capital Tinco, Parma
 
 % Okay, there seems to be a weird bug in XeTeX.
 % This makes it disappear for some reason.
