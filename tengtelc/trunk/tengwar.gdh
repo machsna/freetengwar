@@ -258,18 +258,23 @@ table(glyph)
   MayConLLow=(g_shook); DoConLLow=(g_shook);
 
   IsolUpTehtar=(g_atehta,g_ytehta,g_itehta,g_etehta,g_otehta,g_utehta,g_overbar,g_wtehta,g_engytehta,g_revetehta,g_yantatehta,g_invatehta);
+  IsolCentralTehtar=(g_dotinside);
   IsolDownTehtar=(g_downatehta,g_downytehta,g_downitehta,g_downetehta,g_dblunderstroke,g_downotehta,g_downutehta,g_underbar,g_longcarrtehta,g_shooktehta);
-  IsolTehtar=(IsolUpTehtar,IsolDownTehtar);
+  IsolTehtar=(IsolUpTehtar,IsolCentralTehtar,IsolDownTehtar);
 
   CombUpTehtar=(g_atehta_norm,g_ytehta_norm,g_itehta_norm,g_etehta_norm,g_otehta_norm,g_utehta_norm,g_overbar_norm,g_wtehta_norm,g_engytehta_norm,g_revetehta_norm,g_yantatehta_norm,g_invatehta_norm);
+  CombCentralTehtar=(g_dotinside_norm);
   CombDownTehtar=(g_downatehta_norm,g_downytehta_norm,g_downitehta_norm,g_downetehta_norm,g_dblunderstroke_norm,g_downotehta_norm,g_downutehta_norm,g_underbar_norm,g_longcarrtehta_norm,g_shooktehta_norm);
-  CombTehtar=(CombUpTehtar,CombDownTehtar);
+  CombTehtar=(CombUpTehtar,CombCentralTehtar,CombDownTehtar);
+
   VarUpTehtar=(g_etehta_double_norm,g_otehta_wide,g_otehta_narrow,g_otehta_double_norm,g_otehta_double_wide,g_otehta_double_narrow,g_utehta_double_norm,g_overbar_wide,g_overbar_lambe,g_overbar_silme,g_wtehta_wide,g_wtehta_narrow,g_engytehta_wide,g_otehtadot_norm,g_utehtadot_norm);
   VarDownTehtar=(g_downetehta_double_norm,g_downutehta_wide,g_downutehta_narrow,g_downutehta_long,g_underbar_wide,g_underbar_roomen,g_underbar_silme,g_underbar_lambe,g_longcarrtehta_lambe);
   VarTehtar=(VarUpTehtar,VarDownTehtar);
+
   AnyUpTehta=(CombUpTehtar,VarUpTehtar);
+  AnyCentralTehta=CombCentralTehtar;
   AnyDownTehta=(CombDownTehtar,VarDownTehtar);
-  AnyTehta=(CombTehtar,VarTehtar);
+  AnyTehta=(CombTehtar,AnyCentralTehta,VarTehtar);
 
   OverbarTehta=(g_overbar_norm,g_overbar_wide,g_overbar_lambe,g_overbar_silme);
   UnderbarTehta=(g_underbar_norm,g_underbar_wide,g_underbar_roomen,g_underbar_silme,g_underbar_lambe);
@@ -327,6 +332,8 @@ table(sub)
 
     g_zwj > g_zwj_hidden;
     g_zwnj > g_zwnj_hidden;
+
+    Vilya g_dotinside > g_bilbovilya _ ;
   endpass;
 
   pass(2)
@@ -451,6 +458,8 @@ table(pos)
     StemDownRightTengwar UnderbarTehta { attach{ to=@1; at=dap; with=luap }; insert=true; attached=true; } / ^ _ _ {attached==false} ;
     StemDownLeftTengwar UnderbarTehta { attach{ to=@1; at=dap; with=ruap }; insert=true; attached=true; } / ^ _ _ {attached==false} ;
     (AnyTengwa,AnyDownTehta) AnyDownTehta { attach{ to=@1; at=dap; with=uap }; insert=true; attached=true; } / ^ _ _ {attached==false} ;
+
+    AnyTengwa AnyCentralTehta { attach{ to=@1; at=cap; with=cap }; insert=true; attached=true; }  /  _ ^ _ {attached==false} ;
 
   endpass;
 
