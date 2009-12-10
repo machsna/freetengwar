@@ -1192,7 +1192,7 @@ def draw_openanna(expr style) =
   draw_stroke(subpath(0,0.5) of p0..z3{down}..z4{right}..{curl0.3}z5,ang(subpath(0,0.5) of ap0..a2..a4..a5));
   labels(range 1 thru 7);
   setap("uap",(1/2[x1,x5],hgt+apy));
-  setap("cap",(x4,1/2tex));
+  setap("cap",(1/2[x3,x5],1/2tex));
   setap("dap",(0.49w,-apy));
 enddef;
 beginchr(openanna,0.9ten);
@@ -1203,15 +1203,6 @@ beginchr(openanna_conl,0.9ten);
 endchr;
 beginchr(openanna_dec,0.9cten);
   draw_openanna(capital);
-endchr;
-
-beginchr(bilbovilya,psc(vilya).width);
-  attach(vilya,"origo","origo");
-  a1=30; a2=40;
-  use(a1);
-  top z1=(0.48w,0.98tex);
-  z2=(x1,y1-0.4tex);
-  draw_stroke(z1..z2,ang(a1..a2));
 endchr;
 
 beginchr(silme_lig_harma,1ten);
