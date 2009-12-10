@@ -148,6 +148,7 @@ g_hsp = ps("uni200A") {
 };
 g_dottedcircle = ps("uni25CC") { 
  uap = point(563m,1011m);
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0300_normal = ps("uni0300.normal") { 
@@ -156,6 +157,7 @@ g_uni0300_normal = ps("uni0300.normal") {
 g_grave = ps("grave") { 
 };
 g_uni0300 = ps("uni0300") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0301_normal = ps("uni0301.normal") { 
@@ -164,6 +166,7 @@ g_uni0301_normal = ps("uni0301.normal") {
 g_acute = ps("acute") { 
 };
 g_uni0301 = ps("uni0301") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0302_normal = ps("uni0302.normal") { 
@@ -172,6 +175,7 @@ g_uni0302_normal = ps("uni0302.normal") {
 g_circumflex = ps("circumflex") { 
 };
 g_uni0302 = ps("uni0302") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0303_normal = ps("uni0303.normal") { 
@@ -183,6 +187,7 @@ g_uni0303_narrow = ps("uni0303.narrow") {
 g_tilde = ps("tilde") { 
 };
 g_uni0303 = ps("uni0303") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0304_normal = ps("uni0304.normal") { 
@@ -194,6 +199,7 @@ g_uni0304_narrow = ps("uni0304.narrow") {
 g_macron = ps("macron") { 
 };
 g_uni0304 = ps("uni0304") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0307_normal = ps("uni0307.normal") { 
@@ -205,6 +211,7 @@ g_dotaccent = ps("dotaccent") {
 };
 g_uni0307 = ps("uni0307") { 
  uap = point(563m,1318m);
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0308_normal = ps("uni0308.normal") { 
@@ -220,6 +227,7 @@ g_dieresis = ps("dieresis") {
 };
 g_uni0308 = ps("uni0308") { 
  uap = point(563m,1318m);
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni030A_normal = ps("uni030A.normal") { 
@@ -228,6 +236,7 @@ g_uni030A_normal = ps("uni030A.normal") {
 g_ring = ps("ring") { 
 };
 g_uni030A = ps("uni030A") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni030C_normal = ps("uni030C.normal") { 
@@ -236,6 +245,7 @@ g_uni030C_normal = ps("uni030C.normal") {
 g_caron = ps("caron") { 
 };
 g_uni030C = ps("uni030C") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_uni0327_normal = ps("uni0327.normal") { 
@@ -245,11 +255,13 @@ g_cedilla = ps("cedilla") {
 };
 g_uni0327 = ps("uni0327") { 
  uap = point(563m,1011m);
+ cap = point(563m,442m);
 };
 g_uni0364_normal = ps("uni0364.normal") { 
  dap = point(-51m,922m);
 };
 g_uni0364 = ps("uni0364") { 
+ cap = point(563m,442m);
  dap = point(563m,-128m);
 };
 g_Agrave = ps("Agrave") { 

@@ -1036,3 +1036,31 @@ beginchr(shook_high,1.0ten);
   draw_shook(normal);
 endchr;
 
+def draw_conncarr(expr style) =
+  padding(1.1pt,0);
+  z1=(lpad,tex); z2=(x1,0);
+  ap1=ang(41..36..32..35);
+  p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.8pt, 0.3tex, 180+25, -1, ap1);
+  draw_stroke(p1,ap1);
+  a5=penangle (directiontime right of p1) of ap1; use(a5); top rt z5=z1;
+  if style=conright:
+    draw_connection(7,5,false);
+  else:
+    a6=35; z6=(w+if style=short: 1.0pt else: 1.75pt fi,y5);
+    p2=z5..{right}z6; ap2=ang(a5..a6);
+    draw_stroke(p2,ap2);
+  fi
+  setap("uap",(x1,tex+0.5pt));
+  setap("dap",(x1,-0.5pt));
+  penlabels(range 1 thru 6);
+enddef;
+beginchr(conncarr,0.7ten);
+  draw_conncarr(short);
+endchr;
+beginchr(conncarr_long,0.7ten);
+  draw_conncarr(normal);
+endchr;
+beginchr(conncarr_conr,0.7ten);
+  draw_conncarr(conright);
+endchr;
+
