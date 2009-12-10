@@ -445,7 +445,7 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
     draw_stroke(p3,ap3);
   fi
   setap("uap",(1/2[lpad,w-rpad],tex+apy));
-  setap("cap",(x4,1/2tex));
+  setap("cap",(0.55[x3,x5],0.55tex));
   setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
   penlabels(range 1 thru 12);
 enddef;
@@ -872,7 +872,7 @@ def draw_atengwa(expr style) =
     fill z12--z13--z15--z14--cycle;
   fi
   setap("uap",(x4,hgt+0.5pt));
-  setap("cap",(x2,1/2tex));
+  setap("cap",(x4,1/2tex));
   setap("dap",(x2,-0.5pt));
   penlabels(range 1 thru 6);
 enddef;
@@ -961,7 +961,7 @@ def draw_hwestasin(expr style) =
     setap("uap",(x4,tex+apy));
     setap("dap",(0.1[x6,x7],-apy));
   fi
-  setap("cap",(1/2[x4,x6],1/2tex));
+  setap("cap",(0.5[x5,x3],1/2tex));
   penlabels(range 1 thru 10);
 enddef;
 beginchr(hwestasin,1.5ten);
@@ -1001,7 +1001,7 @@ def draw_angwhtengwa =
 %  fi
   draw_stroke(p2,ap2);
   setap("uap",(x4,tex+apy));
-  setap("cap",(x4,1/2tex));
+  setap("cap",(0.5[x3,x5],1/2tex));
   setap("dap",(0.35[lpad,w-rpad],-apy));
   penlabels(range 1 thru 12);
 enddef;

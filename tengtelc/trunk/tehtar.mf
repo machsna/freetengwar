@@ -264,12 +264,36 @@ beginchr(downitehta_norm,0);
 endchr;
 combinechr(downitehta,dottedcircle,"dap",downitehta_norm,"uap");
 
-beginchr(dotinside_norm,0);
+def draw_dotinside(expr style) =
   z0=(0,1/2tex);
-  draw_dot(0)(dotsize3);
+  a1=30; a2=40;
+  use(a1);
+  if style=ascend:
+    top z1=(0.1pt,0.98tex);
+    z2=(x1,y1-0.4tex);
+  elseif style=descend:
+    bot z1=(-0.1pt,0.02tex);
+    z2=(x1,y1+0.4tex);
+  fi
+  if style=normal:
+    draw_dot(0)(dotsize2);
+  else:
+    draw_stroke(z1..z2,ang(a1..a2));
+  fi
   setap("cap",z0);
+enddef;
+beginchr(dotinside_norm,0);
+  draw_dotinside(normal);
 endchr;
 combinechr(dotinside,dottedcircle,"cap",dotinside_norm,"cap");
+beginchr(dotinside_conu,0);
+  draw_dotinside(ascend);
+endchr;
+pause;
+beginchr(dotinside_cond,0);
+  draw_dotinside(descend);
+endchr;
+pause;
 
 def draw_etehta(expr style,number) =
   transform rot;
