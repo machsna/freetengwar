@@ -8,6 +8,7 @@ AutoPseudo=0; // ?
 
 #include "latinr.gdh"
 #include "tengwarr.gdh"
+#include "underline.gdh"
 
 #include "latin.gdh"
 #include "tengwar.gdh"

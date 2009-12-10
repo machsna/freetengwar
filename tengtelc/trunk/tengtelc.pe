@@ -17,11 +17,14 @@ Select("telco_leftshort_conl"); Clear();
 Select("telco_leftext"); Clear();
 Select("telco_rightdown"); Clear();
 Select("telco_rightdown_conr"); Clear();
+Select("telco_rightdown2"); Clear();
 Select("telco_rightup"); Clear();
 Select("telco_rightup_conr"); Clear();
 Select("telco_rightshort"); Clear();
 Select("telco_rightshort_conr"); Clear();
 Select("telco_rightshort_conrbot"); Clear();
+Select("telco_rightshort2"); Clear();
+Select("telco_rightshort2_conrbot"); Clear();
 Select("telco_rightext"); Clear();
 Select("captelco_leftdown"); Clear();
 Select("captelco_leftup"); Clear();
@@ -93,8 +96,8 @@ Simplify(128,2,0,0,1,5000);
 ClearBackground();
 SetTTFName(0x409,3,"FontForge: " + $fullname + " " + $fontversion)
 SetTTFName(0x409,9,"Johan Winge")
-SetTTFName(0x409,11,"http://home.student.uu.se/jowi4905/fonts/tengtelc/")
-SetTTFName(0x409,12,"http://home.student.uu.se/jowi4905/fonts/tengtelc/")
+SetTTFName(0x409,11,"http://freetengwar.sourceforge.net/")
+SetTTFName(0x409,12,"http://freetengwar.sourceforge.net/")
 SetTTFName(0x409,13,"Tengwar Telcontar is distributed under the terms of the GNU General Public License.")
 if ( $1=="regular" )
   Save("tengtelc.sfd");

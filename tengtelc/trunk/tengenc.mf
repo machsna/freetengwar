@@ -129,7 +129,7 @@ addalias(tengcb & "53","engytehta");
 addalias(tengcb & "54","revetehta");
 addalias(tengcb & "55","yantatehta");
 addalias(tengcb & "56","invatehta");
-addalias(tengcb & "57","longcarrtehta");
+addalias(tengcb & "57","thinnas");
 addalias(tengcb & "58","shook");
 addalias(tengcb & "59","shooktehta");
 addalias(tengcb & "5A","dotinside");
@@ -141,7 +141,7 @@ addaliasvars("engytehta","norm","wide");
 addaliasvars("revetehta","norm");
 addaliasvars("yantatehta","norm");
 addaliasvars("invatehta","norm");
-addaliasvars("longcarrtehta","norm","lambe");
+addaliasvars("thinnas","norm");
 addaliasvars("shooktehta","norm");
 addaliasvars("dotinside","norm","conu","cond");
 
@@ -209,6 +209,9 @@ addaliasvars("hwestasin","dec","conr");
 addaliasvars("yanta","dec","conr");
 addaliasvars("uure","dec","conr");
 addaliasvars("longcarr","conl","dec");
+addalias(longcarr & ".tehta","longcarrtehta");
+addalias(longcarr & ".lig","longcarrtehta_norm");
+addalias(longcarr & ".lig_lambe","longcarrtehta_lambe");
 addaliasvars("halla","dec");
 addaliasvars("shortcarr","conr","conl","conb","dec");
 
