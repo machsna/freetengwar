@@ -690,6 +690,7 @@ def draw_luuva(expr num, side, style, h, yap) =
     setap("luuvaldap",(0.5w-apshift,-apy)); apt(ps.n,lastap).forgd:=false;
     setap("luuvardap",(0.5w,-apy)); apt(ps.n,lastap).forgd:=false;
   fi
+  setap("cap",(0.5w,1/2tex));
   penlabels(range 1 thru 10);
 enddef;
 
@@ -1191,6 +1192,7 @@ def draw_openanna(expr style) =
   draw_stroke(subpath(0,0.5) of p0..z3{down}..z4{right}..{curl0.3}z5,ang(subpath(0,0.5) of ap0..a2..a4..a5));
   labels(range 1 thru 7);
   setap("uap",(1/2[x1,x5],hgt+apy));
+  setap("cap",(x4,1/2tex));
   setap("dap",(0.49w,-apy));
 enddef;
 beginchr(openanna,0.9ten);

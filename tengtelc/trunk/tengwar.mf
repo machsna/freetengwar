@@ -36,6 +36,7 @@ beginchr(dottedcircle,1.1tex);
     fill dot shifted (1/2(w,tex)+((9.2le,0) rotated (22.5*i)));
   endfor
   setap("uap",(1/2w,tex+apy));
+  setap("cap",1/2(w,tex));
   setap("dap",(1/2w,-apy));
 endchr;
 forgd:=true;

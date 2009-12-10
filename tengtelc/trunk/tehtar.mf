@@ -264,6 +264,13 @@ beginchr(downitehta_norm,0);
 endchr;
 combinechr(downitehta,dottedcircle,"dap",downitehta_norm,"uap");
 
+beginchr(dotinside_norm,0);
+  z0=(0,1/2tex);
+  draw_dot(0)(dotsize3);
+  setap("cap",z0);
+endchr;
+combinechr(dotinside,dottedcircle,"cap",dotinside_norm,"cap");
+
 def draw_etehta(expr style,number) =
   transform rot;
   if style=ascend: rot=identity; elseif style=descend: rot=identity rotatedaround ((0,1/2tex),180); fi

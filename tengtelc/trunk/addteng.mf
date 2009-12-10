@@ -91,6 +91,7 @@ beginchr(mirroredosse,0.95en);
   p1=z1{dir a1}..z2{right}..z3{down}..tension 1.05..z4{left}..z5{curl 2};
   draw_stroke(p1,ap1);
   setap("uap",(x2,tex+apy));
+  setap("cap",(x2,1/2tex));
   setap("dap",(x4,-apy));
 endchr;
 pause;
@@ -132,6 +133,7 @@ def draw_prefeanoreanqu(expr style) =
   draw_stroke(p2,ap2);
 
   setap("uap",(x10,tex+apy));
+  setap("cap",(x10,1/2tex));
   setap("dap",(0.4[x11,x1],-apy));
 
 enddef;
@@ -186,6 +188,7 @@ def draw_whtengwavarone(expr style, secstyle) =
   draw_stroke(p2,ap2);
 
   setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
@@ -224,6 +227,7 @@ def draw_whtengwavartwo(expr style) =
   draw_stroke(p1,ap1);
 
   setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
@@ -260,6 +264,7 @@ def draw_whtengwavarthree(expr style) =
   draw_stroke(p1,ap1);
 
   setap("uap",(1/2[lpad,w-rpad],asc+apy));
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   setap("dap",(1/2[lpad,w-rpad],-apy));
 
   penlabels(range 1 thru 12);
@@ -291,6 +296,7 @@ def draw_whtengwavarfour =
   p2=z5{-direction t of p1}..{right}z6..z7{dir a7};
   draw_stroke(p2,ap2);
   setap("uap",(x2,y2+apy));
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   setap("dap",(0.5[x4,x6],-apy));
   penlabels(range 0 thru 6);
 enddef;
@@ -365,6 +371,7 @@ def draw_hyarmenyanta(expr style,secstyle) =
     use(a2); z10=change_angle(top z2,a2,a7);
     use(a7); draw z9..(z9-0.5stemshift*dir a7); draw z10..(z10+0.5stemshift*dir a7);
   fi
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   setap("dap",(0.45[x5,x2],-apy+0.2pt));
   penlabels(range 1 thru 8);
 enddef;
@@ -438,6 +445,7 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
     draw_stroke(p3,ap3);
   fi
   setap("uap",(1/2[lpad,w-rpad],tex+apy));
+  setap("cap",(x4,1/2tex));
   setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
   penlabels(range 1 thru 12);
 enddef;
@@ -648,6 +656,7 @@ def draw_silme(expr side, style, lig) =
   else:
     draw_stroke(p1 transformed t,ap1);
   fi
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   penlabels(range 1 thru 6);
 enddef;
 
@@ -782,6 +791,7 @@ def draw_aare(expr side, style) =
   setap(if side=leftside:"dap"else:"uap"fi,(x8,bot y8+o-0.5pt) transformed t);
   draw_stroke(p1 transformed t,ap1);
   draw_stroke(p2 transformed t,ap2);
+  setap("cap",(1/2[lpad,w-rpad],1/2tex));
   penlabels(range 1 thru 10);
 enddef;
 beginchr(aare,1ten);
@@ -823,6 +833,7 @@ def draw_uure(expr style) =
   ap1=ang(a1..a2..a3..a4..a1);
   draw_stroke(p1,ap1);
   setap("uap",(x2,tex+apy));
+  setap("cap",(1/2[x2,x4],1/2tex));
   setap("dap",(x4,-apy));
   penlabels(range 1 thru 4);
   if style=conright:
@@ -861,6 +872,7 @@ def draw_atengwa(expr style) =
     fill z12--z13--z15--z14--cycle;
   fi
   setap("uap",(x4,hgt+0.5pt));
+  setap("cap",(x2,1/2tex));
   setap("dap",(x2,-0.5pt));
   penlabels(range 1 thru 6);
 enddef;
@@ -904,6 +916,7 @@ def draw_wtengwa(expr style) =
 
   draw_stroke(p2,ap2);
   setap("uap",(x2,tex+apy));
+  setap("cap",(x2,1/2tex));
   if style=normal:
     setap("dap",(x2,-apy));
   elseif style=descend:
@@ -948,6 +961,7 @@ def draw_hwestasin(expr style) =
     setap("uap",(x4,tex+apy));
     setap("dap",(0.1[x6,x7],-apy));
   fi
+  setap("cap",(1/2[x4,x6],1/2tex));
   penlabels(range 1 thru 10);
 enddef;
 beginchr(hwestasin,1.5ten);
@@ -987,6 +1001,7 @@ def draw_angwhtengwa =
 %  fi
   draw_stroke(p2,ap2);
   setap("uap",(x4,tex+apy));
+  setap("cap",(x4,1/2tex));
   setap("dap",(0.35[lpad,w-rpad],-apy));
   penlabels(range 1 thru 12);
 enddef;
@@ -1011,6 +1026,7 @@ def draw_shook(expr style) =
   p1=z1{right}..z2..z3{down}..z4{left}..z5; ap1=ang(a1..a2..a3..a4..a5);
   draw_stroke(p1,ap1);
   use(a2); setap("uap",(0.40w,top y2+0.5pt));
+  setap("cap",(x2,1/2tex));
   use(a4); setap("dap",(0.40w,bot y4-0.5pt));
 enddef;
 beginchr(shook,1.1ten);
