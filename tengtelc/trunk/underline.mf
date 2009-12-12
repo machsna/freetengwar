@@ -34,7 +34,7 @@ tecil_w = 0.41pt; tecil_h = 0.17pt;
 input stroke;
 
 ulineh = -1.1pt;
-curvelen = 0.5pt;
+curvelen = 0.4pt;
 
 vardef hexadecimal primary n =
   save m,s;
@@ -118,6 +118,27 @@ def makeunderline(expr num,width)(text gaps) =
   pause;
 enddef;
 
+%addalias("uniF8FD","uline_start");
+%beginchr(uline_start,0);
+beginchr("uline_start",0);
+  use(40);
+  lft z1=(0,ulineh);
+  rt z2=(0,ulineh);
+  z3=z2-0.8pt*dir(-30);
+  draw z1--z2{left}..{curl 4}z3;
+endchr;
+pause;
+%addalias("uniF8FE","uline_end");
+%beginchr(uline_end,2pt);
+beginchr("uline_end",0);
+  use(40);
+  rt z1=(0,ulineh);
+  lft z2=(0,ulineh);
+  z3=z2+0.8pt*dir(-30);
+  draw z1--z2{right}..{curl 4}z3;
+endchr;
+pause;
+
 %These number could have been fetched automatically, but now I do it manually. So there.
 
 telco=285;
@@ -172,7 +193,23 @@ makeunderline(46,900,);          % Uure
 makeunderline(47,941,);          % Uure conr
 makeunderline(48,492,(270,telco));% Long carrier
 makeunderline(49,492,);           % Short carrier, Halla
-makeunderline(50,1325,(325,510)); % Capital Tinco, Parma
+makeunderline(50,869,);           % Reversed Osse, W-tengwa, Descending Osse
+makeunderline(51,851,(270,300));   % Descending W
+makeunderline(52,821,);           % Osse
+makeunderline(53,677,);           % Connecting carrier
+makeunderline(54,969,);           % Open Anna
+makeunderline(55,999,(840,telco)); % PreFeaQ
+makeunderline(56,922,);           % HW
+makeunderline(57,932,);           % HW1
+makeunderline(58,983,);           % HW2
+makeunderline(59,1609,(1260,690)); % MH
+makeunderline(60,1092,(740,690)); % BelMH
+makeunderline(61,885,(20,300));   % AngWH
+makeunderline(62,1087,);           % Vaiya
+makeunderline(63,874,(420,650));   % Low S-hook
+makeunderline(64,809,);           % High S-hook
+
+makeunderline(65,1325,(325,510)); % Capital Tinco, Parma
 
 % Okay, there seems to be a weird bug in XeTeX.
 % This makes it disappear for some reason.
