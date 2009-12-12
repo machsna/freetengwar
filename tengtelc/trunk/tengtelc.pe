@@ -82,8 +82,6 @@ Select("capteema3luuva"); Clear();
 Select("capteema3luuvar"); Clear();
 Select("capteema4luuva"); Clear();
 Select("capteema4luuvar"); Clear();
-Reencode("unicode");
-Reencode("compacted");
 SelectAll();
 Scale(125,0,0);
 AddExtrema();
@@ -94,11 +92,15 @@ AddExtrema();
 RoundToInt();
 Simplify(128,2,0,0,1,5000);
 ClearBackground();
+MergeFonts("numerals.sfd")
+Reencode("unicode");
+Reencode("compacted");
 SetTTFName(0x409,3,"FontForge: " + $fullname + " " + $fontversion)
 SetTTFName(0x409,9,"Johan Winge")
 SetTTFName(0x409,11,"http://freetengwar.sourceforge.net/")
 SetTTFName(0x409,12,"http://freetengwar.sourceforge.net/")
 SetTTFName(0x409,13,"Tengwar Telcontar is distributed under the terms of the GNU General Public License.")
+SetTTFName(0x409,14,"http://www.gnu.org/copyleft/gpl.html")
 if ( $1=="regular" )
   Save("tengtelc.sfd");
   SetFontOrder(2);
