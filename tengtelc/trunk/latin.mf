@@ -27,6 +27,25 @@
 
 setspace(1.5pt);
 
+beginchr("trademark",1.8en);
+  padding(0.6pt,0.9pt);
+  use(35);
+  x1=lpad;
+  y1=y2=y6=y8=asc;
+  y4=y5=y9=1/2asc;
+  z3=1/2[z1,z2];
+  x4=x3;
+  x7=1/2[x6,x8];
+  y7=1/2[y6,y5];
+  x5=x6;
+  x8=x9=w-rpad;
+  1/2[x2,x6]=1/2[lpad,w-rpad];
+  x6-x2=0.8pt;
+  draw z1--z2;
+  draw z3--z4;
+  draw z5--z6--z7--z8--z9;
+endchr;
+
 beginchr("numbersign",0.90en);
   padding(1.5pt,1.5pt);
   a1=30; a2=40;
@@ -133,7 +152,7 @@ beginchr("asterisk",1.4en);
 endchr;
 
 beginchr("equal",1.3ex);
-  padding(0.4pt,0.4pt);
+  padding(0.5pt,0.5pt);
   x1=x3=lpad; x2=x4=w-rpad;
   1/2[y1,y3]=1/2[y2,y4]=1/2ex;
   y1-y3=y2-y4=1.3pt;
@@ -145,8 +164,70 @@ beginchr("equal",1.3ex);
   draw_stroke(p2,ap1);
 endchr;
 
+beginchr("approxequal",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=x3=lpad; x2=x4=w-rpad;
+  1/2[y1,y3]=1/2[y2,y4]-0.3pt=1/2ex;
+  y1-y3=y2-y4=1.3pt;
+  a1=a2=40;
+  ap1=ang(a1..a2);
+  p1=z1{dir a1}..z2{dir a2};
+  p2=z3{dir a1}..z4{dir a2};
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap1);
+endchr;
+
+beginchr("notequal",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=x3=lpad; x2=x4=w-rpad;
+  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+  y1-y3=y2-y4=1.3pt;
+  a1=a2=40;
+  ap1=ang(a1..a2);
+  p1=z1..z2;
+  p2=z3..z4;
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap1);
+  use(30);
+  z5=(x2-1pt,y2+1.2pt); 
+  z6=(x3+1pt,y3-1.2pt);
+  draw z5--z6;
+endchr;
+
+beginchr("lessequal",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=x3=lpad; x2=x4=w-rpad;
+  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+  y1-y3=y2-y4=1.3pt;
+  a1=a2=40;
+  ap1=ang(a1..a2);
+  p1=z1..z2;
+  p2=z3..z4;
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap1);
+  use(40);
+  z5=(x2,y2+1.7pt);
+  draw z5--z1;
+endchr;
+
+beginchr("greaterequal",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=x3=lpad; x2=x4=w-rpad;
+  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+  y1-y3=y2-y4=1.3pt;
+  a1=a2=40;
+  ap1=ang(a1..a2);
+  p1=z1..z2;
+  p2=z3..z4;
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap1);
+  use(40);
+  z5=(x1,y1+1.7pt);
+  draw z5--z2;
+endchr;
+
 beginchr("figuredash",1.3ex);
-  padding(0.4pt,0.4pt);
+  padding(0.5pt,0.5pt);
   x1=lpad; x2=w-rpad;
   y1=y2=1/2ex;
   a1=a2=40;
@@ -156,7 +237,7 @@ beginchr("figuredash",1.3ex);
 endchr;
 
 beginchr("plus",1.3ex);
-  padding(0.4pt,0.4pt);
+  padding(0.5pt,0.5pt);
   x1=lpad; x2=w-rpad;
   y1=y2=1/2ex;
   a1=a2=40;
@@ -164,6 +245,42 @@ beginchr("plus",1.3ex);
   ap1=ang(a1..a2);
   draw_stroke(p1,ap1);
   draw_stroke(p1 rotatedaround (1/2[z1,z2],90),ap1);
+endchr;
+
+beginchr("divide",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  a1=a2=40;
+  p1=z1..z2;
+  ap1=ang(a1..a2);
+  draw_stroke(p1,ap1);
+  x3=x4=1/2[x1,x2];
+  y1=1/2[y3,y4];
+  y3=1/2tecil_w;
+  draw_dot(3)(interpunctsize);
+  draw_dot(4)(interpunctsize);
+endchr;
+
+beginchr("logicalnot",1.3ex);
+  padding(0.5pt,0.5pt);
+  use(40);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  x3=x2;
+  y3=y2-0.4ex;
+  p1=z1--z2--z3;
+  draw p1;
+endchr;
+
+beginrefchr("plusminus",1.3ex);
+  x1=x2=0;
+  y1-y2=0.65ex;
+  y1=0.4ex;
+  setap("ap1",z1);
+  setap("ap2",z2);
+  attach("plus","ap1","origo");
+  attach("figuredash","ap2","origo");
 endchr;
 
 beginchr("slash",1.0en);
@@ -373,6 +490,27 @@ beginchr("C",1.4en);
   z5=(w-rpad,0.3[y4,y2]);
   draw z1..z2{left}..z3{down}..z4{right}..z5;
   setap("dap",(1/2w,-apy));
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("Euro",1.5en);
+  padding(1.5pt,0.7pt);
+  use(35);
+  z1=(0.9[x3,x5],0.85[y4,y2]);
+  top z2=(0.6[x3,x1],asc);
+  z3=(lpad,0.5asc);
+  bot z4=(0.5[x3,x5],-o);
+  z5=(w-rpad,0.3[y4,y2]);
+  draw z1..z2{left}..z3{down}..z4{right}..z5;
+  y6=y7;
+  y8=y9;
+  1/2[y8,y6]=1/2asc;
+  y6-y8=1.5pt;
+  x7-x6=x9-x8=1.0en;
+  lft x8=0;
+  lft x6=x8;
+  draw z6..z7;
+  draw z8..z9;
   labels(range 1 thru 5);
 endchr;
 
@@ -605,6 +743,26 @@ beginchr("Y",1.2en);
   labels(range 1 thru 4);
 endchr;
 
+beginchr("yen",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(0.5[x1,x3],ex);
+  z3=(w-rpad,y1);
+  bot z4=(x2,0);
+  draw z1--z2--z3;
+  draw z2--z4;
+  x6-x5=x8-x7=1.0en;
+  1/2[x5,x6]=1/2[x7,x8]=x2;
+  y5=y6=y2;
+  y7=y8;
+  y5-y7=1pt;
+  draw z5--z6;
+  draw z7--z8;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
 beginchr("Z",1.1en);
   padding(0.7pt,0.7pt);
   use(35);
@@ -692,6 +850,47 @@ beginchr("bar",0.6en);
   top z1=(0.5[lpad,w-rpad],asc);
   bot z2=(x1,-desc);
   draw z1--z2;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("brokenbar",0.6en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  1/2[z1,z2]=1/2[z3,z4];
+  x3=x4=x1;
+  y3-y4=0.4ex;
+  bot z2=(x1,-desc);
+  draw z1--z3;
+  draw z4--z2;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("dagger",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x3=lpad;
+  x4=w-rpad;
+  y3=y4=0.7[y2,y1];
+  top z1=(0.5[x3,x4],asc);
+  bot z2=(x1,-desc);
+  draw z1--z2;
+  draw z3--z4;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("daggerdbl",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x3=x5=lpad;
+  x4=x6=w-rpad;
+  y3=y4=0.7[y2,y1];
+  y5=y6=0.3[y2,y1];
+  top z1=(0.5[x3,x4],asc);
+  bot z2=(x1,-desc);
+  draw z1--z2;
+  draw z3--z4;
+  draw z5--z6;
   labels(range 1 thru 2);
 endchr;
 
@@ -848,7 +1047,7 @@ def draw_longs(expr style) =
     z0=(0.78[x2,x6],0.67[y5,y1]);
     z5=(0.47[x2,x6],0.61[y7,y1]);
     z6=(w-rpad,0.22[y7,y1]);
-    use(a7); bot z7=(0.40[x8,x6],-o);
+    use(a7); bot z7=(0.40[x8,x6],0);
     x8=0.42[x2,x6]; z8=z7+whatever*dir(180-30);
   fi
   use(a1); top z1=(0.7[x2,x0],asc);
@@ -2156,6 +2355,11 @@ beginchr("interpunctdot",0);
   draw_dot(1)(interpunctsize);
 endchr;
 
+beginchr("bullet",0.8en);
+  z1=(1/2w,1/2asc);
+  draw_dot(1)(1.4);
+endchr;
+
 beginchr("interpunctcomma",0);
   a1=a2=35;
   x1=x2=0; 0=1/2[y1,y2]; y1-y2=1.4pt;
@@ -2174,6 +2378,11 @@ endchr;
 
 beginrefchr("period",0.6en);
   setap("ap",(1/2w,1/2tecil_w));
+  attach("interpunctdot","ap","origo");
+endchr;
+
+beginrefchr("periodcentered",0.6en);
+  setap("ap",(1/2w,1/2asc));
   attach("interpunctdot","ap","origo");
 endchr;
 
@@ -2355,16 +2564,22 @@ beginchr("quotedbl",0.9en);
   draw_stroke(p2,ap2);
 endchr;
 
-beginchr("exclam",0.8en);
-  z1=(1/2w,1/2tecil_w);
+def draw_exclamation(expr style) =
+  z1=(1/2w,if style=nuquerna: asc- fi 1/2tecil_w);
   draw_dot(1)(1);
   a2=35; a3=60;
   use(a2); top z2=(x3,asc);
   use(a3); z3=(0.2[x1,rt x1],0.5ex);
-  draw_stroke(z2..z3,ang(a2..a3));
+  draw_stroke((z2..z3) if style=nuquerna: rotatedaround(1/2(w,asc),180) fi,ang(a2..a3));
+enddef;
+beginchr("exclam",0.8en);
+  draw_exclamation(normal);
+endchr;
+beginchr("exclamdown",0.8en);
+  draw_exclamation(nuquerna);
 endchr;
 
-beginchr("question",0.95en);
+def draw_question(expr style) =
   padding(0.6pt,0.6pt);
   a0=a1=a2=a3=a4=a5=35;
   z0=z1+0.33(x3-x1)*dir(-53);
@@ -2376,10 +2591,16 @@ beginchr("question",0.95en);
   y5=0.45ex;
   p1=z0..z1{up}..z2{right}..z3{down}..z4{down}..z5;
   ap1=ang(a0..a1..a2..a3..a4..a5);
-  draw_stroke(p1,ap1);
-  z6=(1/2w,1/2tecil_w);
+  draw_stroke(p1 if style=nuquerna: rotatedaround((1/2[lpad,w-rpad],1/2asc),180) fi,ap1);
+  z6=(1/2[lpad,w-rpad],if style=nuquerna: asc- fi 1/2tecil_w);
   draw_dot(6)(1);
   penlabels(range 0 thru 5);
+enddef;
+beginchr("question",0.95en);
+  draw_question(normal);
+endchr;
+beginchr("questiondown",0.95en);
+  draw_question(nuquerna);
 endchr;
 
 beginchr("uni204A",0.5ten); % Tironian et
