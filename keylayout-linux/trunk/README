@@ -1,0 +1,67 @@
+Tengwar Unicode keyboard layout (based on US-QWERTY)
+
+This layout is part of the Free Tengwar Font Project. For more
+information, see http://freetengwar.sourceforge.net/
+
+
+INSTALLATION
+
+If you are using Ubuntu, you can install the layout using the
+automatic script. This has been tested on Ubuntu 8.04, 8.10,
+9.04, and 9.10. Use at your own risk.
+
+$ chmod +x install.sh
+$ sudo ./install.sh
+
+If successful, the script will also generate an uninstall script.
+
+If you prefer to install manually, first move ucteng to
+"the right place". Where this is depends on your Linux version.
+The following works for the latest versions of Ubuntu:
+
+$ sudo cp ucteng /usr/share/X11/xkb/symbols/
+
+Then edit "the right file". Again, on the latest version of Ubuntu,
+this is /usr/share/X11/xkb/rules/evdev.xml, but your system
+may be configured differently. When you have found the file, add
+the following code just before "</layoutList>"
+
+    <layout>
+      <configItem>
+        <name>ucteng</name>
+        <shortDescription>Tengwar</shortDescription>
+        <description>Tengwar Unicode</description>
+        <languageList><iso639Id>art</iso639Id></languageList>
+      </configItem>
+      <variantList/>
+    </layout>
+
+After a successfull installation, you will have to enable the
+keyboard layout. If you are using GNOME, you may find this option
+under System, Preferences, Keyboard, Layouts. You will also want
+to add the Keyboard Indicator panel to your system bar.
+
+For more information on editing and installing X11 keyboard layouts,
+see the following sites:
+
+http://hektor.umcs.lublin.pl/~mikosmul/computing/articles/custom-keyboard-layouts-xkb.html
+http://simos.info/blog/archives/747
+http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11
+
+
+LEGALESE
+
+Copyright 2009 Johan Winge
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
