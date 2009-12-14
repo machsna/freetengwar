@@ -49,7 +49,7 @@ then
       echo "ERROR: Couldn't find $RULESFILE either! Sorry, I don't know what to do now. Exiting."; echo
       exit 1
    else
-      echo "I will use $RULESFILE instead."
+      echo "I will use $RULESFILE instead."; echo
    fi
 fi
 
