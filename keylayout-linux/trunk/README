@@ -38,8 +38,10 @@ the following code just before "</layoutList>"
 
 After a successfull installation, you will have to enable the
 keyboard layout. If you are using GNOME, you may find this option
-under System, Preferences, Keyboard, Layouts. You will also want
-to add the Keyboard Indicator panel to your system bar.
+under System, Preferences, Keyboard, Layouts. When sorting layouts
+by language, you will find the Tengwar layout under Artificial
+languages. You will probably also want to add the Keyboard Indicator
+panel to your system bar, to easily see what layout is active.
 
 For more information on editing and installing X11 keyboard layouts,
 see the following sites:
@@ -65,3 +67,4 @@ See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
