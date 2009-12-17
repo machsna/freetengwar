@@ -26,7 +26,6 @@
 %% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 numeric luuvbardiff[];
-unlinkreferences:=true;
 
 def draw_telco(expr side, type, conn, sectype) =
   lp:= if (side=carrier): 1.3pt elseif (side=leftside) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi; %  and (conn=normal)
@@ -1228,8 +1227,6 @@ endchr;
 beginchr(tengparen,0);
   draw_declefttelco(0.7[tex,tasc],-1/2tdesc,-1/2tdesc+1.0pt,0.8pt);
 endchr;
-
-unlinkreferences:=false;
 
 message"";
 
