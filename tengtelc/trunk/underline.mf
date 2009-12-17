@@ -213,7 +213,7 @@ makeunderline(65,1325,(325,510)); % Capital Tinco, Parma
 
 % Okay, there seems to be a weird bug in XeTeX.
 % This makes it disappear for some reason.
-for i=70 upto 99:
+for i=100 upto 140:
   makeunderline(i,500,(250,500));
 endfor
 
