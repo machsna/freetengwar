@@ -703,7 +703,7 @@ beginchr(tenginterrog,0.51tex);
   penlabels(range 1 thru 11);
 endchr;
 
-beginchr(tengtilde,1tex);
+beginchr(tengtilde,1.4en);
   padding(0.5interpunctwidth,0.5interpunctwidth);
   a1=a2=35; use(a1);
   x1=lpad; x2=w-rpad;
@@ -714,12 +714,11 @@ beginchr(tengtilde,1tex);
 endchr;
 
 beginrefchr(tengdbltilde,psc(tengtilde).width);
-  setap("dot1",(0,0.25tex));
-  setap("dot2",(0,-0.25tex));
-  attach(tengtilde,"dot1","origo");
-  attach(tengtilde,"dot2","origo");
+  setap("ap1",(0,0.20tex));
+  setap("ap2",(0,-0.20tex));
+  attach(tengtilde,"ap1","origo");
+  attach(tengtilde,"ap2","origo");
 endchr;
-
 
 beginchr(startmodechange,1.0en);
   a1=a2=a3=a4=35;
