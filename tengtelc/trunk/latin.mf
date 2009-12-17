@@ -1936,9 +1936,9 @@ beginchr("g",0.9en);
   draw_g(normal);
 endchr;
 
-beginchr("g.swash",0.9en);
-  draw_g(swash);
-endchr;
+%beginchr("g.swash",0.9en);
+%  draw_g(swash);
+%endchr;
 
 def draw_h(expr style) =
   a0=38;a1=34;
@@ -2703,39 +2703,39 @@ beginrefchr("semicolon",0.6en);
   attach("interpunctcomma","ap2","origo");
 endchr;
 
-beginrefchr("quoteleft",0.6en);
+beginrefchr("quoteleft",0.5en);
   setap("ap",(1/2w,1/2[ex,asc]));
   attach("interpunctinvcomma","ap","origo");
 endchr;
 
-beginrefchr("quoteright",0.6en);
+beginrefchr("quoteright",0.5en);
   setap("ap",(1/2w,1/2[ex,asc]));
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("quotesinglbase",0.6en);
+beginrefchr("quotesinglbase",0.5en);
   setap("ap",(1/2w,0));
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("quotedblleft",1.1en);
-  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblleft",1.0en);
+  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctinvcomma","ap1","origo");
   attach("interpunctinvcomma","ap2","origo");
 endchr;
 
-beginrefchr("quotedblright",1.1en);
-  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblright",1.0en);
+  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctcomma","ap1","origo");
   attach("interpunctcomma","ap2","origo");
 endchr;
 
-beginrefchr("quotedblbase",1.1en);
-  y1=y2=0; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblbase",1.0en);
+  y1=y2=0; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctcomma","ap1","origo");
