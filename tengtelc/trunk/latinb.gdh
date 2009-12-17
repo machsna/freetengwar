@@ -4,11 +4,42 @@ table(glyph) { MUnits = 2048; PointRadius = 0m; }
 g_space = ps("space") { 
  break = BREAK_WHITESPACE;
 };
+g_nbsp = ps("uni00A0") { 
+ uap = point(192m,1011m);
+ dap = point(192m,-128m);
+};
+g_section = ps("section") { 
+};
+g_uni00B5 = ps("uni00B5") { 
+};
+g_multiply = ps("multiply") { 
+};
+g_paragraph = ps("paragraph") { 
+};
+g_currency = ps("currency") { 
+};
+g_sterling = ps("sterling") { 
+};
+g_degree = ps("degree") { 
+};
+g_guilsinglleft = ps("guilsinglleft") { 
+};
+g_guilsinglright = ps("guilsinglright") { 
+};
+g_guillemotleft = ps("guillemotleft") { 
+};
+g_guillemotright = ps("guillemotright") { 
+};
+g_trademark = ps("trademark") { 
+};
 g_numbersign = ps("numbersign") { 
 };
 g_dollar = ps("dollar") { 
 };
-g_percent = ps("percent") { 
+g_fraction = ps("fraction") { 
+ uap = point(365m,1073m);
+ dap = point(1053m,268m);
+ dap2 = point(1809m,268m);
 };
 g_ampersand = ps("ampersand") { 
 };
@@ -20,17 +51,38 @@ g_figuredash = ps("figuredash") {
 };
 g_plus = ps("plus") { 
 };
+g_divide = ps("divide") { 
+};
+g_logicalnot = ps("logicalnot") { 
+};
+g_plusminus = ps("plusminus") { 
+};
 g_slash = ps("slash") { 
 };
 g_zero = ps("zero") { 
 };
+g_uni2070 = ps("uni2070") { 
+ ap = point(374m,1203m);
+};
 g_one = ps("one") { 
+};
+g_uni00B9 = ps("uni00B9") { 
+ ap = point(271m,1203m);
 };
 g_two = ps("two") { 
 };
+g_uni00B2 = ps("uni00B2") { 
+ ap = point(374m,1203m);
+};
 g_three = ps("three") { 
 };
+g_uni00B3 = ps("uni00B3") { 
+ ap = point(374m,1126m);
+};
 g_four = ps("four") { 
+};
+g_uni2074 = ps("uni2074") { 
+ ap = point(426m,1050m);
 };
 g_five = ps("five") { 
 };
@@ -42,6 +94,20 @@ g_eight = ps("eight") {
 };
 g_nine = ps("nine") { 
 };
+g_percent = ps("percent") { 
+ dap2 = point(1809m,268m);
+};
+g_perthousand = ps("perthousand") { 
+};
+g_onequarter = ps("onequarter") { 
+ dap2 = point(1809m,268m);
+};
+g_onehalf = ps("onehalf") { 
+ dap2 = point(1809m,268m);
+};
+g_threequarters = ps("threequarters") { 
+ dap2 = point(1809m,268m);
+};
 g_at = ps("at") { 
 };
 g_A = ps("A") { 
@@ -51,6 +117,8 @@ g_B = ps("B") {
 };
 g_C = ps("C") { 
  dap = point(735m,-128m);
+};
+g_Euro = ps("Euro") { 
 };
 g_D = ps("D") { 
 };
@@ -85,6 +153,10 @@ g_Q = ps("Q") {
 };
 g_R = ps("R") { 
 };
+g_copyright = ps("copyright") { 
+};
+g_registered = ps("registered") { 
+};
 g_U = ps("U") { 
  uap = point(616m,1792m);
 };
@@ -93,6 +165,9 @@ g_V = ps("V") {
 g_X = ps("X") { 
 };
 g_Y = ps("Y") { 
+ uap = point(655m,1792m);
+};
+g_yen = ps("yen") { 
  uap = point(655m,1792m);
 };
 g_Z = ps("Z") { 
@@ -111,6 +186,12 @@ g_underscore = ps("underscore") {
 g_braceleft = ps("braceleft") { 
 };
 g_bar = ps("bar") { 
+};
+g_brokenbar = ps("brokenbar") { 
+};
+g_dagger = ps("dagger") { 
+};
+g_daggerdbl = ps("daggerdbl") { 
 };
 g_braceright = ps("braceright") { 
 };
@@ -134,13 +215,11 @@ g_f_dotlig = ps("f.dotlig") {
 };
 g_f_conl_dotlig = ps("f.conl_dotlig") { 
 };
+g_florin = ps("florin") { 
+};
 g_longs = ps("longs") { 
 };
 g_germandbls = ps("germandbls") { 
-};
-g_nbsp = ps("uni00A0") { 
- uap = point(256m,1011m);
- dap = point(256m,-128m);
 };
 g_thsp = ps("uni2009") { 
 };
@@ -340,6 +419,8 @@ g_W = ps("W") {
 g_a = ps("a") { 
  uap = point(543m,1024m);
 };
+g_ordfeminine = ps("ordfeminine") { 
+};
 g_agrave = ps("agrave") { 
 };
 g_aacute = ps("aacute") { 
@@ -362,13 +443,14 @@ g_b_conl = ps("b.conl") {
 g_c = ps("c") { 
  dap = point(491m,-128m);
 };
+g_cent = ps("cent") { 
+ dap = point(491m,-128m);
+};
 g_ccedilla = ps("ccedilla") { 
 };
 g_d = ps("d") { 
 };
 g_eth = ps("eth") { 
-};
-g_partialdiff = ps("partialdiff") { 
 };
 g_e = ps("e") { 
  uap = point(546m,1024m);
@@ -383,8 +465,6 @@ g_edieresis = ps("edieresis") {
  uap = point(546m,1331m);
 };
 g_g = ps("g") { 
-};
-g_g_swash = ps("g.swash") { 
 };
 g_h = ps("h") { 
 };
@@ -420,9 +500,6 @@ g_idieresis = ps("idieresis") {
 g_idieresis_conl = ps("idieresis.conl") { 
  uap = point(243m,1331m);
 };
-g_uniFB01 = ps("uniFB01") { 
- uap = point(907m,1024m);
-};
 g_dotlessj = ps("uni0237") { 
  uap = point(258m,1024m);
 };
@@ -443,8 +520,6 @@ g_l = ps("l") {
 };
 g_l_conl = ps("l.conl") { 
 };
-g_uniFB02 = ps("uniFB02") { 
-};
 g_m = ps("m") { 
 };
 g_m_conl = ps("m.conl") { 
@@ -463,6 +538,8 @@ g_eng = ps("eng") {
 g_o = ps("o") { 
  dap = point(517m,-128m);
  uap = point(595m,1024m);
+};
+g_ordmasculine = ps("ordmasculine") { 
 };
 g_ograve = ps("ograve") { 
  dap = point(517m,-128m);
@@ -575,11 +652,15 @@ g_zcaron = ps("zcaron") {
 };
 g_interpunctdot = ps("interpunctdot") { 
 };
+g_bullet = ps("bullet") { 
+};
 g_interpunctcomma = ps("interpunctcomma") { 
 };
 g_interpunctinvcomma = ps("interpunctinvcomma") { 
 };
 g_period = ps("period") { 
+};
+g_periodcentered = ps("periodcentered") { 
 };
 g_comma = ps("comma") { 
 };
@@ -625,7 +706,11 @@ g_quotedbl = ps("quotedbl") {
 };
 g_exclam = ps("exclam") { 
 };
+g_exclamdown = ps("exclamdown") { 
+};
 g_question = ps("question") { 
+};
+g_questiondown = ps("questiondown") { 
 };
 g_uni204A = ps("uni204A") { 
 };
