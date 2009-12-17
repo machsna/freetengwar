@@ -100,6 +100,10 @@ table(pos)
     (g_w,g_w_conl) c_avariant {kern.x = -100m} / _ ^ _;
     (g_r,g_r_conl) c_avariant {kern.x = -60m} / _ ^ _;
     g_T c_evariant {kern.x = -160m} / _ ^ _;
+    (g_quoteleft,g_quotedblleft) (g_a,g_c,g_d,g_e,g_g,g_o,g_q,g_s) {kern.x = -100m} / _ ^ _;
+    (g_quoteright,g_quotedblright) (g_a,g_c,g_d,g_e,g_g,g_o,g_q,g_s) {kern.x = -200m} / _ ^ _;
+    (g_a) (g_quoteright,g_quotedblright)  {kern.x = -50m} / _ ^ _;
+    (g_f,g_f_conl) (g_quoteright,g_quotedblright) {kern.x = +450m} / _ ^ _;
   endpass;
 endtable;
 

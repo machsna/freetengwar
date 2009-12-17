@@ -524,10 +524,10 @@ table(pos)
     (Hyarmen,Yanta) g_downitehta_norm {shift.y = 150m};
     (g_silme_open,g_aare_open) g_itehta_norm {shift.x = -100m};
 
-    g_startmodechange (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m};
-    g_startmodechange (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m};
-    g_startmodechange (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m};
-    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) g_endmodechange {kern.x = -150m} / _ AnyTehtar ^ _;
+    (g_startmodechange,g_quoteleft,g_quotedblleft) (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m};
+    (g_startmodechange,g_quoteleft,g_quotedblleft) (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m};
+    (g_startmodechange,g_quoteleft,g_quotedblleft) (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m};
+    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) (g_endmodechange,g_quoteright,g_quotedblright) {kern.x = -150m} / _ AnyTehtar ^ _;
 
   endpass;
 
