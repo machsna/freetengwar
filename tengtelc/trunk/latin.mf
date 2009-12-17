@@ -27,6 +27,162 @@
 
 setspace(1.5pt);
 
+superscriptscale=0.65;
+
+beginchr("section",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z2=(0.55[x3,x1],asc);
+  x1-x3=0.7(x4-lpad);
+  z1=z2+whatever*dir(-20);
+  1/2[x3,x1]=1/2[lpad,x4];
+  y3=0.8[y5,y2];
+  y4=0.2[y5,y2];
+  x4=w-rpad;
+  z5=(x2,-0.2pt);
+  p1=z1..z2{left}..z3{down}..z4{down}..z5;
+  p2=p1 rotatedaround(1/2(w,asc-desc),180);
+  t:=ypart(p1 intersectiontimes p2);
+  draw subpath (0,t) of p1;
+  draw subpath (0,t) of p2;
+endchr;
+
+beginchr("uni00B5",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x1=x2=lpad;
+  x3=0.55[x2,x4];
+  x4=x5=w-rpad;
+  y1=-desc;
+  y2=y4=ex;
+  bot y3=bot y5=0;
+  draw z1--z2 & z2{down}..z3{right}..z4{up} & z4--z5;
+endchr;
+
+beginchr("multiply",1.3en);
+  padding(0.7pt,0.7pt);
+  1/2[z5,z7]=1/2[z6,z8];
+  x6=x7=w-rpad; x5=lpad;
+  y6=y5; y7=0;
+  y6-y7=x7-x8;
+  use(-45+20);
+  draw z6--z8;
+  use(45-20);
+  draw z5--z7;
+endchr;
+
+beginchr("paragraph",1.2en);
+  padding(0.7pt,0.9pt);
+  x1=x2=w-rpad;
+  x3=x4=x1-1.2pt;
+  y1=y3=-0.5desc;
+  y2=y4=asc;
+  z5=(lpad,0.6[y2,y6]);
+  z6=(x1,0.5asc);
+  use(35);
+  draw z3--z4;
+  draw z1--z2 & z2--z4{left}...z5{down}..z6;
+endchr;
+
+beginchr("currency",1.5en);
+  padding(0.7pt,0.7pt);
+  1/2[z1,z3]=1/2[z2,z4]=1/2[z5,z7]=1/2[z6,z8];
+  x1=x3; x6=x7=w-rpad; x5=lpad;
+  y2=y4; y6=y5; y7=0;
+  x2-x4=y1-y3=0.8(x6-x5);
+  y6-y7=x7-x8;
+  p1=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(-45);
+  draw z6--z8;
+  use(45);
+  draw z5--z7;
+  erase fill p1;
+  use(35);
+  draw p1;
+endchr;
+
+beginchr("sterling",1.5en);
+  padding(0.7pt,0.7pt);
+  a1=a2=a3=a4=a5=a6=a7=a8=a9=35;
+  x6=lpad;
+  x9=w-rpad;
+  use(a5); bot y5=0;
+  use(a8); bot y8=0;
+  x5=0.3[x6,x4];
+  x7=0.2[x6,x9];
+  x8=0.7[x6,x9];
+  z9=z8+whatever*dir(20);
+  x3=0.3[x6,x9];
+  x4=0.35[x6,x9];
+  x1=0.7[x3,x9];
+  x2=0.6[x3,x1];
+  y2=asc;
+  z1=z2+whatever*dir(-30);
+  y3=0.5[ex,asc];
+  y4=0.6ex;
+  y6=0.5[y5,y7];
+  y7=0.4ex;
+  p1=z1..z2{left}..z3..z4{down}..z5{left}..z6{up}..z7{right}..z8{right}..z9{dir a9};
+  use(a1);
+  draw p1;
+  y10=y11=0.65[y7,y3];
+  x3=0.4[x10,x11];
+  x11-x10=0.8en;
+  draw z10--z11;
+endchr;
+
+beginchr("degree",0.8en);
+  padding(0.7pt,0.7pt);
+  x1=lpad;
+  x2=x4=1/2[x1,x3];
+  x3=w-rpad;
+  y2=asc;
+  y2-y4=x3-x1;
+  y1=y3=1/2[y2,y4];
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  draw z1{up}..z2{right}..z3{down}..z4{left}..cycle;
+endchr;
+
+def draw_guil(expr style) =
+  padding(0.8pt,0.8pt);
+  if style=leftside:
+    x1=x3=w-rpad;
+    x2=lpad;
+    y1-y3=0.9ex;
+    a1=90-30;
+    a2=0;
+    a3=-a1;
+  else:
+    x1=x3=lpad;
+    x2=w-rpad;
+    y1-y3=0.9ex;
+    a1=90+30;
+    a2=180;
+    a3=360-a1;
+  fi
+  y2=1/2[y1,y3]=1/2ex;
+  p1=z1{-dir a1}..z2 & z2..z3{dir a3};
+  ap1=ang(a1..a2..a3);
+  draw_stroke(p1,ap1);
+enddef;
+beginchr("guilsinglleft",0.35en);
+  draw_guil(leftside);
+endchr;
+beginchr("guilsinglright",0.35en);
+  draw_guil(rightside);
+endchr;
+guillemotdist=1.5pt;
+beginrefchr("guillemotleft",ps[ps.lu("guilsinglleft")].width+guillemotdist);
+  setap("ap1",(guillemotdist,0));
+  attach("guilsinglleft","origo","origo");
+  attach("guilsinglleft","ap1","origo");
+endchr;
+beginrefchr("guillemotright",ps[ps.lu("guilsinglright")].width+guillemotdist);
+  setap("ap1",(guillemotdist,0));
+  attach("guilsinglright","origo","origo");
+  attach("guilsinglright","ap1","origo");
+endchr;
+
 beginchr("trademark",1.8en);
   padding(0.6pt,0.9pt);
   use(35);
@@ -94,7 +250,7 @@ beginchr("dollar",1.2en);
   labels(range 1 thru 8);
 endchr;
 
-beginchr("percent",1.4en);
+beginchr("fraction",1.4en);
   padding(0.6pt,0.6pt);
   a1=a2=25; a3=a4=a5=a6=35;
   z1=(lpad,-0.0pt);
@@ -104,11 +260,11 @@ beginchr("percent",1.4en);
   y4=y6=1/2[y3,y5];
   x6-x4=0.9*(y3-y5)=1.65pt;
   z4=(lpad,0.8[y1,y2]);
-  p1=z3{right}..z6{down}..z5{left}..z4{up}..cycle;
-  ap1=ang(a3..a6..a5..a4..a3);
-  draw_stroke(p1,ap1);
-  draw_stroke(p1 shifted (2*(1/2[z1,z2]-(x3,y4))),ap1);
-
+  z10=(z3+z6+z5+z4)/4;
+  z11=z10 shifted (2*(1/2[z1,z2]-(x3,y4)));
+  setap("uap",z10);
+  setap("dap",z11);
+  setap("dap2",z11 shifted (x6-x4+1.3pt,0));
   labels(range 1 thru 8);
 endchr;
 
@@ -292,16 +448,24 @@ beginchr("slash",1.0en);
   labels(range 1 thru 2);
 endchr;
 
+path zero_p;
 beginchr("zero",1en);
   padding(0.7pt,0.7pt);
   use(35); top z1=(1/2[x4,x2],ex+o);
   z2=(w-rpad,1/2ex);
   bot z3=(1/2[x4,x2],-o);
   z4=(lpad,1/2ex);
-  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  zero_p=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  draw zero_p;
   labels(range 1 thru 4);
 endchr;
+beginchr("uni2070",ps[ps.lu("zero")].width*superscriptscale);
+  use(35);
+  draw zero_p scaled superscriptscale shifted (0,ex);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
 
+path one_p[];
 beginchr("one",0.6en);
   padding(0.7pt,0.7pt);
   use(35); top z2=(1/2[lpad,w-rpad],ex+o);
@@ -309,11 +473,21 @@ beginchr("one",0.6en);
   bot z3=(x2,0);
   bot z4=(lpad,0);
   bot z5=(w-rpad,0);
-  draw z1{dir 35}...z2 & z2--z3;
-  draw z4--z5;
+  one_p1=z1{dir 35}...z2 & z2--z3;
+  one_p2=z4--z5;
+  draw one_p1;
+  draw one_p2;
   labels(range 1 thru 6);
 endchr;
+beginchr("uni00B9",ps[ps.lu("one")].width*superscriptscale);
+  use(35);
+  draw one_p1 scaled superscriptscale shifted (0,ex);
+  draw one_p2 scaled superscriptscale shifted (0,ex);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
 
+path two_p;
+path two_ap;
 beginchr("two",1en);
   padding(0.7pt,0.7pt);
   a1-5=a2=a3=a4=a5=a6=35;
@@ -322,11 +496,18 @@ beginchr("two",1en);
   z3=(w-rpad-0.6pt,0.75ex);
   bot z4=(lpad,0);
   bot z5=(w-rpad,0);
-  p1=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4--z5;
-  draw_stroke(p1,ang(a1..a2..a3..a4..a5));
+  two_p=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4--z5;
+  two_ap=ang(a1..a2..a3..a4..a5);
+  draw_stroke(two_p,two_ap);
   labels(range 1 thru 5);
 endchr;
+beginchr("uni00B2",ps[ps.lu("two")].width*superscriptscale);
+  draw_stroke(two_p scaled superscriptscale shifted (0,ex), two_ap);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
 
+path three_p;
+path three_ap;
 beginchr("three",1en);
   padding(0.7pt,0.7pt);
   a1-5=a2=a3=a4=a5=a6=35;
@@ -336,11 +517,17 @@ beginchr("three",1en);
   z4=(lpad+0.9pt,0.2ex);
   z5=(w-rpad,0.6[y6,y4]);
   z6=(lpad,-desc);
-  p1=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4{dir 20}..z5{down}..z6;
-  draw_stroke(p1,ang(a1..a2..a3..a4..a5..a6));
+  three_p=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4{dir 20}..z5{down}..z6;
+  three_ap=ang(a1..a2..a3..a4..a5..a6);
+  draw_stroke(three_p,three_ap);
   labels(range 1 thru 5);
 endchr;
+beginchr("uni00B3",ps[ps.lu("three")].width*superscriptscale);
+  draw_stroke(three_p xscaled superscriptscale yscaled (0.65*superscriptscale) shifted (0,ex+0.6pt), three_ap);
+  setap("ap",(0.5w,0.3[ex,asc]));
+endchr;
 
+path four_p;
 beginchr("four",1.2en);
   padding(0.7pt,0.7pt);
   use(35);
@@ -348,8 +535,14 @@ beginchr("four",1.2en);
   top z2=(x4-1.2pt,ex+o);
   bot z3=(lpad,0);
   bot z4=(w-rpad,0);
-  draw z1--z2--z3--z4;
+  four_p=z1--z2--z3--z4;
+  draw four_p;
   labels(range 1 thru 5);
+endchr;
+beginchr("uni2074",ps[ps.lu("four")].width*superscriptscale);
+  use(35);
+  draw four_p xscaled superscriptscale yscaled (0.75*superscriptscale) shifted (0,ex+0.5pt);
+  setap("ap",(0.5w,0.2[ex,asc]));
 endchr;
 
 beginchr("five",0.9en);
@@ -413,6 +606,37 @@ beginchr("nine",1.1en);
   p1=z1..tension 1.1 and 1..z2{down}..z3{right}..z4{up}..z5{left}..z6{-dir 35};
   draw p1 rotatedaround ((0.5w,0.5ex),180);
   labels(range 1 thru 5);
+endchr;
+
+beginrefchr("percent",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni2070","uap","ap");
+  attach("uni2070","dap","ap");
+endchr;
+
+beginrefchr("perthousand",ps[ps.lu("fraction")].width+3pt);
+  attach("fraction","origo","origo");
+  attach("uni2070","uap","ap");
+  attach("uni2070","dap","ap");
+  attach("uni2070","dap2","ap");
+endchr;
+
+beginrefchr("onequarter",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B9","uap","ap");
+  attach("uni2074","dap","ap");
+endchr;
+
+beginrefchr("onehalf",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B9","uap","ap");
+  attach("uni00B2","dap","ap");
+endchr;
+
+beginrefchr("threequarters",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B3","uap","ap");
+  attach("uni2074","dap","ap");
 endchr;
 
 beginchr("at",0.95en);
@@ -505,7 +729,7 @@ beginchr("Euro",1.5en);
   y6=y7;
   y8=y9;
   1/2[y8,y6]=1/2asc;
-  y6-y8=1.5pt;
+  y6-y8=1.4pt;
   x7-x6=x9-x8=1.0en;
   lft x8=0;
   lft x6=x8;
@@ -679,6 +903,7 @@ beginchr("Q",1.4en);
   labels(range 1 thru 6);
 endchr;
 
+path charR_p[];
 beginchr("R",1.2en);
   padding(0.7pt,0.7pt);
   use(35);
@@ -689,10 +914,49 @@ beginchr("R",1.2en);
   z6=(w-rpad,y2);
   p1=z3{right}..z4{up}..z1{left};
   z5=point 0.3 of p1;
-  draw z1--z2;
-  draw z5--z6;
-  draw z3{right}..z4{up}..z1{left};
+  charR_p1=z1--z2; draw charR_p1;
+  charR_p2=z5--z6; draw charR_p2;
+  charR_p3=z3{right}..z4{up}..z1{left}; draw charR_p3;
   labels(range 1 thru 5);
+endchr;
+
+beginchr("copyright",asc);
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  padding(0.7pt,0.7pt);
+  x4=lpad;
+  x2=w-rpad;
+  x1=x3=1/2[x2,x4];
+  bot y3=0;
+  y2=y4=1/2[y3,y1];
+  y1-y3=x2-x4;
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(35);
+  x6=x8=x1;
+  1/2[y6,y8]=1/2[y1,y3];
+  y7=1/2[y6,y8];
+  y6-y8=0.9ex;
+  x7=x6-0.4ex;
+  x5=x6+0.2ex;
+  x9=x8+0.3ex;
+  z5=z6+whatever*dir(-20);
+  z9=z8+whatever*dir(25);
+  draw z5..z6{left}..z7{down}..z8{right}..z9;
+endchr;
+
+beginchr("registered",asc);
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  padding(0.7pt,0.7pt);
+  x4=lpad;
+  x2=w-rpad;
+  x1=x3=1/2[x2,x4];
+  bot y3=0;
+  y2=y4=1/2[y3,y1];
+  y1-y3=x2-x4;
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(35);
+  draw charR_p1 scaled 0.6 shifted (2.5pt,1.5pt);
+  draw charR_p2 scaled 0.6 shifted (2.5pt,1.5pt);
+  draw charR_p3 scaled 0.6 shifted (2.5pt,1.5pt);
 endchr;
 
 beginchr("U",1.1en);
@@ -756,7 +1020,7 @@ beginchr("yen",1.2en);
   1/2[x5,x6]=1/2[x7,x8]=x2;
   y5=y6=y2;
   y7=y8;
-  y5-y7=1pt;
+  y5-y7=1.3pt;
   draw z5--z6;
   draw z7--z8;
   setap("uap",(1/2w,asc+apy));
@@ -996,13 +1260,20 @@ def draw_f(expr style,secstyle) =
   fi
   use(a2); top z2=(0.65[x3,x1],asc);
   z3=(lpad+0.3en,0.25[ex,asc]);
-  z4=(x3,-1/2desc);
-%  z4=(x3,-o);
-%%  p2=ornpath(noorn,curved)(3,4); ap2=ornang(noorn,curved);
-  ap2=ang(31..25..25..31);
-  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.8pt,40,ap2);
-%  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.5pt,20,ap2);
-  if secstyle=normal:
+
+  if secstyle=descend:
+    z4=(x3,0.2ex);
+    z7=(x3,-desc);
+    ap2=ang(31..35..35);
+    p2=z3..z4..botserif(4,7)(2.0pt, 0.8desc, -20, 0, ap2);
+
+  else:
+    z4=(x3,-1/2desc);
+    ap2=ang(31..25..25..31);
+    p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.8pt,40,ap2);
+    %  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.5pt,20,ap2);
+  fi
+  if (secstyle=normal) or (secstyle=descend):
     p1=z1{up}..z2{left}..tension 1.1..{down}p2;
     ap1=ang(a1..a2..a3..ap2);
   elseif secstyle=dotlig:
@@ -1034,6 +1305,9 @@ beginchr("f.dotlig",0.45en);
 endchr;
 beginchr("f.conl_dotlig",0.45en);
   draw_f(conleft,dotlig);
+endchr;
+beginchr("florin",0.45en);
+  draw_f(normal,descend);
 endchr;
 
 def draw_longs(expr style) =
@@ -1400,25 +1674,31 @@ beginchr("W",2.5en);
   labels(range 1 thru 8);
 endchr;
 
+path chara_ap[];
+path chara_p[];
 beginchr("a",0.95en);
   padding(0.65pt,0.55pt);
   a1=40; a2=40; a3=a4=a5=a6=35;
   z1=(0.45[x4,x2],ex);
   z2=(w-rpad,0);
   z4=(lpad,0.25ex);
-  ap1=stretch(3,ang(a1..a2));
-  p1=tserif(1,2)(0.6pt,0.33,20,1,ap1)..bserif(1,2)(0.4pt,0.33,-dir20,1,ap1);
+  chara_ap1=ap1=stretch(3,ang(a1..a2));
+  chara_p1=p1=tserif(1,2)(0.6pt,0.33,20,1,ap1)..bserif(1,2)(0.4pt,0.33,-dir20,1,ap1);
   draw_stroke(p1,ap1);
   t:=p1 heighttimes 0.77ex;
   z3=change_angle(point t of p1, penangle t of ap1+180,a3+180);
   use(a5); bot z5=(0.35[x4,x6],-o);
   t:=p1 heighttimes 0.30ex;
   z6=change_angle(point t of p1, penangle t of ap1+180,a6+180);
-  ap2=ang(a3..a4..a5..a6);
-  p2=z3{-dir (a3+25)}..z4{down}..z5{right}..z6;
+  chara_ap2=ap2=ang(a3..a4..a5..a6);
+  chara_p2=p2=z3{-dir (a3+25)}..z4{down}..z5{right}..z6;
   draw_stroke(p2,ap2);
   setap("uap",(0.5[x4,x2],ex+apy));
   labels(range 1 thru 6);
+endchr;
+beginchr("ordfeminine",ps[ps.lu("a")].width*superscriptscale);
+  draw_stroke(chara_p1 scaled superscriptscale shifted (0,ex),chara_ap1);
+  draw_stroke(chara_p2 scaled superscriptscale shifted (0,ex),chara_ap2);
 endchr;
 
 combinechr("agrave","a","uap","uni0300.normal","dap");
@@ -1483,7 +1763,7 @@ beginchr("b.conl",0.96en);
   draw_b(conleft);
 endchr;
 
-beginchr("c",0.85en);
+def draw_c =
   padding(0.6pt,0.6pt);
   a1=a2=35; a3=38; a4=43; a5=45; 
   z1=(w-rpad,0.77ex);
@@ -1494,6 +1774,18 @@ beginchr("c",0.85en);
   draw_stroke(z1..z2{left}..z3{down}..z4{right}..{dir a5}z5,ang(a1..a2..a3..a4..a5));
   setap("dap",(x4,-apy));
   labels(range 0 thru 5);
+enddef;
+
+beginchr("c",0.85en);
+  draw_c;
+endchr;
+beginchr("cent",0.85en);
+  draw_c;
+  x6-x7=0.5w;
+  1/2[x6,x7]=1/2[x2,x4];
+  y6=1/2[ex,asc];
+  y7=-1/2desc;
+  draw_stroke(z6--z7,ang(50..50));
 endchr;
 
 combinechr("ccedilla","c","dap","uni0327.normal","uap");
@@ -1928,7 +2220,9 @@ def draw_o(expr style) =
   z2=(w-rpad,1/2ex);
   bot z3=(1/2[x4,x2],-o);
   z4=(lpad,1/2ex);
-  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  path charo_p;
+  charo_p=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  draw charo_p;
   if style=closed:
     z5=(x4,y3);
     z6=(x2,y1);
@@ -1938,9 +2232,12 @@ def draw_o(expr style) =
   setap("uap",(1/3[x1,rt x1],ex+apy));
   labels(range 1 thru 4);
 enddef;
-
 beginchr("o",0.95en);
   draw_o(open);
+endchr;
+beginchr("ordmasculine",ps[ps.lu("o")].width*superscriptscale);
+  use(35);
+  draw charo_p scaled superscriptscale shifted (0,ex);
 endchr;
 
 combinechr("ograve","o","uap","uni0300.normal","dap");
@@ -2357,7 +2654,7 @@ endchr;
 
 beginchr("bullet",0.8en);
   z1=(1/2w,1/2asc);
-  draw_dot(1)(1.4);
+  draw_dot(1)(1.7);
 endchr;
 
 beginchr("interpunctcomma",0);
