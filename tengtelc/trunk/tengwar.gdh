@@ -506,6 +506,7 @@ table(pos)
     Hyarmen Roomen {kern.x = -110m} / _ AnyTehtar ^ _;
     Yanta Roomen {kern.x = -160m} / _ AnyTehtar ^ _;
     g_conncarr (SilmeNuq,AareNuq,HwestaSin,Yanta,Uure,Atengwa,Vaiya) {kern.x = -135m} / _ AnyTehtar ^ _;
+    (Tinco,Ando,Thuule,Anto,Nuumen,Oore,ExtThuule,ExtAnto,Roomen,Arda,Silme,Uure,AngWhtengwa) Aare {kern.x = -80m} / _ AnyTehtar ^ _;
 
     (Roomen,Arda) g_utehta_norm {shift.x = -125m} / _ AnyDownTehtar ^ _;
     (Roomen,Arda) g_otehta_norm {shift.x = -120m} / _ AnyDownTehtar ^ _;
