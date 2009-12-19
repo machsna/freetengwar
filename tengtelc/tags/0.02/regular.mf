@@ -1,0 +1,14 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005 Johan Winge
+
+font_weight:="Regular";
+
+%tecil_w = 1.0pt; tecil_h = 0.25pt;
+tecil_w = 1.05pt; tecil_h = 0.25pt;
+%tecil_w = 1.1pt; tecil_h = 0.26pt;
+%tecil_w = 1.2pt; tecil_h = 0.27pt;
+%tecil_w = 1.3pt; tecil_h = 0.275pt;
+%tecil_w = 1.4pt; tecil_h = 0.28pt;
+
+input tracing;
+input stroke;
