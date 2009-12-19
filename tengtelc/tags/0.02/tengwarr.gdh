@@ -95,10 +95,16 @@ g_closingbar_low1 = ps("closingbar_low1") {
 g_closingbar_low2 = ps("closingbar_low2") { 
  barap = point(102m,64m);
 };
+g_closingbar_low2_desc = ps("closingbar_low2_desc") { 
+ barap = point(102m,64m);
+};
 g_closingbar_low3 = ps("closingbar_low3") { 
  barap = point(102m,64m);
 };
 g_closingbar_low4 = ps("closingbar_low4") { 
+ barap = point(102m,64m);
+};
+g_closingbar_low4_desc = ps("closingbar_low4_desc") { 
  barap = point(102m,64m);
 };
 g_closingbar_high1 = ps("closingbar_high1") { 
@@ -360,6 +366,22 @@ g_malta_conl = ps("uniE011.conl") {
 g_malta_cap = ps("uniE011.cap") { 
  uap = point(1097m,868m);
  dap = point(1097m,-102m);
+};
+g_mhtengwa = ps("uniE03A") { 
+ uap = point(855m,799m);
+ dap = point(855m,-102m);
+};
+g_mhtengwa_cap = ps("uniE03A.cap") { 
+ uap = point(965m,868m);
+ dap = point(965m,-102m);
+};
+g_beleriandicmh = ps("uniE03B") { 
+ uap = point(577m,799m);
+ dap = point(577m,-102m);
+};
+g_beleriandicmh_cap = ps("uniE03B.cap") { 
+ uap = point(788m,868m);
+ dap = point(788m,-102m);
 };
 g_extformen = ps("uniE019") { 
  uap = point(636m,799m);
@@ -636,6 +658,20 @@ g_shortcarr_cap = ps("uniE02E.cap") {
 g_tengparen = ps("uniE067") { 
  luuvap = point(423m,383m);
  barap = point(429m,64m);
+};
+g_openanna = ps("uniE036") { 
+ uap = point(491m,799m);
+ dap = point(475m,-102m);
+};
+g_openanna_conl = ps("uniE036.conl") { 
+ uap = point(491m,799m);
+ dap = point(475m,-102m);
+};
+g_openanna_cap = ps("uniE036.cap") { 
+ luuvap = point(765m,383m);
+ barap = point(994m,701m);
+ uap = point(495m,868m);
+ dap = point(580m,-102m);
 };
 g_atehta_norm = ps("uniE040.norm") { 
  dap = point(0m,799m);
@@ -971,6 +1007,18 @@ g_hwestasin = ps("uniE029") {
 g_uure = ps("uniE02B") { 
  uap = point(468m,799m);
  dap = point(468m,-102m);
+};
+g_atengwa = ps("uniE032") { 
+ uap = point(432m,799m);
+ dap = point(401m,-102m);
+};
+g_atengwa_desc = ps("uniE032.desc") { 
+ uap = point(432m,799m);
+ dap = point(401m,-102m);
+};
+g_atengwa_cap = ps("uniE032.cap") { 
+ uap = point(523m,868m);
+ dap = point(415m,-102m);
 };
 g_tenginterpdot = ps("tenginterpdot") { 
 };

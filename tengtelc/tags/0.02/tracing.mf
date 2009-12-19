@@ -142,7 +142,7 @@ def endchr =
   apt(ps.n,lastap).forgd := false;
   for i=1 upto psc(ps.n).ap.n:
     if apt(ps.n,i).forgd:
-      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
+      if tracing and forgd: show apt(ps.n,i).name; message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
          & decimal round(ypart apt(ps.n,i).pt/un) & "m);"; fi
       if not tracing: makelabel(apt(ps.n,i).name,apt(ps.n,i).pt); fi
     else:

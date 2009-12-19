@@ -37,13 +37,11 @@ beginchr(dottedcircle,1.1ex);
   setap("uap",(1/2w,ex+0.7pt));
   setap("dap",(1/2w,-0.7pt));
 endchr;
-message "pe: Simplify(0,2);"; message"";
 
 beginchr("diacriticdot",0);
   z1=(0,0);
   draw_dot(1)(1);
 endchr;
-message "pe: Simplify(0,2);"; message"";
 
 beginrefchr("uni0307.normal",0); % Combining dot above
   setap("dot",(0,ex+1pt));
@@ -182,7 +180,6 @@ beginchr("W",2.5en);
   draw_stroke(z7..{dir (angle(z8-z7)+10)}z8,ang(a3..a4));
   labels(range 1 thru 8);
 endchr;
-
 
 beginchr("a",0.95en);
   padding(0.65pt,0.65pt);
@@ -909,7 +906,6 @@ endchr;
 beginchr("y.conl",1.27en);
   draw_y(conleft);
 endchr;
-
 
 beginchr("ae",1.55en);
   padding(0.65pt,0.6pt);
