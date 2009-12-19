@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Generating ttf-files:
+
+#python mf2ttf.py latinr
+python mf2ttf.py tengwarr
+fontforge -script tengtelc.pe regular
+
+#python mf2ttf.py latinb
+#python mf2ttf.py tengwarb
+#fontforge -script tengtelc.pe bold
+
+# Some cleaning up:
+
+rm -f latinr.14454gf
+rm -f latinr.log
+rm -f latinr.enc
+rm -f latinr.pe
+rm -f latinr.pk
+rm -f latinr.tfm
+#rm -f latinr.ttf
+
+rm -f tengwarr.14454gf
+rm -f tengwarr.log
+rm -f tengwarr.enc
+#rm -f tengwarr.pe
+rm -f tengwarr.pk
+rm -f tengwarr.tfm
+#rm -f tengwarr.ttf
+
+rm -f latinb.14454gf
+rm -f latinb.log
+rm -f latinb.enc
+rm -f latinb.pe
+rm -f latinb.pk
+rm -f latinb.tfm
+#rm -f latinb.ttf
+
+rm -f tengwarb.14454gf
+rm -f tengwarb.log
+rm -f tengwarb.enc
+rm -f tengwarb.pe
+rm -f tengwarb.pk
+rm -f tengwarb.tfm
+#rm -f tengwarb.ttf
+
+# Adding Graphite tables:
+
+. ./addgr.bat

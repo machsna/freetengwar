@@ -1,0 +1,269 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005-2006 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+
+% The following higher level commands defined herein can be used in a program:
+%
+%   beginchr(s, width)               Begin a normal PostScript character, named s.
+%   beginrefchr(s, width)            Referenced character. Note: only setap and attach useful inside! No drawing.
+%   endchr                           End both beginchr and beginrefchr.
+%   setspace(width)                  To set the space character of the font, simply.
+%   setap(s, p)                      Define attachpoint named s at p in the current char.
+%   attach(psn, bapn, capn)          Attach PS character named psn to attachpoint bapn with attachpoint capn.
+%   combinechr(s,bcn,bapn,ccn,capn)  Shortcut to build simple referenced char.
+%   exit                             End project.
+
+tracingtitles:=1;
+boolean tracing; tracing=(mode=pixpt);
+
+un#:=1/2048em#; define_pixels(un);
+if tracing:
+  message "gd: table(glyph) { MUnits = 2048; PointRadius = 0m; }";
+  message "pe: New();";
+  message "pe: ScaleToEm(2048);";
+  message "pe: SelectAll();";
+  message "pe: Import($1+" & ditto & ".pk" & ditto & ");";
+  message "pe: LoadEncodingFile($1+" & ditto & ".enc" & ditto & ");";
+  message "pe: Reencode($1,1);";
+  message "pe: SetFontNames(" & ditto & font_ps_name & ditto & ",\"; % These should be defined.
+  message "pe:  " & ditto & font_name & ditto & ",\";
+  message "pe:  " & ditto & font_name & ditto & ",\";
+  message "pe:  " & ditto & font_weight & ditto & ",\";
+  message "pe:  " & ditto & font_copyright & ditto & ",\";
+  message "pe:  " & ditto & font_version & ditto & ");";
+fi
+
+numeric ps.n; ps.n:=0;    % Character counter
+string ps[].name;         % Postscript names of character
+picture ps[].pic;         % The bitmap picture (for gftodvi preview)
+numeric ps[].width;       % Width
+numeric ps[].ap.n;        % Attachment Point counter
+string ps[].ap[].name;    % Names of AP
+pair ps[].ap[].pt;        % The position of the AP
+boolean ps[].ap[].forgd;  % Whether the AP should be output to Graphite or not
+mf_char_c:=-1;            % Metafont character counter
+ref_char_c:=255;          % Reference character counter
+boolean isrefchar;
+boolean forgd; forgd:=true; % Output gdh-data?
+
+% Name lookup (return index)
+vardef ps.lu(expr s) =
+  save i; i:=0;
+  for j=1 upto ps.n:
+    if (ps[j].name = s): i:=j; fi
+  endfor
+  i
+enddef;
+
+% Lookup attachpoint name
+vardef first.ps[]@#=@ enddef;  % (See MFbook exercise 20.5)
+vardef ps[].ap.lu(expr s) =   
+  save i; i:=0;
+  for j=1 upto ps[first#@].ap.n:
+    if ps[first#@].ap[j].name = s: i:=j; fi
+  endfor
+  i
+enddef;
+
+def psc(expr psn) =           % A shortcut
+  ps[if string psn: ps.lu(psn) else: psn fi]
+enddef;
+
+def lastap = whatever enddef; % Ugly...
+def apt(expr psn, apn) =
+  psc(psn).ap[if unknown apn: psc(psn).ap.n elseif string apn: psc(psn).ap.lu(apn) else: apn fi]
+enddef;
+
+def padding(expr l, r) =
+  lpad:=l; rpad:=r; w:=w+l+r;
+  setap("lpad",(l,0)); apt(ps.n,lastap).forgd :=false;
+  setap("rpad",(w-r,0)); apt(ps.n,lastap).forgd :=false;
+enddef;
+
+def beginchr(expr s, width) =
+  isrefchar:=false;
+  initchr(s, incr mf_char_c, width);
+enddef;
+
+def beginrefchr(expr s, width) =
+  isrefchar:=true;
+  initchr(s, if not tracing: incr mf_char_c else: 0 fi, width);
+enddef;
+
+def initchr(expr s, m, width) =
+  if isrefchar and not tracing or not isrefchar:
+    beginchar(m, width/hppp, asc#, desc#);
+  else:
+    w:=width;
+    numeric x[],y[];
+  fi
+  ps[incr ps.n].name := s;
+  ps[ps.n].ap.n := 0;
+  setap("origo",(0,0));
+  apt(ps.n,lastap).forgd := false;
+  numeric a[], t; path p[], ap[];
+  if tracing and forgd:
+    message "gd: g_" & ps_to_gd(ps[ps.n].name) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
+  fi
+enddef;
+
+def endchr =
+  if tracing:
+    message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
+    if isrefchar:
+      message "pe: UnlinkReference(); RemoveOverlap();";
+    else:
+      message "pe: Autotrace(); AddExtrema(); Simplify(2,1); AddExtrema();";
+    fi
+  fi
+  ps[ps.n].width := w;
+  setap("right",(w,0));
+  apt(ps.n,lastap).forgd := false;
+  for i=1 upto psc(ps.n).ap.n:
+    if apt(ps.n,i).forgd:
+      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
+         & decimal round(ypart apt(ps.n,i).pt/un) & "m);"; fi
+      if not tracing: makelabel(apt(ps.n,i).name,apt(ps.n,i).pt); fi
+    else:
+      if not tracing: makelabel("("& apt(ps.n,i).name &")",apt(ps.n,i).pt); fi
+    fi
+  endfor
+  if not tracing:
+    cullit;
+    ps[ps.n].pic := currentpicture;
+    ps[ps.n].name;
+    proofrule((0,ex),(w,ex));
+  else:
+    if forgd: message "gd: };"; fi
+    message "pe: Print(" & ditto & "Done " & ps[ps.n].name & ditto & ");";
+    message "ec: " & ps[ps.n].name if isrefchar: & " [" & decimal(incr ref_char_c) & "]" fi;
+  fi
+  if isrefchar and not tracing or not isrefchar:
+    endchar;
+  fi
+enddef;
+
+numeric gdalias.n; gdalias.n := 0;
+string gdalias[].psname;
+string gdalias[].gdname;
+
+vardef gdalias.lu(expr s) =
+  save i; i:=0;
+  for j=1 upto gdalias.n:
+    if (gdalias[j].psname = s): i:=j; fi
+  endfor
+  i
+enddef;
+
+def setgdalias(expr psn, gdn) =
+  gdalias[incr gdalias.n].psname=psn;
+  gdalias[gdalias.n].gdname=gdn;
+enddef;
+
+def addalias(expr psn, gdn) =
+  scantokens ("string " & gdn); scantokens gdn=psn; setgdalias(psn,gdn);
+enddef;
+
+def addaliasvars(expr balias)(text vars) =
+  for i=vars:
+    addalias(scantokens balias & "." & i , balias & "_" & i);
+  endfor
+enddef;
+
+vardef ps_to_gd(expr s) =
+  save n,c,ss,sss; string c,ss,sss;
+  sss:=""; n=gdalias.lu(s);
+  ss = if n=0: s else: gdalias[n].gdname fi;
+  for i=0 upto length(ss)-1:
+    c:=substring(i,i+1) of ss;
+    if c=".": c:="_"; fi
+    sss:= sss & c;
+  endfor
+  sss
+enddef;
+
+def setspace(expr width) =
+%  font_normal_space width/hppp;
+  beginrefchr("space",width);
+    if tracing: message "gd:  break = BREAK_WHITESPACE;"; fi
+  endchr;
+enddef;
+
+def setap(expr s, p) =
+  ps[ps.n].ap.n:=ps[ps.n].ap.n+1;
+  apt(ps.n,lastap).name := s;
+  apt(ps.n,lastap).pt := p;
+  apt(ps.n,lastap).forgd :=true;
+enddef;
+
+def attach(expr psn, bapn, capn) =
+  pair vec;
+  vec=apt(ps.n,bapn).pt-apt(psn,capn).pt;
+  if psc(psn).ap.lu(bapn)=0: apt(ps.n,bapn).forgd:=false; fi
+  for i=1 upto psc(psn).ap.n:
+    j:=ps[ps.n].ap.lu(apt(psn,i).name);
+    if j=0:
+      setap(apt(psn,i).name,apt(psn,i).pt+vec);
+      if (apt(psn,i).name=capn) or (apt(psn,i).forgd=false): apt(ps.n,lastap).forgd:=false; fi
+    else:
+      if apt(psn,i).name=capn: 
+        if capn=bapn: apt(ps.n,j).forgd:=false; fi
+      else:
+        if (apt(psn,i).name=bapn) and not tracing: makelabel("",apt(ps.n,j).pt); fi
+        apt(ps.n,j).pt:=apt(psn,i).pt+vec;
+      fi
+    fi
+  endfor
+  if tracing:
+    message "pe: Select("& ditto & psn & ditto &"); CopyReference();";
+    message "pe: Select("& ditto & ps[ps.n].name & ditto &"); PasteWithOffset(" &
+         decimal round(xpart vec/un) & "," & decimal round(ypart vec/un) & ");";
+  else:
+    addto currentpicture also psc(psn).pic shifted vec;
+  fi
+enddef;
+
+def combinechr(expr s,bcn,bapn,ccn,capn) =
+  beginrefchr(s,psc(bcn).width);
+    attach(bcn,"origo","origo");
+    attach(ccn,bapn,capn);
+  endchr;
+enddef;
+
+def exit =
+  if tracing:
+    message "gd: endtable;"; message "";
+    message "pe: SelectAll(); Simplify(128,2);";
+    message "pe: Save($1+" & ditto & ".sfd" & ditto & ");";
+    message "pe: RoundToInt(); SetFontOrder(2);";
+    message "pe: Generate($1+" & ditto & ".ttf" & ditto & "," & ditto & ditto & ",152);";
+    message "pe: Quit(0);";
+    message "";
+  fi
+enddef;
+
+if tracing: message ""; fi
