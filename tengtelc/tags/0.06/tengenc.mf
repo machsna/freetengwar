@@ -1,0 +1,212 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005-2006 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+string tengcb; tengcb="uniE0";
+
+addalias(tengcb & "00","tinco");
+addalias(tengcb & "01","parma");
+addalias(tengcb & "02","calma");
+addalias(tengcb & "03","quesse");
+addalias(tengcb & "04","ando");
+addalias(tengcb & "05","umbar");
+addalias(tengcb & "06","anga");
+addalias(tengcb & "07","ungwe");
+addalias(tengcb & "08","thuule");
+addalias(tengcb & "09","formen");
+addalias(tengcb & "0A","harma");
+addalias(tengcb & "0B","hwesta");
+addalias(tengcb & "0C","anto");
+addalias(tengcb & "0D","ampa");
+addalias(tengcb & "0E","anca");
+addalias(tengcb & "0F","unque");
+
+addalias(tengcb & "10","nuumen");
+addalias(tengcb & "11","malta");
+addalias(tengcb & "12","noldo");
+addalias(tengcb & "13","nwalme");
+addalias(tengcb & "14","oore");
+addalias(tengcb & "15","vala");
+addalias(tengcb & "16","anna");
+addalias(tengcb & "17","vilya");
+addalias(tengcb & "18","extthuule");
+addalias(tengcb & "19","extformen");
+addalias(tengcb & "1A","extharma");
+addalias(tengcb & "1B","exthwesta");
+addalias(tengcb & "1C","extanto");
+addalias(tengcb & "1D","extampa");
+addalias(tengcb & "1E","extanca");
+addalias(tengcb & "1F","extunque");
+
+addalias(tengcb & "20","roomen");
+addalias(tengcb & "21","arda");
+addalias(tengcb & "22","lambe");
+addalias(tengcb & "23","alda");
+addalias(tengcb & "24","silme");
+addalias(tengcb & "25","silmenuq");
+addalias(tengcb & "26","aare");
+addalias(tengcb & "27","aarenuq");
+addalias(tengcb & "28","hyarmen");
+addalias(tengcb & "29","hwestasin");
+addalias(tengcb & "2A","yanta");
+addalias(tengcb & "2B","uure");
+addalias(tengcb & "2C","longcarr");
+addalias(tengcb & "2D","halla");
+addalias(tengcb & "2E","shortcarr");
+
+addalias(tengcb & "31","wtengwa");
+addalias(tengcb & "32","atengwa");
+addalias(tengcb & "34","conncarr");
+addalias(tengcb & "36","openanna");
+addalias(tengcb & "39","whtengwa");
+addalias(tengcb & "3A","mhtengwa");
+addalias(tengcb & "3B","beleriandicmh");
+addalias(tengcb & "3C","angwhtengwa");
+addalias(tengcb & "3D","vaiya");
+addalias(tengcb & "3E","sindarinytengwa");
+
+addalias(tengcb & "40","atehta");
+addalias(tengcb & "40.norm","atehta_norm");
+addalias(tengcb & "41","downatehta");
+addalias(tengcb & "41.norm","downatehta_norm");
+addalias(tengcb & "42","ytehta");
+addalias(tengcb & "42.norm","ytehta_norm");
+addalias(tengcb & "43","downytehta");
+addalias(tengcb & "43.norm","downytehta_norm");
+addalias(tengcb & "44","itehta");
+addalias(tengcb & "44.norm","itehta_norm");
+addalias(tengcb & "45","downitehta");
+addalias(tengcb & "45.norm","downitehta_norm");
+addalias(tengcb & "46","etehta");
+addalias(tengcb & "47","downetehta");
+addalias(tengcb & "49","dblunderstroke");
+addalias(tengcb & "4A","otehta");
+addalias(tengcb & "4B","downotehta");
+addalias(tengcb & "4C","utehta");
+addalias(tengcb & "4D","downutehta");
+
+addaliasvars("etehta","norm","double_norm");
+addaliasvars("downetehta","norm","double_norm");
+addaliasvars("dblunderstroke","norm");
+addaliasvars("otehta","norm","wide","narrow","double_norm","double_wide","double_narrow");
+addaliasvars("downotehta","norm");
+addaliasvars("utehta","norm","double_norm");
+addaliasvars("downutehta","norm","narrow","wide","long");
+
+addalias(tengcb & "50","overbar");
+addalias(tengcb & "51","underbar");
+addalias(tengcb & "52","wtehta");
+addalias(tengcb & "53","engytehta");
+addalias(tengcb & "54","revetehta");
+addalias(tengcb & "55","yantatehta");
+addalias(tengcb & "56","invatehta");
+addalias(tengcb & "57","longcarrtehta");
+addalias(tengcb & "58","shook");
+addalias(tengcb & "59","shooktehta");
+
+addaliasvars("overbar","norm","wide","lambe","silme");
+addaliasvars("underbar","norm","wide","roomen","lambe","silme");
+addaliasvars("wtehta","norm","wide","narrow");
+addaliasvars("engytehta","norm","wide");
+addaliasvars("revetehta","norm");
+addaliasvars("yantatehta","norm");
+addaliasvars("invatehta","norm");
+addaliasvars("longcarrtehta","norm","lambe");
+addaliasvars("shooktehta","norm");
+
+addalias(harma & "_" & tinco,"ichtligature");
+addalias(hwesta & "_" & tinco,"achtligature");
+
+addalias(tengcb & "60","tenginterpone");
+addalias(tengcb & "61","tenginterptwo");
+addalias(tengcb & "62","tenginterpthree");
+addalias(tengcb & "63","tenginterpfour");
+addalias(tengcb & "64","tenginterpfive");
+addalias(tengcb & "65","tengexlam");
+addalias(tengcb & "66","tenginterrog");
+addalias(tengcb & "67","tengparen");
+addalias(tengcb & "68","tengtilde");
+addalias(tengcb & "69","tengdbltilde");
+
+addaliasvars("tinco", "conr","conl","conb","cap","lig");
+addaliasvars("parma", "conr","conl","conb","cap");
+addaliasvars("calma", "conr",              "cap");
+addaliasvars("quesse","conr","conl","conb","cap");
+addaliasvars("ando",  "conr","conl","conb","cap");
+addaliasvars("umbar", "conr","conl","conb","cap");
+addaliasvars("anga",  "conr",              "cap");
+addaliasvars("ungwe", "conr","conl","conb","cap");
+addaliasvars("thuule","conr",              "cap");
+addaliasvars("formen","conr",              "cap");
+addaliasvars("harma", "conr",              "cap");
+addaliasvars("hwesta","conr","conl","conb","cap");
+addaliasvars("anto",  "conr",              "cap");
+addaliasvars("ampa",  "conr",              "cap");
+addaliasvars("anca",  "conr",              "cap");
+addaliasvars("unque", "conr","conl","conb","cap");
+addaliasvars("nuumen","conr","conl","conb","cap");
+addaliasvars("malta", "conr","conl","conb","cap");
+addaliasvars("noldo", "conr",              "cap");
+addaliasvars("nwalme","conr","conl","conb","cap");
+addaliasvars("oore",  "conr","conl","conb","cap");
+addaliasvars("vala",  "conr","conl","conb","cap");
+addaliasvars("anna",  "conr",              "cap");
+addaliasvars("vilya", "conr","conl","conb","cap");
+
+addaliasvars("extthuule","conr",              "cap");
+addaliasvars("extformen","conr",              "cap");
+addaliasvars("extharma",                      "cap");
+addaliasvars("exthwesta",       "conl",       "cap");
+addaliasvars("extanto",  "conr",              "cap");
+addaliasvars("extampa",  "conr",              "cap");
+addaliasvars("extanca",                       "cap");
+addaliasvars("extunque",        "conl",       "cap");
+
+addaliasvars("roomen",          "conl",       "cap","open","conl_open");
+addaliasvars("arda",            "conl",       "cap","open","conl_open");
+addaliasvars("lambe",    "conr","conl","conb","cap");
+addaliasvars("alda",     "conr","conl","conb","cap");
+addaliasvars("silme",                         "cap","open","flat","lig","lig_open","lig_flat","lig_harma");
+addaliasvars("silmenuq",                      "cap","open","flat");
+addaliasvars("aare",                          "cap","open","flat");
+addaliasvars("aarenuq",                       "cap","open","flat");
+addaliasvars("hyarmen","cap");
+addaliasvars("hwestasin","cap");
+addaliasvars("yanta","cap");
+addaliasvars("uure","cap");
+addaliasvars("longcarr","conl","cap");
+addaliasvars("halla","cap");
+addaliasvars("shortcarr","conr","conl","conb","cap");
+
+addaliasvars("wtengwa","desc");
+addaliasvars("atengwa","desc","cap");
+addaliasvars("conncarr","conr");
+addaliasvars("openanna","conl","cap");
+addaliasvars("mhtengwa","cap");
+addaliasvars("beleriandicmh","cap");
+addaliasvars("shook","high");
+
+

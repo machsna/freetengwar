@@ -1,0 +1,98 @@
+// Tengwar Telcontar - a Tengwar unicode typeface.
+// Copyright (C) 2005-2006 Johan Winge
+// 
+// Tengwar Telcontar is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation; either version 2 of the
+// License, or (at your option) any later version.
+// 
+// As a special exception, if you create a document which uses this
+// font, and embed this font or unaltered portions of this font into
+// the document, this font does not by itself cause the resulting
+// document to be covered by the GNU General Public License. This
+// exception does not however invalidate any other reasons why the
+// document might be covered by the GNU General Public License. If you
+// modify this font, you may extend this exception to your version of
+// the font, but you are not obligated to do so. If you do not wish to
+// do so, delete this exception statement from your version.
+// 
+// Tengwar Telcontar is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with Tengwar Telcontar; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+table(glyph)
+  c_latmayconr=(g_f,g_f_conl,g_g,g_t,g_t_conl);
+  c_latconr   =(g_f,g_f_conl,g_g,g_t,g_t_conl);
+  c_latmayconl=(g_f,     g_i,     g_dotlessi,     g_j,     g_dotlessj,     g_m,     g_n,     g_p,     g_r,     g_t,     g_u,     g_v,     g_w,     g_x,     g_y,     g_z);
+  c_latconl   =(g_f_conl,g_i_conl,g_dotlessi_conl,g_j_conl,g_dotlessj_conl,g_m_conl,g_n_conl,g_p_conl,g_r_conl,g_t_conl,g_u_conl,g_v_conl,g_w_conl,g_x_conl,g_y_conl,g_z_conl);
+
+  c_lathighconr=(g_f,g_f_conl,g_longs,g_F);
+  c_latmayhighconl=(g_b,     g_h,     g_k,     g_l);
+  c_lathighconl   =(g_b_conl,g_h_conl,g_k_conl,g_l_conl);
+
+  c_latmaydotligr=(g_f,       g_f_conl);
+  c_latdotligr   =(g_f_dotlig,g_f_conl_dotlig);
+  c_latmaydotligl=(g_i_conl,       g_j_conl);
+  c_latdotligl   =(g_dotlessi_conl,g_dotlessj_conl);
+
+  c_isoldiac=(g_uni0307,g_uni0308,g_uni030A);
+  c_diac=(g_uni0307_normal,g_uni0308_normal,g_uni030A_normal);
+  c_diacbase=(g_o,g_i,g_dotlessi,g_dottedcircle,g_dotlessi_conl,g_a,g_e,g_u,g_u_conl);
+
+endtable;
+
+table(feature)
+  latconnect {
+    id=101;
+    name.LG_USENG = string("Connect Latin");
+    default = true;
+  }
+  roundr {
+    id=102;
+    name.LG_USENG = string("Round r");
+    default = round;
+    settings {
+      no { value=0; name.LG_USENG = string("Never"); }
+      onlyo { value=1; name.LG_USENG = string("After o only"); }
+      round { value=2; name.LG_USENG = string("After b, o, p"); }
+      all { value=3; name.LG_USENG = string("Always"); }
+    }
+  }
+endtable;
+
+table(sub)
+  pass(1)
+    c_isoldiac > c_diac / c_diacbase _ ;
+    if (roundr==onlyo)
+      g_r > g_r_round / g_o _ ;
+    elseif (roundr==round)
+      g_r > g_r_round / (g_b,g_o,g_p) _ ;
+    elseif (roundr==all)
+      g_r > g_r_round ;
+    endif;
+//  endpass;
+//  pass(2)
+    if (latconnect)
+      c_latmayconr c_latmayconl > c_latconr c_latconl / _ ^ _ ;
+    endif;
+    c_latmayhighconl > c_lathighconl / c_lathighconr _ ;
+//  endpass;
+//  pass(3)
+    c_latmaydotligr c_latmaydotligl > c_latdotligr c_latdotligl / _ ^ _ ;
+  endpass;
+endtable;
+
+table(pos)
+  pass(1)
+    c_diacbase (c_diac,g_uni0308_narrow) { attach{ to=@1; at=uap; with=dap }; insert=false;} / _ ^ _;
+    g_t g_a {kern.x = +50m};
+    g_v g_a {kern.x = -110m};
+    (g_w,g_w_conl) g_a {kern.x = -110m};
+    g_T g_e {kern.x = -160m};
+  endpass;
+endtable;
