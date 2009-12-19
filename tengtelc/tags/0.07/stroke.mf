@@ -1,0 +1,148 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005-2006 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+tetexbugtest=xpart point 3 of makepath (pencircle xscaled 3 yscaled 2.999 rotated 45);
+if tetexbugtest = 0.5:
+  % All is well.
+  def use(expr a) =
+    pickup pencircle xscaled tecil_w yscaled tecil_h rotated a
+  enddef;
+elseif tetexbugtest = 1:
+  message "It seems like your copy of METAFONT produces unsatisfactory rotated elliptical";
+  message "pens. As of this writing, the reason for this is unknown to me, but I do know";
+  message "that it will result in a distorted rendering of many of your fonts. Not this";
+  message "one, however, because I will now rotate the pens after they have been converted";
+  message "from 'future pen' to 'pen'. This will not produce the optimal output, but it";
+  message "avoids the heavily distorted pens your system would otherwise create.";
+  def use(expr a) =
+    pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
+  enddef;
+else:
+  message "This shouldn't happen. Please mail me at johan.winge@home.se and tell me as";
+  message "much as possible about your TeX system. Also please tell me what number you";
+  message "see here: " & decimal tetexbugtest;
+  def use(expr a) =
+    pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
+  enddef;
+fi
+
+vardef penangle expr t of p =
+  ypart point t of p
+enddef;
+
+secondarydef p heighttimes y =
+  ypart(((-infinity,y)..(infinity,y)) intersectiontimes p)
+enddef;
+
+% Convert an angle expression to a regular path. This is neat!
+% An example of an angle expression: p & 45..40..35 & q..40--30
+% Here p and q should be angle paths, i.e. created from angle
+% expressions. Example: p=ang(30..45); q=ang(35--40..42..45);
+% An angle path works just as a regular path, but only vertical
+% coordinates are defined by the user. The nodes are automatically
+% spaced horizontally with the interval angledx:
+angledx=50;
+def msp = ,"to", enddef;
+def mlp = ,"{curl1} to {curl1}", enddef;
+def mcp = ,"conc hide(n:=n-1;)", enddef;
+def ang(text s) = begingroup
+  save to, conc, n; let to := .. ; let conc := & ; n:=-1;
+  save .. , -- , & ; let .. := msp; let -- := mlp; let & := mcp;
+  for i=s:
+    if path i or pair i:
+      i shifted (incr n*angledx,0)
+      hide(n:=n+length i;)
+    elseif string i:
+      scantokens i
+    elseif numeric i:
+      (incr n*angledx,i)
+    fi
+  endfor
+endgroup enddef;
+
+vardef stretch(expr l, p)=
+  ang(penangle 0 of p for i=1 upto l:..penangle length p*i/l of p endfor)
+enddef;
+
+treshold=if tracing: 0.15 else: 1.0 fi;
+def draw_stroke(expr stroke, angles) = begingroup
+  def draw_substroke(expr t, tt) =
+    v:=penangle t of angles;
+    if (abs(v-penangle tt of angles)<treshold):
+      use(v); draw subpath (t,tt) of stroke;
+%      drawdot point t of stroke;
+    else:
+      draw_substroke(t,(t+tt)/2);
+      draw_substroke((t+tt)/2,tt);
+    fi
+  enddef;
+%  pickup pencircle scaled 0.01pt; draw angles shifted (0,-100);
+  save v,t,tt,a,b,len; t:=0; len=length stroke;
+  if (length angles<>len): message "Warning! Stroke and angle path should be of equal length."; fi
+  forever:
+    tt:=directiontime right of subpath (t,infinity) of angles;
+    if tt=-1:
+      tt:=len;
+    elseif tt<=epsilon:
+      a:=xpart (angles intersectiontimes ((point t of angles)+(0,treshold)--(point t of angles)+(infinity,treshold)));
+      b:=xpart (angles intersectiontimes ((point t of angles)+(0,-treshold)--(point t of angles)+(infinity,-treshold)));
+      tt:=if (a+b=-2): len elseif (a*b<=0): max(a,b) else: min(a,b) fi;
+    else:
+      tt:=floor t+tt if tt<1:[t-floor t,1]fi;
+    fi
+    draw_substroke(t,tt);
+    exitif(tt>=len);
+    t:=tt;
+  endfor
+endgroup enddef;
+
+def arc(expr sang,eang,centrum,diameter) =
+  (subpath(xpart(fullcircle intersectiontimes ((0,0)..(1pt,0) rotated sang))+(sang-(sang mod 360))/45,%
+           xpart(fullcircle intersectiontimes ((0,0)..(1pt,0) rotated eang))+(eang-(eang mod 360))/45)%
+   of fullcircle) scaled diameter shifted centrum;
+enddef;
+
+% Fill a circle sector to simulate that the pen's angle has changed
+% by holding one corner of the nib fixed. Returns endpoint.
+boolean draw_change_of_angle; draw_change_of_angle:=true;
+vardef change_angle(expr spt, sang, eang) =
+  save p,c; path p; pair c;
+  c=spt-1/2tecil_w*dir sang;
+  if (abs(sang-eang)>1) and draw_change_of_angle:
+    p=arc(sang,eang,c,2tecil_w);
+    fill c--p--cycle; 
+  fi
+  draw_change_of_angle:=true;
+  c+1/2tecil_w*dir eang
+enddef;
+
+string pausedummy;
+def pause =
+  if not tracing: message "Press Enter to continue."; pausedummy:=readstring; fi
+enddef;
+
+input serif;
