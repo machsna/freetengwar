@@ -1,5 +1,5 @@
 Tengwar Telcontar - a unicode Tengwar typeface.
-Copyright (C) 2005-2007 Johan Winge
+Copyright (C) 2005-2009 Johan Winge
 
 This file contains some very basic information on the structure of the tengtelc source files; in case you want to make modifications, this might help a little at least.
 
@@ -13,7 +13,7 @@ The generated script foo.pe traces the previously generated metafont bitmap font
 
 The script mf2ttf.py is run on latinr.mf and tengwarr.mf, which are the base files for the latin and tengwar scripts. One font file for each script is generated, and finally, latinr.ttf and tengwarr.ttf are compiled into one font file, and Graphite tables are added to it.
 
-The following trees show which the which files are called from which:
+The following trees show which files are called from which:
 
 compile
  |- "mf2ttf.py latinr"

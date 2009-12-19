@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2007 Johan Winge
+%% Copyright (C) 2005-2009 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -76,17 +76,23 @@ addalias(tengcb & "2B","uure");
 addalias(tengcb & "2C","longcarr");
 addalias(tengcb & "2D","halla");
 addalias(tengcb & "2E","shortcarr");
+addalias(tengcb & "2F","extendedtelco");
 
+addalias(tengcb & "30","mirroredosse");
 addalias(tengcb & "31","wtengwa");
 addalias(tengcb & "32","atengwa");
 addalias(tengcb & "34","conncarr");
 addalias(tengcb & "36","openanna");
+addalias(tengcb & "37","prefeanoreanqu");
+   addalias(tengcb & "37.var","prefeanoreanqu_var");
 addalias(tengcb & "39","whtengwa");
+   addalias(tengcb & "39.var1","whtengwa_varone");
+   addalias(tengcb & "39.var2","whtengwa_vartwo");
+   addalias(tengcb & "39.var3","whtengwa_varthree");
 addalias(tengcb & "3A","mhtengwa");
 addalias(tengcb & "3B","beleriandicmh");
 addalias(tengcb & "3C","angwhtengwa");
 addalias(tengcb & "3D","vaiya");
-% addalias(tengcb & "3E","sindarinytengwa");
 
 addalias(tengcb & "40","atehta");
 addalias(tengcb & "40.norm","atehta_norm");
@@ -123,9 +129,10 @@ addalias(tengcb & "53","engytehta");
 addalias(tengcb & "54","revetehta");
 addalias(tengcb & "55","yantatehta");
 addalias(tengcb & "56","invatehta");
-addalias(tengcb & "57","longcarrtehta");
+addalias(tengcb & "57","thinnas");
 addalias(tengcb & "58","shook");
 addalias(tengcb & "59","shooktehta");
+addalias(tengcb & "5A","dotinside");
 
 addaliasvars("overbar","norm","wide","lambe","silme");
 addaliasvars("underbar","norm","wide","roomen","lambe","silme");
@@ -134,8 +141,9 @@ addaliasvars("engytehta","norm","wide");
 addaliasvars("revetehta","norm");
 addaliasvars("yantatehta","norm");
 addaliasvars("invatehta","norm");
-addaliasvars("longcarrtehta","norm","lambe");
+addaliasvars("thinnas","norm");
 addaliasvars("shooktehta","norm");
+addaliasvars("dotinside","norm","conu","cond");
 
 % addalias(harma & "_" & tinco,"ichtligature");
 % addalias(hwesta & "_" & tinco,"achtligature");
@@ -150,63 +158,69 @@ addalias(tengcb & "66","tenginterrog");
 addalias(tengcb & "67","tengparen");
 addalias(tengcb & "68","tengtilde");
 addalias(tengcb & "69","tengdbltilde");
+addalias(tengcb & "6A","startmodechange");
+addalias(tengcb & "6B","endmodechange");
+addalias(tengcb & "6C","bilboexclam");
 
-addaliasvars("tinco", "conr","conl","conb","cap","lig");
-addaliasvars("parma", "conr","conl","conb","cap");
-addaliasvars("calma", "conr",              "cap");
-addaliasvars("quesse","conr","conl","conb","cap");
-addaliasvars("ando",  "conr","conl","conb","cap");
-addaliasvars("umbar", "conr","conl","conb","cap");
-addaliasvars("anga",  "conr",              "cap");
-addaliasvars("ungwe", "conr","conl","conb","cap");
-addaliasvars("thuule","conr",              "cap");
-addaliasvars("formen","conr",              "cap");
-addaliasvars("harma", "conr",              "cap");
-addaliasvars("hwesta","conr","conl","conb","cap");
-addaliasvars("anto",  "conr",              "cap");
-addaliasvars("ampa",  "conr",              "cap");
-addaliasvars("anca",  "conr",              "cap");
-addaliasvars("unque", "conr","conl","conb","cap");
-addaliasvars("nuumen","conr","conl","conb","cap");
-addaliasvars("malta", "conr","conl","conb","cap");
-addaliasvars("noldo", "conr",              "cap","conrbot");
-addaliasvars("nwalme","conr","conl","conb","cap","conrbot","conbbot");
-addaliasvars("oore",  "conr","conl","conb","cap");
-addaliasvars("vala",  "conr","conl","conb","cap");
-addaliasvars("anna",  "conr",              "cap","conrbot");
-addaliasvars("vilya", "conr","conl","conb","cap","conrbot","conbbot");
+addaliasvars("tinco", "conr","conl","conb","dec","lig");
+addaliasvars("parma", "conr","conl","conb","dec");
+addaliasvars("calma", "conr",              "dec");
+addaliasvars("quesse","conr","conl","conb","dec");
+addaliasvars("ando",  "conr","conl","conb","dec");
+addaliasvars("umbar", "conr","conl","conb","dec");
+addaliasvars("anga",  "conr",              "dec");
+addaliasvars("ungwe", "conr","conl","conb","dec");
+addaliasvars("thuule","conr",              "dec");
+addaliasvars("formen","conr",              "dec");
+addaliasvars("harma", "conr",              "dec");
+addaliasvars("hwesta","conr","conl","conb","dec");
+addaliasvars("anto",  "conr",              "dec");
+addaliasvars("ampa",  "conr",              "dec");
+addaliasvars("anca",  "conr",              "dec");
+addaliasvars("unque", "conr","conl","conb","dec");
+addaliasvars("nuumen","conr","conl","conb","dec");
+addaliasvars("malta", "conr","conl","conb","dec");
+addaliasvars("noldo", "conr",              "dec","conrbot");
+addaliasvars("nwalme","conr","conl","conb","dec","conrbot","conbbot");
+addaliasvars("oore",  "conr","conl","conb","dec");
+addaliasvars("vala",  "conr","conl","conb","dec");
+addaliasvars("anna",  "conr",              "dec","conrbot");
+addaliasvars("vilya", "conr","conl","conb","dec","conrbot","conbbot");
 
-addaliasvars("extthuule","conr",              "cap");
-addaliasvars("extformen","conr",              "cap");
-addaliasvars("extharma",                      "cap");
-addaliasvars("exthwesta",       "conl",       "cap");
-addaliasvars("extanto",  "conr",              "cap");
-addaliasvars("extampa",  "conr",              "cap");
-addaliasvars("extanca",                       "cap");
-addaliasvars("extunque",        "conl",       "cap");
+addaliasvars("extthuule","conr",              "dec");
+addaliasvars("extformen","conr",              "dec");
+addaliasvars("extharma",                      "dec");
+addaliasvars("exthwesta",       "conl",       "dec");
+addaliasvars("extanto",  "conr",              "dec");
+addaliasvars("extampa",  "conr",              "dec");
+addaliasvars("extanca",                       "dec");
+addaliasvars("extunque",        "conl",       "dec");
 
-addaliasvars("roomen",          "conl",       "cap","open","conl_open");
-addaliasvars("arda",            "conl",       "cap","open","conl_open");
-addaliasvars("lambe",    "conr","conl","conb","cap","conrbot","conbbot");
-addaliasvars("alda",     "conr","conl","conb","cap");
-addaliasvars("silme", "cap","open","flat","lig","lig_open","lig_flat","lig_harma");
-addaliasvars("silmenuq",                      "cap","open","flat");
-addaliasvars("aare",                          "cap","open","flat");
-addaliasvars("aarenuq",                       "cap","open","flat");
-addaliasvars("hyarmen","cap","conr");
-addaliasvars("hwestasin","cap","conr");
-addaliasvars("yanta","cap","conr");
-addaliasvars("uure","cap","conr");
-addaliasvars("longcarr","conl","cap");
-addaliasvars("halla","cap");
-addaliasvars("shortcarr","conr","conl","conb","cap");
+addaliasvars("roomen",          "conl",       "dec","open","conl_open");
+addaliasvars("arda",            "conl",       "dec","open","conl_open");
+addaliasvars("lambe",    "conr","conl","conb","dec","conrbot","conbbot");
+addaliasvars("alda",     "conr","conl","conb","dec");
+addaliasvars("silme", "dec","open","flat","lig","lig_open","lig_flat","lig_harma");
+addaliasvars("silmenuq",                      "dec","open","flat");
+addaliasvars("aare",                          "dec","open","flat");
+addaliasvars("aarenuq",                       "dec","open","flat");
+addaliasvars("hyarmen","dec","conr");
+addaliasvars("hwestasin","dec","conr");
+addaliasvars("yanta","dec","conr");
+addaliasvars("uure","dec","conr");
+addaliasvars("longcarr","conl","dec");
+addalias(longcarr & ".tehta","longcarrtehta");
+addalias(longcarr & ".lig","longcarrtehta_norm");
+addalias(longcarr & ".lig_lambe","longcarrtehta_lambe");
+addaliasvars("halla","dec");
+addaliasvars("shortcarr","conr","conl","conb","dec");
 
 addaliasvars("wtengwa","desc","conr");
-addaliasvars("atengwa","desc","cap");
-addaliasvars("conncarr","conr");
-addaliasvars("openanna","conl","cap");
-addaliasvars("mhtengwa","cap");
-addaliasvars("beleriandicmh","cap");
+addaliasvars("atengwa","desc","dec");
+addaliasvars("conncarr","long","conr");
+addaliasvars("openanna","conl","dec");
+addaliasvars("mhtengwa","dec");
+addaliasvars("beleriandicmh","dec");
 addaliasvars("shook","high");
 
 
