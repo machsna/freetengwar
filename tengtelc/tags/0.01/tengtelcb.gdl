@@ -1,0 +1,13 @@
+// Tengwar Telcontar - a Tengwar unicode typeface.
+// Copyright (C) 2005 Johan Winge
+
+#include "stddef.gdh"
+#define ps postscript
+
+AutoPseudo=0; // ?
+
+#include "latinb.gdh"
+#include "tengwarb.gdh"
+
+#include "latin.gdh"
+#include "tengwar.gdh"
