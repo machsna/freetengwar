@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2006 Johan Winge
+%% Copyright (C) 2005-2007 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -27,93 +27,84 @@
 
 numeric luuvbardiff[];
 
-def draw_telco(expr sy,ey,sorn,eorn) =
-  padding(1.0pt,1.0pt);
-  z1=(1/2(lpad+w-rpad),sy); z2=(x1,ey);
-  ap1=ornang(sorn,eorn);
-  p1=ornpath(sorn,eorn)(1,2);
-  draw_stroke(p1,ap1);
-  z3=find_telcoap(conpoint3,conpenangle3,180,p1,ap1);
-  z4=find_telcoap(conpoint4,conpenangle4,0,p1,ap1);
-  setap("lluuvap",z3);
-  setap("lbarap",z4);
-  z5=find_telcoap(conpoint5,conpenangle5,0,p1,ap1);
-  z6=find_telcoap(conpoint6,conpenangle6,180,p1,ap1);
-  setap("rluuvap",z5);
-  setap("rbarap",z6);
-enddef;
-
-def new_draw_telco(expr side, type, conn) =
-  lp:= if (side=carrier) or (side=leftside) and (conn=normal) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi;
-  rp:= if (side=carrier): 1.1pt else: 1.0pt fi;
+def draw_telco(expr side, type, conn) =
+  lp:= if (side=carrier): 1.3pt elseif (side=leftside) and (conn=normal) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi;
+  rp:= if ((side=rightside) and ((type=descend) or (type=short))): 0.9pt else: if (side=carrier): 1.1pt else: 1.0pt fi fi;
   padding(lp,rp);
 
-  x1=x2=1/2(lpad+w-rpad);
-  y1=if (type=short) or (type=descend): tex else: tasc fi;
-  y2=if (type=short) or (type=ascend): if side=rightside: 0 else: -o fi else: -tdesc fi;
-
   if (side=leftside) or (side=carrier):
-%    if conn=normal:
-      a1-3=a2+1=a3+5=a4+10=35;
-%    elseif conn=conleft:
-%      a1-3=a2+1=a3+5=a4+10=35;
-%    fi
+     if type=ascend:
+       a1-3=a2+1=a3+8=a4+10=a5+10=35;
+     elseif type=descend:
+       a1-3=a2+1=a3+5=a4+5=a5+5=35;
+     elseif type=short:
+      a1-3=a2+1=a3+5=a4+8=a5+10=35;
+     elseif type=extended:
+      a1-3=a2+1=a3+8=a4+10=a5=35;
+     fi
   elseif side=rightside:
      if type=ascend:
-       a1-6=a2-1=a3+2=a4-6=35;
+%       a1-6=a2-1=a3+2=a4-6=35;
+       a1-6=a2-1=a3+2=a4-6=a5=35;
      elseif type=descend:
-       a1+9=a2-1=a3+2=a4+9=35;
+%       a1+9=a2-1=a3+2=a4+9=35;
+       a0+8=a1+8=a2-2=a3+5=a4+5=a5+5=35;
      elseif type=short:
-       a1+9=a2+4=a3+1=a4-3=35;
+%       a1+9=a2+4=a3+1=a4-3=35;
+       a0+8=a1+8=a2+4=a3+1=a4-3=a5=35;
      elseif type=extended:
-       a1-3=a2+1=a3+5=a4+10=35;
+%       a1-3=a2+1=a3+5=a4+10=35;
+       a1-3=a2+1=a3+8=a4+10=a5=35;
      fi
   fi
 
-  ap1=ang(a1..a2..a3..a4);
+  if (side=rightside) and ((type=descend) or (type=short)):
+    ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
+  else:
+    ap1=ang(a1..a2..a3..a4..a5..a3);
+  fi
+
+%%  Due to the varying width of the stem, they often seem to lean backwards.
+%%  I'm not sure this is what I want... This corrects it anyhow:
+%  if ((side=rightside) and ((type=descend) or (type=short))):
+    use(a2); z10=rt(0,0);
+    use(a3); z11=rt(0,0);
+    x1+x2=lpad+w-rpad;
+    x1-x2=0.5*xpart(z11-z10);
+%  else:
+%    x1=x2=1/2(lpad+w-rpad);
+%  fi
+
+  y1=if (type=short) or (type=descend): tex else: tasc fi;
+  y2=if (type=short) or (type=ascend): if side=rightside: 0 else: -o fi else: -tdesc fi;
 
   if side=leftside:
     if conn=normal:
       if type=descend:
-        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
+        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=ascend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=short:
-        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
+%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=extended:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
     elseif conn=conleft:
       if type=descend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=short:
-        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-      fi
-    fi
-  elseif side=carrier:
-    if conn=normal:
-      if type=descend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-      elseif type=ascend: % Halla
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
-      elseif type=short:
-        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-      fi
-    elseif conn=conleft:
-      if type=descend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-      elseif type=short:
-        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-      fi
-    elseif conn=conright:
-      if type=ascend: % Halla
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
-      elseif type=short:
-        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-      fi
-    elseif conn=conboth:
-      if type=short:
-        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.6pt,25,ap1);
       fi
     fi
   elseif side=rightside:
@@ -121,11 +112,15 @@ def new_draw_telco(expr side, type, conn) =
       if type=ascend:
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 180, 0, ap1);
       elseif type=descend:
-        p1=topserif(1,2)(0.3pt, 0.5tex, 20+180, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%%        p1=topserif(1,2)(0.3pt, 0.5tex, 20+180, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%        p1=topserif(1,2)(0.15pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       elseif type=short:
-        p1=topserif(1,2)(0.3pt, 0.3tex, 20+180, 0, ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
+%        p1=topserif(1,2)(0.15pt, 0.3tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
       elseif type=extended:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       fi
 %    elseif conn=conright:
 %      if type=ascend:
@@ -134,154 +129,183 @@ def new_draw_telco(expr side, type, conn) =
 %      elseif type=extended:
 %      fi
 %    fi
+  elseif side=carrier:
+    if conn=normal:
+      if type=descend:
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
+      elseif type=ascend: % Halla
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      elseif type=short:
+%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      fi
+    elseif conn=conleft:
+      if type=descend:
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
+      elseif type=short:
+%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      fi
+    elseif conn=conright:
+      if type=ascend: % Halla
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+      elseif type=short:
+%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      fi
+    elseif conn=conboth:
+      if type=short:
+%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      fi
+    fi
   fi
 
   if (conn=conleft) or (conn=conboth):
     draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
   fi
-  if (conn=conright) or (conn=conboth):
-    if (type=descend) or (type=short) and (side=rightside):
-      draw_stroke((w,0)+conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
-    else:
+%  if (conn=conright) or (conn=conboth) or (conn=conrbot):
+%    if (type=descend) or (type=short) and (side=rightside):
+%      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
+%    else:
+%      draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
+%    fi
+%  fi
+
+  if (conn=conright) or (conn=conboth) or (conn=conrbot):
+    if (type=descend) or (type=short) and (side=rightside) and ((conn=conright) or (conn=conboth)):
+      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
+    elseif (conn=conrbot):
       draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
+    else: % Carrier
+      draw_stroke((conpoint11+(w,0)){left}...point 4 of p1,ang(conpenangle11--penangle 4 of ap1));
     fi
   fi
 
-  draw_stroke(p1,ap1);
+
+
+  draw_stroke(p1,subpath (0,length p1) of ap1);
+
+  if (side=rightside) and ((type=descend) or (type=short)):
+    p2=subpath(1,infinity) of p1;
+  else:
+    p2=p1;
+  fi
 
   z3=find_telcoap(conpoint3,conpenangle3,180,p1,ap1);
   z4=find_telcoap(conpoint4,conpenangle4,0,p1,ap1);
   setap("lluuvap",z3);
   setap("lbarap",z4);
   z5=find_telcoap(conpoint5,conpenangle5,0,p1,ap1);
-  z6=find_telcoap(conpoint6,conpenangle6,180,p1,ap1);
+  if (side=rightside) and ((type=descend) or (type=short)):
+    z6=(x1,ypart conpoint6);
+  else:
+    z6=find_telcoap(conpoint6,conpenangle6,180,p1,ap1);
+  fi
   setap("rluuvap",z5);
   setap("rbarap",z6);
 enddef;
 
 beginchr("telco_leftdown",0);
-%  draw_telco(tex,-tdesc,rounded,curved);
-  new_draw_telco(leftside, descend, normal);
+  draw_telco(leftside, descend, normal);
   luuvbardiff1:=xpart(z3-z4);
 endchr;
-beginchr("telco_leftdown_conl",0);
-%  draw_telco(tex,-tdesc,widecon,curved);
-%  draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
-  new_draw_telco(leftside, descend, conleft);
-endchr;
 pause;
+beginchr("telco_leftdown_conl",0);
+  draw_telco(leftside, descend, conleft);
+endchr;
 beginchr("telco_leftup",0);
-%  draw_telco(tasc,-o,rounded,curved);
-  new_draw_telco(leftside, ascend, normal);
+  draw_telco(leftside, ascend, normal);
   luuvbardiff2:=xpart(z3-z4);
 endchr;
-pause;
 beginchr("telco_leftshort",0);
-%  draw_telco(tex,-o,rounded,curved);
-  new_draw_telco(leftside, short, normal);
+  draw_telco(leftside, short, normal);
   luuvbardiff2:=luuvbardiff2+xpart(z3-z4);
 endchr;
-pause;
 beginchr("telco_leftshort_conl",0);
-%  draw_telco(tex,-o,widecon,curved);
-%  draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
-  new_draw_telco(leftside, short, conleft);
+  draw_telco(leftside, short, conleft);
 endchr;
-%beginchr("telco_leftshort_conr",0);
-%  draw_telco(tex,-o,rounded,curved);
-%  draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
-%endchr;
-%beginchr("telco_leftshort_conb",0);
-%  draw_telco(tex,-o,widecon,curved);
-%  draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
-%  draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
-%endchr;
 beginchr("telco_leftext",0);
-%  draw_telco(tasc,-tdesc,rounded,curved);
-  new_draw_telco(leftside, extended, normal);
+  draw_telco(leftside, extended, normal);
 endchr;
-pause;
 
 
 beginchr(longcarr,0);
-  new_draw_telco(carrier, descend, normal);
+  draw_telco(carrier, descend, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-tdesc-apy));
+  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
 endchr;
 beginchr(longcarr_conl,0);
-  new_draw_telco(carrier, descend, conleft);
+  draw_telco(carrier, descend, conleft);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-tdesc-apy));
+  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
 endchr;
 
 beginchr(halla,0);
-  new_draw_telco(carrier, ascend, normal);
+  draw_telco(carrier, ascend, normal);
   setap("uap",(0.5[x1b,x1a],tasc+apy));
-  setap("dap",(0.5[x2b,x2a],-apy));
+  setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 
 beginchr(shortcarr,0);
-  new_draw_telco(carrier, short, normal);
+  draw_telco(carrier, short, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-apy));
+  setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
+pause;
 beginchr(shortcarr_conl,0);
-  new_draw_telco(carrier, short, conleft);
+  draw_telco(carrier, short, conleft);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-apy));
+  setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 beginchr(shortcarr_conr,0);
-  new_draw_telco(carrier, short, conright);
+  draw_telco(carrier, short, conright);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-apy));
+  setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 beginchr(shortcarr_conb,0);
-  new_draw_telco(carrier, short, conboth);
+  draw_telco(carrier, short, conboth);
   setap("uap",(0.5[x1b,x1a],tex+apy));
-  setap("dap",(0.5[x2b,x2a],-apy));
+  setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 
 beginchr("telco_rightdown",0);
-%  draw_telco(tex,-tdesc,curved,curved);
-  new_draw_telco(rightside, descend, normal);
+  draw_telco(rightside, descend, normal);
   luuvbardiff3:=xpart(z5-z6);
 endchr;
 pause;
 beginchr("telco_rightdown_conr",0);
-%  draw_telco(tex,-tdesc,curved,curved);
-%  draw_stroke((w,0)+conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
-  new_draw_telco(rightside, descend, conright);
+  draw_telco(rightside, descend, conright);
 endchr;
 pause;
 beginchr("telco_rightup",0);
-%  draw_telco(tasc,0,rounded,narrcon);
-  new_draw_telco(rightside, ascend, normal);
+  draw_telco(rightside, ascend, normal);
   luuvbardiff4:=xpart(z5-z6);
   setap("harmaligap",point 0 of p1); apt(ps.n,lastap).forgd:=false;
   harmaligappenangle=penangle 0 of ap1;
 endchr;
 pause;
 beginchr("telco_rightup_conr",0);
-%  draw_telco(tasc,0,rounded,narrcon);
-  new_draw_telco(rightside, ascend, conright);
-%  draw_stroke((w,0)+conpoint11--point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
+  draw_telco(rightside, ascend, conright);
 endchr;
 pause;
 beginchr("telco_rightshort",0);
-%  draw_telco(tex,0,curved,narrcon);
-  new_draw_telco(rightside, short, normal);
+  draw_telco(rightside, short, normal);
 %  luuvbardiff3:=luuvbardiff3+xpart(z5-z6);
 endchr;
 pause;
 beginchr("telco_rightshort_conr",0);
-%  draw_telco(tex,0,curved,narrcon);
-  new_draw_telco(rightside, short, conright);
-%  draw_stroke((w,0)+conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
+  draw_telco(rightside, short, conright);
+endchr;
+beginchr("telco_rightshort_conrbot",0);
+  draw_telco(rightside, short, conrbot);
 endchr;
 pause;
 beginchr("telco_rightext",0);
-%  draw_telco(tasc,-tdesc,rounded,curved);
-  new_draw_telco(rightside, extended, normal);
+  draw_telco(rightside, extended, normal);
 endchr;
 pause;
 
@@ -446,7 +470,7 @@ def draw_lowclosingbar(expr style) =
   elseif style=descend:
     a2=a3=a4=a5=a1+6;
     use(a2); x2=x3-1.5pt; y2=0.8[bot y10,top 0];
-    z3=(w-rpad-0.3pt,0.42[y2,y4]);
+    z3=(w-rpad-0.35pt,0.42[y2,y4]);
     z4=(1.1[x3,x2],-0.6tdesc);
     z5=z4+0.9pt*dir(180-30);
     p1=z1{dir5}..z2{dir-3}..z3{down}..z4{left}..z5; ap1=ang(a1..a2..a3..a4..a5);
@@ -472,7 +496,7 @@ def draw_highclosingbar(expr style,h,yap) =
   else:
     a4=35; x4=w-rpad; z4=z3+whatever*dir15;
   fi
-  z10=(w-rpad-0.5pt,yap); 
+  z10=(w-rpad-0.6pt,yap); 
   if (style=truncated) or (style=conlefttrunc):
     a3=conpenangle6; z3=z10;
   else:
@@ -591,7 +615,7 @@ def draw_luuva(expr num, side, style, h, yap) =
   use(a4); bot z4=(if (style=open) or (style=conright) and (num=2): 0.3 elseif (style=conright): 0.1 else: 0.0 fi [x5,x3],0);
   x5=1.5[x3,x2]; z5=z4+whatever*dir(180-if side=leftside: 38 else: 30 fi);
   if num=1:
-    apshift=0.5pt;
+    apshift=0.3pt;
     z3=(w-rpad,0.57h);
   elseif num=2:
     apshift=0.1pt;
@@ -645,8 +669,8 @@ def draw_luuva(expr num, side, style, h, yap) =
     setap("luuvardap",(0.5w+apshift,-apy)); apt(ps.n,lastap).forgd:=false;
   elseif side=rightside:
     setap("rluuvap",z1 transformed rot);
-    setap("luuvaluap",(0.5w-apshift,h+apy)); apt(ps.n,lastap).forgd:=false;
-    setap("luuvaruap",(0.5w+0.3pt,h+apy)); apt(ps.n,lastap).forgd:=false;
+    setap("luuvaluap",(0.5w+0.10pt-apshift,h+apy)); apt(ps.n,lastap).forgd:=false;
+    setap("luuvaruap",(0.5w+0.25pt,h+apy)); apt(ps.n,lastap).forgd:=false;
     setap("luuvaldap",(0.5w-apshift,-apy)); apt(ps.n,lastap).forgd:=false;
     setap("luuvardap",(0.5w,-apy)); apt(ps.n,lastap).forgd:=false;
   fi
@@ -737,6 +761,7 @@ def set_thuule_aps =
   setap("dap",apt(ps.n,"luuvaldap").pt);
 enddef;
 build_tengwa(thuule,"telco_leftup","teema1luuva","lluuvap"); set_thuule_aps; endchr;
+pause;
 build_tengwa(thuule_conr,"telco_leftup","teema1luuva_conr","lluuvap"); set_thuule_aps; endchr;
 build_tengwa(thuule_cap,"captelco_leftup","capteema1luuva","lluuvap"); set_thuule_aps; endchr;
 
@@ -749,6 +774,7 @@ def set_oore_aps =
   setap("dap",apt(ps.n,"luuvaldap").pt);
 enddef;
 build_tengwa(oore,"telco_leftshort","teema1luuva","lluuvap"); set_oore_aps; endchr;
+pause;
 build_tengwa(oore_conr,"telco_leftshort","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
 build_tengwa(oore_conl,"telco_leftshort_conl","teema1luuva","lluuvap"); set_oore_aps; endchr;
 build_tengwa(oore_conb,"telco_leftshort_conl","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
@@ -874,6 +900,7 @@ def set_calma_aps =
   setap("dap",apt(ps.n,"luuvaldap").pt);
 enddef;
 build_tengwa(calma,"teema3luuva","telco_rightdown","rluuvap"); set_calma_aps; endchr;
+pause;
 build_tengwa(calma_conr,"teema3luuva","telco_rightdown_conr","rluuvap"); set_calma_aps; endchr;
 build_tengwa(calma_cap,"capteema3luuva","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
 
@@ -900,10 +927,12 @@ enddef;
 build_tengwa(anna,"teema3luuva","telco_rightshort","rluuvap"); set_anna_aps; endchr;
 build_tengwa(anna_conr,"teema3luuva","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
 build_tengwa(anna_cap,"capteema3luuva","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
+build_tengwa(anna_conrbot,"teema3luuva","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
 
 build_tengwa(noldo,"teema3luuvar","telco_rightshort","rluuvap"); set_anna_aps; endchr;
 build_tengwa(noldo_conr,"teema3luuvar","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
 build_tengwa(noldo_cap,"capteema3luuvar","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
+build_tengwa(noldo_conrbot,"teema3luuvar","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
 
 def set_extharma_aps =
   setap("uap",apt(ps.n,"luuvaluap").pt);
@@ -924,12 +953,14 @@ def build_qteematengwa(expr s, f, t, l) =
 enddef;
 
 build_qteematengwa(quesse,"closingbar_high2","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
+pause;
 build_qteematengwa(quesse_conl,"closingbar_high2_conl","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
 build_qteematengwa(quesse_conr,"closingbar_high2_conr","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
 build_qteematengwa(quesse_conb,"closingbar_high2_conb","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
 build_qteematengwa(quesse_cap,"capclosingbar_high2","captelco_rightdown2","capteema4luuva"); set_calma_aps; endchr;
 
 build_qteematengwa(ungwe,"closingbar_high4","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
+pause;
 build_qteematengwa(ungwe_conl,"closingbar_high4_conl","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
 build_qteematengwa(ungwe_conr,"closingbar_high4_conr","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
 build_qteematengwa(ungwe_conb,"closingbar_high4_conb","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
@@ -966,12 +997,16 @@ build_qteematengwa(vilya_conl,"closingbar_high2_conl","telco_rightshort","teema4
 build_qteematengwa(vilya_conr,"closingbar_high2_conr","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
 build_qteematengwa(vilya_conb,"closingbar_high2_conb","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
 build_qteematengwa(vilya_cap,"capclosingbar_high2","captelco_rightshort2","capteema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conrbot,"closingbar_high2","telco_rightshort_conrbot","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conbbot,"closingbar_high2_conl","telco_rightshort_conrbot","teema4luuva"); set_anna_aps; endchr;
 
 build_qteematengwa(nwalme,"closingbar_high4","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
 build_qteematengwa(nwalme_conl,"closingbar_high4_conl","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
 build_qteematengwa(nwalme_conr,"closingbar_high4_conr","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
 build_qteematengwa(nwalme_conb,"closingbar_high4_conb","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
 build_qteematengwa(nwalme_cap,"capclosingbar_high4","captelco_rightshort2","capteema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conrbot,"closingbar_high4","telco_rightshort_conrbot","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conbbot,"closingbar_high4_conl","telco_rightshort_conrbot","teema4luuvar"); set_anna_aps; endchr;
 
 def set_exthwesta_aps =
   attach("teema4luuva","rluuvap","rluuvap");

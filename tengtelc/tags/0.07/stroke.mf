@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2006 Johan Winge
+%% Copyright (C) 2005-2007 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -25,6 +25,11 @@
 %% along with Tengwar Telcontar; if not, write to the Free Software
 %% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
+string pausedummy;
+def pause =
+  if not tracing: message "Press Enter to continue."; pausedummy:=readstring; fi
+enddef;
+
 tetexbugtest=xpart point 3 of makepath (pencircle xscaled 3 yscaled 2.999 rotated 45);
 if tetexbugtest = 0.5:
   % All is well.
@@ -32,19 +37,24 @@ if tetexbugtest = 0.5:
     pickup pencircle xscaled tecil_w yscaled tecil_h rotated a
   enddef;
 elseif tetexbugtest = 1:
+  message " ";
   message "It seems like your copy of METAFONT produces unsatisfactory rotated elliptical";
   message "pens. As of this writing, the reason for this is unknown to me, but I do know";
   message "that it will result in a distorted rendering of many of your fonts. Not this";
   message "one, however, because I will now rotate the pens after they have been converted";
   message "from 'future pen' to 'pen'. This will not produce the optimal output, but it";
   message "avoids the heavily distorted pens your system would otherwise create.";
+  message " ";
   def use(expr a) =
     pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
   enddef;
 else:
-  message "This shouldn't happen. Please mail me at johan.winge@home.se and tell me as";
+  message " ";
+  message "This shouldn't happen. Please mail me at johan.winge@telia.com and tell me as";
   message "much as possible about your TeX system. Also please tell me what number you";
   message "see here: " & decimal tetexbugtest;
+  message " ";
+  pause;
   def use(expr a) =
     pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
   enddef;
@@ -138,11 +148,6 @@ vardef change_angle(expr spt, sang, eang) =
   fi
   draw_change_of_angle:=true;
   c+1/2tecil_w*dir eang
-enddef;
-
-string pausedummy;
-def pause =
-  if not tracing: message "Press Enter to continue."; pausedummy:=readstring; fi
 enddef;
 
 input serif;

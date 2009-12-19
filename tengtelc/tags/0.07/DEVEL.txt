@@ -1,6 +1,9 @@
+Tengwar Telcontar - a unicode Tengwar typeface.
+Copyright (C) 2005-2007 Johan Winge
+
 This file contains some very basic information on the structure of the tengtelc source files; in case you want to make modifications, this might help a little at least.
 
-The short story: depending on what you want to do, you might want to take a look at regular.mf and bold.mf, or tengenc.mf or tengwar.gdh.
+The short story: depending on what you want to do, you might want to take a look at regular.mf and bold.mf (for changing the width of the pen, for example), or tengenc.mf or tengwar.gdh (if you want to modify the encoding or the rendering behaviour).
 
 The long story:
 
@@ -19,6 +22,7 @@ compile
  |       |- regular.mf
  |       |   |- tracing.mf
  |       |   >- stroke.mf
+ |       |      >- serif.mf
  |       >- latin.mf
  |
  |- "mf2ttf.py tengwarr"
@@ -27,6 +31,7 @@ compile
  |       |- regular.mf
  |       |   |- tracing.mf
  |       |   >- stroke.mf
+ |       |      >- serif.mf
  .       >- tengwar.mf
  .           |- tengenc.mf
  .           |- stdteng.mf

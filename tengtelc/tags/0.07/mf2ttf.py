@@ -1,5 +1,5 @@
 ## Tengwar Telcontar - a Tengwar unicode typeface.
-## Copyright (C) 2005-2006 Johan Winge
+## Copyright (C) 2005-2007 Johan Winge
 ## 
 ## Tengwar Telcontar is free software; you can redistribute it and/or
 ## modify it under the terms of the GNU General Public License as
