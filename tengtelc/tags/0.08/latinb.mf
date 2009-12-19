@@ -1,0 +1,9 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005-2007 Johan Winge
+
+input setup;
+font_ps_name:="tengtelclatin";
+font_name:="Tengwar Telcontar Latin";
+input bold;
+input latin;
+exit; end.
