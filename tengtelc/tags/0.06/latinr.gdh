@@ -135,12 +135,12 @@ g_n = ps("n") {
 g_n_conl = ps("n.conl") { 
 };
 g_o = ps("o") { 
- dap = point(417m,-143m);
- uap = point(473m,942m);
+ dap = point(422m,-143m);
+ uap = point(468m,942m);
 };
 g_odieresis = ps("odieresis") { 
- dap = point(417m,-143m);
- uap = point(473m,1147m);
+ dap = point(422m,-143m);
+ uap = point(468m,1147m);
 };
 g_p = ps("p") { 
 };

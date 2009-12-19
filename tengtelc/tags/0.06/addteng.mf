@@ -26,7 +26,8 @@
 %% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 numeric dotsize[];
-dotsize1=0.85; dotsize2=0.90; dotsize3=0.95;
+%dotsize1=0.87; dotsize2=0.92; dotsize3=0.95;
+dotsize1=0.96; dotsize2=0.98; dotsize3=1.00;
 
 beginchr(atehta_norm,0);
   z0=(0,tex+2.2pt);
@@ -76,7 +77,7 @@ combinechr(invatehta,dottedcircle,"uap",invatehta_norm,"dap");
 
 beginchr(ytehta_norm,0);
   y0=y1=tex+1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.3pt;
+  1/2[x0,x1]=0; x1-x0=1.4pt;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,tex+apy));
@@ -87,7 +88,7 @@ endchr;
 combinechr(ytehta,dottedcircle,"uap",ytehta_norm,"dap");
 beginchr(downytehta_norm,0);
   y0=y1=-1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.3pt;
+  1/2[x0,x1]=0; x1-x0=1.4pt;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,y0+y0+apy));
@@ -124,7 +125,7 @@ def draw_etehta(expr style,number) =
   y0=tex+1.1pt;
   z1=z0+1.8pt*dir(52);
   0=0.1[x0,x1];
-  a1=38; a2=30;
+  a1=35; a2=27;
   if number=single:
     draw_stroke((z0--z1) transformed rot,ang(a1--a2));
   elseif number=double:
@@ -162,7 +163,7 @@ beginchr(revetehta_norm,0);
   y0=tex+1.1pt;
   z1=z0+1.8pt*dir(180-52);
   0=0.1[x0,x1];
-  a1=180-38; a2=180-30;
+  a1=180-35; a2=180-27;
   draw_stroke(z0--z1,ang(a1--a2));
   setap("dap",(0,tex+apy));
   setap("ldap",(x0-0.4pt,tex+apy));
@@ -339,7 +340,7 @@ beginchr(wtehta_narrow,0);
   draw_wtehta(0.75pt,1.9pt);
 endchr;
 beginchr(wtehta_norm,0);
-  draw_wtehta(1.3pt,1.9pt);
+  draw_wtehta(1.4pt,1.9pt);
 endchr;
 beginchr(wtehta_wide,0);
   draw_wtehta(1.9pt,1.9pt);
@@ -349,17 +350,21 @@ combinechr(wtehta,dottedcircle,"uap",wtehta_norm,"dap");
 
 def draw_roomen(expr style, number, secstyle) =
   padding(0.7pt,0.7pt);
-  a0=46; a1=1/2[a0,a2]; a2=50;
+  if style=normal:
+    a0=46; a1=1/2[a0,a2]; a2=50;
+  elseif style=conleft:
+    a0=conpenangle7; a1=1/2[a0,a2]; a2=50;
+  fi
   a3=55; a4=a5=a6=a7=a8=35; a9=45;
   z1=(lpad,tex);
   z2=(0.48[x1,x5],0);
   z5=(w-rpad,0.65tex);
   if style=normal:
     ap1=ang(a0..a1..a2);
-    p1=tserif(1,2)(0.5pt,0.4,25,3,ap1)..z2;
+    p1=topserif(1,2)(0.5pt,0.4*abs(z1-z2),25,3,ap1)..z2;
   elseif style=conleft:
     ap1=ang(conpenangle7..a0..a1..a2);
-    p1=conpoint7{right}..tserif(1,2)(0.4pt,0.4,0,4,ap1)..z2;
+    p1=conpoint7{right}..topserif(1,2)(0.4pt,0.4*abs(z1-z2),0,4,ap1)..z2;
   fi
   draw_stroke(p1,ap1);
   t:=p1 heighttimes 0.55tex;
@@ -394,28 +399,28 @@ def draw_roomen(expr style, number, secstyle) =
   setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
   penlabels(range 1 thru 12);
 enddef;
-beginchr(roomen,0.95ten);
+beginchr(roomen,1.0ten);
   draw_roomen(normal,1,normal);
 endchr;
-beginchr(roomen_conl,0.95ten);
+beginchr(roomen_conl,1.0ten);
   draw_roomen(conleft,1,normal);
 endchr;
-beginchr(arda,0.95ten);
+beginchr(arda,1.0ten);
   draw_roomen(normal,2,normal);
 endchr;
-beginchr(arda_conl,0.95ten);
+beginchr(arda_conl,1.0ten);
   draw_roomen(conleft,2,normal);
 endchr;
-beginchr(roomen_open,0.95ten);
+beginchr(roomen_open,1.0ten);
   draw_roomen(normal,1,open);
 endchr;
-beginchr(roomen_conl_open,0.95ten);
+beginchr(roomen_conl_open,1.0ten);
   draw_roomen(conleft,1,open);
 endchr;
-beginchr(arda_open,0.95ten);
+beginchr(arda_open,1.0ten);
   draw_roomen(normal,2,open);
 endchr;
-beginchr(arda_conl_open,0.95ten);
+beginchr(arda_conl_open,1.0ten);
   draw_roomen(conleft,2,open);
 endchr;
 
@@ -530,92 +535,18 @@ endchr;
 %combinechr("test9",anto,"uap",overbar_wide,"rdap");
 %combinechr("test10",anca,"uap",overbar_wide,"ldap");
 
-def draw_aare(expr side, style) =
-  transform t;
-  if style=open:
-    a1-5=a2-4=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
-  elseif style=normal:
-    a1=a2=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
-  elseif style=flat:
-    a1+2=a2+6=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
-  fi
-  y8=-0.45tex;
-  if side=leftside:
-    padding(0.7pt,0.75pt);
-    t=identity;
-    use(a1); top y1=tasc;
-    x3=0.17[x7,x9];
-  else:
-    padding(0.75pt,0.7pt);
-    use(a8); t=identity rotatedaround((1/2w,1/2[bot y8,tex]),180);
-    use(a1); top y1=tex+tdesc+y8/2;
-    x3=0.11[x7,x9];
-  fi
-  z1=z2+0.5pt*dir135;
-  use(a4); bot z4=(0.45[x3,x5],0.3tex);
-  z5=z4+1.3pt*dir (a5-17);
-  z7=(lpad,0.43[y8,y6]);
-  x8=0.45[x7,x9];
-  z9=(w-rpad,0.4[y8,y4]);
-  z10=z9+0.9pt*dir127;
-  ap1=ang(a1..a2--a3..a4..a5);
-  ap2=ang(a6..a7..a8..a9..a10);
-  if style=open:
-%    x2=0.45[x3,x9];
-    z2=z3+whatever*dir 71; 
-    y3=0.24[y4,y2];
-    p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..z5{dir a5};
-    setap(if side=leftside:"uap"else:"dap"fi,(0.10[x2,x9],tex+0.0pt) transformed t);
-  elseif style=normal:
-%    x2=0.67[x3,x9];
-    z2=z3+whatever*dir 63; 
-    y3=0.22[y4,y2];
-    p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..z5{dir a5};
-    setap(if side=leftside:"uap"else:"dap"fi,(0.5[x2,x9],tex+0.0pt) transformed t);
-  elseif style=flat:
-%    x2=1.0[x3,x9];
-    z2=z3+whatever*dir 54; 
-    y3=0.21[y4,y2];
-    p1=z1..z2{down}..tension1.1and1.3..z3{down}..z4{right}..z5{dir a5};
-    setap(if side=leftside:"uap"else:"dap"fi,(0.45[x3,x9],tex+0.9pt) transformed t);
-  fi
-  z6=point if side=leftside: 2.75 else: 2.9 fi of p1;
-  p2=z6..z7{down}..z8{right}..tension1.1..z9{up}..z10;
-  setap(if side=leftside:"dap"else:"uap"fi,(x8,bot y8+o-0.5pt) transformed t);
-  draw_stroke(p1 transformed t,ap1);
-  draw_stroke(p2 transformed t,ap2);
-  penlabels(range 1 thru 10);
-enddef;
-beginchr(aare,1ten);
-  draw_aare(leftside,normal);
-endchr;
-beginchr(aare_flat,1ten);
-  draw_aare(leftside,flat);
-endchr;
-beginchr(aare_open,1ten);
-  draw_aare(leftside,open);
-endchr;
-beginchr(aarenuq,1ten);
-  draw_aare(rightside,normal);
-endchr;
-beginchr(aarenuq_flat,1ten);
-  draw_aare(rightside,flat);
-endchr;
-beginchr(aarenuq_open,1ten);
-  draw_aare(rightside,open);
-endchr;
 
 def draw_hyarmenyanta(expr style,secstyle) =
   numeric hg;
   a4=40; a5=40; a6=35;
   a7=45;
   if secstyle=normal:
-    padding(0.7pt,0.6pt);
+    padding(0.65pt,0.6pt);
     hg=tex+o;
     a0=47; a1=57; a2=52; a3=37;
     ap1=ang(a0..a1..a2..a3);
   else:
-    padding(0.7pt,0.6pt+1.5pt);
+    padding(0.65pt,0.6pt+1.5pt);
     hg=ctex+o;
     numeric stemshift; stemshift=if style=ascend: 1.35tecil_w else: 1.55tecil_w fi;
     a0=49; a1=59; a2=54; a3=39;
@@ -630,12 +561,12 @@ def draw_hyarmenyanta(expr style,secstyle) =
   if style=ascend:
     if secstyle=normal:
       y1=tasc; z1=z2+whatever*dir 115;
-      p1=tserif(1,2)(0.8pt,0.2,40,1,ang(a0..a1))..bserif(1,2)(0.4pt,0.2,a3+180,0,ang(a2..a3));
+      p1=topserif(1,2)(0.8pt,0.2*abs(z1-z2),40,1,ang(a0..a1))..botserif(1,2)(0.4pt,0.2*abs(z1-z2),a3+180,0,ang(a2..a3));
       setap("uap",(0.5[x1,x2],tex+apy+0.5pt));
     elseif secstyle=capital:
       y1=ctasc; z1=z2+whatever*dir 115;
-      use(a2); p1=tserif(1,2)(0.8pt,0.2,40,1,ang(a0..a1))..top z2;
-      p3=z7..bserif(7,8)(0.4pt,0.2,a3+180,0,ang(a2..a3));
+      use(a2); p1=topserif(1,2)(0.8pt,0.2*abs(z1-z2),40,1,ang(a0..a1))..top z2;
+      p3=z7..botserif(7,8)(0.4pt,0.2*abs(z7-z8),a3+180,0,ang(a2..a3));
       setap("uap",(0.5[x7,x8],ctex+apy+0.5pt));
     fi
     t:=p1 heighttimes 0.83hg;
@@ -643,18 +574,18 @@ def draw_hyarmenyanta(expr style,secstyle) =
   else:
     if secstyle=normal:
       y1=hg; z1=z2+whatever*dir 125;
-      p1=tserif(1,2)(0.4pt,0.2,20,1,ang(a0..a1))..bserif(1,2)(0.4pt,0.2,a3+180,0,ang(a2..a3));
+      p1=topserif(1,2)(0.4pt,0.2*abs(z1-z2),20,1,ang(a0..a1))..botserif(1,2)(0.4pt,0.2*abs(z1-z2),a3+180,0,ang(a2..a3));
       setap("uap",(0.2[x1,x2],tex+apy));
     elseif secstyle=capital:
       y1=hg; z1=z2+whatever*dir 119.5;
-      use(a2); p1=tserif(1,2)(0.4pt,0.2,20,1,ang(a0..a1))..top z2;
-      p3=z7..bserif(7,8)(0.4pt,0.2,a3+180,0,ang(a2..a3));
+      use(a2); p1=topserif(1,2)(0.4pt,0.2*abs(z1-z2),20,1,ang(a0..a1))..top z2;
+      p3=z7..botserif(7,8)(0.4pt,0.2*abs(z7-z8),a3+180,0,ang(a2..a3));
       setap("uap",(0.5[x1,x7],ctex+apy));
     fi
     t:=p1 heighttimes 0.65hg;
     z4=change_angle(point t of p1, penangle t of ap1+180,a4+180);
   fi
-  p2=z4..bserif(4,5)(0.8pt,0.3,-45,3,ang(a5..a6));
+  p2=z4..botserif(4,5)(0.8pt,0.3*abs(z4-z5),-45,3,ang(a5..a6));
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
   if secstyle=capital:
@@ -701,7 +632,7 @@ def draw_atengwa(expr style) =
   padding(0.7pt,if style=normal: 0.16pt else: 0.4pt fi);
   a1=a2=a3=a4=a5=35; a6=57;
   z1=(w-rpad,if style=normal:0.30 else:0.30 fi tex);
-  use(a2); bot z2=(0.6[x1,x3],-1/2o);
+  use(a2); bot z2=(0.6[x1,x3],-o);
   z3=(lpad,0.43hgt);
   use(a4); top z4=(0.3[x5,x3],hgt);
   x5=if style=capital:2.0 else:1.8 fi[x3,x2]; z5=z4+whatever*dir(180-30);
@@ -841,27 +772,6 @@ beginchr(hwestasin,1.5ten);
 endchr;
 beginchr(vaiya,1.4ten);
   draw_hwestasin(short);
-endchr;
-
-beginchr(sindarinytengwa,1.0ten);
-  padding(0.7pt,0.7pt);
-  a0-5=a1=a2=a3=a4=a5+7=35;
-  use(a1); bot z1=(0.47[x2,x4],-o);
-  z2=(lpad,0.47tex);
-  use(a3); top z3=(0.53[x2,x4],tex+o);
-  z4=(w-rpad,0.45tex);
-  z5=(0.0[x2,x4],-tdesc);
-  p1=z3{right}..z4{down}..z5{-dir a5};
-  ap1=ang(a3..a4..a5);
-  t:=p1 heighttimes 0.3tex;
-  z0=point t of p1;
-  p0=z0{-dir a0}..z1{left}..z2{up}..z3{right};
-  ap0=ang(a0..a1..a2..a3);
-  draw_stroke(p0,ap0);
-  draw_stroke(p1,ap1);
-  setap("uap",(x3,tex+apy));
-  setap("dap",(x3,-apy));
-  penlabels(range 1 thru 4);
 endchr;
 
 def draw_angwhtengwa =

@@ -3,7 +3,8 @@
 
 font_weight:="Regular";
 
-tecil_w = 1.0pt; tecil_h = 0.24pt;
+tecil_w = 0.87pt; tecil_h = 0.20pt;
+%tecil_w = 1.0pt; tecil_h = 0.24pt;
 %tecil_w = 1.05pt; tecil_h = 0.25pt;
 %tecil_w = 1.1pt; tecil_h = 0.26pt;
 %tecil_w = 1.2pt; tecil_h = 0.27pt;

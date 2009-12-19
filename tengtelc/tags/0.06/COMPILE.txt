@@ -83,10 +83,10 @@ II.) To add Graphite tables to the resulting fonts, you will need:
 
     Note 2: (Linux users only.) The sources for GrCompiler is
     available through SVN:
-    svn://scripts.sil.org/graphite/graphite/trunk
+    svn://scripts.sil.org/graphite/grcompiler/trunk
 
-    (See http://silgraphite.sourceforge.net/linuxbuild.html for
-    slightly out of date instructions...)
+    (Note that as of this writing, G++ 4.1 does not compile the code
+    correctly. If you get errors, try G++ 4.0 instead.)
 
     It is also possible to run the Windows version of GrCompiler
     with the help of Wine: http://www.winehq.com/
@@ -128,7 +128,7 @@ change what version is installed), and xorg-x11-base, found in X11.
 (More advanced users probably also want gcc etc., but this is a
 minimalistic guide. You can allways add packages later if you want.)
 
-2.) FontForge next: The writer of FontForge has posted very
+2.) FontForge next: The author of FontForge has posted very
 detailed instructions on how to install FontForge in Cygwin.
 Basically I did it the way he suggests:
 http://fontforge.sourceforge.net/ms-install.html
@@ -136,12 +136,12 @@ http://fontforge.sourceforge.net/ms-install.html
 3.) Then I installed Potrace. From http://potrace.sourceforge.net/
 I Just downloaded the precompiled distribution for Windows, and
 unzipped the file potrace.exe in a reasonable place, e.g.
-c:\windows\program files\potrace\. This location must also be added
+c:\program files\potrace\. This location must also be added
 to your path, in the same way as in step 0.).
 
 4.) Finally I downloaded the latest version of GrCompiler from
 http://scripts.sil.org/GraphiteCompilerDownload
-and unzipped all the files into c:\windows\program files\grcompiler\
+and unzipped all the files into c:\program files\grcompiler\
 and then added this path too to the PATH variable.
 I then also moved the file stddef.gdh as per the note above.
 

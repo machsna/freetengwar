@@ -77,8 +77,9 @@ enddef;
 
 input tengenc;
 
-if tracing:
 input stdteng;
+
+if tracing:
 input addteng;
 fi
 
@@ -90,37 +91,48 @@ def draw_silme(expr side, style, lig) =
     a1=a2=a3=a4=a5=a6=35;
   elseif style=flat:
     a1+2=a2+6=a3=a4=a5=a6=35;
+  elseif style=nuquerna:
+    a1+5=a2=a3=a4=a5=a6=35;
   fi
   use(a1);
   if side=leftside:
-    padding(0.8pt,if lig:-1pt else: 0.8pt fi);
+    padding(0.7pt,if lig:-1.1pt else: 0.7pt fi);
     t=identity;
     top y1=tasc;
   else:
-    padding(0.8pt,0.8pt);
+    padding(0.7pt,0.7pt);
     t=identity rotatedaround(1/2(w,tex),180);
     top y1=tex+tdesc;
   fi
-  z1=z2+0.5pt*dir135;
   use(a4); bot z4=(0.45[x3,x5],-o);
   z5=(w-rpad,if lig: 0.60tex else: 0.50tex fi);
-  z6=z5+0.9pt*dir127;
-  ap1=ang(a1..a2--a3..a4..a5..a6);
+  if style<>nuquerna:
+    z1=z2+0.5pt*dir135;
+    z6=z5+0.9pt*dir127;
+    ap1=ang(a1..a2--a3..a4..a5..a6);
+  fi
   if style=open:
     x2=0.45[x3,x5];
-    z3=(lpad,0.26[y4,y2]);
+    z3=(lpad,0.26[y4,y1]);
     p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..tension if lig: 1.3 else: 1.1 fi..z5{up}..z6;
     setap(if side=leftside:"uap"else:"dap"fi,(0.15[x2,x5],tex+0.0pt) transformed t);
   elseif style=normal:
     x2=0.67[x3,x5];
-    z3=(lpad,0.24[y4,y2]);
+    z3=(lpad,0.24[y4,y1]);
     p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..tension if lig: 1.3 else: 1.1 fi..z5{up}..z6;
     setap(if side=leftside:"uap"else:"dap"fi,(0.5[x2,x5],tex+0.0pt) transformed t);
   elseif style=flat:
     x2=1.0[x3,x5];
-    z3=(lpad,0.23[y4,y2]);
+    z3=(lpad,0.23[y4,y1]);
     p1=z1..z2{down}..tension1.1and1.3..z3{down}..z4{right}..tension if lig: 1.3 else: 1.1 fi..z5{up}..z6;
     setap(if side=leftside:"uap"else:"dap"fi,(0.57[x3,x2],tex+apy+0.25pt) transformed t);
+  elseif style=nuquerna:
+    x6=0.50[x3,x5]; y6=0.6[y5,tex];
+    ap1=ang(a1..a3..a4..a5..a6);
+    x1=0.82[x3,x5];
+    z3=(lpad,0.3[y4,y1]);
+    p1=z1{-dir a1}..z3{down}..z4{right}..tension if lig: 1.3 else: 1.1 fi..z5{up}..z6{-dir a6};
+    setap(if side=leftside:"uap"else:"dap"fi,(0.45[x3,x5],tex+0pt) transformed t);
   fi
   setap(if side=leftside:"dap"else:"uap"fi,(x4,-apy) transformed t);
   if lig:
@@ -148,25 +160,149 @@ endchr;
 beginchr(silme_lig,1.05ten);
   draw_silme(leftside,normal,true);
 endchr;
-pause;
 beginchr(silme_lig_flat,1.05ten);
   draw_silme(leftside,flat,true);
 endchr;
-pause;
 beginchr(silme_lig_open,1.05ten);
   draw_silme(leftside,open,true);
 endchr;
-pause;
 
 beginchr(silmenuq,1ten);
-  draw_silme(rightside,normal,false);
+  draw_silme(rightside,nuquerna,false);
 endchr;
-beginchr(silmenuq_flat,1ten);
-  draw_silme(rightside,flat,false);
+pause;
+%beginchr(silmenuq,1ten);
+%  draw_silme(rightside,normal,false);
+%endchr;
+%beginchr(silmenuq_flat,1ten);
+%  draw_silme(rightside,flat,false);
+%endchr;
+%beginchr(silmenuq_open,1ten);
+%  draw_silme(rightside,open,false);
+%endchr;
+
+%beginchr(sindarinytengwa,1.0ten);
+%  padding(0.7pt,0.7pt);
+%  a0-5=a1=a2=a3=a4=a5+7=35;
+%  use(a1); bot z1=(0.47[x2,x4],-o);
+%  z2=(lpad,0.47tex);
+%  use(a3); top z3=(0.53[x2,x4],tex+o);
+%  z4=(w-rpad,0.45tex);
+%  z5=(0.2[x2,x4],-tdesc);
+%  p1=z3{right}..z4{down}..z5{-dir a5};
+%  ap1=ang(a3..a4..a5);
+%  t:=p1 heighttimes 0.3tex;
+%  z0=point t of p1;
+% p0=z0{-dir a0}..z1{left}..z2{up}..z3{right};
+%  ap0=ang(a0..a1..a2..a3);
+%  draw_stroke(p0,ap0);
+%  draw_stroke(p1,ap1);
+%  setap("uap",(x3,tex+apy));
+%  setap("dap",(x3+0.2pt,-apy));
+%  penlabels(range 1 thru 4);
+%endchr;
+
+def draw_aare(expr side, style) =
+  transform t;
+  if style=open:
+    a1-5=a2-4=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
+  elseif style=normal:
+    a1=a2=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
+  elseif style=flat:
+    a1+2=a2+6=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
+  elseif style=nuquerna:
+    a1+12=a2=a3=a4-3=a5-8=a6=a7=a8=a9=a10=35;
+  fi
+  y8=-0.45tex;
+  if side=leftside:
+    padding(0.7pt,0.75pt);
+    t=identity;
+    use(a1); top y1=tasc;
+    x3=0.17[x7,x9];
+  else:
+    padding(0.75pt,0.7pt);
+    use(a8); t=identity rotatedaround((1/2w,1/2[bot y8+o,tex]),180);
+    if style=nuquerna:
+      use(a1); top y1=tex+tdesc+0.9y8;
+      x3=0.05[x7,x9];
+    else:
+      use(a1); top y1=tex+tdesc+y8/2;
+      x3=0.11[x7,x9];
+    fi
+  fi
+  if style<>nuquerna:
+    z1=z2+0.5pt*dir135;
+    use(a4); bot z4=(0.45[x3,x5],0.3tex);
+    z5=z4+1.3pt*dir (a5-17);
+    z7=(lpad,0.43[y8,y6]);
+    x8=0.45[x7,x9];
+    z9=(w-rpad,0.4[y8,y4]);
+    z10=z9+0.9pt*dir127;
+    ap1=ang(a1..a2--a3..a4..a5);
+    ap2=ang(a6..a7..a8..a9..a10);
+  fi
+  if style=open:
+    z2=z3+whatever*dir 71; 
+    y3=0.24[y4,y2];
+    p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..z5{dir a5};
+    setap(if side=leftside:"uap"else:"dap"fi,(0.10[x2,x9],tex+0.0pt) transformed t);
+  elseif style=normal:
+    z2=z3+whatever*dir 63; 
+    y3=0.22[y4,y2];
+    p1=z1..z2{down}..tension1.2..z3{down}..z4{right}..z5{dir a5};
+    setap(if side=leftside:"uap"else:"dap"fi,(0.5[x2,x9],tex+0.0pt) transformed t);
+  elseif style=flat:
+    z2=z3+whatever*dir 54; 
+    y3=0.21[y4,y2];
+    p1=z1..z2{down}..tension1.1and1.3..z3{down}..z4{right}..z5{dir a5};
+    setap(if side=leftside:"uap"else:"dap"fi,(0.45[x3,x9],tex+0.9pt) transformed t);
+  elseif style=nuquerna:
+    use(a4); bot z4=(0.45[x3,x5],0.3tex);
+    z5=z4+1.3pt*dir (a5-17);
+    z7=(lpad,0.43[y8,y6]);
+    x8=0.45[x7,x9];
+    z9=(w-rpad,0.4[y8,y4]);
+    z10=z9+0.9pt*dir127;
+    ap1=ang(a1..a3..a4..a5);
+    ap2=ang(a6..a7..a8..a9..a10);
+
+    z1=z3+whatever*dir 55; 
+    y3=0.28[y4,y1];
+    p1=z1{-dir a1}..z3{down}..z4{right}..z5{dir a5};
+    setap(if side=leftside:"uap"else:"dap"fi,(0.5[x1,x9],tex+0.0pt) transformed t);
+
+  fi
+  z6=point if side=leftside: 2.75 elseif style=nuquerna: 2.1 else: 2.9 fi of p1;
+  p2=z6..z7{down}..z8{right}..tension1.1..z9{up}..z10;
+  setap(if side=leftside:"dap"else:"uap"fi,(x8,bot y8+o-0.5pt) transformed t);
+  draw_stroke(p1 transformed t,ap1);
+  draw_stroke(p2 transformed t,ap2);
+  penlabels(range 1 thru 10);
+enddef;
+beginchr(aare,1ten);
+  draw_aare(leftside,normal);
 endchr;
-beginchr(silmenuq_open,1ten);
-  draw_silme(rightside,open,false);
+pause;
+beginchr(aare_flat,1ten);
+  draw_aare(leftside,flat);
 endchr;
+beginchr(aare_open,1ten);
+  draw_aare(leftside,open);
+endchr;
+beginchr(aarenuq,1ten);
+  draw_aare(rightside,nuquerna);
+endchr;
+pause;
+%beginchr(aarenuq,1ten);
+%  draw_aare(rightside,normal);
+%endchr;
+%beginchr(aarenuq_flat,1ten);
+%  draw_aare(rightside,flat);
+%endchr;
+%beginchr(aarenuq_open,1ten);
+%  draw_aare(rightside,open);
+%endchr;
+
 
 def get_utehta_path(suffix $)(expr v,l,cent) =
   a$a:=v-5; a$b:=35; a$c:=35;
@@ -217,7 +353,7 @@ combinechr(downotehta,dottedcircle,"dap",downotehta_norm,"uap");
 
 def get_otehta_path(suffix $)(expr v,l,cent) =
   a$a:=v+5; a$b:=a$a-5; a$c:=v-35; %25;
-  y$a=tex+0.1pt; cent=0.5[x$a,x$b];
+  y$a=tex+0.1pt; cent=0.75[x$a,x$b];
   z$b=z$a+l*dir(v);
   z$c=z$b+1.2pt*dir(v-100); %-45
   ap$=ang(a$a--a$b--a$c);
