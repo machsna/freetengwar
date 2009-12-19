@@ -86,7 +86,7 @@ addalias(tengcb & "3A","mhtengwa");
 addalias(tengcb & "3B","beleriandicmh");
 addalias(tengcb & "3C","angwhtengwa");
 addalias(tengcb & "3D","vaiya");
-addalias(tengcb & "3E","sindarinytengwa");
+% addalias(tengcb & "3E","sindarinytengwa");
 
 addalias(tengcb & "40","atehta");
 addalias(tengcb & "40.norm","atehta_norm");
@@ -137,8 +137,8 @@ addaliasvars("invatehta","norm");
 addaliasvars("longcarrtehta","norm","lambe");
 addaliasvars("shooktehta","norm");
 
-addalias(harma & "_" & tinco,"ichtligature");
-addalias(hwesta & "_" & tinco,"achtligature");
+% addalias(harma & "_" & tinco,"ichtligature");
+% addalias(hwesta & "_" & tinco,"achtligature");
 
 addalias(tengcb & "60","tenginterpone");
 addalias(tengcb & "61","tenginterptwo");

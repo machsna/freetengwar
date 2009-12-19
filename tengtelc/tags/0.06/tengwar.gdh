@@ -118,9 +118,9 @@ table(glyph)
   Lambe=(g_lambe,g_lambe_conr,g_lambe_conl,g_lambe_conb,g_lambe_cap);
   Alda=(g_alda,g_alda_conr,g_alda_conl,g_alda_conb,g_alda_cap);
   Silme=(g_silme,g_silme_open,g_silme_flat,g_silme_lig,g_silme_lig_open,g_silme_lig_flat,g_silme_lig_harma);
-  SilmeNuq=(g_silmenuq,g_silmenuq_open,g_silmenuq_flat);
+  SilmeNuq=(g_silmenuq);
   Aare=(g_aare,g_aare_open,g_aare_flat);
-  AareNuq=(g_aarenuq,g_aarenuq_open,g_aarenuq_flat);
+  AareNuq=(g_aarenuq);
   Hyarmen=(g_hyarmen,g_hyarmen_cap);
   HwestaSin=(g_hwestasin);
   Yanta=(g_yanta,g_yanta_cap);
@@ -137,7 +137,6 @@ table(glyph)
   BeleriandicMh=(g_beleriandicmh,g_beleriandicmh_cap);
   AngWhtengwa=(g_angwhtengwa);
   Vaiya=(g_vaiya);
-  SindYtengwa=(g_sindarinytengwa);
   SHook=(g_shook,g_shook_high);
 
   NotCapTengwar=(g_tinco,g_parma,g_calma,g_quesse,g_ando,g_umbar,g_anga,g_ungwe,
@@ -155,21 +154,21 @@ table(glyph)
 
   WideTengwar=(Ando,Umbar,Anga,Ungwe,Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,Mhtengwa);
   StemUpRightTengwar=(Harma,Hwesta,Anca,Unque,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silme_flat,g_silme_lig_flat,g_aare_flat,HwestaSin);
-  StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa);
-  StemDownRightTengwar=(Calma,Quesse,Anga,Ungwe,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silmenuq_flat,g_aarenuq_flat,SindYtengwa);
-  StemDownLeftTengwar=(Tinco,Parma,Ando,Umbar,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,Roomen,Arda,g_silmenuq_flat,g_aarenuq_flat,AngWhtengwa);
+  StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa,g_tinco_lig);
+  StemDownRightTengwar=(Calma,Quesse,Anga,Ungwe,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silmenuq,g_aarenuq);
+  StemDownLeftTengwar=(Tinco,Parma,Ando,Umbar,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,Roomen,Arda,AngWhtengwa);
   NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr);
 
   AnyTengwa=(Tinco,Parma,Calma,Quesse,Ando,Umbar,Anga,Ungwe,Thuule,Formen,Harma,Hwesta,
              Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,Oore,Vala,Anna,Vilya,
              ExtThuule,ExtFormen,ExtHarma,ExtHwesta,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,
              Roomen,Arda,Lambe,Alda,Silme,SilmeNuq,Aare,AareNuq,Hyarmen,HwestaSin,Yanta,Uure,LongCarr,Halla,ShortCarr,
-             Wtengwa,Atengwa,ConnCarr,Whtengwa,OpenAnna,Mhtengwa,BeleriandicMh,AngWhtengwa,Vaiya,SindYtengwa,SHook,
+             Wtengwa,Atengwa,ConnCarr,Whtengwa,OpenAnna,Mhtengwa,BeleriandicMh,AngWhtengwa,Vaiya,SHook,
              g_nbsp,g_dottedcircle);
   MayConR=(g_calma,g_quesse,g_quesse_conl,g_anga,g_ungwe,g_ungwe_conl,g_noldo,g_nwalme,g_nwalme_conl,g_anna,g_vilya,g_vilya_conl,g_lambe,g_lambe_conl,g_alda,g_alda_conl);
   DoConR=(g_calma_conr,g_quesse_conr,g_quesse_conb,g_anga_conr,g_ungwe_conr,g_ungwe_conb,g_noldo_conr,g_nwalme_conr,g_nwalme_conb,g_anna_conr,g_vilya_conr,g_vilya_conb,g_lambe_conr,g_lambe_conb,g_alda_conr,g_alda_conb);
-  MayConL=(g_tinco,g_parma,g_quesse,g_ando,g_umbar,g_ungwe,g_hwesta,g_unque,g_nuumen,g_malta,g_ungwe,g_oore,g_vala,g_vilya,g_exthwesta,g_extunque,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_shook);
-  DoConL=(g_tinco_conl,g_parma_conl,g_quesse_conl,g_ando_conl,g_umbar_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nuumen_conl,g_malta_conl,g_ungwe_conl,g_oore_conl,g_vala_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_shook_high);
+  MayConL=(g_tinco,g_parma,g_quesse,g_ando,g_umbar,g_ungwe,g_hwesta,g_unque,g_nuumen,g_malta,g_nwalme,g_oore,g_vala,g_vilya,g_exthwesta,g_extunque,g_roomen,g_lambe,g_alda,g_shortcarr,g_longcarr,g_shook);
+  DoConL=(g_tinco_conl,g_parma_conl,g_quesse_conl,g_ando_conl,g_umbar_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nuumen_conl,g_malta_conl,g_nwalme_conl,g_oore_conl,g_vala_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl,g_roomen_conl,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_shook_high);
   MayConRLow=(g_tinco,g_tinco_conl,g_ando,g_ando_conl,g_umbar,g_umbar_conl,g_parma,g_parma_conl,g_thuule,g_formen,g_harma,g_hwesta,g_hwesta_conl,g_anto,g_ampa,g_anca,g_unque,g_unque_conl,g_nuumen,g_nuumen_conl,g_malta,g_malta_conl,g_oore,g_oore_conl,g_vala,g_vala_conl,g_shortcarr,g_shortcarr_conl);
   DoConRLow=(g_tinco_conr,g_tinco_conb,g_ando_conr,g_ando_conb,g_umbar_conr,g_umbar_conb,g_parma_conr,g_parma_conb,g_thuule_conr,g_formen_conr,g_harma_conr,g_hwesta_conr,g_hwesta_conb,g_anto_conr,g_ampa_conr,g_anca_conr,g_unque_conr,g_unque_conr,g_nuumen_conr,g_nuumen_conb,g_malta_conr,g_malta_conb,g_oore_conr,g_oore_conb,g_vala_conr,g_vala_conb,g_shortcarr_conr,g_shortcarr_conb);
   MayConLLow=(g_shook); DoConLLow=(g_shook);
@@ -227,10 +226,10 @@ table(sub)
            / _ AnyIsolUpTehtar IsolDownTehtar ;
     if (silmepref==left)
       (g_silme,g_silme_lig,g_aare) > (g_silme_flat,g_silme_lig_flat,g_aare_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
-      (g_silmenuq,g_aarenuq) > (g_silmenuq_flat,g_aarenuq_flat) / ^ _ AnyIsolDownTehtar IsolDownTehtar ;
+//      (g_silmenuq,g_aarenuq) > (g_silmenuq_flat,g_aarenuq_flat) / ^ _ AnyIsolDownTehtar IsolDownTehtar ;
     elseif (silmepref==right)
       (g_silme,g_silme_lig,g_aare) > (g_silme_open,g_silme_lig_open,g_aare_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
-      (g_silmenuq,g_aarenuq) > (g_silmenuq_open,g_aarenuq_open) / ^ _ AnyIsolUpTehtar IsolDownTehtar ;
+//      (g_silmenuq,g_aarenuq) > (g_silmenuq_open,g_aarenuq_open) / ^ _ AnyIsolUpTehtar IsolDownTehtar ;
     endif;
     if (descwtengwa)
       g_wtengwa > g_wtengwa_desc;
@@ -302,9 +301,9 @@ table(pos)
     Alda (g_downutehta_long,g_underbar_lambe) { attach{ to=@1; at=cap; with=cap }; insert=true;} / _ _ ;
 
     (g_silme_flat,g_silme_lig_flat,g_aare_flat) AnyUpTehta { attach{ to=@1; at=uap; with=rdap }; insert=true;} / _ ^ AnyDownTehtar _ ;
-    (g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open,g_silmenuq_flat,g_aarenuq_flat,AngWhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=luap }; insert=true;} / _ ^ _ ;
+    (g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open,AngWhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=luap }; insert=true;} / _ ^ _ ;
     (g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen) AnyUpTehta { attach{ to=@1; at=uap; with=ldap }; insert=true;} / _ ^ AnyDownTehtar _ ;
-    (g_silmenuq_open,g_aarenuq_open,Alda,Mhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ ^ _ ;
+    (g_silmenuq,g_aarenuq,Alda,Mhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ ^ _ ;
 
     g_underbar_roomen AnyDownTehta { attach{ to=@1; at=ldap; with=luap }; insert=true;} / _ _ ;
     if (silmepref==left)
@@ -323,7 +322,7 @@ table(pos)
 
   pass(3)
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Calma,Quesse,Anga,Ungwe,Harma,Hwesta,Anca,Unque,Noldo,Nwalme,Anna,Vilya,Uure) {kern.x = +30m} / _ ^ AnyTehtar g_zwj _;
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -95m} / _ AnyTehtar g_zwj ^ _;
+    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -90m} / _ AnyTehtar g_zwj ^ _;
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Lambe) {kern.x = -100m} / _ AnyTehtar g_zwj ^ _;
     (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Silme) {kern.x = +20m} / _ AnyTehtar g_zwj ^ _;
     (Roomen,Arda) Hyarmen {kern.x = -80m} / _ AnyTehtar ^ _;
