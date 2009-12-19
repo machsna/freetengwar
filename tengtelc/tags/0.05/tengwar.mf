@@ -1,0 +1,115 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+forgd:=false; % We already have this character in the latin font.
+addalias("uni25CC","dottedcircle");
+beginchr(dottedcircle,1.1ex);
+  le=ex/21.5; path dot;
+  dot=superellipse((le,0),(0,le),(-le,0),(0,-le),0.76);
+  for i=0 upto 15:
+    fill dot shifted (1/2(w,ex)+((9.2le,0) rotated (22.5*i)));
+  endfor
+  setap("uap",(1/2w,ex+0.7pt));
+  setap("dap",(1/2w,-0.7pt));
+endchr;
+forgd:=true;
+
+beginrefchr("uni200B",0);
+endchr;
+
+vardef find_telcoap(expr yoffset, pena, side, telcop, telcoap) =
+  save t,y,finaly,ap,lastt; pair ap; finaly:=if pair yoffset: ypart fi yoffset;
+  y:=finaly;
+  t:=telcop heighttimes y;
+  forever:
+    draw_change_of_angle:=false;
+    ap:=change_angle(point t of telcop, penangle t of telcoap+side, pena+side);
+    y:=y+(finaly-ypart(ap));
+    lastt:=t; t:=telcop heighttimes y;
+    if t=-1: t:= if lastt<0.5: 0 else: length telcop fi; fi
+    exitif abs(t-lastt) <= epsilon;
+  endfor
+  (xpart ap,finaly)
+enddef;
+
+input tengenc;
+
+if tracing:
+ input stdteng;
+fi
+input addteng;
+
+
+def draw_wtehta(expr wt,ht) =
+  a0=39;a1=34;a2=a1+3;a3=45;
+  z0=(-wt,y3+ht);
+  z1=(0.23[x0,x3],0.43[y3,y0]);
+  z2=(0.1[x3,x0],0.45[y3,y0]);
+  z3=(wt,tex+0.2pt);
+  ap1=ang(a0..a1--a2..a3);
+  p1=z0{-dir (a1-5)}..z1{right}..z2{right}..{-dir a3}z3;
+  draw_stroke(p1,ap1);
+  setap("dap",(0,tex+0.5pt));
+  setap("uap",(0,tex-0.3pt+ht));
+enddef;
+
+beginchr(wtehta_narrow,0#);
+  draw_wtehta(0.75pt,1.9pt);
+endchr;
+beginchr(wtehta_norm,0#);
+  draw_wtehta(1.3pt,1.9pt);
+endchr;
+beginchr(wtehta_wide,0#);
+  draw_wtehta(1.9pt,1.9pt);
+endchr;
+combinechr(wtehta,dottedcircle,"uap",wtehta_norm,"dap");
+
+pause;
+combinechr("test1",dottedcircle,"uap",wtehta_wide,"dap");
+combinechr("test2",dottedcircle,"uap",wtehta_narrow,"dap");
+combinechr("test3","test1","uap",atehta_norm,"dap");
+pause;
+combinechr("test4",wtehta,"uap",atehta_norm,"dap");
+pause;
+combinechr("test5","test2","uap",atehta_norm,"dap");
+pause;
+
+%combinechr("test1",quesse,"uap",wtehta_norm,"dap");
+%pause;
+%combinechr("test2",ungwe,"uap",wtehta_wide,"dap");
+%pause;
+%combinechr("test3",thuule,"uap",wtehta_narrow,"dap");
+%pause;
+%combinechr("test4",hwesta,"uap",wtehta_narrow,"dap");
+%pause;
+%combinechr("test5",longcarr,"uap",wtehta_narrow,"dap");
+%pause;
+%combinechr("test6",ampa,"uap",wtehta_wide,"dap");
+%pause;
+%combinechr("test7",unque,"uap",wtehta_wide,"dap");
+%pause;
+

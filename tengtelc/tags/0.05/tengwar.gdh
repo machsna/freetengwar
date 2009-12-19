@@ -1,0 +1,256 @@
+// Tengwar Telcontar - a Tengwar unicode typeface.
+// Copyright (C) 2005 Johan Winge
+// 
+// Tengwar Telcontar is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation; either version 2 of the
+// License, or (at your option) any later version.
+// 
+// As a special exception, if you create a document which uses this
+// font, and embed this font or unaltered portions of this font into
+// the document, this font does not by itself cause the resulting
+// document to be covered by the GNU General Public License. This
+// exception does not however invalidate any other reasons why the
+// document might be covered by the GNU General Public License. If you
+// modify this font, you may extend this exception to your version of
+// the font, but you are not obligated to do so. If you do not wish to
+// do so, delete this exception statement from your version.
+// 
+// Tengwar Telcontar is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with Tengwar Telcontar; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+table(glyph)
+ c_tengwide=(g_ando,g_umbar,g_anga,g_ungwe,
+             g_anto,g_ampa,g_anca,g_unque,
+             g_nuumen,g_malta,g_noldo,g_nwalme,
+             g_extanto,g_extampa,g_extanca,g_extunque,
+             g_mhtengwa);
+ c_tenglambewide=(g_lambe,g_alda);
+ c_tengnarrow=(g_tinco,g_parma,g_calma,g_quesse,
+                g_thuule,g_formen,g_harma,g_hwesta,
+                g_oore,g_vala,g_anna,g_vilya,
+                g_extthuule,g_extformen,g_extharma,g_exthwesta,
+                g_roomen,g_arda,g_roomen_open,g_arda_open,
+                g_silme,g_silmenuq,g_aare,g_aarenuq,
+                g_silme_flat,g_silmenuq_flat,g_aare_flat,g_aarenuq_flat,
+                g_silme_open,g_silmenuq_open,g_aare_open,g_aarenuq_open,
+                g_hyarmen,g_hwestasin,g_yanta,g_uure,
+                g_shortcarr,g_longcarr,g_halla,g_wtengwa,g_wtengwa_desc,g_atengwa,g_conncarr,g_openanna,g_beleriandicmh);
+
+  c_captengwide=(g_ando_cap,g_umbar_cap,g_anga_cap,g_ungwe_cap,
+                 g_anto_cap,g_ampa_cap,g_anca_cap,g_unque_cap,
+                 g_nuumen_cap,g_malta_cap,g_noldo_cap,g_nwalme_cap,
+                 g_extanto_cap,g_extampa_cap,g_extanca_cap,g_extunque_cap,
+                 g_mhtengwa_cap);
+  c_captenglambewide=(g_lambe_cap,g_alda_cap);
+  c_captengnarrow=(g_tinco_cap,g_parma_cap,g_calma_cap,g_quesse_cap,
+                   g_thuule_cap,g_formen_cap,g_harma_cap,g_hwesta_cap,
+                   g_oore_cap,g_vala_cap,g_anna_cap,g_vilya_cap,
+                   g_extthuule_cap,g_extformen_cap,g_extharma_cap,g_exthwesta_cap,
+                g_roomen,g_arda,g_roomen_open,g_arda_open,
+                g_silme,g_silmenuq,g_aare,g_aarenuq,
+                g_silme_flat,g_silmenuq_flat,g_aare_flat,g_aarenuq_flat,
+                g_silme_open,g_silmenuq_open,g_aare_open,g_aarenuq_open,
+                g_hyarmen_cap,g_hwestasin,g_yanta_cap,g_uure,
+                   g_shortcarr_cap,g_longcarr_cap,g_halla_cap,g_wtengwa,g_wtengwa_desc,g_conncarr,g_atengwa_cap,g_openanna_cap,g_beleriandicmh_cap);
+
+ c_tengmayconr=(g_quesse,     g_quesse_conl,g_ungwe,     g_ungwe_conl,g_vilya,     g_vilya_conl,g_nwalme,     g_nwalme_conl,g_lambe,     g_lambe_conl,g_alda,     g_alda_conl,g_conncarr);
+ c_tengconr   =(g_quesse_conr,g_quesse_conb,g_ungwe_conr,g_ungwe_conb,g_vilya_conr,g_vilya_conb,g_nwalme_conr,g_nwalme_conb,g_lambe_conr,g_lambe_conb,g_alda_conr,g_alda_conb,g_conncarr_conr);
+ c_tengmayconl=(g_tinco,     g_parma,     g_quesse,     g_ando,     g_umbar,     g_ungwe,     g_hwesta,     g_unque,     g_nuumen,     g_malta,     g_nwalme,     g_oore,     g_vala,     g_vilya,     g_exthwesta,     g_extunque,     g_roomen,     g_arda,     g_roomen_open,     g_arda_open,     g_lambe,     g_alda,     g_shortcarr,     g_longcarr,     g_openanna);
+ c_tengconl   =(g_tinco_conl,g_parma_conl,g_quesse_conl,g_ando_conl,g_umbar_conl,g_ungwe_conl,g_hwesta_conl,g_unque_conl,g_nuumen_conl,g_malta_conl,g_nwalme_conl,g_oore_conl,g_vala_conl,g_vilya_conl,g_exthwesta_conl,g_extunque_conl,g_roomen_conl,g_arda_conl,g_roomen_conl_open,g_arda_conl_open,g_lambe_conl,g_alda_conl,g_shortcarr_conl,g_longcarr_conl,g_openanna_conl);
+
+ c_tengwar=(c_tengwide,c_tenglambewide,c_tengnarrow,c_tengconr,c_tengconl,c_captengwide,c_captenglambewide,c_captengnarrow);
+
+ c_tengstemupleft=(g_anto,g_ampa,g_extanto,g_extampa,g_thuule,g_formen,g_extthuule,g_extformen);
+ c_tengstemupright=(g_anca,g_unque,g_unque_conl,g_extanca,g_extunque,g_extunque_conl,g_harma,g_hwesta,g_hwesta_conl,g_extharma,g_exthwesta,g_exthwesta_conl);
+ c_tengstemdownleft=(g_ando,g_ando_conl,g_umbar,g_umbar_conl,g_extanto,g_extampa,g_tinco,g_tinco_conl,g_parma,g_parma_conl,g_extthuule,g_extformen);
+ c_tengstemdownright=(g_anga,g_ungwe,g_ungwe_conl,g_ungwe_conr,g_ungwe_conb,g_extanca,g_extunque,g_calma,g_quesse,g_quesse_conl,g_quesse_conr,g_quesse_conb,g_extharma,g_exthwesta);
+
+ c_uptehta    =(g_atehta,     g_ytehta,     g_etehta,     g_itehta,     g_otehta,     g_utehta,     g_overbar,     g_wtehta);
+ c_upnormtehta=(g_atehta_norm,g_ytehta_norm,g_etehta_norm,g_itehta_norm,g_otehta_norm,g_utehta_norm,g_overbar_norm,g_wtehta_norm);
+
+ c_downtehta    =(g_downatehta,     g_downytehta,     g_downitehta,     g_longcarrtehta,     g_underbar);
+ c_downnormtehta=(g_downatehta_norm,g_downytehta_norm,g_downitehta_norm,g_longcarrtehta_norm,g_underbar_norm);
+
+ c_tehta    =(c_uptehta,c_downtehta);
+ c_normtehta=(c_upnormtehta,c_downnormtehta);
+
+ c_alluptehta=(c_upnormtehta,g_otehta_wide,g_otehta_narrow,g_overbar_wide,g_overbar_lambe,g_overbar_silme,g_wtehta_narrow,g_wtehta_wide);
+ c_alldowntehta=(c_downnormtehta,g_underbar_wide,g_underbar_roomen,g_underbar_lambe,g_longcarrtehta_long);
+ c_alltehta=(c_alluptehta,c_alldowntehta);
+
+ c_alltengwide=(c_tengwide,c_captengwide,g_ungwe_conr,g_ungwe_conb,g_unque_conl,g_nwalme_conr,g_nwalme_conb,g_ando_conl,g_umbar_conl,g_nuumen_conl,g_malta_conl);
+ c_alllambewide=(g_lambe,g_lambe_conr,g_lambe_conb,g_lambe_conl,g_alda,g_alda_conr,g_alda_conl,g_alda_conb);
+ c_allroomen=(g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open);
+ c_allsilme=(g_silme,g_silme_flat,g_silme_open,g_aare,g_aare_flat,g_aare_open);
+ c_allsilmenuq=(g_silmenuq,g_silmenuq_flat,g_silmenuq_open,g_aarenuq,g_aarenuq_flat,g_aarenuq_open);
+endtable;
+
+table(feature)
+  tengconnect {
+    id=201;
+    name.LG_USENG = string("Connect tengwar");
+    default = true;
+  }
+  silmepref {
+    id=202;
+    name.LG_USENG = string("Tehta on Silme");
+    default = prefleft;
+    settings {
+      left {
+        value=0;
+        name.LG_USENG = string("Always to the left");
+      }
+      prefleft {
+        value=1;
+        name.LG_USENG = string("Prefer left");
+      }
+      prefright {
+        value=2;
+        name.LG_USENG = string("Prefer right");
+      }
+      right {
+        value=3;
+        name.LG_USENG = string("Always to the right");
+      }
+    }
+  }
+  capteng {
+    id=203;
+    name.LG_USENG = string("'Capital' tengwar");
+    default = non;
+    settings {
+      non {
+        value=0;
+        name.LG_USENG = string("None");
+      }
+      init {
+        value=1;
+        name.LG_USENG = string("Word initially");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("All");
+      }
+    }
+  }
+  descwtengwa {
+    id=204;
+    name.LG_USENG = string("Descending w-tengwa");
+    default = false;
+  }
+endtable;
+
+table(sub)
+  pass(1)
+    if (capteng==init)
+      (c_tengwide,c_tenglambewide,c_tengnarrow) > (c_captengwide,c_captenglambewide,c_captengnarrow) / g_space _ ;
+    elseif (capteng==all)
+      (c_tengwide,c_tenglambewide,c_tengnarrow) > (c_captengwide,c_captenglambewide,c_captengnarrow) ;
+    endif;
+  endpass;
+  pass(2)
+    if (descwtengwa)
+      g_wtengwa > g_wtengwa_desc ;
+    endif;
+    if (tengconnect)
+      c_tengmayconr c_tengmayconl > c_tengconr c_tengconl / _ [c_tehta[c_tehta[c_tehta[c_tehta[c_tehta]?]?]?]?]? _ ;
+    endif;
+    if (silmepref==left)
+      g_silme > g_silme_flat / _ [c_downtehta[c_downtehta]?]? c_uptehta;
+      g_aare > g_aare_flat / _ [c_downtehta[c_downtehta]?]? c_uptehta;
+      g_silmenuq > g_silmenuq_flat / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
+      g_aarenuq > g_aarenuq_flat / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
+    elseif (silmepref==prefleft)
+      g_silme > g_silme_flat / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_atehta,g_etehta,g_itehta,g_utehta);
+      g_aare > g_aare_flat / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_atehta,g_etehta,g_itehta,g_utehta);
+      g_silme > g_silme_open / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_otehta);
+      g_aare > g_aare_open / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_otehta);
+      g_silmenuq > g_silmenuq_flat / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? (g_downatehta,g_downytehta,g_downitehta,g_longcarrtehta);
+      g_aarenuq > g_aarenuq_flat / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? (g_downatehta,g_downytehta,g_downitehta,g_longcarrtehta);
+//      g_silmenuq > g_silmenuq_open / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? ();
+//     g_aarenuq > g_aarenuq_open / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? ();
+    elseif (silmepref==prefright)
+      g_silme > g_silme_flat / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_utehta);
+      g_aare > g_aare_flat / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_utehta);
+      g_silme > g_silme_open / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_atehta,g_etehta,g_itehta,g_otehta);
+      g_aare > g_aare_open / _ [(c_downtehta,g_overbar)[(c_downtehta,g_overbar)[(c_downtehta,g_overbar)]?]?]? (g_atehta,g_etehta,g_itehta,g_otehta);
+//      g_silmenuq > g_silmenuq_flat / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? ();
+//      g_aarenuq > g_aarenuq_flat / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? ();
+      g_silmenuq > g_silmenuq_open / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? (g_downatehta,g_downytehta,g_downitehta,g_longcarrtehta);
+      g_aarenuq > g_aarenuq_open / _ [(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)[(c_uptehta,g_underbar)]?]?]?]? (g_downatehta,g_downytehta,g_downitehta,g_longcarrtehta);
+    elseif (silmepref==right)
+      g_silme > g_silme_open / _ [c_downtehta[c_downtehta]?]? c_uptehta;
+      g_aare > g_aare_open / _ [c_downtehta[c_downtehta]?]? c_uptehta;
+      g_silmenuq > g_silmenuq_open / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
+      g_aarenuq > g_aarenuq_open / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
+    endif;
+    g_atengwa > g_atengwa_desc / _ g_space ;
+  endpass;
+  pass(3)
+    (g_roomen,g_roomen_conl,g_arda,g_arda_conl) > (g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open) / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta ;
+    c_tehta > c_normtehta / c_tengwar [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+  endpass;
+  pass(4)
+    g_overbar_norm > g_overbar_wide / c_alltengwide ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_underbar_norm > g_underbar_wide / c_alltengwide ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_overbar_norm > g_overbar_lambe / c_alllambewide ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_overbar_norm > g_overbar_silme / c_allsilme ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_underbar_norm > g_underbar_roomen / c_allroomen ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_underbar_norm > g_underbar_silme / c_allsilmenuq ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_otehta_norm > g_otehta_wide / (g_overbar_wide,g_wtehta_wide,c_alltengwide) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_otehta_norm > g_otehta_narrow / (g_silme_flat,g_aare_flat) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_otehta_norm > g_otehta_narrow / (g_shortcarr,g_longcarr) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? c_tengstemupleft ;
+    (g_underbar_norm,g_longcarrtehta_norm) > (g_underbar_lambe,g_longcarrtehta_long) / (g_lambe,g_lambe_conl,g_lambe_conr,g_lambe_conb) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+
+    g_wtehta_norm > g_wtehta_wide / (c_alltengwide,c_alllambewide) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+    g_wtehta_norm > g_wtehta_narrow / (g_shortcarr,g_longcarr,g_thuule,g_formen,g_extthuule,g_extformen,g_harma,g_hwesta,g_hwesta_conl,g_extharma,g_exthwesta,g_exthwesta_conl) ^ [c_alltehta[c_alltehta[c_alltehta[c_alltehta]?]?]?]? _ ;
+  endpass;
+  pass(5)
+  endpass;
+endtable;
+
+table(pos)
+  pass(1)
+    c_tengwar (c_alluptehta) { attach{ to=@1; at=uap; with=dap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _;
+  endpass;
+  pass(2)
+    c_tengwar (c_alldowntehta) { attach{ to=@1; at=dap; with=uap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+  endpass;
+  pass(3)
+    c_allroomen (c_downnormtehta,g_underbar_roomen) { attach{ to=@1; at=dap; with=luap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+    (g_silme_flat,g_aare_flat) (c_alluptehta,g_overbar_silme) { attach{ to=@1; at=uap; with=rdap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _;
+    (g_silme_open,g_aare_open) (c_alluptehta,g_overbar_silme) { attach{ to=@1; at=uap; with=ldap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _;
+    (g_silmenuq_flat,g_aarenuq_flat) (c_alldowntehta,g_underbar_silme) { attach{ to=@1; at=dap; with=luap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+    (g_silmenuq_open,g_aarenuq_open) (c_alldowntehta,g_underbar_silme) { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+    (g_lambe,g_lambe_conl,g_lambe_conr,g_lambe_conb) g_underbar_lambe { attach{ to=@1; at=cap; with=uap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+    c_tengstemupleft (g_overbar_norm,g_overbar_wide) { attach{ to=@1; at=uap; with=rdap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _;
+    c_tengstemupright (g_overbar_norm,g_overbar_wide) { attach{ to=@1; at=uap; with=ldap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _;
+    c_tengstemdownleft (g_underbar_norm,g_underbar_wide) { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+    c_tengstemdownright (g_underbar_norm,g_underbar_wide) { attach{ to=@1; at=dap; with=luap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+  endpass;
+  pass(4)
+    (g_overbar_norm,g_overbar_wide,g_overbar_lambe,g_wtehta_norm,g_wtehta_wide,g_wtehta_narrow) (c_upnormtehta,g_otehta_wide,g_otehta_narrow,g_wtehta_wide,g_wtehta_narrow) { attach{ to=@1; at=uap; with=dap }; insert=true;} / _ [c_alldowntehta[c_alldowntehta]?]? _ ;
+    (g_underbar_norm,g_underbar_wide) c_downnormtehta { attach{ to=@1; at=dap; with=uap }; insert=true;} / _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+    (g_lambe,g_lambe_conl,g_lambe_conr,g_lambe_conb) (g_downatehta_norm,g_downytehta_norm,g_downitehta_norm,g_longcarrtehta_long) { attach{ to=@1; at=dap; with=dap }; insert=true;} / _ [(g_underbar_lambe,c_alluptehta)[(g_underbar_lambe,c_alluptehta)[(g_underbar_lambe,c_alluptehta)]?]?]? _ ;
+  endpass;
+  pass(5)
+    (g_overbar_silme) (c_upnormtehta,g_otehta_wide,g_otehta_narrow) { attach{ to=@2; at=ruap; with=rdap }; insert=true;} / (g_silme_flat,g_aare_flat) _ [c_alldowntehta[c_alldowntehta]?]? _ ;
+    (g_overbar_silme) (c_upnormtehta,g_otehta_wide,g_otehta_narrow) { attach{ to=@2; at=luap; with=ldap }; insert=true;} / (g_silme_open,g_aare_open) _ [c_alldowntehta[c_alldowntehta]?]? _ ;
+    (g_underbar_silme) (c_downnormtehta) { attach{ to=@2; at=ldap; with=luap }; insert=true;} / (g_silmenuq_flat,g_aarenuq_flat) _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+    (g_underbar_silme) (c_downnormtehta) { attach{ to=@2; at=rdap; with=ruap }; insert=true;} / (g_silmenuq_open,g_aarenuq_open) _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+    (g_underbar_roomen) c_downnormtehta { attach{ to=@1; at=ldap; with=luap }; insert=true;} /  _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _ ;
+    (g_overbar_norm,g_overbar_wide) (c_upnormtehta,g_otehta_wide,g_otehta_narrow,g_wtehta_narrow) { attach{ to=@2; at=ruap; with=dap }; insert=true;} / c_tengstemupleft _ [c_alldowntehta[c_alldowntehta]?]? _;
+    (g_overbar_norm,g_overbar_wide) (c_upnormtehta,g_otehta_wide,g_otehta_narrow,g_wtehta_narrow) { attach{ to=@2; at=luap; with=dap }; insert=true;} / c_tengstemupright _ [c_alldowntehta[c_alldowntehta]?]? _;
+    (g_underbar_norm,g_underbar_wide) c_downnormtehta { attach{ to=@2; at=rdap; with=uap }; insert=true;} / c_tengstemdownleft _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+    (g_underbar_norm,g_underbar_wide) c_downnormtehta { attach{ to=@2; at=ldap; with=uap }; insert=true;} / c_tengstemdownright _ [c_alluptehta[c_alluptehta[c_alluptehta]?]?]? _;
+  endpass;
+  pass(6)
+  endpass;
+endtable;

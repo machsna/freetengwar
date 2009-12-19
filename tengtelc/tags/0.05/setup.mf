@@ -1,0 +1,42 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005 Johan Winge
+
+designsize:=10pt#;
+
+em#:=10pt#;
+o#:=0.12pt#;
+
+% Latin
+ex#:=3.9pt#;
+en#:=3.1pt#;
+asc#:=ex#+2.6pt#;
+desc#:=2.7pt#;
+
+% Tengwar
+tex#:=3.4pt#;
+ten#:=3.15pt#;
+tasc#:=tex#+3.3pt#;
+tdesc#:=3.2pt#;
+
+% "Capital" tengwar
+ctex#:=1.1tex#;
+cten#:=1.0ten#;
+ctasc#:=1.05tasc#;
+ctdesc#:=1.1tdesc#;
+
+% font_quad em#; 
+
+mode_setup;
+
+define_pixels(pt,em,asc,desc,o,ex,en,tasc,tdesc,tex,ten,ctex,cten,ctasc,ctdesc);
+
+leftside=1; rightside=2; open=3; closed=4;
+normal=5; swash=6; conleft=7; conright=8; conboth=9; dotlig=10; truncated=11;
+conlefttrunc=12; flat=13;
+ascend=14; descend=15; short=16; updown=17; capital=18; extended=19;
+
+string font_ps_name, font_name, font_weight, font_copyright, font_version;
+
+font_copyright:="Copyright (c) 2005 by Johan Winge";
+font_version="0.04";
+

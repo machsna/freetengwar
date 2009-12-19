@@ -1,0 +1,291 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+tetexbugtest=xpart point 3 of makepath (pencircle xscaled 3 yscaled 2.999 rotated 45);
+if tetexbugtest = 0.5:
+  % All is well.
+  def use(expr a) =
+    pickup pencircle xscaled tecil_w yscaled tecil_h rotated a
+  enddef;
+elseif tetexbugtest = 1:
+  message "It seems like your copy of METAFONT produces unsatisfactory rotated elliptical";
+  message "pens. As of this writing, the reason for this is unknown to me, but I do know";
+  message "that it will result in a distorted rendering of many of your fonts. Not this";
+  message "one, however, because I will now rotate the pens after they have been converted";
+  message "from 'future pen' to 'pen'. This will not produce the optimal output, but it";
+  message "avoids the heavily distorted pens your system would otherwise create.";
+  def use(expr a) =
+    pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
+  enddef;
+else:
+  message "This shouldn't happen. Please mail me at johan.winge@home.se and tell me as";
+  message "much as possible about your TeX system. Also please tell me what number you";
+  message "see here: " & decimal tetexbugtest;
+  def use(expr a) =
+    pickup (pencircle xscaled tecil_w yscaled tecil_h) rotated a
+  enddef;
+fi
+
+vardef penangle expr t of p =
+  ypart point t of p
+enddef;
+
+secondarydef p heighttimes y =
+  ypart(((-infinity,y)..(infinity,y)) intersectiontimes p)
+enddef;
+
+% Convert an angle expression to a regular path. This is neat!
+% An example of an angle expression: p & 45..40..35 & q..40--30
+% Here p and q should be angle paths, i.e. created from angle
+% expressions. Example: p=ang(30..45); q=ang(35--40..42..45);
+% An angle path works just as a regular path, but only vertical
+% coordinates are defined by the user. The nodes are automatically
+% spaced horizontally with the interval angledx:
+angledx=50;
+def msp = ,"to", enddef;
+def mlp = ,"{curl1} to {curl1}", enddef;
+def mcp = ,"conc hide(n:=n-1;)", enddef;
+def ang(text s) = begingroup
+  save to, conc, n; let to := .. ; let conc := & ; n:=-1;
+  save .. , -- , & ; let .. := msp; let -- := mlp; let & := mcp;
+  for i=s:
+    if path i or pair i:
+      i shifted (incr n*angledx,0)
+      hide(n:=n+length i;)
+    elseif string i:
+      scantokens i
+    elseif numeric i:
+      (incr n*angledx,i)
+    fi
+  endfor
+endgroup enddef;
+
+vardef stretch(expr l, p)=
+  ang(penangle 0 of p for i=1 upto l:..penangle length p*i/l of p endfor)
+enddef;
+
+treshold=0.5;
+def draw_stroke(expr stroke, angles) = begingroup
+  def draw_substroke(expr t, tt) =
+    v:=penangle t of angles;
+    if (abs(v-penangle tt of angles)<treshold):
+      use(v); draw subpath (t,tt) of stroke;
+%      drawdot point t of stroke;
+    else:
+      draw_substroke(t,(t+tt)/2);
+      draw_substroke((t+tt)/2,tt);
+    fi
+  enddef;
+%  pickup pencircle scaled 0.01pt; draw angles shifted (0,-100);
+  save v,t,tt,a,b,len; t:=0; len=length stroke;
+  if (length angles<>len): message "Warning! Stroke and angle path should be of equal length."; fi
+  forever:
+    tt:=directiontime right of subpath (t,infinity) of angles;
+    if tt=-1:
+      tt:=len;
+    elseif tt<=epsilon:
+      a:=xpart (angles intersectiontimes ((point t of angles)+(0,treshold)--(point t of angles)+(infinity,treshold)));
+      b:=xpart (angles intersectiontimes ((point t of angles)+(0,-treshold)--(point t of angles)+(infinity,-treshold)));
+      tt:=if (a+b=-2): len elseif (a*b<=0): max(a,b) else: min(a,b) fi;
+    else:
+      tt:=floor t+tt if tt<1:[t-floor t,1]fi;
+    fi
+    draw_substroke(t,tt);
+    exitif(tt>=len);
+    t:=tt;
+  endfor
+endgroup enddef;
+
+def arc(expr sang,eang,centrum,diameter) =
+  (subpath(xpart(fullcircle intersectiontimes ((0,0)..(1pt,0) rotated sang))+(sang-(sang mod 360))/45,%
+           xpart(fullcircle intersectiontimes ((0,0)..(1pt,0) rotated eang))+(eang-(eang mod 360))/45)%
+   of fullcircle) scaled diameter shifted centrum;
+enddef;
+
+% Fill a circle sector to simulate that the pen's angle has changed
+% by holding one corner of the nib fixed. Returns endpoint.
+boolean draw_change_of_angle; draw_change_of_angle:=true;
+vardef change_angle(expr spt, sang, eang) =
+  save p,c; path p; pair c;
+  c=spt-1/2tecil_w*dir sang;
+  if (abs(sang-eang)>1) and draw_change_of_angle:
+    p=arc(sang,eang,c,2tecil_w);
+    fill c--p--cycle; 
+  fi
+  draw_change_of_angle:=true;
+  c+1/2tecil_w*dir eang
+enddef;
+
+string pausedummy;
+def pause =
+  if not tracing: message "Press Enter to continue."; pausedummy:=readstring; fi
+enddef;
+
+
+% While this file contains much generic routines, all of the following deals with the design of Tengwar Telcontar. 
+% This is also the code most in need of a complete rewrite, and consequently all use of this code in the rest of the sources...
+
+pair conpoint[]; numeric conpenangle[];
+conpenangle1=40; use(conpenangle1); top conpoint1=(0,ex);         % Connecting latin
+conpenangle2=35; conpoint2=(1.4pt,1/2[ex,asc]);                   % For f-ligatures
+conpenangle3=45; conpoint3=(whatever,1/2tex);                     % luuva, teema 1 and 2
+conpenangle4=34; use(conpenangle4); bot conpoint4=(whatever,0);   % closingbar teema 2
+conpenangle5=45; conpoint5=(whatever,1/2tex);                     % luuva, teema 3 and 4
+conpenangle6=35; use(conpenangle6); top conpoint6=(whatever,tex); % closingbar teema 4
+conpenangle7=35; use(conpenangle7); top conpoint7=(0,tex);        % Connecting tengwar
+conpenangle8=45; conpoint8=(whatever,1/2ctex);                     % luuva, teema 1 and 2, capital tengwar
+conpenangle9=45; conpoint9=(whatever,1/2ctex);                     % luuva, teema 3 and 4, capital tengwar
+conpenangle10=35; use(conpenangle10); top conpoint10=(whatever,ctex);% closingbar teema 4, capital tengwar
+
+
+def draw_dot(suffix $)(expr fact) =
+%  fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;
+ draw_diamond($)(fact);
+enddef;
+
+def draw_diamond(suffix $)(expr fact) =
+  x$a=x$c=x$; y$b=y$d=y$;
+  y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.58*fact*tecil_w;
+  k:= -0.75fact+1 ; %0.25;
+  fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
+enddef;
+
+def sign(expr x) = x/abs(x) enddef;
+
+def rserif(suffix $)(expr w, h, ed, md, sd, angles) =
+  begingroup
+    save sdir, edir, mdir, wdt, hgt; pair sdir, edir, mdir;
+    edir = if numeric ed: dir fi ed;
+    mdir = if numeric md: dir fi md;
+    sdir = if numeric sd: dir fi sd;
+%    wdt = if pair w: abs fi w; hgt = if pair h: abs fi h;
+    wdt = abs w; hgt = abs h;
+    save p, t, n, dn; path p; n:=0.5; dn:=0.2;
+    z$a = z$ + hgt*sdir;
+    forever:
+      n:=n + dn;
+      p:=(n[z$a,z$] - sign(sdir rotated 90 dotprod edir)*wdt*sdir rotated 90){edir}...{sdir}z$a;
+%      t:=directiontime mdir rotated -90 of p;
+      t:=max(directiontime mdir rotated -90 of p,directiontime mdir rotated 90 of p);
+      use(penangle t of angles);
+      if (z$ - point t of p - penoffset mdir rotated 90 of currentpen) dotprod mdir * dn < 0: dn:=-1/2dn; fi
+      exitif (abs(dn)<=epsilon) or (n>2) or (n<0);
+    endfor
+%    show n;
+    z$b = point t of p; z$c = point 0 of p;
+    z$d = z$a+whatever*sdir = z$c+whatever*edir;
+    labels($a,$b,$c,$d);
+    p
+  endgroup
+enddef;
+
+def tserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  rserif($,w*sqrt(sqrt(abs(hp*(z$$-z$))/2.5pt)),hp*(z$$-z$),ed,up,angle(z$$-z$)+extraa,angles)
+enddef;
+
+def bserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  reverse rserif($$,w*sqrt(sqrt(abs(hp*(z$$-z$))/2.0pt)),hp*(z$-z$$),ed,down,angle(z$-z$$)-extraa,reverse angles)
+enddef;
+
+
+noorn=0; rounded=1; widecon=2; narrcon=3; curved=4;
+
+vardef ornpath(expr ustyle,dstyle)(suffix $,$$) =
+  save upath, dpath, ul, dl, uea, dea; path upath, dpath;
+  if ustyle=curved:
+    if dstyle=noorn: ul=0.33; uea=0;
+%    elseif dstyle=rounded:
+%    elseif dstyle=widecon:
+    elseif dstyle=narrcon: ul=0.33; uea=-1;
+    elseif dstyle=curved: ul=0.33; uea=0; fi
+    upath=tserif($,$$,0.25pt,ul,20+180,uea,ornang(ustyle,dstyle));
+  else:
+    if dstyle=noorn: ul=0.4; uea=1;
+%    elseif dstyle=rounded:
+%    elseif dstyle=widecon:
+    elseif dstyle=narrcon: ul=0.33; uea=0;
+    elseif dstyle=curved: ul=0.33; uea=1; fi
+    if ustyle=noorn:
+      upath=z$;
+    elseif ustyle=rounded:
+      upath=tserif($,$$,0.65pt,ul,25,uea,ornang(ustyle,dstyle));
+    elseif ustyle=widecon:
+      upath=tserif($,$$,0.65pt,ul,0,uea,ornang(ustyle,dstyle));
+    elseif ustyle=narrcon:
+      upath=tserif($,$$,0.25pt,ul,0,uea,ornang(ustyle,dstyle));
+    fi
+  fi
+
+  if dstyle=noorn:
+    dpath=z$$;
+  elseif dstyle=rounded:
+
+  elseif dstyle=widecon:
+
+  elseif dstyle=narrcon:
+    if ustyle=noorn: dl=0.5; dea=0;
+    elseif (ustyle=rounded) or (ustyle=widecon): dl=0.3; dea=0;
+    elseif ustyle=narrcon: dl=0.3; dea=0;
+    elseif ustyle=curved: dl=0.3; dea=-1; fi
+    dpath=bserif($,$$,0.25pt,dl,180,dea,ornang(ustyle,dstyle));
+  elseif dstyle=curved:
+    if ustyle=curved: dea=0; else: dea=1; fi
+    dpath=bserif($,$$,0.25pt,0.3,20,dea,ornang(ustyle,dstyle));
+  fi
+
+  upath..dpath
+enddef;
+
+vardef ornang(expr ustyle,dstyle) =
+  if (ustyle=rounded) and (dstyle=curved):
+    ang(38..34..31..26)
+  elseif (ustyle=noorn) and (dstyle=narrcon):
+    ang(33..41)
+  elseif (ustyle=rounded) and (dstyle=narrcon):
+    ang(41..36..33..41)
+  elseif (ustyle=rounded) and (dstyle=noorn):
+    ang(41..36)
+  elseif (ustyle=noorn) and (dstyle=curved):
+    ang(33..26)
+  elseif (ustyle=curved) and (dstyle=narrcon):
+    ang(26..31..34..38)
+  elseif (ustyle=narrcon) and (dstyle=narrcon):
+    ang(36..36..34..38)
+  elseif (ustyle=curved) and (dstyle=curved):
+    ang(26..36..33..26)
+  elseif (ustyle=widecon) and (dstyle=curved):
+    ang(38..34..31..26)
+  elseif (ustyle=widecon) and (dstyle=narrcon):
+    ang(41..36..33..41)
+  elseif (ustyle=widecon) and (dstyle=noorn):
+    ang(41..36)
+  elseif (ustyle=narrcon) and (dstyle=noorn):
+    ang(36..36)
+  elseif (ustyle=curved) and (dstyle=noorn):
+    ang(26..31)
+  fi
+enddef;

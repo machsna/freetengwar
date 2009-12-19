@@ -1,0 +1,233 @@
+table(glyph) { MUnits = 2048; PointRadius = 0m; }
+g_space = ps("space") { 
+ break = BREAK_WHITESPACE;
+};
+g_dottedcircle = ps("uni25CC") { 
+ uap = point(439m,942m);
+ dap = point(439m,-143m);
+};
+g_diacriticdot = ps("diacriticdot") { 
+};
+g_uni0307_normal = ps("uni0307.normal") { 
+ dap = point(0m,901m);
+ uap = point(0m,1106m);
+};
+g_uni0307 = ps("uni0307") { 
+ uap = point(439m,1147m);
+ dap = point(439m,-143m);
+};
+g_uni0308_normal = ps("uni0308.normal") { 
+ dap = point(0m,901m);
+ uap = point(0m,1106m);
+};
+g_uni0308_narrow = ps("uni0308.narrow") { 
+ dap = point(0m,901m);
+ uap = point(0m,1106m);
+};
+g_uni0308 = ps("uni0308") { 
+ uap = point(439m,1147m);
+ dap = point(439m,-143m);
+};
+g_uni030A_normal = ps("uni030A.normal") { 
+ dap = point(0m,901m);
+};
+g_uni030A = ps("uni030A") { 
+ dap = point(439m,-143m);
+};
+g_A = ps("A") { 
+};
+g_F = ps("F") { 
+};
+g_P = ps("P") { 
+};
+g_S = ps("S") { 
+};
+g_T = ps("T") { 
+};
+g_W = ps("W") { 
+};
+g_a = ps("a") { 
+ uap = point(465m,942m);
+};
+g_adieresis = ps("adieresis") { 
+ uap = point(465m,1147m);
+};
+g_aring = ps("aring") { 
+};
+g_b = ps("b") { 
+};
+g_b_conl = ps("b.conl") { 
+};
+g_c = ps("c") { 
+};
+g_d = ps("d") { 
+};
+g_e = ps("e") { 
+ uap = point(437m,942m);
+};
+g_edieresis = ps("edieresis") { 
+ uap = point(437m,1147m);
+};
+g_f = ps("f") { 
+};
+g_f_conl = ps("f.conl") { 
+};
+g_f_dotlig = ps("f.dotlig") { 
+};
+g_f_conl_dotlig = ps("f.conl_dotlig") { 
+};
+g_g = ps("g") { 
+};
+g_g_swash = ps("g.swash") { 
+};
+g_h = ps("h") { 
+};
+g_h_conl = ps("h.conl") { 
+};
+g_dotlessi = ps("dotlessi") { 
+ uap = point(195m,942m);
+};
+g_dotlessi_conl = ps("dotlessi.conl") { 
+ uap = point(195m,942m);
+};
+g_i = ps("i") { 
+ uap = point(195m,1147m);
+};
+g_i_conl = ps("i.conl") { 
+ uap = point(195m,1147m);
+};
+g_idieresis = ps("idieresis") { 
+ uap = point(195m,1147m);
+};
+g_idieresis_conl = ps("idieresis.conl") { 
+ uap = point(195m,1147m);
+};
+g_dotlessj = ps("uni0237") { 
+ uap = point(207m,942m);
+};
+g_dotlessj_conl = ps("uni0237.conl") { 
+ uap = point(207m,942m);
+};
+g_j = ps("j") { 
+ uap = point(207m,1147m);
+};
+g_j_conl = ps("j.conl") { 
+ uap = point(207m,1147m);
+};
+g_k = ps("k") { 
+};
+g_k_conl = ps("k.conl") { 
+};
+g_l = ps("l") { 
+};
+g_l_conl = ps("l.conl") { 
+};
+g_m = ps("m") { 
+};
+g_m_conl = ps("m.conl") { 
+};
+g_n = ps("n") { 
+};
+g_n_conl = ps("n.conl") { 
+};
+g_o = ps("o") { 
+ dap = point(415m,-143m);
+ uap = point(475m,942m);
+};
+g_odieresis = ps("odieresis") { 
+ dap = point(415m,-143m);
+ uap = point(475m,1147m);
+};
+g_p = ps("p") { 
+};
+g_p_conl = ps("p.conl") { 
+};
+g_q = ps("q") { 
+};
+g_r = ps("r") { 
+};
+g_r_conl = ps("r.conl") { 
+};
+g_r_round = ps("r.round") { 
+};
+g_s = ps("s") { 
+};
+g_longs = ps("longs") { 
+};
+g_t = ps("t") { 
+};
+g_t_conl = ps("t.conl") { 
+};
+g_uniFB06 = ps("uniFB06") { 
+};
+g_u = ps("u") { 
+ uap = point(459m,942m);
+};
+g_u_conl = ps("u.conl") { 
+ uap = point(459m,942m);
+};
+g_udieresis = ps("udieresis") { 
+ uap = point(459m,1147m);
+};
+g_udieresis_conl = ps("udieresis.conl") { 
+ uap = point(459m,1147m);
+};
+g_v = ps("v") { 
+};
+g_v_conl = ps("v.conl") { 
+};
+g_w = ps("w") { 
+};
+g_w_conl = ps("w.conl") { 
+};
+g_y = ps("y") { 
+};
+g_y_conl = ps("y.conl") { 
+};
+g_ae = ps("ae") { 
+};
+g_x = ps("x") { 
+};
+g_x_conl = ps("x.conl") { 
+};
+g_z = ps("z") { 
+};
+g_z_conl = ps("z.conl") { 
+};
+g_interpunctdot = ps("interpunctdot") { 
+};
+g_interpunctcomma = ps("interpunctcomma") { 
+};
+g_interpunctinvcomma = ps("interpunctinvcomma") { 
+};
+g_period = ps("period") { 
+};
+g_comma = ps("comma") { 
+};
+g_colon = ps("colon") { 
+};
+g_semicolon = ps("semicolon") { 
+};
+g_quoteleft = ps("quoteleft") { 
+};
+g_quoteright = ps("quoteright") { 
+};
+g_quotesinglbase = ps("quotesinglbase") { 
+};
+g_quotedblleft = ps("quotedblleft") { 
+};
+g_quotedblright = ps("quotedblright") { 
+};
+g_quotedblbase = ps("quotedblbase") { 
+};
+g_ellipsis = ps("ellipsis") { 
+};
+g_parenleft = ps("parenleft") { 
+};
+g_parenright = ps("parenright") { 
+};
+g_exclam = ps("exclam") { 
+};
+g_question = ps("question") { 
+};
+endtable;
