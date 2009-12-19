@@ -655,10 +655,6 @@ g_shortcarr_cap = ps("uniE02E.cap") {
  uap = point(315m,868m);
  dap = point(328m,-205m);
 };
-g_tengparen = ps("uniE067") { 
- luuvap = point(454m,383m);
- barap = point(461m,72m);
-};
 g_openanna = ps("uniE036") { 
  uap = point(491m,799m);
  dap = point(475m,-102m);
@@ -672,6 +668,10 @@ g_openanna_cap = ps("uniE036.cap") {
  barap = point(1026m,692m);
  uap = point(495m,868m);
  dap = point(581m,-102m);
+};
+g_tengparen = ps("uniE067") { 
+ luuvap = point(454m,383m);
+ barap = point(461m,72m);
 };
 g_atehta_norm = ps("uniE040.norm") { 
  dap = point(0m,799m);
@@ -1031,5 +1031,13 @@ g_tenginterpthree = ps("uniE062") {
 g_tenginterpfour = ps("uniE063") { 
 };
 g_tenginterpfive = ps("uniE064") { 
+};
+g_tengexlam = ps("uniE065") { 
+};
+g_tenginterrog = ps("uniE066") { 
+};
+g_tengtilde = ps("uniE068") { 
+};
+g_tengdbltilde = ps("uniE069") { 
 };
 endtable;

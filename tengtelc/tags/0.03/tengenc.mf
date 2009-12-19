@@ -139,7 +139,11 @@ addalias(tengcb & "61","tenginterptwo");
 addalias(tengcb & "62","tenginterpthree");
 addalias(tengcb & "63","tenginterpfour");
 addalias(tengcb & "64","tenginterpfive");
+addalias(tengcb & "65","tengexlam");
+addalias(tengcb & "66","tenginterrog");
 addalias(tengcb & "67","tengparen");
+addalias(tengcb & "68","tengtilde");
+addalias(tengcb & "69","tengdbltilde");
 
 addalias(tinco & ".conl","tinco_conl");
 addalias(tinco & ".cap","tinco_cap");
