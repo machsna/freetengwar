@@ -36,7 +36,6 @@ beginchr(dottedcircle,1.1ex);
   setap("uap",(1/2w,ex+0.7pt));
   setap("dap",(1/2w,-0.7pt));
 endchr;
-message "pe: Simplify(0,2);"; message"";
 forgd:=true;
 
 beginrefchr("uni200B",0);
@@ -75,7 +74,7 @@ beginchr(atehta_norm,0#);
   setap("rdap",(x2+0.5pt,tex+0.5pt));
 %  setap("uap",(0,tex+3.0pt));
 endchr;
-message "pe: Simplify(0,2);"; message"";
+
 combinechr(atehta,dottedcircle,"uap",atehta_norm,"dap");
 beginchr(downatehta_norm,0#);
   z0=(0,-2.2pt);
@@ -90,7 +89,7 @@ beginchr(downatehta_norm,0#);
   setap("ruap",(x2+0.5pt,-0.5pt));
 %  setap("dap",(0,-2.5pt));
 endchr;
-message "pe: Simplify(0,2);"; message"";
+
 combinechr(downatehta,dottedcircle,"dap",downatehta_norm,"uap");
 
 beginchr(ytehta_norm,0#);
@@ -684,7 +683,6 @@ def draw_hyarmenyanta(expr style,secstyle) =
   fi
   setap("dap",(0.2[x1,x2],-0.5pt));
   penlabels(range 1 thru 8);
-  show angle(z1-z2);
 enddef;
 
 beginchr(hyarmen,1ten);
@@ -739,11 +737,48 @@ beginchr(uure,0.95ten);
   penlabels(range 1 thru 4);
 endchr;
 
+def draw_atengwa(expr style) =
+  numeric hgt; hgt=if style=capital: ctex else: tex fi;
+  padding(0.7pt,if style=normal: 0.25pt else: 0.4pt fi);
+  a1=a2=a3=a4=a5=35; a6=57;
+  z1=(w-rpad,if style=normal:0.35 else:0.30 fi tex);
+  use(a2); bot z2=(0.6[x1,x3],-o);
+  z3=(lpad,0.43hgt);
+  use(a4); top z4=(0.3[x5,x3],hgt);
+  x5=if style=capital:2.0 else:1.6 fi[x3,x2]; z5=z4+whatever*dir(180-30);
+  ap1=ang(a1..a2..a3..a4..a5);
+  p1=z1{curl0.3}..z2{left}..tension1.05..z3{up}..tension1.1..z4{right}..tension1.1..z5;
+  draw_stroke(p1,ap1);
+  if style=descend:
+    y6=-0.6pt; z6=z1+whatever*dir(a6);
+    draw_stroke(z1--z6,ang(a1--a6));
+  fi
+  if style=capital:
+    x10=0.25[x4,x3]; x11=x10-0.6tecil_w;
+    z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,2) of p1;
+    z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,4) of p1;
+    z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(0,2) of p1;
+    z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(2,4) of p1;
+    fill z12--z13--z15--z14--cycle;
+  fi
+  setap("uap",(x4,hgt+0.5pt));
+  setap("dap",(x2,-0.5pt));
+  penlabels(range 1 thru 6);
+enddef;
+beginchr(atengwa,1.0ten);
+  draw_atengwa(normal);
+endchr;
+beginchr(atengwa_desc,1.0ten);
+  draw_atengwa(descend);
+endchr;
+beginchr(atengwa_cap,1.05cten);
+  draw_atengwa(capital);
+endchr;
+
 beginchr("tenginterpdot",0);
   z1=(0,0);
   draw_dot(1)(1.0);
 endchr;
-message "pe: Simplify(0,2);"; message"";
 
 interpunctwidth=0.6tex;
 
@@ -767,8 +802,9 @@ beginrefchr(tenginterpthree,interpunctwidth);
   attach("tenginterpdot","dot2","origo");
   attach("tenginterpdot","dot3","origo");
 endchr;
+if tracing: message "pe: UnlinkReference();"; message""; fi
 
-beginrefchr(tenginterpfour,0.6tex);
+beginrefchr(tenginterpfour,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
   setap("dot1",(1/2w,0.2tex));
   setap("dot2",(1/2w,0.8tex));
@@ -779,6 +815,7 @@ beginrefchr(tenginterpfour,0.6tex);
   attach("tenginterpdot","dot3","origo");
   attach("tenginterpdot","dot4","origo");
 endchr;
+if tracing: message "pe: UnlinkReference();"; message""; fi
 
 beginrefchr(tenginterpfive,0.8tex);
   padding(0.5interpunctwidth,0.5interpunctwidth);
@@ -793,3 +830,4 @@ beginrefchr(tenginterpfive,0.8tex);
   attach("tenginterpdot","dot4","origo");
   attach("tenginterpdot","dot5","origo");
 endchr;
+if tracing: message "pe: UnlinkReference();"; message""; fi

@@ -86,6 +86,17 @@ addalias(tengcb & "2E","shortcarr");
 addalias(tengcb & "2E.conl","shortcarr_conl");
 addalias(tengcb & "2E.cap","shortcarr_cap");
 
+addalias(tengcb & "32","atengwa");
+addalias(atengwa & ".desc","atengwa_desc");
+addalias(atengwa & ".cap","atengwa_cap");
+addalias(tengcb & "36","openanna");
+addalias(openanna & ".conl","openanna_conl");
+addalias(openanna & ".cap","openanna_cap");
+addalias(tengcb & "3A","mhtengwa");
+addalias(mhtengwa & ".cap","mhtengwa_cap");
+addalias(tengcb & "3B","beleriandicmh");
+addalias(beleriandicmh & ".cap","beleriandicmh_cap");
+
 addalias(tengcb & "40","atehta");
 addalias(tengcb & "40.norm","atehta_norm");
 addalias(tengcb & "41","downatehta");
