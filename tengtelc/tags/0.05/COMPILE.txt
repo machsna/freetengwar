@@ -1,5 +1,5 @@
 Tengwar Telcontar - a unicode Tengwar typeface.
-Copyright (C) 2005 Johan Winge
+Copyright (C) 2005-2006 Johan Winge
 
 Tengwar Telcontar is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License as
@@ -60,7 +60,11 @@ I.) To compile the Tengwar Telcontar source to TrueType font files,
  2.) METAFONT. Usually comes boundled in TeX-distributions
     (e.g. MikTeX, teTeX etc.).
 
- 3.) The newest version of FontForge:
+ 3.) FontForge. FontForge is continously being developed, so the
+    latest version is strongly recommended. (That said, version
+    20050719 is the earliest version that can be used to compile
+    TengTelc, but I do not recommend it. If you really have to use
+    an older version, use at least version 20050909!):
     http://fontforge.sourceforge.net/
 
  4.) A tracing program, AutoTrace or potrace. I recommend the later:
@@ -69,7 +73,7 @@ I.) To compile the Tengwar Telcontar source to TrueType font files,
 II.) To add Graphite tables to the resulting fonts, you will need:
 
  0.) Graphite Compiler. Windows version available from:
-    http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&cat_id=RenderingGraphite
+    http://scripts.sil.org/GraphiteCompilerDownload
 
     Note 1: The file stddef.gdh that comes with GrCompiler might not
     be found by GrCompiler, and I have found that the easiest way
@@ -77,10 +81,15 @@ II.) To add Graphite tables to the resulting fonts, you will need:
     directory of TengTelc. Otherwise you will get very cryptic
     errors when trying to add Graphite tables to the fonts.
 
-    Note 2: (Linux users only.) The sources for Graphite Compiler
-    is available for download, but it may not be that easy to
-    actually compile it. Instead, the Windows version is possible
-    to run under Linux with the help of Wine: http://www.winehq.com/
+    Note 2: (Linux users only.) The sources for GrCompiler is
+    available through SVN:
+    svn://scripts.sil.org/graphite/graphite/trunk
+
+    (See http://silgraphite.sourceforge.net/linuxbuild.html for
+    slightly out of date instructions...)
+
+    It is also possible to run the Windows version of GrCompiler
+    with the help of Wine: http://www.winehq.com/
     Just install Wine, and unzip Graphite Compiler into Wine's
     virtual file system. Then you can run GrCompiler with a 
     command similar to
@@ -88,11 +97,11 @@ II.) To add Graphite tables to the resulting fonts, you will need:
         wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe
 
     However, the compilation script demands that Graphite Compiler
-    is invoked by "GrCompiler". Solve this by adding an alias:
+    is invoked by "grcompiler". Solve this by adding an alias:
 
-        alias GrCompiler='wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe'
+        alias grcompiler='wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe'
 
-    (Or similar, depending on where you unziped GrCompiler.exe.)
+    (Or similar, depending on where you unzipped GrCompiler.exe.)
 
 
 *** EXAMPLE OF COMPILATION UNDER WINDOWS XP ***
@@ -106,8 +115,9 @@ seems that the path to the MikTeX binaries is sometimes not added
 to the PATH variable, which means that METAFONT (mf) will not be
 found. To remedy this, open the Control Panel, System, Advanced,
 Environment Variables, and then edit Path, by appending something
-like ";c:\texmf\miktex\bin". (The exact appearance of the path is
-of course dependent on where you installed MikTeX.)
+like ";c:\texmf\miktex\bin" (without quotation marks). (The exact
+appearance of the path is of course dependent on where you
+installed MikTeX.)
 
 1.) Next I went to http://www.cygwin.com/ and followed the link
 "Install or update now!", and a small installation program is
@@ -130,13 +140,17 @@ c:\windows\program files\potrace\. This location must also be added
 to your path, in the same way as in step 0.).
 
 4.) Finally I downloaded the latest version of GrCompiler from
-http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=GraphiteCompilerDownload
+http://scripts.sil.org/GraphiteCompilerDownload
 and unzipped all the files into c:\windows\program files\grcompiler\
 and then added this path too to the PATH variable.
-
 I then also moved the file stddef.gdh as per the note above.
 
-5.) When the necessary programs are installed, unzip the source
+Note: When adding the path to PATH, do not use quotation marks. If
+you do, cygwin can't understand it correctly, and the grcompiler
+will not be found. (In cygwin, check with "echo $PATH" that 
+everything is alright.)
+
+5.) When the necessary programs are installed, unpack the source
 package of Tengwar Telcontar to a folder inside Cygwin's virtual
 file system. Then open up a Cygwin shell, move to the location
 where the source files reside, and type the following command:

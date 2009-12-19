@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005 Johan Winge
+%% Copyright (C) 2005-2006 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -160,6 +160,7 @@ conpenangle7=35; use(conpenangle7); top conpoint7=(0,tex);        % Connecting t
 conpenangle8=45; conpoint8=(whatever,1/2ctex);                     % luuva, teema 1 and 2, capital tengwar
 conpenangle9=45; conpoint9=(whatever,1/2ctex);                     % luuva, teema 3 and 4, capital tengwar
 conpenangle10=35; use(conpenangle10); top conpoint10=(whatever,ctex);% closingbar teema 4, capital tengwar
+conpenangle11=35; use(conpenangle11); bot conpoint11=(0,0);        % Connecting tengwar, lower s-hook
 
 
 def draw_dot(suffix $)(expr fact) =
@@ -169,8 +170,8 @@ enddef;
 
 def draw_diamond(suffix $)(expr fact) =
   x$a=x$c=x$; y$b=y$d=y$;
-  y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.58*fact*tecil_w;
-  k:= -0.75fact+1 ; %0.25;
+  y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.6*fact*tecil_w; %0.58
+  k:= -0.75*fact+1; %0.25;
   fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
 enddef;
 

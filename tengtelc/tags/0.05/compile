@@ -4,11 +4,11 @@
 
 python mf2ttf.py latinr
 python mf2ttf.py tengwarr
-fontforge -script tengtelcr.pe
+fontforge -script tengtelc.pe regular
 
 python mf2ttf.py latinb
 python mf2ttf.py tengwarb
-fontforge -script tengtelcb.pe
+fontforge -script tengtelc.pe bold
 
 # Some cleaning up:
 

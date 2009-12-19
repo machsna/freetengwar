@@ -27,15 +27,23 @@
 
 setspace(2pt);
 
+addalias("uni00A0","nbsp");
+beginrefchr(nbsp,2pt);
+  setap("uap",(1/2w,tex+apy));
+  setap("dap",(1/2w,-apy));
+endchr;
+
 addalias("uni25CC","dottedcircle");
-beginchr(dottedcircle,1.1ex);
-  le=ex/21.5; path dot;
+beginchr(dottedcircle,1.1tex);
+  padding(0.3pt,0.3pt);
+  numeric le;
+  le=tex/19.5; path dot;
   dot=superellipse((le,0),(0,le),(-le,0),(0,-le),0.76);
   for i=0 upto 15:
-    fill dot shifted (1/2(w,ex)+((9.2le,0) rotated (22.5*i)));
+    fill dot shifted (1/2(w,tex)+((9.2le,0) rotated (22.5*i)));
   endfor
-  setap("uap",(1/2w,ex+0.7pt));
-  setap("dap",(1/2w,-0.7pt));
+  setap("uap",(1/2w,tex+apy));
+  setap("dap",(1/2w,-apy));
 endchr;
 
 beginchr("diacriticdot",0);
@@ -1136,6 +1144,29 @@ beginchr("question",0.95en);
   z6=(1/2w,1/2tecil_w);
   draw_dot(6)(1);
   penlabels(range 0 thru 5);
+endchr;
+
+beginchr("uni204A",0.5ten);
+  padding(1.4pt,0.7pt);
+  a0=30;a1=40; a2=43;
+  a3=35;
+%  a3-5=a4=a5+5=38;
+  use(a1); top z1=(lpad,tex);
+  z0=z1-1.6pt*dir(48);
+  use(a2); top z2=(w-rpad,tex);
+  ap1=ang(a0..a1..a2);
+  p1=z0...z1{right}..z2;
+  z3=change_angle(z2,a2+180,a3+180);
+  z4=(x3-0.4o,-2o);
+%  z4=(x3,1pt);
+%  z5=z4-1.5pt*dir(50);
+%  ap2=ang(a3..a4..a5);
+%  p2=z3..z4{down}..z5{-dir(a5)};
+  ap2=ornang(noorn,curved);
+  p2=ornpath(noorn,curved)(3,4);
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ang(a3..ap2));
+  penlabels(range 1 thru 5);
 endchr;
 
 message "";
