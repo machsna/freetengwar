@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2007 Johan Winge
+%% Copyright (C) 2005-2009 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -40,6 +40,8 @@
 tracingtitles:=1;
 boolean tracing; tracing=(mode=pixpt);
 
+scalefactor=1.25; % Should match scale factor in tengtelc.pe
+
 un#:=1/2048em#; define_pixels(un);
 if tracing:
   message "gd: table(glyph) { MUnits = 2048; PointRadius = 0m; }";
@@ -69,6 +71,8 @@ mf_char_c:=-1;            % Metafont character counter
 ref_char_c:=255;          % Reference character counter
 boolean isrefchar;
 boolean forgd; forgd:=true; % Output gdh-data?
+boolean unlinkreferences; unlinkreferences:=false;
+boolean hasattached;
 
 % Name lookup (return index)
 vardef ps.lu(expr s) =
@@ -129,15 +133,26 @@ def initchr(expr s, m, width) =
   if tracing and forgd:
     message "gd: g_" & ps_to_gd(ps[ps.n].name) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
   fi
+  hasattached:=false;
+enddef;
+
+def unlinkref =
+  if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 enddef;
 
 def endchr =
   if tracing:
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
     if isrefchar:
-      message "pe: UnlinkReference(); RemoveOverlap();";
+      if unlinkreferences:
+        unlinkref;
+      fi
     else:
-      message "pe: Autotrace();";% AddExtrema(); Simplify(2,1); AddExtrema();";
+      message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
+      message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
+      if hasattached:
+         unlinkref;
+      fi
     fi
   fi
   ps[ps.n].width := w;
@@ -145,8 +160,8 @@ def endchr =
   apt(ps.n,lastap).forgd := false;
   for i=1 upto psc(ps.n).ap.n:
     if apt(ps.n,i).forgd:
-      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
-         & decimal round(ypart apt(ps.n,i).pt/un) & "m);"; fi
+      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(scalefactor*xpart apt(ps.n,i).pt/un) & "m,"
+         & decimal round(scalefactor*ypart apt(ps.n,i).pt/un) & "m);"; fi
       if not tracing: makelabel(apt(ps.n,i).name,apt(ps.n,i).pt); fi
     else:
       if not tracing: makelabel("("& apt(ps.n,i).name &")",apt(ps.n,i).pt); fi
@@ -245,6 +260,7 @@ def attach(expr psn, bapn, capn) =
   else:
     addto currentpicture also psc(psn).pic shifted vec;
   fi
+  hasattached:=true;
 enddef;
 
 def combinechr(expr s,bcn,bapn,ccn,capn) =
@@ -257,10 +273,7 @@ enddef;
 def exit =
   if tracing:
     message "gd: endtable;"; message "";
-    message "pe: SelectAll(); Simplify(128,2);";
     message "pe: Save($1+" & ditto & ".sfd" & ditto & ");";
-    message "pe: RoundToInt(); SetFontOrder(2);";
-    message "pe: Generate($1+" & ditto & ".ttf" & ditto & "," & ditto & ditto & ",152);";
     message "pe: Quit(0);";
     message "";
   fi

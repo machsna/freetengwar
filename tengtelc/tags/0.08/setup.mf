@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2007 Johan Winge
+%% Copyright (C) 2005-2009 Johan Winge
 
 designsize:=10pt#;
 
@@ -12,8 +12,8 @@ ex#:=3.5pt#;
 en#:=3.1pt#;
 %asc#:=ex#+2.6pt#;
 asc#:=ex#+3.0pt#;
-%desc#:=2.7pt#;
-desc#:=2.8pt#;
+%desc#:=2.8pt#;
+desc#:=3.0pt#;
 
 % Tengwar
 tex#:=3.45pt#;
@@ -22,8 +22,8 @@ tasc#:=tex#+3.2pt#;
 tdesc#:=3.2pt#;
 
 % "Capital" tengwar
-ctex#:=1.1tex#;
-cten#:=1.0ten#;
+ctex#:=1.15tex#;
+cten#:=1.05ten#;
 ctasc#:=1.05tasc#;
 ctdesc#:=1.1tdesc#;
 
@@ -33,8 +33,8 @@ mode_setup;
 
 define_pixels(pt,em,asc,desc,o,ex,en,tasc,tdesc,tex,ten,ctex,cten,ctasc,ctdesc);
 
-screen_rows:=768;
-screen_cols:=1024;
+screen_rows:=1000;
+screen_cols:=1500;
 
 numeric apy; apy=0.5pt;
 
@@ -45,8 +45,10 @@ ascend=14; descend=15; short=16; updown=17; capital=18; extended=19;
 lower=20; single=21; double=22; nuquerna=23; carrier=24;
 conrbot=25; conbbot=26;
 
+interpunctsize=1.1;
+
 string font_ps_name, font_name, font_weight, font_copyright, font_version;
 
-font_copyright:="Copyright (c) 2005-2007 by Johan Winge";
-font_version="0.07";
+font_copyright:="Copyright (c) 2005-2009 by Johan Winge";
+font_version="0.08";
 

@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2007 Johan Winge
+%% Copyright (C) 2005-2009 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -27,41 +27,46 @@
 
 numeric luuvbardiff[];
 
-def draw_telco(expr side, type, conn) =
-  lp:= if (side=carrier): 1.3pt elseif (side=leftside) and (conn=normal) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi;
+def draw_telco(expr side, type, conn, sectype) =
+  lp:= if (side=carrier): 1.3pt elseif (side=leftside) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi; %  and (conn=normal)
   rp:= if ((side=rightside) and ((type=descend) or (type=short))): 0.9pt else: if (side=carrier): 1.1pt else: 1.0pt fi fi;
   padding(lp,rp);
 
   if (side=leftside) or (side=carrier):
+     if (conn=conleft) or (conn=conboth):
+       a1=conpenangle7+1; a2=1/2[a1,a3];
+     else:
+       a1-3=a2+1=35;
+     fi
      if type=ascend:
-       a1-3=a2+1=a3+8=a4+10=a5+10=35;
+       a3+8=a4+10=a5+10=35;
      elseif type=descend:
-       a1-3=a2+1=a3+5=a4+5=a5+5=35;
+       a3+5=a4+5=a5+5=35;
      elseif type=short:
-      a1-3=a2+1=a3+5=a4+8=a5+10=35;
+       a3+5=a4+8=a5+10=35;
      elseif type=extended:
-      a1-3=a2+1=a3+8=a4+10=a5=35;
+       a3+5=a4+5=a5+5=35;
      fi
   elseif side=rightside:
      if type=ascend:
-%       a1-6=a2-1=a3+2=a4-6=35;
-       a1-6=a2-1=a3+2=a4-6=a5=35;
-     elseif type=descend:
-%       a1+9=a2-1=a3+2=a4+9=35;
-       a0+8=a1+8=a2-2=a3+5=a4+5=a5+5=35;
-     elseif type=short:
-%       a1+9=a2+4=a3+1=a4-3=35;
-       a0+8=a1+8=a2+4=a3+1=a4-3=a5=35;
+       a1-6=a2-1=a3+2=35;
+       if conn=conright: a4-2=conpenangle11; else: a4=38; fi
+     elseif (type=descend) or (type=short):
+       if (conn=conright) or (sectype=closed):
+         a0+7=a1+8=35;
+       else:
+         a0+15=a1+8=35;
+       fi
+       if type=descend:
+         a2-2=a3+5=a4+5=a5+5=35;
+       elseif type=short:
+         a2+4=a3+1=35;
+         if conn=conrbot: a4-2=conpenangle11; else: a4=38; fi
+       fi
      elseif type=extended:
-%       a1-3=a2+1=a3+5=a4+10=35;
-       a1-3=a2+1=a3+8=a4+10=a5=35;
+       a1-3=a2+1=a3+5=a4+5=a5+5=35;
      fi
-  fi
 
-  if (side=rightside) and ((type=descend) or (type=short)):
-    ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
-  else:
-    ap1=ang(a1..a2..a3..a4..a5..a3);
   fi
 
 %%  Due to the varying width of the stem, they often seem to lean backwards.
@@ -79,120 +84,113 @@ def draw_telco(expr side, type, conn) =
   y2=if (type=short) or (type=ascend): if side=rightside: 0 else: -o fi else: -tdesc fi;
 
   if side=leftside:
+    ap1=ang(a1..a2..a3..a4..a5..a3);
     if conn=normal:
       if type=descend:
-%%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
         p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=ascend:
-%%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=short:
-%%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=extended:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
     elseif conn=conleft:
       if type=descend:
-%%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=short:
-%%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.4tex, 20, 0, ap1);
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.6pt,25,ap1);
       fi
     fi
   elseif side=rightside:
-%    if conn=normal:
+    if conn=normal:
       if type=ascend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 180, 0, ap1);
+        ap1=ang(a1..a2..a3..a4);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.5tex, 180+25, 0, ap1);
       elseif type=descend:
-%%        p1=topserif(1,2)(0.3pt, 0.5tex, 20+180, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
-%        p1=topserif(1,2)(0.15pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.70pt, 1.1pt, 25, 0, ap1);
-        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
+        ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,if sectype=closed: 0.2pt,18 else: 0.4pt,12 fi,ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.15pt, 0.3tex, 0, 0, ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
-        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
+        ap1=ang(a2..a0..a1..a2..a3..a4);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,if sectype=closed: 0.2pt,18 else: 0.4pt,12 fi,ap1)..botserif(1,2)(0.50pt, 0.4tex, 180+25, 0, ap1);
       elseif type=extended:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.35pt, 0.6tdesc, 20, 0, ap1);
+        ap1=ang(a1..a2..a3..a4..a5..a3);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       fi
-%    elseif conn=conright:
-%      if type=ascend:
-%      elseif type=descend:
-%      elseif type=short:
-%      elseif type=extended:
-%      fi
-%    fi
+    elseif conn=conright:
+      if type=ascend:
+        ap1=ang(a1..a2..a3..a4);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.30pt, 0.5tex, 180, 0, ap1);
+      elseif type=descend:
+        ap1=ang(a2..a0..a1..a2..a3..a4..a5..a3);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
+      elseif type=short:
+        ap1=ang(a2..a0..a1..a2..a3..a4);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,0.2pt,18,ap1)..botserif(1,2)(0.50pt, 0.4tex, 180+25, 0, ap1);
+      fi
+    elseif conn=conrbot:
+      if type=short:
+        ap1=ang(a2..a0..a1..a2..a3..a4);
+        p1=topfootserif(1,2)(0.5pt,0.05pt,0.4pt,12,ap1)..botserif(1,2)(0.30pt, 0.3tex, 180, 0, ap1);
+      fi
+    fi
   elseif side=carrier:
+    if (type=ascend) and (conn=conright):
+      ap1=ang(a1..a2..a3..a4);
+    else:
+      ap1=ang(a1..a2..a3..a4..a5..a3);
+    fi
     if conn=normal:
       if type=descend:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,1.0pt,40,ap1);
       elseif type=ascend: % Halla
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+      elseif type=extended:
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
     elseif conn=conleft:
       if type=descend:
-%        p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botserif(1,2)(0.80pt, 1.2pt, 25, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     elseif conn=conright:
       if type=ascend: % Halla
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
+%        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
       elseif type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     elseif conn=conboth:
       if type=short:
-%        p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botserif(1,2)(0.50pt, 0.3tex, 20, 0, ap1);
         p1=topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
       fi
     fi
   fi
 
   if (conn=conleft) or (conn=conboth):
-    draw_stroke(conpoint7--point 0 of p1,ang(conpenangle7--penangle 0 of ap1));
+    z21=point 0 of p1; a21=penangle 0 of ap1;
+    draw_connection(7,21,true);
   fi
-%  if (conn=conright) or (conn=conboth) or (conn=conrbot):
-%    if (type=descend) or (type=short) and (side=rightside):
-%      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
-%    else:
-%      draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
-%    fi
-%  fi
 
   if (conn=conright) or (conn=conboth) or (conn=conrbot):
     if (type=descend) or (type=short) and (side=rightside) and ((conn=conright) or (conn=conboth)):
-      draw_stroke((conpoint7+(w,0)){left}..point 1 of p1,ang(conpenangle7--penangle 2 of ap1));
-    elseif (conn=conrbot):
-      draw_stroke((conpoint11+(w,0)){left}...point infinity of p1,ang(conpenangle11--penangle infinity of ap1));
+      draw_stroke(p1, ap1);
+      z20=point 1 of p1; a20=penangle 1 of ap1;
+      draw_connection(7,20,false);
+    elseif (conn=conrbot) or (conn=conright) and (type=ascend):
+      draw_stroke(p1, ap1);
+      z20=point infinity of p1; a20=penangle infinity of ap1;
+      draw_connection(11,20,false);
     else: % Carrier
-      draw_stroke((conpoint11+(w,0)){left}...point 4 of p1,ang(conpenangle11--penangle 4 of ap1));
+      draw_stroke(subpath(0,2) of p1, subpath(0,2) of ap1);
+      draw_stroke(subpath(4,5) of p1, subpath(4,5) of ap1);
+      z20=point 4 of p1; a20=penangle 4 of ap1;
+      draw_connection(11,20,false);
     fi
-  fi
-
-
-
-  draw_stroke(p1,subpath (0,length p1) of ap1);
-
-  if (side=rightside) and ((type=descend) or (type=short)):
-    p2=subpath(1,infinity) of p1;
   else:
-    p2=p1;
+    draw_stroke(p1, ap1);
   fi
 
   z3=find_telcoap(conpoint3,conpenangle3,180,p1,ap1);
@@ -209,109 +207,124 @@ def draw_telco(expr side, type, conn) =
   setap("rbarap",z6);
 enddef;
 
+forgd:=false;
+
 beginchr("telco_leftdown",0);
-  draw_telco(leftside, descend, normal);
+  draw_telco(leftside, descend, normal, normal);
   luuvbardiff1:=xpart(z3-z4);
 endchr;
-pause;
 beginchr("telco_leftdown_conl",0);
-  draw_telco(leftside, descend, conleft);
+  draw_telco(leftside, descend, conleft, normal);
 endchr;
 beginchr("telco_leftup",0);
-  draw_telco(leftside, ascend, normal);
+  draw_telco(leftside, ascend, normal, normal);
   luuvbardiff2:=xpart(z3-z4);
 endchr;
 beginchr("telco_leftshort",0);
-  draw_telco(leftside, short, normal);
+  draw_telco(leftside, short, normal, normal);
   luuvbardiff2:=luuvbardiff2+xpart(z3-z4);
 endchr;
 beginchr("telco_leftshort_conl",0);
-  draw_telco(leftside, short, conleft);
+  draw_telco(leftside, short, conleft, normal);
 endchr;
 beginchr("telco_leftext",0);
-  draw_telco(leftside, extended, normal);
+  draw_telco(leftside, extended, normal, normal);
 endchr;
 
-
+forgd:=true;
 beginchr(longcarr,0);
-  draw_telco(carrier, descend, normal);
+  draw_telco(carrier, descend, normal, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-tdesc-apy));
 endchr;
 beginchr(longcarr_conl,0);
-  draw_telco(carrier, descend, conleft);
+  draw_telco(carrier, descend, conleft, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-tdesc-apy));
 endchr;
 
 beginchr(halla,0);
-  draw_telco(carrier, ascend, normal);
+  draw_telco(carrier, ascend, normal, normal);
   setap("uap",(0.5[x1b,x1a],tasc+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 
 beginchr(shortcarr,0);
-  draw_telco(carrier, short, normal);
+  draw_telco(carrier, short, normal, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
-pause;
 beginchr(shortcarr_conl,0);
-  draw_telco(carrier, short, conleft);
+  draw_telco(carrier, short, conleft, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 beginchr(shortcarr_conr,0);
-  draw_telco(carrier, short, conright);
+  draw_telco(carrier, short, conright, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
+pause;
 beginchr(shortcarr_conb,0);
-  draw_telco(carrier, short, conboth);
+  draw_telco(carrier, short, conboth, normal);
   setap("uap",(0.5[x1b,x1a],tex+apy));
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
+pause;
+%beginchr(extendedtelco,0);
+%  draw_telco(carrier, extended, normal, normal);
+%  setap("uap",(0.5[x1b,x1a],tasc+apy));
+%  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
+%endchr;
+
+forgd:=false;
 
 beginchr("telco_rightdown",0);
-  draw_telco(rightside, descend, normal);
+  draw_telco(rightside, descend, normal, normal);
   luuvbardiff3:=xpart(z5-z6);
 endchr;
-pause;
-beginchr("telco_rightdown_conr",0);
-  draw_telco(rightside, descend, conright);
+beginchr("telco_rightdown2",0);
+  draw_telco(rightside, descend, normal, closed);
 endchr;
-pause;
+beginchr("telco_rightdown_conr",0);
+  draw_telco(rightside, descend, conright, normal);
+endchr;
 beginchr("telco_rightup",0);
-  draw_telco(rightside, ascend, normal);
+  draw_telco(rightside, ascend, normal, normal);
   luuvbardiff4:=xpart(z5-z6);
   setap("harmaligap",point 0 of p1); apt(ps.n,lastap).forgd:=false;
   harmaligappenangle=penangle 0 of ap1;
 endchr;
 pause;
 beginchr("telco_rightup_conr",0);
-  draw_telco(rightside, ascend, conright);
+  draw_telco(rightside, ascend, conright, normal);
 endchr;
 pause;
 beginchr("telco_rightshort",0);
-  draw_telco(rightside, short, normal);
+  draw_telco(rightside, short, normal, normal);
 %  luuvbardiff3:=luuvbardiff3+xpart(z5-z6);
+endchr;
+beginchr("telco_rightshort2",0);
+  draw_telco(rightside, short, normal, closed);
 endchr;
 pause;
 beginchr("telco_rightshort_conr",0);
-  draw_telco(rightside, short, conright);
+  draw_telco(rightside, short, conright, normal);
 endchr;
+pause;
 beginchr("telco_rightshort_conrbot",0);
-  draw_telco(rightside, short, conrbot);
+  draw_telco(rightside, short, conrbot, normal);
+endchr;
+beginchr("telco_rightshort2_conrbot",0);
+  draw_telco(rightside, short, conrbot, closed);
 endchr;
 pause;
 beginchr("telco_rightext",0);
-  draw_telco(rightside, extended, normal);
+  draw_telco(rightside, extended, normal, normal);
 endchr;
-pause;
 
 
-
-def draw_caplefttelco(expr sy,eya,eyb,h) =
+def draw_declefttelco(expr sy,eya,eyb,h) =
   padding(1.0pt,2.0pt);
   z1=(lpad,sy); z2=(x1,eya);
   ap1=ornang(rounded,curved) shifted (0,5);
@@ -333,25 +346,25 @@ def draw_caplefttelco(expr sy,eya,eyb,h) =
 enddef;
 
 beginchr("captelco_leftdown",0);
-  draw_caplefttelco(ctex,-ctdesc,-ctdesc+1.0pt,0.8pt);
+  draw_declefttelco(ctex,-ctdesc,-ctdesc+1.0pt,0.8pt);
 endchr;
 beginchr("captelco_leftup",0);
-  draw_caplefttelco(ctasc,o-1.0pt,+o,0.4pt);
+  draw_declefttelco(ctasc,o-1.0pt,+o,0.4pt);
 endchr;
 beginchr("captelco_leftshort",0);
-  draw_caplefttelco(ctex,o-1.0pt,+o,0.4pt);
+  draw_declefttelco(ctex,o-1.0pt,+o,0.4pt);
 endchr;
 beginchr("captelco_leftup2",0);
-  draw_caplefttelco(ctasc,-0.65pt,0,0.8pt);
+  draw_declefttelco(ctasc,-0.65pt,0,0.8pt);
 endchr;
 beginchr("captelco_leftshort2",0);
-  draw_caplefttelco(ctex,-0.65pt,0,0.8pt);
+  draw_declefttelco(ctex,-0.65pt,0,0.8pt);
 endchr;
 beginchr("captelco_leftext",0);
-  draw_caplefttelco(ctasc,-ctdesc,-ctdesc+1.0pt,0.8pt);
+  draw_declefttelco(ctasc,-ctdesc,-ctdesc+1.0pt,0.8pt);
 endchr;
 
-def draw_caprighttelco(expr style, secstyle) =
+def draw_decrighttelco(expr style, secstyle) =
   padding(1.0pt,2.0pt);
   x1=lpad; x2=x1; x4=x1+1.2tecil_w; x5=x4;
   a3=a4=42;
@@ -391,7 +404,7 @@ def draw_caprighttelco(expr style, secstyle) =
     if secstyle=1:
       z1=z4-whatever*dir40; y4=ctex+3o;
     elseif secstyle=2:
-      top y1=y4-o; y4=ctex;
+      top y1=y4; y4=ctex-o;
     fi
     y2=-ctdesc;
     ap0=ornang(noorn,curved) shifted (0,5); ap1=ang(a1..ap0);
@@ -427,22 +440,22 @@ def draw_caprighttelco(expr style, secstyle) =
 enddef;
 
 beginchr("captelco_rightdown1",0);
-  draw_caprighttelco(descend,1);
+  draw_decrighttelco(descend,1);
 endchr;
 beginchr("captelco_rightdown2",0);
-  draw_caprighttelco(descend,2);
+  draw_decrighttelco(descend,2);
 endchr;
 beginchr("captelco_rightup",0);
-  draw_caprighttelco(ascend,0);
+  draw_decrighttelco(ascend,0);
 endchr;
 beginchr("captelco_rightshort1",0);
-  draw_caprighttelco(short,1);
+  draw_decrighttelco(short,1);
 endchr;
 beginchr("captelco_rightshort2",0);
-  draw_caprighttelco(short,2);
+  draw_decrighttelco(short,2);
 endchr;
 beginchr("captelco_rightext",0);
-  draw_caprighttelco(extended,0);
+  draw_decrighttelco(extended,0);
 endchr;
 
 % Create means. (Change denominator if needed!)
@@ -465,8 +478,9 @@ def draw_lowclosingbar(expr style) =
   elseif style=conright:
     a2=a1+6; a3=conpenangle11;
     use(a2); x2=x3-0.8pt; y2=0.8[bot y10,top 0];
-    z3=(w,0)+conpoint11;
+    use (a3); rt z3=(w,0)+conpoint11;
     p1=z1{dir5}..z2..z3{right}; ap1=ang(a1--a2--a3);
+    draw_connection(11,3,false);
   elseif style=descend:
     a2=a3=a4=a5=a1+6;
     use(a2); x2=x3-1.5pt; y2=0.8[bot y10,top 0];
@@ -488,11 +502,13 @@ def draw_highclosingbar(expr style,h,yap) =
     use(a2); top z2=(x1+0.2pt,h);
   else:
     a1=conpenangle7; a2=a1;
-    z1=conpoint7;
+    use(a1); lft z1=conpoint7;
+    draw_connection(7,1,true);
     z2=z1+(1pt,0pt);
   fi
   if (style=conright) or (style=conboth):
-    a4=conpenangle7; z4=(w,0)+conpoint7;
+    a4=conpenangle7; use(a4); rt z4=(w,0)+conpoint7;
+    draw_connection(7,4,false);
   else:
     a4=35; x4=w-rpad; z4=z3+whatever*dir15;
   fi
@@ -595,13 +611,13 @@ endchr;
 beginchr("capclosingbar_high1",1.2cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high2",1.6cten);
+beginchr("capclosingbar_high2",1.6cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 beginchr("capclosingbar_high3",2.0cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high4",2.4cten);
+beginchr("capclosingbar_high4",2.4cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 
@@ -658,8 +674,7 @@ def draw_luuva(expr num, side, style, h, yap) =
     fi
   fi
   if style=conright:
-    p3=z11..((w,0)+conpoint11){right}; ap3=ang(a11..conpenangle11);
-    draw_stroke(p3,ap3);
+    draw_connection(11,11)(false);
   fi
   if side=leftside:
     setap("lluuvap",z1 transformed rot);
@@ -674,6 +689,7 @@ def draw_luuva(expr num, side, style, h, yap) =
     setap("luuvaldap",(0.5w-apshift,-apy)); apt(ps.n,lastap).forgd:=false;
     setap("luuvardap",(0.5w,-apy)); apt(ps.n,lastap).forgd:=false;
   fi
+  setap("cap",(0.5w,1/2tex));
   penlabels(range 1 thru 10);
 enddef;
 
@@ -733,6 +749,7 @@ beginchr("capteema4luuvar",1.8cten);
   draw_luuva(2,rightside,closed,ctex,ypart conpoint9);
 endchr;
 
+forgd:=true;
 
 def build_tengwa(expr s, f, a, p) =
   beginrefchr(s,xpart(apt(f,p).pt-apt(a,p).pt)+psc(a).width);
@@ -748,13 +765,13 @@ build_tengwa(tinco,"telco_leftdown","teema1luuva","lluuvap"); set_tinco_aps; end
 build_tengwa(tinco_conr,"telco_leftdown","teema1luuva_conr","lluuvap"); set_tinco_aps; endchr;
 build_tengwa(tinco_conl,"telco_leftdown_conl","teema1luuva","lluuvap"); set_tinco_aps; endchr;
 build_tengwa(tinco_conb,"telco_leftdown_conl","teema1luuva_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(tinco_cap,"captelco_leftdown","capteema1luuva","lluuvap"); set_tinco_aps; endchr;
+build_tengwa(tinco_dec,"captelco_leftdown","capteema1luuva","lluuvap"); set_tinco_aps; endchr;
 
 build_tengwa(ando,"telco_leftdown","teema1luuvar","lluuvap"); set_tinco_aps; endchr;
 build_tengwa(ando_conr,"telco_leftdown","teema1luuvar_conr","lluuvap"); set_tinco_aps; endchr;
 build_tengwa(ando_conl,"telco_leftdown_conl","teema1luuvar","lluuvap"); set_tinco_aps; endchr;
 build_tengwa(ando_conb,"telco_leftdown_conl","teema1luuvar_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(ando_cap,"captelco_leftdown","capteema1luuvar","lluuvap"); set_tinco_aps; endchr;
+build_tengwa(ando_dec,"captelco_leftdown","capteema1luuvar","lluuvap"); set_tinco_aps; endchr;
 
 def set_thuule_aps =
   setap("uap",apt(ps.n,"luuvaruap").pt);
@@ -763,11 +780,11 @@ enddef;
 build_tengwa(thuule,"telco_leftup","teema1luuva","lluuvap"); set_thuule_aps; endchr;
 pause;
 build_tengwa(thuule_conr,"telco_leftup","teema1luuva_conr","lluuvap"); set_thuule_aps; endchr;
-build_tengwa(thuule_cap,"captelco_leftup","capteema1luuva","lluuvap"); set_thuule_aps; endchr;
+build_tengwa(thuule_dec,"captelco_leftup","capteema1luuva","lluuvap"); set_thuule_aps; endchr;
 
 build_tengwa(anto,"telco_leftup","teema1luuvar","lluuvap"); set_thuule_aps; endchr;
 build_tengwa(anto_conr,"telco_leftup","teema1luuvar_conr","lluuvap"); set_thuule_aps; endchr;
-build_tengwa(anto_cap,"captelco_leftup","capteema1luuvar","lluuvap"); set_thuule_aps; endchr;
+build_tengwa(anto_dec,"captelco_leftup","capteema1luuvar","lluuvap"); set_thuule_aps; endchr;
 
 def set_oore_aps =
   setap("uap",apt(ps.n,"luuvaluap").pt);
@@ -778,13 +795,13 @@ pause;
 build_tengwa(oore_conr,"telco_leftshort","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
 build_tengwa(oore_conl,"telco_leftshort_conl","teema1luuva","lluuvap"); set_oore_aps; endchr;
 build_tengwa(oore_conb,"telco_leftshort_conl","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(oore_cap,"captelco_leftshort","capteema1luuva","lluuvap"); set_oore_aps; endchr;
+build_tengwa(oore_dec,"captelco_leftshort","capteema1luuva","lluuvap"); set_oore_aps; endchr;
 
 build_tengwa(nuumen,"telco_leftshort","teema1luuvar","lluuvap"); set_oore_aps; endchr;
 build_tengwa(nuumen_conr,"telco_leftshort","teema1luuvar_conr","lluuvap"); set_oore_aps; endchr;
 build_tengwa(nuumen_conl,"telco_leftshort_conl","teema1luuvar","lluuvap"); set_oore_aps; endchr;
 build_tengwa(nuumen_conb,"telco_leftshort_conl","teema1luuvar_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(nuumen_cap,"captelco_leftshort","capteema1luuvar","lluuvap"); set_oore_aps; endchr;
+build_tengwa(nuumen_dec,"captelco_leftshort","capteema1luuvar","lluuvap"); set_oore_aps; endchr;
 
 def set_extthuule_aps =
   setap("uap",apt(ps.n,"luuvaruap").pt);
@@ -792,11 +809,11 @@ def set_extthuule_aps =
 enddef;
 build_tengwa(extthuule,"telco_leftext","teema1luuva","lluuvap"); set_extthuule_aps; endchr;
 build_tengwa(extthuule_conr,"telco_leftext","teema1luuva_conr","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extthuule_cap,"captelco_leftext","capteema1luuva","lluuvap"); set_extthuule_aps; endchr;
+build_tengwa(extthuule_dec,"captelco_leftext","capteema1luuva","lluuvap"); set_extthuule_aps; endchr;
 
 build_tengwa(extanto,"telco_leftext","teema1luuvar","lluuvap"); set_extthuule_aps; endchr;
 build_tengwa(extanto_conr,"telco_leftext","teema1luuvar_conr","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extanto_cap,"captelco_leftext","capteema1luuvar","lluuvap"); set_extthuule_aps; endchr;
+build_tengwa(extanto_dec,"captelco_leftext","capteema1luuvar","lluuvap"); set_extthuule_aps; endchr;
 
 def set_parma_aps =
   attach("teema2luuva","lluuvap","lluuvap");
@@ -806,7 +823,7 @@ build_tengwa(parma,"telco_leftdown","closingbar_low1","lbarap"); set_parma_aps; 
 build_tengwa(parma_conr,"telco_leftdown","closingbar_low1_conr","lbarap"); set_parma_aps; endchr;
 build_tengwa(parma_conl,"telco_leftdown_conl","closingbar_low1","lbarap"); set_parma_aps; endchr;
 build_tengwa(parma_conb,"telco_leftdown_conl","closingbar_low1_conr","lbarap"); set_parma_aps; endchr;
-build_tengwa(parma_cap,"captelco_leftdown","closingbar_low1","lbarap");
+build_tengwa(parma_dec,"captelco_leftdown","closingbar_low1","lbarap");
   attach("capteema2luuva","lluuvap","lluuvap");
   set_tinco_aps;
 endchr;
@@ -819,7 +836,7 @@ build_tengwa(umbar,"telco_leftdown","closingbar_low3","lbarap"); set_umbar_aps; 
 build_tengwa(umbar_conr,"telco_leftdown","closingbar_low3_conr","lbarap"); set_umbar_aps; endchr;
 build_tengwa(umbar_conl,"telco_leftdown_conl","closingbar_low3","lbarap"); set_umbar_aps; endchr;
 build_tengwa(umbar_conb,"telco_leftdown_conl","closingbar_low3_conr","lbarap"); set_umbar_aps; endchr;
-build_tengwa(umbar_cap,"captelco_leftdown","closingbar_low3","lbarap");
+build_tengwa(umbar_dec,"captelco_leftdown","closingbar_low3","lbarap");
   attach("capteema2luuvar","lluuvap","lluuvap");
   set_tinco_aps;
 endchr;
@@ -830,7 +847,7 @@ def set_formen_aps =
 enddef;
 build_tengwa(formen,"telco_leftup","closingbar_low2","lbarap"); set_formen_aps; endchr;
 build_tengwa(formen_conr,"telco_leftup","closingbar_low2_conr","lbarap"); set_formen_aps; endchr;
-build_tengwa(formen_cap,"captelco_leftup2","closingbar_low2","lbarap");
+build_tengwa(formen_dec,"captelco_leftup2","closingbar_low2","lbarap");
   attach("capteema2luuva","lluuvap","lluuvap");
   set_thuule_aps;
 endchr;
@@ -841,7 +858,7 @@ def set_ampa_aps =
 enddef;
 build_tengwa(ampa,"telco_leftup","closingbar_low4","lbarap"); set_ampa_aps; endchr;
 build_tengwa(ampa_conr,"telco_leftup","closingbar_low4_conr","lbarap"); set_ampa_aps; endchr;
-build_tengwa(ampa_cap,"captelco_leftup2","closingbar_low4","lbarap");
+build_tengwa(ampa_dec,"captelco_leftup2","closingbar_low4","lbarap");
   attach("capteema2luuvar","lluuvap","lluuvap");
   set_thuule_aps;
 endchr;
@@ -854,7 +871,7 @@ build_tengwa(vala,"telco_leftshort","closingbar_low2","lbarap"); set_vala_aps; e
 build_tengwa(vala_conr,"telco_leftshort","closingbar_low2_conr","lbarap"); set_vala_aps; endchr;
 build_tengwa(vala_conl,"telco_leftshort_conl","closingbar_low2","lbarap"); set_vala_aps; endchr;
 build_tengwa(vala_conb,"telco_leftshort_conl","closingbar_low2_conr","lbarap"); set_vala_aps; endchr;
-build_tengwa(vala_cap,"captelco_leftshort2","closingbar_low2","lbarap");
+build_tengwa(vala_dec,"captelco_leftshort2","closingbar_low2","lbarap");
   attach("capteema2luuva","lluuvap","lluuvap");
   set_oore_aps;
 endchr;
@@ -867,7 +884,7 @@ build_tengwa(malta,"telco_leftshort","closingbar_low4","lbarap"); set_malta_aps;
 build_tengwa(malta_conr,"telco_leftshort","closingbar_low4_conr","lbarap"); set_malta_aps; endchr;
 build_tengwa(malta_conl,"telco_leftshort_conl","closingbar_low4","lbarap"); set_malta_aps; endchr;
 build_tengwa(malta_conb,"telco_leftshort_conl","closingbar_low4_conr","lbarap"); set_malta_aps; endchr;
-build_tengwa(malta_cap,"captelco_leftshort2","closingbar_low4","lbarap");
+build_tengwa(malta_dec,"captelco_leftshort2","closingbar_low4","lbarap");
   attach("capteema2luuvar","lluuvap","lluuvap");
   set_oore_aps;
 endchr;
@@ -878,7 +895,7 @@ def set_extformen_aps =
 enddef;
 build_tengwa(extformen,"telco_leftext","closingbar_low1","lbarap"); set_extformen_aps; endchr;
 build_tengwa(extformen_conr,"telco_leftext","closingbar_low1_conr","lbarap"); set_extformen_aps; endchr;
-build_tengwa(extformen_cap,"captelco_leftext","closingbar_low1","lbarap");
+build_tengwa(extformen_dec,"captelco_leftext","closingbar_low1","lbarap");
   attach("capteema2luuva","lluuvap","lluuvap");
   set_extthuule_aps;
 endchr;
@@ -889,7 +906,7 @@ def set_extampa_aps =
 enddef;
 build_tengwa(extampa,"telco_leftext","closingbar_low3","lbarap"); set_extampa_aps; endchr;
 build_tengwa(extampa_conr,"telco_leftext","closingbar_low3_conr","lbarap"); set_extampa_aps; endchr;
-build_tengwa(extampa_cap,"captelco_leftext","closingbar_low3","lbarap");
+build_tengwa(extampa_dec,"captelco_leftext","closingbar_low3","lbarap");
   attach("capteema2luuvar","lluuvap","lluuvap");
   set_extthuule_aps;
 endchr;
@@ -902,11 +919,11 @@ enddef;
 build_tengwa(calma,"teema3luuva","telco_rightdown","rluuvap"); set_calma_aps; endchr;
 pause;
 build_tengwa(calma_conr,"teema3luuva","telco_rightdown_conr","rluuvap"); set_calma_aps; endchr;
-build_tengwa(calma_cap,"capteema3luuva","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
+build_tengwa(calma_dec,"capteema3luuva","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
 
 build_tengwa(anga,"teema3luuvar","telco_rightdown","rluuvap"); set_calma_aps; endchr;
 build_tengwa(anga_conr,"teema3luuvar","telco_rightdown_conr","rluuvap"); set_calma_aps; endchr;
-build_tengwa(anga_cap,"capteema3luuvar","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
+build_tengwa(anga_dec,"capteema3luuvar","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
 
 def set_harma_aps =
   setap("uap",apt(ps.n,"luuvaluap").pt);
@@ -914,11 +931,11 @@ def set_harma_aps =
 enddef;
 build_tengwa(harma,"teema3luuva","telco_rightup","rluuvap"); set_harma_aps; endchr;
 build_tengwa(harma_conr,"teema3luuva","telco_rightup_conr","rluuvap"); set_harma_aps; endchr;
-build_tengwa(harma_cap,"capteema3luuva","captelco_rightup","rluuvap"); set_harma_aps; endchr;
+build_tengwa(harma_dec,"capteema3luuva","captelco_rightup","rluuvap"); set_harma_aps; endchr;
 
 build_tengwa(anca,"teema3luuvar","telco_rightup","rluuvap"); set_harma_aps; endchr;
 build_tengwa(anca_conr,"teema3luuvar","telco_rightup_conr","rluuvap"); set_harma_aps; endchr;
-build_tengwa(anca_cap,"capteema3luuvar","captelco_rightup","rluuvap"); set_harma_aps; endchr;
+build_tengwa(anca_dec,"capteema3luuvar","captelco_rightup","rluuvap"); set_harma_aps; endchr;
 
 def set_anna_aps =
   setap("uap",apt(ps.n,"luuvaruap").pt);
@@ -926,12 +943,12 @@ def set_anna_aps =
 enddef;
 build_tengwa(anna,"teema3luuva","telco_rightshort","rluuvap"); set_anna_aps; endchr;
 build_tengwa(anna_conr,"teema3luuva","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
-build_tengwa(anna_cap,"capteema3luuva","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
+build_tengwa(anna_dec,"capteema3luuva","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
 build_tengwa(anna_conrbot,"teema3luuva","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
 
 build_tengwa(noldo,"teema3luuvar","telco_rightshort","rluuvap"); set_anna_aps; endchr;
 build_tengwa(noldo_conr,"teema3luuvar","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
-build_tengwa(noldo_cap,"capteema3luuvar","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
+build_tengwa(noldo_dec,"capteema3luuvar","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
 build_tengwa(noldo_conrbot,"teema3luuvar","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
 
 def set_extharma_aps =
@@ -939,10 +956,10 @@ def set_extharma_aps =
   setap("dap",apt(ps.n,"luuvaldap").pt);
 enddef;
 build_tengwa(extharma,"teema3luuva","telco_rightext","rluuvap"); set_extharma_aps; endchr;
-build_tengwa(extharma_cap,"capteema3luuva","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
+build_tengwa(extharma_dec,"capteema3luuva","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
 
 build_tengwa(extanca,"teema3luuvar","telco_rightext","rluuvap"); set_extharma_aps; endchr;
-build_tengwa(extanca_cap,"capteema3luuvar","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
+build_tengwa(extanca_dec,"capteema3luuvar","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
 
 
 def build_qteematengwa(expr s, f, t, l) =
@@ -952,19 +969,19 @@ def build_qteematengwa(expr s, f, t, l) =
     attach(l,"rluuvap","rluuvap");
 enddef;
 
-build_qteematengwa(quesse,"closingbar_high2","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
+build_qteematengwa(quesse,"closingbar_high2","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
 pause;
-build_qteematengwa(quesse_conl,"closingbar_high2_conl","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse_conr,"closingbar_high2_conr","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse_conb,"closingbar_high2_conb","telco_rightdown","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse_cap,"capclosingbar_high2","captelco_rightdown2","capteema4luuva"); set_calma_aps; endchr;
+build_qteematengwa(quesse_conl,"closingbar_high2_conl","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
+build_qteematengwa(quesse_conr,"closingbar_high2_conr","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
+build_qteematengwa(quesse_conb,"closingbar_high2_conb","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
+build_qteematengwa(quesse_dec,"capclosingbar_high2","captelco_rightdown2","capteema4luuva"); set_calma_aps; endchr;
 
-build_qteematengwa(ungwe,"closingbar_high4","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
+build_qteematengwa(ungwe,"closingbar_high4","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
 pause;
-build_qteematengwa(ungwe_conl,"closingbar_high4_conl","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe_conr,"closingbar_high4_conr","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe_conb,"closingbar_high4_conb","telco_rightdown","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe_cap,"capclosingbar_high4","captelco_rightdown2","capteema4luuvar"); set_calma_aps; endchr;
+build_qteematengwa(ungwe_conl,"closingbar_high4_conl","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
+build_qteematengwa(ungwe_conr,"closingbar_high4_conr","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
+build_qteematengwa(ungwe_conb,"closingbar_high4_conb","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
+build_qteematengwa(ungwe_dec,"capclosingbar_high4","captelco_rightdown2","capteema4luuvar"); set_calma_aps; endchr;
 
 def set_hwesta_aps =
   attach("teema4luuva","rluuvap","rluuvap");
@@ -974,7 +991,7 @@ build_tengwa(hwesta,"closingbar_high1","telco_rightup","rbarap"); set_hwesta_aps
 build_tengwa(hwesta_conr,"closingbar_high1","telco_rightup_conr","rbarap"); set_hwesta_aps; endchr;
 build_tengwa(hwesta_conl,"closingbar_high1_conl","telco_rightup","rbarap"); set_hwesta_aps; endchr;
 build_tengwa(hwesta_conb,"closingbar_high1_conl","telco_rightup_conr","rbarap"); set_hwesta_aps; endchr;
-build_tengwa(hwesta_cap,"capclosingbar_high1","captelco_rightup","rbarap");
+build_tengwa(hwesta_dec,"capclosingbar_high1","captelco_rightup","rbarap");
   attach("capteema4luuva","rluuvap","rluuvap");
   set_harma_aps;
 endchr;
@@ -987,26 +1004,26 @@ build_tengwa(unque,"closingbar_high3","telco_rightup","rbarap"); set_unque_aps; 
 build_tengwa(unque_conr,"closingbar_high3","telco_rightup_conr","rbarap"); set_unque_aps; endchr;
 build_tengwa(unque_conl,"closingbar_high3_conl","telco_rightup","rbarap"); set_unque_aps; endchr;
 build_tengwa(unque_conb,"closingbar_high3_conl","telco_rightup_conr","rbarap"); set_unque_aps; endchr;
-build_tengwa(unque_cap,"capclosingbar_high3","captelco_rightup","rbarap");
+build_tengwa(unque_dec,"capclosingbar_high3","captelco_rightup","rbarap");
   attach("capteema4luuvar","rluuvap","rluuvap");
   set_harma_aps;
 endchr;
 
-build_qteematengwa(vilya,"closingbar_high2","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_conl,"closingbar_high2_conl","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_conr,"closingbar_high2_conr","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_conb,"closingbar_high2_conb","telco_rightshort","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_cap,"capclosingbar_high2","captelco_rightshort2","capteema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_conrbot,"closingbar_high2","telco_rightshort_conrbot","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya_conbbot,"closingbar_high2_conl","telco_rightshort_conrbot","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya,"closingbar_high2","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conl,"closingbar_high2_conl","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conr,"closingbar_high2_conr","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conb,"closingbar_high2_conb","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_dec,"capclosingbar_high2","captelco_rightshort2","capteema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conrbot,"closingbar_high2","telco_rightshort2_conrbot","teema4luuva"); set_anna_aps; endchr;
+build_qteematengwa(vilya_conbbot,"closingbar_high2_conl","telco_rightshort2_conrbot","teema4luuva"); set_anna_aps; endchr;
 
-build_qteematengwa(nwalme,"closingbar_high4","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_conl,"closingbar_high4_conl","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_conr,"closingbar_high4_conr","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_conb,"closingbar_high4_conb","telco_rightshort","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_cap,"capclosingbar_high4","captelco_rightshort2","capteema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_conrbot,"closingbar_high4","telco_rightshort_conrbot","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme_conbbot,"closingbar_high4_conl","telco_rightshort_conrbot","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme,"closingbar_high4","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conl,"closingbar_high4_conl","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conr,"closingbar_high4_conr","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conb,"closingbar_high4_conb","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_dec,"capclosingbar_high4","captelco_rightshort2","capteema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conrbot,"closingbar_high4","telco_rightshort2_conrbot","teema4luuvar"); set_anna_aps; endchr;
+build_qteematengwa(nwalme_conbbot,"closingbar_high4_conl","telco_rightshort2_conrbot","teema4luuvar"); set_anna_aps; endchr;
 
 def set_exthwesta_aps =
   attach("teema4luuva","rluuvap","rluuvap");
@@ -1014,7 +1031,7 @@ def set_exthwesta_aps =
 enddef;
 build_tengwa(exthwesta,"closingbar_high1","telco_rightext","rbarap"); set_exthwesta_aps; endchr;
 build_tengwa(exthwesta_conl,"closingbar_high1_conl","telco_rightext","rbarap"); set_exthwesta_aps; endchr;
-build_tengwa(exthwesta_cap,"capclosingbar_high1","captelco_rightext","rbarap");
+build_tengwa(exthwesta_dec,"capclosingbar_high1","captelco_rightext","rbarap");
   attach("capteema4luuva","rluuvap","rluuvap");
   set_extharma_aps;
 endchr;
@@ -1025,7 +1042,7 @@ def set_extunque_aps =
 enddef;
 build_tengwa(extunque,"closingbar_high3","telco_rightext","rbarap"); set_extunque_aps; endchr;
 build_tengwa(extunque_conl,"closingbar_high3_conl","telco_rightext","rbarap"); set_extunque_aps; endchr;
-build_tengwa(extunque_cap,"capclosingbar_high3","captelco_rightext","rbarap");
+build_tengwa(extunque_dec,"capclosingbar_high3","captelco_rightext","rbarap");
   attach("capteema4luuvar","rluuvap","rluuvap");
   set_extharma_aps;
 endchr;
@@ -1042,7 +1059,7 @@ endchr;
 %  setap("uap",(0.41[lpad,w-rpad],tex+apy));
 %  setap("dap",(0.45[lpad,w-rpad],-tdesc-apy));
 %endchr;
-beginrefchr(longcarr_cap,psc("captelco_leftdown").width);
+beginrefchr(longcarr_dec,psc("captelco_leftdown").width);
   padding(0.1pt,0.0pt);
   attach("captelco_leftdown","lpad","origo");
   setap("uap",(0.48[lpad,w-rpad],ctex+apy));
@@ -1055,7 +1072,7 @@ endchr;
 %  setap("uap",(0.41[lpad,w-rpad],tasc+apy));
 %  setap("dap",(0.45[lpad,w-rpad],-apy));
 %endchr;
-beginrefchr(halla_cap,psc("captelco_leftup").width);
+beginrefchr(halla_dec,psc("captelco_leftup").width);
   padding(0.1pt,0.0pt);
   attach("captelco_leftup","lpad","origo");
   setap("uap",(0.48[lpad,w-rpad],ctasc+apy));
@@ -1086,7 +1103,7 @@ endchr;
 %  setap("uap",(0.41[lpad,w-rpad],tex+apy));
 %  setap("dap",(0.41[lpad,w-rpad],-apy));
 %endchr;
-beginrefchr(shortcarr_cap,psc("captelco_leftshort").width);
+beginrefchr(shortcarr_dec,psc("captelco_leftshort").width);
   padding(0.1pt,0.0pt);
   attach("captelco_leftshort","lpad","origo");
   setap("uap",(0.48[lpad,w-rpad],ctex+apy));
@@ -1126,7 +1143,7 @@ build_tengwa(mhtengwa,"telco_leftshort","closingbar_low4_desc","lbarap");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
 endchr;
-build_tengwa(mhtengwa_cap,"captelco_leftshort2","closingbar_low4_desc","lbarap");
+build_tengwa(mhtengwa_dec,"captelco_leftshort2","closingbar_low4_desc","lbarap");
   attach("capteema2luuvar","lluuvap","lluuvap");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
@@ -1137,7 +1154,7 @@ build_tengwa(beleriandicmh,"telco_leftshort","closingbar_low2_desc","lbarap");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
 endchr;
-build_tengwa(beleriandicmh_cap,"captelco_leftshort2","closingbar_low2_desc","lbarap");
+build_tengwa(beleriandicmh_dec,"captelco_leftshort2","closingbar_low2_desc","lbarap");
   attach("capteema2luuva","lluuvap","lluuvap");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.6w,-apy));
@@ -1151,32 +1168,30 @@ def draw_openanna(expr style) =
   z1=(lpad+0.2pt,hgt);
   z2=(x1,y3);
   z3=(lpad,0.42hgt);
-  use(a4); bot z4=(0.63[x5,x3],-o);
+  use(a4); bot z4=(0.63[x5,x3],0);
+  setap("rt",(w,0));
+  apt(ps.n,lastap).forgd := false;
   if style=capital:
-    setap("rt",(w,0));
-    apt(ps.n,lastap).forgd := false;
     attach("captelco_rightshort1","rt","right");
-    if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
-    z5=apt(ps.n,"rluuvap").pt;
   else:
-    z6=(w-rpad,hgt);
-    z7=(x6,0);
-    ap2=ornang(curved,narrcon); p2=ornpath(curved,narrcon)(6,7);
-    draw_stroke(p2,ap2);
-    t=p2 heighttimes ypart conpoint5; %0.45hgt
-    z5=change_angle(point t of p2, penangle t of ap2, a4);
+    attach("telco_rightshort","rt","right");
   fi
+  z5=apt(ps.n,"rluuvap").pt;
   if style=conleft:
-    ap0=ornang(widecon,noorn);
-    ap1=ang(conpenangle7..ap0);
-    p0=conpoint7{right}..ornpath(widecon,noorn)(1,2);
+    a0=conpenangle7+1; a1=34;
+    ap0=ang(a0..a1);
+    p0=topserif(1,2)(0.6pt, 0.5tex, 0, 0, ap0);
+    z0=point 0 of p0;
+    draw_connection(7,0,true);
   else:
-    ap1=ornang(rounded,noorn); p0=ornpath(rounded,noorn)(1,2);
+    a0=38; a1=34;
+    ap0=ang(a0..a1);
+    p0=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap0);
   fi
-  p1=subpath(0,length p0-1) of p0..z3{down};
-  draw_stroke(p1..z4{right}..{curl0.3}z5,ang(ap1..a2..a4..a5));
+  draw_stroke(subpath(0,0.5) of p0..z3{down}..z4{right}..{curl0.3}z5,ang(subpath(0,0.5) of ap0..a2..a4..a5));
   labels(range 1 thru 7);
   setap("uap",(1/2[x1,x5],hgt+apy));
+  setap("cap",(1/2[x3,x5],1/2tex));
   setap("dap",(0.49w,-apy));
 enddef;
 beginchr(openanna,0.9ten);
@@ -1185,10 +1200,9 @@ endchr;
 beginchr(openanna_conl,0.9ten);
   draw_openanna(conleft);
 endchr;
-beginchr(openanna_cap,0.9cten);
+beginchr(openanna_dec,0.9cten);
   draw_openanna(capital);
 endchr;
-if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 
 beginchr(silme_lig_harma,1ten);
   a1=harmaligappenangle;
@@ -1211,7 +1225,8 @@ beginchr(silme_lig_harma,1ten);
 endchr;
 
 beginchr(tengparen,0);
-  draw_caplefttelco(0.7[tex,tasc],-1/2tdesc,-1/2tdesc+1.0pt,0.8pt);
+  draw_declefttelco(0.7[tex,tasc],-1/2tdesc,-1/2tdesc+1.0pt,0.8pt);
 endchr;
 
 message"";
+

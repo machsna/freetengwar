@@ -2,6 +2,8 @@
 
 # Generating ttf-files:
 
+python mf2ttf.py underline
+
 python mf2ttf.py latinr
 python mf2ttf.py tengwarr
 fontforge -script tengtelc.pe regular
@@ -12,38 +14,47 @@ fontforge -script tengtelc.pe bold
 
 # Some cleaning up:
 
-rm -f latinr.14454gf
+rm -f underline.21681gf
+rm -f underline.log
+rm -f underline.enc
+rm -f underline.pe
+rm -f underline.pk
+rm -f underline.tfm
+#rm -f underline.sfd
+
+rm -f latinr.21681gf
 rm -f latinr.log
 rm -f latinr.enc
 rm -f latinr.pe
 rm -f latinr.pk
 rm -f latinr.tfm
-#rm -f latinr.ttf
+#rm -f latinr.sfd
 
-rm -f tengwarr.14454gf
+rm -f tengwarr.21681gf
 rm -f tengwarr.log
 rm -f tengwarr.enc
 rm -f tengwarr.pe
 rm -f tengwarr.pk
 rm -f tengwarr.tfm
-#rm -f tengwarr.ttf
+#rm -f tengwarr.sfd
 
-rm -f latinb.14454gf
+rm -f latinb.21681gf
 rm -f latinb.log
 rm -f latinb.enc
 rm -f latinb.pe
 rm -f latinb.pk
 rm -f latinb.tfm
-#rm -f latinb.ttf
+#rm -f latinb.sfd
 
-rm -f tengwarb.14454gf
+rm -f tengwarb.21681gf
 rm -f tengwarb.log
 rm -f tengwarb.enc
 rm -f tengwarb.pe
 rm -f tengwarb.pk
 rm -f tengwarb.tfm
-#rm -f tengwarb.ttf
+#rm -f tengwarb.sfd
 
 # Adding Graphite tables:
 
 . ./addgr.bat
+

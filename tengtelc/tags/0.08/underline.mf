@@ -1,0 +1,221 @@
+%% Tengwar Telcontar - a Tengwar unicode typeface.
+%% Copyright (C) 2005-2009 Johan Winge
+%% 
+%% Tengwar Telcontar is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this
+%% font, and embed this font or unaltered portions of this font into
+%% the document, this font does not by itself cause the resulting
+%% document to be covered by the GNU General Public License. This
+%% exception does not however invalidate any other reasons why the
+%% document might be covered by the GNU General Public License. If you
+%% modify this font, you may extend this exception to your version of
+%% the font, but you are not obligated to do so. If you do not wish to
+%% do so, delete this exception statement from your version.
+%% 
+%% Tengwar Telcontar is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with Tengwar Telcontar; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+input setup;
+font_ps_name:="tengtelcunderlines";
+font_name:="Tengwar Telcontar Underlines";
+font_weight:="Regular";
+input tracing;
+tecil_w = 0.41pt; tecil_h = 0.17pt;
+input stroke;
+
+ulineh = -1.1pt;
+curvelen = 0.4pt;
+
+vardef hexadecimal primary n =
+  save m,s;
+  m=abs round n;
+  string s; s="";
+  forever:
+    s:=char (m mod 16 + 48 if m mod 16 > 9: +7 fi) & s;
+    m:=m div 16; exitif m=0;
+  endfor
+  if length s = 1: s:="0" & s; fi
+s enddef;
+
+def drawunderline(expr startp, endp, isleft, isright) =
+  save p,x,y; path p[]; numeric x[], y[];
+  y0=y2=y3=y4=y5=y7=ulineh;
+  if isleft:
+    rt x0=startp;
+    lft x3=startp;
+  else:
+    lft x0=startp;
+  fi
+  if isright:
+    lft x7=endp;
+    rt x4=endp;
+  else:
+    rt x7=endp;
+  fi
+  if not isleft and not isright:
+    x3=1/2[x0,x7];
+  fi
+  if not isleft or not isright:
+    x3=x4;
+  fi
+  if (x7>x3) and (x0<x4):
+    x2-x0=x7-x5=curvelen;
+    x1=x0; x6=x7;
+    z2-z1=z6-z5=whatever*dir17;
+    if x2>x3:
+      p1=z0--z3;
+    else:
+      p1=z1{dir 40}...{right}z2--z3;
+    fi
+    if x5<x4:
+      p2=z4--z7;
+    else:
+      p2=z4--z5{right}...{dir 40}z6;
+    fi
+    draw p1--p2;
+  fi
+  penlabels(0,3,4,7);
+enddef;
+
+def makeunderline(expr num,width)(text gaps) =
+  save psname, name, startp, endp, isleft;
+  string psname, name;
+  boolean isleft;
+  if numeric num:
+    name="uline" & decimal num;
+%    if num>=32:
+%      psname="uniE2" & hexadecimal (num-32);
+%    else:
+      psname="uline" & decimal num;
+%    fi
+  else:
+    name=psname="uline" & num;
+  fi
+  setgdalias(psname, name);
+  beginchr(psname,0);
+    use(40);
+    isleft:=true;
+    startp:=0;
+    for gap=gaps:
+      endp:=(xpart gap-1/2ypart gap)/2048*em;
+      drawunderline(startp,endp,isleft,false);
+      isleft:=false;
+      startp:=(xpart gap+1/2ypart gap)/2048*em;
+    endfor
+    endp:=width/2048*em;
+    drawunderline(startp,endp,isleft,true);
+  endchr;
+  pause;
+enddef;
+
+%addalias("uniF8FD","uline_start");
+%beginchr(uline_start,0);
+beginchr("uline_start",0);
+  use(40);
+  lft z1=(0,ulineh);
+  rt z2=(0,ulineh);
+  z3=z2-0.8pt*dir(-30);
+  draw z1--z2{left}..{curl 4}z3;
+endchr;
+pause;
+%addalias("uniF8FE","uline_end");
+%beginchr(uline_end,2pt);
+beginchr("uline_end",0);
+  use(40);
+  rt z1=(0,ulineh);
+  lft z2=(0,ulineh);
+  z3=z2+0.8pt*dir(-30);
+  draw z1--z2{right}..{curl 4}z3;
+endchr;
+pause;
+
+%These number could have been fetched automatically, but now I do it manually. So there.
+
+telco=285;
+makeunderline("sp",307,); % Space
+makeunderline(0,1111,(250,telco)); % Tinco, Parma
+makeunderline(1,1626,(250,telco)); % Ando, Umbar
+makeunderline(2,1074,);          % Thuule, Formen, Harma, Anna, Hwesta, Vilya
+makeunderline(3,1589,);          % Anto, Ampa, Anca, Noldo, Unque, Nwalme
+makeunderline(4,1112,);          % Oore, Vala
+makeunderline(5,1627,);          % Nuumen, Malta
+makeunderline(6,1072,(210,telco)); % ExtThuule, ExtFormen
+makeunderline(7,1587,(210,telco)); % ExtAnto, ExtAmpa
+%makeunderline(8,1093,(250,telco)); % Parma
+%makeunderline(9,1609,(250,telco)); % Umbar
+%makeunderline(10,1057,);          % Formen
+%makeunderline(11,1573,);          % Ampa
+%makeunderline(12,1092,);          % Vala   Hmm, conl is not as wide...
+%makeunderline(13,1609,);          % Malta       Dito.
+%makeunderline(14,1051,(210,telco)); % ExtFormen
+%makeunderline(15,1567,(210,telco)); % ExtAmpa
+%makeunderline(16,1046,(870,telco)); % Calma
+%makeunderline(17,1562,(1380,telco)); % Anga
+%makeunderline(18,1071,);          % Harma
+%makeunderline(19,1586,);          % Anca
+%makeunderline(20,1050,);          % Anna
+%makeunderline(21,1565,);          % Noldo
+makeunderline(22,1072,(870,telco)); % ExtHarma, Calma, Quesse, ExtHwesta
+makeunderline(23,1587,(1380,telco)); % ExtAnca, Anga, Ungwe, ExtUnque
+%makeunderline(24,1050,(865,telco)); % Quesse
+%makeunderline(25,1566,(1380,telco)); % Ungwe
+%makeunderline(26,1078,);          % Hwesta
+%makeunderline(27,1594,);          % Unque
+%makeunderline(28,1050,);          % Vilya
+%makeunderline(29,1566,);          % Nwalme
+%makeunderline(30,1077,(875,telco)); % ExtHwesta
+%makeunderline(31,1593,(1390,telco)); % ExtUnque
+makeunderline(32,932,(330,230)); % Roomen, Arda
+makeunderline(33,932,(520,775)); % Roomen, Arda open
+makeunderline(34,1295,(560,890)); % Lambe
+makeunderline(35,1295,(900,560)); % Alda
+makeunderline(36,932,);          % Silme
+makeunderline(37,580,);          % SilmeLig
+makeunderline(38,932,(630,200));  % SilmeNuq
+makeunderline(39,942,(410,680));  % Aare
+makeunderline(40,942,(740,230));  % AareNuq
+makeunderline(41,973,);          % Hyarmen Yanta
+makeunderline(42,1055,);          % Hyarmen conr
+makeunderline(43,1152,);          % Hwesta sindarinwa
+%makeunderline(44,973,);          % Yanta
+makeunderline(45,1034,);          % Yanta conr
+makeunderline(46,900,);          % Uure
+makeunderline(47,941,);          % Uure conr
+makeunderline(48,492,(270,telco));% Long carrier
+makeunderline(49,492,);           % Short carrier, Halla
+makeunderline(50,869,);           % Reversed Osse, W-tengwa, Descending Osse
+makeunderline(51,851,(270,300));   % Descending W
+makeunderline(52,821,);           % Osse
+makeunderline(53,677,);           % Connecting carrier
+makeunderline(54,969,);           % Open Anna
+makeunderline(55,999,(840,telco)); % PreFeaQ
+makeunderline(56,922,);           % HW
+makeunderline(57,932,);           % HW1
+makeunderline(58,983,);           % HW2
+makeunderline(59,1609,(1260,690)); % MH
+makeunderline(60,1092,(740,690)); % BelMH
+makeunderline(61,885,(20,300));   % AngWH
+makeunderline(62,1087,);           % Vaiya
+makeunderline(63,874,(420,650));   % Low S-hook
+makeunderline(64,809,);           % High S-hook
+
+makeunderline(65,1325,(325,510)); % Capital Tinco, Parma
+
+% Okay, there seems to be a weird bug in XeTeX.
+% This makes it disappear for some reason.
+for i=100 upto 140:
+  makeunderline(i,500,(250,500));
+endfor
+
+exit; end.
+

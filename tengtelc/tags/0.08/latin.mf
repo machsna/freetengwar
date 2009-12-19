@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2007 Johan Winge
+%% Copyright (C) 2005-2009 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -25,8 +25,1236 @@
 %% along with Tengwar Telcontar; if not, write to the Free Software
 %% Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
-setspace(2pt);
+setspace(1.5pt);
 
+addalias("uni00A0","nbsp");
+beginrefchr(nbsp,1.5pt);
+  setap("uap",(1/2w,tex+apy));
+  setap("dap",(1/2w,-apy));
+endchr;
+
+superscriptscale=0.65;
+
+beginchr("section",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z2=(0.55[x3,x1],asc);
+  x1-x3=0.7(x4-lpad);
+  z1=z2+whatever*dir(-20);
+  1/2[x3,x1]=1/2[lpad,x4];
+  y3=0.8[y5,y2];
+  y4=0.2[y5,y2];
+  x4=w-rpad;
+  z5=(x2,-0.2pt);
+  p1=z1..z2{left}..z3{down}..z4{down}..z5;
+  p2=p1 rotatedaround(1/2(w,asc-desc),180);
+  t:=ypart(p1 intersectiontimes p2);
+  draw subpath (0,t) of p1;
+  draw subpath (0,t) of p2;
+endchr;
+
+beginchr("uni00B5",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x1=x2=lpad;
+  x3=0.55[x2,x4];
+  x4=x5=w-rpad;
+  y1=-desc;
+  y2=y4=ex;
+  bot y3=bot y5=0;
+  draw z1--z2 & z2{down}..z3{right}..z4{up} & z4--z5;
+endchr;
+
+beginchr("multiply",1.3en);
+  padding(0.7pt,0.7pt);
+  1/2[z5,z7]=1/2[z6,z8];
+  x6=x7=w-rpad; x5=lpad;
+  y6=y5; y7=0;
+  y6-y7=x7-x8;
+  use(-45+20);
+  pickup (pencircle xscaled (0.7*tecil_w) yscaled tecil_h) rotated -45;
+  draw z6--z8;
+  pickup (pencircle xscaled (0.7*tecil_w) yscaled tecil_h) rotated 45;
+  draw z5--z7;
+endchr;
+
+beginchr("paragraph",1.2en);
+  padding(0.7pt,0.9pt);
+  x1=x2=w-rpad;
+  x3=x4=x1-1.2pt;
+  y1=y3=-0.5desc;
+  y2=y4=asc;
+  z5=(lpad,0.6[y2,y6]);
+  z6=(x1,0.5asc);
+  use(35);
+  draw z3--z4;
+  draw z1--z2 & z2--z4{left}...z5{down}..z6;
+endchr;
+
+beginchr("currency",1.5en);
+  padding(0.7pt,0.7pt);
+  1/2[z1,z3]=1/2[z2,z4]=1/2[z5,z7]=1/2[z6,z8];
+  x1=x3; x6=x7=w-rpad; x5=lpad;
+  y2=y4; y6=y5; y7=0;
+  x2-x4=y1-y3=0.8(x6-x5);
+  y6-y7=x7-x8;
+  p1=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(-45);
+  draw z6--z8;
+  use(45);
+  draw z5--z7;
+  erase fill p1;
+  use(35);
+  draw p1;
+endchr;
+
+beginchr("sterling",1.5en);
+  padding(0.7pt,0.7pt);
+  a1=a2=a3=a4=a5=a6=a7=a8=a9=35;
+  x6=lpad;
+  x9=w-rpad;
+  use(a5); bot y5=0;
+  use(a8); bot y8=0;
+  x5=0.3[x6,x4];
+  x7=0.2[x6,x9];
+  x8=0.7[x6,x9];
+  z9=z8+whatever*dir(20);
+  x3=0.3[x6,x9];
+  x4=0.35[x6,x9];
+  x1=0.7[x3,x9];
+  x2=0.6[x3,x1];
+  y2=asc;
+  z1=z2+whatever*dir(-30);
+  y3=0.5[ex,asc];
+  y4=0.6ex;
+  y6=0.5[y5,y7];
+  y7=0.4ex;
+  p1=z1..z2{left}..z3..z4{down}..z5{left}..z6{up}..z7{right}..z8{right}..z9{dir a9};
+  use(a1);
+  draw p1;
+  y10=y11=0.65[y7,y3];
+  x3=0.4[x10,x11];
+  x11-x10=0.8en;
+  draw z10--z11;
+endchr;
+
+beginchr("degree",0.8en);
+  padding(0.7pt,0.7pt);
+  x1=lpad;
+  x2=x4=1/2[x1,x3];
+  x3=w-rpad;
+  y2=asc;
+  y2-y4=x3-x1;
+  y1=y3=1/2[y2,y4];
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  draw z1{up}..z2{right}..z3{down}..z4{left}..cycle;
+endchr;
+
+def draw_guil(expr style) =
+  padding(0.8pt,0.8pt);
+  if style=leftside:
+    x1=x3=w-rpad;
+    x2=lpad;
+    y1-y3=0.9ex;
+    a1=90-30;
+    a2=0;
+    a3=-a1;
+  else:
+    x1=x3=lpad;
+    x2=w-rpad;
+    y1-y3=0.9ex;
+    a1=90+30;
+    a2=180;
+    a3=360-a1;
+  fi
+  y2=1/2[y1,y3]=1/2ex;
+  p1=z1{-dir a1}..z2 & z2..z3{dir a3};
+  ap1=ang(a1..a2..a3);
+  draw_stroke(p1,ap1);
+enddef;
+beginchr("guilsinglleft",0.35en);
+  draw_guil(leftside);
+endchr;
+beginchr("guilsinglright",0.35en);
+  draw_guil(rightside);
+endchr;
+guillemotdist=1.5pt;
+beginrefchr("guillemotleft",ps[ps.lu("guilsinglleft")].width+guillemotdist);
+  setap("ap1",(guillemotdist,0));
+  attach("guilsinglleft","origo","origo");
+  attach("guilsinglleft","ap1","origo");
+endchr;
+beginrefchr("guillemotright",ps[ps.lu("guilsinglright")].width+guillemotdist);
+  setap("ap1",(guillemotdist,0));
+  attach("guilsinglright","origo","origo");
+  attach("guilsinglright","ap1","origo");
+endchr;
+
+beginchr("trademark",1.8en);
+  padding(0.6pt,0.9pt);
+  use(35);
+  x1=lpad;
+  y1=y2=y6=y8=asc;
+  y4=y5=y9=1/2asc;
+  z3=1/2[z1,z2];
+  x4=x3;
+  x7=1/2[x6,x8];
+  y7=1/2[y6,y5];
+  x5=x6;
+  x8=x9=w-rpad;
+  1/2[x2,x6]=1/2[lpad,w-rpad];
+  x6-x2=0.8pt;
+  draw z1--z2;
+  draw z3--z4;
+  draw z5--z6--z7--z8--z9;
+endchr;
+
+beginchr("numbersign",0.90en);
+  padding(1.5pt,1.5pt);
+  a1=30; a2=40;
+
+  x1=lpad;
+  y1=y3=-desc+2pt;
+  z2-z1=z4-z3=whatever*dir(80);
+  y2=asc-2pt;
+  x4=w-rpad;
+
+  p1=z1..z2;
+  p2=z3..z4;
+
+  draw_stroke(p1, ang(a1..a1));
+  draw_stroke(p2, ang(a1..a1));
+
+  z5=0.3[z1,z2]-(1.5pt,0);
+  z6=0.3[z2,z1]-(1.5pt,0);
+  z7=0.3[z3,z4]+(1.5pt,0);
+  z8=0.3[z4,z3]+(1.5pt,0);
+
+  p3=z5..z7;
+  p4=z6..z8;
+
+  draw_stroke(p3, ang(a2..a2));
+  draw_stroke(p4, ang(a2..a2));
+
+endchr;
+
+beginchr("dollar",1.2en);
+  padding(0.6pt,0.6pt);
+  a1=a2=a3=a4=a5=a6=35;
+  a7=a8=45;
+  z1=(0.95[x3,x4],0.85[y5,y2]);
+  use(a2); top z2=(0.55[x3,x1],asc-1pt);
+  z3=(0.1[x6,x4],0.76[y5,y2]);
+  z4=(w-rpad,0.27[y5,y2]);
+  use(a5); bot z5=(0.45[x6,x4],-o);
+  z6=(lpad,0.21[y5,y2]);
+  ap1=ang(a1..a2..a3..a4..a5..a6);
+  p1=z1..z2{left}..z3{down}..z4{down}..z5{left}..z6;
+  draw_stroke(p1,ap1);
+  x7=x8=1/2[x2,x5];
+  y7-y2=y5-y8=1pt;
+  draw_stroke(z7..z8,ang(a7..a8));
+  labels(range 1 thru 8);
+endchr;
+
+beginchr("fraction",1.4en);
+  padding(0.6pt,0.6pt);
+  a1=a2=25; a3=a4=a5=a6=35;
+  z1=(lpad,-0.0pt);
+  use(a2); top z2=(w-rpad,asc-1pt);
+  draw_stroke(z1..z2,ang(a1..a2));
+  x3=x5=1/2[x4,x6];
+  y4=y6=1/2[y3,y5];
+  x6-x4=0.9*(y3-y5)=1.65pt;
+  z4=(lpad,0.8[y1,y2]);
+  z10=(z3+z6+z5+z4)/4;
+  z11=z10 shifted (2*(1/2[z1,z2]-(x3,y4)));
+  setap("uap",z10);
+  setap("dap",z11);
+  setap("dap2",z11 shifted (x6-x4+1.3pt,0));
+  labels(range 1 thru 8);
+endchr;
+
+beginchr("ampersand",1.9en);
+  padding(0.3pt,0.3pt);
+  a1-5=a2=a3=a4=a5=a6=a7=a8=35;
+  z1=z2+whatever*dir 25; x1=w-rpad;
+  use(a2); bot z2=(0.87[lpad,w-rpad],-o);
+  use(a3); top z3=(0.36[lpad,w-rpad],ex+o);
+  use(a4); lft z4=(lpad,0.45[y5,y3]);
+  use(a5); bot z5=(0.28[lpad,w-rpad],-o);
+  z6=(w-rpad-0.2pt,asc-2.9pt);
+  p1=z1{-dir a1}..z2{left}..tension 1.1..z3{left}..z4{down}..z5{right}..tension 1.2 and 1..z6{dir 50};
+  ap1=ang(a1..a2..a3..a4..a5..a6);
+  draw_stroke(p1,ap1);
+  t=1.94;
+  z7=point t of p1;
+  z8=z7+1.8pt*dir 70;
+  p2=z7{direction t of p1}..z8{-direction t of p1}..z7{direction t of p1};
+  ap2=ang(a7..a8..a7);
+  draw_stroke(p2 shifted (0.3pt*dir85),ap2);
+
+  labels(range 1 thru 8);
+endchr;
+
+beginchr("asterisk",1.4en);
+  padding(0.6pt,0.6pt);
+
+  a1=20; a2=-10; a3=35;
+
+  1/2[z1,z2]=1/2[z3,z4]=1/2[z5,z6]=(0.5[lpad,w-rpad],0.6asc);
+  z1-z2=3pt*dir(60);
+  z3-z4=3pt*dir(120);
+  z5-z6=3pt*dir(180);
+
+  draw_stroke(z1..z2,ang(a1..a1));
+  draw_stroke(z3..z4,ang(a2..a2));
+  draw_stroke(z5..z6,ang(a3..a3));
+
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("equal",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=x3=lpad; x2=x4=w-rpad;
+  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+  y1-y3=y2-y4=1.3pt;
+  a1=a2=40;
+  ap1=ang(a1..a2);
+  p1=z1..z2;
+  p2=z3..z4;
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap1);
+endchr;
+
+%beginchr("approxequal",1.3ex);
+%  padding(0.5pt,0.5pt);
+%  x1=x3=lpad; x2=x4=w-rpad;
+%  1/2[y1,y3]=1/2[y2,y4]-0.3pt=1/2ex;
+%  y1-y3=y2-y4=1.3pt;
+%  a1=a2=40;
+%  ap1=ang(a1..a2);
+%  p1=z1{dir a1}..z2{dir a2};
+%  p2=z3{dir a1}..z4{dir a2};
+%  draw_stroke(p1,ap1);
+%  draw_stroke(p2,ap1);
+%endchr;
+
+%beginchr("notequal",1.3ex);
+%  padding(0.5pt,0.5pt);
+%  x1=x3=lpad; x2=x4=w-rpad;
+%  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+%  y1-y3=y2-y4=1.3pt;
+%  a1=a2=40;
+%  ap1=ang(a1..a2);
+%  p1=z1..z2;
+%  p2=z3..z4;
+%  draw_stroke(p1,ap1);
+%  draw_stroke(p2,ap1);
+%  use(30);
+%  z5=(x2-1pt,y2+1.2pt); 
+%  z6=(x3+1pt,y3-1.2pt);
+%  draw z5--z6;
+%endchr;
+
+%beginchr("lessequal",1.3ex);
+%  padding(0.5pt,0.5pt);
+%  x1=x3=lpad; x2=x4=w-rpad;
+%  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+%  y1-y3=y2-y4=1.3pt;
+%  a1=a2=40;
+%  ap1=ang(a1..a2);
+%  p1=z1..z2;
+%  p2=z3..z4;
+%  draw_stroke(p1,ap1);
+%  draw_stroke(p2,ap1);
+%  use(40);
+%  z5=(x2,y2+1.7pt);
+%  draw z5--z1;
+%endchr;
+
+%beginchr("greaterequal",1.3ex);
+%  padding(0.5pt,0.5pt);
+%  x1=x3=lpad; x2=x4=w-rpad;
+%  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
+%  y1-y3=y2-y4=1.3pt;
+%  a1=a2=40;
+%  ap1=ang(a1..a2);
+%  p1=z1..z2;
+%  p2=z3..z4;
+%  draw_stroke(p1,ap1);
+%  draw_stroke(p2,ap1);
+%  use(40);
+%  z5=(x1,y1+1.7pt);
+%  draw z5--z2;
+%endchr;
+
+beginchr("figuredash",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  a1=a2=40;
+  p1=z1..z2;
+  ap1=ang(a1..a2);
+  draw_stroke(p1,ap1);
+endchr;
+
+beginchr("plus",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  a1=a2=40;
+  p1=z1..z2;
+  ap1=ang(a1..a2);
+  draw_stroke(p1,ap1);
+  draw_stroke(p1 rotatedaround (1/2[z1,z2],90),ap1);
+endchr;
+
+beginchr("divide",1.3ex);
+  padding(0.5pt,0.5pt);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  a1=a2=40;
+  p1=z1..z2;
+  ap1=ang(a1..a2);
+  draw_stroke(p1,ap1);
+  x3=x4=1/2[x1,x2];
+  y1=1/2[y3,y4];
+  y3=1/2tecil_w;
+  draw_dot(3)(interpunctsize);
+  draw_dot(4)(interpunctsize);
+endchr;
+
+beginchr("logicalnot",1.3ex);
+  padding(0.5pt,0.5pt);
+  use(40);
+  x1=lpad; x2=w-rpad;
+  y1=y2=1/2ex;
+  x3=x2;
+  y3=y2-0.4ex;
+  p1=z1--z2--z3;
+  draw p1;
+endchr;
+
+beginrefchr("plusminus",1.3ex);
+  x1=x2=0;
+  y1-y2=0.65ex;
+  y1=0.4ex;
+  setap("ap1",z1);
+  setap("ap2",z2);
+  attach("plus","ap1","origo");
+  attach("figuredash","ap2","origo");
+endchr;
+
+beginchr("slash",1.0en);
+  padding(0.6pt,0.6pt);
+  a1=a2=30;
+  z1=(lpad,-0.5desc);
+  z2=(w-rpad,asc);
+  draw_stroke(z1..z2,ang(a1..a2));
+  labels(range 1 thru 2);
+endchr;
+
+path zero_p;
+beginchr("zero",1en);
+  padding(0.7pt,0.7pt);
+  use(35); top z1=(1/2[x4,x2],ex+o);
+  z2=(w-rpad,1/2ex);
+  bot z3=(1/2[x4,x2],-o);
+  z4=(lpad,1/2ex);
+  zero_p=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  draw zero_p;
+  labels(range 1 thru 4);
+endchr;
+beginchr("uni2070",ps[ps.lu("zero")].width*superscriptscale);
+  use(35);
+  draw zero_p scaled superscriptscale shifted (0,ex);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
+
+path one_p[];
+beginchr("one",0.6en);
+  padding(0.7pt,0.7pt);
+  use(35); top z2=(1/2[lpad,w-rpad],ex+o);
+  z1=z2-1pt*dir45;
+  bot z3=(x2,0);
+  bot z4=(lpad,0);
+  bot z5=(w-rpad,0);
+  one_p1=z1{dir 35}...z2 & z2--z3;
+  one_p2=z4--z5;
+  draw one_p1;
+  draw one_p2;
+  labels(range 1 thru 6);
+endchr;
+beginchr("uni00B9",ps[ps.lu("one")].width*superscriptscale);
+  use(35);
+  draw one_p1 scaled superscriptscale shifted (0,ex);
+  draw one_p2 scaled superscriptscale shifted (0,ex);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
+
+path two_p;
+path two_ap;
+beginchr("two",1en);
+  padding(0.7pt,0.7pt);
+  a1-5=a2=a3=a4=a5=a6=35;
+  use(a2); top z2=(0.6[x1,x3],ex+o);
+  z1=(lpad+0.2pt,0.8ex);
+  z3=(w-rpad-0.6pt,0.75ex);
+  bot z4=(lpad,0);
+  bot z5=(w-rpad,0);
+  two_p=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4--z5;
+  two_ap=ang(a1..a2..a3..a4..a5);
+  draw_stroke(two_p,two_ap);
+  labels(range 1 thru 5);
+endchr;
+beginchr("uni00B2",ps[ps.lu("two")].width*superscriptscale);
+  draw_stroke(two_p scaled superscriptscale shifted (0,ex), two_ap);
+  setap("ap",(0.5w,0.4[ex,asc]));
+endchr;
+
+path three_p;
+path three_ap;
+beginchr("three",1en);
+  padding(0.7pt,0.7pt);
+  a1-5=a2=a3=a4=a5=a6=35;
+  use(a2); top z2=(0.6[x1,x3],ex+o);
+  z1=(lpad+0.2pt,0.8ex);
+  z3=(w-rpad-0.6pt,0.75ex);
+  z4=(lpad+0.9pt,0.2ex);
+  z5=(w-rpad,0.6[y6,y4]);
+  z6=(lpad,-desc);
+  three_p=z1{dir a1}..z2{right}..z3{down}..z4{-dir 20} & z4{dir 20}..z5{down}..z6;
+  three_ap=ang(a1..a2..a3..a4..a5..a6);
+  draw_stroke(three_p,three_ap);
+  labels(range 1 thru 5);
+endchr;
+beginchr("uni00B3",ps[ps.lu("three")].width*superscriptscale);
+  draw_stroke(three_p xscaled superscriptscale yscaled (0.65*superscriptscale) shifted (0,ex+0.6pt), three_ap);
+  setap("ap",(0.5w,0.3[ex,asc]));
+endchr;
+
+path four_p;
+beginchr("four",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(x2,-desc);
+  top z2=(x4-1.2pt,ex+o);
+  bot z3=(lpad,0);
+  bot z4=(w-rpad,0);
+  four_p=z1--z2--z3--z4;
+  draw four_p;
+  labels(range 1 thru 5);
+endchr;
+beginchr("uni2074",ps[ps.lu("four")].width*superscriptscale);
+  use(35);
+  draw four_p xscaled superscriptscale yscaled (0.75*superscriptscale) shifted (0,ex+0.5pt);
+  setap("ap",(0.5w,0.2[ex,asc]));
+endchr;
+
+beginchr("five",0.9en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(w-rpad,ex);
+  top z2=(lpad,ex);
+  z3=(lpad,0.3ex);
+  z4=(w-rpad-0.5pt,0.7[y5,y3]);
+  z5=(lpad,-desc);
+  draw z1--z2--z3{dir 35}..z4{down}..z5{-dir 20};
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("six",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(w-rpad-0.8pt,asc);
+  z2=(lpad,0.58ex);
+  bot z3=(0.45[x2,x4],-o);
+  z4=(w-rpad,0.55ex);
+  top z5=(0.55[x2,x4],ex+o);
+  z6=z5-1pt*dir20;
+  p1=z1..tension 1.1 and 1..z2{down}..z3{right}..z4{up}..z5{left}..z6{-dir 35};
+  draw p1;
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("seven",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,ex);
+  top z2=(w-rpad,ex);
+  z3=(0.2[x1,x2],-desc);
+  draw z1--z2--z3;
+  labels(range 1 thru 3);
+endchr;
+
+beginchr("eight",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  x5-x2=x6-x3=0.4pt;
+  z3=(lpad,0.5ex);
+  z5=(w-rpad,0.5ex);
+  bot z4=(x1,-o);
+  y2=y6=y1-1.2pt;
+  draw z1{right}..z2{down}..z3{down}..z4{right}..z5{up}..z6{up}..cycle;
+  labels(range 1 thru 3);
+endchr;
+
+beginchr("nine",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(w-rpad-0.8pt,ex+desc);
+  z2=(lpad,0.58ex);
+  bot z3=(0.45[x2,x4],-o);
+  z4=(w-rpad,0.55ex);
+  top z5=(0.55[x2,x4],ex+o);
+  z6=z5-1pt*dir20;
+  p1=z1..tension 1.1 and 1..z2{down}..z3{right}..z4{up}..z5{left}..z6{-dir 35};
+  draw p1 rotatedaround ((0.5w,0.5ex),180);
+  labels(range 1 thru 5);
+endchr;
+
+beginrefchr("percent",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni2070","uap","ap");
+  attach("uni2070","dap","ap");
+endchr;
+
+beginrefchr("perthousand",ps[ps.lu("fraction")].width+3pt);
+  attach("fraction","origo","origo");
+  attach("uni2070","uap","ap");
+  attach("uni2070","dap","ap");
+  attach("uni2070","dap2","ap");
+endchr;
+
+beginrefchr("onequarter",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B9","uap","ap");
+  attach("uni2074","dap","ap");
+endchr;
+
+beginrefchr("onehalf",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B9","uap","ap");
+  attach("uni00B2","dap","ap");
+endchr;
+
+beginrefchr("threequarters",ps[ps.lu("fraction")].width);
+  attach("fraction","origo","origo");
+  attach("uni00B3","uap","ap");
+  attach("uni2074","dap","ap");
+endchr;
+
+beginchr("at",0.95en);
+  padding(1.5pt,2.6pt);
+  a1=40; a2=40; a3=a4=a5=a6=35;
+  z1=(0.45[x4,x2],ex);
+  z2=(w-rpad,0);
+  z4=(lpad,0.25ex);
+  ap1=stretch(3,ang(a1..a2));
+  p1=tserif(1,2)(0.6pt,0.33,20,1,ap1)..bserif(1,2)(0.9pt,0.33,-dir30,1,ap1);
+  draw_stroke(p1,ap1);
+  t:=p1 heighttimes 0.77ex;
+  z3=change_angle(point t of p1, penangle t of ap1+180,a3+180);
+  use(a5); bot z5=(0.35[x4,x6],-o);
+  t:=p1 heighttimes 0.30ex;
+  z6=change_angle(point t of p1, penangle t of ap1+180,a6+180);
+  ap2=ang(a3..a4..a5..a6);
+  p2=z3{-dir (a3+25)}..z4{down}..z5{right}..z6;
+  draw_stroke(p2,ap2);
+
+  use(40);
+  z7=point infinity of p1;
+  z8=(w-1pt,0.4[y7,y9]);
+  z9=(0.5[x10,x8],0.8asc);
+  z10=(1pt,0.8[y7,y9]);
+  draw z7{dir 30}..z8{up}..z9{left}..z10{-dir 40};
+
+
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("A",1.7en);
+  padding(0.5pt,0.3pt);
+  a0=40; a1=56; a2=54; a3=35;
+  a4=35; a5=25; a6=35; a7=35;
+  z1=(0.37[x5,x2],asc);
+  z2=(w-rpad,-0.5pt);
+  use(a5); bot z5=(lpad,0);
+  p1=tserif(1,2)(1.5pt,0.2,45,3,ang(a0..a1))..bserif(1,2)(0.4pt,0.2,a3+180,0,ang(a2..a3));
+  ap1=ang(a0..a1..a2..a3);
+  t:=p1 heighttimes 0.6[ex,asc];
+  z4=change_angle(point t of p1,penangle t of ap1+180,a4+180);
+  p2=z4{dir (-40+angle direction t of p1)}..z5; ap2=ang(a4..a5);
+  z6=change_angle(z5,a5,a6);
+  t:=p1 heighttimes 0.25ex;
+  draw_change_of_angle:=false;
+  z7=change_angle(point t of p1,penangle t of ap1+180,a7+180);
+  p3=z6..{dir (35+angle direction t of p1)}z7; ap3=ang(a6..a7);
+  draw_stroke(p1,ap1);
+  draw_stroke(p2,ap2);
+  draw_stroke(p3,ap3);
+  setap("uap",(0.4[x5,x2],asc+apy));
+  penlabels(range 1 thru 7);
+endchr;
+
+beginchr("B",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  z3=(x1,ex);
+  z4=(0.85[x1,x5],0.5[y3,y1]);
+  z5=(w-rpad,0.5[y2,y3]);
+  draw z1--z2 & z2{right}..z5{up}..z3{left} & z3{right}..z4{up}..z1{left};
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("C",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(0.9[x3,x5],0.85[y4,y2]);
+  top z2=(0.6[x3,x1],asc);
+  z3=(lpad,0.5asc);
+  bot z4=(0.5[x3,x5],-o);
+  z5=(w-rpad,0.3[y4,y2]);
+  draw z1..z2{left}..z3{down}..z4{right}..z5;
+  setap("dap",(1/2w,-apy));
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("Euro",1.5en);
+  padding(1.5pt,0.7pt);
+  use(35);
+  z1=(0.9[x3,x5],0.85[y4,y2]);
+  top z2=(0.6[x3,x1],asc);
+  z3=(lpad,0.5asc);
+  bot z4=(0.5[x3,x5],-o);
+  z5=(w-rpad,0.3[y4,y2]);
+  draw z1..z2{left}..z3{down}..z4{right}..z5;
+  y6=y7;
+  y8=y9;
+  1/2[y8,y6]=1/2asc;
+  y6-y8=1.4pt;
+  x7-x6=x9-x8=1.0en;
+  lft x8=0;
+  lft x6=x8;
+  draw z6..z7;
+  draw z8..z9;
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("D",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  z3=(w-rpad,0.45[y2,y1]);
+  draw z1--z2 & z2{right}..tension 0.75 and 1..z3{up}..tension 1 and 0.75..z1{left};
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("E",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(x1,ex);
+  bot z3=(x1,0);
+  z4=(0.9[x1,x6],y1);
+  z5=(0.6[x2,x6],y2);
+  z6=(w-rpad,y3);
+  draw z1--z3;
+  draw z1--z4;
+  draw z2--z5;
+  draw z3--z6;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("G",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(w-rpad-0.2pt,0.85[y4,y2]);
+  top z2=(0.6[x3,x1],asc);
+  z3=(lpad,0.5asc);
+  bot z4=(0.5[x3,x5],-o);
+  top z5=(w-rpad-0.3pt,ex);
+  z6=(0.7[x3,x5],y5);
+  draw z1..z2{left}..z3{down}..z4{right}..z5 & z5--z6;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("H",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(x1,ex);
+  bot z3=(x1,0);
+  z4=(w-rpad,y1);
+  z5=(x4,y2);
+  z6=(x4,y3);
+  draw z1--z3;
+  draw z4--z6;
+  draw z2--z5;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("I",0.7en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  bot z2=(x1,0);
+  x1=0.5[x3,x4]=0.5[x5,x6];
+  y3=y4=y1;
+  y5=y6=y2;
+  x4-x3=x6-x5=w-rpad-lpad;
+  draw z1--z2;
+  draw z3--z4;
+  draw z5--z6;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("J",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(x2-2pt,y2);
+  top z2=(w-rpad,asc);
+  z3=(x2,0.3asc);
+  bot z4=(0.5[x5,x3],-o);
+  z5=(lpad,0.2asc);
+  draw z1--z2 & z2--z3{down}...z4{left}...z5;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("K",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(x1,0.8ex);
+  bot z3=(x1,0);
+  z4=(0.9[x1,x6],y1);
+  z5=0.3[z2,z4];
+  z6=(w-rpad,y3);
+  draw z1--z3;
+  draw z2--z4;
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("L",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z3=(x1,0);
+  z6=(w-rpad,y3);
+  draw z1--z3;
+  draw z3--z6;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("M",1.3en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(0.5[x1,x4],ex);
+  bot z3=(x1,0);
+  z4=(w-rpad,y1);
+  z6=(x4,y3);
+  draw z3--z1--z2--z4--z6;
+  labels(range 1 thru 6);
+endchr;
+
+beginchr("N",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(lpad,0);
+  top z2=(x1,asc);
+  z3=(w-rpad,y1);
+  z4=(x3,y2);
+  draw z1--z2--z3--z4;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("O",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  z2=(w-rpad,0.5[y3,y1]);
+  bot z3=(x1,-o);
+  z4=(lpad,y2);
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
+beginrefchr("OE",xpart(apt("O","rpad").pt)+xpart(apt("E","rpad").pt));
+  attach("O","origo","origo");
+  attach("E","rpad","lpad");
+endchr;
+%unlinkref;
+
+beginchr("Q",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  z2=(w-rpad,0.5[y3,y1]);
+  bot z3=(x1,-o);
+  z4=(lpad,y2);
+  z5=(x1,0.6ex);
+  z6=z5+3.5pt*dir(-60);
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchr;
+
+path charR_p[];
+beginchr("R",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  z3=(x1,ex);
+  z4=(0.85[x1,x6],0.5[y3,y1]);
+  z6=(w-rpad,y2);
+  p1=z3{right}..z4{up}..z1{left};
+  z5=point 0.3 of p1;
+  charR_p1=z1--z2; draw charR_p1;
+  charR_p2=z5--z6; draw charR_p2;
+  charR_p3=z3{right}..z4{up}..z1{left}; draw charR_p3;
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("copyright",asc);
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  padding(0.7pt,0.7pt);
+  x4=lpad;
+  x2=w-rpad;
+  x1=x3=1/2[x2,x4];
+  bot y3=0;
+  y2=y4=1/2[y3,y1];
+  y1-y3=x2-x4;
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(35);
+  x6=x8=x1;
+  1/2[y6,y8]=1/2[y1,y3];
+  y7=1/2[y6,y8];
+  y6-y8=0.9ex;
+  x7=x6-0.4ex;
+  x5=x6+0.2ex;
+  x9=x8+0.3ex;
+  z5=z6+whatever*dir(-20);
+  z9=z8+whatever*dir(25);
+  draw z5..z6{left}..z7{down}..z8{right}..z9;
+endchr;
+
+beginchr("registered",asc);
+  pickup pencircle scaled 0.35[tecil_h,tecil_w];
+  padding(0.7pt,0.7pt);
+  x4=lpad;
+  x2=w-rpad;
+  x1=x3=1/2[x2,x4];
+  bot y3=0;
+  y2=y4=1/2[y3,y1];
+  y1-y3=x2-x4;
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  use(35);
+  draw charR_p1 scaled 0.6 shifted (2.5pt,1.5pt);
+  draw charR_p2 scaled 0.6 shifted (2.5pt,1.5pt);
+  draw charR_p3 scaled 0.6 shifted (2.5pt,1.5pt);
+endchr;
+
+beginchr("U",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(x1,0.7ex);
+  bot z3=(0.5[x2,x4],-o);
+  z4=(x5,y2);
+  z5=(w-rpad,y1);
+  draw z1--z2{down}..z3{right}..{up}z4--z5;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("V",1.3en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(0.5[x1,x3],-o);
+  z3=(w-rpad,y1);
+  draw z1--z2--z3;
+  labels(range 1 thru 3);
+endchr;
+
+beginchr("X",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(lpad,0);
+  top z2=(x1,asc);
+  z3=(w-rpad,y1);
+  z4=(x3,y2);
+  draw z1--z4;
+  draw z2--z3;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("Y",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(0.5[x1,x3],ex);
+  z3=(w-rpad,y1);
+  bot z4=(x2,0);
+  draw z1--z2--z3;
+  draw z2--z4;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("yen",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(0.5[x1,x3],ex);
+  z3=(w-rpad,y1);
+  bot z4=(x2,0);
+  draw z1--z2--z3;
+  draw z2--z4;
+  x6-x5=x8-x7=1.0en;
+  1/2[x5,x6]=1/2[x7,x8]=x2;
+  y5=y6=y2;
+  y7=y8;
+  y5-y7=1.3pt;
+  draw z5--z6;
+  draw z7--z8;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("Z",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(lpad,0);
+  top z2=(x1,asc);
+  z3=(w-rpad,y1);
+  z4=(x3,y2);
+  draw z3--z1--z4--z2;
+  setap("uap",(1/2w,asc+apy));
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("bracketleft",0.6en);
+  padding(0.7pt,0.3pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(w-rpad,y1);
+  bot z3=(x1,-desc);
+  z4=(x2,y3);
+  draw z2--z1--z3--z4;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("backslash",1.0en);
+  padding(0.6pt,0.6pt);
+  a1=a2=30;
+  z1=(w-rpad,-0.5desc);
+  z2=(lpad,asc);
+  draw_stroke(z1..z2,ang(a1..a2));
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("bracketright",0.6en);
+  padding(0.3pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(w-rpad,y1);
+  bot z3=(x1,-desc);
+  z4=(x2,y3);
+  draw z1--z2--z4--z3;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("asciicircum",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(lpad,ex+1pt);
+  top z2=(0.5[x1,x3],asc);
+  z3=(w-rpad,y1);
+  draw z1--z2--z3;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("underscore",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(lpad,-1pt);
+  z2=(w-rpad,y1);
+  draw z1--z2;
+  labels(range 1 thru 2);
+endchr;
+
+%beginchr("grave",0.5en);
+%  padding(0.7pt,0.7pt);
+%  use(35);
+%  z1=(lpad,asc);
+%  z2=(w-rpad,0.75asc);
+%  draw z1--z2;
+%  labels(range 1 thru 2);
+%endchr;
+
+beginchr("braceleft",0.8en);
+  padding(0.7pt,0.3pt);
+  use(35);
+  top z1=(w-rpad,asc);
+  z2=(lpad,0.5[y1,y3]);
+  bot z3=(x1,-desc);
+  draw z1{left}..{left}z2 & z2{right}..{right}z3;
+  labels(range 1 thru 3);
+endchr;
+
+beginchr("bar",0.6en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  bot z2=(x1,-desc);
+  draw z1--z2;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("brokenbar",0.6en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  1/2[z1,z2]=1/2[z3,z4];
+  x3=x4=x1;
+  y3-y4=0.4ex;
+  bot z2=(x1,-desc);
+  draw z1--z3;
+  draw z4--z2;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("dagger",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x3=lpad;
+  x4=w-rpad;
+  y3=y4=0.7[y2,y1];
+  top z1=(0.5[x3,x4],asc);
+  bot z2=(x1,-desc);
+  draw z1--z2;
+  draw z3--z4;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("daggerdbl",1.2en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  x3=x5=lpad;
+  x4=x6=w-rpad;
+  y3=y4=0.7[y2,y1];
+  y5=y6=0.3[y2,y1];
+  top z1=(0.5[x3,x4],asc);
+  bot z2=(x1,-desc);
+  draw z1--z2;
+  draw z3--z4;
+  draw z5--z6;
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("braceright",0.8en);
+  padding(0.3pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  z2=(w-rpad,0.5[y1,y3]);
+  bot z3=(x1,-desc);
+  draw z1{right}..{right}z2 & z2{left}..{left}z3;
+  labels(range 1 thru 3);
+endchr;
+
+beginchr("asciitilde",1.1en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  z1=(lpad,ex);
+  z2=(w-rpad,ex);
+  draw z1{dir35}..tension 0.75..z2{dir35};
+  labels(range 1 thru 2);
+endchr;
+
+beginchr("AE",1.5en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  bot z1=(lpad,0);
+  z2=(0.4[x1,x7],asc);
+  y4=y2; y8=y5; z4-z2=z8-z5=z7-z6;
+  z6=(0.65[x1,x7],y1);
+  z7=(w-rpad,y6);
+  z5=whatever[z6,z2];
+  z3=whatever[z1,z2];
+  y3=y5=ex;
+  draw z1--z2--z6;
+  draw z2--z4;
+  draw z3--z8;
+  draw z6--z7;
+  labels(range 1 thru 8);
+endchr;
+
+beginchr("Oslash",1.4en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(0.5[lpad,w-rpad],asc);
+  z2=(w-rpad,0.5[y3,y1]);
+  bot z3=(x1,-o);
+  z4=(lpad,y2);
+  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  z5=(x4,y3);
+  z6=(x2,y1);
+  draw z5--z6;
+  labels(range 1 thru 4);
+endchr;
+
+beginchr("Eth",1.2en);
+  padding(1.2pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  z3=(w-rpad,0.45[y2,y1]);
+  draw z1--z2 & z2{right}..tension 0.75 and 1..z3{up}..tension 1 and 0.75..z1{left};
+  0.48[z2,z1]=0.4[z4,z5];
+  z5-z4=(0.8en,0);
+  draw z4--z5;
+  labels(range 1 thru 5);
+endchr;
+
+beginchr("Thorn",1.0en);
+  padding(0.7pt,0.7pt);
+  use(35);
+  top z1=(lpad,asc);
+  bot z2=(x1,0);
+  x4=x5=x1;
+  y1-y4=y5-y2=0.25ex;
+  z3=(w-rpad,0.45[y2,y1]);
+  draw z1--z2;
+  draw z5{right}..tension 0.75 and 1..z3{up}..tension 1 and 0.75..z4{left};
+  labels(range 1 thru 5);
+endchr;
+
+
+beginchr("T",1.6en);
+  padding(-0.35pt,-0.35pt);
+  a1=43; a3=50; a4=38; a5=50;
+  use(a1); top z1=(w/2,asc); z2=(x1,-1.5o);
+%  p1=ornpath(noorn,curved)(1,2); ap1=ornang(noorn,curved) shifted (0,-2);
+  ap1=ang(a1..30..00..10..30);
+  p1=z1..botfootserif(1,2)(0.8pt,0.25pt,0.4pt,10,ap1);
+%  draw_stroke(p1,ang(a1..ap1));
+  draw_stroke(p1,ap1);
+  z3=(lpad,y4); use(a4); top z4=(x1,asc); z5=(w-rpad,y4);
+  draw_stroke(z3..z4..z5,ang(a3..a4..a5));
+endchr;
 
 def draw_f(expr style,secstyle) =
   padding(0.3pt,0.9pt);
@@ -39,13 +1267,20 @@ def draw_f(expr style,secstyle) =
   fi
   use(a2); top z2=(0.65[x3,x1],asc);
   z3=(lpad+0.3en,0.25[ex,asc]);
-  z4=(x3,-1/2desc);
-%  z4=(x3,-o);
-%%  p2=ornpath(noorn,curved)(3,4); ap2=ornang(noorn,curved);
-  ap2=ang(31..25..25..31);
-  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.8pt,40,ap2);
-%  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.5pt,20,ap2);
-  if secstyle=normal:
+
+  if secstyle=descend:
+    z4=(x3,0.2ex);
+    z7=(x3,-desc);
+    ap2=ang(31..35..35);
+    p2=z3..z4..botserif(4,7)(2.0pt, 0.8desc, -20, 0, ap2);
+
+  else:
+    z4=(x3,-1/2desc);
+    ap2=ang(31..25..25..31);
+    p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.8pt,40,ap2);
+    %  p2=z3..botfootserif(3,4)(0.5pt,0.1pt,0.5pt,20,ap2);
+  fi
+  if (secstyle=normal) or (secstyle=descend):
     p1=z1{up}..z2{left}..tension 1.1..{down}p2;
     ap1=ang(a1..a2..a3..ap2);
   elseif secstyle=dotlig:
@@ -69,7 +1304,6 @@ enddef;
 beginchr("f",0.45en);
   draw_f(normal,normal);
 endchr;
-pause;
 beginchr("f.conl",0.45en);
   draw_f(conleft,normal);
 endchr;
@@ -79,91 +1313,45 @@ endchr;
 beginchr("f.conl_dotlig",0.45en);
   draw_f(conleft,dotlig);
 endchr;
+beginchr("florin",0.45en);
+  draw_f(normal,descend);
+endchr;
 
-beginchr("longs",0.35en);
-  padding(1.0pt,0.0pt);
-  a0=conpenangle2; a1=a2=35;
-%  z0=(x2+0.8en,1/2[ex,asc]);
-  z0=(w,0)+conpoint2;
+def draw_longs(expr style) =
+  padding(1.0pt,if style=normal: 0.0pt elseif style=double: 0.65pt fi);
+  a1=a2=35;
+  if style=normal:
+    a0=conpenangle2;
+    z0=(w,0)+conpoint2;
+  elseif style=double:
+    a0=a5=a6=a7=a8=35;
+    z0=(0.78[x2,x6],0.67[y5,y1]);
+    z5=(0.47[x2,x6],0.61[y7,y1]);
+    z6=(w-rpad,0.22[y7,y1]);
+    use(a7); bot z7=(0.40[x8,x6],0);
+    x8=0.42[x2,x6]; z8=z7+whatever*dir(180-30);
+  fi
   use(a1); top z1=(0.7[x2,x0],asc);
   z2=(x3,0.25[ex,asc]);
   z3=(lpad,ex);
   z4=(x3,-o);
-%  p1=ornpath(rounded,curved)(3,4); ap1=ornang(rounded,curved);
   ap1=ang(38..34..31..25..25..31);
   p1=topserif(3,4)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(3,4)(0.5pt,0.07pt,0.5pt,20,ap1);
   draw_stroke(p1,ap1);
-  p2=z3a{up}..z2{up}..z1{right}..z0; ap2=ang(penangle 1 of ap1..a2..a1..a0);
-  draw_stroke(p2,ap2);
-  labels(range 1 thru 4);
-endchr;
-pause;
-
-def draw_u(expr style) =
-  padding(1pt,1pt);
-  a2=33; a3=35; a4=60;
-  z1=(lpad,ex);
-  z2=(x1,0.35ex);
-  use(a3); bot z3=(0.40[x2,x4],-o);
-  z5=(w-rpad,ex);
-  z6=(x5,0);
-%  ap2=ornang(narrcon,narrcon); p2=ornpath(narrcon,narrcon)(5,6);
-   a5+8=a6+8=a7+4=a8+1=a9-3=a10=35;
-   ap2=ang(a7..a5..a6..a7..a8..a9);
-   p2=topfootserif(5,6)(0.5pt,0.1pt,0.2pt,18,ap2)..botserif(5,6)(0.30pt, 0.3tex, 180, 0, ap2);
-  t=p2 heighttimes 0.45ex;
-  z4=change_angle(point t of p2, penangle t of ap2, a4);
   if style=normal:
-    ap1=ornang(rounded,noorn); p1=ornpath(rounded,noorn)(1,2);
-  elseif style=conleft:
-    ap0=ornang(widecon,noorn);
-    p1=conpoint1{right}..ornpath(widecon,noorn)(1,2); ap1=ang(conpenangle1..ap0);
+    p2=z3a{up}..z2{up}..z1{right}..z0; ap2=ang(penangle 1 of ap1..a2..a1..a0);
+    draw_stroke(p2,ap2);
+  elseif style=double:
+    p2=z3a{up}..z2{up}..z1{right}..z0{down}..z5{down}..tension 1.5 and 0.8..z6{down}..z7{left}..z8; ap2=ang(penangle 1 of ap1..a2..a1..a0..a5..a6..a7..a8);
+    draw_stroke(p2,ap2);
   fi
-  draw_stroke(p1..z3{right}..tension 1.2..z4,ang(ap1..a2..a3..a4));
-  draw_stroke(p2,ap2);
-  labels(range 1 thru 6);
-  setap("uap",(1/2[x1,x5],ex+apy));
+  labels(range 1 thru 8);
 enddef;
-beginchr("u",0.80en);
-  draw_u(normal);
+beginchr("longs",0.35en);
+  draw_longs(normal);
 endchr;
-
-pause;
-
-beginchr("u.conl",0.80en);
-  draw_u(conleft);
-endchr;
-
-
-def draw_x(expr style) =
-  padding(0.6pt,0.6pt);
-  a0=45; a1=55; a2=55; a3=45;
-  a4=35; a5=a6=40; a7=35;
-%  a4=25; a5=a6=20; a7=30;
-  z1=(lpad,ex); z2=(w-rpad,0);
-  ap1=ang(a0..a1..a2..a3);
-  p1=tserif(1,2)(0.4pt,0.3,20,1,ap1)..bserif(1,2)(0.4pt,0.3,-dir20,1,ap1);
-  draw_stroke(p1,ap1);
-  z5=(0.90[x1,x2],ex+o); z6=(0.12[x1,x2],-o);
-  ap2=ang(a4..a5..a6..a7);
-  p2=tserif(5,6)(1.0pt,0.4,180-60,-2,ap2)..bserif(5,6)(1.0pt,0.4,-60,2,ap2);
-%  p2=tserif(5,6)(0.5pt,0.3,180-10,0,ap2)..bserif(5,6)(0.5pt,0.3,-10,0,ap2);
-  draw_stroke(p2,ap2);
-  labels(range 1 thru 6);
-enddef;
-
-beginchr("x",0.90en); %1.05
-  draw_x(normal);
-endchr;
-
-beginchr("x.conl",0.90en);
-  draw_x(conleft);
-endchr;
-
-addalias("uni00A0","nbsp");
-beginrefchr(nbsp,2pt);
-  setap("uap",(1/2w,tex+apy));
-  setap("dap",(1/2w,-apy));
+beginchr("germandbls",1.1en);
+  draw_longs(double);
 endchr;
 
 addalias("uni2009","thsp");
@@ -183,8 +1371,55 @@ beginchr(dottedcircle,1.1tex);
     fill dot shifted (1/2(w,tex)+((9.2le,0) rotated (22.5*i)));
   endfor
   setap("uap",(1/2w,tex+apy));
+  setap("cap",1/2(w,tex));
   setap("dap",(1/2w,-apy));
 endchr;
+
+grave:=1; acute:=2; circumflex:=3; caron:=4;
+def draw_accent(expr type) =
+  a0=55; a1=35; a2=5;
+  a10=180-a0; a11=180-a1; a12=180-a2;
+  0 = if type=acute: 0.25[x1,x2] elseif type=grave: 0.25[x4,x2] else: 0.5[x2,x3] fi;
+  y1=y4=ex+0.6pt;
+  z2=z1+1.6pt*dir(a0);
+  z3=z4+1.6pt*dir(a10);
+  t:=angle(1,(tecil_h*cosd a2)/(tecil_w*sind a2)); % angle(1,x) = arctan x
+  x3-x2=(tecil_w*cosd t*cosd a2 - tecil_h*sind t*sind a2); % The highest points should coincide.
+  ap1=ang(a1..a2); p1=z1..z2;
+  ap2=ang(a11..a12); p2=z4..z3;
+  if not (type=grave): draw_stroke(p1,ap1); fi
+  if not (type=acute): draw_stroke(p2,ap2); fi
+  y5=0.5[y1,y2];
+  if type=caron: currentpicture:=currentpicture reflectedabout ((0,y5),(1,y5)); fi
+  setap("dap",(0,ex+apy));
+enddef;
+
+beginchr("uni0300.normal",0); % Accent grave
+  draw_accent(grave);
+endchr;
+beginrefchr("grave",0.8en);
+  setap("uap",(3/5w,ex+apy));
+  attach("uni0300.normal","uap","dap");
+endchr;
+combinechr("uni0300","uni25CC","uap","uni0300.normal","dap")
+
+beginchr("uni0301.normal",0); % Accent acute
+  draw_accent(acute);
+endchr;
+beginrefchr("acute",0.8en);
+  setap("uap",(2/5w,ex+apy));
+  attach("uni0301.normal","uap","dap");
+endchr;
+combinechr("uni0301","uni25CC","uap","uni0301.normal","dap")
+
+beginchr("uni0302.normal",0); % Circumflex
+  draw_accent(circumflex);
+endchr;
+beginrefchr("circumflex",1.1en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni0302.normal","uap","dap");
+endchr;
+combinechr("uni0302","uni25CC","uap","uni0302.normal","dap")
 
 def draw_tilde(expr wide) =
   a1=a2=40;
@@ -193,16 +1428,19 @@ def draw_tilde(expr wide) =
   ap1=ang(a1..a2);
   p1=z1{dir(a1)}..tension0.75..{dir(a2)}z2;
   draw_stroke(p1,ap1);
-  setap("dap",(0,ex+0.5pt));
+  setap("dap",(0,ex+apy));
 enddef;
 beginchr("uni0303.normal",0); % Tilde
   draw_tilde(0.8en);
 endchr;
-beginchr("uni0303.narrow",0); % Tilde
+beginchr("uni0303.narrow",0);
   draw_tilde(0.5en);
 endchr;
+beginrefchr("tilde",1.1en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni0303.normal","uap","dap");
+endchr;
 combinechr("uni0303","uni25CC","uap","uni0303.normal","dap")
-pause;
 
 def draw_macron(expr wide) =
   a1=a2=35;
@@ -211,7 +1449,7 @@ def draw_macron(expr wide) =
   ap1=ang(a1..a2);
   p1=z1..z2;
   draw_stroke(p1,ap1);
-  setap("dap",(0,ex+0.5pt));
+  setap("dap",(0,ex+apy));
 enddef;
 beginchr("uni0304.normal",0); % Macron
   draw_macron(0.8en);
@@ -219,61 +1457,43 @@ endchr;
 beginchr("uni0304.narrow",0);
   draw_macron(0.5en);
 endchr;
+beginrefchr("macron",1.1en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni0304.normal","uap","dap");
+endchr;
 combinechr("uni0304","uni25CC","uap","uni0304.normal","dap")
-pause;
 
-def draw_accent(expr grave) =
-  a0:=55; a1:=35; a2:=5;
-  0=0.25[x1,x2];
-  if grave:
-    a0:=180-a0; a1:=180-a1; a2:=180-a2;
-  fi
-  y1=ex+0.6pt;
-  z2=z1+1.6pt*dir(a0);
-  ap1=ang(a1..a2);
-  p1=z1..z2;
-  draw_stroke(p1,ap1);
-  setap("dap",(0,ex+0.5pt));
-enddef;
-beginchr("uni0300.normal",0); % Accent grave
-  draw_accent(true);
-endchr;
-combinechr("uni0300","uni25CC","uap","uni0300.normal","dap")
-pause;
-beginchr("uni0301.normal",0); % Accent acute
-  draw_accent(false);
-endchr;
-combinechr("uni0301","uni25CC","uap","uni0301.normal","dap")
-pause;
-
-beginchr("diacriticdot",0);
-  z1=(0,0);
+beginchr("uni0307.normal",0); % Combining dot above
+  z1=(0,ex+1pt);
   draw_dot(1)(1);
-endchr;
-
-beginrefchr("uni0307.normal",0); % Combining dot above
-  setap("dot",(0,ex+1pt));
-  attach("diacriticdot","dot","origo");
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
+endchr;
+beginrefchr("dotaccent",0.6en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni0307.normal","uap","dap");
 endchr;
 combinechr("uni0307","uni25CC","uap","uni0307.normal","dap")
 
-beginrefchr("uni0308.normal",0); % Combining diaeresis
-  setap("dot1",(-0.8pt,ex+1pt));
-  setap("dot2",(0.8pt,ex+1pt));
-  attach("diacriticdot","dot1","origo");
-  attach("diacriticdot","dot2","origo");
+beginchr("uni0308.normal",0); % Combining diaeresis
+  z1=(-0.8pt,ex+1pt);
+  z2=(0.8pt,ex+1pt);
+  draw_dot(1)(1);
+  draw_dot(2)(1);
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
 endchr;
-beginrefchr("uni0308.narrow",0);
-  setap("dot1",(-0.7pt,ex+1pt));
-  setap("dot2",(0.7pt,ex+1pt));
-  attach("diacriticdot","dot1","origo");
-  attach("diacriticdot","dot2","origo");
+beginchr("uni0308.narrow",0);
+  z1=(-0.7pt,ex+1pt);
+  z2=(0.7pt,ex+1pt);
+  draw_dot(1)(1);
+  draw_dot(2)(1);
   setap("dap",(0,ex+0.3pt));
   setap("uap",(0,ex+1.5pt));
+endchr;
+beginrefchr("dieresis",1.1en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni0308.normal","uap","dap");
 endchr;
 combinechr("uni0308","uni25CC","uap","uni0308.normal","dap")
 
@@ -285,7 +1505,38 @@ beginchr("uni030A.normal",0);
   setap("dap",(0,ex+0.3pt));
   labels(range 1 thru 4);
 endchr;
+beginrefchr("ring",0.8en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni030A.normal","uap","dap");
+endchr;
 combinechr("uni030A","uni25CC","uap","uni030A.normal","dap")
+
+beginchr("uni030C.normal",0); % Caron
+  draw_accent(caron);
+endchr;
+beginrefchr("caron",1.1en);
+  setap("uap",(1/2w,ex+apy));
+  attach("uni030C.normal","uap","dap");
+endchr;
+combinechr("uni030C","uni25CC","uap","uni030C.normal","dap")
+
+beginchr("uni0327.normal",0); % Cedilla
+  use(35);
+  z1=(0,0);
+  x2=0.15[x4,x3];
+  x3-x4=1.2pt;
+  y3=0.7[y4,y2];
+  y4=y2-0.9pt;
+  z2=z1-1.1pt*dir 65;
+  draw z1--z2 & z2..z3{down}..z4;
+  setap("uap",(0,-apy));
+  labels(range 1 thru 4);
+endchr;
+beginrefchr("cedilla",0.8en);
+  setap("dap",(1/2w,-apy));
+  attach("uni0327.normal","dap","uap");
+endchr;
+combinechr("uni0327","uni25CC","dap","uni0327.normal","uap")
 
 beginchr("uni0364.normal",0); % Combining overscript e
   a1=a2=a3-1=a4-2=a5-5=35;
@@ -301,28 +1552,51 @@ beginchr("uni0364.normal",0); % Combining overscript e
 endchr;
 combinechr("uni0364","uni25CC","uap","uni0364.normal","dap")
 
-beginchr("A",1.7en);
-  padding(0.5pt,0.3pt);
-  a0=40; a1=56; a2=54; a3=35;
-  a4=35; a5=25; a6=35; a7=35;
-  z1=(0.37[x5,x2],asc);
-  z2=(w-rpad,-0.5pt);
-  use(a5); bot z5=(lpad,0);
-  p1=tserif(1,2)(1.5pt,0.2,45,3,ang(a0..a1))..bserif(1,2)(0.4pt,0.2,a3+180,0,ang(a2..a3));
-  ap1=ang(a0..a1..a2..a3);
-  t:=p1 heighttimes 0.6[ex,asc];
-  z4=change_angle(point t of p1,penangle t of ap1+180,a4+180);
-  p2=z4{dir (-40+angle direction t of p1)}..z5; ap2=ang(a4..a5);
-  z6=change_angle(z5,a5,a6);
-  t:=p1 heighttimes 0.25ex;
-  draw_change_of_angle:=false;
-  z7=change_angle(point t of p1,penangle t of ap1+180,a7+180);
-  p3=z6..{dir (35+angle direction t of p1)}z7; ap3=ang(a6..a7);
-  draw_stroke(p1,ap1);
-  draw_stroke(p2,ap2);
-  draw_stroke(p3,ap3);
-  penlabels(range 1 thru 7);
-endchr;
+
+combinechr("Agrave","A","uap","uni0300.normal","dap");
+combinechr("Aacute","A","uap","uni0301.normal","dap");
+combinechr("Acircumflex","A","uap","uni0302.normal","dap");
+combinechr("Atilde","A","uap","uni0303.normal","dap");
+%combinechr("Amacron","A","uap","uni0304.normal","dap");
+combinechr("Adieresis","A","uap","uni0308.normal","dap");
+combinechr("Aring","A","uap","uni030A.normal","dap");
+
+combinechr("Ccedilla","C","dap","uni0327.normal","uap");
+
+combinechr("Egrave","E","uap","uni0300.normal","dap");
+combinechr("Eacute","E","uap","uni0301.normal","dap");
+combinechr("Ecircumflex","E","uap","uni0302.normal","dap");
+%combinechr("Emacron","E","uap","uni0304.normal","dap");
+combinechr("Edieresis","E","uap","uni0308.normal","dap");
+
+combinechr("Igrave","I","uap","uni0300.normal","dap");
+combinechr("Iacute","I","uap","uni0301.normal","dap");
+combinechr("Icircumflex","I","uap","uni0302.normal","dap");
+%combinechr("Itilde","I","uap","uni0303.normal","dap");
+%combinechr("Imacron","I","uap","uni0304.normal","dap");
+combinechr("Idieresis","I","uap","uni0308.normal","dap");
+
+combinechr("Ntilde","N","uap","uni0303.normal","dap");
+
+combinechr("Ograve","O","uap","uni0300.normal","dap");
+combinechr("Oacute","O","uap","uni0301.normal","dap");
+combinechr("Ocircumflex","O","uap","uni0302.normal","dap");
+combinechr("Otilde","O","uap","uni0303.normal","dap");
+%combinechr("Omacron","O","uap","uni0304.normal","dap");
+combinechr("Odieresis","O","uap","uni0308.normal","dap");
+
+combinechr("Ugrave","U","uap","uni0300.normal","dap");
+combinechr("Uacute","U","uap","uni0301.normal","dap");
+combinechr("Ucircumflex","U","uap","uni0302.normal","dap");
+%combinechr("Utilde","U","uap","uni0303.normal","dap");
+%combinechr("Umacron","U","uap","uni0304.normal","dap");
+combinechr("Udieresis","U","uap","uni0308.normal","dap");
+
+combinechr("Yacute","Y","uap","uni0301.normal","dap");
+%combinechr("Ycircumflex","Y","uap","uni0302.normal","dap");
+combinechr("Ydieresis","Y","uap","uni0308.normal","dap");
+
+combinechr("Zcaron","Z","uap","uni030C.normal","dap");
 
 beginchr("F",0.7en);
   padding(1.0pt,0.5pt);
@@ -374,18 +1648,10 @@ beginchr("S",1.2en);
   ap1=ang(a1..a2..a3..a4..a5..a6);
   p1=z1..z2{left}..z3{down}..z4{down}..z5{left}..z6;
   draw_stroke(p1,ap1);
+  setap("uap",(0.5[x3,x1],asc+apy));
   labels(range 1 thru 6);
 endchr;
-
-beginchr("T",1.6en);
-  padding(-0.35pt,-0.35pt);
-  a1=43; a3=50; a4=38; a5=50;
-  use(a1); top z1=(w/2,asc); z2=(x1,-o);
-  p1=ornpath(noorn,curved)(1,2); ap1=ornang(noorn,curved) shifted (0,-2);
-  draw_stroke(p1,ang(a1..ap1));
-  z3=(lpad,y4); use(a4); top z4=(x1,asc); z5=(w-rpad,y4);
-  draw_stroke(z3..z4..z5,ang(a3..a4..a5));
-endchr;
+combinechr("Scaron","S","uap","uni030C.normal","dap");
 
 beginchr("W",2.5en);
   padding(0.6pt,0.12pt);
@@ -409,33 +1675,38 @@ beginchr("W",2.5en);
   labels(range 1 thru 8);
 endchr;
 
+path chara_ap[];
+path chara_p[];
 beginchr("a",0.95en);
   padding(0.65pt,0.55pt);
   a1=40; a2=40; a3=a4=a5=a6=35;
   z1=(0.45[x4,x2],ex);
   z2=(w-rpad,0);
   z4=(lpad,0.25ex);
-  ap1=stretch(3,ang(a1..a2));
-  p1=tserif(1,2)(0.6pt,0.33,20,1,ap1)..bserif(1,2)(0.4pt,0.33,-dir20,1,ap1);
+  chara_ap1=ap1=stretch(3,ang(a1..a2));
+  chara_p1=p1=tserif(1,2)(0.6pt,0.33,20,1,ap1)..bserif(1,2)(0.4pt,0.33,-dir20,1,ap1);
   draw_stroke(p1,ap1);
   t:=p1 heighttimes 0.77ex;
   z3=change_angle(point t of p1, penangle t of ap1+180,a3+180);
   use(a5); bot z5=(0.35[x4,x6],-o);
   t:=p1 heighttimes 0.30ex;
   z6=change_angle(point t of p1, penangle t of ap1+180,a6+180);
-  ap2=ang(a3..a4..a5..a6);
-  p2=z3{-dir (a3+25)}..z4{down}..z5{right}..z6;
+  chara_ap2=ap2=ang(a3..a4..a5..a6);
+  chara_p2=p2=z3{-dir (a3+25)}..z4{down}..z5{right}..z6;
   draw_stroke(p2,ap2);
   setap("uap",(0.5[x4,x2],ex+apy));
   labels(range 1 thru 6);
 endchr;
-
-pause;
+beginchr("ordfeminine",ps[ps.lu("a")].width*superscriptscale);
+  draw_stroke(chara_p1 scaled superscriptscale shifted (0,ex),chara_ap1);
+  draw_stroke(chara_p2 scaled superscriptscale shifted (0,ex),chara_ap2);
+endchr;
 
 combinechr("agrave","a","uap","uni0300.normal","dap");
 combinechr("aacute","a","uap","uni0301.normal","dap");
+combinechr("acircumflex","a","uap","uni0302.normal","dap");
 combinechr("atilde","a","uap","uni0303.normal","dap");
-combinechr("amacron","a","uap","uni0304.normal","dap");
+%combinechr("amacron","a","uap","uni0304.normal","dap");
 combinechr("adieresis","a","uap","uni0308.normal","dap");
 combinechr("aring","a","uap","uni030A.normal","dap");
 
@@ -460,8 +1731,6 @@ beginchr("ae",1.55en);
   draw_stroke(z5..z6{left}..z7{-dir (a7)}..z8{down}..z9{right}..z10,ang(a5..a6..a7..a8..a9..a10));
   labels(range 1 thru 10);
 endchr;
-
-pause;
 
 def draw_b(expr style) =
   a7=45; z2=(x1,0);
@@ -491,13 +1760,11 @@ beginchr("b",0.96en);
   draw_b(normal);
 endchr;
 
-pause;
-
 beginchr("b.conl",0.96en);
   draw_b(conleft);
 endchr;
 
-beginchr("c",0.85en);
+def draw_c =
   padding(0.6pt,0.6pt);
   a1=a2=35; a3=38; a4=43; a5=45; 
   z1=(w-rpad,0.77ex);
@@ -506,10 +1773,23 @@ beginchr("c",0.85en);
   use(a4); bot z4=(1/2[x3,x1],-o);
   z5=(x1,0.22ex);
   draw_stroke(z1..z2{left}..z3{down}..z4{right}..{dir a5}z5,ang(a1..a2..a3..a4..a5));
+  setap("dap",(x4,-apy));
   labels(range 0 thru 5);
+enddef;
+
+beginchr("c",0.85en);
+  draw_c;
+endchr;
+beginchr("cent",0.85en);
+  draw_c;
+  x6-x7=0.5w;
+  1/2[x6,x7]=1/2[x2,x4];
+  y6=1/2[ex,asc];
+  y7=-1/2desc;
+  draw_stroke(z6--z7,ang(50..50));
 endchr;
 
-pause;
+combinechr("ccedilla","c","dap","uni0327.normal","uap");
 
 beginchr("d",0.95en);
   padding(0.7pt,1pt);
@@ -530,7 +1810,37 @@ beginchr("d",0.95en);
   labels(range 1 thru 7);
 endchr;
 
-pause;
+def draw_eth(expr style) =
+  padding(0.7pt,0.7pt);
+  use(35); top z1=(1/2[x4,x2],ex+o);
+  z2=(w-rpad,1/2ex);
+  bot z3=(1/2[x4,x2],-o);
+  z4=(lpad,1/2ex);
+  top z5=(if style=closed: 0.1 elseif style=open: 0.3 fi [x4,x2],asc);
+  z6=z5-0.3pt*dir(22);
+  if style=closed: 
+    p1=z6{dir 35}..tension 2..z5{right}..tension 1.9 and 1..z2{down}..z3{left};
+  elseif style=open:
+    p1=z6{dir 35}..z5{right}..z2{down}..z3{left};
+  fi
+  t:=p1 heighttimes 0.65ex;
+  z7=point t of p1;
+  draw p1..z4{up}..z1{right}..{direction t of p1}z7;
+  if style=closed:
+    use(50);
+    t:=p1 heighttimes 0.57[ex,asc];
+    z8=point t of p1=0.52[z9,z10];
+    z10-z9=0.85en*dir 32;
+    draw z9--z10;
+  fi
+  labels(range 1 thru 10);
+enddef;
+beginchr("eth",0.95en);
+  draw_eth(closed);
+endchr;
+%beginchr("partialdiff",0.95en);
+%  draw_eth(open);
+%endchr;
 
 %beginchr("e",0.9en);
 %  padding(0.6pt,0.6pt);
@@ -578,7 +1888,8 @@ endchr;
 
 combinechr("egrave","e","uap","uni0300.normal","dap");
 combinechr("eacute","e","uap","uni0301.normal","dap");
-combinechr("emacron","e","uap","uni0304.normal","dap");
+combinechr("ecircumflex","e","uap","uni0302.normal","dap");
+%combinechr("emacron","e","uap","uni0304.normal","dap");
 combinechr("edieresis","e","uap","uni0308.normal","dap");
 
 def draw_g(expr style)=
@@ -626,9 +1937,9 @@ beginchr("g",0.9en);
   draw_g(normal);
 endchr;
 
-beginchr("g.swash",0.9en);
-  draw_g(swash);
-endchr;
+%beginchr("g.swash",0.9en);
+%  draw_g(swash);
+%endchr;
 
 def draw_h(expr style) =
   a0=38;a1=34;
@@ -664,7 +1975,6 @@ enddef;
 beginchr("h",0.80en);
   draw_h(normal);
 endchr;
-pause;
 
 beginchr("h.conl",0.80en);
   draw_h(conleft);
@@ -681,7 +1991,6 @@ def draw_i(expr style) =
   fi
   setap("uap",(x1-0.1pt,ex+apy));
 enddef;
-pause;
 
 beginchr("dotlessi",0en);
   draw_i(normal);
@@ -699,24 +2008,26 @@ combinechr("igrave","dotlessi","uap","uni0300.normal","dap");
 combinechr("igrave.conl","dotlessi.conl","uap","uni0300.normal","dap");
 combinechr("iacute","dotlessi","uap","uni0301.normal","dap");
 combinechr("iacute.conl","dotlessi.conl","uap","uni0301.normal","dap");
-combinechr("itilde","dotlessi","uap","uni0303.narrow","dap");
-combinechr("itilde.conl","dotlessi.conl","uap","uni0303.narrow","dap");
-combinechr("imacron","dotlessi","uap","uni0304.narrow","dap");
-combinechr("imacron.conl","dotlessi.conl","uap","uni0304.narrow","dap");
+combinechr("icircumflex","dotlessi","uap","uni0302.normal","dap");
+combinechr("icircumflex.conl","dotlessi.conl","uap","uni0302.normal","dap");
+%combinechr("itilde","dotlessi","uap","uni0303.narrow","dap");
+%combinechr("itilde.conl","dotlessi.conl","uap","uni0303.narrow","dap");
+%combinechr("imacron","dotlessi","uap","uni0304.narrow","dap");
+%combinechr("imacron.conl","dotlessi.conl","uap","uni0304.narrow","dap");
 combinechr("idieresis","dotlessi","uap","uni0308.narrow","dap");
 combinechr("idieresis.conl","dotlessi.conl","uap","uni0308.narrow","dap");
 
-%% fi-ligatures. These aren't used in the current GDL-program. Uncomment if you need them.
-%
 %beginrefchr("uniFB01",ps[ps.lu("f.dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
 %  attach("f.dotlig","origo","origo");
 %  attach("dotlessi.conl","right","origo");
 %endchr;
-%
+%unlinkref;
+
 %beginrefchr("uniFB01.conleft",ps[ps.lu("f.conl_dotlig")].width+ps[ps.lu("dotlessi.conl")].width);
 %  attach("f.conl_dotlig","origo","origo");
 %  attach("dotlessi.conl","right","origo");
 %endchr;
+%unlinkref;
 
 def draw_j(expr style) =
   padding(-1pt,0.9pt);
@@ -753,7 +2064,7 @@ combinechr("j.conl",dotlessj_conl,"uap","uni0307.normal","dap");
 
 def draw_k(expr style) =
   a0=38;a1=34;a2=31;
-  a3=30; a4=35; a6=25; a7=27; a8=35;
+  a3=25; a4=25; a6=25; a7=27; a8=35;
   z2=(x1,-o);
   if style=normal:
     padding(1pt,0.5pt);
@@ -803,7 +2114,6 @@ enddef;
 beginchr("k",0.87en);
   draw_k(normal);
 endchr;
-pause;
 beginchr("k.conl",0.87en);
   draw_k(conleft);
 endchr;
@@ -813,7 +2123,6 @@ beginchr("l",0en);
   z1=(w-rpad,asc); z2=(x1,0);
   draw_stroke(ornpath(rounded,narrcon)(1,2),ornang(rounded,narrcon));
 endchr;
-pause;
 
 beginchr("l.conl",0en);
   padding(xpart(conpoint2),1.0pt);
@@ -821,6 +2130,12 @@ beginchr("l.conl",0en);
   ap1=ornang(noorn,narrcon); p1=ornpath(noorn,narrcon)(1,2);
   draw_stroke(p1,ang(conpenangle2..ap1));
 endchr;
+
+%beginrefchr("uniFB02",ps[ps.lu("f")].width+ps[ps.lu("l.conl")].width);
+%  attach("f","origo","origo");
+%  attach("l.conl","right","origo");
+%endchr;
+%unlinkref;
 
 def draw_m(expr style) =
   padding(1pt,0.85pt);
@@ -859,17 +2174,14 @@ beginchr("m.conl",1.5en);
   draw_m(conleft);
 endchr;
 
-def draw_n(expr style) =
+def draw_n(expr style, secstyle) =
   padding(1pt,0.85pt);
-  a3=45; a4=36; a5=35;
+  a3=45; a4=36; a5=35; a6=40; a7=42; a8=45;
   z1=(lpad,ex); z2=(x1,-o);
   if style=conleft:
-%    ap0=ornang(widecon,curved);
-%    p1=conpoint1{right}..ornpath(widecon,curved)(1,2); ap1=ang(conpenangle1..ap0);
     ap1=ang(conpenangle1..38..34..31..25..25..31);
     p1=conpoint1{right}..topserif(1,2)(0.6pt, 0.4tex, 0, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,20,ap1);
   else:
-%    p1=ornpath(rounded,curved)(1,2); ap1=ornang(rounded,curved);
     ap1=ang(38..34..31..25..25..31);
     p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,20,ap1);
   fi
@@ -877,46 +2189,80 @@ def draw_n(expr style) =
   t=p1 heighttimes 0.65ex;
   z3=change_angle(point t of p1, penangle t of ap1+180, a3+180);
   use(a4); top z4=(0.6[x1,x5],ex);
-  z5=(w-rpad,0.65ex); z6=(x5,0);
-  p2=ornpath(noorn,narrcon)(5,6); ap2=ornang(noorn,narrcon);
-  draw_stroke(z3{curl 0.5}..z4{right}...{down}p2,ang(a3..a4..a5..ap2));
-
+  if secstyle=normal:
+     z5=(w-rpad,0.65ex); z6=(x5,0);
+     p2=ornpath(noorn,narrcon)(5,6); ap2=ornang(noorn,narrcon);
+     draw_stroke(z3{curl 0.5}..z4{right}...{down}p2,ang(a3..a4..a5..ap2));
+  elseif secstyle=descend:
+     z5=(w-rpad,0.55ex);
+     z6=(x5,-0.35desc);
+     use(a7); bot z7=(0.3[x1,x6],-desc);
+     z8=(lpad,whatever)=z7+(whatever,0) rotated (180-30);
+     draw_stroke(z3{curl 0.5}..z4{right}...z5{down}..z6{down}..z7{left}..z8,ang(a3..a4..a5..a6..a7..a8));
+  fi
   setap("uap",(1/2w,ex+apy));
-
-  labels(range 1 thru 6);
+  labels(range 1 thru 8);
 enddef;
 beginchr("n",0.80en);
-  draw_n(normal);
+  draw_n(normal,normal);
 endchr;
-pause;
 beginchr("n.conl",0.80en);
-  draw_n(conleft);
+  draw_n(conleft,normal);
 endchr;
 combinechr("ntilde","n","uap","uni0303.normal","dap");
 
-beginchr("o",0.95en);
+beginchr("eng",0.80en);
+  draw_n(normal,descend);
+endchr;
+
+def draw_o(expr style) = 
   padding(0.7pt,0.7pt);
   use(35); top z1=(1/2[x4,x2],ex+o);
   z2=(w-rpad,1/2ex);
   bot z3=(1/2[x4,x2],-o);
   z4=(lpad,1/2ex);
-  draw z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  path charo_p;
+  charo_p=z1{right}..z2{down}..z3{left}..z4{up}..cycle;
+  draw charo_p;
+  if style=closed:
+    z5=(x4,y3);
+    z6=(x2,y1);
+    draw z5--z6;
+  fi
   setap("dap",(1/3[x3,lft x3],0-apy));
   setap("uap",(1/3[x1,rt x1],ex+apy));
   labels(range 1 thru 4);
+enddef;
+beginchr("o",0.95en);
+  draw_o(open);
+endchr;
+beginchr("ordmasculine",ps[ps.lu("o")].width*superscriptscale);
+  use(35);
+  draw charo_p scaled superscriptscale shifted (0,ex);
 endchr;
 
 combinechr("ograve","o","uap","uni0300.normal","dap");
 combinechr("oacute","o","uap","uni0301.normal","dap");
+combinechr("ocircumflex","o","uap","uni0302.normal","dap");
 combinechr("otilde","o","uap","uni0303.normal","dap");
-combinechr("omacron","o","uap","uni0304.normal","dap");
+%combinechr("omacron","o","uap","uni0304.normal","dap");
 combinechr("odieresis","o","uap","uni0308.normal","dap");
+
+beginchr("oslash",0.95en);
+  draw_o(closed);
+endchr;
+
+beginrefchr("oe",xpart(apt("o","rpad").pt)+xpart(apt("e","rpad").pt));
+  attach("o","origo","origo");
+  attach("e","rpad","lpad");
+endchr;
+%unlinkref;
 
 def draw_p(expr style) =
   padding(1pt,0.7pt);
   a3=45; a4=36; a5=35; a6=35; a7=33;
-  z1=(lpad,ex); z2=(x1,-desc-o);
-  if style=normal:
+  z1=(lpad,if style=ascend: asc else: ex fi); z2=(x1,-desc-o);
+  if (style=normal) or (style=ascend):
 %    p1=ornpath(rounded,curved)(1,2); ap1=ornang(rounded,curved);
     ap1=ang(38..34..31..25..25..31);
     p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
@@ -942,10 +2288,13 @@ enddef;
 beginchr("p",0.97en);
   draw_p(normal);
 endchr;
-pause;
 
 beginchr("p.conl",0.97en);
   draw_p(conleft);
+endchr;
+
+beginchr("thorn",0.97en);
+  draw_p(ascend);
 endchr;
 
 beginchr("q",0.95en);
@@ -969,7 +2318,6 @@ beginchr("q",0.95en);
   draw_stroke(p2,ap2);
   labels(range 1 thru 7);
 endchr;
-pause;
 
 def draw_r(expr style) =
   padding(1pt,0.15pt);
@@ -993,12 +2341,9 @@ def draw_r(expr style) =
   draw_stroke(z3..tension 1.5 and 1..z4{right}..z5{dir 10},ang(a3..a4..a5));
   labels(range 1 thru 6);
 enddef;
-
 beginchr("r",0.80en);
   draw_r(normal);
 endchr;
-pause;
-
 beginchr("r.conl",0.80en);
   draw_r(conleft);
 endchr;
@@ -1034,8 +2379,10 @@ beginchr("s",0.8en);
   s_apath=ang(a1..a2..a3..a4..a5..a6);
   s_path=z1..z2{left}..z3{down}..z4{down}..z5{left}..z6;
   draw_stroke(s_path,s_apath);
+  setap("uap",(0.5[x3,x1],ex+apy));
   labels(range 1 thru 6);
 endchr;
+combinechr("scaron","s","uap","uni030C.normal","dap");
 
 def draw_t(expr style) =
   if (style=conright) or (style=conboth):
@@ -1064,50 +2411,79 @@ def draw_t(expr style) =
   draw_stroke(z5--z6,ang(a5--a6));
   labels(range 1 thru 6);
 enddef;
-
 beginchr("t",0.85en);
   draw_t(normal);
 endchr;
-pause;
 beginchr("t.conl",0.85en);
   draw_t(conleft);
 endchr;
-pause;
 beginchr("t.conr",0.85en);
   draw_t(conright);
 endchr;
-pause;
 beginchr("t.conb",0.85en);
   draw_t(conboth);
 endchr;
-pause;
 
-beginchr("uniFB06",ps[ps.lu("s")].width+ps[ps.lu("t")].width); % st-ligature
-  padding(0,-0.1pt);
-  draw_stroke(s_path,s_apath);
-  a1=a2=a3=35; a4=45; a5=45; % a6=40;
-  z1=(0.35[x5,x6],0.1[ex,asc]);
-  z2=(x1,0.3ex);
-  use(a3); bot z3=(0.45[x2,x4],-o);
-  z4=(w-rpad,0.17ex);
-  use(a5); top z5=(x4-2.6pt,ex);
-%  use(a6); top z6=(0.8[x5,x4],ex);
-  a6=conpenangle1; z6=(w,0)+conpoint1;
-  ap1=ang(penangle 0 of s_apath..a1..a2..a3..a4);
-  p1=point 0 of s_path{direction 0 of s_path}..tension 0.8..z1{dir-87}..z2{down}..z3{right}..z4;
-  draw_stroke(p1,ap1);
-  draw_stroke(z5--z6,ang(a5--a6));
+%beginchr("uniFB06",ps[ps.lu("s")].width+ps[ps.lu("t")].width); % st-ligature
+%  padding(0,-0.1pt);
+%  draw_stroke(s_path,s_apath);
+%  a1=a2=a3=35; a4=45; a5=45; % a6=40;
+%  z1=(0.35[x5,x6],0.1[ex,asc]);
+%  z2=(x1,0.3ex);
+%  use(a3); bot z3=(0.45[x2,x4],-o);
+%  z4=(w-rpad,0.17ex);
+%  use(a5); top z5=(x4-2.6pt,ex);
+%%  use(a6); top z6=(0.8[x5,x4],ex);
+%  a6=conpenangle1; z6=(w,0)+conpoint1;
+%  ap1=ang(penangle 0 of s_apath..a1..a2..a3..a4);
+%  p1=point 0 of s_path{direction 0 of s_path}..tension 0.8..z1{dir-87}..z2{down}..z3{right}..z4;
+%  draw_stroke(p1,ap1);
+%  draw_stroke(z5--z6,ang(a5--a6));
+%  labels(range 1 thru 6);
+%endchr;
+
+def draw_u(expr style) =
+  padding(1pt,1pt);
+  a2=33; a3=35; a4=60;
+  z1=(lpad,ex);
+  z2=(x1,0.35ex);
+  use(a3); bot z3=(0.40[x2,x4],-o);
+  z5=(w-rpad,ex);
+  z6=(x5,0);
+%  ap2=ornang(narrcon,narrcon); p2=ornpath(narrcon,narrcon)(5,6);
+   a5+8=a6+8=a7+4=a8+1=a9-3=a10=35;
+   ap2=ang(a7..a5..a6..a7..a8..a9);
+   p2=topfootserif(5,6)(0.5pt,0.1pt,0.2pt,18,ap2)..botserif(5,6)(0.30pt, 0.3tex, 180, 0, ap2);
+  t=p2 heighttimes 0.45ex;
+  z4=change_angle(point t of p2, penangle t of ap2, a4);
+  if style=normal:
+    ap1=ornang(rounded,noorn); p1=ornpath(rounded,noorn)(1,2);
+  elseif style=conleft:
+    ap0=ornang(widecon,noorn);
+    p1=conpoint1{right}..ornpath(widecon,noorn)(1,2); ap1=ang(conpenangle1..ap0);
+  fi
+  draw_stroke(p1..z3{right}..tension 1.2..z4,ang(ap1..a2..a3..a4));
+  draw_stroke(p2,ap2);
   labels(range 1 thru 6);
+  setap("uap",(1/2[x1,x5],ex+apy));
+enddef;
+beginchr("u",0.80en);
+  draw_u(normal);
+endchr;
+beginchr("u.conl",0.80en);
+  draw_u(conleft);
 endchr;
 
 combinechr("ugrave","u","uap","uni0300.normal","dap");
 combinechr("ugrave.conl","u.conl","uap","uni0300.normal","dap");
 combinechr("uacute","u","uap","uni0301.normal","dap");
 combinechr("uacute.conl","u.conl","uap","uni0301.normal","dap");
-combinechr("utilde","u","uap","uni0303.normal","dap");
-combinechr("utilde.conl","u.conl","uap","uni0303.normal","dap");
-combinechr("umacron","u","uap","uni0304.normal","dap");
-combinechr("umacron.conl","u.conl","uap","uni0304.normal","dap");
+combinechr("ucircumflex","u","uap","uni0302.normal","dap");
+combinechr("ucircumflex.conl","u.conl","uap","uni0302.normal","dap");
+%combinechr("utilde","u","uap","uni0303.normal","dap");
+%combinechr("utilde.conl","u.conl","uap","uni0303.normal","dap");
+%combinechr("umacron","u","uap","uni0304.normal","dap");
+%combinechr("umacron.conl","u.conl","uap","uni0304.normal","dap");
 combinechr("udieresis","u","uap","uni0308.normal","dap");
 combinechr("udieresis.conl","u.conl","uap","uni0308.normal","dap");
 
@@ -1174,6 +2550,31 @@ beginchr("w.conl",1.94en);
   draw_w(conleft);
 endchr;
 
+def draw_x(expr style) =
+  padding(0.6pt,0.6pt);
+  a0=45; a1=55; a2=55; a3=45;
+  a4=35; a5=a6=40; a7=35;
+%  a4=25; a5=a6=20; a7=30;
+  z1=(lpad,ex); z2=(w-rpad,0);
+  ap1=ang(a0..a1..a2..a3);
+  p1=tserif(1,2)(0.4pt,0.3,20,1,ap1)..bserif(1,2)(0.4pt,0.3,-dir20,1,ap1);
+  draw_stroke(p1,ap1);
+  z5=(0.90[x1,x2],ex+o); z6=(0.12[x1,x2],-o);
+  ap2=ang(a4..a5..a6..a7);
+  p2=tserif(5,6)(1.0pt,0.4,180-60,-2,ap2)..bserif(5,6)(1.0pt,0.4,-60,2,ap2);
+%  p2=tserif(5,6)(0.5pt,0.3,180-10,0,ap2)..bserif(5,6)(0.5pt,0.3,-10,0,ap2);
+  draw_stroke(p2,ap2);
+  labels(range 1 thru 6);
+enddef;
+
+beginchr("x",0.90en); %1.05
+  draw_x(normal);
+endchr;
+
+%beginchr("x.conl",0.90en);
+%  draw_x(conleft);
+%endchr;
+
 def draw_y(expr style) =
   padding(0.6pt,0.12pt);
   a0=46; a1=1/2[a0,a2]; a2=50; a7=35; a6=25; a3=35; a4=30; a5=37;
@@ -1205,6 +2606,8 @@ endchr;
 
 combinechr("yacute","y","uap","uni0301.normal","dap");
 combinechr("yacute.conl","y.conl","uap","uni0301.normal","dap");
+%combinechr("ycircumflex","y","uap","uni0302.normal","dap");
+%combinechr("ycircumflex.conl","y.conl","uap","uni0302.normal","dap");
 combinechr("ydieresis","y","uap","uni0308.normal","dap");
 combinechr("ydieresis.conl","y.conl","uap","uni0308.normal","dap");
 
@@ -1221,7 +2624,7 @@ def draw_z(expr style) =
   use(a2); top z2=(0.95[x4,x7],ex);
   use(a5); bot z5=(lpad,0);
   use(a6); bot z6=(x7-0.6pt,0);
-  x7=w-lpad; z7=z6+whatever*dir20;
+  x7=w-rpad; z7=z6+whatever*dir20;
   z4=change_angle(z5,a5,a4);
   z3=change_angle(z2,a2+180,a3+180);
   if style=conleft:
@@ -1235,19 +2638,24 @@ def draw_z(expr style) =
   draw_stroke(p2,ap2);
   draw_stroke(p3,ap3);
   penlabels(range 0 thru 7);
+  setap("uap",(0.5[x1,x2],ex+apy));
 enddef;
-
 beginchr("z",1.05en);
   draw_z(normal);
 endchr;
-
 beginchr("z.conl",1.05en);
   draw_z(conleft);
 endchr;
+combinechr("zcaron","z","uap","uni030C.normal","dap");
 
 beginchr("interpunctdot",0);
   z1=(0,0);
-  draw_dot(1)(1);
+  draw_dot(1)(interpunctsize);
+endchr;
+
+beginchr("bullet",0.8en);
+  z1=(1/2w,1/2asc);
+  draw_dot(1)(1.7);
 endchr;
 
 beginchr("interpunctcomma",0);
@@ -1271,18 +2679,23 @@ beginrefchr("period",0.6en);
   attach("interpunctdot","ap","origo");
 endchr;
 
+beginrefchr("periodcentered",0.6en);
+  setap("ap",(1/2w,1/2asc));
+  attach("interpunctdot","ap","origo");
+endchr;
+
 beginrefchr("comma",0.6en);
   setap("ap",(1/2w,0));
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("colon",0.6en);
-  ex-y1=y2; y1-y2=0.6ex; x1=x2=1/2w;
-  setap("ap1",z1);
-  setap("ap2",z2);
-  attach("interpunctdot","ap1","origo");
-  attach("interpunctdot","ap2","origo");
-endchr;
+%beginrefchr("colon",0.6en);
+%  ex-y1=y2; y1-y2=0.6ex; x1=x2=1/2w;
+%  setap("ap1",z1);
+%  setap("ap2",z2);
+%  attach("interpunctdot","ap1","origo");
+%  attach("interpunctdot","ap2","origo");
+%endchr;
 
 beginrefchr("semicolon",0.6en);
   setap("ap1",(1/2w,0.7ex));
@@ -1291,39 +2704,39 @@ beginrefchr("semicolon",0.6en);
   attach("interpunctcomma","ap2","origo");
 endchr;
 
-beginrefchr("quoteleft",0.6en);
+beginrefchr("quoteleft",0.5en);
   setap("ap",(1/2w,1/2[ex,asc]));
   attach("interpunctinvcomma","ap","origo");
 endchr;
 
-beginrefchr("quoteright",0.6en);
+beginrefchr("quoteright",0.5en);
   setap("ap",(1/2w,1/2[ex,asc]));
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("quotesinglbase",0.6en);
+beginrefchr("quotesinglbase",0.5en);
   setap("ap",(1/2w,0));
   attach("interpunctcomma","ap","origo");
 endchr;
 
-beginrefchr("quotedblleft",1.1en);
-  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblleft",1.0en);
+  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctinvcomma","ap1","origo");
   attach("interpunctinvcomma","ap2","origo");
 endchr;
 
-beginrefchr("quotedblright",1.1en);
-  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblright",1.0en);
+  y1=y2=1/2[ex,asc]; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctcomma","ap1","origo");
   attach("interpunctcomma","ap2","origo");
 endchr;
 
-beginrefchr("quotedblbase",1.1en);
-  y1=y2=0; 1/2w=1/2[x1,x2]; x1=0.3w;
+beginrefchr("quotedblbase",1.0en);
+  y1=y2=0; 1/2w=1/2[x1,x2]; x1=0.27w;
   setap("ap1",z1);
   setap("ap2",z2);
   attach("interpunctcomma","ap1","origo");
@@ -1344,7 +2757,7 @@ endchr;
 beginchr("parenleft",0.8en);
   a1=a2=35;
   x1=x2=1/2w; y1=0.95asc; y2=-1/2desc;
-  p1=z1{-dir a1}..tension 1.8..z2;
+  p1=z1{-dir a1}..tension 1.7..z2;
   z3=directionpoint down of p1;
   draw_stroke(p1 shifted 0.8(x1-x3,0),ang(a1..a2));
 endchr;
@@ -1352,7 +2765,7 @@ endchr;
 beginchr("parenright",0.8en);
   a1=a2=35;
   x1=x2=1/2w; y1=0.95asc; y2=-1/2desc;
-  p1=z1..tension 1.8..z2{-dir a2};
+  p1=z1..tension 1.7..z2{-dir a2};
   z3=directionpoint down of p1;
   draw_stroke(p1 shifted 0.8(x1-x3,0),ang(a1..a2));
 endchr;
@@ -1374,9 +2787,9 @@ beginchr("less",0.8en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
+
 beginchr("greater",0.8en);
-  padding(1.0pt,0.5pt);
+  padding(0.5pt,1.0pt);
   a1=a3=60;
   a2=a4=20;
   x1=w-rpad;
@@ -1392,21 +2805,6 @@ beginchr("greater",0.8en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
-
-beginchr("equal",1.3ex);
-  padding(0.4pt,0.4pt);
-  x1=x3=lpad; x2=x4=w-rpad;
-  1/2[y1,y3]=1/2[y2,y4]=1/2ex;
-  y1-y3=y2-y4=1.3pt;
-  a1=a2=40;
-  ap1=ang(a1..a2);
-  p1=z1..z2;
-  p2=z3..z4;
-  draw_stroke(p1,ap1);
-  draw_stroke(p2,ap1);
-endchr;
-pause;
 
 beginchr("hyphen",0.7en);
   padding(0.4pt,0.4pt);
@@ -1426,7 +2824,6 @@ endchr;
 beginrefchr("uni2011",0.7en+0.8pt);
   attach("hyphen","origo","origo");
 endchr;
-pause;
 
 beginchr("endash",1ex);
   x1=0; x2=w;
@@ -1464,18 +2861,23 @@ beginchr("quotedbl",0.9en);
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 endchr;
-pause;
 
-beginchr("exclam",0.8en);
-  z1=(1/2w,1/2tecil_w);
+def draw_exclamation(expr style) =
+  z1=(1/2w,if style=nuquerna: asc- fi 1/2tecil_w);
   draw_dot(1)(1);
   a2=35; a3=60;
   use(a2); top z2=(x3,asc);
   use(a3); z3=(0.2[x1,rt x1],0.5ex);
-  draw_stroke(z2..z3,ang(a2..a3));
+  draw_stroke((z2..z3) if style=nuquerna: rotatedaround(1/2(w,asc),180) fi,ang(a2..a3));
+enddef;
+beginchr("exclam",0.8en);
+  draw_exclamation(normal);
+endchr;
+beginchr("exclamdown",0.8en);
+  draw_exclamation(nuquerna);
 endchr;
 
-beginchr("question",0.95en);
+def draw_question(expr style) =
   padding(0.6pt,0.6pt);
   a0=a1=a2=a3=a4=a5=35;
   z0=z1+0.33(x3-x1)*dir(-53);
@@ -1487,13 +2889,19 @@ beginchr("question",0.95en);
   y5=0.45ex;
   p1=z0..z1{up}..z2{right}..z3{down}..z4{down}..z5;
   ap1=ang(a0..a1..a2..a3..a4..a5);
-  draw_stroke(p1,ap1);
-  z6=(1/2w,1/2tecil_w);
+  draw_stroke(p1 if style=nuquerna: rotatedaround((1/2[lpad,w-rpad],1/2asc),180) fi,ap1);
+  z6=(1/2[lpad,w-rpad],if style=nuquerna: asc- fi 1/2tecil_w);
   draw_dot(6)(1);
   penlabels(range 0 thru 5);
+enddef;
+beginchr("question",0.95en);
+  draw_question(normal);
+endchr;
+beginchr("questiondown",0.95en);
+  draw_question(nuquerna);
 endchr;
 
-beginchr("uni204A",0.5ten);
+beginchr("uni204A",0.5ten); % Tironian et
   padding(1.4pt,0.7pt);
   a0=30;a1=40; a2=43;
   a3=35;
@@ -1504,15 +2912,18 @@ beginchr("uni204A",0.5ten);
   ap1=ang(a0..a1..a2);
   p1=z0...z1{right}..z2;
   z3=change_angle(z2,a2+180,a3+180);
-  z4=(x3-0.4o,-2o);
-%  z4=(x3,1pt);
-%  z5=z4-1.5pt*dir(50);
-%  ap2=ang(a3..a4..a5);
-%  p2=z3..z4{down}..z5{-dir(a5)};
-  ap2=ornang(noorn,curved);
-  p2=ornpath(noorn,curved)(3,4);
+  z4=(x3-0.6o,-1pt);
+%%  z4=(x3,1pt);
+%%  z5=z4-1.5pt*dir(50);
+%%  ap2=ang(a3..a4..a5);
+%%  p2=z3..z4{down}..z5{-dir(a5)};
+%  ap2=ornang(noorn,curved);
+%  p2=ornpath(noorn,curved)(3,4);
+  ap2=ang(a3..31..25..25..31);
+  p2=z3..botfootserif(3,4)(0.7pt,0.05pt,1.2pt,40,ap2);
   draw_stroke(p1,ap1);
-  draw_stroke(p2,ang(a3..ap2));
+%  draw_stroke(p2,ang(a3..ap2));
+  draw_stroke(p2,ap2);
   penlabels(range 1 thru 5);
 endchr;
 

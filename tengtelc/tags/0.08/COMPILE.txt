@@ -1,5 +1,5 @@
 Tengwar Telcontar - a unicode Tengwar typeface.
-Copyright (C) 2005-2007 Johan Winge
+Copyright (C) 2005-2009 Johan Winge
 
 Tengwar Telcontar is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License as
@@ -49,22 +49,20 @@ instead.
 I.) To compile the Tengwar Telcontar source to TrueType font files,
    you will need the following software:
 
- 0.) An OS that can run all of the following software (duh!),
-    i.e. some Linux distribution of your choise, or, if you use
-    MS Windows, Cygwin: http://www.cygwin.com/
+ 0.) An OS that can run all of the following software, e.g. some
+     Linux distribution of your choise, MacOS, or, if you use
+     Windows, Cygwin: http://www.cygwin.com/
 
  1.) Python. This is probably included in your Linux distribution.
     (Don't forget to manually include it if/when you install Cygwin
     -- it isn't selected for installation by default.)
 
  2.) METAFONT. Usually comes boundled in TeX-distributions
-    (e.g. MikTeX, teTeX etc.).
+    (e.g. MiKTeX, TeX Live, etc.).
 
  3.) FontForge. FontForge is continously being developed, so the
-    latest version is strongly recommended. (That said, version
-    20050719 is the earliest version that can be used to compile
-    TengTelc, but I do not recommend it. If you really have to use
-    an older version, use at least version 20050909!):
+    latest version is strongly recommended. Note that the oldest
+    usable version is 20090923.
     http://fontforge.sourceforge.net/
 
  4.) A tracing program, AutoTrace or potrace. I recommend the later:
@@ -75,33 +73,15 @@ II.) To add Graphite tables to the resulting fonts, you will need:
  0.) Graphite Compiler. Windows version available from:
     http://scripts.sil.org/GraphiteCompilerDownload
 
-    Note 1: The file stddef.gdh that comes with GrCompiler might not
+    Note: The file stddef.gdh that comes with GrCompiler might not
     be found by GrCompiler, and I have found that the easiest way
     to fix this is to copy the file stddef.gdh to the working
     directory of TengTelc. Otherwise you will get very cryptic
     errors when trying to add Graphite tables to the fonts.
 
-    Note 2: (Linux users only.) The sources for GrCompiler is
-    available through SVN:
-    svn://scripts.sil.org/graphite/grcompiler/trunk
+    If you are using Ubuntu, you should use the SIL Ubuntu
+    repository: http://packages.sil.org/ubuntu/
 
-    (Note that as of this writing, G++ 4.1 does not compile the code
-    correctly. If you get errors, try G++ 4.0 instead.)
-
-    It is also possible to run the Windows version of GrCompiler
-    with the help of Wine: http://www.winehq.com/
-    Just install Wine, and unzip Graphite Compiler into Wine's
-    virtual file system. Then you can run GrCompiler with a 
-    command similar to
-
-        wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe
-
-    However, the compilation script demands that Graphite Compiler
-    is invoked by "grcompiler". Solve this by adding an alias:
-
-        alias grcompiler='wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe'
-
-    (Or similar, depending on where you unzipped GrCompiler.exe.)
 
 
 *** EXAMPLE OF COMPILATION UNDER WINDOWS XP ***
@@ -109,48 +89,45 @@ II.) To add Graphite tables to the resulting fonts, you will need:
 Here, as a reference, is how I set up a minimal system to compile
 Tengwar Telcontar, starting from a normal Windows XP installation:
 
-0.) From http://www.miktex.org/setup.html I downloaded and
-installed the "Small MikTeX" package. No problems, except that it
-seems that the path to the MikTeX binaries is sometimes not added
-to the PATH variable, which means that METAFONT (mf) will not be
-found. To remedy this, open the Control Panel, System, Advanced,
-Environment Variables, and then edit Path, by appending something
-like ";c:\texmf\miktex\bin" (without quotation marks). (The exact
-appearance of the path is of course dependent on where you
-installed MikTeX.)
-
-1.) Next I went to http://www.cygwin.com/ and followed the link
+0.) First I went to http://www.cygwin.com/ and followed the link
 "Install or update now!", and a small installation program is
 started. The choises weren't too hard. In Select Packages, apart
 from the default, the only thing strictly needed is Python, found
 in the cathegory Interpreters (click on where it says "skip" to
-change what version is installed), and xorg-x11-base, found in X11.
+change what version is installed), libpng and libxml2 in Libs,
+tetex in Text, and XFree86-lib-compat, found in X11, as well as
+all packages that get selected automatically together with these.
 (More advanced users probably also want gcc etc., but this is a
 minimalistic guide. You can always add packages later if you want.)
 
-2.) FontForge next: The author of FontForge has posted very
+1.) FontForge next: The author of FontForge has posted very
 detailed instructions on how to install FontForge in Cygwin.
 Basically I did it the way he suggests:
 http://fontforge.sourceforge.net/ms-install.html
 
-3.) Then I installed Potrace. From http://potrace.sourceforge.net/
+2.) Then I installed Potrace. From http://potrace.sourceforge.net/
 I Just downloaded the precompiled distribution for Windows, and
-unzipped the file potrace.exe in a reasonable place, e.g.
-c:\program files\potrace\. This location must also be added
-to your path, in the same way as in step 0.).
+unzipped the file potrace.exe in a place included in your $PATH.
+I used c:\cygwin\usr\local\bin\. (Obviously, you will have to adapt
+to where you installed Cygwin.)
 
-4.) Finally I downloaded the latest version of GrCompiler from
+3.) Finally I downloaded the latest version of GrCompiler from
 http://scripts.sil.org/GraphiteCompilerDownload
-and unzipped all the files into c:\program files\grcompiler\
-and then added this path too to the PATH variable.
-I then also moved the file stddef.gdh as per the note above.
+and unzipped all the files into c:\Program files\grcompiler\
+and then added this path to the PATH variable. (Open the Control
+Panel, System, Advanced, Environment Variables, and then edit Path,
+by appending something like ";c:\Program files\grcompiler\"
+(without quotation marks). The exact appearance of the path is of
+course dependent on where you installed GrCompiler.)
+
+I also moved the file stddef.gdh as per the note above.
 
 Note: When adding the path to PATH, do not use quotation marks. If
-you do, cygwin can't understand it correctly, and the grcompiler
-will not be found. (In cygwin, check with "echo $PATH" that 
+you do, Cygwin can't understand it correctly, and the grcompiler
+will not be found. (In cygwin, check with "echo $PATH" that
 everything is alright.)
 
-5.) When the necessary programs are installed, unpack the source
+4.) When the necessary programs are installed, unpack the source
 package of Tengwar Telcontar to a folder inside Cygwin's virtual
 file system. Then open up a Cygwin shell, move to the location
 where the source files reside, and type the following command:
@@ -170,3 +147,58 @@ This way the graphite fonts tengtelc.ttf and tengtelcb.ttf are
 generated.
 
 Good luck!
+
+
+*** EXAMPLE OF COMPILATION UNDER UBUNTU 9.10 KARMIC KOALA ***
+
+Starting from a clean installation of Karmic, begin with adding the
+SIL repository to your list of repositories (this is needed to get
+the program grcompiler):
+
+  sudo wget http://packages.sil.org/ubuntu/sil.gpg -O- | sudo apt-key add -
+  echo "deb http://packages.sil.org/ubuntu karmic main" | sudo tee -a /etc/apt/sources.list > /dev/null
+  sudo apt-get update
+
+If you are using another Ubuntu version, replace "karmic" in the 
+second line with the relevant name. If the SIL repository does not
+work for you, for some reason, you can compile grcompiler yourself;
+see below for instructions.
+
+Then install the necessary software. Conveniently, all programs that
+are needed are available from the repositories:
+
+  sudo apt-get install python texlive fontforge potrace grcompiler
+
+However, at the time of this writing there is one complicating
+factor. Due to a bug, you will have to check that you have a working
+version of Fontforge:
+
+  fontforge -version
+
+If the version (date) is 20090622 or earlier, you unfortunately
+have to remove Fontforge, and install a newer version. I recommend
+that you build it from sources. 
+
+  sudo apt-get remove fontforge
+  sudo apt-get build-dep fontforge
+
+For detailed instructions on what to do next, see
+http://fontforge.sourceforge.net/source-build.html#src-source
+
+When all the necessary software is installed, enter the directory
+where the tengtelc source code resides, and do
+
+  ./compile
+
+That's it!
+If you could not, or didn't want to, use the SIL repository to get
+grcompiler, you can download the source code and compile it yourself:
+
+  sudo apt-get install subversion build-essential g++-4.3 automake libtool gettext libicu-dev libgraphite-dev docbook2x
+  svn co http://scripts.sil.org/svn-public/graphite/grcompiler/tags/v2.4.1 grcompiler
+  cd grcompiler
+  autoreconf -i
+  CXX=g++-4.3 ./configure
+  make
+  sudo make install
+
