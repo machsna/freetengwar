@@ -1,0 +1,4 @@
+Open("latinr.ttf");
+MergeFonts("tengwarr.ttf");
+SetFontNames("tengtelc","Tengwar Telcontar","Tengwar Telcontar","Regular");
+Generate("tengtelc_nogr.ttf");
