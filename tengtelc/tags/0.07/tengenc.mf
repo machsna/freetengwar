@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005-2006 Johan Winge
+%% Copyright (C) 2005-2007 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -169,12 +169,12 @@ addaliasvars("anca",  "conr",              "cap");
 addaliasvars("unque", "conr","conl","conb","cap");
 addaliasvars("nuumen","conr","conl","conb","cap");
 addaliasvars("malta", "conr","conl","conb","cap");
-addaliasvars("noldo", "conr",              "cap");
-addaliasvars("nwalme","conr","conl","conb","cap");
+addaliasvars("noldo", "conr",              "cap","conrbot");
+addaliasvars("nwalme","conr","conl","conb","cap","conrbot","conbbot");
 addaliasvars("oore",  "conr","conl","conb","cap");
 addaliasvars("vala",  "conr","conl","conb","cap");
-addaliasvars("anna",  "conr",              "cap");
-addaliasvars("vilya", "conr","conl","conb","cap");
+addaliasvars("anna",  "conr",              "cap","conrbot");
+addaliasvars("vilya", "conr","conl","conb","cap","conrbot","conbbot");
 
 addaliasvars("extthuule","conr",              "cap");
 addaliasvars("extformen","conr",              "cap");
@@ -187,21 +187,21 @@ addaliasvars("extunque",        "conl",       "cap");
 
 addaliasvars("roomen",          "conl",       "cap","open","conl_open");
 addaliasvars("arda",            "conl",       "cap","open","conl_open");
-addaliasvars("lambe",    "conr","conl","conb","cap");
+addaliasvars("lambe",    "conr","conl","conb","cap","conrbot","conbbot");
 addaliasvars("alda",     "conr","conl","conb","cap");
-addaliasvars("silme",                         "cap","open","flat","lig","lig_open","lig_flat","lig_harma");
+addaliasvars("silme", "cap","open","flat","lig","lig_open","lig_flat","lig_harma");
 addaliasvars("silmenuq",                      "cap","open","flat");
 addaliasvars("aare",                          "cap","open","flat");
 addaliasvars("aarenuq",                       "cap","open","flat");
-addaliasvars("hyarmen","cap");
-addaliasvars("hwestasin","cap");
-addaliasvars("yanta","cap");
-addaliasvars("uure","cap");
+addaliasvars("hyarmen","cap","conr");
+addaliasvars("hwestasin","cap","conr");
+addaliasvars("yanta","cap","conr");
+addaliasvars("uure","cap","conr");
 addaliasvars("longcarr","conl","cap");
 addaliasvars("halla","cap");
 addaliasvars("shortcarr","conr","conl","conb","cap");
 
-addaliasvars("wtengwa","desc");
+addaliasvars("wtengwa","desc","conr");
 addaliasvars("atengwa","desc","cap");
 addaliasvars("conncarr","conr");
 addaliasvars("openanna","conl","cap");

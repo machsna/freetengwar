@@ -1,0 +1,178 @@
+def footserif(suffix $)(expr ad,h,w,l,fa,angles) =
+  begingroup
+    save p; path p;
+    save toea; pair toed; toed=dir penangle 1 of angles;
+    use(penangle 0 of angles); if angle ad < 0: bot else: top fi y$c=y$;
+    z$b=z$c+l*dir(fa)=z$-whatever*ad=z$a+h*ad;
+    z$d=z$b+w*dir(90+angle ad);
+    if angle ad < 0:
+      p=z$a{ad}...z$d & z$d{-dir (penangle 2 of angles - 5)}...{-toed}z$c & z$c{toed}..tension1.2 and 1..z$a{-ad};
+    else:
+      p=z$a{ad}...z$d & z$d{dir (penangle 2 of angles)}...z$c & z$c{-toed}..tension1.2 and 1..z$a{-ad};
+    fi
+    labels($a,$b,$c,$d);
+    p
+  endgroup
+enddef;
+
+def topfootserif(suffix $, $$)(expr h,w,l,fa,angles) =
+  reverse footserif($,dir angle(z$-z$$),h,w,l,180+fa,angles)
+enddef;
+
+def botfootserif(suffix $, $$)(expr h,w,l,fa,angles) =
+  footserif($$,dir angle(z$$-z$),h,w,l,fa,reverse angles)
+enddef;
+
+% While this file contains much generic routines, all of the following deals with the design of Tengwar Telcontar. 
+% This is also the code most in need of a complete rewrite, and consequently all use of this code in the rest of the sources...
+
+pair conpoint[]; numeric conpenangle[];
+conpenangle1=40; use(conpenangle1); top conpoint1=(0,ex);         % Connecting latin
+conpenangle2=35; conpoint2=(1.4pt,0.65[ex,asc]);                   % For f-ligatures
+conpenangle3=45; conpoint3=(whatever,1/2tex);                     % luuva, teema 1 and 2
+conpenangle4=34; use(conpenangle4); bot conpoint4=(whatever,0);   % closingbar teema 2
+conpenangle5=45; conpoint5=(whatever,1/2tex);                     % luuva, teema 3 and 4
+conpenangle6=35; use(conpenangle6); top conpoint6=(whatever,tex); % closingbar teema 4
+conpenangle7=35; use(conpenangle7); top conpoint7=(0,tex);        % Connecting tengwar
+conpenangle8=45; conpoint8=(whatever,1/2ctex);                     % luuva, teema 1 and 2, capital tengwar
+conpenangle9=45; conpoint9=(whatever,1/2ctex);                     % luuva, teema 3 and 4, capital tengwar
+conpenangle10=35; use(conpenangle10); top conpoint10=(whatever,ctex);% closingbar teema 4, capital tengwar
+conpenangle11=35; use(conpenangle11); bot conpoint11=(0,0);        % Connecting tengwar, lower s-hook
+
+
+def draw_dot(suffix $)(expr fact) =
+%  fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;
+ draw_diamond($)(fact);
+enddef;
+
+def draw_diamond(suffix $)(expr fact) =
+  x$a=x$c=x$; y$b=y$d=y$;
+  y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.6*fact*tecil_w; %0.58
+  k:= -0.75*fact+1; %0.25;
+  fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
+enddef;
+
+def sign(expr x) = x/abs(x) enddef;
+def rserif(suffix $)(expr w, h, ed, md, sd, angles) =
+  begingroup
+    save sdir, edir, mdir, wdt, hgt; pair sdir, edir, mdir;
+    edir = if numeric ed: dir fi ed;
+    mdir = if numeric md: dir fi md;
+    sdir = if numeric sd: dir fi sd;
+    wdt = abs w; hgt = abs h;
+    save p, t, n, dn; path p; n:=0.5; dn:=0.2;
+    z$a = z$ + hgt*sdir;
+    forever:
+      n:=n + dn;
+      p:=(n[z$a,z$] - sign(sdir rotated 90 dotprod edir)*wdt*sdir rotated 90){edir}...{sdir}z$a;
+      t:=max(directiontime mdir rotated -90 of p,directiontime mdir rotated 90 of p);
+      use(penangle t of angles);
+      if (z$ - point t of p - penoffset mdir rotated 90 of currentpen) dotprod mdir * dn < 0: dn:=-1/2dn; fi
+      exitif (abs(dn)<=epsilon) or (n>2) or (n<0);
+    endfor
+    z$b = point t of p; z$c = point 0 of p;
+    z$d = z$a+whatever*sdir = z$c+whatever*edir;
+    labels($a,$b,$c,$d);
+    p
+  endgroup
+enddef;
+
+def topserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  rserif($,w,hp,ed,up,angle(z$$-z$)+extraa,angles)
+enddef;
+
+def botserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  reverse rserif($$,w,hp,ed,down,angle(z$-z$$)-extraa,reverse angles)
+enddef;
+
+
+
+
+% I am phasing out this code... It might have been a good idea, but I'm not diligent enough to use it properly anyway...
+
+def tserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  rserif($,w*sqrt(sqrt(abs(hp*(z$$-z$))/2.5pt)),hp*(z$$-z$),ed,up,angle(z$$-z$)+extraa,angles)
+enddef;
+
+def bserif(suffix $, $$)(expr w, hp, ed, extraa, angles) =
+  reverse rserif($$,w*sqrt(sqrt(abs(hp*(z$$-z$))/2.0pt)),hp*(z$-z$$),ed,down,angle(z$-z$$)-extraa,reverse angles)
+enddef;
+
+
+noorn=0; rounded=1; widecon=2; narrcon=3; curved=4;
+
+vardef ornpath(expr ustyle,dstyle)(suffix $,$$) =
+  save upath, dpath, ul, dl, uea, dea; path upath, dpath;
+  if ustyle=curved:
+    if dstyle=noorn: ul=0.33; uea=0;
+%    elseif dstyle=rounded:
+%    elseif dstyle=widecon:
+    elseif dstyle=narrcon: ul=0.33; uea=-1;
+    elseif dstyle=curved: ul=0.33; uea=0; fi
+    upath=tserif($,$$,0.25pt,ul,20+180,uea,ornang(ustyle,dstyle));
+  else:
+    if dstyle=noorn: ul=0.4; uea=1;
+%    elseif dstyle=rounded:
+%    elseif dstyle=widecon:
+    elseif dstyle=narrcon: ul=0.33; uea=0;
+    elseif dstyle=curved: ul=0.33; uea=1; fi
+    if ustyle=noorn:
+      upath=z$;
+    elseif ustyle=rounded:
+      upath=tserif($,$$,0.65pt,ul,25,uea,ornang(ustyle,dstyle));
+    elseif ustyle=widecon:
+      upath=tserif($,$$,0.65pt,ul,0,uea,ornang(ustyle,dstyle));
+    elseif ustyle=narrcon:
+      upath=tserif($,$$,0.25pt,ul,0,uea,ornang(ustyle,dstyle));
+    fi
+  fi
+
+  if dstyle=noorn:
+    dpath=z$$;
+  elseif dstyle=rounded:
+
+  elseif dstyle=widecon:
+
+  elseif dstyle=narrcon:
+    if ustyle=noorn: dl=0.5; dea=0;
+    elseif (ustyle=rounded) or (ustyle=widecon): dl=0.3; dea=0;
+    elseif ustyle=narrcon: dl=0.3; dea=0;
+    elseif ustyle=curved: dl=0.3; dea=-1; fi
+    dpath=bserif($,$$,0.25pt,dl,180,dea,ornang(ustyle,dstyle));
+  elseif dstyle=curved:
+    if ustyle=curved: dea=0; else: dea=1; fi
+    dpath=bserif($,$$,0.25pt,0.3,20,dea,ornang(ustyle,dstyle));
+  fi
+
+  upath..dpath
+enddef;
+
+vardef ornang(expr ustyle,dstyle) =
+  if (ustyle=rounded) and (dstyle=curved):
+    ang(38..34..31..26)
+  elseif (ustyle=noorn) and (dstyle=narrcon):
+    ang(33..41)
+  elseif (ustyle=rounded) and (dstyle=narrcon):
+    ang(41..36..33..41)
+  elseif (ustyle=rounded) and (dstyle=noorn):
+    ang(41..36)
+  elseif (ustyle=noorn) and (dstyle=curved):
+    ang(33..26)
+  elseif (ustyle=curved) and (dstyle=narrcon):
+    ang(26..31..34..38)
+  elseif (ustyle=narrcon) and (dstyle=narrcon):
+    ang(36..36..34..38)
+  elseif (ustyle=curved) and (dstyle=curved):
+    ang(26..36..33..26)
+  elseif (ustyle=widecon) and (dstyle=curved):
+    ang(38..34..31..26)
+  elseif (ustyle=widecon) and (dstyle=narrcon):
+    ang(41..36..33..41)
+  elseif (ustyle=widecon) and (dstyle=noorn):
+    ang(41..36)
+  elseif (ustyle=narrcon) and (dstyle=noorn):
+    ang(36..36)
+  elseif (ustyle=curved) and (dstyle=noorn):
+    ang(26..31)
+  fi
+enddef;

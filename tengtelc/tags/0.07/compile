@@ -2,13 +2,13 @@
 
 # Generating ttf-files:
 
-#python mf2ttf.py latinr
+python mf2ttf.py latinr
 python mf2ttf.py tengwarr
 fontforge -script tengtelc.pe regular
 
-#python mf2ttf.py latinb
-#python mf2ttf.py tengwarb
-#fontforge -script tengtelc.pe bold
+python mf2ttf.py latinb
+python mf2ttf.py tengwarb
+fontforge -script tengtelc.pe bold
 
 # Some cleaning up:
 
@@ -23,7 +23,7 @@ rm -f latinr.tfm
 rm -f tengwarr.14454gf
 rm -f tengwarr.log
 rm -f tengwarr.enc
-#rm -f tengwarr.pe
+rm -f tengwarr.pe
 rm -f tengwarr.pk
 rm -f tengwarr.tfm
 #rm -f tengwarr.ttf
