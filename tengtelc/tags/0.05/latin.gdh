@@ -1,5 +1,5 @@
 // Tengwar Telcontar - a Tengwar unicode typeface.
-// Copyright (C) 2005 Johan Winge
+// Copyright (C) 2005-2006 Johan Winge
 // 
 // Tengwar Telcontar is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -75,14 +75,14 @@ table(sub)
     elseif (roundr==all)
       g_r > g_r_round ;
     endif;
-  endpass;
-  pass(2)
+//  endpass;
+//  pass(2)
     if (latconnect)
       c_latmayconr c_latmayconl > c_latconr c_latconl / _ ^ _ ;
     endif;
     c_latmayhighconl > c_lathighconl / c_lathighconr _ ;
-  endpass;
-  pass(3)
+//  endpass;
+//  pass(3)
     c_latmaydotligr c_latmaydotligl > c_latdotligr c_latdotligl / _ ^ _ ;
   endpass;
 endtable;
@@ -90,5 +90,9 @@ endtable;
 table(pos)
   pass(1)
     c_diacbase (c_diac,g_uni0308_narrow) { attach{ to=@1; at=uap; with=dap }; insert=false;} / _ ^ _;
+    g_t g_a {kern.x = +50m};
+    g_v g_a {kern.x = -110m};
+    (g_w,g_w_conl) g_a {kern.x = -110m};
+    g_T g_e {kern.x = -160m};
   endpass;
 endtable;

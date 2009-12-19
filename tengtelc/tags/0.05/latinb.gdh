@@ -2,9 +2,13 @@ table(glyph) { MUnits = 2048; PointRadius = 0m; }
 g_space = ps("space") { 
  break = BREAK_WHITESPACE;
 };
+g_nbsp = ps("uni00A0") { 
+ uap = point(205m,799m);
+ dap = point(205m,-102m);
+};
 g_dottedcircle = ps("uni25CC") { 
- uap = point(439m,942m);
- dap = point(439m,-143m);
+ uap = point(444m,799m);
+ dap = point(444m,-102m);
 };
 g_diacriticdot = ps("diacriticdot") { 
 };
@@ -13,8 +17,8 @@ g_uni0307_normal = ps("uni0307.normal") {
  uap = point(0m,1106m);
 };
 g_uni0307 = ps("uni0307") { 
- uap = point(439m,1147m);
- dap = point(439m,-143m);
+ uap = point(444m,1004m);
+ dap = point(444m,-102m);
 };
 g_uni0308_normal = ps("uni0308.normal") { 
  dap = point(0m,901m);
@@ -25,14 +29,14 @@ g_uni0308_narrow = ps("uni0308.narrow") {
  uap = point(0m,1106m);
 };
 g_uni0308 = ps("uni0308") { 
- uap = point(439m,1147m);
- dap = point(439m,-143m);
+ uap = point(444m,1004m);
+ dap = point(444m,-102m);
 };
 g_uni030A_normal = ps("uni030A.normal") { 
  dap = point(0m,901m);
 };
 g_uni030A = ps("uni030A") { 
- dap = point(439m,-143m);
+ dap = point(444m,-102m);
 };
 g_A = ps("A") { 
 };
@@ -229,5 +233,7 @@ g_parenright = ps("parenright") {
 g_exclam = ps("exclam") { 
 };
 g_question = ps("question") { 
+};
+g_uni204A = ps("uni204A") { 
 };
 endtable;

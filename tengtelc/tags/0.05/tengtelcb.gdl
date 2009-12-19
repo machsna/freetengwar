@@ -1,5 +1,5 @@
 // Tengwar Telcontar - a Tengwar unicode typeface.
-// Copyright (C) 2005 Johan Winge
+// Copyright (C) 2005-2006 Johan Winge
 
 #include "stddef.gdh"
 #define ps postscript

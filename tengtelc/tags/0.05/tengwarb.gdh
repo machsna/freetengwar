@@ -1,659 +1,1101 @@
 table(glyph) { MUnits = 2048; PointRadius = 0m; }
-g_uni200B = ps("uni200B") { 
+g_zwsp = ps("uni200B") { 
+};
+g_zwnj = ps("uni200C") { 
+};
+g_zwj = ps("uni200D") { 
+};
+g_zwj_visible = ps("uni200D.visible") { 
 };
 g_telco_leftdown = ps("telco_leftdown") { 
- luuvap = point(224m,348m);
- barap = point(213m,73m);
+ lluuvap = point(224m,348m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
 };
 g_telco_leftdown_conl = ps("telco_leftdown_conl") { 
- luuvap = point(223m,348m);
- barap = point(213m,73m);
+ lluuvap = point(223m,348m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
 };
 g_telco_leftup = ps("telco_leftup") { 
- luuvap = point(230m,348m);
- barap = point(169m,73m);
+ lluuvap = point(230m,348m);
+ lbarap = point(169m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
 };
 g_telco_leftshort = ps("telco_leftshort") { 
- luuvap = point(226m,348m);
- barap = point(183m,73m);
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
 };
 g_telco_leftshort_conl = ps("telco_leftshort_conl") { 
- luuvap = point(226m,348m);
- barap = point(183m,73m);
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+};
+g_telco_leftshort_conr = ps("telco_leftshort_conr") { 
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+};
+g_telco_leftshort_conb = ps("telco_leftshort_conb") { 
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
 };
 g_telco_leftext = ps("telco_leftext") { 
- luuvap = point(236m,348m);
- barap = point(214m,73m);
+ lluuvap = point(236m,348m);
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
 };
 g_captelco_leftdown = ps("captelco_leftdown") { 
- luuvap = point(455m,383m);
- barap = point(462m,73m);
+ lluuvap = point(455m,383m);
+ lbarap = point(462m,72m);
 };
 g_captelco_leftup = ps("captelco_leftup") { 
- luuvap = point(455m,383m);
- barap = point(409m,73m);
+ lluuvap = point(455m,383m);
+ lbarap = point(408m,72m);
 };
 g_captelco_leftshort = ps("captelco_leftshort") { 
- luuvap = point(454m,383m);
- barap = point(411m,73m);
+ lluuvap = point(454m,383m);
+ lbarap = point(410m,72m);
 };
 g_captelco_leftup2 = ps("captelco_leftup2") { 
- luuvap = point(455m,383m);
- barap = point(460m,73m);
+ lluuvap = point(455m,383m);
+ lbarap = point(460m,72m);
 };
 g_captelco_leftshort2 = ps("captelco_leftshort2") { 
- luuvap = point(454m,383m);
- barap = point(460m,73m);
+ lluuvap = point(454m,383m);
+ lbarap = point(460m,72m);
 };
 g_captelco_leftext = ps("captelco_leftext") { 
- luuvap = point(454m,383m);
- barap = point(461m,73m);
+ lluuvap = point(454m,383m);
+ lbarap = point(461m,72m);
 };
 g_telco_rightdown = ps("telco_rightdown") { 
- luuvap = point(192m,348m);
- barap = point(264m,622m);
+ lluuvap = point(219m,348m);
+ lbarap = point(207m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(264m,622m);
+};
+g_telco_rightdown_conr = ps("telco_rightdown_conr") { 
+ lluuvap = point(219m,348m);
+ lbarap = point(207m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(264m,622m);
 };
 g_telco_rightup = ps("telco_rightup") { 
- luuvap = point(190m,348m);
- barap = point(207m,622m);
+ lluuvap = point(221m,348m);
+ lbarap = point(85m,72m);
+ rluuvap = point(190m,348m);
+ rbarap = point(207m,622m);
+};
+g_telco_rightup_conr = ps("telco_rightup_conr") { 
+ lluuvap = point(221m,348m);
+ lbarap = point(85m,72m);
+ rluuvap = point(190m,348m);
+ rbarap = point(207m,622m);
 };
 g_telco_rightshort = ps("telco_rightshort") { 
- luuvap = point(183m,348m);
- barap = point(255m,622m);
+ lluuvap = point(217m,348m);
+ lbarap = point(237m,72m);
+ rluuvap = point(183m,348m);
+ rbarap = point(255m,622m);
+};
+g_telco_rightshort_conr = ps("telco_rightshort_conr") { 
+ lluuvap = point(217m,348m);
+ lbarap = point(237m,72m);
+ rluuvap = point(183m,348m);
+ rbarap = point(255m,622m);
 };
 g_telco_rightext = ps("telco_rightext") { 
- luuvap = point(203m,348m);
- barap = point(219m,622m);
+ lluuvap = point(236m,348m);
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
 };
 g_captelco_rightdown1 = ps("captelco_rightdown1") { 
- luuvap = point(206m,383m);
- barap = point(465m,692m);
+ rluuvap = point(206m,383m);
+ rbarap = point(465m,692m);
 };
 g_captelco_rightdown2 = ps("captelco_rightdown2") { 
- luuvap = point(206m,383m);
- barap = point(491m,692m);
+ rluuvap = point(206m,383m);
+ rbarap = point(491m,692m);
 };
 g_captelco_rightup = ps("captelco_rightup") { 
- luuvap = point(195m,383m);
- barap = point(200m,692m);
+ rluuvap = point(195m,383m);
+ rbarap = point(200m,692m);
 };
 g_captelco_rightshort1 = ps("captelco_rightshort1") { 
- luuvap = point(194m,383m);
- barap = point(454m,692m);
+ rluuvap = point(194m,383m);
+ rbarap = point(454m,692m);
 };
 g_captelco_rightshort2 = ps("captelco_rightshort2") { 
- luuvap = point(194m,383m);
- barap = point(483m,692m);
+ rluuvap = point(194m,383m);
+ rbarap = point(483m,692m);
 };
 g_captelco_rightext = ps("captelco_rightext") { 
- luuvap = point(210m,383m);
- barap = point(213m,692m);
+ rluuvap = point(210m,383m);
+ rbarap = point(213m,692m);
 };
 g_closingbar_low1 = ps("closingbar_low1") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
+};
+g_closingbar_low1_conr = ps("closingbar_low1_conr") { 
+ lbarap = point(102m,72m);
 };
 g_closingbar_low2 = ps("closingbar_low2") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
+};
+g_closingbar_low2_conr = ps("closingbar_low2_conr") { 
+ lbarap = point(102m,72m);
 };
 g_closingbar_low2_desc = ps("closingbar_low2_desc") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
 };
 g_closingbar_low3 = ps("closingbar_low3") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
+};
+g_closingbar_low3_conr = ps("closingbar_low3_conr") { 
+ lbarap = point(102m,72m);
 };
 g_closingbar_low4 = ps("closingbar_low4") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
+};
+g_closingbar_low4_conr = ps("closingbar_low4_conr") { 
+ lbarap = point(102m,72m);
 };
 g_closingbar_low4_desc = ps("closingbar_low4_desc") { 
- barap = point(102m,73m);
+ lbarap = point(102m,72m);
 };
 g_closingbar_high1 = ps("closingbar_high1") { 
- barap = point(827m,622m);
+ rbarap = point(827m,622m);
 };
 g_closingbar_high1_conl = ps("closingbar_high1_conl") { 
- barap = point(827m,622m);
+ rbarap = point(827m,622m);
 };
 g_closingbar_high2 = ps("closingbar_high2") { 
- barap = point(883m,622m);
+ rbarap = point(883m,622m);
 };
 g_closingbar_high2_conr = ps("closingbar_high2_conr") { 
- barap = point(883m,622m);
+ rbarap = point(883m,622m);
 };
 g_closingbar_high2_conl = ps("closingbar_high2_conl") { 
- barap = point(883m,622m);
+ rbarap = point(883m,622m);
 };
 g_closingbar_high2_conb = ps("closingbar_high2_conb") { 
- barap = point(883m,622m);
+ rbarap = point(883m,622m);
 };
 g_closingbar_high3 = ps("closingbar_high3") { 
- barap = point(1343m,622m);
+ rbarap = point(1343m,622m);
 };
 g_closingbar_high3_conl = ps("closingbar_high3_conl") { 
- barap = point(1343m,622m);
+ rbarap = point(1343m,622m);
 };
 g_closingbar_high4 = ps("closingbar_high4") { 
- barap = point(1399m,622m);
+ rbarap = point(1399m,622m);
 };
 g_closingbar_high4_conr = ps("closingbar_high4_conr") { 
- barap = point(1399m,622m);
+ rbarap = point(1399m,622m);
 };
 g_closingbar_high4_conl = ps("closingbar_high4_conl") { 
- barap = point(1399m,622m);
+ rbarap = point(1399m,622m);
 };
 g_closingbar_high4_conb = ps("closingbar_high4_conb") { 
- barap = point(1399m,622m);
+ rbarap = point(1399m,622m);
 };
 g_capclosingbar_high1 = ps("capclosingbar_high1") { 
- barap = point(836m,692m);
+ rbarap = point(836m,692m);
 };
 g_capclosingbar_high2 = ps("capclosingbar_high2") { 
- barap = point(1158m,692m);
+ rbarap = point(1094m,692m);
 };
 g_capclosingbar_high3 = ps("capclosingbar_high3") { 
- barap = point(1352m,692m);
+ rbarap = point(1352m,692m);
 };
 g_capclosingbar_high4 = ps("capclosingbar_high4") { 
- barap = point(1674m,692m);
+ rbarap = point(1610m,692m);
 };
 g_teema1luuva = ps("teema1luuva") { 
- luuvap = point(143m,348m);
+ lluuvap = point(143m,348m);
+};
+g_teema1luuva_conr = ps("teema1luuva_conr") { 
+ lluuvap = point(143m,348m);
 };
 g_teema1luuvar = ps("teema1luuvar") { 
- luuvap = point(143m,348m);
+ lluuvap = point(143m,348m);
+};
+g_teema1luuvar_conr = ps("teema1luuvar_conr") { 
+ lluuvap = point(143m,348m);
 };
 g_teema2luuva = ps("teema2luuva") { 
- luuvap = point(143m,348m);
+ lluuvap = point(143m,348m);
 };
 g_teema2luuvar = ps("teema2luuvar") { 
- luuvap = point(143m,348m);
+ lluuvap = point(143m,348m);
 };
 g_teema3luuva = ps("teema3luuva") { 
- luuvap = point(853m,348m);
+ rluuvap = point(853m,348m);
 };
 g_teema3luuvar = ps("teema3luuvar") { 
- luuvap = point(1369m,348m);
+ rluuvap = point(1369m,348m);
 };
 g_teema4luuva = ps("teema4luuva") { 
- luuvap = point(788m,348m);
+ rluuvap = point(788m,348m);
 };
 g_teema4luuvar = ps("teema4luuvar") { 
- luuvap = point(1305m,348m);
+ rluuvap = point(1305m,348m);
 };
 g_capteema1luuva = ps("capteema1luuva") { 
- luuvap = point(143m,383m);
+ lluuvap = point(143m,383m);
 };
 g_capteema1luuvar = ps("capteema1luuvar") { 
- luuvap = point(143m,383m);
+ lluuvap = point(143m,383m);
 };
 g_capteema2luuva = ps("capteema2luuva") { 
- luuvap = point(143m,383m);
+ lluuvap = point(143m,383m);
 };
 g_capteema2luuvar = ps("capteema2luuvar") { 
- luuvap = point(143m,383m);
+ lluuvap = point(143m,383m);
 };
 g_capteema3luuva = ps("capteema3luuva") { 
- luuvap = point(853m,383m);
+ rluuvap = point(853m,383m);
 };
 g_capteema3luuvar = ps("capteema3luuvar") { 
- luuvap = point(1369m,383m);
+ rluuvap = point(1369m,383m);
 };
 g_capteema4luuva = ps("capteema4luuva") { 
- luuvap = point(788m,383m);
+ rluuvap = point(788m,383m);
 };
 g_capteema4luuvar = ps("capteema4luuvar") { 
- luuvap = point(1305m,383m);
+ rluuvap = point(1305m,383m);
 };
 g_tinco = ps("uniE000") { 
- barap = point(213m,73m);
- uap = point(581m,799m);
- dap = point(646m,-102m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(579m,799m);
+ dap = point(681m,-102m);
+};
+g_tinco_conr = ps("uniE000.conr") { 
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(579m,799m);
+ dap = point(681m,-102m);
 };
 g_tinco_conl = ps("uniE000.conl") { 
- barap = point(213m,73m);
- uap = point(581m,799m);
- dap = point(646m,-102m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(578m,799m);
+ dap = point(680m,-102m);
+};
+g_tinco_conb = ps("uniE000.conb") { 
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(578m,799m);
+ dap = point(680m,-102m);
 };
 g_tinco_cap = ps("uniE000.cap") { 
- barap = point(462m,73m);
- uap = point(785m,868m);
- dap = point(850m,-102m);
+ lbarap = point(462m,72m);
+ uap = point(809m,868m);
+ dap = point(912m,-102m);
 };
 g_ando = ps("uniE004") { 
- barap = point(213m,73m);
- uap = point(844m,799m);
- dap = point(844m,-102m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(837m,799m);
+ dap = point(857m,-102m);
+};
+g_ando_conr = ps("uniE004.conr") { 
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(837m,799m);
+ dap = point(857m,-102m);
 };
 g_ando_conl = ps("uniE004.conl") { 
- barap = point(213m,73m);
- uap = point(844m,799m);
- dap = point(844m,-102m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(836m,799m);
+ dap = point(857m,-102m);
+};
+g_ando_conb = ps("uniE004.conb") { 
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(836m,799m);
+ dap = point(857m,-102m);
 };
 g_ando_cap = ps("uniE004.cap") { 
- barap = point(462m,73m);
- uap = point(1094m,868m);
- dap = point(1094m,-102m);
+ lbarap = point(462m,72m);
+ uap = point(1067m,868m);
+ dap = point(1088m,-102m);
 };
 g_thuule = ps("uniE008") { 
- barap = point(169m,73m);
- uap = point(650m,799m);
+ lbarap = point(169m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(688m,799m);
+ dap = point(585m,-102m);
+};
+g_thuule_conr = ps("uniE008.conr") { 
+ lbarap = point(169m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(688m,799m);
  dap = point(585m,-102m);
 };
 g_thuule_cap = ps("uniE008.cap") { 
- barap = point(409m,73m);
- uap = point(785m,868m);
- dap = point(706m,-102m);
+ lbarap = point(408m,72m);
+ uap = point(912m,868m);
+ dap = point(810m,-102m);
 };
 g_anto = ps("uniE00C") { 
- barap = point(169m,73m);
- uap = point(896m,799m);
- dap = point(896m,-102m);
+ lbarap = point(169m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(864m,799m);
+ dap = point(843m,-102m);
+};
+g_anto_conr = ps("uniE00C.conr") { 
+ lbarap = point(169m,72m);
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(864m,799m);
+ dap = point(843m,-102m);
 };
 g_anto_cap = ps("uniE00C.cap") { 
- barap = point(409m,73m);
- uap = point(1094m,868m);
- dap = point(1094m,-102m);
+ lbarap = point(408m,72m);
+ uap = point(1088m,868m);
+ dap = point(1068m,-102m);
 };
 g_oore = ps("uniE014") { 
- barap = point(183m,73m);
- uap = point(572m,799m);
- dap = point(572m,-102m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(581m,799m);
+ dap = point(581m,-102m);
+};
+g_oore_conr = ps("uniE014.conr") { 
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(581m,799m);
+ dap = point(581m,-102m);
 };
 g_oore_conl = ps("uniE014.conl") { 
- barap = point(183m,73m);
- uap = point(572m,799m);
- dap = point(572m,-102m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(581m,799m);
+ dap = point(581m,-102m);
+};
+g_oore_conb = ps("uniE014.conb") { 
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(581m,799m);
+ dap = point(581m,-102m);
 };
 g_oore_cap = ps("uniE014.cap") { 
- barap = point(411m,73m);
- uap = point(784m,868m);
- dap = point(784m,-102m);
+ lbarap = point(410m,72m);
+ uap = point(809m,868m);
+ dap = point(809m,-102m);
 };
 g_nuumen = ps("uniE010") { 
- barap = point(183m,73m);
- uap = point(845m,799m);
- dap = point(845m,-102m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(839m,799m);
+ dap = point(839m,-102m);
+};
+g_nuumen_conr = ps("uniE010.conr") { 
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(839m,799m);
+ dap = point(839m,-102m);
 };
 g_nuumen_conl = ps("uniE010.conl") { 
- barap = point(183m,73m);
- uap = point(845m,799m);
- dap = point(845m,-102m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(839m,799m);
+ dap = point(839m,-102m);
+};
+g_nuumen_conb = ps("uniE010.conb") { 
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(839m,799m);
+ dap = point(839m,-102m);
 };
 g_nuumen_cap = ps("uniE010.cap") { 
- barap = point(411m,73m);
- uap = point(1094m,868m);
- dap = point(1094m,-102m);
+ lbarap = point(410m,72m);
+ uap = point(1067m,868m);
+ dap = point(1067m,-102m);
 };
 g_extthuule = ps("uniE018") { 
- barap = point(214m,73m);
- uap = point(653m,799m);
- dap = point(653m,-102m);
-};
-g_extthuule_cap = ps("uniE018.cap") { 
- barap = point(461m,73m);
- uap = point(784m,868m);
- dap = point(784m,-102m);
-};
-g_extanto = ps("uniE01C") { 
- barap = point(214m,73m);
- uap = point(899m,799m);
- dap = point(899m,-102m);
-};
-g_extanto_cap = ps("uniE01C.cap") { 
- barap = point(461m,73m);
- uap = point(1094m,868m);
- dap = point(1094m,-102m);
-};
-g_parma = ps("uniE001") { 
- uap = point(572m,799m);
- dap = point(635m,-102m);
-};
-g_parma_conl = ps("uniE001.conl") { 
- uap = point(572m,799m);
- dap = point(635m,-102m);
-};
-g_parma_cap = ps("uniE001.cap") { 
- uap = point(785m,868m);
- dap = point(785m,-102m);
-};
-g_umbar = ps("uniE005") { 
- uap = point(851m,799m);
- dap = point(851m,-102m);
-};
-g_umbar_conl = ps("uniE005.conl") { 
- uap = point(851m,799m);
- dap = point(851m,-102m);
-};
-g_umbar_cap = ps("uniE005.cap") { 
- uap = point(1094m,868m);
- dap = point(985m,-102m);
-};
-g_formen = ps("uniE009") { 
- uap = point(634m,799m);
- dap = point(560m,-102m);
-};
-g_formen_cap = ps("uniE009.cap") { 
- uap = point(809m,868m);
- dap = point(714m,-102m);
-};
-g_ampa = ps("uniE00D") { 
- uap = point(881m,799m);
- dap = point(865m,-102m);
-};
-g_ampa_cap = ps("uniE00D.cap") { 
- uap = point(1118m,868m);
- dap = point(1118m,-102m);
-};
-g_vala = ps("uniE015") { 
- uap = point(578m,799m);
- dap = point(578m,-102m);
-};
-g_vala_conl = ps("uniE015.conl") { 
- uap = point(578m,799m);
- dap = point(578m,-102m);
-};
-g_vala_cap = ps("uniE015.cap") { 
- uap = point(809m,868m);
- dap = point(809m,-102m);
-};
-g_malta = ps("uniE011") { 
- uap = point(857m,799m);
- dap = point(857m,-102m);
-};
-g_malta_conl = ps("uniE011.conl") { 
- uap = point(857m,799m);
- dap = point(857m,-102m);
-};
-g_malta_cap = ps("uniE011.cap") { 
- uap = point(1118m,868m);
- dap = point(1118m,-102m);
-};
-g_mhtengwa = ps("uniE03A") { 
- uap = point(857m,799m);
- dap = point(857m,-102m);
-};
-g_mhtengwa_cap = ps("uniE03A.cap") { 
- uap = point(980m,868m);
- dap = point(980m,-102m);
-};
-g_beleriandicmh = ps("uniE03B") { 
- uap = point(578m,799m);
- dap = point(578m,-102m);
-};
-g_beleriandicmh_cap = ps("uniE03B.cap") { 
- uap = point(809m,868m);
- dap = point(809m,-102m);
-};
-g_extformen = ps("uniE019") { 
- uap = point(636m,799m);
- dap = point(562m,-102m);
-};
-g_extformen_cap = ps("uniE019.cap") { 
- uap = point(784m,868m);
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(693m,799m);
  dap = point(693m,-102m);
 };
-g_extampa = ps("uniE01D") { 
- uap = point(883m,799m);
- dap = point(867m,-102m);
+g_extthuule_conr = ps("uniE018.conr") { 
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(693m,799m);
+ dap = point(693m,-102m);
 };
-g_extampa_cap = ps("uniE01D.cap") { 
- uap = point(1094m,868m);
- dap = point(1094m,-102m);
+g_extthuule_cap = ps("uniE018.cap") { 
+ lbarap = point(461m,72m);
+ uap = point(912m,868m);
+ dap = point(912m,-102m);
 };
-g_calma = ps("uniE002") { 
- barap = point(925m,622m);
- uap = point(525m,799m);
- dap = point(482m,-102m);
+g_extanto = ps("uniE01C") { 
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(869m,799m);
+ dap = point(869m,-102m);
 };
-g_calma_cap = ps("uniE002.cap") { 
- barap = point(1113m,692m);
- uap = point(618m,868m);
- dap = point(568m,-102m);
+g_extanto_conr = ps("uniE01C.conr") { 
+ lbarap = point(214m,72m);
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(869m,799m);
+ dap = point(869m,-102m);
 };
-g_anga = ps("uniE006") { 
- barap = point(1441m,622m);
- uap = point(778m,799m);
- dap = point(714m,-102m);
+g_extanto_cap = ps("uniE01C.cap") { 
+ lbarap = point(461m,72m);
+ uap = point(1088m,868m);
+ dap = point(1088m,-102m);
 };
-g_anga_cap = ps("uniE006.cap") { 
- barap = point(1629m,692m);
- uap = point(871m,868m);
- dap = point(800m,-102m);
+g_parma = ps("uniE001") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(546m,799m);
+ dap = point(649m,-102m);
 };
-g_harma = ps("uniE00A") { 
- barap = point(870m,622m);
- uap = point(429m,799m);
- dap = point(526m,-102m);
+g_parma_conr = ps("uniE001.conr") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(546m,799m);
+ dap = point(649m,-102m);
 };
-g_harma_cap = ps("uniE00A.cap") { 
- barap = point(858m,692m);
- uap = point(509m,868m);
- dap = point(623m,-102m);
-};
-g_anca = ps("uniE00E") { 
- barap = point(1386m,622m);
- uap = point(731m,799m);
- dap = point(779m,-102m);
-};
-g_anca_cap = ps("uniE00E.cap") { 
- barap = point(1374m,692m);
- uap = point(823m,868m);
- dap = point(876m,-102m);
-};
-g_anna = ps("uniE016") { 
- barap = point(925m,622m);
- uap = point(529m,799m);
- dap = point(529m,-102m);
-};
-g_anna_cap = ps("uniE016.cap") { 
- barap = point(1114m,692m);
- uap = point(624m,868m);
- dap = point(624m,-102m);
-};
-g_noldo = ps("uniE012") { 
- barap = point(1441m,622m);
- uap = point(782m,799m);
- dap = point(782m,-102m);
-};
-g_noldo_cap = ps("uniE012.cap") { 
- barap = point(1630m,692m);
- uap = point(877m,868m);
- dap = point(877m,-102m);
-};
-g_extharma = ps("uniE01A") { 
- barap = point(870m,622m);
- uap = point(424m,799m);
- dap = point(424m,-102m);
-};
-g_extharma_cap = ps("uniE01A.cap") { 
- barap = point(856m,692m);
- uap = point(503m,868m);
- dap = point(503m,-102m);
-};
-g_extanca = ps("uniE01E") { 
- barap = point(1386m,622m);
- uap = point(725m,799m);
- dap = point(709m,-102m);
-};
-g_extanca_cap = ps("uniE01E.cap") { 
- barap = point(1372m,692m);
- uap = point(816m,868m);
- dap = point(798m,-102m);
-};
-g_quesse = ps("uniE003") { 
- uap = point(523m,799m);
- dap = point(471m,-102m);
-};
-g_quesse_conl = ps("uniE003.conl") { 
- uap = point(523m,799m);
- dap = point(471m,-102m);
-};
-g_quesse_conr = ps("uniE003.conr") { 
- uap = point(523m,799m);
- dap = point(471m,-102m);
-};
-g_quesse_conb = ps("uniE003.conb") { 
- uap = point(523m,799m);
- dap = point(471m,-102m);
-};
-g_quesse_cap = ps("uniE003.cap") { 
- uap = point(661m,868m);
- dap = point(595m,-102m);
-};
-g_ungwe = ps("uniE007") { 
- uap = point(781m,799m);
- dap = point(703m,-102m);
-};
-g_ungwe_conl = ps("uniE007.conl") { 
- uap = point(781m,799m);
- dap = point(703m,-102m);
-};
-g_ungwe_conr = ps("uniE007.conr") { 
- uap = point(781m,799m);
- dap = point(703m,-102m);
-};
-g_ungwe_conb = ps("uniE007.conb") { 
- uap = point(781m,799m);
- dap = point(703m,-102m);
-};
-g_ungwe_cap = ps("uniE007.cap") { 
- uap = point(919m,868m);
- dap = point(827m,-102m);
-};
-g_hwesta = ps("uniE00B") { 
- uap = point(412m,799m);
- dap = point(505m,-102m);
-};
-g_hwesta_conl = ps("uniE00B.conl") { 
- uap = point(412m,799m);
- dap = point(505m,-102m);
-};
-g_hwesta_cap = ps("uniE00B.cap") { 
- uap = point(500m,868m);
- dap = point(612m,-102m);
-};
-g_unque = ps("uniE00F") { 
- uap = point(711m,799m);
- dap = point(758m,-102m);
-};
-g_unque_conl = ps("uniE00F.conl") { 
- uap = point(711m,799m);
- dap = point(758m,-102m);
-};
-g_unque_cap = ps("uniE00F.cap") { 
- uap = point(812m,868m);
- dap = point(865m,-102m);
-};
-g_vilya = ps("uniE017") { 
- uap = point(523m,799m);
- dap = point(513m,-102m);
-};
-g_vilya_conl = ps("uniE017.conl") { 
- uap = point(523m,799m);
- dap = point(513m,-102m);
-};
-g_vilya_conr = ps("uniE017.conr") { 
- uap = point(523m,799m);
- dap = point(513m,-102m);
-};
-g_vilya_conb = ps("uniE017.conb") { 
- uap = point(523m,799m);
- dap = point(513m,-102m);
-};
-g_vilya_cap = ps("uniE017.cap") { 
- uap = point(661m,868m);
+g_parma_conl = ps("uniE001.conl") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(546m,799m);
  dap = point(648m,-102m);
 };
-g_nwalme = ps("uniE013") { 
- uap = point(781m,799m);
+g_parma_conb = ps("uniE001.conb") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(546m,799m);
+ dap = point(648m,-102m);
+};
+g_parma_cap = ps("uniE001.cap") { 
+ uap = point(777m,868m);
+ dap = point(879m,-102m);
+};
+g_umbar = ps("uniE005") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(804m,799m);
+ dap = point(825m,-102m);
+};
+g_umbar_conr = ps("uniE005.conr") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(804m,799m);
+ dap = point(825m,-102m);
+};
+g_umbar_conl = ps("uniE005.conl") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(804m,799m);
+ dap = point(824m,-102m);
+};
+g_umbar_conb = ps("uniE005.conb") { 
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
+ uap = point(804m,799m);
+ dap = point(824m,-102m);
+};
+g_umbar_cap = ps("uniE005.cap") { 
+ uap = point(1035m,868m);
+ dap = point(1056m,-102m);
+};
+g_formen = ps("uniE009") { 
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(655m,799m);
+ dap = point(553m,-102m);
+};
+g_formen_conr = ps("uniE009.conr") { 
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(655m,799m);
+ dap = point(553m,-102m);
+};
+g_formen_cap = ps("uniE009.cap") { 
+ uap = point(880m,868m);
+ dap = point(777m,-102m);
+};
+g_ampa = ps("uniE00D") { 
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(831m,799m);
+ dap = point(811m,-102m);
+};
+g_ampa_conr = ps("uniE00D.conr") { 
+ rluuvap = point(192m,348m);
+ rbarap = point(218m,622m);
+ uap = point(831m,799m);
+ dap = point(811m,-102m);
+};
+g_ampa_cap = ps("uniE00D.cap") { 
+ uap = point(1056m,868m);
+ dap = point(1035m,-102m);
+};
+g_vala = ps("uniE015") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(549m,799m);
+ dap = point(549m,-102m);
+};
+g_vala_conr = ps("uniE015.conr") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(549m,799m);
+ dap = point(549m,-102m);
+};
+g_vala_conl = ps("uniE015.conl") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(549m,799m);
+ dap = point(549m,-102m);
+};
+g_vala_conb = ps("uniE015.conb") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(549m,799m);
+ dap = point(549m,-102m);
+};
+g_vala_cap = ps("uniE015.cap") { 
+ uap = point(777m,868m);
+ dap = point(777m,-102m);
+};
+g_malta = ps("uniE011") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(807m,799m);
+ dap = point(807m,-102m);
+};
+g_malta_conr = ps("uniE011.conr") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(807m,799m);
+ dap = point(807m,-102m);
+};
+g_malta_conl = ps("uniE011.conl") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(807m,799m);
+ dap = point(807m,-102m);
+};
+g_malta_conb = ps("uniE011.conb") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(807m,799m);
+ dap = point(807m,-102m);
+};
+g_malta_cap = ps("uniE011.cap") { 
+ uap = point(1035m,868m);
+ dap = point(1035m,-102m);
+};
+g_extformen = ps("uniE019") { 
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(661m,799m);
+ dap = point(661m,-102m);
+};
+g_extformen_conr = ps("uniE019.conr") { 
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(661m,799m);
+ dap = point(661m,-102m);
+};
+g_extformen_cap = ps("uniE019.cap") { 
+ uap = point(879m,868m);
+ dap = point(879m,-102m);
+};
+g_extampa = ps("uniE01D") { 
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(837m,799m);
+ dap = point(837m,-102m);
+};
+g_extampa_conr = ps("uniE01D.conr") { 
+ rluuvap = point(203m,348m);
+ rbarap = point(219m,622m);
+ uap = point(837m,799m);
+ dap = point(837m,-102m);
+};
+g_extampa_cap = ps("uniE01D.cap") { 
+ uap = point(1055m,868m);
+ dap = point(1055m,-102m);
+};
+g_calma = ps("uniE002") { 
+ lluuvap = point(880m,348m);
+ lbarap = point(868m,72m);
+ rbarap = point(925m,622m);
+ uap = point(498m,799m);
+ dap = point(396m,-102m);
+};
+g_calma_conr = ps("uniE002.conr") { 
+ lluuvap = point(880m,348m);
+ lbarap = point(868m,72m);
+ rbarap = point(925m,622m);
+ uap = point(498m,799m);
+ dap = point(396m,-102m);
+};
+g_calma_cap = ps("uniE002.cap") { 
+ rbarap = point(1113m,692m);
+ uap = point(498m,868m);
+ dap = point(396m,-102m);
+};
+g_anga = ps("uniE006") { 
+ lluuvap = point(1397m,348m);
+ lbarap = point(1385m,72m);
+ rbarap = point(1441m,622m);
+ uap = point(756m,799m);
+ dap = point(736m,-102m);
+};
+g_anga_conr = ps("uniE006.conr") { 
+ lluuvap = point(1397m,348m);
+ lbarap = point(1385m,72m);
+ rbarap = point(1441m,622m);
+ uap = point(756m,799m);
+ dap = point(736m,-102m);
+};
+g_anga_cap = ps("uniE006.cap") { 
+ rbarap = point(1629m,692m);
+ uap = point(756m,868m);
+ dap = point(736m,-102m);
+};
+g_harma = ps("uniE00A") { 
+ lluuvap = point(884m,348m);
+ lbarap = point(748m,72m);
+ rbarap = point(870m,622m);
+ uap = point(396m,799m);
+ dap = point(498m,-102m);
+};
+g_harma_conr = ps("uniE00A.conr") { 
+ lluuvap = point(884m,348m);
+ lbarap = point(748m,72m);
+ rbarap = point(870m,622m);
+ uap = point(396m,799m);
+ dap = point(498m,-102m);
+};
+g_harma_cap = ps("uniE00A.cap") { 
+ rbarap = point(858m,692m);
+ uap = point(396m,868m);
+ dap = point(498m,-102m);
+};
+g_anca = ps("uniE00E") { 
+ lluuvap = point(1400m,348m);
+ lbarap = point(1264m,72m);
+ rbarap = point(1386m,622m);
+ uap = point(736m,799m);
+ dap = point(756m,-102m);
+};
+g_anca_conr = ps("uniE00E.conr") { 
+ lluuvap = point(1400m,348m);
+ lbarap = point(1264m,72m);
+ rbarap = point(1386m,622m);
+ uap = point(736m,799m);
+ dap = point(756m,-102m);
+};
+g_anca_cap = ps("uniE00E.cap") { 
+ rbarap = point(1374m,692m);
+ uap = point(736m,868m);
+ dap = point(756m,-102m);
+};
+g_anna = ps("uniE016") { 
+ lluuvap = point(887m,348m);
+ lbarap = point(907m,72m);
+ rbarap = point(925m,622m);
+ uap = point(498m,799m);
+ dap = point(498m,-102m);
+};
+g_anna_conr = ps("uniE016.conr") { 
+ lluuvap = point(887m,348m);
+ lbarap = point(907m,72m);
+ rbarap = point(925m,622m);
+ uap = point(498m,799m);
+ dap = point(498m,-102m);
+};
+g_anna_cap = ps("uniE016.cap") { 
+ rbarap = point(1114m,692m);
+ uap = point(498m,868m);
+ dap = point(498m,-102m);
+};
+g_noldo = ps("uniE012") { 
+ lluuvap = point(1403m,348m);
+ lbarap = point(1423m,72m);
+ rbarap = point(1441m,622m);
+ uap = point(756m,799m);
+ dap = point(756m,-102m);
+};
+g_noldo_conr = ps("uniE012.conr") { 
+ lluuvap = point(1403m,348m);
+ lbarap = point(1423m,72m);
+ rbarap = point(1441m,622m);
+ uap = point(756m,799m);
+ dap = point(756m,-102m);
+};
+g_noldo_cap = ps("uniE012.cap") { 
+ rbarap = point(1630m,692m);
+ uap = point(756m,868m);
+ dap = point(756m,-102m);
+};
+g_extharma = ps("uniE01A") { 
+ lluuvap = point(886m,348m);
+ lbarap = point(865m,72m);
+ rbarap = point(870m,622m);
+ uap = point(396m,799m);
+ dap = point(396m,-102m);
+};
+g_extharma_cap = ps("uniE01A.cap") { 
+ rbarap = point(856m,692m);
+ uap = point(396m,868m);
+ dap = point(396m,-102m);
+};
+g_extanca = ps("uniE01E") { 
+ lluuvap = point(1402m,348m);
+ lbarap = point(1381m,72m);
+ rbarap = point(1386m,622m);
+ uap = point(736m,799m);
+ dap = point(736m,-102m);
+};
+g_extanca_cap = ps("uniE01E.cap") { 
+ rbarap = point(1372m,692m);
+ uap = point(736m,868m);
+ dap = point(736m,-102m);
+};
+g_quesse = ps("uniE003") { 
+ lluuvap = point(838m,348m);
+ lbarap = point(826m,72m);
+ uap = point(488m,799m);
+ dap = point(385m,-102m);
+};
+g_quesse_conl = ps("uniE003.conl") { 
+ lluuvap = point(838m,348m);
+ lbarap = point(826m,72m);
+ uap = point(488m,799m);
+ dap = point(385m,-102m);
+};
+g_quesse_conr = ps("uniE003.conr") { 
+ lluuvap = point(838m,348m);
+ lbarap = point(826m,72m);
+ uap = point(488m,799m);
+ dap = point(385m,-102m);
+};
+g_quesse_conb = ps("uniE003.conb") { 
+ lluuvap = point(838m,348m);
+ lbarap = point(826m,72m);
+ uap = point(488m,799m);
+ dap = point(385m,-102m);
+};
+g_quesse_cap = ps("uniE003.cap") { 
+ uap = point(486m,868m);
+ dap = point(383m,-102m);
+};
+g_ungwe = ps("uniE007") { 
+ lluuvap = point(1354m,348m);
+ lbarap = point(1342m,72m);
+ uap = point(746m,799m);
+ dap = point(725m,-102m);
+};
+g_ungwe_conl = ps("uniE007.conl") { 
+ lluuvap = point(1354m,348m);
+ lbarap = point(1342m,72m);
+ uap = point(746m,799m);
+ dap = point(725m,-102m);
+};
+g_ungwe_conr = ps("uniE007.conr") { 
+ lluuvap = point(1354m,348m);
+ lbarap = point(1342m,72m);
+ uap = point(746m,799m);
+ dap = point(725m,-102m);
+};
+g_ungwe_conb = ps("uniE007.conb") { 
+ lluuvap = point(1354m,348m);
+ lbarap = point(1342m,72m);
+ uap = point(746m,799m);
+ dap = point(725m,-102m);
+};
+g_ungwe_cap = ps("uniE007.cap") { 
+ uap = point(744m,868m);
+ dap = point(723m,-102m);
+};
+g_hwesta = ps("uniE00B") { 
+ lluuvap = point(841m,348m);
+ lbarap = point(706m,72m);
+ uap = point(385m,799m);
+ dap = point(488m,-102m);
+};
+g_hwesta_conr = ps("uniE00B.conr") { 
+ lluuvap = point(841m,348m);
+ lbarap = point(706m,72m);
+ uap = point(385m,799m);
+ dap = point(488m,-102m);
+};
+g_hwesta_conl = ps("uniE00B.conl") { 
+ lluuvap = point(841m,348m);
+ lbarap = point(706m,72m);
+ uap = point(385m,799m);
+ dap = point(488m,-102m);
+};
+g_hwesta_conb = ps("uniE00B.conb") { 
+ lluuvap = point(841m,348m);
+ lbarap = point(706m,72m);
+ uap = point(385m,799m);
+ dap = point(488m,-102m);
+};
+g_hwesta_cap = ps("uniE00B.cap") { 
+ uap = point(406m,868m);
+ dap = point(508m,-102m);
+};
+g_unque = ps("uniE00F") { 
+ lluuvap = point(1358m,348m);
+ lbarap = point(1222m,72m);
+ uap = point(725m,799m);
+ dap = point(746m,-102m);
+};
+g_unque_conr = ps("uniE00F.conr") { 
+ lluuvap = point(1358m,348m);
+ lbarap = point(1222m,72m);
+ uap = point(725m,799m);
+ dap = point(746m,-102m);
+};
+g_unque_conl = ps("uniE00F.conl") { 
+ lluuvap = point(1358m,348m);
+ lbarap = point(1222m,72m);
+ uap = point(725m,799m);
+ dap = point(746m,-102m);
+};
+g_unque_conb = ps("uniE00F.conb") { 
+ lluuvap = point(1358m,348m);
+ lbarap = point(1222m,72m);
+ uap = point(725m,799m);
+ dap = point(746m,-102m);
+};
+g_unque_cap = ps("uniE00F.cap") { 
+ uap = point(746m,868m);
  dap = point(766m,-102m);
+};
+g_vilya = ps("uniE017") { 
+ lluuvap = point(844m,348m);
+ lbarap = point(864m,72m);
+ uap = point(488m,799m);
+ dap = point(488m,-102m);
+};
+g_vilya_conl = ps("uniE017.conl") { 
+ lluuvap = point(844m,348m);
+ lbarap = point(864m,72m);
+ uap = point(488m,799m);
+ dap = point(488m,-102m);
+};
+g_vilya_conr = ps("uniE017.conr") { 
+ lluuvap = point(844m,348m);
+ lbarap = point(864m,72m);
+ uap = point(488m,799m);
+ dap = point(488m,-102m);
+};
+g_vilya_conb = ps("uniE017.conb") { 
+ lluuvap = point(844m,348m);
+ lbarap = point(864m,72m);
+ uap = point(488m,799m);
+ dap = point(488m,-102m);
+};
+g_vilya_cap = ps("uniE017.cap") { 
+ uap = point(482m,868m);
+ dap = point(482m,-102m);
+};
+g_nwalme = ps("uniE013") { 
+ lluuvap = point(1360m,348m);
+ lbarap = point(1380m,72m);
+ uap = point(746m,799m);
+ dap = point(746m,-102m);
 };
 g_nwalme_conl = ps("uniE013.conl") { 
- uap = point(781m,799m);
- dap = point(766m,-102m);
+ lluuvap = point(1360m,348m);
+ lbarap = point(1380m,72m);
+ uap = point(746m,799m);
+ dap = point(746m,-102m);
 };
 g_nwalme_conr = ps("uniE013.conr") { 
- uap = point(781m,799m);
- dap = point(766m,-102m);
+ lluuvap = point(1360m,348m);
+ lbarap = point(1380m,72m);
+ uap = point(746m,799m);
+ dap = point(746m,-102m);
 };
 g_nwalme_conb = ps("uniE013.conb") { 
- uap = point(781m,799m);
- dap = point(766m,-102m);
+ lluuvap = point(1360m,348m);
+ lbarap = point(1380m,72m);
+ uap = point(746m,799m);
+ dap = point(746m,-102m);
 };
 g_nwalme_cap = ps("uniE013.cap") { 
- uap = point(919m,868m);
- dap = point(901m,-102m);
+ uap = point(740m,868m);
+ dap = point(740m,-102m);
 };
 g_exthwesta = ps("uniE01B") { 
- uap = point(407m,799m);
- dap = point(407m,-102m);
+ lluuvap = point(844m,348m);
+ lbarap = point(822m,72m);
+ uap = point(386m,799m);
+ dap = point(386m,-102m);
 };
 g_exthwesta_conl = ps("uniE01B.conl") { 
- uap = point(407m,799m);
- dap = point(407m,-102m);
+ lluuvap = point(844m,348m);
+ lbarap = point(822m,72m);
+ uap = point(386m,799m);
+ dap = point(386m,-102m);
 };
 g_exthwesta_cap = ps("uniE01B.cap") { 
- uap = point(495m,868m);
- dap = point(495m,-102m);
+ uap = point(408m,868m);
+ dap = point(408m,-102m);
 };
 g_extunque = ps("uniE01F") { 
- uap = point(690m,799m);
- dap = point(690m,-102m);
+ lluuvap = point(1360m,348m);
+ lbarap = point(1339m,72m);
+ uap = point(726m,799m);
+ dap = point(726m,-102m);
 };
 g_extunque_conl = ps("uniE01F.conl") { 
- uap = point(690m,799m);
- dap = point(690m,-102m);
+ lluuvap = point(1360m,348m);
+ lbarap = point(1339m,72m);
+ uap = point(726m,799m);
+ dap = point(726m,-102m);
 };
 g_extunque_cap = ps("uniE01F.cap") { 
- uap = point(789m,868m);
- dap = point(789m,-102m);
+ uap = point(748m,868m);
+ dap = point(748m,-102m);
 };
 g_longcarr = ps("uniE02C") { 
- luuvap = point(244m,348m);
- barap = point(234m,73m);
+ lluuvap = point(244m,348m);
+ lbarap = point(234m,72m);
+ rluuvap = point(217m,348m);
+ rbarap = point(94m,622m);
  uap = point(188m,799m);
  dap = point(205m,-758m);
 };
 g_longcarr_conl = ps("uniE02C.conl") { 
- luuvap = point(223m,348m);
- barap = point(213m,73m);
+ lluuvap = point(223m,348m);
+ lbarap = point(213m,72m);
+ rluuvap = point(196m,348m);
+ rbarap = point(74m,622m);
  uap = point(168m,799m);
  dap = point(184m,-758m);
 };
 g_longcarr_cap = ps("uniE02C.cap") { 
- luuvap = point(475m,383m);
- barap = point(482m,73m);
+ lluuvap = point(475m,383m);
+ lbarap = point(482m,72m);
  uap = point(315m,868m);
  dap = point(315m,-823m);
 };
 g_halla = ps("uniE02D") { 
- luuvap = point(251m,348m);
- barap = point(190m,73m);
+ lluuvap = point(251m,348m);
+ lbarap = point(190m,72m);
+ rluuvap = point(212m,348m);
+ rbarap = point(238m,622m);
  uap = point(188m,1475m);
  dap = point(205m,-102m);
 };
 g_halla_cap = ps("uniE02D.cap") { 
- luuvap = point(475m,383m);
- barap = point(429m,73m);
+ lluuvap = point(475m,383m);
+ lbarap = point(429m,72m);
  uap = point(315m,1543m);
  dap = point(328m,-205m);
 };
 g_shortcarr = ps("uniE02E") { 
- luuvap = point(247m,348m);
- barap = point(203m,73m);
+ lluuvap = point(247m,348m);
+ lbarap = point(203m,72m);
+ rluuvap = point(214m,348m);
+ rbarap = point(113m,622m);
  uap = point(188m,799m);
  dap = point(188m,-102m);
 };
 g_shortcarr_conl = ps("uniE02E.conl") { 
- luuvap = point(226m,348m);
- barap = point(183m,73m);
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
+ uap = point(168m,799m);
+ dap = point(168m,-102m);
+};
+g_shortcarr_conr = ps("uniE02E.conr") { 
+ lluuvap = point(247m,348m);
+ lbarap = point(203m,72m);
+ rluuvap = point(214m,348m);
+ rbarap = point(113m,622m);
+ uap = point(188m,799m);
+ dap = point(188m,-102m);
+};
+g_shortcarr_conb = ps("uniE02E.conb") { 
+ lluuvap = point(226m,348m);
+ lbarap = point(183m,72m);
+ rluuvap = point(193m,348m);
+ rbarap = point(92m,622m);
  uap = point(168m,799m);
  dap = point(168m,-102m);
 };
 g_shortcarr_cap = ps("uniE02E.cap") { 
- luuvap = point(475m,383m);
- barap = point(432m,73m);
+ lluuvap = point(475m,383m);
+ lbarap = point(431m,72m);
  uap = point(315m,868m);
  dap = point(328m,-205m);
+};
+g_tinco_lig = ps("uniE000.lig") { 
+ uap = point(283m,799m);
+ dap = point(283m,-102m);
+};
+g_mhtengwa = ps("uniE03A") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(807m,799m);
+ dap = point(857m,-102m);
+};
+g_mhtengwa_cap = ps("uniE03A.cap") { 
+ uap = point(1035m,834m);
+ dap = point(980m,-102m);
+};
+g_beleriandicmh = ps("uniE03B") { 
+ rluuvap = point(193m,348m);
+ rbarap = point(93m,622m);
+ uap = point(549m,799m);
+ dap = point(578m,-102m);
+};
+g_beleriandicmh_cap = ps("uniE03B.cap") { 
+ uap = point(777m,868m);
+ dap = point(809m,-102m);
 };
 g_openanna = ps("uniE036") { 
  uap = point(491m,799m);
@@ -664,122 +1106,156 @@ g_openanna_conl = ps("uniE036.conl") {
  dap = point(475m,-102m);
 };
 g_openanna_cap = ps("uniE036.cap") { 
- luuvap = point(765m,383m);
- barap = point(1026m,692m);
+ rluuvap = point(765m,383m);
+ rbarap = point(1026m,692m);
  uap = point(495m,868m);
  dap = point(581m,-102m);
 };
+g_silme_lig_harma = ps("uniE024.lig_harma") { 
+ uap = point(760m,696m);
+ dap = point(454m,-102m);
+};
 g_tengparen = ps("uniE067") { 
- luuvap = point(454m,383m);
- barap = point(461m,73m);
-};
-g_conncarr = ps("uniE034") { 
- uap = point(225m,799m);
- dap = point(225m,-102m);
-};
-g_conncarr_conr = ps("uniE034.conr") { 
- uap = point(225m,799m);
- dap = point(225m,-102m);
+ lluuvap = point(454m,383m);
+ lbarap = point(461m,72m);
 };
 g_atehta_norm = ps("uniE040.norm") { 
  dap = point(0m,799m);
  ldap = point(-236m,799m);
  rdap = point(236m,799m);
+ uap = point(0m,1311m);
 };
 g_atehta = ps("uniE040") { 
- dap = point(439m,-143m);
- ldap = point(204m,942m);
- rdap = point(675m,942m);
+ uap = point(444m,1311m);
+ dap = point(444m,-102m);
+ ldap = point(209m,799m);
+ rdap = point(680m,799m);
 };
 g_downatehta_norm = ps("uniE041.norm") { 
  uap = point(0m,-102m);
  luap = point(-236m,-102m);
  ruap = point(236m,-102m);
+ cap = point(0m,-338m);
+ dap = point(0m,-512m);
 };
 g_downatehta = ps("uniE041") { 
- uap = point(439m,942m);
- luap = point(204m,-143m);
- ruap = point(675m,-143m);
+ uap = point(444m,799m);
+ dap = point(444m,-512m);
+ luap = point(209m,-102m);
+ ruap = point(680m,-102m);
+ cap = point(444m,-338m);
 };
-g_ytehta_norm = ps("uniE042.norm") { 
+g_invatehta_norm = ps("uniE056.norm") { 
  dap = point(0m,799m);
  ldap = point(-236m,799m);
  rdap = point(236m,799m);
+ uap = point(0m,1311m);
+};
+g_invatehta = ps("uniE056") { 
+ uap = point(444m,1311m);
+ dap = point(444m,-102m);
+ ldap = point(209m,799m);
+ rdap = point(680m,799m);
+};
+g_ytehta_norm = ps("uniE042.norm") { 
+ dap = point(0m,799m);
+ ldap = point(-236m,778m);
+ rdap = point(236m,778m);
+ uap = point(0m,1044m);
 };
 g_ytehta = ps("uniE042") { 
- dap = point(439m,-143m);
- ldap = point(204m,942m);
- rdap = point(675m,942m);
+ uap = point(444m,1044m);
+ dap = point(444m,-102m);
+ ldap = point(209m,778m);
+ rdap = point(680m,778m);
 };
 g_downytehta_norm = ps("uniE043.norm") { 
+ dap = point(0m,-348m);
+ cap = point(0m,-225m);
  uap = point(0m,-102m);
  luap = point(-215m,-82m);
  ruap = point(215m,-82m);
 };
 g_downytehta = ps("uniE043") { 
- uap = point(439m,942m);
- luap = point(224m,-123m);
- ruap = point(654m,-123m);
+ uap = point(444m,799m);
+ dap = point(444m,-348m);
+ cap = point(444m,-225m);
+ luap = point(229m,-82m);
+ ruap = point(659m,-82m);
 };
 g_itehta_norm = ps("uniE044.norm") { 
  dap = point(0m,799m);
- ldap = point(-102m,799m);
+ ldap = point(-205m,799m);
  rdap = point(102m,799m);
+ uap = point(0m,1044m);
 };
 g_itehta = ps("uniE044") { 
- dap = point(439m,-143m);
- ldap = point(337m,942m);
- rdap = point(542m,942m);
+ uap = point(444m,1044m);
+ dap = point(444m,-102m);
+ ldap = point(240m,799m);
+ rdap = point(547m,799m);
 };
 g_downitehta_norm = ps("uniE045.norm") { 
+ dap = point(0m,-348m);
+ cap = point(0m,-225m);
  uap = point(0m,-102m);
- luap = point(-143m,-82m);
- ruap = point(143m,-82m);
+ luap = point(-184m,-61m);
+ ruap = point(184m,-61m);
 };
 g_downitehta = ps("uniE045") { 
- uap = point(439m,942m);
- luap = point(296m,-123m);
- ruap = point(583m,-123m);
+ uap = point(444m,799m);
+ dap = point(444m,-348m);
+ cap = point(444m,-225m);
+ luap = point(260m,-61m);
+ ruap = point(629m,-61m);
 };
 g_etehta_norm = ps("uniE046.norm") { 
  dap = point(0m,799m);
  ldap = point(-105m,799m);
  rdap = point(122m,799m);
+ uap = point(0m,1106m);
 };
 g_etehta = ps("uniE046") { 
- dap = point(439m,-143m);
- ldap = point(335m,942m);
- rdap = point(562m,942m);
+ uap = point(444m,1106m);
+ dap = point(444m,-102m);
+ ldap = point(340m,799m);
+ rdap = point(567m,799m);
 };
-g_otehta_norm = ps("uniE04A.norm") { 
- dap = point(0m,696m);
- ldap = point(-123m,696m);
- rdap = point(311m,696m);
+g_etehta_double_norm = ps("uniE046.double_norm") { 
+ dap = point(0m,799m);
+ ldap = point(-105m,799m);
+ rdap = point(122m,799m);
+ uap = point(0m,1106m);
 };
-g_otehta = ps("uniE04A") { 
- dap = point(439m,-143m);
- ldap = point(316m,942m);
- rdap = point(750m,942m);
+g_downetehta_norm = ps("uniE047.norm") { 
+ uap = point(0m,-102m);
+ luap = point(-105m,-102m);
+ ruap = point(122m,-102m);
+ dap = point(0m,-410m);
 };
-g_otehta_wide = ps("uniE04A.wide") { 
- dap = point(0m,696m);
- ldap = point(-174m,696m);
- rdap = point(315m,696m);
+g_downetehta = ps("uniE047") { 
+ uap = point(444m,799m);
+ dap = point(444m,-410m);
+ luap = point(340m,-102m);
+ ruap = point(567m,-102m);
 };
-g_otehta_narrow = ps("uniE04A.narrow") { 
- dap = point(0m,696m);
- ldap = point(-18m,696m);
- rdap = point(255m,696m);
+g_downetehta_double_norm = ps("uniE047.double_norm") { 
+ uap = point(0m,-102m);
+ luap = point(-105m,-102m);
+ ruap = point(122m,-102m);
+ dap = point(0m,-410m);
 };
-g_utehta_norm = ps("uniE04C.norm") { 
- dap = point(0m,696m);
- ldap = point(-231m,696m);
- rdap = point(237m,696m);
+g_revetehta_norm = ps("uniE054.norm") { 
+ dap = point(0m,799m);
+ ldap = point(-59m,799m);
+ rdap = point(-122m,799m);
+ uap = point(0m,1106m);
 };
-g_utehta = ps("uniE04C") { 
- dap = point(439m,-143m);
- ldap = point(208m,942m);
- rdap = point(676m,942m);
+g_revetehta = ps("uniE054") { 
+ uap = point(444m,1106m);
+ dap = point(444m,-102m);
+ ldap = point(385m,799m);
+ rdap = point(322m,799m);
 };
 g_overbar_norm = ps("uniE050.norm") { 
  dap = point(0m,799m);
@@ -790,12 +1266,12 @@ g_overbar_norm = ps("uniE050.norm") {
  rdap = point(61m,799m);
 };
 g_overbar = ps("uniE050") { 
- uap = point(439m,1116m);
- dap = point(439m,-143m);
- luap = point(378m,1116m);
- ldap = point(378m,942m);
- ruap = point(501m,1116m);
- rdap = point(501m,942m);
+ uap = point(444m,973m);
+ dap = point(444m,-102m);
+ luap = point(383m,973m);
+ ldap = point(383m,799m);
+ ruap = point(506m,973m);
+ rdap = point(506m,799m);
 };
 g_overbar_lambe = ps("uniE050.lambe") { 
  dap = point(0m,799m);
@@ -823,6 +1299,8 @@ g_underbar_roomen = ps("uniE051.roomen") {
 };
 g_underbar_lambe = ps("uniE051.lambe") { 
  uap = point(0m,-143m);
+ cap = point(-145m,-444m);
+ dap = point(-145m,-342m);
 };
 g_underbar_norm = ps("uniE051.norm") { 
  uap = point(0m,-143m);
@@ -833,12 +1311,12 @@ g_underbar_norm = ps("uniE051.norm") {
  ruap = point(41m,-143m);
 };
 g_underbar = ps("uniE051") { 
- uap = point(439m,942m);
- dap = point(439m,-317m);
- ldap = point(398m,-317m);
- rdap = point(480m,-317m);
- luap = point(398m,-143m);
- ruap = point(480m,-143m);
+ uap = point(444m,799m);
+ dap = point(444m,-276m);
+ ldap = point(403m,-276m);
+ rdap = point(485m,-276m);
+ luap = point(403m,-102m);
+ ruap = point(485m,-102m);
 };
 g_underbar_wide = ps("uniE051.wide") { 
  uap = point(0m,-143m);
@@ -855,118 +1333,155 @@ g_underbar_silme = ps("uniE051.silme") {
  ruap = point(94m,-102m);
  luap = point(-94m,-102m);
 };
-g_longcarrtehta_norm = ps("uniE057.norm") { 
+g_dblunderstroke_norm = ps("uniE049.norm") { 
  uap = point(0m,-102m);
  luap = point(-205m,-102m);
+ ruap = point(205m,-102m);
+ cap = point(0m,-389m);
+ dap = point(0m,-492m);
 };
-g_longcarrtehta = ps("uniE057") { 
- uap = point(439m,942m);
- luap = point(234m,-143m);
+g_dblunderstroke = ps("uniE049") { 
+ uap = point(444m,799m);
+ dap = point(444m,-492m);
+ luap = point(240m,-102m);
+ ruap = point(649m,-102m);
+ cap = point(444m,-389m);
 };
-g_longcarrtehta_long = ps("uniE057.long") { 
- uap = point(0m,-102m);
- luap = point(-205m,-102m);
+g_engytehta_norm = ps("uniE053.norm") { 
+ dap = point(0m,799m);
+ ldap = point(-82m,799m);
+ rdap = point(82m,799m);
+ uap = point(0m,1004m);
+};
+g_engytehta_wide = ps("uniE053.wide") { 
+ dap = point(0m,799m);
+ ldap = point(-113m,799m);
+ rdap = point(113m,799m);
+ uap = point(0m,1004m);
+};
+g_engytehta = ps("uniE053") { 
+ uap = point(444m,1004m);
+ dap = point(444m,-102m);
+ ldap = point(362m,799m);
+ rdap = point(526m,799m);
+};
+g_yantatehta_norm = ps("uniE055.norm") { 
+ dap = point(0m,799m);
+ ldap = point(-212m,799m);
+ rdap = point(259m,799m);
+ uap = point(0m,1004m);
+};
+g_yantatehta = ps("uniE055") { 
+ uap = point(444m,1004m);
+ dap = point(444m,-102m);
+ ldap = point(232m,799m);
+ rdap = point(703m,799m);
+};
+g_wtehta_narrow = ps("uniE052.narrow") { 
+ dap = point(0m,799m);
+ ldap = point(-154m,799m);
+ rdap = point(154m,799m);
+ uap = point(0m,1024m);
+};
+g_wtehta_norm = ps("uniE052.norm") { 
+ dap = point(0m,799m);
+ ldap = point(-266m,799m);
+ rdap = point(266m,799m);
+ uap = point(0m,1024m);
+};
+g_wtehta_wide = ps("uniE052.wide") { 
+ dap = point(0m,799m);
+ ldap = point(-389m,799m);
+ rdap = point(389m,799m);
+ uap = point(0m,1024m);
+};
+g_wtehta = ps("uniE052") { 
+ uap = point(444m,1024m);
+ dap = point(444m,-102m);
+ ldap = point(178m,799m);
+ rdap = point(711m,799m);
 };
 g_roomen = ps("uniE020") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_roomen_conl = ps("uniE020.conl") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_arda = ps("uniE021") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_arda_conl = ps("uniE021.conl") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_roomen_open = ps("uniE020.open") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_roomen_conl_open = ps("uniE020.conl_open") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_arda_open = ps("uniE021.open") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_arda_conl_open = ps("uniE021.conl_open") { 
  uap = point(450m,799m);
- dap = point(358m,-123m);
+ dap = point(358m,-143m);
 };
 g_lambe = ps("uniE022") { 
- cap = point(796m,439m);
- dap = point(644m,-125m);
+ cap = point(648m,139m);
+ dap = point(619m,-438m);
  uap = point(648m,799m);
 };
 g_lambe_conr = ps("uniE022.conr") { 
- cap = point(831m,443m);
- dap = point(644m,-125m);
+ cap = point(648m,140m);
+ dap = point(619m,-438m);
  uap = point(648m,799m);
 };
 g_lambe_conl = ps("uniE022.conl") { 
- cap = point(797m,431m);
- dap = point(644m,-128m);
+ cap = point(648m,134m);
+ dap = point(619m,-438m);
  uap = point(648m,799m);
 };
 g_lambe_conb = ps("uniE022.conb") { 
- cap = point(831m,440m);
- dap = point(644m,-125m);
+ cap = point(648m,139m);
+ dap = point(619m,-438m);
  uap = point(648m,799m);
 };
 g_lambe_cap = ps("uniE022.cap") { 
- cap = point(919m,487m);
- dap = point(740m,-136m);
+ cap = point(744m,146m);
+ dap = point(710m,-468m);
  uap = point(744m,868m);
 };
 g_alda = ps("uniE023") { 
- dap = point(648m,492m);
+ cap = point(648m,179m);
+ dap = point(527m,-111m);
  uap = point(648m,799m);
 };
 g_alda_conr = ps("uniE023.conr") { 
- dap = point(648m,492m);
+ cap = point(648m,182m);
+ dap = point(527m,-109m);
  uap = point(648m,799m);
 };
 g_alda_conl = ps("uniE023.conl") { 
- dap = point(648m,492m);
+ cap = point(648m,173m);
+ dap = point(527m,-116m);
  uap = point(648m,799m);
 };
 g_alda_conb = ps("uniE023.conb") { 
- dap = point(648m,492m);
+ cap = point(648m,180m);
+ dap = point(527m,-111m);
  uap = point(648m,799m);
 };
 g_alda_cap = ps("uniE023.cap") { 
- dap = point(744m,561m);
+ cap = point(744m,204m);
+ dap = point(660m,-103m);
  uap = point(744m,868m);
-};
-g_silme = ps("uniE024") { 
- uap = point(703m,696m);
- dap = point(454m,-102m);
-};
-g_silme_flat = ps("uniE024.flat") { 
- uap = point(486m,840m);
- dap = point(454m,-102m);
-};
-g_silme_open = ps("uniE024.open") { 
- uap = point(507m,696m);
- dap = point(454m,-102m);
-};
-g_silmenuq = ps("uniE025") { 
- dap = point(270m,0m);
- uap = point(519m,799m);
-};
-g_silmenuq_flat = ps("uniE025.flat") { 
- dap = point(486m,-143m);
- uap = point(519m,799m);
-};
-g_silmenuq_open = ps("uniE025.open") { 
- dap = point(465m,0m);
- uap = point(519m,799m);
 };
 g_aare = ps("uniE026") { 
  uap = point(707m,696m);
@@ -981,7 +1496,7 @@ g_aare_open = ps("uniE026.open") {
  dap = point(434m,-470m);
 };
 g_aarenuq = ps("uniE027") { 
- dap = point(279m,-387m);
+ dap = point(279m,-388m);
  uap = point(498m,779m);
 };
 g_aarenuq_flat = ps("uniE027.flat") { 
@@ -989,32 +1504,28 @@ g_aarenuq_flat = ps("uniE027.flat") {
  uap = point(498m,779m);
 };
 g_aarenuq_open = ps("uniE027.open") { 
- dap = point(483m,-387m);
+ dap = point(483m,-388m);
  uap = point(498m,779m);
 };
 g_hyarmen = ps("uniE028") { 
- uap = point(788m,799m);
- dap = point(277m,-102m);
+ uap = point(469m,901m);
+ dap = point(434m,-61m);
 };
 g_hyarmen_cap = ps("uniE028.cap") { 
- uap = point(1120m,868m);
- dap = point(251m,-102m);
+ uap = point(784m,971m);
+ dap = point(434m,-61m);
 };
 g_yanta = ps("uniE02A") { 
  uap = point(385m,799m);
- dap = point(385m,-102m);
+ dap = point(434m,-61m);
 };
 g_yanta_cap = ps("uniE02A.cap") { 
  uap = point(532m,868m);
- dap = point(431m,-102m);
-};
-g_hwestasin = ps("uniE029") { 
- uap = point(373m,799m);
- dap = point(430m,-102m);
+ dap = point(434m,-61m);
 };
 g_uure = ps("uniE02B") { 
  uap = point(468m,799m);
- dap = point(468m,-102m);
+ dap = point(431m,-102m);
 };
 g_atengwa = ps("uniE032") { 
  uap = point(468m,799m);
@@ -1034,9 +1545,59 @@ g_wtengwa = ps("uniE031") {
 };
 g_wtengwa_desc = ps("uniE031.desc") { 
  uap = point(457m,799m);
- dap = point(457m,-102m);
+ dap = point(457m,-412m);
 };
 g_whtengwa = ps("uniE039") { 
+ uap = point(423m,1400m);
+ dap = point(386m,-102m);
+};
+g_hwestasin = ps("uniE029") { 
+ uap = point(344m,799m);
+ dap = point(466m,-102m);
+};
+g_vaiya = ps("uniE03D") { 
+ uap = point(430m,799m);
+ dap = point(466m,-102m);
+};
+g_sindarinytengwa = ps("uniE03E") { 
+ uap = point(485m,799m);
+ dap = point(485m,-102m);
+};
+g_angwhtengwa = ps("uniE03C") { 
+ uap = point(725m,799m);
+ dap = point(403m,-102m);
+};
+g_shook = ps("uniE058") { 
+ uap = point(349m,251m);
+ dap = point(349m,-635m);
+};
+g_shook_high = ps("uniE058.high") { 
+ uap = point(324m,799m);
+ dap = point(324m,-72m);
+};
+g_conncarr = ps("uniE034") { 
+ uap = point(225m,799m);
+ dap = point(225m,-102m);
+};
+g_conncarr_conr = ps("uniE034.conr") { 
+ uap = point(225m,799m);
+ dap = point(225m,-102m);
+};
+g_longcarrtehta_norm = ps("uniE057.norm") { 
+ uap = point(0m,-102m);
+ luap = point(-205m,-102m);
+ dap = point(0m,-102m);
+};
+g_longcarrtehta = ps("uniE057") { 
+ uap = point(444m,799m);
+ dap = point(444m,-102m);
+ luap = point(240m,-102m);
+};
+g_longcarrtehta_lambe = ps("uniE057.lambe") { 
+ uap = point(0m,-102m);
+ luap = point(-205m,-102m);
+ dap = point(0m,-102m);
+ cap = point(0m,139m);
 };
 g_tenginterpdot = ps("tenginterpdot") { 
 };
@@ -1058,43 +1619,140 @@ g_tengtilde = ps("uniE068") {
 };
 g_tengdbltilde = ps("uniE069") { 
 };
-g_wtehta_narrow = ps("uniE052.narrow") { 
+g_silme = ps("uniE024") { 
+ uap = point(703m,696m);
+ dap = point(454m,-102m);
+};
+g_silme_flat = ps("uniE024.flat") { 
+ uap = point(532m,850m);
+ dap = point(454m,-102m);
+};
+g_silme_open = ps("uniE024.open") { 
+ uap = point(507m,696m);
+ dap = point(454m,-102m);
+};
+g_silme_lig = ps("uniE024.lig") { 
+ uap = point(730m,696m);
+ dap = point(469m,-102m);
+};
+g_silme_lig_flat = ps("uniE024.lig_flat") { 
+ uap = point(550m,850m);
+ dap = point(469m,-102m);
+};
+g_silme_lig_open = ps("uniE024.lig_open") { 
+ uap = point(525m,696m);
+ dap = point(469m,-102m);
+};
+g_silmenuq = ps("uniE025") { 
+ dap = point(270m,0m);
+ uap = point(519m,799m);
+};
+g_silmenuq_flat = ps("uniE025.flat") { 
+ dap = point(441m,-154m);
+ uap = point(519m,799m);
+};
+g_silmenuq_open = ps("uniE025.open") { 
+ dap = point(465m,0m);
+ uap = point(519m,799m);
+};
+g_utehta_norm = ps("uniE04C.norm") { 
+ uap = point(0m,1023m);
  dap = point(0m,799m);
- uap = point(0m,1024m);
+ ldap = point(-247m,799m);
+ rdap = point(205m,799m);
 };
-g_wtehta_norm = ps("uniE052.norm") { 
+g_utehta = ps("uniE04C") { 
+ uap = point(444m,1023m);
+ dap = point(444m,-102m);
+ ldap = point(198m,799m);
+ rdap = point(649m,799m);
+};
+g_utehta_double_norm = ps("uniE04C.double_norm") { 
+ uap = point(0m,1013m);
  dap = point(0m,799m);
- uap = point(0m,1024m);
+ ldap = point(-388m,799m);
+ rdap = point(43m,799m);
 };
-g_wtehta_wide = ps("uniE052.wide") { 
+g_downotehta_norm = ps("uniE04B.norm") { 
+ uap = point(0m,-102m);
+ cap = point(0m,-410m);
+ dap = point(0m,-614m);
+};
+g_downotehta = ps("uniE04B") { 
+ uap = point(444m,799m);
+ dap = point(444m,-614m);
+ cap = point(444m,-410m);
+};
+g_otehta_norm = ps("uniE04A.norm") { 
+ uap = point(0m,1311m);
  dap = point(0m,799m);
- uap = point(0m,1024m);
+ ldap = point(-123m,799m);
+ rdap = point(311m,799m);
 };
-g_wtehta = ps("uniE052") { 
- uap = point(439m,1167m);
- dap = point(439m,-143m);
+g_otehta = ps("uniE04A") { 
+ uap = point(444m,1311m);
+ dap = point(444m,-102m);
+ ldap = point(322m,799m);
+ rdap = point(756m,799m);
 };
-g_test1 = ps("test1") { 
- uap = point(439m,1167m);
- dap = point(439m,-143m);
+g_otehta_wide = ps("uniE04A.wide") { 
+ uap = point(0m,1311m);
+ dap = point(0m,799m);
+ ldap = point(-171m,799m);
+ rdap = point(329m,799m);
 };
-g_test2 = ps("test2") { 
- uap = point(439m,1167m);
- dap = point(439m,-143m);
+g_otehta_narrow = ps("uniE04A.narrow") { 
+ uap = point(0m,1311m);
+ dap = point(0m,799m);
+ ldap = point(-18m,799m);
+ rdap = point(255m,799m);
 };
-g_test3 = ps("test3") { 
- dap = point(0m,-287m);
- ldap = point(-236m,1024m);
- rdap = point(236m,1024m);
+g_otehta_double_norm = ps("uniE04A.double_norm") { 
+ uap = point(0m,1311m);
+ dap = point(0m,799m);
+ ldap = point(9m,799m);
+ rdap = point(452m,799m);
 };
-g_test4 = ps("test4") { 
- dap = point(0m,-287m);
- ldap = point(-236m,1024m);
- rdap = point(236m,1024m);
+g_otehta_double_wide = ps("uniE04A.double_wide") { 
+ uap = point(0m,1311m);
+ dap = point(0m,799m);
+ ldap = point(-31m,799m);
+ rdap = point(477m,799m);
 };
-g_test5 = ps("test5") { 
- dap = point(0m,-287m);
- ldap = point(-236m,1024m);
- rdap = point(236m,1024m);
+g_otehta_double_narrow = ps("uniE04A.double_narrow") { 
+ uap = point(0m,1311m);
+ dap = point(0m,799m);
+ ldap = point(94m,799m);
+ rdap = point(379m,799m);
+};
+g_downutehta_norm = ps("uniE04D.norm") { 
+ dap = point(0m,-614m);
+ uap = point(102m,-102m);
+};
+g_downutehta = ps("uniE04D") { 
+ uap = point(444m,799m);
+ dap = point(342m,-614m);
+};
+g_downutehta_narrow = ps("uniE04D.narrow") { 
+ dap = point(0m,-614m);
+ uap = point(-10m,-102m);
+};
+g_downutehta_wide = ps("uniE04D.wide") { 
+ dap = point(0m,-614m);
+ uap = point(-123m,-102m);
+};
+g_downutehta_long = ps("uniE04D.long") { 
+ dap = point(0m,-614m);
+ luap = point(61m,102m);
+ cap = point(184m,82m);
+ uap = point(-123m,-102m);
+};
+g_shooktehta_norm = ps("uniE059.norm") { 
+ uap = point(0m,-102m);
+ dap = point(0m,-410m);
+};
+g_shooktehta = ps("uniE059") { 
+ uap = point(444m,799m);
+ dap = point(444m,-410m);
 };
 endtable;

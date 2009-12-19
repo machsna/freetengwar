@@ -1,4 +1,0 @@
-Open("latinb.ttf");
-MergeFonts("tengwarb.ttf");
-SetFontNames("tengtelcb","Tengwar Telcontar Bold","Tengwar Telcontar","Bold");
-Generate("tengtelcb_nogr.ttf");

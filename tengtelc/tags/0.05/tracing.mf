@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Tengwar unicode typeface.
-%% Copyright (C) 2005 Johan Winge
+%% Copyright (C) 2005-2006 Johan Winge
 %% 
 %% Tengwar Telcontar is free software; you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -134,7 +134,10 @@ enddef;
 def endchr =
   if tracing:
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
-    if not isrefchar: message "pe: Autotrace(); AddExtrema(); Simplify(0,2);";
+    if isrefchar:
+%      message "pe: UnlinkReference(); RemoveOverlap();";
+    else:
+      message "pe: Autotrace(); AddExtrema(); Simplify(0,2);";
     fi
   fi
   ps[ps.n].width := w;
@@ -142,7 +145,7 @@ def endchr =
   apt(ps.n,lastap).forgd := false;
   for i=1 upto psc(ps.n).ap.n:
     if apt(ps.n,i).forgd:
-      if tracing and forgd: show apt(ps.n,i).name; message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
+      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(xpart apt(ps.n,i).pt/un) & "m,"
          & decimal round(ypart apt(ps.n,i).pt/un) & "m);"; fi
       if not tracing: makelabel(apt(ps.n,i).name,apt(ps.n,i).pt); fi
     else:
@@ -183,6 +186,12 @@ enddef;
 
 def addalias(expr psn, gdn) =
   scantokens ("string " & gdn); scantokens gdn=psn; setgdalias(psn,gdn);
+enddef;
+
+def addaliasvars(expr balias)(text vars) =
+  for i=vars:
+    addalias(scantokens balias & "." & i , balias & "_" & i);
+  endfor
 enddef;
 
 vardef ps_to_gd(expr s) =
