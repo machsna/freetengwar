@@ -145,7 +145,7 @@ endtable;
 table(sub)
   pass(1)
     if (capteng==init)
-      (c_tengwide,c_tenglambewide,c_tengnarrow) > (c_captengwide,c_captenglambewide,c_captengnarrow) / g_space _ ;
+//      (c_tengwide,c_tenglambewide,c_tengnarrow) > (c_captengwide,c_captenglambewide,c_captengnarrow) / g_space _ ;
     elseif (capteng==all)
       (c_tengwide,c_tenglambewide,c_tengnarrow) > (c_captengwide,c_captenglambewide,c_captengnarrow) ;
     endif;
@@ -183,7 +183,7 @@ table(sub)
       g_silmenuq > g_silmenuq_open / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
       g_aarenuq > g_aarenuq_open / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta;
     endif;
-    g_atengwa > g_atengwa_desc / _ g_space ;
+//    g_atengwa > g_atengwa_desc / _ g_space ;
   endpass;
   pass(3)
     (g_roomen,g_roomen_conl,g_arda,g_arda_conl) > (g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open) / _ [c_uptehta[c_uptehta[c_uptehta]?]?]? c_downtehta ;

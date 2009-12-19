@@ -163,6 +163,13 @@ def draw_dot(suffix $)(expr fact) =
   fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;
 enddef;
 
+def draw_diamond(suffix $)(expr fact) =
+  x$a=x$c=x$; y$b=y$d=y$;
+  y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.58*fact*tecil_w;
+  k:=0.25;
+  fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
+enddef;
+
 def sign(expr x) = x/abs(x) enddef;
 
 def rserif(suffix $)(expr w, h, ed, md, sd, angles) =

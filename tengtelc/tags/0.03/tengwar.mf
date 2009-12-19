@@ -777,7 +777,7 @@ endchr;
 
 beginchr("tenginterpdot",0);
   z1=(0,0);
-  draw_dot(1)(1.0);
+  draw_diamond(1)(1.0);
 endchr;
 
 interpunctwidth=0.6tex;
@@ -831,3 +831,56 @@ beginrefchr(tenginterpfive,0.8tex);
   attach("tenginterpdot","dot5","origo");
 endchr;
 if tracing: message "pe: UnlinkReference();"; message""; fi
+
+beginchr(tengexlam,0.7tex);
+  a1=a2=40; use(a1);
+  numeric k; k=0.1pt;
+  x1-k=x2+k=1/2w;
+  top y1=asc; y2=1/2tex-k;
+  draw z1{-dir a1}..{-dir a2}z2;
+  penlabels(1,2);
+endchr;
+
+beginchr(tenginterrog,0.51tex);
+  padding(1.0pt,1.0pt);
+  z1=(lpad,1/2[tex,tasc]);
+  z2=(x1,-1/2tdesc);
+  ap1=ornang(rounded,curved) shifted (0,5);
+  p1=ornpath(rounded,curved)(1,2);
+  draw_stroke(p1,ap1);
+  a3=a4=conpenangle3; a5=45;
+  z3=find_telcoap(0.25[y1,y2], a3, 180, p1, ap1);
+  z5=find_telcoap(0.7[y1,y2], a5, 180, p1, ap1);
+  z4=find_telcoap(0.54[y3,y5], a4, 180, p1, ap1);
+  a6=a7=a9=a10=45;
+  x9=0.7[x4,x10]; y9=y4+0.5(x9-x4);
+  z10=(w-rpad,0.2[y4,y9]);
+  ap3=ang(a4..a9..a10..a5);
+  p3=z4{curl0.3}..z9{right}..z10{down}..tension 1.2..z5;
+  draw_stroke(p3,ap3);
+  x6=0.7[x3,x7]; y6=y3+0.5(x6-x3);
+  z7=(w-rpad+0.05pt,0.2[y3,y6]);
+  t=directiontime dir 25 of p3;
+  z8=point t of p3; a8=penangle t of ap3;
+  ap2=ang(a3..a6..a7..a8);
+  p2=z3{curl0.3}..z6{right}..z7{down}..z8{-direction t of p3};
+  draw_stroke(p2,ap2);
+  penlabels(range 1 thru 11);
+endchr;
+
+beginchr(tengtilde,1tex);
+  padding(0.5interpunctwidth,0.5interpunctwidth);
+  a1=a2=35; use(a1);
+  x1=lpad; x2=w-rpad;
+  numeric k; k=0.05pt;
+  y1+k=y2-k=1/2tex;
+  draw z1{dir a1}..{dir a2}z2;
+  penlabels(1,2);
+endchr;
+
+beginrefchr(tengdbltilde,psc(tengtilde).width);
+  setap("dot1",(0,0.2tex));
+  setap("dot2",(0,-0.2tex));
+  attach(tengtilde,"dot1","origo");
+  attach(tengtilde,"dot2","origo");
+endchr;

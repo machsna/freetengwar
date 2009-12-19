@@ -981,10 +981,6 @@ beginrefchr(shortcarr_cap,psc("captelco_leftshort").width);
   setap("dap",(0.5[lpad,w-rpad],-1.0pt));
 endchr;
 
-beginchr(tengparen,0);
-  draw_caplefttelco(0.7[tex,tasc],-1/2tdesc,-1/2tdesc+1.0pt,0.8pt);
-endchr;
-
 def draw_openanna(expr style) =
   padding(0.9pt,if style=capital: psc("captelco_rightshort1").width-xpart(apt("captelco_rightshort1","luuvap").pt) else: 1pt fi);
   numeric hgt;
@@ -1028,6 +1024,10 @@ beginchr(openanna_conl,0.9ten);
 endchr;
 beginchr(openanna_cap,0.9cten);
   draw_openanna(capital);
+endchr;
+
+beginchr(tengparen,0);
+  draw_caplefttelco(0.7[tex,tasc],-1/2tdesc,-1/2tdesc+1.0pt,0.8pt);
 endchr;
 
 message"";
