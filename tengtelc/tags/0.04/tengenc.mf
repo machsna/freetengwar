@@ -86,12 +86,17 @@ addalias(tengcb & "2E","shortcarr");
 addalias(tengcb & "2E.conl","shortcarr_conl");
 addalias(tengcb & "2E.cap","shortcarr_cap");
 
+addalias(tengcb & "31","wtengwa");
+addalias(wtengwa & ".desc","wtengwa_desc");
 addalias(tengcb & "32","atengwa");
 addalias(atengwa & ".desc","atengwa_desc");
 addalias(atengwa & ".cap","atengwa_cap");
+addalias(tengcb & "34","conncarr");
+addalias(conncarr & ".conr","conncarr_conr");
 addalias(tengcb & "36","openanna");
 addalias(openanna & ".conl","openanna_conl");
 addalias(openanna & ".cap","openanna_cap");
+addalias(tengcb & "39","whtengwa");
 addalias(tengcb & "3A","mhtengwa");
 addalias(mhtengwa & ".cap","mhtengwa_cap");
 addalias(tengcb & "3B","beleriandicmh");
@@ -129,6 +134,10 @@ addalias(tengcb & "51.lambe","underbar_lambe");
 addalias(tengcb & "51.silme","underbar_silme");
 addalias(tengcb & "51.norm","underbar_norm");
 addalias(tengcb & "51.wide","underbar_wide");
+addalias(tengcb & "52","wtehta");
+addalias(tengcb & "52.norm","wtehta_norm");
+addalias(tengcb & "52.wide","wtehta_wide");
+addalias(tengcb & "52.narrow","wtehta_narrow");
 
 addalias(tengcb & "57","longcarrtehta");
 addalias(tengcb & "57.norm","longcarrtehta_norm");

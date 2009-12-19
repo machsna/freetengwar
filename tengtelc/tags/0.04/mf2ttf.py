@@ -28,7 +28,7 @@
 import sys
 import re
 import os
-fn=sys.argv[1];
+fn=sys.argv[1].strip();
 
 print "Running MetaFont."
 os.system("mf \"\\mode:=pixpt; mag:=200; input %s.mf\"" % fn)

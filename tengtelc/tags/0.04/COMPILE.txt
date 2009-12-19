@@ -1,4 +1,4 @@
-Tengwar Telcontar - a Tengwar unicode typeface.
+Tengwar Telcontar - a unicode Tengwar typeface.
 Copyright (C) 2005 Johan Winge
 
 Tengwar Telcontar is free software; you can redistribute it and/or
@@ -26,9 +26,25 @@ along with Tengwar Telcontar; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 
-The compilation of Tengwar Telcontar from source files to a working Graphite ("smart font" enabled) TrueType typeface consists of two steps: I.) the generating of bare TrueType fonts from the METAFONT sources, and II.) adding Graphite tables to the resulting fonts. You will only have to perform the first step if you want to add or modify the glyphs in the typeface. If you only want to modify the smart font behaviour of the typeface, i.e. rules for glyph substitution and the like, you can skip the first step, and add the modified Graphite tables to the bare precompiled TrueType fonts that are also included in the source distribution.
+*** GENERIC COMPILING INSTRUCTIONS ***
 
-Note: If you haven't done any changes to the METAFONT nor to the Graphite sources, there is no reason (except for the sheer fun of it) for you to recompile Tengwar Telcontar. Since a TrueType font is platform independent (or should be...), you can just as well use the binary distribution.
+The compilation of Tengwar Telcontar from source files to a working
+Graphite ("smart font" enabled) TrueType typeface consists of two
+steps: I.) the generating of bare TrueType fonts from the METAFONT
+sources, and II.) adding Graphite tables to the resulting fonts.
+You will only have to perform the first step if you want to add or
+modify the glyphs in the typeface. If you only want to modify the
+smart font behaviour of the typeface, i.e. rules for glyph
+substitution and the like, you can skip the first step, and add the
+modified Graphite tables to the bare precompiled TrueType fonts
+that are also included in the source distribution.
+
+Note: If you haven't done any changes to the METAFONT nor to the
+Graphite sources, there is no reason (except for the sheer fun of
+it) for you to recompile Tengwar Telcontar. Since a TrueType font
+is platform independent (or should be...), you can just as well
+use the binary distribution. In fact, I encourage you to do that
+instead.
 
 I.) To compile the Tengwar Telcontar source to TrueType font files,
    you will need the following software:
@@ -52,42 +68,91 @@ I.) To compile the Tengwar Telcontar source to TrueType font files,
 
 II.) To add Graphite tables to the resulting fonts, you will need:
 
- 0.) Graphite Compiler. Note: Only available for MS Windows!
+ 0.) Graphite Compiler. Windows version available from:
     http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&cat_id=RenderingGraphite
 
-Here, as a reference, is how I set up a minimal system to compile Tengwar Telcontar, starting from a normal Windows XP installation:
+    Note 1: The file stddef.gdh that comes with GrCompiler might not
+    be found by GrCompiler, and I have found that the easiest way
+    to fix this is to copy the file stddef.gdh to the working
+    directory of TengTelc. Otherwise you will get very cryptic
+    errors when trying to add Graphite tables to the fonts.
 
-0.) From http://www.miktex.org/setup.html I downloaded and installed the "Small MikTeX" package. No problems, except that it seems that the path to the MikTeX binaries is sometimes not added to the PATH variable, which means that METAFONT (mf) will not be found. To remedy this, open the Control Panel, System, Advanced, Environment Variables, and then edit Path, by appending something like ";c:\texmf\miktex\bin". (The exact appearance of the path is of course dependent on where you installed MikTeX.)
+    Note 2: (Linux users only.) The sources for Graphite Compiler
+    is available for download, but it may not be that easy to
+    actually compile it. Instead, the Windows version is possible
+    to run under Linux with the help of Wine: http://www.winehq.com/
+    Just install Wine, and unzip Graphite Compiler into Wine's
+    virtual file system. Then you can run GrCompiler with a 
+    command similar to
 
-1.) Next I went to http://www.cygwin.com/ and followed the link "Install or update now!", and a small installation program is started. The choises weren't too hard. In Select Packages, apart from the default, the only thing strictly needed is Python, found in the cathegory Interpreters (click on where it says "skip" to change what version is installed), and xorg-x11-base, found in X11. (More advanced users probably also want gcc etc., but this is a minimalistic guide. You can allways add packages later if you want.)
+        wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe
 
-2.) FontForge next: At http://fontforge.sourceforge.net i followed the link to the File Release System, and there I downloaded the latest FontForge executable for Cygwin, and saved the file in my Cygwin tmp directory (e.g. C:\progra~1\cygwin\tmp). Then I started the Cygwin Bash Shell, and installed FontForge by writing:
-  
-  mkdir -p /usr/local/share/fontforge /usr/local/bin /usr/local/man/man1
-  cd /tmp
-  bunzip2 fontforge_cygwin*.bz2
-  tar xfv fontforge_cygwin*.tar
-  cd fontforge
-  mv *.ui /usr/local/share/fontforge
-  mv fontforge.1 /usr/local/man/man1
-  mv fontforge.exe /usr/local/bin
+    However, the compilation script demands that Graphite Compiler
+    is invoked by "GrCompiler". Solve this by adding an alias:
 
-FontForge is thus installed.
+        alias GrCompiler='wine c:\\Program\ Files\\GrCompiler\\GrCompiler.exe'
 
-3.) Then I installed Potrace. From http://potrace.sourceforge.net/ I Just downloaded the precompiled distribution for Windows, and unzipped the file potrace.exe in a place included in my PATH variable, e.g. c:\windows\.
+    (Or similar, depending on where you unziped GrCompiler.exe.)
 
-4.) Finally grcompiler...
 
-...
+*** EXAMPLE OF COMPILATION UNDER WINDOWS XP ***
 
-When the necessary programs are installed, to compile Tengwar Telcontar from scratch, run
+Here, as a reference, is how I set up a minimal system to compile
+Tengwar Telcontar, starting from a normal Windows XP installation:
 
-  ./compile
+0.) From http://www.miktex.org/setup.html I downloaded and
+installed the "Small MikTeX" package. No problems, except that it
+seems that the path to the MikTeX binaries is sometimes not added
+to the PATH variable, which means that METAFONT (mf) will not be
+found. To remedy this, open the Control Panel, System, Advanced,
+Environment Variables, and then edit Path, by appending something
+like ";c:\texmf\miktex\bin". (The exact appearance of the path is
+of course dependent on where you installed MikTeX.)
 
-This will overwrite the files latinr.gdh, latinb.gdh, tengwarr.gdh, tengwarb.gdh, tengtelc_nogr.ttf and tengtelcb_nogr.ttf, so these must not be write protected.
+1.) Next I went to http://www.cygwin.com/ and followed the link
+"Install or update now!", and a small installation program is
+started. The choises weren't too hard. In Select Packages, apart
+from the default, the only thing strictly needed is Python, found
+in the cathegory Interpreters (click on where it says "skip" to
+change what version is installed), and xorg-x11-base, found in X11.
+(More advanced users probably also want gcc etc., but this is a
+minimalistic guide. You can allways add packages later if you want.)
 
-If you only want to add modified Graphite programs to the included files tengtelc_nogr.ttf and tengtelcb_nogr.ttf, run
+2.) FontForge next: The writer of FontForge has posted very
+detailed instructions on how to install FontForge in Cygwin.
+Basically I did it the way he suggests:
+http://fontforge.sourceforge.net/ms-install.html
 
-  addgr.bat
+3.) Then I installed Potrace. From http://potrace.sourceforge.net/
+I Just downloaded the precompiled distribution for Windows, and
+unzipped the file potrace.exe in a reasonable place, e.g.
+c:\windows\program files\potrace\. This location must also be added
+to your path, in the same way as in step 0.).
 
-This way the graphite fonts tengtelc.ttf and tengtelcb.ttf are generated. Good luck!
+4.) Finally I downloaded the latest version of GrCompiler from
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=GraphiteCompilerDownload
+and unzipped all the files into c:\windows\program files\grcompiler\
+and then added this path too to the PATH variable.
+
+I then also moved the file stddef.gdh as per the note above.
+
+5.) When the necessary programs are installed, unzip the source
+package of Tengwar Telcontar to a folder inside Cygwin's virtual
+file system. Then open up a Cygwin shell, move to the location
+where the source files reside, and type the following command:
+
+  . ./compile
+
+This way Tengwar Telcontar is compiled from scratch. In the
+process, the files latinr.gdh, latinb.gdh, tengwarr.gdh,
+tengwarb.gdh, tengtelc_nogr.ttf and tengtelcb_nogr.ttf will be
+overwritten.
+
+(If you only want to add modified Graphite programs to the included
+files tengtelc_nogr.ttf and tengtelcb_nogr.ttf, it suffices to run
+addgr.bat.)
+
+This way the graphite fonts tengtelc.ttf and tengtelcb.ttf are
+generated.
+
+Good luck!

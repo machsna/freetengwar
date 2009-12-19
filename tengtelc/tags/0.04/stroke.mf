@@ -140,11 +140,14 @@ vardef change_angle(expr spt, sang, eang) =
   c+1/2tecil_w*dir eang
 enddef;
 
-
+string pausedummy;
+def pause =
+  if not tracing: message "Press Enter to continue."; pausedummy:=readstring; fi
+enddef;
 
 
 % While this file contains much generic routines, all of the following deals with the design of Tengwar Telcontar. 
-% This is also the code most in need of a complete rewrite, and consequently all use of this code in the rest of the sources.
+% This is also the code most in need of a complete rewrite, and consequently all use of this code in the rest of the sources...
 
 pair conpoint[]; numeric conpenangle[];
 conpenangle1=40; use(conpenangle1); top conpoint1=(0,ex);         % Connecting latin
@@ -160,13 +163,14 @@ conpenangle10=35; use(conpenangle10); top conpoint10=(whatever,ctex);% closingba
 
 
 def draw_dot(suffix $)(expr fact) =
-  fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;
+%  fill fullcircle xscaled (fact*tecil_w) yscaled (0.9*fact*tecil_w) rotated 35 shifted z$;
+ draw_diamond($)(fact);
 enddef;
 
 def draw_diamond(suffix $)(expr fact) =
   x$a=x$c=x$; y$b=y$d=y$;
   y$a-y$=y$-y$c=x$b-x$=x$-x$d=0.58*fact*tecil_w;
-  k:=0.25;
+  k:= -0.75fact+1 ; %0.25;
   fill (k[z$a,z$b]---k[z$b,z$a]..k[z$b,z$c]---k[z$c,z$b]..k[z$c,z$d]---k[z$d,z$c]..k[z$d,z$a]---k[z$a,z$d]..cycle); % rotated -5;
 enddef;
 
