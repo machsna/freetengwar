@@ -200,7 +200,7 @@ makeunderline(53,677,);           % Connecting carrier
 makeunderline(54,969,);           % Open Anna
 makeunderline(55,999,(840,telco)); % PreFeaQ
 makeunderline(56,922,);           % HW
-makeunderline(57,932,);           % HW1
+makeunderline(57,937,);           % HW1, Capital Osse
 makeunderline(58,983,);           % HW2
 makeunderline(59,1609,(1260,690)); % MH
 makeunderline(60,1092,(740,690)); % BelMH
@@ -209,13 +209,30 @@ makeunderline(62,1087,);           % Vaiya
 makeunderline(63,874,(420,650));   % Low S-hook
 makeunderline(64,809,);           % High S-hook
 
-makeunderline(65,1325,(325,510)); % Capital Tinco, Parma
+makeunderline(65,1325,(325,510)); % Capital Tinco, Parma, ExtThuule, ExtFormen
+makeunderline(66,1867,(325,510)); % Capital Ando, ExtAnto
+makeunderline(67,1350,);          % Capital Thuule, Oore, Formen, Vala
+makeunderline(68,1867,);          % Capital Anto, Nuumen, Ampa, Malta, Nwalme
+makeunderline(69,1807,(325,510)); % Capital Umbar, ExtAmpa
+makeunderline(70,1309,(1000,510)); % Capital Calma, ExtHarma, Quesse, ExtHwesta
+makeunderline(71,1851,(1550,510)); % Capital Anga, Ungwe, ExtAnca, ExtUnque
+makeunderline(72,1306,);           % Capital Harma, Anna, Hwesta, Vilya
+makeunderline(73,1848,);           % Capital Anca, Noldo, Unque
+makeunderline(74,635,(350,510));   % Capital long carrier
+makeunderline(75,635,);           % Capital Halla, short carrier
+makeunderline(76,1212,);           % Capital Open anna
+makeunderline(77,1280,);           % Capital Hyarmen, Yanta
+makeunderline(78,1547,(625,1000)); % Capital Lambe
+makeunderline(79,1547,(1075,700)); % Capital Alda
+makeunderline(80,1867,(1450,700)); % Capital MH
+makeunderline(81,1350,(925,700)); % Capital Beleriandic MH
 
 % Okay, there seems to be a weird bug in XeTeX.
-% This makes it disappear for some reason.
-for i=100 upto 140:
-  makeunderline(i,500,(250,500));
-endfor
+% For some reason, if the last glyph in the font is of
+% zero width, the spacing of it or preceding zero-width
+% glyphs can get really strange. So this fixes it:
+beginchr("xetexbugworkaround",1en);
+endchr;
 
 exit; end.
 
