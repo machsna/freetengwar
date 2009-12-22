@@ -303,9 +303,10 @@ table(glyph)
   Underliners+=(g_uline36,g_uline36,   g_uline36,   g_uline37,  g_uline37,       g_uline37,       g_uline37,        g_uline38, g_uline39,g_uline39,  g_uline39,  g_uline40,g_uline41,g_uline42,     g_uline43,  g_uline41,g_uline45,   g_uline46,g_uline47,  g_uline48, g_uline48,      g_uline49,g_uline49,  g_uline49,       g_uline49,       g_uline49   );
   Underlinees+=(g_mirroredosse,g_wtengwa,g_atengwa_desc,g_wtengwa_desc,g_atengwa,g_conncarr,g_conncarr_long,g_conncarr_conr,g_openanna,g_openanna_conl,g_prefeanoreanqu,g_whtengwa,g_whtengwa_varone,g_whtengwa_vartwo,g_mhtengwa,g_beleriandicmh,g_angwhtengwa,g_vaiya,  g_shook,  g_shook_high);
   Underliners+=(g_uline50,     g_uline50,g_uline50,     g_uline51,     g_uline52,g_uline53, g_uline53,      g_uline53,      g_uline54, g_uline54,      g_uline55,       g_uline56, g_uline57,        g_uline58,        g_uline59, g_uline60,      g_uline61,    g_uline62,g_uline63,g_uline64);
-  Underlinees+=(g_tinco_dec,g_parma_dec);
-  Underliners+=(g_uline65,  g_uline65);
-
+  Underlinees+=(g_tinco_dec,g_parma_dec,g_extthuule_dec,g_extformen_dec,g_ando_dec,g_extanto_dec,g_ampa_dec,g_malta_dec,g_thuule_dec,g_oore_dec,g_formen_dec,g_vala_dec,g_anto_dec,g_nuumen_dec,g_nwalme_dec,g_umbar_dec,g_extampa_dec,g_calma_dec,g_extharma_dec,g_quesse_dec,g_exthwesta_dec);
+  Underliners+=(g_uline65,  g_uline65,  g_uline65,      g_uline65,      g_uline66, g_uline66,    g_uline68, g_uline68,  g_uline67,   g_uline67, g_uline67,   g_uline67, g_uline68, g_uline68,   g_uline68,   g_uline69,  g_uline69,    g_uline70,  g_uline70,     g_uline70,   g_uline70);
+  Underlinees+=(g_anga_dec,g_ungwe_dec,g_extunque_dec,g_harma_dec,g_anna_dec,g_hwesta_dec,g_vilya_dec,g_anca_dec,g_noldo_dec,g_extanca_dec,g_unque_dec,g_longcarr_dec,g_halla_dec,g_shortcarr_dec,g_openanna_dec,g_hyarmen_dec,g_yanta_dec,g_lambe_dec,g_alda_dec,g_atengwa_dec,g_mhtengwa_dec,g_beleriandicmh_dec);
+  Underliners+=(g_uline71, g_uline71,  g_uline71,     g_uline72,  g_uline72, g_uline72,   g_uline72,  g_uline73, g_uline73,  g_uline71,    g_uline73,  g_uline74,     g_uline75,  g_uline75,      g_uline76,     g_uline77,    g_uline77,  g_uline78,  g_uline79, g_uline57,    g_uline80,     g_uline81);
 endtable;
 
 // We will deal with at most 4 tehtar. Change if the need arises.
