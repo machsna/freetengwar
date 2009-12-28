@@ -4,7 +4,7 @@ FullName: FreeMonoTengwar.fontface
 FamilyName: FreeMonoTengwar.fontface
 Weight: Medium
 Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 j. 'mach' wust.
-Version: 2009-12-26
+Version: 2009-12-28
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1261831895
+ModificationTime: 1262018555
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -462,7 +462,7 @@ Grid
  -155 497 -164 490 -182 490 c 2
 EndSplineSet
 AnchorClass2: "abovegk"  "'mark' Mark Positioning in Greek subtable" "below"  "'mark' Mark Positioning in Latin 1 subtable" "above"  "'mark' Mark Positioning in Latin 2 subtable" 
-BeginChars: 1114164 189
+BeginChars: 1114164 190
 
 StartChar: space
 Encoding: 32 32 0
@@ -771,7 +771,7 @@ Flags: HMW
 LayerCount: 2
 Fore
 Refer: 94 57443 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: uni205D
@@ -781,7 +781,7 @@ Flags: HMW
 LayerCount: 2
 Fore
 Refer: 93 57442 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: uni10fb
@@ -4412,7 +4412,7 @@ LayerCount: 2
 Fore
 Refer: 65 57410 N 1 0 0 1 0 0 2
 Refer: 136 -1 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaY
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaI tehtaW
@@ -5880,7 +5880,7 @@ Flags: HW
 LayerCount: 2
 Fore
 Refer: 91 57440 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: osseN
@@ -6001,7 +6001,7 @@ Flags: HW
 LayerCount: 2
 Fore
 Refer: 94 57443 N 0.707107 -0.707107 0.707107 0.707107 -64.1017 275.155 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: uni2E2D
@@ -6011,7 +6011,7 @@ Flags: HW
 LayerCount: 2
 Fore
 Refer: 95 57444 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: tehtaI_tehtaO
@@ -6159,6 +6159,14 @@ SplineSet
  395 11 387 18 387 28 c 0
 EndSplineSet
 Validated: 3073
+EndChar
+
+StartChar: afii301
+Encoding: 8205 8205 189
+Width: 0
+VWidth: 0
+Flags: HW
+LayerCount: 2
 EndChar
 EndChars
 EndSplineFont
