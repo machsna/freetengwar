@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+	<title>Free Tengwar Font Project: Embedding Tengwar on Websites</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="alternate" title="Free Tengwar Font Project at SourceForge.net" href="http://sourceforge.net/projects/freetengwar" />
+	<link rel="files" title="Browse Free Tengwar Font Project Files on SourceForge.net" href="http://sourceforge.net/projects/freetengwar/files/" />
+	<link rel="shortcut icon" type="image/png" href="html-files/favicon.png" />
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+	<meta name="DC.creator" content="j. ‘mach’ wust" />
+	<meta name="DC.source" content="J. R. R. Tolkien’s tengwar script" />
+	<meta name="DCTERMS.issued" content="2009-12-27" />
+	<meta name="DCTERMS.modified" content="2009-12-30" />
+	<meta name="DCTERMS.license" content="This work is licensed under the Creative Commons Attribution-Share Alike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA." />
+	<link rel="stylesheet" type="text/css" href="html-files/css.css" />
+	<style type="text/css">
+		@font-face {
+			font-family: "FreeMonoTengwar";
+			src: url("http://freetengwar.sourceforge.net/html-files/FreeMonoTengwar-embedding.eot");
+		}
+		@font-face {
+			font-family: "FreeMonoTengwar";
+			src: local("FreeMonoTengwar"),
+			local("FreeMonoTengwar.fontface"), url("http://freetengwar.sourceforge.net/html-files/FreeMonoTengwar-embedding.ttf") format("TrueType");
+		}
+	</style>
+</head><body>
+
+<div id="jump-to-nav">Jump to: <a href="#navigation">Navigation</a>.</div>
+
+<div id="text">
+	<h1>Embedding Tengwar on Websites</h1>
+
+	<div id="toc">
+		<p>On this page:</p>
+		<ul>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#the_problem_of_tengwar_on_websites">The Problem of Tengwar on Websites</a></li>
+			<li><a href="#how-to">How-to</a></li>
+			<li><a href="#samples">Samples</a></li>
+			<li><a href="#further_information">Further Information</a></li>
+		</ul>
+	</div>
+
+	<h2 id="introduction">Introduction</h2>
+
+	<p>This page tries to describe how to embed a font in your website. It focuses particularly on the Free Tengwar Font Project’s fonts, but the same procedure will work with other fonts as well. This page is intended for anybody who is writing their own website and wishes to display tengwar text. If you don’t know about the basics of CSS and HTML, this page will probably not be of much help to you.</p>
+
+	<h2 id="the_problem_of_tengwar_on_websites">The Problem of Tengwar on Websites</h2>
+
+	<p>Displaying tengwar on your website is a problem. Since there is no Unicode standard for the tengwar, you can’t just type something in tengwar as you could with other scripts such as the кириллица, the ᚱᚢᚾᛁᚲ script, or the أبجدية عربية. Instead, you have to use a workaround, either recurring to images or embedded fonts. However, both solution have their drawbacks.</p>
+
+	<p>Recurring to images (for instance <img width="110" height="19" alt="hello world tengwar sample text" src="html-files/hello_world.png"/>) means loosing flexibility. This concerns the author of the website as much as the website’s visitor. For the author, flexibility is lost because integrating tengwar images into other text will break the normal text flow. For the visitor, flexibility is lost because normal text operations such as copying or changing the font size are not possible with images.</p>
+
+	<p>Embedded fonts (for instance <span class="tengwar"> </span>) allow keeping all flexibility. The drawback is that this method will not work on all browsers. However, things look much better at the beginning of 2010 than they did only one year ago. Recent versions of major web browsers support embedded fonts. Windows Internet Explorer does so since version 4, Mozilla Firefox since version 3.5, Safari since version 3.1, and Opera since version 10. As time goes by, this method is likely to be adapted more and more.</p>
+
+	<p>I am propagating font embedding. I believe it is the method of the future. It is not yet widely used, but the conditions for using it more widely are given. I invite you to use font embedding as described here, but don’t depend on it entirely since it does not work on all browsers yet.</p>
+
+	<h2 id="how-to">How-to</h2>
+
+	<p>If you want to embed a tengwar font on your website, you basically need two things: A set of suitable fonts and proper <code>@font-face</code> selectors. Once you have a suitable font and proper <code>@font-face</code> selectors, you can use the embedded font on your website.</p>
+
+	<h3 id="suitable_fonts">Suitable Fonts</h3>
+
+	<p>You need two different fonts, a TrueType font (TTF) for Mozilla Firefox, Safari and Opera, and an <a href="http://en.wikipedia.org/wiki/Embedded_OpenType">Embedded Open Type</a> (EOT) font for Windows Internet Explorer.</p>
+
+	<p>The easiest way to get these two fonts is by downloading the Free Tengwar Font Project’s <a href="http://sourceforge.net/projects/freetengwar/files/TengwarFont/FreeMonoTengwar-embedding.2009-12-30.zip/download">FreeMonoTengwar-embedding.2009-12-30.zip</a> release. It includes both a TTF and an EOT font. You can just copy them to an appropriate folder on your internet host.</p>
+
+	<p>It is possible not to copy the fonts to your own internet host, but to use a font hosted on some other site in the internet, for instance on the <a href="http://openfontlibrary.org/">Open Font Library</a>. However, this method will not work on all browsers, so it is safer to copy the font to your own internet host.</p>
+
+	<p>Of course, you can choose other fonts at your convenience. TTF fonts are easy to find, and you can create EOT fonts from them. The conversion can be achieved either with Microsoft’s <a href="http://www.microsoft.com/typography/WEFT.mspx">Web Embedding Fonts Tool</a> or with taviso’s free <a href="http://code.google.com/p/ttf2eot/">ttf2eot</a>. However, there are two things to consider:</p>
+
+	<ol>
+		<li>The license of the font must allow embedding the font in your website and editing the font into an EOT version. While most tengwar TTF fonts are free, their licenses are often not clear as to whether they allow embedding, and some even forbid editing. The Free Tengwar Font Project’s fonts allow this (though editing is not even necessary since an EOT version is already provided). You can use them right away in your website without worrying about license etc. since all copyright notices are included within.</li>
+
+		<li>The font size should be as small as possible so pages that embed the fonts will load smoothly. This is why the Free Tengwar Font Project’s special @font-face release is more suited for embedding than its normal release.</li>
+	</ol>
+
+	<h3 id="proper_font-face_selectors">Proper <code>@font-face</code> Selectors</h3>
+
+	<p>Add the following to the CSS information of your website:</p>
+
+	<pre><code>@font-face {
+    font-family: "FreeMonoTengwar";
+    src: url("/path/to/font/FreeMonoTengwar.fontface.eot");
+}
+@font-face {
+    font-family: "FreeMonoTengwar";
+    src: local("FreeMonoTengwar"),
+    local("FreeMonoTengwar.fontface"),
+    url("/path/to/font/FreeMonoTengwar.fontface.ttf") format("TrueType");
+}</code></pre>
+
+	<p>The first <code>@font-face</code> selector is intended for Windows Internet Explorer. The other browsers will read it, but will go on reading the second as well and will validly only use the latter selector. Windows Internet Explorer will be unable to read the second selector because it includes the specification <code>format("TrueType")</code>. Note that the second selector checks for a local installation of the font before downloading the embedded font, something Windows Internet Explorer is unable to do.</p>
+
+	<p>If you are using <a href="http://jigsaw.w3.org/css-validator/">The W3C CSS Validation Service</a> on the above <code>@font-face</code> selectors, you will probably get errors. This is because the W3C CSS Validation Service defaults to CSS2.1, but the <code>@font-face</code> selector is part of CSS3 which is still under development. In order to pass the validation, you need to select the profile <i>CSS level 3</i>.</p>
+
+	<h3 id="using_the_embedded_font">Using the Embedded Font</h3>
+
+	<p>After you have suitable fonts and proper <code>@font-face</code> selectors, you can use the embedded font in a font definition, for instance like this:</p>
+
+	<code>&lt;span style="font-family: FreeMonoTengwar; text-rendering: optimizeLegibility;"> &lt;span></code>
+
+	<p>This code will yield the following text: <span style="font-family: FreeMonoTengwar; text-rendering: optimizeLegibility;"> </span>.</p>
+
+	<p>The CSS information <code>text-rendering: optimizeLegibility</code> is specific to the Windows and Linux versions of Gecko, the layout engine used by Firefox. It has no effect on other operating systems or on browsers that use other layout engines, such as Windows Internet Explorer or Safari. It makes sure that Firefox will display all ligatures, see <a href="https://developer.mozilla.org/en/CSS/text-rendering">text-rendering - MDC</a>. If you use the CSS property <code>text-rendering</code>, the CSS code of your page will not pass the W3C CSS validation since this property is not part of any CSS standard, but specific to Gecko.</p>
+
+	<p>Note that for some obscure reason, Windows Internet Explorer will force more spacing after any character that occupies less than one pixel of width, such as the tehtar that are zero-width. Johan Winge discovered that for another yet more obscure reason, this behaviour can be prevented by sprinkling the text with the character U+200c ZERO WIDTH NON-JOINER (the character U+200d ZERO WIDTH JOINER does the same job, but it is more likely to change font display in a tengwar font).</p>
+
+	<h2 id="samples">Samples</h2>
+
+	<p>
+		<span style="font-family: FreeMonoTengwar; text-rendering: optimizeLegibility">  ‍‍   ⸱‍  ‍ ⸱<br/>
+		    ‍....  ‍ <br/>
+		  ‍   ‍ ‍ ⁊ ‍ <br/>
+		...  ....  <br/>
+		         ‍<br/>
+		 ‍ ‍‍   ⁊  ‍ ‍<br/>
+		 ‍ ⁊  . . . .  ‍ ‍‍  <br/>
+		   ‍ . . . . . ‍ ‍  <br/>
+		      ⁊   <br/>
+		   ‍⸱‍   ‍ <br/>
+		     ‍⸱ ⁊  ‍<br/>
+		    ⸱   <br/>
+		⸱  ‍  .... ‍‍   </span>
+	</p>
+
+	<p>The above text should look like the following image:</p>
+
+	<div><img width="571" height="414" alt="image of embedding sample text" src="http://freetengwar.sourceforge.net/html-files/embeddingFreeMonoTengwar-DTS51.png"/></div>
+
+	<p>For a better display on Windows Internet Explorer, here follows the same text sprinkled with superfluous zero width non-joiners (one before each SPACE character – adding them after the spaces may prevent line wrapping). They should have no effect on other browsers:</p>
+
+	<p>
+		<span style="font-family: FreeMonoTengwar; text-rendering: optimizeLegibility">‌ ‌ ‍‍‌ ‌ ‌ ⸱‍‌ ‌ ‍‌ ⸱<br/>
+		‌ ‌ ‌ ‌ ‍....‌ ‌ ‍‌ <br/>
+		‌ ‌ ‍‌ ‌ ‌ ‍‌ ‍‌ ⁊‌ ‍‌ <br/>
+		...‌ ‌ ....‌ ‌ <br/>
+		‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‍<br/>
+		‌ ‍‌ ‍‍‌ ‌ ‌ ⁊‌ ‌ ‍‌ ‍<br/>
+		‌ ‍‌ ⁊‌ ‌ .‌ .‌ .‌ .‌ ‌ ‍‌ ‍‍‌ ‌ <br/>
+		‌ ‌ ‌ ‍‌ .‌ .‌ .‌ .‌ .‌ ‍‌ ‍‌ ‌ <br/>
+		‌ ‌ ‌ ‌ ‌ ‌ ⁊‌ ‌ ‌ <br/>
+		‌ ‌ ‌ ‍⸱‍‌ ‌ ‌ ‍‌ <br/>
+		‌ ‌ ‌ ‌ ‌ ‍⸱‌ ⁊‌ ‌ ‍<br/>
+		‌ ‌ ‌ ‌ ⸱‌ ‌ ‌ <br/>
+		⸱‌ ‌ ‍‌ ‌ ....‌ ‍‍‌ ‌ ‌ </span>
+	</p>
+
+	<h2 id="further_information">Further Information</h2>
+
+	<p>Most of what is said here was found on the following, much more detailed pages – check them out:</p>
+
+	<ul>
+		<li><a href="http://randsco.com/index.php/2009/07/04/cross_browser_font_embedding">Cross Browser Font Embedding with the CSS3 @font-face selector</a></li>
+		<li><a href="http://en.wikipedia.org/wiki/Web_typography">Web typography - Wikipedia, the free encyclopedia</a></li>
+		<li><a href="http://code.google.com/p/ttf2eot/wiki/Demo">Demo - ttf2eot - Simple ttf2eot Example</a> - Project Hosting on Google Code</li>
+	</ul>
+</div>
+
+<div id="navigation">
+
+	<div id="siteSections">
+		<p>Free Tengwar Font site:</p>
+
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="mapping.html">Character Mapping</a></li>
+			<li><a href="freemonotengwar.html">FreeMonoTengwar font</a></li>
+			<li><a href="tengtelc.html">Tengwar Telcontar font</a></li>
+			<li><a href="keylayouts.html">Keyboard Layouts</a></li>
+			<li>Embedding Tengwar on Websites</li>
+		</ul>
+	</div>
+
+	<div id="projectLinks">
+		<p>SourceForge.net links:</p>
+
+		<ul>
+			<li><a href="http://sourceforge.net/projects/freetengwar">Free Tengwar Font Project</a></li>
+			<li><a href="http://sourceforge.net/projects/freetengwar/files/">Browse Free Tengwar Font Project Files</a></li>
+		</ul>
+	</div>
+
+	<div id="sourceforgeLogo"><a href="http://sourceforge.net/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=279275&amp;type=13" width="120" height="30" alt="SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></div>
+</div>
+
+</body></html>
