@@ -6,10 +6,7 @@ The FreeMonoTengwar font is based on the FreeMono.sfd of the
 without alteration, but adds the tengwar script to the Personal Use
 Area U+E000 -- U+E07F according the ConScript Unicode Registry, see
 http://www.evertype.com/standards/csur/tengwar.html and taking into
-account the later additions by Johan Winge, see
-http://home.student.uu.se/jowi4905/fonts/tengtelc/tengtelc-discussion-007.pdf
-Additionally, there is one more character added to U+E03E that was
-only recently published.
+account later additions by Johan Winge.
 
 Furthermore, the script makes use of a number of ligatures. This is
 just an imperfect ad-hoc solution due to the difficulties of adding
@@ -17,7 +14,7 @@ advanced features to the Personal Use Area. These ligatures have been
 added to encoding points FontForge promised not to interfere with
 Unicode, so I hope this is alright.
 
-For more detailed informations, see the file FreeMonoTengwar.html
+For more detailed informations, see: http://freetengwar.sourceforge.net/
 
 Here follows without alterations the README file of the original
 2009-01-04 GNU FreeFont this font is based on:

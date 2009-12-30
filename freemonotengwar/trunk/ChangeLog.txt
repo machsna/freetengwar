@@ -1,7 +1,16 @@
+2009-12-30 j. 'mach' wust
+	* FreeMonoTengwar.sfd:
+
+	Added ligatures aha_tinco, hwesta_tinco, silme_aha.
+
+	Removed Cyrillic, Armenian, Hebrew, Georgian, Box Drawing, Braille characters.
+
+	Resized some punctuation so they fit better in with the tengwar. This means that some original GNUFreeFont FreeMono characters have been changed. This concerns the characters U+10fb: GEORGIAN PARAGRAPH SEPARATOR, U+2058: FOUR DOT PUNCTUATION, U+205d: TRICOLON, U+25cc: DOTTED CIRCLE, U+2e2d: FIVE DOT MARK, U+2e2c: SQUARED FOUR DOT PUNCTUATION, U+2e31: WORD SEPARATOR MIDDLE DOT.
+
 2009-12-12 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
 
-	Several characters added.
+	Several characters added. [Tengwar punctuation and ZWJ_longCarrier ligature.]
 
 2009-10-03 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
