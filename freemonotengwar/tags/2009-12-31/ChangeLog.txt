@@ -1,8 +1,3 @@
-2009-12-31 j. 'mach' wust
-	* FreeMonoTengwar.sfd:
-
-	Fixed U+200c ZERO WIDTH NON-JOINER. Now it has no width.
-
 2009-12-30 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
 
@@ -11,12 +6,6 @@
 	Removed Cyrillic, Armenian, Hebrew, Georgian, Box Drawing, Braille characters.
 
 	Resized some punctuation so they fit better in with the tengwar. This means that some original GNUFreeFont FreeMono characters have been changed. This concerns the characters U+10fb: GEORGIAN PARAGRAPH SEPARATOR, U+2058: FOUR DOT PUNCTUATION, U+205d: TRICOLON, U+25cc: DOTTED CIRCLE, U+2e2d: FIVE DOT MARK, U+2e2c: SQUARED FOUR DOT PUNCTUATION, U+2e31: WORD SEPARATOR MIDDLE DOT.
-
-	[Also set PANOSE property "proportion" to the value "any".]
-
-	* FreeMonoTengwar-embedding.sfd:
-
-	Created from FreeMonoTengwar.sfd by removing all characters except tengwar and punctuation required for tengwar, and by removing non-English TTF names.
 
 2009-12-12 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
