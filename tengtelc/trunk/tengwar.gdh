@@ -230,7 +230,7 @@ table(glyph)
 
   WideTengwar=(Ando,Umbar,Anga,Ungwe,Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,Mhtengwa);
   StemUpRightTengwar=(Harma,Hwesta,Anca,Unque,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silme_flat,g_silme_lig_flat,g_aare_flat,HwestaSin);
-  StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa,g_tinco_lig,LargeInterp);
+  StemUpLeftTengwar=(Thuule,Formen,Anto,Ampa,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,g_silme_open,g_silme_lig_open,g_aare_open,Hyarmen,AngWhtengwa,g_tinco_lig,LargeInterp,LongCarr,Halla,ShortCarr);
   StemDownRightTengwar=(Calma,Quesse,Anga,Ungwe,ExtHarma,ExtHwesta,ExtAnca,ExtUnque,g_silmenuq,g_aarenuq);
   StemDownLeftTengwar=(Tinco,Parma,Ando,Umbar,ExtThuule,ExtFormen,ExtAnto,ExtAmpa,Roomen,Arda,AngWhtengwa);
   NarrowTengwar=(LongCarr,Halla,ShortCarr,ConnCarr,Atengwa,MirroredOsse);
@@ -496,39 +496,42 @@ table(pos)
   endpass;
 
   pass(3)
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Calma,Anga,Harma,Anca,Noldo,Anna,Uure) {kern.x = +105m} / _ ^ AnyTehtar ZWJ _;
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya) {kern.x = +10m} / _ ^ AnyTehtar ZWJ _;
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Roomen,Arda) {kern.x = -50m} / _ AnyTehtar ZWJ ^ _;
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Lambe) {kern.x = -90m} / _ AnyTehtar ZWJ ^ _;
-    (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) (Silme) {kern.x = +115m} / _ AnyTehtar ZWJ ^ _;
+    (Calma,Anga,Harma,Anca,Noldo,Anna,Uure) {kern.x = +105m} / (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) AnyTehtar ZWJ _;
+    (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya) {kern.x = +10m} / (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) AnyTehtar ZWJ _;
+    (Roomen,Arda) {kern.x = -50m} / (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) AnyTehtar ZWJ _;
+    (Lambe) {kern.x = -90m} / (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) AnyTehtar ZWJ _;
+    (Silme) {kern.x = +115m} / (g_silme_lig,g_silme_lig_flat,g_silme_lig_open) AnyTehtar ZWJ _;
 
-    (Roomen,Arda) (Hyarmen,Yanta) {kern.x = -150m} / _ AnyTehtar ^ _;
-    Hyarmen Roomen {kern.x = -110m} / _ AnyTehtar ^ _;
-    Yanta Roomen {kern.x = -160m} / _ AnyTehtar ^ _;
-    g_conncarr (SilmeNuq,AareNuq,HwestaSin,Yanta,Uure,Atengwa,Vaiya) {kern.x = -135m} / _ AnyTehtar ^ _;
-    (Tinco,Ando,Thuule,Anto,Nuumen,Oore,ExtThuule,ExtAnto,Roomen,Arda,Silme,Uure,AngWhtengwa) Aare {kern.x = -80m} / _ AnyTehtar ^ _;
+    (Hyarmen,Yanta) {kern.x = -150m} / (Roomen,Arda) AnyTehtar _;
+    Roomen {kern.x = -110m} / Hyarmen AnyTehtar _;
+    Roomen {kern.x = -160m} / Yanta AnyTehtar _;
+    (SilmeNuq,AareNuq,HwestaSin,Yanta,Uure,Atengwa,Vaiya) {kern.x = -135m} / g_conncarr AnyTehtar _;
+    Aare {kern.x = -80m} / (Tinco,Ando,Thuule,Anto,Nuumen,Oore,ExtThuule,ExtAnto,Roomen,Arda,Silme,Uure,AngWhtengwa) AnyTehtar _;
 
-    (Roomen,Arda) g_utehta_norm {shift.x = -125m} / _ AnyDownTehtar ^ _;
-    (Roomen,Arda) g_otehta_norm {shift.x = -120m} / _ AnyDownTehtar ^ _;
-    (Tinco,Thuule,Oore,ExtThuule,BeleriandicMh) g_otehta_wide {shift.x = -190m} / _ AnyDownTehtar ^ _;
-    (Parma,Formen,Vala,ExtFormen,Unque,ExtUnque,OpenAnna) g_otehta_wide {shift.x = -170m} / _ AnyDownTehtar ^ _;
-    (Anga,Anca,Noldo,ExtAnca) g_otehta_wide {shift.x = -150m} / _ AnyDownTehtar ^ _;
-    (ShortCarr,LongCarr,Atengwa) g_otehta_norm {shift.x = 120m} / _ AnyDownTehtar ^ _;
-    (Hwesta,ExtHwesta) g_otehta_narrow {shift.x = -125m} / _ ^ _;
-    (Hwesta,ExtHwesta) g_utehta_norm {shift.x = -130m} / _ ^ _;
-    (Hwesta,ExtHwesta) g_wtehta_narrow {shift.x = -60m} / _ ^ _;
-    g_wtehta_norm g_atehta_norm {shift.x = 60m} / _ ^ _;
+    g_utehta_norm {shift.x = -125m} / (Roomen,Arda) AnyDownTehtar _;
+    g_otehta_norm {shift.x = -120m} / (Roomen,Arda) AnyDownTehtar _;
+    g_otehta_wide {shift.x = -190m} / (Tinco,Thuule,Oore,ExtThuule,BeleriandicMh) AnyDownTehtar _;
+    g_otehta_wide {shift.x = -170m} / (Parma,Formen,Vala,ExtFormen,Unque,ExtUnque,OpenAnna) AnyDownTehtar _;
+    g_otehta_wide {shift.x = -150m} / (Anga,Anca,Noldo,ExtAnca) AnyDownTehtar _;
+    g_otehta_norm {shift.x = 120m} / (ShortCarr,LongCarr,Atengwa) AnyDownTehtar _;
+    g_otehta_narrow {shift.x = -125m} / (Hwesta,ExtHwesta) _;
+    g_utehta_norm {shift.x = -130m} / (Hwesta,ExtHwesta) _;
+    g_wtehta_narrow {shift.x = -60m} / (Hwesta,ExtHwesta) _;
+    g_atehta_norm {shift.x = 60m} / g_wtehta_norm _;
+    g_shooktehta_norm {shift.x = +85m} / Tinco _;
+    g_shooktehta_norm {shift.x = +320m} / Parma _;
 
-    g_downotehta_norm {shift.x = -400m} / g_silme_lig_harma ZWJ Harma ^ _;
-    g_longcarrtehta_norm {shift.x = 90m; shift.y = 350m} / g_downutehta_long ^ _;
+    g_downotehta_norm {shift.x = -400m} / g_silme_lig_harma ZWJ Harma _;
+    g_downotehta_norm {shift.x = +75m} / g_atengwa _;
+    g_longcarrtehta_norm {shift.x = 90m; shift.y = 350m} / g_downutehta_long _;
     g_downatehta_norm {shift.x = -150m} g_longcarrtehta_norm {shift.x = 450m; shift.y = 460m};
-    (Hyarmen,Yanta) g_downitehta_norm {shift.y = 150m};
-    (g_silme_open,g_aare_open) g_itehta_norm {shift.x = -100m};
+    g_downitehta_norm {shift.y = 150m} / (Hyarmen,Yanta) _;
+    g_itehta_norm {shift.x = -100m} / (g_silme_open,g_aare_open) _;
 
-    (g_startmodechange,g_quoteleft,g_quotedblleft) (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m};
-    (g_startmodechange,g_quoteleft,g_quotedblleft) (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m};
-    (g_startmodechange,g_quoteleft,g_quotedblleft) (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m};
-    (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) (g_endmodechange,g_quoteright,g_quotedblright) {kern.x = -150m} / _ AnyTehtar ^ _;
+    (Tinco,Parma,Quesse,Ando,Umbar,Ungwe,Hwesta,Unque,Nuumen,Malta,Nwalme,Oore,Vala,Vilya,ExtHwesta,ExtUnque,Roomen,Arda,Lambe,Alda,g_silme,g_aare,Yanta,Mhtengwa,BeleriandicMh) {kern.x = -100m} / (g_startmodechange,g_quoteleft,g_quotedblleft) _ ;
+    (Anga,Harma,SilmeNuq,AareNuq,HwestaSin,Uure,Wtengwa,Atengwa,PreFeaQu,Vaiya) {kern.x = -200m} / (g_startmodechange,g_quoteleft,g_quotedblleft) _ ;
+    (Calma,Anca,Noldo,Anna,ExtHarma,ExtAnca) {kern.x = -300m} / (g_startmodechange,g_quoteleft,g_quotedblleft) _ ;
+    (g_endmodechange,g_quoteright,g_quotedblright) {kern.x = -150m} / (Tinco,Ando,Thuule,Anto,ExtThuule,ExtAnto,Nuumen,Oore,Roomen,Arda,Silme,Uure,AngWhtengwa) AnyTehtar _ ;
 
   endpass;
 
