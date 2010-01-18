@@ -3,8 +3,8 @@ FontName: FreeMonoTengwar
 FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
-Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 j. 'mach' wust.
-Version: 2009-12-30
+Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009, 2010 j. 'mach' wust; 2010 Johan Winge.
+Version: 2010-01-18
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1262196899
+ModificationTime: 1263814686
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -54434,7 +54434,6 @@ Refer: 611 779 N 1 0 0 1 0 60 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE
 LCarets2: 1 0 
-Colour: 808080
 EndChar
 
 StartChar: tehtaAE
@@ -54476,7 +54475,6 @@ LayerCount: 2
 Fore
 Refer: 2119 791 N 1 0 0 1 -3 -84 2
 Validated: 32769
-Colour: ff00
 EndChar
 
 StartChar: tehtaIB
@@ -54991,7 +54989,6 @@ SplineSet
  387 25 461 107 461 208 c 0
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: hallaRoomen
@@ -55023,7 +55020,6 @@ SplineSet
  115 -193 63 -163 63 -78 c 0
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: carrierX
@@ -55061,7 +55057,6 @@ LayerCount: 2
 Fore
 Refer: 118 183 N 1 0 0 1 0 0 2
 Validated: 32769
-Colour: 808080
 EndChar
 
 StartChar: tengwarDoublepusta
@@ -55073,7 +55068,6 @@ Fore
 Refer: 118 183 N 1 0 0 1 0 -144 2
 Refer: 118 183 N 1 0 0 1 0 132 2
 Validated: 32769
-Colour: 808080
 EndChar
 
 StartChar: tengwarTriplepusta
@@ -55102,7 +55096,6 @@ SplineSet
  250 437 273 460 300 460 c 0
 EndSplineSet
 Validated: 3073
-Colour: 808080
 EndChar
 
 StartChar: tengwarQuadruplepusta
@@ -55116,7 +55109,6 @@ Refer: 118 183 N 1 0 0 1 0 -168 2
 Refer: 118 183 N 1 0 0 1 -152 -14 2
 Refer: 118 183 N 1 0 0 1 152 -14 2
 Validated: 32769
-Colour: 808080
 EndChar
 
 StartChar: tengwarQuintuplepusta
@@ -55131,7 +55123,6 @@ Refer: 118 183 N 1 0 0 1 0 -14 2
 Refer: 118 183 N 1 0 0 1 152 -14 2
 Refer: 118 183 N 1 0 0 1 -152 -14 2
 Validated: 32769
-Colour: 808080
 EndChar
 
 StartChar: tengwarExclamation
@@ -55782,7 +55773,6 @@ SplineSet
  -543 -44 -518 25 -425 25 c 0
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: tehtaS
@@ -55807,7 +55797,6 @@ SplineSet
  -98 0 l 2
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: maltaX
@@ -55899,7 +55888,6 @@ EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" vala tehtaX
 LCarets2: 1 0 
-Colour: ff00
 EndChar
 
 StartChar: alda_tehtaB
@@ -55983,7 +55971,6 @@ EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaO
 LCarets2: 1 0 
-Colour: 808080
 EndChar
 
 StartChar: tehtaUU
@@ -56025,7 +56012,6 @@ EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaU
 LCarets2: 1 0 
-Colour: 808080
 EndChar
 
 StartChar: quesseC
@@ -56095,7 +56081,6 @@ SplineSet
  456 603 l 1
 EndSplineSet
 Validated: 3073
-Colour: 808080
 EndChar
 
 StartChar: tehtaW_tehtaA
@@ -57595,7 +57580,6 @@ LayerCount: 2
 Fore
 Refer: 499 596 N 1 0 0 1 0 0 2
 Validated: 32769
-Colour: ff00
 EndChar
 
 StartChar: tehtaDotInside
@@ -57614,7 +57598,6 @@ SplineSet
  -340 241 -322 259 -300 259 c 0
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: tengwarQuoteleft
@@ -57642,7 +57625,6 @@ SplineSet
  249 604 256 595 256 577 c 2
 EndSplineSet
 Validated: 3073
-Colour: ff00
 EndChar
 
 StartChar: tengwarQuoteright
@@ -57655,7 +57637,6 @@ LayerCount: 2
 Fore
 Refer: 2376 57450 S 1 0 0 1 0 -530 2
 Validated: 32769
-Colour: ff00
 EndChar
 
 StartChar: tengwarExclamationB
@@ -57667,7 +57648,6 @@ Fore
 Refer: 118 183 N 1 0 0 1 0 118 2
 Refer: 62 94 N 1 0 0 1 0 0 2
 Validated: 32769
-Colour: ff00
 EndChar
 
 StartChar: uni2E2C
@@ -57772,7 +57752,6 @@ LayerCount: 2
 Fore
 Refer: 2239 57366 N 1 0 0 1 0 0 2
 Validated: 32769
-Colour: 808080
 EndChar
 
 StartChar: aha_tinco

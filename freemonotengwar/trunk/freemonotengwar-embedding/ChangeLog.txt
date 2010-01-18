@@ -1,3 +1,8 @@
+2010-01-18 j. 'mach' wust
+	* FreeMonoTengwar-embedding.ttf
+
+	Added Graphite support with Johan Winge's FreeMonoTengwar.gdl
+
 2009-12-31 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
 
