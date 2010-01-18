@@ -1,3 +1,8 @@
+2010-01-18 Johan Winge
+	* FreeMonoTengwar:
+
+	Graphite support added.
+
 2009-12-30 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
 

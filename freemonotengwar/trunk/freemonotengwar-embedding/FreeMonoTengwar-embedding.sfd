@@ -3,8 +3,8 @@ FontName: FreeMonoTengwar-embedding
 FullName: FreeMonoTengwar-embedding
 FamilyName: FreeMonoTengwar-embedding
 Weight: Medium
-Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 j. 'mach' wust.
-Version: 2009-12-30
+Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009, 2010 j. 'mach' wust; 2010 Johan Winge.
+Version: 2010-01-18
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1262245607
+ModificationTime: 1263824279
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
