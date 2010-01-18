@@ -1,23 +1,17 @@
-#!/usr/local/bin/fontforge
+#!/usr/bin/python
 
 import sys
 import os
 import re
-import fontforge
 
 if len(sys.argv) != 2:
-  print "This script extracts OpenType substitutions (GSUB) from a font and converts them into Graphite compiler format. Example:"
-  print "  fontforge -script " + sys.argv[0] + " myfont.otf"
-  print "This will generate myfont.fea and myfont.gdh."
+  print "This script converts the Substitutions in a OpenType Feature File into Graphite compiler format. Example:"
+  print "  python " + sys.argv[0] + " mysubs.fea"
+  print "This will generate a file mysubs.gdh, ready to be imported in your .gdl program."
   exit(1);
 
-fontfilename=sys.argv[1]
-feafilename=os.path.splitext(fontfilename)[0] + ".fea"
-gdhfilename=os.path.splitext(fontfilename)[0] + ".gdh"
-
-thefont=fontforge.open(fontfilename)
-# Note: Only the first substitution lookup is output!
-thefont.generateFeatureFile(feafilename,thefont.gsub_lookups[0])
+feafilename=sys.argv[1]
+gdhfilename=os.path.splitext(feafilename)[0] + ".gdh"
 
 feafile=open(feafilename,'rU')
 gdhfile=open(gdhfilename,'w')
