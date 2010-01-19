@@ -166,7 +166,7 @@ directory that contains the three following files:
 
 Then run the following command:
 
-	python makefonts.py
+	fontforge -script makefonts.py
 
 This will generate a bunch of files. The most important one is
 FreeMonoTengwar.ttf, a version of FreeMonoTengwar with Graphite
