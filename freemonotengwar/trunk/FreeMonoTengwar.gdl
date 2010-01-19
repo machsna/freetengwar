@@ -11,9 +11,6 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// To compile, run
-//   grcompiler FreeMonoTengwar.gdl FreeMonoTengwar.ttf
-
 #define ps postscript
 #define LG_USENG 0x0409
 
@@ -36,8 +33,6 @@ endtable;
 
 // Include the behaviour defined in GSUB:
 #include "FreeMonoTengwar.gdh"
-// To generate a new FreeMonoTengwar.gdh, run
-//   fontforge -script fea2gdh.py FreeMonoTengwar.sfd
 
 table(position)
   pass(1)
