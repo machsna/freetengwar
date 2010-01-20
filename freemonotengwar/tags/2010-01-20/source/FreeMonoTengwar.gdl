@@ -1,0 +1,49 @@
+// This is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation, either version 3 of
+// the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#define ps postscript
+#define LG_USENG 0x0409
+
+environment { MUnits = 1000; }
+
+table(glyph)
+  Tehta = (ps("tehtaA"), ps("tehtaAB"), ps("tehtaY"), ps("tehtaYB"), ps("tehtaI"), ps("tehtaIB"),
+           ps("tehtaE"), ps("tehtaEB"), ps("tehtaEE"),ps("tehtaEEB"),ps("tehtaO"), ps("tehtaOB"),
+           ps("tehtaO"), ps("tehtaOB"), ps("tehtaU"), ps("tehtaUB"), ps("tehtaOO"),ps("tehtaUU"),
+           ps("tehtaN"), ps("tehtaB"),  ps("tehtaW"), ps("tehtaBreve"), ps("tehtaGrave"), ps("tehtaYanta"),
+           ps("tehtaAE"),ps("tehtaThinnas"), ps("tehtaS"), ps("tehtaX"), ps("tehtaDotInside"),
+           ps("tehtaW_tehtaA"), ps("tehtaW_tehtaY"), ps("tehtaW_tehtaI"), ps("tehtaW_tehtaE"),
+           ps("tehtaW_tehtaEE"), ps("tehtaW_tehtaO"), ps("tehtaW_tehtaU"), ps("tehtaW.alt"),
+           ps("tehtaW_tehtaOO"), ps("tehtaW_tehtaUU"), ps("tehtaW_tehtaBreve"), ps("tehtaW_tehtaGrave"),
+           ps("tehtaW_tehtaYanta"), ps("tehtaW_tehtaAE"), ps("tehtaDoubleGrave"), ps("tehtaW_tehtaDoubleGrave"),
+           ps("tehtaW_tehtaW"), ps("tehtaThinnas_tehtaIB"), ps("tehtaI_tehtaO"), ps("tehtaI_tehtaU"),
+           ps("tehtaW_tehtaI_tehtaO"), ps("tehtaW_tehtaI_tehtaU"),
+           ps("tengwardigitMark") );
+endtable;
+
+// Include the behaviour defined in GSUB:
+#include "FreeMonoTengwar.gdh"
+
+table(position)
+  pass(1)
+    // This is a workaround for what seems to be a bug in XeTeX:
+    (ps("hwesta_tinco"),ps("silme_aha")) { advance.x = 600m; };
+  endpass;
+  pass(2)
+    // This isn't really necessary, but it is probably good form:
+    ANY Tehta { attach{ to=@1; }; insert=true; } / _ ^ _ ;
+  endpass;
+endtable;
+
+endenvironment;
+
