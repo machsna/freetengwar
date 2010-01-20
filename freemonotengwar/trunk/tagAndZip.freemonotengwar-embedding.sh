@@ -6,9 +6,9 @@ mkdir source
 cp ../../trunk/FreeMonoTengwar.sfd ../../trunk/FreeMonoTengwar.gdl ../../trunk/makefonts.py source/
 cd source/
 fontforge -script makefonts.py
-mv FreeMonoTengwar.ttf FreeMonoTengwar.otf ..
+mv FreeMonoTengwar-embedding.ttf FreeMonoTengwar-embedding.eot ..
 rm *
 cd ..
 cp ../../trunk/FreeMonoTengwar.sfd ../../trunk/FreeMonoTengwar.gdl ../../trunk/makefonts.py source/
 cd ..
-zip FreeMonoTengwar.$(date "+%Y-%m-%d").zip $(date "+%Y-%m-%d")/*txt $(date "+%Y-%m-%d")/FreeMonoTengwar.* $(date "+%Y-%m-%d")/source/* 
+zip FreeMonoTengwar-embedding.$(date "+%Y-%m-%d").zip $(date "+%Y-%m-%d")/*txt $(date "+%Y-%m-%d")/FreeMonoTengwar-embedding* $(date "+%Y-%m-%d")/source/* 
