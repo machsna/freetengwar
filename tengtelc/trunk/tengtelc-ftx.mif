@@ -1,0 +1,336 @@
+//====================================================
+//	Auto-generated UniMIF data
+//		Decomposition length == 2
+//		Decomposition type == Full
+//		Decomposition direction == LTR
+//====================================================
+
+Type          LigatureList
+Name          NULL
+Namecode      27
+Setting       NULL
+Settingcode   0
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+List
+
+	Agrave	A gravecmb 	//	(#0) GID   130 == U+0041 + U+0300
+	Aacute	A acutecmb 	//	(#1) GID   131 == U+0041 + U+0301
+	Acircumflex	A circumflexcmb 	//	(#2) GID   132 == U+0041 + U+0302
+	Atilde	A tildecmb 	//	(#3) GID   133 == U+0041 + U+0303
+	Adieresis	A dieresiscmb 	//	(#4) GID   134 == U+0041 + U+0308
+	Aring	A ringcmb 	//	(#5) GID   135 == U+0041 + U+030A
+	Ccedilla	C cedillacmb 	//	(#6) GID   137 == U+0043 + U+0327
+	Egrave	E gravecmb 	//	(#7) GID   138 == U+0045 + U+0300
+	Eacute	E acutecmb 	//	(#8) GID   139 == U+0045 + U+0301
+	Ecircumflex	E circumflexcmb 	//	(#9) GID   140 == U+0045 + U+0302
+	Edieresis	E dieresiscmb 	//	(#10) GID   141 == U+0045 + U+0308
+	Igrave	I gravecmb 	//	(#11) GID   142 == U+0049 + U+0300
+	Iacute	I acutecmb 	//	(#12) GID   143 == U+0049 + U+0301
+	Icircumflex	I circumflexcmb 	//	(#13) GID   144 == U+0049 + U+0302
+	Idieresis	I dieresiscmb 	//	(#14) GID   145 == U+0049 + U+0308
+	Ntilde	N tildecmb 	//	(#15) GID   147 == U+004E + U+0303
+	Ograve	O gravecmb 	//	(#16) GID   148 == U+004F + U+0300
+	Oacute	O acutecmb 	//	(#17) GID   149 == U+004F + U+0301
+	Ocircumflex	O circumflexcmb 	//	(#18) GID   150 == U+004F + U+0302
+	Otilde	O tildecmb 	//	(#19) GID   151 == U+004F + U+0303
+	Odieresis	O dieresiscmb 	//	(#20) GID   152 == U+004F + U+0308
+	Ugrave	U gravecmb 	//	(#21) GID   155 == U+0055 + U+0300
+	Uacute	U acutecmb 	//	(#22) GID   156 == U+0055 + U+0301
+	Ucircumflex	U circumflexcmb 	//	(#23) GID   157 == U+0055 + U+0302
+	Udieresis	U dieresiscmb 	//	(#24) GID   158 == U+0055 + U+0308
+	Yacute	Y acutecmb 	//	(#25) GID   159 == U+0059 + U+0301
+	agrave	a gravecmb 	//	(#26) GID   162 == U+0061 + U+0300
+	aacute	a acutecmb 	//	(#27) GID   163 == U+0061 + U+0301
+	acircumflex	a circumflexcmb 	//	(#28) GID   164 == U+0061 + U+0302
+	atilde	a tildecmb 	//	(#29) GID   165 == U+0061 + U+0303
+	adieresis	a dieresiscmb 	//	(#30) GID   166 == U+0061 + U+0308
+	aring	a ringcmb 	//	(#31) GID   167 == U+0061 + U+030A
+	ccedilla	c cedillacmb 	//	(#32) GID   169 == U+0063 + U+0327
+	egrave	e gravecmb 	//	(#33) GID   170 == U+0065 + U+0300
+	eacute	e acutecmb 	//	(#34) GID   171 == U+0065 + U+0301
+	ecircumflex	e circumflexcmb 	//	(#35) GID   172 == U+0065 + U+0302
+	edieresis	e dieresiscmb 	//	(#36) GID   173 == U+0065 + U+0308
+	igrave	i gravecmb 	//	(#37) GID   174 == U+0069 + U+0300
+	iacute	i acutecmb 	//	(#38) GID   175 == U+0069 + U+0301
+	icircumflex	i circumflexcmb 	//	(#39) GID   176 == U+0069 + U+0302
+	idieresis	i dieresiscmb 	//	(#40) GID   177 == U+0069 + U+0308
+	ntilde	n tildecmb 	//	(#41) GID   179 == U+006E + U+0303
+	ograve	o gravecmb 	//	(#42) GID   180 == U+006F + U+0300
+	oacute	o acutecmb 	//	(#43) GID   181 == U+006F + U+0301
+	ocircumflex	o circumflexcmb 	//	(#44) GID   182 == U+006F + U+0302
+	otilde	o tildecmb 	//	(#45) GID   183 == U+006F + U+0303
+	odieresis	o dieresiscmb 	//	(#46) GID   184 == U+006F + U+0308
+	ugrave	u gravecmb 	//	(#47) GID   187 == U+0075 + U+0300
+	uacute	u acutecmb 	//	(#48) GID   188 == U+0075 + U+0301
+	ucircumflex	u circumflexcmb 	//	(#49) GID   189 == U+0075 + U+0302
+	udieresis	u dieresiscmb 	//	(#50) GID   190 == U+0075 + U+0308
+	yacute	y acutecmb 	//	(#51) GID   191 == U+0079 + U+0301
+	ydieresis	y dieresiscmb 	//	(#52) GID   193 == U+0079 + U+0308
+	Scaron	S caroncmb 	//	(#53) GID   198 == U+0053 + U+030C
+	scaron	s caroncmb 	//	(#54) GID   199 == U+0073 + U+030C
+	Ydieresis	Y dieresiscmb 	//	(#55) GID   200 == U+0059 + U+0308
+	Zcaron	Z caroncmb 	//	(#56) GID   201 == U+005A + U+030C
+	zcaron	z caroncmb 	//	(#57) GID   202 == U+007A + U+030C
+
+
+
+//====================================================
+//	Standard required ligatures
+//====================================================
+
+
+
+
+//====================================================
+//	Standard optional ligatures
+//====================================================
+
+
+
+
+//====================================================
+//	Script-specific actions
+//====================================================
+
+
+//====================================================
+//	Script-specific actions for Arabic
+//====================================================
+
+
+//====================================================
+//	Script-specific actions for Devanagari
+//====================================================
+
+
+//====================================================
+//	Script-specific actions for Gurmukhi
+//====================================================
+
+
+//====================================================
+//	Script-specific actions for Gujarati
+//====================================================
+
+
+//====================================================
+//	Script-specific actions for Thai
+//====================================================
+
+
+//====================================================
+//	End of auto-generated MIF data
+//====================================================
+
+
+// (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl)
+// g_tinco_lig / ^ _ AnyIsolTehtar ZWJ _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16000
+Setting        NULL
+Settingcode    1
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+changemeiftincofollows	harma hwesta hwesta.conl
+tinco	tinco
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+ZWJ	uni200D
+
+           EOT  OOB  DEL  EOL  changemeiftincofollows tinco anytehta ZWJ
+StartText  1    1    1    1    2                      1     1        1
+StartLine  1    1    1    1    2                      1     1        1
+sawharma   1    1    2    1    2                      1     3        4
+sawZWJ     1    1    3    1    2                      5     4        4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawharma  yes   yes      none      none
+3 sawharma  no    yes      none      none
+4 sawZWJ    no    yes      none      none
+5 StartText no    yes      subsmark  substinco
+
+subsmark
+	harma extharma
+	hwesta exthwesta
+	hwesta.conl exthwesta.conl
+
+substinco
+	tinco tinco.lig
+
+
+//  g_silme > g_silme_lig_harma / ^ _ ZWJ Harma ;
+
+Type           Contextual
+Name           NULL
+Namecode       16001
+Setting        NULL
+Settingcode    1
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+silme	silme
+ZWJ	uni200D
+harma	harma
+
+           EOT  OOB  DEL  EOL  silme ZWJ harma
+StartText  1    1    1    1    2     1   1
+StartLine  1    1    1    1    2     1   1
+sawsilme   1    1    1    1    2     3   1
+sawZWJ     1    1    1    1    2     3   4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawsilme  yes   yes      none      none
+3 sawZWJ    no    yes      none      none
+4 StartText no    yes      ligharma  none
+
+ligharma
+	silme silme.lig_harma
+
+
+// g_silme > g_silme_lig / ^ _ AnyIsolTehtar ZWJ AnyTengwa ;
+
+Type           Contextual
+Name           NULL
+Namecode       16002
+Setting        NULL
+Settingcode    1
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+silme	silme //silme must only figure here, not under anytengwa!
+anytengwa	tinco parma calma quesse ando umbar anga ungwe thuule formen harma hwesta
++	anto ampa anca unque nuumen malta noldo nwalme oore vala anna vilya
++	extthuule extformen extharma exthwesta extanto extampa extanca extunque
++	roomen arda lambe alda silmenuq aare aarenuq hyarmen hwestasin yanta uure
++	longcarr halla shortcarr mirroredosse wtengwa atengwa conncarr whtengwa openanna
++	prefeanoreanqu mhtengwa beleriandicmh angwhtengwa vaiya sarince dottedcircle
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+ZWJ	uni200D
+
+           EOT  OOB  DEL  EOL  silme anytengwa anytehta ZWJ
+StartText  1    1    1    1    2     1         1        1
+StartLine  1    1    1    1    2     1         1        1
+sawsilme   1    1    2    1    2     1         3        4
+sawZWJ     1    1    3    1    5     5         4        4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawsilme  yes   yes      none      none
+3 sawsilme  no    yes      none      none
+4 sawZWJ    no    yes      none      none
+5 StartText no    yes      subsmark  none
+
+subsmark
+	silme silme.lig
+
+
+//    if (lowershook)
+//      MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
+//    endif;
+// Comment: What's this to do with the setting "lowershook"??
+
+
+//    MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16003
+Setting        NULL
+Settingcode    1
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+MayConB	quesse ungwe nwalme vilya lambe alda
+MayConR	calma quesse.conl anga ungwe.conl noldo nwalme.conl
++	anna vilya.conl lambe.conl alda.conl uure conncarr
+MayConL	tinco parma ando umbar hwesta unque exthwesta extunque nuumen malta
++	oore vala roomen arda shortcarr longcarr openanna sarince
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+ZWJ	uni200D
+
+           EOT  OOB  DEL  EOL  MayConB MayConR MayConL anytehta ZWJ
+StartText  1    1    1    1    2       2       1       1        1
+StartLine  1    1    1    1    2       2       1       1        1
+sawConR    1    1    1    1    2       2       1       3        4
+sawZWJ     1    1    3    1    5       2       5       4        4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawConR   yes   yes      none      none
+3 sawConR   no    yes      none      none
+4 sawZWJ    no    yes      none      none
+5 StartText no    yes      DoConR    DoConL
+
+DoConR
+	calma calma.conr
+	quesse quesse.conr
+	quesse.conl quesse.conr
+	anga anga.conr
+	ungwe ungwe.conr
+	ungwe.conl ungwe.conb
+	noldo noldo.conr
+	nwalme nwalme.conr
+	nwalme.conl nwalme.conb
+	anna anna.conr
+	vilya vilya.conr
+	vilya.conl vilya.conb
+	conncarr conncarr.conr
+	lambe lambe.conr
+	lambe.conl lambe.conb
+	alda alda.conr
+	alda.conl alda.conb
+	uure uure.conr
+
+DoConL
+	tinco tinco.conl
+	parma parma.conl
+	ando ando.conl
+	umbar umbar.conl
+	nuumen nuumen.conl
+	malta malta.conl
+	oore oore.conl
+	vala vala.conl
+	roomen roomen.conl
+	arda arda.conl
+	lambe lambe.conl
+	alda alda.conl
+	shortcarr shortcarr.conl
+	longcarr longcarr.conl
+	openanna openanna.conl
+	sarince sarince.high
+	quesse quesse.conl
+	ungwe ungwe.conl
+	hwesta hwesta.conl
+	unque unque.conl
+	nwalme nwalme.conl
+	vilya vilya.conl
+	exthwesta exthwesta.conl
+	extunque extunque.conl
