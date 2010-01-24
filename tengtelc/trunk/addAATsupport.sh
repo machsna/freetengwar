@@ -6,3 +6,5 @@ ftxdumperfuser -t post -o tengtelcb-ftx.post.xml tengtelcb-ftx.ttf
 ./addtengwarglyphnames.sh tengtelcb-ftx.post.xml 
 ftxdumperfuser -t post -d tengtelc-ftx.post.xml tengtelc-ftx.ttf 
 ftxdumperfuser -t post -d tengtelcb-ftx.post.xml tengtelcb-ftx.ttf 
+ftxenhancer -m tengtelc-ftx.mif tengtelc-ftx.ttf
+ftxenhancer -m tengtelc-ftx.mif tengtelcb-ftx.ttf
