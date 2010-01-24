@@ -134,7 +134,7 @@ Type           Contextual
 Name           NULL
 Namecode       16000
 Setting        NULL
-Settingcode    1
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -175,9 +175,9 @@ substinco
 
 Type           Contextual
 Name           NULL
-Namecode       16001
+Namecode       16010
 Setting        NULL
-Settingcode    1
+Settingcode    16011
 Default        yes
 Orientation    HV
 Forward        yes
@@ -207,9 +207,9 @@ ligharma
 
 Type           Contextual
 Name           NULL
-Namecode       16002
+Namecode       16020
 Setting        NULL
-Settingcode    1
+Settingcode    16021
 Default        yes
 Orientation    HV
 Forward        yes
@@ -249,17 +249,189 @@ subsmark
 //    if (lowershook)
 //      MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
 //    endif;
-// Comment: What's this to do with the setting "lowershook"??
+
+Type           Contextual
+Name           NULL
+Namecode       16030
+Setting        NULL
+Settingcode    16031
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+MayConRLow	tinco tinco.conl ando ando.conl umbar umbar.conl parma parma.conl
++	thuule formen harma hwesta hwesta.conl anto ampa anca unque unque.conl
++	nuumen nuumen.conl malta malta.conl noldo
++	oore oore.conl vala vala.conl anna
++	hyarmen yanta shortcarr shortcarr.conl
+MayConLLow	sarince
+anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
+
+           EOT  OOB  DEL  EOL  MayConRLow MayConLLow anytehtaORzwj
+StartText  1    1    1    1    2          1          1
+StartLine  1    1    1    1    2          1          1
+sawConRLow 1    1    1    1    2          4          3
+
+  GoTo       Mark? Advance? SubstMark SubstCurrent
+1 StartText  no    yes      none      none
+2 sawConRLow yes   yes      none      none
+3 sawConRLow no    yes      none      none
+4 StartText  no    yes      DoConRLow none
+
+DoConRLow
+	tinco tinco.conr
+	tinco.conl tinco.conb
+	ando ando.conr
+	ando.conl ando.conb
+	umbar umbar.conr
+	umbar.conl umbar.conb
+	parma parma.conr
+	parma.conl parma.conb
+	thuule thuule.conr
+	formen formen.conr
+	harma harma.conr
+	hwesta hwesta.conr
+	hwesta.conl hwesta.conb
+	anto anto.conr
+	ampa ampa.conr
+	anca anca.conr
+	unque unque.conr
+	unque.conl unque.conb
+	nuumen nuumen.conr
+	nuumen.conl nuumen.conb
+	malta malta.conr
+	malta.conl malta.conb
+	noldo noldo.conrbot
+	oore oore.conr
+	oore.conl oore.conb
+	vala vala.conr
+	vala.conl vala.conb
+	anna anna.conrbot
+	shortcarr shortcarr.conr
+	shortcarr.conl shortcarr.conb
+	hyarmen hyarmen.conr
+	yanta yanta.conr
 
 
 //    MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ _ ;
 
 Type           Contextual
 Name           NULL
-Namecode       16003
+Namecode       16040
 Setting        NULL
-Settingcode    1
+Settingcode    16041
 Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+MayConB	quesse ungwe alda
+MayConBLow	nwalme vilya lambe
+MayConR	calma quesse.conl anga ungwe.conl noldo
++	anna alda.conl uure conncarr
+MayConRLow	nwalme.conl vilya.conl lambe.conl
+MayConL	tinco parma ando umbar hwesta unque exthwesta extunque nuumen malta
++	oore vala roomen arda shortcarr longcarr openanna
+sarince sarince
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+ZWJ	uni200D
+
+           EOT  OOB  DEL  EOL  MayConB MayConBLow MayConR MayConRLow MayConL sarince anytehta ZWJ
+StartText  1    1    1    1    2       3          2       3          1       1       1        1
+StartLine  1    1    1    1    2       3          2       3          1       1       1        1
+sawConR    1    1    1    1    2       3          2       3          1       4       5        6
+sawConRLow 1    1    1    1    2       3          2       3          1       7       8        9
+sawZWJ     1    1    2    1    10      11         2       3          12      4       6        6
+sawZWJLow  1    1    3    1    10      11         2       3          12      7       9        9
+
+   GoTo       Mark? Advance? SubstMark SubstCurrent
+1  StartText  no    yes      none      none
+2  sawConR    yes   yes      none      none
+3  sawConRLow yes   yes      none      none
+4  StartText  no    yes      DoConR    DoConL
+5  sawConR    no    yes      none      none
+6  sawZWJ     no    yes      none      none
+7  StartText  no    yes      DoConRLow none
+8  sawConRLow no    yes      none      none
+9  sawZWJLow  no    yes      none      none
+10 sawConR    yes   yes      DoConR    DoConL
+11 sawConRLow yes   yes      DoConR    DoConL
+12 StartText  no    yes      DoConR    DoConL
+
+DoConR
+	calma calma.conr
+	quesse quesse.conr
+	quesse.conl quesse.conr
+	anga anga.conr
+	ungwe ungwe.conr
+	ungwe.conl ungwe.conb
+	noldo noldo.conr
+	nwalme nwalme.conr
+	nwalme.conl nwalme.conb
+	anna anna.conr
+	vilya vilya.conr
+	vilya.conl vilya.conb
+	conncarr conncarr.conr
+	lambe lambe.conr
+	lambe.conl lambe.conb
+	alda alda.conr
+	alda.conl alda.conb
+	uure uure.conr
+
+DoConRLow
+	nwalme nwalme.conrbot
+	nwalme.conl nwalme.conbbot
+	vilya vilya.conrbot
+	vilya.conl vilya.conbbot
+	lambe lambe.conrbot
+	lambe.conl lambe.conbbot
+
+DoConL
+	tinco tinco.conl
+	parma parma.conl
+	ando ando.conl
+	umbar umbar.conl
+	nuumen nuumen.conl
+	malta malta.conl
+	oore oore.conl
+	vala vala.conl
+	roomen roomen.conl
+	arda arda.conl
+	lambe lambe.conl
+	alda alda.conl
+	shortcarr shortcarr.conl
+	longcarr longcarr.conl
+	openanna openanna.conl
+	sarince sarince.high
+	quesse quesse.conl
+	ungwe ungwe.conl
+	hwesta hwesta.conl
+	unque unque.conl
+	nwalme nwalme.conl
+	vilya vilya.conl
+	exthwesta exthwesta.conl
+	extunque extunque.conl
+
+
+//    if (tengconnect==all)
+//      MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar _ ;
+
+Type           Contextual
+Name           Connect tengwar
+Namecode       16050
+Setting        Whenever possible
+Settingcode    16051
+Default        no
 Orientation    HV
 Forward        yes
 Exclusive      yes
@@ -274,20 +446,18 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
 +	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-ZWJ	uni200D
 
-           EOT  OOB  DEL  EOL  MayConB MayConR MayConL anytehta ZWJ
-StartText  1    1    1    1    2       2       1       1        1
-StartLine  1    1    1    1    2       2       1       1        1
-sawConR    1    1    1    1    2       2       1       3        4
-sawZWJ     1    1    3    1    5       2       5       4        4
+           EOT  OOB  DEL  EOL  MayConB MayConR MayConL anytehta
+StartText  1    1    1    1    2       2       1       1
+StartLine  1    1    1    1    2       2       1       1
+sawConR    1    1    1    1    5       2       4       3
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
 2 sawConR   yes   yes      none      none
 3 sawConR   no    yes      none      none
-4 sawZWJ    no    yes      none      none
-5 StartText no    yes      DoConR    DoConL
+4 StartText no    yes      DoConR    DoConL
+5 sawConR   yes   yes      DoConR    DoConL
 
 DoConR
 	calma calma.conr
@@ -334,3 +504,240 @@ DoConL
 	vilya vilya.conl
 	exthwesta exthwesta.conl
 	extunque extunque.conl
+
+
+//    elseif (tengconnect==some)
+//      SomeMayConR SomeMayConL > SomeDoConR SomeDoConL / ^ _ AnyIsolTehtar  _ ;
+//    endif;
+
+Type           Contextual
+Name           Connect tengwar
+Namecode       16050
+Setting        Sometimes
+Settingcode    16052
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+SomeMayConR	calma quesse quesse.conl anga ungwe ungwe.conl noldo nwalme nwalme.conl
++	anna vilya vilya.conl conncarr
+SomeMayConL	tinco parma ando umbar nuumen malta oore vala
++	roomen arda lambe lambe.conrbot alda shortcarr longcarr openanna sarince
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+
+           EOT  OOB  DEL  EOL  SomeMayConR SomeMayConL anytehta
+StartText  1    1    1    1    2           1           1
+StartLine  1    1    1    1    2           1           1
+sawConR    1    1    1    1    2           4           3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawConR   yes   yes      none      none
+3 sawConR   no    yes      none      none
+4 StartText no    yes      DoConR    DoConL
+
+DoConR
+	calma calma.conr
+	quesse quesse.conr
+	quesse.conl quesse.conb
+	anga anga.conr
+	ungwe ungwe.conr
+	ungwe.conl ungwe.conb
+	noldo noldo.conr
+	nwalme nwalme.conr
+	nwalme.conl nwalme.conb
+	anna anna.conr
+	vilya vilya.conr
+	vilya.conl vilya.conb
+	conncarr conncarr.conr
+
+DoConL
+	tinco tinco.conl
+	parma parma.conl
+	ando ando.conl
+	umbar umbar.conl
+	nuumen nuumen.conl
+	malta malta.conl
+	oore oore.conl
+	vala vala.conl
+	roomen roomen.conl
+	arda arda.conl
+	lambe lambe.conl
+	lambe.conrbot lambe.conbbot
+	alda alda.conl
+	shortcarr shortcarr.conl
+	longcarr longcarr.conl
+	openanna openanna.conl
+	sarince sarince.high
+
+
+//    MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16060
+Setting        NULL
+Settingcode    16061
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+MayConR	calma quesse quesse.conl anga ungwe ungwe.conl noldo nwalme nwalme.conl
++	anna vilya vilya.conl lambe lambe.conl alda alda.conl uure conncarr
+sarince	sarince
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+
+           EOT  OOB  DEL  EOL  MayConR sarince anytehta
+StartText  1    1    1    1    2       1       1
+StartLine  1    1    1    1    2       1       1
+sawConR    1    1    1    1    2       4       3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawConR   yes   yes      none      none
+3 sawConR   no    yes      none      none
+4 StartText no    yes      DoConR    DoConL
+
+DoConR
+	calma calma.conr
+	quesse quesse.conr
+	quesse.conl quesse.conr
+	anga anga.conr
+	ungwe ungwe.conr
+	ungwe.conl ungwe.conb
+	noldo noldo.conr
+	nwalme nwalme.conr
+	nwalme.conl nwalme.conb
+	anna anna.conr
+	vilya vilya.conr
+	vilya.conl vilya.conb
+	conncarr conncarr.conr
+	lambe lambe.conr
+	lambe.conl lambe.conb
+	alda alda.conr
+	alda.conl alda.conb
+	uure uure.conr
+
+DoConL
+	sarince sarince.high
+
+
+//    g_conncarr MayConL > g_conncarr_conr DoConL / ^ _ AnyIsolTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16070
+Setting        NULL
+Settingcode    16071
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+conncarr	conncarr
+MayConL	tinco parma quesse ando umbar ungwe hwesta unque exthwesta extunque
++	nuumen malta nwalme nwalme.conrbot oore vala vilya vilya.conrbot
++	lambe lambe.conrbot alda roomen arda shortcarr longcarr openanna sarince
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+
+            EOT  OOB  DEL  EOL  conncarr MayConL anytehta
+StartText   1    1    1    1    2        1       1
+StartLine   1    1    1    1    2        1       1
+sawconncarr 1    1    1    1    2        4       3
+
+  GoTo        Mark? Advance? SubstMark SubstCurrent
+1 StartText   no    yes      none      none
+2 sawconncarr yes   yes      none      none
+3 sawconncarr no    yes      none      none
+4 StartText   no    yes      subscarr  DoConL
+
+subscarr
+	conncarr conncarr.conr
+
+DoConL
+	tinco tinco.conl
+	parma parma.conl
+	ando ando.conl
+	umbar umbar.conl
+	nuumen nuumen.conl
+	malta malta.conl
+	oore oore.conl
+	vala vala.conl
+	roomen roomen.conl
+	arda arda.conl
+	lambe lambe.conl
+	lambe.conrbot lambe.conbbot
+	alda alda.conl
+	shortcarr shortcarr.conl
+	longcarr longcarr.conl
+	openanna openanna.conl
+	sarince sarince.high
+	quesse quesse.conl
+	ungwe ungwe.conl
+	hwesta hwesta.conl
+	unque unque.conl
+	nwalme nwalme.conl
+	nwalme.conrbot nwalme.conbbot
+	vilya vilya.conl
+	vilya.conrbot vilya.conbbot
+	exthwesta exthwesta.conl
+	extunque extunque.conl
+
+
+//    g_conncarr > g_conncarr_long / ^ _ AnyIsolTehtar ZWJ?
+//(Calma,Anga,Harma,Anca,Noldo,Anna,ExtHarma,ExtAnca,Hyarmen,g_whtengwa);
+
+Type           Contextual
+Name           NULL
+Namecode       16080
+Setting        NULL
+Settingcode    16081
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+conncarr	conncarr
+calmaetc	calma anga harma anca noldo anna extharma extanca hyarmen whtengwa
+anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
+
+            EOT  OOB  DEL  EOL  conncarr calmaetc anytehtaORzwj
+StartText   1    1    1    1    2        1        1
+StartLine   1    1    1    1    2        1        1
+sawconncarr 1    1    1    1    2        4        3
+
+  GoTo        Mark? Advance? SubstMark SubstCurrent
+1 StartText   no    yes      none      none
+2 sawconncarr yes   yes      none      none
+3 sawconncarr no    yes      none      none
+4 StartText   no    yes      subscarr  none
+
+subscarr
+	conncarr conncarr.long
+
+
+//    if (!lowershook)
+//      MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
+//    endif;
+
+// I have found no way of making this work. The choice of the sarince attachment interferes
+// with the choice of connecting the tengwar.
