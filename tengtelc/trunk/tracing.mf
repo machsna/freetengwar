@@ -72,6 +72,7 @@ boolean isrefchar;
 boolean forgd; forgd:=true; % Output gdh-data?
 boolean unlinkreferences; unlinkreferences:=false;
 boolean hasattached;
+boolean usealiasnames; usealiasnames:=true;
 
 % Name lookup (return index)
 vardef ps.lu(expr s) =
@@ -130,27 +131,34 @@ def initchr(expr s, m, width) =
   apt(ps.n,lastap).forgd := false;
   numeric a[], t; path p[], ap[];
   if tracing and forgd:
-    message "gd: g_" & ps_to_gd(ps[ps.n].name) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
+    if usealiasnames:
+      message "gd: g_" & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps_to_alias(ps[ps.n].name) & ditto & ") { ";
+    else:
+      message "gd: g_" & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
+    fi
   fi
   hasattached:=false;
-enddef;
-
-def unlinkref =
-  if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
 enddef;
 
 def endchr =
   if tracing:
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
+    if usealiasnames:
+      message "pe: SetGlyphName("& ditto & ps_to_alias(ps[ps.n].name) & ditto &",0);";
+    fi
     if isrefchar:
       if unlinkreferences:
-        unlinkref;
+        if usealiasnames:
+          if tracing: message "ur: Select("& ditto & ps_to_alias(ps[ps.n].name) & ditto &"); UnlinkReference(); RemoveOverlap();"; message""; fi
+        else:
+          if tracing: message "ur: Select("& ditto & ps[ps.n].name & ditto &"); UnlinkReference(); RemoveOverlap();"; message""; fi
+        fi
       fi
     else:
       message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
       message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
       if hasattached:
-         unlinkref;
+         if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
       fi
     fi
   fi
@@ -199,25 +207,31 @@ def setgdalias(expr psn, gdn) =
 enddef;
 
 def addalias(expr psn, gdn) =
-  scantokens ("string " & gdn); scantokens gdn=psn; setgdalias(psn,gdn);
+  scantokens ("string " & cleandots(gdn)); scantokens cleandots(gdn)=psn; setgdalias(psn,gdn);
 enddef;
 
 def addaliasvars(expr balias)(text vars) =
   for i=vars:
-    addalias(scantokens balias & "." & i , balias & "_" & i);
+    setgdalias(scantokens balias & "." & i , balias & "." & i);
   endfor
 enddef;
 
-vardef ps_to_gd(expr s) =
-  save n,c,ss,sss; string c,ss,sss;
-  sss:=""; n=gdalias.lu(s);
+vardef ps_to_alias(expr s) =
+  save n,ss; string ss;
+  n=gdalias.lu(s);
   ss = if n=0: s else: gdalias[n].gdname fi;
-  for i=0 upto length(ss)-1:
-    c:=substring(i,i+1) of ss;
+  ss
+enddef;
+
+vardef cleandots(expr s) =
+  save c,ss; string c,ss;
+  ss:="";
+  for i=0 upto length(s)-1:
+    c:=substring(i,i+1) of s;
     if c=".": c:="_"; fi
-    sss:= sss & c;
+    ss:= ss & c;
   endfor
-  sss
+  ss
 enddef;
 
 def setspace(expr width) =
@@ -253,7 +267,11 @@ def attach(expr psn, bapn, capn) =
     fi
   endfor
   if tracing:
-    message "pe: Select("& ditto & psn & ditto &"); CopyReference();";
+    if usealiasnames:
+      message "pe: Select("& ditto & ps_to_alias(psn) & ditto &"); CopyReference();";
+    else:
+      message "pe: Select("& ditto & psn & ditto &"); CopyReference();";
+    fi
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); PasteWithOffset(" &
          decimal round(xpart vec/un) & "," & decimal round(ypart vec/un) & ");";
   else:

@@ -39,8 +39,8 @@ table(glyph)
   c_latmaydotligl=(g_i_conl,       g_j_conl);
   c_latdotligl   =(g_dotlessi_conl,g_dotlessj_conl);
 
-  c_isoldiac=(g_uni0300,g_uni0301,g_uni0302,g_uni0303,g_uni0304,g_uni0307,g_uni0308,g_uni030A,g_uni030C,g_uni0364);
-  c_diac=(g_uni0300_normal,g_uni0301_normal,g_uni0302_normal,g_uni0303_normal,g_uni0304_normal,g_uni0307_normal,g_uni0308_normal,g_uni030A_normal,g_uni030C_normal,g_uni0364_normal);
+  c_isoldiac=(g_gravecmb,g_acutecmb,g_circumflexcmb,g_tildecmb,g_macroncmb,g_dotaccentcmb,g_dieresiscmb,g_ringcmb,g_caroncmb,g_uni0364);
+  c_diac=(g_gravecmb_normal,g_acutecmb_normal,g_circumflexcmb_normal,g_tildecmb_normal,g_macroncmb_normal,g_dotaccentcmb_normal,g_dieresiscmb_normal,g_ringcmb_normal,g_caroncmb_normal,g_uni0364_normal);
   c_diacbase=(g_dottedcircle,g_a,g_e,g_dotlessi,g_dotlessi_conl,g_dotlessj,g_dotlessj_conl,g_n,g_o,g_s,g_u,g_u_conl,g_y,g_y_conl,g_z,g_z_conl,g_A,g_E,g_I,g_N,g_O,g_S,g_U,g_Y,g_Z);
 
   c_avariant=(g_a,g_aacute,g_agrave,g_acircumflex,g_atilde,g_adieresis,g_aring);
@@ -90,7 +90,7 @@ endtable;
 
 table(pos)
   pass(1)
-    c_diacbase (c_diac,g_uni0308_narrow) { attach{ to=@1; at=uap; with=dap }; insert=false;} / _ ^ _;
+    c_diacbase (c_diac,g_dieresiscmb_narrow) { attach{ to=@1; at=uap; with=dap }; insert=false;} / _ ^ _;
   endpass;
   pass(2)
     c_avariant g_v  {kern.x = -110m} / _ c_diac? ^ _;
