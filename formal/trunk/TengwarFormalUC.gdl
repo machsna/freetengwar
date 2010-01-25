@@ -1,0 +1,144 @@
+// This is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation, either version 3 of
+// the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#define ps postscript
+#define LG_USENG 0x0409
+
+environment { MUnits = 2048; }
+
+#include "TengwarFormalUC.gdh"
+
+table(feature)
+/*
+  silmepref {
+    id=202;
+    name.LG_USENG = string("Tehta on Silme");
+    default = left;
+    settings {
+      left {
+        value=0;
+        name.LG_USENG = string("To the left");
+      }
+      right {
+        value=3;
+        name.LG_USENG = string("To the right");
+      }
+    }
+  }
+*/
+  descwtengwa {
+    id=204;
+    name.LG_USENG = string("Descending W-tengwa");
+    default = true;
+  }
+  lowershook {
+    id=205;
+    name.LG_USENG = string("Prefer low S-hook");
+    default = true;
+  }
+  ossetail {
+    id=207;
+    name.LG_USENG = string("Marked Osse");
+    default = none;
+    settings {
+      none {
+        value=0;
+        name.LG_USENG = string("Never");
+      }
+      final {
+        value=1;
+        name.LG_USENG = string("Word final");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("Always");
+      }
+    }
+  }
+
+endtable;
+
+table(glyph)
+  Wide = (ando,umbar,anga,ungwe,anto,ampa,anca,unque,nuumen,malta,noldo,nwalme,
+          andoX,umbarX,angaX,ungweX,alda,maltaX,silme_aha);
+  UpNormal = (tinco,parma,roomen_alt,arda_alt);
+  Normal = (calma,quesse,aha,hwesta,oore,anna,vala,vilya,
+          calmaX,quesseX,roomen,arda,silme,silmeN,esse,esseN,
+          hyarmen,yanta,hwestaS,uure,osseN,lambeN,osse,carrierX,quesseC,hwestaC
+          roomenN,valaX);
+  DownNormal = (suule,formen);
+  UpNarrow = (suule,formen,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRomen);
+  DownNarrow = (tinco,parma,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRomen,roomen_alt,arda_alt);
+  Carrier = (longCarrier,halla,shortCarrier);
+
+  Uptehta =       (tehtaA,        tehtaY,        tehtaI,        tehtaE,        tehtaO,        tehtaU);
+  UptehtaWide =   (tehtaA_shift4, tehtaY_shift4, tehtaI_shift4, tehtaE_shift4, tehtaO_shift4, tehtaU_shift4);
+  UptehtaNormal = (tehtaA_shift3, tehtaY_shift3, tehtaI_shift3, tehtaE_shift3, tehtaO_shift3, tehtaU_shift3);
+  UptehtaNarrow = (tehtaA_shift2, tehtaY_shift2, tehtaI_shift2, tehtaE_shift2, tehtaO_shift2, tehtaU_shift2);
+  UptehtaCarr =   (tehtaA_shift1, tehtaY_shift1, tehtaI_shift1, tehtaE_shift1, tehtaO_shift1, tehtaU_shift1);
+
+  Uptehta +=       (tehtaN,        tehtaW,        tehtaYanta,        tehtaAE,        tehtaBreve);
+  UptehtaWide +=   (tehtaN_wide,   tehtaW_shift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4);
+  UptehtaNormal += (tehtaN_narrow, tehtaW_shift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3);
+  UptehtaNarrow += (tehtaN_narrow, tehtaW_shift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2);
+  UptehtaCarr +=   (tehtaN_narrow, tehtaW_shift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1);
+
+  Downtehta =       (tehtaAB,        tehtaYB,        tehtaIB,        tehtaEB,        tehtaEEB,        tehtaOB,        tehtaUB);
+  DowntehtaWide =   (tehtaAB_shift4, tehtaYB_shift4, tehtaIB_shift4, tehtaEB_shift4, tehtaEEB_shift4, tehtaOB_shift4, tehtaUB_shift4);
+  DowntehtaNormal = (tehtaAB_shift3, tehtaYB_shift3, tehtaIB_shift3, tehtaEB_shift3, tehtaEEB_shift3, tehtaOB_shift3, tehtaUB_shift3);
+  DowntehtaNarrow = (tehtaAB_shift2, tehtaYB_shift2, tehtaIB_shift2, tehtaEB_shift2, tehtaEEB_shift2, tehtaOB_shift2, tehtaUB_shift2);
+  DowntehtaCarr =   (tehtaAB_shift1, tehtaYB_shift1, tehtaIB_shift1, tehtaEB_shift1, tehtaEEB_shift1, tehtaOB_shift1, tehtaUB_shift1);
+  DowntehtaLambe =  (tehtaAB_shift4, tehtaYB_lambe,  tehtaIB_lambe,  tehtaEB_shift4, tehtaEEB_lambe,  tehtaOB_shift4, tehtaUB_shift4);
+
+  Downtehta +=       (tehtaB,        tehtaThinnas,        tehtaX);
+  DowntehtaWide +=   (tehtaB_wide,   tehtaThinnas_shift4, tehtaX_shift4);
+  DowntehtaNormal += (tehtaB_narrow, tehtaThinnas_shift3, tehtaX_shift3);
+  DowntehtaNarrow += (tehtaB_narrow, tehtaThinnas_shift2, tehtaX_shift3);
+  DowntehtaCarr +=   (tehtaB_narrow, tehtaThinnas_shift1, tehtaX_shift3);
+  DowntehtaLambe +=  (tehtaB_lambe,  tehtaThinnas_shift4, tehtaX_shift4);
+
+  AnyIsolTehta = (Uptehta,Downtehta);
+  AnyTehta = (UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
+endtable;
+
+#define AnyIsolTehtar [[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
+#define AnyTehtar [[[AnyTehta]?AnyTehta]?AnyTehta]?
+
+table(substitution)
+
+  pass(1)
+
+    aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
+    hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
+    silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
+
+    (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
+
+    Uptehta > UptehtaWide / Wide AnyTehtar _ ;
+    Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
+    Uptehta > UptehtaNarrow / UpNarrow AnyTehtar _ ;
+    Uptehta > UptehtaCarr / Carrier AnyTehtar _ ;
+    Uptehta > UptehtaWide / lambe AnyTehtar _ ;
+
+    Downtehta > DowntehtaWide / Wide AnyTehtar _ ;
+    Downtehta > DowntehtaNormal / (DownNormal,Normal) AnyTehtar _ ;
+    Downtehta > DowntehtaNarrow / DownNarrow AnyTehtar _ ;
+    Downtehta > DowntehtaCarr / Carrier AnyTehtar _ ;
+    Downtehta > DowntehtaLambe / lambe AnyTehtar _ ;
+
+  endpass;
+
+endtable;
+
+endenvironment;
+
