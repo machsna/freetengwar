@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CpMac tengtelc.ttf tengtelc-ftx.ttf
 CpMac tengtelcb.ttf tengtelcb-ftx.ttf
 ftxdumperfuser -t post -o tengtelc-ftx.post.xml tengtelc-ftx.ttf 

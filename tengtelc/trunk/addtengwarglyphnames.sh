@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sed -i '' -e 's/uni00A0/nonbreakingspace/' "$@"
 sed -i '' -e 's/uni00AD/softhyphen/' "$@"
 sed -i '' -e 's/uni00B2/twosuperior/' "$@"
