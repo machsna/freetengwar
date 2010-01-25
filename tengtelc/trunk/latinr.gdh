@@ -4,7 +4,7 @@ table(glyph) { MUnits = 2048; PointRadius = 0m; }
 g_space = ps("space") { 
  break = BREAK_WHITESPACE;
 };
-g_nbsp = ps("uni00A0") { 
+g_nonbreakingspace = ps("nonbreakingspace") { 
  uap = point(192m,1011m);
  dap = point(192m,-128m);
 };
@@ -47,6 +47,14 @@ g_asterisk = ps("asterisk") {
 };
 g_equal = ps("equal") { 
 };
+g_approxequal = ps("approxequal") { 
+};
+g_notequal = ps("notequal") { 
+};
+g_lessequal = ps("lessequal") { 
+};
+g_greaterequal = ps("greaterequal") { 
+};
 g_figuredash = ps("figuredash") { 
 };
 g_plus = ps("plus") { 
@@ -61,27 +69,27 @@ g_slash = ps("slash") {
 };
 g_zero = ps("zero") { 
 };
-g_uni2070 = ps("uni2070") { 
+g_zerosuperior = ps("zerosuperior") { 
  ap = point(374m,1203m);
 };
 g_one = ps("one") { 
 };
-g_uni00B9 = ps("uni00B9") { 
+g_onesuperior = ps("onesuperior") { 
  ap = point(271m,1203m);
 };
 g_two = ps("two") { 
 };
-g_uni00B2 = ps("uni00B2") { 
+g_twosuperior = ps("twosuperior") { 
  ap = point(374m,1203m);
 };
 g_three = ps("three") { 
 };
-g_uni00B3 = ps("uni00B3") { 
+g_threesuperior = ps("threesuperior") { 
  ap = point(374m,1126m);
 };
 g_four = ps("four") { 
 };
-g_uni2074 = ps("uni2074") { 
+g_foursuperior = ps("foursuperior") { 
  ap = point(426m,1050m);
 };
 g_five = ps("five") { 
@@ -221,118 +229,118 @@ g_longs = ps("longs") {
 };
 g_germandbls = ps("germandbls") { 
 };
-g_thsp = ps("uni2009") { 
+g_thsp = ps("thsp") { 
 };
-g_hsp = ps("uni200A") { 
+g_hsp = ps("hsp") { 
 };
-g_dottedcircle = ps("uni25CC") { 
+g_dottedcircle = ps("dottedcircle") { 
  uap = point(563m,1011m);
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0300_normal = ps("uni0300.normal") { 
+g_gravecmb_normal = ps("gravecmb.normal") { 
  dap = point(0m,1024m);
 };
 g_grave = ps("grave") { 
 };
-g_uni0300 = ps("uni0300") { 
+g_gravecmb = ps("gravecmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0301_normal = ps("uni0301.normal") { 
+g_acutecmb_normal = ps("acutecmb.normal") { 
  dap = point(0m,1024m);
 };
 g_acute = ps("acute") { 
 };
-g_uni0301 = ps("uni0301") { 
+g_acutecmb = ps("acutecmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0302_normal = ps("uni0302.normal") { 
+g_circumflexcmb_normal = ps("circumflexcmb.normal") { 
  dap = point(0m,1024m);
 };
 g_circumflex = ps("circumflex") { 
 };
-g_uni0302 = ps("uni0302") { 
+g_circumflexcmb = ps("circumflexcmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0303_normal = ps("uni0303.normal") { 
+g_tildecmb_normal = ps("tildecmb.normal") { 
  dap = point(0m,1024m);
 };
-g_uni0303_narrow = ps("uni0303.narrow") { 
+g_tildecmb_narrow = ps("tildecmb.narrow") { 
  dap = point(0m,1024m);
 };
 g_tilde = ps("tilde") { 
 };
-g_uni0303 = ps("uni0303") { 
+g_tildecmb = ps("tildecmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0304_normal = ps("uni0304.normal") { 
+g_macroncmb_normal = ps("macroncmb.normal") { 
  dap = point(0m,1024m);
 };
-g_uni0304_narrow = ps("uni0304.narrow") { 
+g_macroncmb_narrow = ps("macroncmb.narrow") { 
  dap = point(0m,1024m);
 };
 g_macron = ps("macron") { 
 };
-g_uni0304 = ps("uni0304") { 
+g_macroncmb = ps("macroncmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0307_normal = ps("uni0307.normal") { 
+g_dotaccentcmb_normal = ps("dotaccentcmb.normal") { 
  dap = point(0m,973m);
  uap = point(0m,1280m);
 };
 g_dotaccent = ps("dotaccent") { 
  uap = point(238m,1331m);
 };
-g_uni0307 = ps("uni0307") { 
+g_dotaccentcmb = ps("dotaccentcmb") { 
  uap = point(563m,1318m);
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0308_normal = ps("uni0308.normal") { 
+g_dieresiscmb_normal = ps("dieresiscmb.normal") { 
  dap = point(0m,973m);
  uap = point(0m,1280m);
 };
-g_uni0308_narrow = ps("uni0308.narrow") { 
+g_dieresiscmb_narrow = ps("dieresiscmb.narrow") { 
  dap = point(0m,973m);
  uap = point(0m,1280m);
 };
 g_dieresis = ps("dieresis") { 
  uap = point(436m,1331m);
 };
-g_uni0308 = ps("uni0308") { 
+g_dieresiscmb = ps("dieresiscmb") { 
  uap = point(563m,1318m);
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni030A_normal = ps("uni030A.normal") { 
+g_ringcmb_normal = ps("ringcmb.normal") { 
  dap = point(0m,973m);
 };
 g_ring = ps("ring") { 
 };
-g_uni030A = ps("uni030A") { 
+g_ringcmb = ps("ringcmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni030C_normal = ps("uni030C.normal") { 
+g_caroncmb_normal = ps("caroncmb.normal") { 
  dap = point(0m,1024m);
 };
 g_caron = ps("caron") { 
 };
-g_uni030C = ps("uni030C") { 
+g_caroncmb = ps("caroncmb") { 
  cap = point(563m,442m);
  dap = point(563m,-128m);
 };
-g_uni0327_normal = ps("uni0327.normal") { 
+g_cedillacmb_normal = ps("cedillacmb.normal") { 
  uap = point(0m,-128m);
 };
 g_cedilla = ps("cedilla") { 
 };
-g_uni0327 = ps("uni0327") { 
+g_cedillacmb = ps("cedillacmb") { 
  uap = point(563m,1011m);
  cap = point(563m,442m);
 };
@@ -452,6 +460,8 @@ g_d = ps("d") {
 };
 g_eth = ps("eth") { 
 };
+g_partialdiff = ps("partialdiff") { 
+};
 g_e = ps("e") { 
  uap = point(546m,1024m);
 };
@@ -500,10 +510,13 @@ g_idieresis = ps("idieresis") {
 g_idieresis_conl = ps("idieresis.conl") { 
  uap = point(243m,1331m);
 };
-g_dotlessj = ps("uni0237") { 
+g_uniFB01 = ps("uniFB01") { 
+ uap = point(907m,1024m);
+};
+g_dotlessj = ps("dotlessj") { 
  uap = point(258m,1024m);
 };
-g_dotlessj_conl = ps("uni0237.conl") { 
+g_dotlessj_conl = ps("dotlessj_conl") { 
  uap = point(258m,1024m);
 };
 g_j = ps("j") { 
@@ -519,6 +532,8 @@ g_k_conl = ps("k.conl") {
 g_l = ps("l") { 
 };
 g_l_conl = ps("l.conl") { 
+};
+g_uniFB02 = ps("uniFB02") { 
 };
 g_m = ps("m") { 
 };
@@ -690,11 +705,11 @@ g_greater = ps("greater") {
 };
 g_hyphen = ps("hyphen") { 
 };
-g_uni00AD = ps("uni00AD") { 
+g_softhyphen = ps("softhyphen") { 
 };
-g_uni2010 = ps("uni2010") { 
+g_hyphentwo = ps("hyphentwo") { 
 };
-g_uni2011 = ps("uni2011") { 
+g_nonbreakinghyphen = ps("nonbreakinghyphen") { 
 };
 g_endash = ps("endash") { 
 };

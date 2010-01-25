@@ -4,10 +4,12 @@
 
 python mf2ttf.py underline
 
+rm -f unlink.pe
 python mf2ttf.py latinr
 python mf2ttf.py tengwarr
 fontforge -script tengtelc.pe regular
 
+rm -f unlink.pe
 python mf2ttf.py latinb
 python mf2ttf.py tengwarb
 fontforge -script tengtelc.pe bold
