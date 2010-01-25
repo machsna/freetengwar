@@ -127,6 +127,22 @@ List
 //====================================================
 
 
+//    g_zwj g_longcarr > _ g_longcarrtehta;
+
+Type           LigatureList
+Name           NULL
+Namecode       16230
+Setting        NULL
+Settingcode    16231
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+List
+	longcarr.lig	uni200D longcarr
+
+
 // (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl)
 // g_tinco_lig / ^ _ AnyIsolTehtar ZWJ _ ;
 
@@ -250,9 +266,9 @@ subsmark
 //      MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar _ ;
 
 Type           Contextual
-Name           Connect tengwar
+Name           Tengwar Connectedness
 Namecode       16030
-Setting        Whenever possible
+Setting        Connect all
 Settingcode    16031
 Default        no
 Orientation    HV
@@ -350,9 +366,9 @@ DoConL
 //    endif;
 
 Type           Contextual
-Name           Connect tengwar
+Name           Tengwar Connectedness
 Namecode       16030
-Setting        Sometimes
+Setting        Connect some
 Settingcode    16032
 Default        yes
 Orientation    HV
@@ -360,9 +376,10 @@ Forward        yes
 Exclusive      yes
 
 SomeMayConR	calma quesse quesse.conl anga ungwe ungwe.conl noldo anna conncarr
-SomeMayConRLow nwalme nwalme.conl vilya vilya.conl
+//SomeMayConRLow nwalme nwalme.conl vilya vilya.conl
 SomeMayConL	tinco parma ando umbar nuumen malta oore vala
 +	roomen arda lambe lambe.conrbot alda shortcarr longcarr openanna
++	nwalme nwalme.conrbot vilya vilya.conrbot
 sarince	sarince
 anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
@@ -371,20 +388,16 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
 +	uni200D
 
-           EOT  OOB  DEL  EOL  SomeMayConR SomeMayConRLow SomeMayConL sarince anytehtaORzwj
-StartText  1    1    1    1    2           3              1           1       1
-StartLine  1    1    1    1    2           3              1           1       1
-sawConR    1    1    1    1    2           3              4           4       5
-sawConRLow 1    1    1    1    2           3              4           6       7
+           EOT  OOB  DEL  EOL  SomeMayConR SomeMayConL sarince anytehtaORzwj
+StartText  1    1    1    1    2           1           1       1
+StartLine  1    1    1    1    2           1           1       1
+sawConR    1    1    1    1    2           3           3       4
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
 2 sawConR    yes   yes      none      none
-3 sawConRLow yes   yes      none      none
-4 StartText  no    yes      DoConR    DoConL
-5 sawConR    no    yes      none      none
-6 StartText  no    yes      DoConRLow none
-7 sawConRLow no    yes      none      none
+3 StartText  no    yes      DoConR    DoConL
+4 sawConR    no    yes      none      none
 
 DoConR
 	calma calma.conr
@@ -401,12 +414,6 @@ DoConR
 	vilya.conl vilya.conb
 	conncarr conncarr.conr
 
-DoConRLow
-	nwalme nwalme.conrbot
-	nwalme.conl nwalme.conbbot
-	vilya vilya.conrbot
-	vilya.conl vilya.conbbot
-
 DoConL
 	tinco tinco.conl
 	parma parma.conl
@@ -418,6 +425,10 @@ DoConL
 	vala vala.conl
 	roomen roomen.conl
 	arda arda.conl
+	nwalme nwalme.conl
+	nwalme.conrbot nwalme.conbbot
+	vilya vilya.conl
+	vilya.conrbot vilya.conbbot
 	lambe lambe.conl
 	lambe.conrbot lambe.conbbot
 	alda alda.conl
@@ -535,14 +546,6 @@ DoConL
 //    endif;
 
 
-//    if (!lowershook)
-//      MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
-//    endif;
-
-// I have found no way of making this work. The choice of the sarince attachment interferes
-// with the choice of connecting the tengwar. For now, the font always chooses the lower
-// sarince position.
-
 Type           Contextual
 Name           NULL
 Namecode       16050
@@ -613,58 +616,52 @@ DoConRLow
 
 
 //    MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar _ ;
+// ...
+//    MayConR (g_shook) > DoConR (g_shook_high) / ^ _ AnyIsolTehtar _ ;
+// ...
+//    if (!lowershook)
+//      MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
+//    endif;
 
 Type           Contextual
-Name           NULL
+Name           Sa-rince placement
 Namecode       16060
-Setting        NULL
+Setting        High Sa-rince
 Settingcode    16061
-Default        yes
+Default        no
 Orientation    HV
 Forward        yes
 Exclusive      yes
 
-MayConR	calma quesse quesse.conl anga ungwe ungwe.conl noldo nwalme nwalme.conl
-+	anna vilya vilya.conl lambe lambe.conl alda alda.conl uure conncarr
+DoesConRbot	nwalme.conrbot nwalme.conbbot vilya.conrbot vilya.conbbot lambe.conrbot lambe.conbbot
 sarince	sarince
-anytehta	atehta ytehta itehta etehta otehta utehta overbar
+anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
 +	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
 
-           EOT  OOB  DEL  EOL  MayConR sarince anytehta
-StartText  1    1    1    1    2       1       1
-StartLine  1    1    1    1    2       1       1
-sawConR    1    1    1    1    2       4       3
+           EOT  OOB  DEL  EOL  DoesConRbot sarince anytehtaORzwj
+StartText  1    1    1    1    2           1       1
+StartLine  1    1    1    1    2           1       1
+sawConR    1    1    1    1    2           3       4
 
-  GoTo      Mark? Advance? SubstMark SubstCurrent
-1 StartText no    yes      none      none
-2 sawConR   yes   yes      none      none
-3 sawConR   no    yes      none      none
-4 StartText no    yes      DoConR    DoConL
+  GoTo      Mark? Advance? SubstMark  SubstCurrent
+1 StartText no    yes      none       none
+2 sawConR   yes   yes      none       none
+3 StartText no    yes      ChangeConR highersarince
+4 sawConR   no    yes      none       none
 
-DoConR
-	calma calma.conr
-	quesse quesse.conr
-	quesse.conl quesse.conr
-	anga anga.conr
-	ungwe ungwe.conr
-	ungwe.conl ungwe.conb
-	noldo noldo.conr
-	nwalme nwalme.conr
-	nwalme.conl nwalme.conb
-	anna anna.conr
-	vilya vilya.conr
-	vilya.conl vilya.conb
-	conncarr conncarr.conr
-	lambe lambe.conr
-	lambe.conl lambe.conb
-	alda alda.conr
-	alda.conl alda.conb
-	uure uure.conr
+ChangeConR
+	nwalme.conrbot nwalme.conr
+	nwalme.conbbot nwalme.conb
+	vilya.conrbot vilya.conr
+	vilya.conbbot vilya.conb
+	lambe.conrbot lambe.conr
+	lambe.conbbot lambe.conb
 
-DoConL
+highersarince
 	sarince sarince.high
 
 
@@ -769,3 +766,605 @@ sawconncarr 1    1    1    1    2        4        3
 
 subscarr
 	conncarr conncarr.long
+
+
+//    (g_roomen,g_roomen_conl,g_arda,g_arda_conl) > (g_roomen_open,g_roomen_conl_open,g_arda_open,g_arda_conl_open)
+//           / _ AnyIsolUpTehtar IsolDownTehtar ;
+
+Type           Contextual
+Name           NULL
+Namecode       16090
+Setting        NULL
+Settingcode    16091
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+roomenetc	roomen roomen.conl arda arda.conl
+uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
++	revetehta yantatehta invatehta 
+downtehta	downatehta downytehta downitehta downetehta dblunderstroke downotehta
++	downutehta underbar longcarr.tehta sarincetehta thinnas
+
+            EOT  OOB  DEL  EOL  roomenetc uptehta downtehta
+StartText   1    1    1    1    2         1       1
+StartLine   1    1    1    1    2         1       1
+sawroomen   1    1    1    1    2         3       4
+
+  GoTo        Mark? Advance? SubstMark 	SubstCurrent
+1 StartText   no    yes      none      	none
+2 sawroomen   yes   yes      none      	none
+3 sawroomen   no    yes      none       none
+4 StartText   no    yes      openroomen none
+
+openroomen
+	roomen roomen.open
+	roomen.conl roomen.conl_open
+	arda arda.open
+	arda.conl arda.conl_open
+
+
+//    if (silmepref==left)
+//      (g_silme,g_silme_lig,g_aare) > (g_silme_flat,g_silme_lig_flat,g_aare_flat)
+// / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
+
+Type           Contextual
+Name           NULL
+Namecode       16100
+Setting        NULL
+Settingcode    16101
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+silmeetc	silme silme.lig aare
+uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
++	revetehta yantatehta invatehta 
+downtehtaORzwj	downatehta downytehta downitehta downetehta dblunderstroke downotehta
++	downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
+
+          EOT  OOB  DEL  EOL  silmeetc uptehta downtehtaORzwj
+StartText 1    1    1    1    2        1       1
+StartLine 1    1    1    1    2        1       1
+sawsilme  1    1    1    1    2        3       4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawsilme  yes   yes      none      none
+3 StartText no    yes      flatsilme none
+4 sawsilme  no    yes      none      none
+
+flatsilme
+	silme silme.flat
+	silme.lig silme.lig_flat
+	aare aare.flat
+
+
+//    elseif (silmepref==right)
+//      (g_silme,g_silme_lig,g_aare) > (g_silme_open,g_silme_lig_open,g_aare_open)
+// / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
+//    endif;
+
+Type           Contextual
+Name           Silme tehtar placement
+Namecode       16110
+Setting        Right side
+Settingcode    16111
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+silmeetc	silme silme.flat silme.lig silme.lig_flat aare aare.flat
+uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
++	revetehta yantatehta invatehta 
+downtehtaORzwj	downatehta downytehta downitehta downetehta dblunderstroke downotehta
++	downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
+
+          EOT  OOB  DEL  EOL  silmeetc uptehta downtehtaORzwj
+StartText 1    1    1    1    2        1       1
+StartLine 1    1    1    1    2        1       1
+sawsilme  1    1    1    1    2        3       4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawsilme  yes   yes      none      none
+3 StartText no    yes      opensilme none
+4 sawsilme  no    yes      none      none
+
+opensilme
+	silme silme.open
+	silme.flat silme.open
+	silme.lig silme.lig_open
+	silme.lig_flat silme.lig_open
+	aare aare.open
+	aare.flat aare.open
+
+
+//    if (descwtengwa)
+//      g_wtengwa > g_wtengwa_desc;
+//    endif;
+
+Type           Noncontextual
+Name           Bombadil w-Tengwa
+Namecode       16120
+Setting        Descending Bombadil w-Tengwa
+Settingcode    16121
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+wtengwa wtengwa.desc
+
+
+//    if (whtengwa==roomen)
+//       g_whtengwa > g_whtengwa_varone;
+
+Type           Noncontextual
+Name           Bombadil wh-tengwa
+Namecode       16130
+Setting        Inverted Roomen
+Settingcode    16131
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+whtengwa whtengwa.var1
+
+
+//    elseif (whtengwa==hyarmen)
+//       g_whtengwa > g_whtengwa_vartwo;
+//    endif;
+
+Type           Noncontextual
+Name           Bombadil wh-tengwa
+Namecode       16130
+Setting        Hyarmen mirrored
+Settingcode    16132
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+whtengwa whtengwa.var2
+
+
+//    if (ossetail==all || ossetail==final)
+//      g_atengwa > g_atengwa_desc / ^ _ ;
+//    endif;
+// ...
+//    if (ossetail==final)
+//       g_atengwa_desc > g_atengwa / ^ _ AnyIsolUpTehtar ZWJ? AnyTengwa;
+//    endif;
+
+Type           Noncontextual
+Name           Osse variants
+Namecode       16140
+Setting        Hook on every Osse
+Settingcode    16141
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+atengwa atengwa.desc
+
+
+Type           Contextual
+Name           Osse variants
+Namecode       16140
+Setting        Hook on final Osse
+Settingcode    16142
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+osse	atengwa
+anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	uni200D
+anytengwaBUTosse	tinco parma calma quesse ando umbar anga ungwe thuule formen harma hwesta
++	anto ampa anca unque nuumen malta noldo nwalme oore vala anna vilya
++	extthuule extformen extharma exthwesta extanto extampa extanca extunque
++	roomen arda lambe alda silme silmenuq aare aarenuq hyarmen hwestasin yanta uure
++	longcarr halla shortcarr mirroredosse wtengwa conncarr openanna
++	prefeanoreanqu whtengwa mhtengwa beleriandicmh angwhtengwa vaiya sarince
++	longcarr.conl shortcarr.conl shortcarr.conr shortcarr.conb openanna.conl
++	openanna.dec silme.lig_harma prefeanoreanqu.var whtengwa.var1 whtengwa.var2
++	hyarmen.conr hyarmen.dec yanta.conr yanta.dec roomen.conl arda.conl
++	roomen.open roomen.conl_open arda.open arda.conl_open lambe.conr lambe.conl
++	lambe.conb lambe.dec lambe.conrbot lambe.conbbot alda.conr alda.conl alda.conb
++	alda.dec silme.flat silme.open silme.lig silme.lig_flat silme.lig_open aare.flat
++	aare.open uure.conr atengwa.desc atengwa.dec wtengwa.desc sarince.high
++	conncarr.long conncarr.conr tinco.conr tinco.conl tinco.conb tinco.dec
++	ando.conr ando.conl ando.conb ando.dec thuule.conr thuule.dec anto.conr
++	anto.dec oore.conr oore.conl oore.conb oore.dec nuumen.conr nuumen.conl
++	nuumen.conb nuumen.dec extthuule.conr extthuule.dec extanto.conr extanto.dec
++	parma.conr parma.conl parma.conb parma.dec umbar.conr umbar.conl umbar.conb
++	umbar.dec formen.conr formen.dec ampa.conr ampa.dec vala.conr vala.conl
++	vala.conb vala.dec malta.conr malta.conl malta.conb malta.dec extformen.conr
++	extformen.dec extampa.conr extampa.dec calma.conr calma.dec anga.conr anga.dec
++	harma.conr harma.dec anca.conr anca.dec anna.conr anna.dec anna.conrbot noldo.conr
++	noldo.dec noldo.conrbot extharma.dec extanca.dec quesse.conl quesse.conr
++	quesse.conb quesse.dec ungwe.conl ungwe.conr ungwe.conb ungwe.dec hwesta.conr
++	hwesta.conl hwesta.conb hwesta.dec unque.conr unque.conl unque.conb unque.dec
++	vilya.conl vilya.conr vilya.conb vilya.dec vilya.conrbot vilya.conbbot nwalme.conl
++	nwalme.conr nwalme.conb nwalme.dec nwalme.conrbot nwalme.conbbot exthwesta.conl
++	exthwesta.dec extunque.conl extunque.dec longcarr.dec halla.dec shortcarr.dec
++	tinco.lig mhtengwa.dec beleriandicmh.dec 
+
+          EOT  OOB  DEL  EOL  osse anytehtaORzwj anytengwaBUTosse
+StartText 1    1    1    1    2    1             1
+StartLine 1    1    1    1    2    1             1
+sawosse   3    3    1    3    2    4             1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawosse   yes   yes      none      none
+3 StartText no    yes      ossedesc  none
+4 sawosse   no    yes      none      none
+
+ossedesc
+	atengwa atengwa.desc
+
+
+//    IsolTehtar > CombTehtar / AnyTengwa ^ AnyTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16150
+Setting        NULL
+Settingcode    16151
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+anytengwa	atengwa tinco parma calma quesse ando umbar anga ungwe thuule formen harma hwesta
++	anto ampa anca unque nuumen malta noldo nwalme oore vala anna vilya
++	extthuule extformen extharma exthwesta extanto extampa extanca extunque
++	roomen arda lambe alda silme silmenuq aare aarenuq hyarmen hwestasin yanta uure
++	longcarr halla shortcarr mirroredosse wtengwa conncarr openanna
++	prefeanoreanqu whtengwa mhtengwa beleriandicmh angwhtengwa vaiya sarince
++	longcarr.conl shortcarr.conl shortcarr.conr shortcarr.conb openanna.conl
++	openanna.dec silme.lig_harma prefeanoreanqu.var whtengwa.var1 whtengwa.var2
++	hyarmen.conr hyarmen.dec yanta.conr yanta.dec roomen.conl arda.conl
++	roomen.open roomen.conl_open arda.open arda.conl_open lambe.conr lambe.conl
++	lambe.conb lambe.dec lambe.conrbot lambe.conbbot alda.conr alda.conl alda.conb
++	alda.dec silme.flat silme.open silme.lig silme.lig_flat silme.lig_open aare.flat
++	aare.open uure.conr atengwa.desc atengwa.dec wtengwa.desc sarince.high
++	conncarr.long conncarr.conr tinco.conr tinco.conl tinco.conb tinco.dec
++	ando.conr ando.conl ando.conb ando.dec thuule.conr thuule.dec anto.conr
++	anto.dec oore.conr oore.conl oore.conb oore.dec nuumen.conr nuumen.conl
++	nuumen.conb nuumen.dec extthuule.conr extthuule.dec extanto.conr extanto.dec
++	parma.conr parma.conl parma.conb parma.dec umbar.conr umbar.conl umbar.conb
++	umbar.dec formen.conr formen.dec ampa.conr ampa.dec vala.conr vala.conl
++	vala.conb vala.dec malta.conr malta.conl malta.conb malta.dec extformen.conr
++	extformen.dec extampa.conr extampa.dec calma.conr calma.dec anga.conr anga.dec
++	harma.conr harma.dec anca.conr anca.dec anna.conr anna.dec anna.conrbot noldo.conr
++	noldo.dec noldo.conrbot extharma.dec extanca.dec quesse.conl quesse.conr
++	quesse.conb quesse.dec ungwe.conl ungwe.conr ungwe.conb ungwe.dec hwesta.conr
++	hwesta.conl hwesta.conb hwesta.dec unque.conr unque.conl unque.conb unque.dec
++	vilya.conl vilya.conr vilya.conb vilya.dec vilya.conrbot vilya.conbbot nwalme.conl
++	nwalme.conr nwalme.conb nwalme.dec nwalme.conrbot nwalme.conbbot exthwesta.conl
++	exthwesta.dec extunque.conl extunque.dec longcarr.dec halla.dec shortcarr.dec
++	tinco.lig mhtengwa.dec beleriandicmh.dec 
+anytehta	atehta ytehta itehta etehta otehta utehta overbar
++	wtehta engytehta revetehta yantatehta invatehta
++	dotinside
++	downatehta downytehta downitehta downetehta dblunderstroke
++	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
+
+           EOT  OOB  DEL  EOL  anytengwa anytehta
+StartText  1    1    1    1    2         1
+StartLine  1    1    1    1    2         1
+sawtengwa  1    1    1    1    2         3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawtengwa no    yes      none      none
+3 sawtengwa no    yes      none      combiningtehta
+
+combiningtehta
+	atehta atehta.norm
+	ytehta ytehta.norm
+	itehta itehta.norm
+	etehta etehta.norm
+	otehta otehta.norm
+	utehta utehta.norm
+	overbar overbar.norm
+	wtehta wtehta.norm
+	engytehta engytehta.norm
+	revetehta revetehta.norm
+	yantatehta yantatehta.norm
+	invatehta invatehta.norm
+	dotinside dotinside.norm
+	downatehta downatehta.norm
+	downytehta downytehta.norm
+	downitehta downitehta.norm
+	downetehta downetehta.norm
+	dblunderstroke dblunderstroke.norm
+	downotehta downotehta.norm
+	downutehta downutehta.norm
+	underbar underbar.norm
+	longcarr.tehta longcarr.lig
+	sarincetehta sarincetehta.norm
+	thinnas thinnas.norm
+
+
+//    (g_underbar_norm) > g_underbar_roomen / Roomen _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16160
+Setting        NULL
+Settingcode    16161
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+roomen roomen roomen.conl roomen.open roomen.conl_open
+anytehtaBUTunderbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm utehta.norm
++	overbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
+underbar underbar.norm
+
+           EOT  OOB  DEL  EOL  roomen anytehtaBUTunderbar underbar
+StartText  1    1    1    1    2      1                   1
+StartLine  1    1    1    1    2      1                   1
+sawroomen  1    1    1    1    2      2                   3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawroomen no    yes      none      none
+3 sawroomen no    yes      none      underbarroomen
+
+underbarroomen
+	underbar.norm underbar.roomen
+
+
+//    (g_underbar_norm) > g_underbar_silme / (SilmeNuq,AareNuq) _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16170
+Setting        NULL
+Settingcode    16171
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+nuquernar silmenuq aarenuq
+anytehtaBUTunderbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm utehta.norm
++	overbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
+underbar underbar.norm
+
+           EOT  OOB  DEL  EOL  nuquernar anytehtaBUTunderbar underbar
+StartText  1    1    1    1    2         1                   1
+StartLine  1    1    1    1    2         1                   1
+sawnuquer  1    1    1    1    2         2                   3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawnuquer no    yes      none      none
+3 sawnuquer no    yes      none      underbarnuquernar
+
+underbarnuquernar
+	underbar.norm underbar.silme
+
+
+//    (g_overbar_norm) > g_overbar_silme / (Silme,Aare) AnyDownTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16180
+Setting        NULL
+Settingcode    16181
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+silme  silme silme.open silme.flat silme.lig silme.lig_open silme.lig_flat silme.lig_harma
++	aare aare.open aare.flat
+anytehtaBUToverbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm utehta.norm
++	underbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
+overbar overbar.norm
+
+           EOT  OOB  DEL  EOL  silme anytehtaBUToverbar overbar
+StartText  1    1    1    1    2     1                  1
+StartLine  1    1    1    1    2     1                  1
+sawsilme   1    1    1    1    2     2                  3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawsilme  no    yes      none      none
+3 sawsilme  no    yes      none      overbarsilme
+
+overbarsilme
+	overbar.norm overbar.silme
+
+
+//    (g_overbar_norm,g_underbar_norm,g_otehta_norm,g_wtehta_norm,g_engytehta_norm)
+// > (g_overbar_wide,g_underbar_wide,g_otehta_wide,g_wtehta_wide,g_engytehta_wide)
+//           / WideTengwar ^ AnyTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16190
+Setting        NULL
+Settingcode    16191
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+widetengwar  	ando ando.conr ando.conl ando.conb ando.dec umbar umbar.conr umbar.conl
++	umbar.conb umbar.dec anga anga.conr anga.dec ungwe ungwe.conr ungwe.conl ungwe.conb
++	ungwe.dec anto anto.conr anto.dec ampa ampa.conr ampa.dec anca anca.conr anca.dec
++	unque unque.conr unque.conl unque.conb unque.dec nuumen nuumen.conr nuumen.conl
++	nuumen.conb nuumen.dec malta malta.conr malta.conl malta.conb malta.dec
++	noldo noldo.conr noldo.dec noldo.conrbot nwalme nwalme.conr nwalme.conl nwalme.conb
++	nwalme.dec nwalme.conrbot nwalme.conbbot extanto extanto.conr extanto.dec
++	extampa extampa.conr extampa.dec extanca extanca.dec extunque extunque.conl
++	extunque.dec mhtengwa mhtengwa.dec
+anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
++	revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
+themtehtar overbar.norm underbar.norm otehta.norm wtehta.norm engytehta.norm
+
+           EOT  OOB  DEL  EOL  widetengwar anytehtaBUTthem themtehtar
+StartText  1    1    1    1    2           1               1
+StartLine  1    1    1    1    2           1               1
+sawwide    1    1    1    1    2           2               3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawwide   no    yes      none      none
+3 sawwide   no    yes      none      widetehta
+
+widetehta
+	overbar.norm overbar.wide
+	underbar.norm underbar.wide
+	otehta.norm otehta.wide
+	wtehta.norm wtehta.wide
+	engytehta.norm engytehta.wide
+
+
+//    g_otehta_norm > g_otehta_wide /
+//(Tinco,Parma,Thuule,Formen,Oore,Vala,ExtThuule,ExtFormen,OpenAnna,BeleriandicMh) ^ AnyTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16200
+Setting        NULL
+Settingcode    16201
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tincoetc	 tinco tinco.conr tinco.conl tinco.conb tinco.lig tinco.dec
++	parma parma.conr parma.conl parma.conb parma.dec thuule thuule.conr thuule.dec
++	formen formen.conr formen.dec oore oore.conr oore.conl oore.conb oore.dec
++	vala vala.conr vala.conl vala.conb vala.dec extthuule extthuule.conr extthuule.dec
++	extformen extformen.conr extformen.dec openanna openanna.conl openanna.dec
++	beleriandicmh beleriandicmh.dec
+anytehtaBUTotehta	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
++	revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
++	overbar.norm underbar.norm wtehta.norm engytehta.norm
+otehta	 otehta.norm
+
+           EOT  OOB  DEL  EOL  tincoetc anytehtaBUTotehta otehta
+StartText  1    1    1    1    2        1                 1
+StartLine  1    1    1    1    2        1                 1
+sawtinco   1    1    1    1    2        2                 3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawtinco  no    yes      none      none
+3 sawtinco  no    yes      none      widetehta
+
+widetehta
+	otehta.norm otehta.wide
+
+
+//    (g_otehta_norm,g_overbar_norm,g_underbar_norm,g_engytehta_norm)
+// > (g_otehta_wide,g_overbar_lambe,g_underbar_lambe,g_engytehta_wide)
+//           / (Lambe,Alda) ^ AnyTehtar _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16210
+Setting        NULL
+Settingcode    16211
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+lambeetc	lambe lambe.conr lambe.conl lambe.conb lambe.dec lambe.conrbot lambe.conbbot
++	alda alda.conr alda.conl alda.conb alda.dec
+anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
++	revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	longcarr.lig sarincetehta.norm thinnas.norm
++	wtehta.norm
+themtehtar	 otehta.norm overbar.norm underbar.norm engytehta.norm
+
+           EOT  OOB  DEL  EOL  lambeetc anytehtaBUTthem themtehtar
+StartText  1    1    1    1    2        1               1
+StartLine  1    1    1    1    2        1               1
+sawlambe   1    1    1    1    2        2               3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawlambe  no    yes      none      none
+3 sawlambe  no    yes      none      widetehta
+
+widetehta
+	otehta.norm otehta.wide
+	overbar.norm overbar.lambe
+	underbar.norm underbar.lambe
+	engytehta.norm engytehta.wide
+
+
+//    g_longcarrtehta_norm > g_longcarrtehta_lambe / Lambe g_underbar_lambe? ^ _ ;
+
+Type           Contextual
+Name           NULL
+Namecode       16220
+Setting        NULL
+Settingcode    16221
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+lambe	lambe lambe.conr lambe.conl lambe.conb lambe.dec lambe.conrbot lambe.conbbot
+anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
++	revetehta.norm yantatehta.norm
++	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
++	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
++	sarincetehta.norm thinnas.norm
++	wtehta.norm otehta.norm overbar.norm underbar.norm engytehta.norm underbar.lambe
+longcarrtehta	 longcarr.lig
+
+           EOT  OOB  DEL  EOL  lambe anytehtaBUTthem longcarrtehta
+StartText  1    1    1    1    2     1               1
+StartLine  1    1    1    1    2     1               1
+sawlambe   1    1    1    1    2     2               3
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawlambe  no    yes      none      none
+3 sawlambe  no    yes      none      widetehta
+
+widetehta
+	longcarr.lig longcarr.lig_lambe
