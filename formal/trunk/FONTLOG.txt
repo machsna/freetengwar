@@ -1,0 +1,150 @@
+1.1  FONTLOG for Tengwar Formal
+This file provides detailed information on the Tengwar Formal font software.
+This information should be distributed along with the Tengwar Formal fonts and
+any derivative works.
+
+1.2  Basic Font Information
+
+The Tengwar alphabet was originally designed by J.R.R Tolkien,
+and the design was first published on paper in Appendix E in the
+first edition of the "Lord of the Rings".
+
+The Tengwar Formal Font was first made by Michał Nowakowski in 2002.
+Its glyphs' forms are to resemble one of Tolkien's original
+designs, namely the "formal bookhand" Tengwar style. Please do not
+confuse this style with Latin "formal scripts".
+
+The fonts are licensed under the SIL Open Font License, Version 1.1.
+This license is provided in a separate file, LICENSE, supplied with
+the fonts, and is also available with a FAQ at: http://scripts.sil.org/OFL
+
+Tengwar Formal keyboard layout is almost identical to standard Tengwar
+fonts keymapping by Dan Smith. Tengwar Formal A keyboard layout will
+probably vary between versions, as it is still in development.
+The details are described in the Keymapping.pdf file, included with
+the fonts, and available as a standalone file at:
+http://tengwarformal.limes.com.pl
+
+The most important: any publications should use UTF-8 or other Unicode
+encoding. This is the only working solution for problems mentioned below.
+
+Please note that the keymapping was originally developed for Windows
+- that is, Windows Latin encoding was used. This may cause some problems
+on other operating systems, unless they are capable of using Unicode.
+Unix users may notice lack of code points 128..159, as their ISO-8869-1
+specifies them as control chars.
+
+Users of old versions of Mac OS may suffer from wholly different keystrokes.
+For them, I made last-resort ps1-mac and ttf-mac versions, re-engineered
+so that they should, under certain conditions, work with similar keystrokes
+and give correct look for text that was prepared for PC. Please note that
+Unicode codes for tengwar are all different, so these re-engineered versions
+are absolutely not portable and foreign documents (from the Internet or other
+users) may (almost certainly will) look illegible.
+
+1.3  ChangeLog
+
+?? ??? 2010 (Johan Winge & J. "Mach" Wust) Tengwar Formal Unicode Version 1.0
+- Converted to Unicode PUA, with smart rendering using Graphite and AAT.
+- Released as Tengwar Formal Unicode (reserved font name reused with permission.)
+
+14 Sep 2009 (Michał Nowakowski) Tengwar Formal Version 1.2c (bug-fix release)
+- Fixed horizontal metrics, that were rubbish, and different between
+  "Tengwar Formal" and "Tengwar Formal A". This may result in slightly
+  different size than the previous versions.
+- Removed GPOS from ttf-mac version - only apple-style kerning is left.
+- Truetype versions had different underlines than their postscript/cff
+  counterparts.
+- One symbol for reverse triple-overdots is encoded as Alt/0173,
+  that is - soft hyphen, and often not displayed. Added a duplicate
+  at Alt/0128 (Euro Sign).
+- Filler glyphs for unused encoding slots in ps1-mac version
+  of "Tengwar Formal A" most had duplicated contours.
+- Fixed self-intersecting contours of alternate letter for "schwa".
+- Updated license to SIL OFL 1.1. For details, see LICENSE file.
+- Updated obsolete copyright notices in font files and documentation,
+  so that they now all point to the LICENSE file.
+- Changed encoding of this and other help files to UTF-8.
+- *.ttf and *.otf versions now come with config files for Omega.
+
+13 Feb 2006 (Michał Nowakowski) Version 1.2b (bug-fix release)
+- First version to take clear licensing policy. The license choosen is
+  Open Font License by SIL. For details, see LICENSE file.
+- Vendor updated to "PfEd".
+- TFM files were fixed so that the fonts now can be used with TeX,
+  thanks to Ignacio Fernández Galván for pointing the bug out!
+- Empty code points were filled with references to .notdef, so that
+  no rasterizers should report it broken. These references are hinted.
+- Removed broken typographic features from Open Type versions.
+- Mac version with changed keymapping - see keymapping section.
+
+9 Mar 2005 (Michał Nowakowski) Version 1.2
+- Rómenlike tengwar were widened after suggestions of Harri Perälä.
+- Tehtar were changed to look better, also when doubled.
+- Vowel carriers were given a bit more space.
+- Additional font "Tengwar Formal A" with some non-standard and
+  alternate glyphs is provided.
+- Truetypes were given a tiny prep code to enable dropout control
+  when rendering. The font looks a bit better, though still unhinted.
+
+21 Oct 2004 (Michał Nowakowski) Version 1.1
+- First version to be made with Pfaedit (now FontForge).
+  This made possible publishing the font in multiple formats.
+- Broken hinting left after ver. 1.0 framework removed.
+- Glyph shapes slightly improved and simplified.
+- Tehtar shapes redone.
+- Changes in encoding introduced by Pfaedit.
+
+? ? 2004 (Michał Nowakowski) Tengwar Formal Version 1.0
+- Initial release of font "Tengwar Formal".
+
+1.4  Acknowledgements (sorted after last name)
+
+N: Måns Björkman
+E: at @ mansbjorkman.net
+W: http://at.mansbjorkman.net/
+D: After looking at examples of Formal Bookhand style in Tengwar Calligraphy,
+   it becomes clear that they were main inspiration for creating Tengwar Formal.
+   His Tengwar Parmaite font was a also good start point for the design for
+   its compatibility with web browsers. Was among first people to evaluate
+   Tengwar Formal.
+
+N: Ignacio Ignacio Fernández Galván
+E: jellby @ unex.es
+W: http://djelibeibi.unex.es
+D: Pointed out that it was impossible to use Tengwar Formal 1.2 with TeX.
+   Also did a great job explaining usage of Tengwar Formal and similar fonts
+   with TeX (see http://djelibeibi.unex.es/tengwar).
+
+N: Michał Nowakowski
+E: miszka @ limes.com.pl
+W: http://tengwarformal.limes.com.pl
+D: Made the font; maintains new versions, documentation and primary download.
+
+N: Harri Perälä
+E: harri.perala @ iki.fi
+W: http://www.sci.fi/~alboin/
+D: Was among first people to evaluate Tengwar Formal - he proposed widening of
+   Rómenlike tengwar and better tehtar spacing.
+
+N: Daniel Steven Smith
+E: fontmaster.geo @ yahoo.com
+W: http://www.geocities.com/fontmaster.geo/
+D: Made first widespread tengwar fonts. Keymapping he invented for them became
+   a de-facto standard that Tengwar Formal follows. Also he was among first
+   people to evaluate Tengwar Formal.
+
+N: Michał Świątkiewicz
+E: mimas @ tengwar.art.pl
+W: http://www.tengwar.art.pl
+D: Was among first people to evaluate and publish Tengwar Formal.
+
+N: George Williams
+E: gww @ silcom.com
+W: http://fontforge.sourceforge.net/
+D: Creator and maintainer of the tool I use to make Tengwar Formal: FontForge.
+N: Johan Winge
+E: johan.winge @ telia.com
+W: http://freetengwar.sourceforge.net/
+D: Converted the font to Unicode PUA, and added Graphite tables.
+
