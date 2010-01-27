@@ -140,7 +140,7 @@ Forward        yes
 Exclusive      yes
 
 List
-	longcarr.lig	uni200D longcarr
+	longcarrtehta	zwj longcarr
 
 
 // (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl)
@@ -162,8 +162,8 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-ZWJ	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
+ZWJ	zwj
 
            EOT  OOB  DEL  EOL  changemeiftincofollows tinco anytehta ZWJ
 StartText  1    1    1    1    2                      1     1        1
@@ -200,7 +200,7 @@ Forward        yes
 Exclusive      yes
 
 silme	silme
-ZWJ	uni200D
+ZWJ	zwj
 harma	harma
 
            EOT  OOB  DEL  EOL  silme ZWJ harma
@@ -242,8 +242,8 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-ZWJ	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
+ZWJ	zwj
 
            EOT  OOB  DEL  EOL  silme anytengwa anytehta ZWJ
 StartText  1    1    1    1    2     1         1        1
@@ -286,8 +286,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
            EOT  OOB  DEL  EOL  MayConB MayConBLow MayConR MayConRLow MayConL sarince anytehtaORzwj
 StartText  1    1    1    1    2       3          2       3          1       1       1
@@ -385,8 +385,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
            EOT  OOB  DEL  EOL  SomeMayConR SomeMayConL sarince anytehtaORzwj
 StartText  1    1    1    1    2           1           1       1
@@ -461,8 +461,8 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-ZWJ	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
+ZWJ	zwj
 
            EOT  OOB  DEL  EOL  MayConB MayConBLow MayConR MayConRLow MayConL sarince anytehta ZWJ
 StartText  1    1    1    1    2       3          2       3          1       1       1        1
@@ -566,8 +566,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
            EOT  OOB  DEL  EOL  MayConRLow MayConLLow anytehtaORzwj
 StartText  1    1    1    1    2          1          1
@@ -639,8 +639,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
            EOT  OOB  DEL  EOL  DoesConRbot sarince anytehtaORzwj
 StartText  1    1    1    1    2           1       1
@@ -685,7 +685,7 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
 
             EOT  OOB  DEL  EOL  conncarr MayConL anytehta
 StartText   1    1    1    1    2        1       1
@@ -750,8 +750,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
             EOT  OOB  DEL  EOL  conncarr calmaetc anytehtaORzwj
 StartText   1    1    1    1    2        1        1
@@ -785,7 +785,7 @@ roomenetc	roomen roomen.conl arda arda.conl
 uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
 +	revetehta yantatehta invatehta 
 downtehta	downatehta downytehta downitehta downetehta dblunderstroke downotehta
-+	downutehta underbar longcarr.tehta sarincetehta thinnas
++	downutehta underbar longcarrtehta sarincetehta thinnas
 
             EOT  OOB  DEL  EOL  roomenetc uptehta downtehta
 StartText   1    1    1    1    2         1       1
@@ -823,8 +823,8 @@ silmeetc	silme silme.lig aare
 uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
 +	revetehta yantatehta invatehta 
 downtehtaORzwj	downatehta downytehta downitehta downetehta dblunderstroke downotehta
-+	downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
           EOT  OOB  DEL  EOL  silmeetc uptehta downtehtaORzwj
 StartText 1    1    1    1    2        1       1
@@ -862,8 +862,8 @@ silmeetc	silme silme.flat silme.lig silme.lig_flat aare aare.flat
 uptehta	atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta
 +	revetehta yantatehta invatehta 
 downtehtaORzwj	downatehta downytehta downitehta downetehta dblunderstroke downotehta
-+	downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 
           EOT  OOB  DEL  EOL  silmeetc uptehta downtehtaORzwj
 StartText 1    1    1    1    2        1       1
@@ -971,8 +971,8 @@ anytehtaORzwj	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
-+	uni200D
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
++	zwj
 anytengwaBUTosse	tinco parma calma quesse ando umbar anga ungwe thuule formen harma hwesta
 +	anto ampa anca unque nuumen malta noldo nwalme oore vala anna vilya
 +	extthuule extformen extharma exthwesta extanto extampa extanca extunque
@@ -1063,7 +1063,7 @@ anytehta	atehta ytehta itehta etehta otehta utehta overbar
 +	wtehta engytehta revetehta yantatehta invatehta
 +	dotinside
 +	downatehta downytehta downitehta downetehta dblunderstroke
-+	downotehta downutehta underbar longcarr.tehta sarincetehta thinnas
++	downotehta downutehta underbar longcarrtehta sarincetehta thinnas
 
            EOT  OOB  DEL  EOL  anytengwa anytehta
 StartText  1    1    1    1    2         1
@@ -1097,7 +1097,7 @@ combiningtehta
 	downotehta downotehta.norm
 	downutehta downutehta.norm
 	underbar underbar.norm
-	longcarr.tehta longcarr.lig
+	longcarrtehta longcarrtehta
 	sarincetehta sarincetehta.norm
 	thinnas thinnas.norm
 
@@ -1119,7 +1119,7 @@ anytehtaBUTunderbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm 
 +	overbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 underbar underbar.norm
 
            EOT  OOB  DEL  EOL  roomen anytehtaBUTunderbar underbar
@@ -1153,7 +1153,7 @@ anytehtaBUTunderbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm 
 +	overbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 underbar underbar.norm
 
            EOT  OOB  DEL  EOL  nuquernar anytehtaBUTunderbar underbar
@@ -1188,7 +1188,7 @@ anytehtaBUToverbar	atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm u
 +	underbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 overbar overbar.norm
 
            EOT  OOB  DEL  EOL  silme anytehtaBUToverbar overbar
@@ -1232,7 +1232,7 @@ anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
 +	revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 themtehtar overbar.norm underbar.norm otehta.norm wtehta.norm engytehta.norm
 
            EOT  OOB  DEL  EOL  widetengwar anytehtaBUTthem themtehtar
@@ -1276,7 +1276,7 @@ anytehtaBUTotehta	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
 +	revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 +	overbar.norm underbar.norm wtehta.norm engytehta.norm
 otehta	 otehta.norm
 
@@ -1314,7 +1314,7 @@ anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
 +	revetehta.norm yantatehta.norm
 +	invatehta.norm dotinside.norm downatehta.norm downytehta.norm downitehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
-+	longcarr.lig sarincetehta.norm thinnas.norm
++	longcarrtehta sarincetehta.norm thinnas.norm
 +	wtehta.norm
 themtehtar	 otehta.norm overbar.norm underbar.norm engytehta.norm
 
@@ -1354,7 +1354,7 @@ anytehtaBUTthem	atehta.norm ytehta.norm itehta.norm etehta.norm utehta.norm
 +	downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm
 +	sarincetehta.norm thinnas.norm
 +	wtehta.norm otehta.norm overbar.norm underbar.norm engytehta.norm underbar.lambe
-longcarrtehta	 longcarr.lig
+longcarrtehta	 longcarrtehta
 
            EOT  OOB  DEL  EOL  lambe anytehtaBUTthem longcarrtehta
 StartText  1    1    1    1    2     1               1
@@ -1367,4 +1367,4 @@ sawlambe   1    1    1    1    2     2               3
 3 sawlambe  no    yes      none      widetehta
 
 widetehta
-	longcarr.lig longcarr.lig_lambe
+	longcarrtehta longcarrtehta_lambe
