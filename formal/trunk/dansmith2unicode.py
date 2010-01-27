@@ -85,7 +85,7 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'Adieresis': 'quesseC',
                'questiondown': 'roomenN',
                'scaron': 'maltaX',
-               'bullet': 'hallaRomen',
+               'bullet': 'hallaRoomen',
                'numbersign': 'tehtaA.shift4',
                'E': 'tehtaA.shift3',
                'D': 'tehtaA.shift2',
@@ -355,7 +355,7 @@ freetengenc = {'tinco': 0xE000,
                'roomenN': 0xE039,
                'maltaX': 0xE03A,
                'valaX': 0xE03B,
-               'hallaRomen': 0xE03C,
+               'hallaRoomen': 0xE03C,
                'vaiya': 0xE03D,
                'tehtaA': 0xE040,
                'tehtaAB': 0xE041,
@@ -431,6 +431,7 @@ def ucname(alias):
 
 gdh=open('TengwarFormalUC.gdh','w')
 gdh.write('table(glyph)\n')
+
 
 for thefont, encoding in dansmithenc.iteritems():
    for char, alias in sorted(encoding.iteritems(), lambda x, y: cmp(ucname(x[1]),ucname(y[1]))):

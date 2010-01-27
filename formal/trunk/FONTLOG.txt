@@ -44,9 +44,11 @@ users) may (almost certainly will) look illegible.
 
 1.3  ChangeLog
 
-?? ??? 2010 (Johan Winge & J. "Mach" Wust) Tengwar Formal Unicode Version 1.0
+?? ??? 2010 (Johan Winge & J. "Mach" Wust) Tengwar Formal Unicode Version ????
 - Converted to Unicode PUA, with smart rendering using Graphite and AAT.
-- Released as Tengwar Formal Unicode (reserved font name reused with permission.)
+- Added characters for open Anna, Vaiya, grave tehta, dot-inside tehta.
+- Changed the glyph shapes of prefeanorian quesse, Lowdham HW.
+- Released as Tengwar Formal Unicode Version ???? (reserved font name reused with permission.)
 
 14 Sep 2009 (Michał Nowakowski) Tengwar Formal Version 1.2c (bug-fix release)
 - Fixed horizontal metrics, that were rubbish, and different between
@@ -143,8 +145,8 @@ N: George Williams
 E: gww @ silcom.com
 W: http://fontforge.sourceforge.net/
 D: Creator and maintainer of the tool I use to make Tengwar Formal: FontForge.
-N: Johan Winge
+
+N: Johan Winge
 E: johan.winge @ telia.com
 W: http://freetengwar.sourceforge.net/
 D: Converted the font to Unicode PUA, and added Graphite tables.
-

@@ -75,10 +75,10 @@ table(glyph)
   Normal = (calma,quesse,aha,hwesta,oore,anna,vala,vilya,
           calmaX,quesseX,roomen,arda,silme,silmeN,esse,esseN,
           hyarmen,yanta,hwestaS,uure,osseN,lambeN,osse,carrierX,quesseC,hwestaC
-          roomenN,valaX);
+          roomenN,valaX,ps("annaX"),ps("vaiya"));
   DownNormal = (suule,formen);
-  UpNarrow = (suule,formen,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRomen);
-  DownNarrow = (tinco,parma,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRomen,roomen_alt,arda_alt);
+  UpNarrow = (suule,formen,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRoomen);
+  DownNarrow = (tinco,parma,tincoX,parmaX,aha_tinco,hwesta_tinco,hallaRoomen,roomen_alt,arda_alt);
   Carrier = (longCarrier,halla,shortCarrier);
 
   Uptehta =       (tehtaA,        tehtaY,        tehtaI,        tehtaE,        tehtaO,        tehtaU);
@@ -87,11 +87,11 @@ table(glyph)
   UptehtaNarrow = (tehtaA_shift2, tehtaY_shift2, tehtaI_shift2, tehtaE_shift2, tehtaO_shift2, tehtaU_shift2);
   UptehtaCarr =   (tehtaA_shift1, tehtaY_shift1, tehtaI_shift1, tehtaE_shift1, tehtaO_shift1, tehtaU_shift1);
 
-  Uptehta +=       (tehtaN,        tehtaW,        tehtaYanta,        tehtaAE,        tehtaBreve);
-  UptehtaWide +=   (tehtaN_wide,   tehtaW_shift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4);
-  UptehtaNormal += (tehtaN_narrow, tehtaW_shift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3);
-  UptehtaNarrow += (tehtaN_narrow, tehtaW_shift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2);
-  UptehtaCarr +=   (tehtaN_narrow, tehtaW_shift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1);
+  Uptehta +=       (tehtaN,        tehtaW,        tehtaYanta,        tehtaAE,        tehtaBreve,        ps("tehtaGrave"));
+  UptehtaWide +=   (tehtaN_wide,   tehtaW_shift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4, ps("tehtaGrave.shift4"));
+  UptehtaNormal += (tehtaN_narrow, tehtaW_shift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3, ps("tehtaGrave.shift3"));
+  UptehtaNarrow += (tehtaN_narrow, tehtaW_shift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2, ps("tehtaGrave.shift2"));
+  UptehtaCarr +=   (tehtaN_narrow, tehtaW_shift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1, ps("tehtaGrave.shift1"));
 
   Downtehta =       (tehtaAB,        tehtaYB,        tehtaIB,        tehtaEB,        tehtaEEB,        tehtaOB,        tehtaUB);
   DowntehtaWide =   (tehtaAB_shift4, tehtaYB_shift4, tehtaIB_shift4, tehtaEB_shift4, tehtaEEB_shift4, tehtaOB_shift4, tehtaUB_shift4);
@@ -109,6 +109,13 @@ table(glyph)
 
   AnyIsolTehta = (Uptehta,Downtehta);
   AnyTehta = (UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
+
+  RightCombShook = (tinco,parma,ando,umbar,suule,formen,anto,ampa,tincoX,parmaX,andoX,umbarX,nuumen,malta,oore,vala,hallaRoomen,aha_tinco,hwesta_tinco);
+  WideCombShook = (anga,ungwe,anca,unque,angaX,ungweX,noldo,nwalme);
+
+  LiftedShook = (calma,anga,aha,hwesta,anca,unque,calmaX,quesseX,angaX,ungweX,noldo,anna,hyarmen,yanta,halla,ps("annaX"),quesseC,ps("vaiya"),lambeN,roomenN);
+  RaisedShook = (quesse,ungwe,nwalme,vilya,roomen,arda,silmeN,hwestaS,hallaRoomen,osse,shortCarrier,longCarrier,carrierX);
+  LambeswashShook = (lambe,alda,esse);
 endtable;
 
 #define AnyIsolTehtar [[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
@@ -123,6 +130,12 @@ table(substitution)
     silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
 
     (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
+
+    tehtaX > tehtaX_shift4 / WideCombShook AnyTehtar _ ;
+    tehtaX > tehtaS_down / RightCombShook AnyTehtar _ ;
+    tehtaS > tehtaS_lifted / LiftedShook AnyTehtar _ ;
+    tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
+    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
 
     Uptehta > UptehtaWide / Wide AnyTehtar _ ;
     Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
