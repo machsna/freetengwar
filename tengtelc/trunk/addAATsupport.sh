@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CpMac tengtelc.ttf tengtelc-ftx.ttf
-CpMac tengtelcb.ttf tengtelcb-ftx.ttf
-ftxenhancer -m tengtelc-ftx.mif tengtelc-ftx.ttf
-ftxenhancer -m tengtelc-ftx.mif tengtelcb-ftx.ttf
+CpMac tengtelc.ttf tengtelc-incompleteAAT.ttf
+CpMac tengtelcb.ttf tengtelcb-incompleteAAT.ttf
+ftxenhancer -m tengtelc-AAT.mif tengtelc-incompleteAAT.ttf
+ftxenhancer -m tengtelc-AAT.mif tengtelcb-incompleteAAT.ttf
 
