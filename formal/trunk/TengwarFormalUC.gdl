@@ -87,11 +87,11 @@ table(glyph)
   UptehtaNarrow = (tehtaA_shift2, tehtaY_shift2, tehtaI_shift2, tehtaE_shift2, tehtaO_shift2, tehtaU_shift2);
   UptehtaCarr =   (tehtaA_shift1, tehtaY_shift1, tehtaI_shift1, tehtaE_shift1, tehtaO_shift1, tehtaU_shift1);
 
-  Uptehta +=       (tehtaN,        tehtaW,        tehtaYanta,        tehtaAE,        tehtaBreve,        ps("tehtaGrave"));
-  UptehtaWide +=   (tehtaN_wide,   tehtaW_shift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4, ps("tehtaGrave.shift4"));
-  UptehtaNormal += (tehtaN_narrow, tehtaW_shift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3, ps("tehtaGrave.shift3"));
-  UptehtaNarrow += (tehtaN_narrow, tehtaW_shift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2, ps("tehtaGrave.shift2"));
-  UptehtaCarr +=   (tehtaN_narrow, tehtaW_shift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1, ps("tehtaGrave.shift1"));
+  Uptehta +=       (tehtaN,        ps("tehtaN.narrowlow"), tehtaW,        ps("tehtaW.combshift2"), tehtaYanta,        tehtaAE,        tehtaBreve,        ps("tehtaGrave"),        ps("tehtaO_tehtaI.shift2"), ps("tehtaU_tehtaI.shift2"));
+  UptehtaWide +=   (tehtaN_wide,   ps("tehtaN.widelow"),   tehtaW_shift4, ps("tehtaW.combshift4"), tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4, ps("tehtaGrave.shift4"), ps("tehtaO_tehtaI.shift4"), ps("tehtaU_tehtaI.shift4"));
+  UptehtaNormal += (tehtaN_narrow, ps("tehtaN.narrowlow"), tehtaW_shift3, ps("tehtaW.combshift3"), tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3, ps("tehtaGrave.shift3"), ps("tehtaO_tehtaI.shift3"), ps("tehtaU_tehtaI.shift3"));
+  UptehtaNarrow += (tehtaN_narrow, ps("tehtaN.narrowlow"), tehtaW_shift2, ps("tehtaW.combshift2"), tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2, ps("tehtaGrave.shift2"), ps("tehtaO_tehtaI.shift2"), ps("tehtaU_tehtaI.shift2"));
+  UptehtaCarr +=   (tehtaN_narrow, ps("tehtaN.narrowlow"), tehtaW_shift1, ps("tehtaW.combshift1"), tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1, ps("tehtaGrave.shift1"), ps("tehtaO_tehtaI.shift1"), ps("tehtaU_tehtaI.shift1"));
 
   Downtehta =       (tehtaAB,        tehtaYB,        tehtaIB,        tehtaEB,        tehtaEEB,        tehtaOB,        tehtaUB);
   DowntehtaWide =   (tehtaAB_shift4, tehtaYB_shift4, tehtaIB_shift4, tehtaEB_shift4, tehtaEEB_shift4, tehtaOB_shift4, tehtaUB_shift4);
@@ -116,6 +116,7 @@ table(glyph)
   LiftedShook = (calma,anga,aha,hwesta,anca,unque,calmaX,quesseX,angaX,ungweX,noldo,anna,hyarmen,yanta,halla,ps("annaX"),quesseC,ps("vaiya"),lambeN,roomenN);
   RaisedShook = (quesse,ungwe,nwalme,vilya,roomen,arda,silmeN,hwestaS,hallaRoomen,osse,shortCarrier,longCarrier,carrierX);
   LambeswashShook = (lambe,alda,esse);
+
 endtable;
 
 #define AnyIsolTehtar [[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
@@ -128,6 +129,10 @@ table(substitution)
     aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
     hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
     silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
+    tehtaI tehtaO > ps("tehtaO_tehtaI.shift2"):(1 2) _ ;
+    tehtaO tehtaI > ps("tehtaO_tehtaI.shift2"):(1 2) _ ;
+    tehtaI tehtaU > ps("tehtaU_tehtaI.shift2"):(1 2) _ ;
+    tehtaU tehtaI > ps("tehtaU_tehtaI.shift2"):(1 2) _ ;
 
     (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
 
@@ -136,6 +141,12 @@ table(substitution)
     tehtaS > tehtaS_lifted / LiftedShook AnyTehtar _ ;
     tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
     tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
+
+    tehtaN > ps("tehtaN.narrowlow") / _ AnyTehtar Uptehta ;
+    tehtaN > ps("tehtaN.narrowlow") / Uptehta AnyTehtar _ ;
+
+	tehtaW > ps("tehtaW.combshift2") / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,ps("tehtaW.combshift2"),tehtaYanta,tehtaAE,tehtaBreve,ps("tehtaGrave"),ps("tehtaO_tehtaI.shift2"),ps("tehtaU_tehtaI.shift2")) ;
+	tehtaW > ps("tehtaW.combshift2") / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,ps("tehtaW.combshift2"),tehtaYanta,tehtaAE,tehtaBreve,ps("tehtaGrave"),ps("tehtaO_tehtaI.shift2"),ps("tehtaU_tehtaI.shift2")) AnyTehtar _ ;
 
     Uptehta > UptehtaWide / Wide AnyTehtar _ ;
     Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
