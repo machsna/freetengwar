@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1264509410
-ModificationTime: 1264678677
+ModificationTime: 1264698914
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -35,6 +35,7 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
+OS2Vendor: 'PfEd'
 DEI: 91125
 LangName: 1033 "" "" "" "FontTengwarFormalUnicode10" "" "" "" "" "" "Micha+AUIA Nowakowski" "" "" "http://tengwarformal.limes.com.pl" "" "http://scripts.sil.org/OFL" 
 Encoding: UnicodeBmp
@@ -43,7 +44,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 65600 16 10
+WinInfo: 65616 16 10
 Grid
 -716 190 m 1
  -721.098 216.751 -723.765 246.418 -724 279 c 0
@@ -130,7 +131,7 @@ Grid
  -507.867 952.4 -519.533 962.066 -521 965 c 0
  -522.333 967 -523 969.333 -523 972 c 0
 EndSplineSet
-BeginChars: 65780 291
+BeginChars: 65780 303
 
 StartChar: comma
 Encoding: 44 44 0
@@ -5023,22 +5024,22 @@ Flags: HW
 LayerCount: 2
 Fore
 SplineSet
-10 1300 m 0
- 42 1300 58 1279 58 1237 c 0
- 58 1201 38 1166.33 -2 1133 c 0
- -25.3333 1112.33 -41.6667 1102 -51 1102 c 0
- -57.6667 1102 -61 1104.67 -61 1110 c 0
- -61 1112.67 -54.6667 1120 -42 1132 c 0
- -27.3333 1147.33 -20 1162 -20 1176 c 0
- -20 1194 -26 1206.67 -38 1214 c 0
- -41.3333 1216 -44.3333 1217 -47 1217 c 0
- -75 1217 -144.333 1154 -255 1028 c 2
- -282 997 l 2
- -318 955 -342 934 -354 934 c 0
- -359.333 934 -362 936 -362 940 c 0
- -362 951.333 -335 990 -281 1056 c 0
- -191.667 1166.67 -115.333 1240.67 -52 1278 c 0
- -27.3333 1292.67 -6.66667 1300 10 1300 c 0
+10 1300 m 4
+ 42 1300 58 1279 58 1237 c 4
+ 58 1201 38 1166.33 -2 1133 c 4
+ -25.3333 1112.33 -41.6667 1102 -51 1102 c 4
+ -57.6667 1102 -61 1104.67 -61 1110 c 4
+ -61 1112.67 -54.6667 1120 -42 1132 c 4
+ -27.3333 1147.33 -20 1162 -20 1176 c 4
+ -20 1194 -26 1206.67 -38 1214 c 4
+ -41.3333 1216 -44.3333 1217 -47 1217 c 4
+ -75 1217 -144.333 1154 -255 1028 c 6
+ -282 997 l 6
+ -318 955 -342 934 -354 934 c 4
+ -359.333 934 -362 936 -362 940 c 4
+ -362 951.333 -335 990 -281 1056 c 4
+ -191.667 1166.67 -115.333 1240.67 -52 1278 c 4
+ -27.3333 1292.67 -6.66667 1300 10 1300 c 4
 EndSplineSet
 Validated: 1
 EndChar
@@ -9266,8 +9267,18 @@ VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 98 -1 S 1 0 0 1 -228 16 2
-Refer: 133 -1 N 1 0 0 1 0 0 2
+SplineSet
+-202.105 1228.87 m 0
+ -204.772 1228.87 -206.105 1230.2 -206.105 1232.87 c 0
+ -206.105 1253.1 -127.473 1321.69 -82 1325 c 1
+ -41.3333 1325 -21 1304.67 -21 1264 c 0
+ -21 1138.3 -328.731 930 -358 930 c 0
+ -361.333 930 -363 931.333 -363 934 c 0
+ -363 958.907 -107 1115.76 -107 1210 c 0
+ -107 1241.33 -117 1258 -137 1260 c 1
+ -160.421 1260 -194.546 1228.87 -202.105 1228.87 c 0
+EndSplineSet
+Refer: 98 -1 N 1 0 0 1 -176 60 2
 Validated: 1
 EndChar
 
@@ -9278,8 +9289,7 @@ VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 98 -1 S 1 0 0 1 -340 28 2
-Refer: 134 -1 N 1 0 0 1 0 0 2
+Refer: 281 -1 N 1 0 0 1 -140 0 2
 Validated: 1
 EndChar
 
@@ -9290,9 +9300,8 @@ VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 98 -1 S 1 0 0 1 -484 36 2
-Refer: 135 -1 N 1 0 0 1 0 0 2
-Validated: 5
+Refer: 281 -1 N 1 0 0 1 -288 0 2
+Validated: 1
 EndChar
 
 StartChar: tehtaU_tehtaI.shift4
@@ -9302,9 +9311,8 @@ VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 98 -1 N 1 0 0 1 -624 40 2
-Refer: 136 -1 N 1 0 0 1 0 0 2
-Validated: 5
+Refer: 281 -1 N 1 0 0 1 -428 0 2
+Validated: 1
 EndChar
 
 StartChar: tehtaN.widelow
@@ -9354,7 +9362,7 @@ SplineSet
  6.00586 1083 l 1
  2.00586 1083 l 2
 EndSplineSet
-Validated: 524289
+Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift2
@@ -9382,7 +9390,7 @@ SplineSet
  -212 1083 l 1
  -216 1083 l 2
 EndSplineSet
-Validated: 524289
+Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift3
@@ -9410,7 +9418,7 @@ SplineSet
  -274 1083 l 1
  -278 1083 l 2
 EndSplineSet
-Validated: 524289
+Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift4
@@ -9438,6 +9446,214 @@ SplineSet
  -408 1083 l 1
  -412 1083 l 2
 EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: tehtaO_tehtaO.shift1
+Encoding: 65756 -1 291
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-363.985 955.555 m 4
+ -363.985 1054.43 -296.346 1442.62 -194.887 1442.62 c 4
+ -165.892 1442.62 -132.766 1401.89 -132.766 1351.28 c 4
+ -132.766 1316.91 -157.508 1231.21 -179.613 1231.21 c 4
+ -182.67 1231.21 -186.257 1233.37 -186.257 1237.67 c 4
+ -186.257 1247.62 -177.218 1267.53 -177.218 1287.43 c 4
+ -177.218 1316.57 -197.439 1336.3 -217.915 1336.8 c 6
+ -218.455 1336.81 l 6
+ -236.353 1336.81 -263.956 1312.03 -312.842 1067.22 c 5
+ -320.725 1026.88 l 6
+ -334.378 953.915 -346.253 934.565 -356.862 934.565 c 4
+ -362.561 934.565 -363.985 942.249 -363.985 955.555 c 4
+EndSplineSet
+Refer: 121 -1 N 1 0 0 1 0 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaO_tehtaO.shift2
+Encoding: 65757 -1 292
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-503.117 955.659 m 0
+ -503.117 1054.52 -435.478 1442.71 -334.019 1442.71 c 0
+ -305.023 1442.71 -271.897 1401.98 -271.897 1351.37 c 0
+ -271.897 1317 -296.64 1231.3 -318.745 1231.3 c 0
+ -321.802 1231.3 -325.389 1233.46 -325.389 1237.77 c 0
+ -325.389 1247.72 -316.35 1267.62 -316.35 1287.52 c 0
+ -316.35 1316.66 -336.571 1336.39 -357.047 1336.9 c 2
+ -357.587 1336.9 l 2
+ -375.484 1336.9 -403.088 1312.12 -451.974 1067.31 c 1
+ -459.856 1026.97 l 2
+ -473.511 954.019 -485.385 934.669 -495.994 934.669 c 0
+ -501.692 934.669 -503.117 942.353 -503.117 955.659 c 0
+EndSplineSet
+Refer: 122 -1 N 1 0 0 1 0 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaO_tehtaO.shift3
+Encoding: 65758 -1 293
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-644.922 955.385 m 4
+ -644.922 1054.25 -577.281 1442.43 -475.822 1442.43 c 4
+ -446.828 1442.43 -413.701 1401.71 -413.701 1351.1 c 4
+ -413.701 1316.73 -438.443 1231.04 -460.549 1231.04 c 4
+ -463.605 1231.04 -467.193 1233.19 -467.193 1237.49 c 4
+ -467.193 1247.45 -458.154 1267.35 -458.154 1287.25 c 4
+ -458.154 1316.39 -478.375 1336.12 -498.852 1336.62 c 6
+ -499.391 1336.63 l 6
+ -517.289 1336.63 -544.893 1311.85 -593.777 1067.04 c 5
+ -601.66 1026.7 l 6
+ -615.314 953.745 -627.189 934.396 -637.799 934.396 c 4
+ -643.496 934.396 -644.922 942.079 -644.922 955.385 c 4
+EndSplineSet
+Refer: 123 -1 N 1 0 0 1 0 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaO_tehtaO.shift4
+Encoding: 65759 -1 294
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-781.927 955.381 m 4
+ -781.927 1054.25 -714.287 1442.43 -612.828 1442.43 c 4
+ -583.833 1442.43 -550.707 1401.7 -550.707 1351.09 c 4
+ -550.707 1316.72 -575.449 1231.03 -597.555 1231.03 c 4
+ -600.611 1231.03 -604.198 1233.18 -604.198 1237.49 c 4
+ -604.198 1247.44 -595.159 1267.34 -595.159 1287.25 c 4
+ -595.159 1316.38 -615.381 1336.11 -635.856 1336.62 c 6
+ -636.396 1336.63 l 6
+ -654.294 1336.63 -681.897 1311.85 -730.783 1067.04 c 5
+ -738.666 1026.69 l 6
+ -752.32 953.741 -764.194 934.392 -774.804 934.392 c 4
+ -780.502 934.392 -781.927 942.075 -781.927 955.381 c 4
+EndSplineSet
+Refer: 124 -1 N 1 0 0 1 0 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaU_tehtaU.shift1
+Encoding: 65760 -1 295
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-377.991 1279.14 m 0
+ -377.991 1269.98 -375.15 1267.1 -373.256 1267.1 c 0
+ -362.76 1267.1 -349.465 1330.33 -317.276 1330.33 c 0
+ -302.362 1330.33 -269.436 1309.94 -269.436 1254.73 c 0
+ -269.436 1152.64 -363.831 967.937 -363.831 934.76 c 0
+ -363.831 931.391 -362.858 929.585 -360.715 929.585 c 0
+ -337.499 929.585 -217.08 1185.09 -217.08 1321.48 c 0
+ -217.08 1397.95 -254.282 1422.39 -279.084 1422.39 c 0
+ -346.155 1422.39 -377.991 1304.12 -377.991 1279.14 c 0
+-202.105 1228.87 m 4
+ -194.546 1228.87 -160.421 1260 -137 1260 c 5
+ -117 1258 -107 1241.33 -107 1210 c 4
+ -107 1115.76 -363 958.907 -363 934 c 4
+ -363 931.333 -361.333 930 -358 930 c 4
+ -328.731 930 -21 1138.3 -21 1264 c 4
+ -21 1304.67 -41.3333 1325 -82 1325 c 5
+ -127.473 1321.69 -206.105 1253.1 -206.105 1232.87 c 4
+ -206.105 1230.2 -204.772 1228.87 -202.105 1228.87 c 4
+EndSplineSet
+Validated: 5
+EndChar
+
+StartChar: tehtaU_tehtaU.shift2
+Encoding: 65761 -1 296
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 295 -1 N 1 0 0 1 -140 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaU_tehtaU.shift3
+Encoding: 65762 -1 297
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 295 -1 N 1 0 0 1 -289 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaU_tehtaU.shift4
+Encoding: 65763 -1 298
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 295 -1 N 1 0 0 1 -430 0 2
+Validated: 5
+EndChar
+
+StartChar: tehtaE_tehtaE.shift1
+Encoding: 65764 -1 299
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 116 -1 N 1 0 0 1 333 1062 2
+Validated: 1
+EndChar
+
+StartChar: tehtaE_tehtaE.shift2
+Encoding: 65765 -1 300
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 116 -1 N 1 0 0 1 201 1062 2
+Validated: 1
+EndChar
+
+StartChar: tehtaE_tehtaE.shift3
+Encoding: 65766 -1 301
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 116 -1 N 1 0 0 1 69 1059 2
+Validated: 1
+EndChar
+
+StartChar: tehtaE_tehtaE.shift4
+Encoding: 65767 -1 302
+Width: 0
+VWidth: 1000
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 116 -1 N 1 0 0 1 -60 1059 2
+Validated: 1
 EndChar
 EndChars
 EndSplineFont
