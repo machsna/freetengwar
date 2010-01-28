@@ -48,7 +48,8 @@ users) may (almost certainly will) look illegible.
 - Converted to Unicode PUA, with smart rendering using Graphite and AAT.
 - Added characters for open Anna, Vaiya, grave tehta, dot-inside tehta.
 - Changed the glyph shapes of prefeanorian quesse, Lowdham HW.
-- Added glyphs for OI tehtar ligature, UI tehtar ligature, lower nasal bar, smaller following-w.
+- Added glyphs for lower nasal bar, smaller following-w, and for the tehtar
+  ligatures EE, OI, OO, UI, UU.
 - Released as Tengwar Formal Unicode Version ???? (reserved font name reused with permission.)
 
 14 Sep 2009 (Michał Nowakowski) Tengwar Formal Version 1.2c (bug-fix release)

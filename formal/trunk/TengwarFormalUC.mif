@@ -511,6 +511,18 @@ List
 	tehtaU_tehtaI.shift2	tehtaI.shift2 tehtaU.shift2
 	tehtaU_tehtaI.shift1	tehtaU.shift1 tehtaI.shift1
 	tehtaU_tehtaI.shift1	tehtaI.shift1 tehtaU.shift1
+	tehtaE_tehtaE.shift1	tehtaE.shift1 tehtaE.shift1
+	tehtaE_tehtaE.shift2	tehtaE.shift2 tehtaE.shift2
+	tehtaE_tehtaE.shift3	tehtaE.shift3 tehtaE.shift3
+	tehtaE_tehtaE.shift4	tehtaE.shift4 tehtaE.shift4
+	tehtaO_tehtaO.shift1	tehtaO.shift1 tehtaO.shift1
+	tehtaO_tehtaO.shift2	tehtaO.shift2 tehtaO.shift2
+	tehtaO_tehtaO.shift3	tehtaO.shift3 tehtaO.shift3
+	tehtaO_tehtaO.shift4	tehtaO.shift4 tehtaO.shift4
+	tehtaU_tehtaU.shift1	tehtaU.shift1 tehtaU.shift1
+	tehtaU_tehtaU.shift2	tehtaU.shift2 tehtaU.shift2
+	tehtaU_tehtaU.shift3	tehtaU.shift3 tehtaU.shift3
+	tehtaU_tehtaU.shift4	tehtaU.shift4 tehtaU.shift4
 	aha_tinco	aha zwj tinco
 	hwesta_tinco	hwesta zwj tinco
 	silme_aha	silme zwj aha

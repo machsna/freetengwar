@@ -151,7 +151,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe suule formen aha hwesta
 oomauptehtar	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaAE tehtaAE.shift1 tehtaAE.shift2 tehtaAE.shift3 tehtaAE.shift4
 +	tehtaBreve tehtaBreve.shift1 tehtaBreve.shift2 tehtaBreve.shift3 tehtaBreve.shift4
-+	tehtaE tehtaE.shift1 tehtaE.shift2 tehtaE.shift3 tehtaE.shift4
 +	tehtaGrave tehtaGrave.shift1 tehtaGrave.shift2 tehtaGrave.shift3 tehtaGrave.shift4
 +	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
 +	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
@@ -172,20 +171,23 @@ othertehtar	tehtaAB tehtaAB.shift1 tehtaAB.shift2 tehtaAB.shift3 tehtaAB.shift4
 +	tehtaW.combshift1 tehtaW.combshift2 tehtaW.combshift3 tehtaW.combshift4
 +	tehtaX tehtaX.shift4 tehtaS.down
 +	tehtaYB tehtaYB.lambe tehtaYB.shift1 tehtaYB.shift2 tehtaYB.shift3 tehtaYB.shift4
+tehtaE	tehtaE tehtaE.shift1 tehtaE.shift2 tehtaE.shift3 tehtaE.shift4
 
-           EOT  OOB  DEL  EOL  tengwar oomauptehtar tehtaI tehtaO tehtaU othertehtar
-StartText  1    1    1    1    2       3            4      5      6      7
-StartLine  1    1    1    1    2       3            4      5      6      7
-sawtengwa  1    1    1    1    2       8            9      10     11     2
-tehtaalone 12   12   1    12   13      14           15     16     17     18
-Ialone     12   12   1    12   13      14           15     18     18     18
-Oalone     12   12   1    12   13      14           18     16     17     18
-Ualone     12   12   1    12   13      14           18     16     17     18
-otheralone 12   12   1    12   13      18           19     20     21     22
-sawtehta   1    1    1    1    2       3            4      5      6      8
-sawI       1    1    1    1    2       3            4      8      8      9
-sawO       1    1    1    1    2       3            8      5      6      10
-sawU       1    1    1    1    2       3            8      5      6      11
+           EOT  OOB  DEL  EOL  tengwar oomauptehtar tehtaI tehtaO tehtaU othertehtar tehtaE
+StartText  1    1    1    1    2       3            4      5      6      7           23
+StartLine  1    1    1    1    2       3            4      5      6      7           23
+sawtengwa  1    1    1    1    2       8            9      10     11     2           24
+tehtaalone 12   12   1    12   13      14           15     16     17     18          25
+Ialone     12   12   1    12   13      14           15     18     18     18          25
+Oalone     12   12   1    12   13      14           18     18     17     18          25
+Ualone     12   12   1    12   13      14           18     16     18     18          25
+Ealone     12   12   1    12   13      14           18     16     17     18          18
+otheralone 12   12   1    12   13      18           19     20     21     22          26
+sawtehta   1    1    1    1    2       3            4      5      6      8           23
+sawI       1    1    1    1    2       3            4      8      8      9           23
+sawO       1    1    1    1    2       3            8      8      6      10          23
+sawU       1    1    1    1    2       3            8      5      8      11          23
+sawE       1    1    1    1    2       3            4      5      6      24          8
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
@@ -210,6 +212,10 @@ sawU       1    1    1    1    2       3            8      5      6      11
 20 Oalone     no    yes      none        none
 21 Ualone     no    yes      none        none
 22 otheralone no    yes      none        none
+23 Ealone     yes   yes      none        none
+24 sawE       no    yes      none        none
+25 sawE       no    yes      carrier     carrier
+26 Ealone     no    yes      none        none
 
 carrier
 	IsKashidaLike yes
@@ -599,6 +605,18 @@ List
 	tehtaU_tehtaI.shift2	tehtaI.shift2 tehtaU.shift2
 	tehtaU_tehtaI.shift1	tehtaU.shift1 tehtaI.shift1
 	tehtaU_tehtaI.shift1	tehtaI.shift1 tehtaU.shift1
+	tehtaE_tehtaE.shift1	tehtaE.shift1 tehtaE.shift1
+	tehtaE_tehtaE.shift2	tehtaE.shift2 tehtaE.shift2
+	tehtaE_tehtaE.shift3	tehtaE.shift3 tehtaE.shift3
+	tehtaE_tehtaE.shift4	tehtaE.shift4 tehtaE.shift4
+	tehtaO_tehtaO.shift1	tehtaO.shift1 tehtaO.shift1
+	tehtaO_tehtaO.shift2	tehtaO.shift2 tehtaO.shift2
+	tehtaO_tehtaO.shift3	tehtaO.shift3 tehtaO.shift3
+	tehtaO_tehtaO.shift4	tehtaO.shift4 tehtaO.shift4
+	tehtaU_tehtaU.shift1	tehtaU.shift1 tehtaU.shift1
+	tehtaU_tehtaU.shift2	tehtaU.shift2 tehtaU.shift2
+	tehtaU_tehtaU.shift3	tehtaU.shift3 tehtaU.shift3
+	tehtaU_tehtaU.shift4	tehtaU.shift4 tehtaU.shift4
 	aha_tinco	aha zwj tinco
 	hwesta_tinco	hwesta zwj tinco
 	silme_aha	silme zwj aha
