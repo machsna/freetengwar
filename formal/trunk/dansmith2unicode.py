@@ -6,6 +6,8 @@ import psMat
 outfont=fontforge.font()
 outfont.encoding="unicode"
 outfont.em=2048
+for layer in outfont.layers:
+  outfont.layers[layer].is_quadratic = True;
 
 outfont.fontname='TengwarFormalUnicode-Regular'
 outfont.familyname='Tengwar Formal Unicode'
@@ -22,7 +24,8 @@ outfont.version='1.0'
 outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalUnicode10'),
                     ('English (US)', 'Designer', 'Micha\xc5\x82 Nowakowski'),
                     ('English (US)', 'Designer URL', 'http://tengwarformal.limes.com.pl'),
-                    ('English (US)', 'License URL', 'http://scripts.sil.org/OFL')
+                    ('English (US)', 'License URL', 'http://scripts.sil.org/OFL'),
+                    ('English (US)', 'Vendor URL', 'http://freetengwar.sourceforge.net/')
                    )
 
 dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
@@ -82,10 +85,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'bracketright': 'osse',
                'daggerdbl': 'osse.alt',
                'onequarter': 'carrierX',
-               'Adieresis': 'quesseC',
+               #'Adieresis': 'quesseC', # Use a newly drawn glyph instead
                'questiondown': 'roomenN',
                'scaron': 'maltaX',
-               'bullet': 'hallaRoomen',
+               'bullet': 'hallaRoomen.alt',
                'numbersign': 'tehtaA.shift4',
                'E': 'tehtaA.shift3',
                'D': 'tehtaA.shift2',
@@ -266,36 +269,79 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'F': 'tehtaW.narrowshift2',
                'V': 'tehtaW.narrowshift1',
                'braceright': 'tehtaS.swashhyarmen',
+              },
+
+              fontforge.open("TengwarFormalUC-addchar.sfd"): {
+               'tengwarQuadruplepusta': 'tengwarQuadruplepusta',
+               'uni10FB': 'uni10FB',
+               'uni2E2C': 'uni2E2C',
+               'tengwarQuintuplepusta': 'tengwarQuintuplepusta',
+               'annaX': 'annaX',
+               'quesseC': 'quesseC',
+               'hallaRoomen': 'hallaRoomen',
+               'vaiya': 'vaiya',
+               'tehtaGrave.shift1': 'tehtaGrave.shift1',
+               'tehtaGrave.shift2': 'tehtaGrave.shift2',
+               'tehtaGrave.shift3': 'tehtaGrave.shift3',
+               'tehtaGrave.shift4': 'tehtaGrave.shift4',
+               'tehtaDotInside': 'tehtaDotInside',
+               'tehtaN.narrowlow': 'tehtaN.narrowlow',
+               'tehtaN.widelow': 'tehtaN.widelow',
+               'tehtaW.combshift1': 'tehtaW.combshift1',
+               'tehtaW.combshift2': 'tehtaW.combshift2',
+               'tehtaW.combshift3': 'tehtaW.combshift3',
+               'tehtaW.combshift4': 'tehtaW.combshift4',
+               'tehtaE_tehtaE.shift1': 'tehtaE_tehtaE.shift1',
+               'tehtaE_tehtaE.shift2': 'tehtaE_tehtaE.shift2',
+               'tehtaE_tehtaE.shift3': 'tehtaE_tehtaE.shift3',
+               'tehtaE_tehtaE.shift4': 'tehtaE_tehtaE.shift4',
+               'tehtaO_tehtaI.shift1': 'tehtaO_tehtaI.shift1',
+               'tehtaO_tehtaI.shift2': 'tehtaO_tehtaI.shift2',
+               'tehtaO_tehtaI.shift3': 'tehtaO_tehtaI.shift3',
+               'tehtaO_tehtaI.shift4': 'tehtaO_tehtaI.shift4',
+               'tehtaO_tehtaO.shift1': 'tehtaO_tehtaO.shift1',
+               'tehtaO_tehtaO.shift2': 'tehtaO_tehtaO.shift2',
+               'tehtaO_tehtaO.shift3': 'tehtaO_tehtaO.shift3',
+               'tehtaO_tehtaO.shift4': 'tehtaO_tehtaO.shift4',
+               'tehtaU_tehtaI.shift1': 'tehtaU_tehtaI.shift1',
+               'tehtaU_tehtaI.shift2': 'tehtaU_tehtaI.shift2',
+               'tehtaU_tehtaI.shift3': 'tehtaU_tehtaI.shift3',
+               'tehtaU_tehtaI.shift4': 'tehtaU_tehtaI.shift4',
+               'tehtaU_tehtaU.shift1': 'tehtaU_tehtaU.shift1',
+               'tehtaU_tehtaU.shift2': 'tehtaU_tehtaU.shift2',
+               'tehtaU_tehtaU.shift3': 'tehtaU_tehtaU.shift3',
+               'tehtaU_tehtaU.shift4': 'tehtaU_tehtaU.shift4',
               }}
 
-references =  {'tehtaA.shift2': 'tehtaA',
-               'tehtaAB.shift2': 'tehtaAB',
-               'tehtaY.shift2': 'tehtaY',
-               'tehtaYB.shift2': 'tehtaYB',
-               'tehtaI.shift2': 'tehtaI',
-               'tehtaIB.shift2': 'tehtaIB',
-               'tehtaE.shift2': 'tehtaE',
-               'tehtaEB.shift2': 'tehtaEB',
-               'tehtaEEB.shift2': 'tehtaEEB',
-               'tehtaO.shift2': 'tehtaO',
-               'tehtaOB.shift2': 'tehtaOB',
-               'tehtaU.shift2': 'tehtaU',
-               'tehtaUB.shift2': 'tehtaUB',
-               'tehtaN.narrow': 'tehtaN',
-               'tehtaB.narrow': 'tehtaB',
-               'tehtaW.shift2': 'tehtaW',
-               'tehtaBreve.shift2': 'tehtaBreve',
-               'tehtaYanta.shift2': 'tehtaYanta',
-               'tehtaAE.shift2': 'tehtaAE',
-               'tehtaThinnas.shift2': 'tehtaThinnas',
-               'tehtaX.shift3': 'tehtaX',
-               'tengwarPusta': 'uni2E31',
-               'tengwarDoublepusta': 'colon',
-               'tengwarTriplepusta': 'uni205D',
-               'tengwarQuadruplepusta': 'uni2058',
-               'tengwarQuintuplepusta': 'uni2E2D',
-               'tengwardigit0': 'osseN',
-              }
+references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
+              ('tehtaAB','tehtaAB.shift2',psMat.identity(),0),
+              ('tehtaY','tehtaY.shift2',psMat.identity(),0),
+              ('tehtaYB','tehtaYB.shift2',psMat.identity(),0),
+              ('tehtaI','tehtaI.shift2',psMat.identity(),0),
+              ('tehtaIB','tehtaIB.shift2',psMat.identity(),0),
+              ('tehtaE','tehtaE.shift2',psMat.identity(),0),
+              ('tehtaEB','tehtaEB.shift2',psMat.identity(),0),
+              ('tehtaEEB','tehtaEEB.shift2',psMat.identity(),0),
+              ('tehtaO','tehtaO.shift2',psMat.identity(),0),
+              ('tehtaOB','tehtaOB.shift2',psMat.identity(),0),
+              ('tehtaU','tehtaU.shift2',psMat.identity(),0),
+              ('tehtaUB','tehtaUB.shift2',psMat.identity(),0),
+              ('tehtaN','tehtaN.narrow',psMat.identity(),0),
+              ('tehtaB','tehtaB.narrow',psMat.identity(),0),
+              ('tehtaW','tehtaW.shift2',psMat.identity(),0),
+              ('tehtaBreve','tehtaBreve.shift2',psMat.identity(),0),
+              ('tehtaGrave','tehtaGrave.shift2',psMat.identity(),0),
+              ('tehtaYanta','tehtaYanta.shift2',psMat.identity(),0),
+              ('tehtaAE','tehtaAE.shift2',psMat.identity(),0),
+              ('tehtaThinnas','tehtaThinnas.shift2',psMat.identity(),0),
+              ('tehtaX','tehtaX.shift3',psMat.identity(),0),
+              ('uni2E31','tengwarPusta',psMat.identity(),-1),
+              ('colon','tengwarDoublepusta',psMat.identity(),-1),
+              ('uni205D','tengwarTriplepusta',psMat.identity(),-1),
+              ('uni2058','tengwarQuadruplepusta',psMat.identity(),-1),
+              ('uni2E2D','tengwarQuintuplepusta',psMat.identity(),-1),
+              ('osseN','tengwardigit0',psMat.identity(),-1),
+             ]
 
 freetengenc = {'tinco': 0xE000,
                'parma': 0xE001,
@@ -424,103 +470,52 @@ def ucname(alias):
      if len(name)>0:
        name=name+'_'
      if comp in freetengenc:
-       name=name+ 'uni' + hex(freetengenc[comp])[2:].upper() + var
+       name=name+'uni' + hex(freetengenc[comp])[2:].upper()
      else:
-       name=name+ comp+var
-   return name
+       name=name+comp
+   return name+var
 
 gdh=open('TengwarFormalUC.gdh','w')
 gdh.write('table(glyph)\n')
-
 
 for thefont, encoding in dansmithenc.iteritems():
    for char, alias in sorted(encoding.iteritems(), lambda x, y: cmp(ucname(x[1]),ucname(y[1]))):
       ucchar=alias
       thefont.selection.select(char)
-      thefont[char].unlinkRef()
+      newrefs=[]
+      for ref in thefont[char].references:
+         if thefont[ref[0]].unicode>0 and ref[0] in encoding:
+            newrefname=encoding[ref[0]]
+         else:
+            newrefname=ref[0]
+         references.append((ucchar,newrefname,ref[1],thefont[char].width))
+      thefont[char].references=()
       thefont.copy()
       thefont.clear()
-      outfont.createChar(-1,ucchar)
+      outfont.createChar(-1,ucchar).width=thefont[char].width
       outfont.selection.select(ucchar)
       outfont.paste()
+      if ucchar in outfont:
+        outfont[ucchar].references=()
+        gdh.write('  ' + alias.replace('.', '_') + ' = ps("' + ucchar + '");\n')
       if alias in freetengenc:
         outfont[ucchar].unicode=freetengenc[alias]
-      gdh.write('  ' + alias.replace('.', '_') + ' = ps("' + ucchar + '");\n')
 
 outfont.createChar(0x200B,"zwsp").width=0
 outfont.createChar(0x200C,"zwnj").width=0
 outfont.createChar(0x200D,"zwj").width=0
 gdh.write('  ZWJ = ps("zwj");\n')
 
-ucchar='tengwarQuadruplepusta'
-outfont.createChar(-1,ucchar).width=0;
-outfont.selection.select('tengwarPusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.paste()
-outfont.transform(psMat.translate(130*outfont.em/1000,0))
-outfont.selection.select('tengwarDoublepusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-outfont.transform(psMat.translate(130*outfont.em/1000,0))
-outfont.selection.select('tengwarPusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-outfont[ucchar].unicode=freetengenc[ucchar]
-
-ucchar='uni10FB'
-outfont.createChar(-1,ucchar).width=0;
-outfont.selection.select('tengwarPusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.paste()
-outfont.transform(psMat.translate(150*outfont.em/1000,0))
-outfont.selection.select('tengwarDoublepusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-
-ucchar='uni2E2C'
-outfont.createChar(-1,ucchar).width=0;
-outfont.selection.select('tengwarDoublepusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.paste()
-outfont.transform(psMat.translate(206*outfont.em/1000,0))
-outfont.selection.select('tengwarDoublepusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-
-ucchar='tengwarQuintuplepusta'
-outfont.createChar(-1,ucchar).width=0;
-outfont.selection.select('tengwarPusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.paste()
-outfont.transform(psMat.translate(160*outfont.em/1000,0))
-outfont.selection.select('tengwarTriplepusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-outfont.transform(psMat.translate(90*outfont.em/1000,0))
-outfont.selection.select('tengwarPusta')
-outfont.copyReference()
-outfont.selection.select(ucchar)
-outfont.pasteInto()
-outfont[ucchar].unicode=freetengenc[ucchar]
-
-for ref, target in references.iteritems():
-   outfont.createChar(-1,target)
-   outfont.selection.select(ref)
-   outfont.copyReference()
-   outfont.selection.select(target)
-   outfont.paste()
-   if target in freetengenc:
-     outfont[target].unicode=freetengenc[target]
-   gdh.write('  ' + target.replace('.', '_') + ' = ps("'+ target + '");\n')
+for (target, ref, transform, width) in references:
+   if width<0:
+      width=outfont[ref].width
+   if target in outfont:
+      outfont[target].addReference(ref,transform).width=width
+   else:
+      outfont.createChar(-1,target).addReference(ref,transform).width=width
+      if target in freetengenc:
+        outfont[target].unicode=freetengenc[target]
+      gdh.write('  ' + target.replace('.', '_') + ' = ps("'+ target + '");\n')
 
 gdh.write('endtable;\n\n')
 gdh.close()
