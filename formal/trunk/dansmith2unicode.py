@@ -287,6 +287,8 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tehtaDotInside': 'tehtaDotInside',
                'tehtaN.narrowlow': 'tehtaN.narrowlow',
                'tehtaN.widelow': 'tehtaN.widelow',
+               'tehtaN.altnarrowlow': 'tehtaN.altnarrowlow',
+               'tehtaN.altwidelow': 'tehtaN.altwidelow',
                'tehtaW.combshift1': 'tehtaW.combshift1',
                'tehtaW.combshift2': 'tehtaW.combshift2',
                'tehtaW.combshift3': 'tehtaW.combshift3',

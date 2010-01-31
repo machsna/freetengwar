@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1264509410
-ModificationTime: 1264850016
+ModificationTime: 1264959956
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -38,7 +38,7 @@ HheadDOffset: 1
 OS2Vendor: 'PfEd'
 DEI: 91125
 LangName: 1033 "" "" "" "FontTengwarFormalUnicode10" "" "" "" "" "" "Micha+AUIA Nowakowski" "" "" "http://tengwarformal.limes.com.pl" "" "http://scripts.sil.org/OFL" 
-Encoding: UnicodeBmp
+Encoding: Custom
 Compacted: 1
 UnicodeInterp: none
 NameList: Adobe Glyph List
@@ -132,10 +132,10 @@ Grid
  -507.867 952.4 -519.533 962.066 -521 965 c 0
  -522.333 967 -523 969.333 -523 972 c 0
 EndSplineSet
-BeginChars: 65768 39
+BeginChars: 47 41
 
 StartChar: quesseC
-Encoding: 57399 57399 0
+Encoding: 3 57399 0
 Width: 806
 VWidth: 1000
 Flags: HW
@@ -178,7 +178,7 @@ Validated: 33
 EndChar
 
 StartChar: hallaRoomen
-Encoding: 57404 57404 1
+Encoding: 4 57404 1
 Width: 808
 VWidth: 1000
 Flags: HW
@@ -230,7 +230,7 @@ Validated: 33
 EndChar
 
 StartChar: tengwarQuadruplepusta
-Encoding: 57443 57443 2
+Encoding: 7 57443 2
 Width: 953
 VWidth: 1000
 Flags: HW
@@ -286,7 +286,7 @@ Validated: 1
 EndChar
 
 StartChar: uni10FB
-Encoding: 4347 4347 3
+Encoding: 0 4347 3
 Width: 728
 VWidth: 1000
 Flags: HW
@@ -331,7 +331,7 @@ Validated: 1
 EndChar
 
 StartChar: uni2E2C
-Encoding: 11820 11820 4
+Encoding: 1 11820 4
 Width: 842
 VWidth: 1000
 Flags: HW
@@ -387,7 +387,7 @@ Validated: 1
 EndChar
 
 StartChar: tengwarQuintuplepusta
-Encoding: 57444 57444 5
+Encoding: 8 57444 5
 Width: 932
 VWidth: 1000
 Flags: HW
@@ -454,7 +454,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaDotInside
-Encoding: 57434 57434 6
+Encoding: 6 57434 6
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -477,7 +477,7 @@ Validated: 1
 EndChar
 
 StartChar: annaX
-Encoding: 57398 57398 7
+Encoding: 2 57398 7
 Width: 806
 VWidth: 1000
 Flags: HW
@@ -518,7 +518,7 @@ Validated: 33
 EndChar
 
 StartChar: vaiya
-Encoding: 57405 57405 8
+Encoding: 5 57405 8
 Width: 806
 VWidth: 1000
 Flags: HW
@@ -555,7 +555,7 @@ Validated: 33
 EndChar
 
 StartChar: tehtaGrave.shift1
-Encoding: 65707 -1 9
+Encoding: 9 -1 9
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -577,7 +577,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaGrave.shift2
-Encoding: 65708 -1 10
+Encoding: 10 -1 10
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -599,7 +599,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaGrave.shift3
-Encoding: 65709 -1 11
+Encoding: 11 -1 11
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -621,7 +621,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaGrave.shift4
-Encoding: 65710 -1 12
+Encoding: 12 -1 12
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -643,7 +643,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaO_tehtaI.shift1
-Encoding: 65715 -1 13
+Encoding: 13 -1 13
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -682,7 +682,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaO_tehtaI.shift2
-Encoding: 65716 -1 14
+Encoding: 14 -1 14
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -721,7 +721,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaO_tehtaI.shift3
-Encoding: 65717 -1 15
+Encoding: 15 -1 15
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -760,7 +760,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaO_tehtaI.shift4
-Encoding: 65718 -1 16
+Encoding: 16 -1 16
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -799,7 +799,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaU_tehtaI.shift1
-Encoding: 65719 -1 17
+Encoding: 17 -1 17
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -831,7 +831,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaU_tehtaI.shift2
-Encoding: 65720 -1 18
+Encoding: 18 -1 18
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -842,7 +842,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaU_tehtaI.shift3
-Encoding: 65721 -1 19
+Encoding: 19 -1 19
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -853,7 +853,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaU_tehtaI.shift4
-Encoding: 65722 -1 20
+Encoding: 20 -1 20
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -864,29 +864,25 @@ Validated: 1
 EndChar
 
 StartChar: tehtaN.widelow
-Encoding: 65724 -1 21
+Encoding: 22 -1 21
 Width: 0
 VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
 SplineSet
--414 750 m 1
- -854 764 l 1
- -962 764 -1058.33 759.333 -1143 750 c 1
- -1113.67 807.333 -1046.67 841 -942 851 c 0
- -910 854.333 -869 856 -819 856 c 0
- -795 856 -713.333 852.333 -574 845 c 0
- -508.667 841.667 -446.333 840 -387 840 c 0
- -283 840 -182.667 844 -86 852 c 1
- -110 796 -177.667 763.333 -289 754 c 0
- -319.667 751.333 -361.333 750 -414 750 c 1
+-819 856 m 0
+ -688 856 -577 840 -387 840 c 0
+ -305 840 -207 842 -86 852 c 1
+ -127 756 -273 750 -414 750 c 0
+ -553 750 -686 764 -854 764 c 0
+ -940 764 -1034 762 -1143 750 c 1
+ -1094 846 -962 856 -819 856 c 0
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: tehtaN.narrowlow
-Encoding: 65723 -1 22
+Encoding: 21 -1 22
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -894,21 +890,17 @@ LayerCount: 2
 Fore
 SplineSet
 -713 762 m 1
- -678.062 822 -603.396 852 -489 852 c 1
- -307 844 l 1
- -303 844 l 2
- -243 844 -172 848 -90 856 c 1
- -110.667 805.333 -153.667 774.667 -219 764 c 0
- -244.333 760 -275.667 758 -313 758 c 2
- -594 764 l 1
- -598 764 l 2
- -647.333 764 -685.667 763.333 -713 762 c 1
+ -672 832 -595 852 -489 852 c 0
+ -417 852 -387 844 -303 844 c 0
+ -244 844 -172 848 -90 856 c 1
+ -123 774 -198 758 -313 758 c 0
+ -391 758 -487 764 -598 764 c 0
+ -635 764 -672 764 -713 762 c 1
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift1
-Encoding: 65726 -1 23
+Encoding: 23 -1 23
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -936,7 +928,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift2
-Encoding: 65727 -1 24
+Encoding: 24 -1 24
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -964,7 +956,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift3
-Encoding: 65728 -1 25
+Encoding: 25 -1 25
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -992,7 +984,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaW.combshift4
-Encoding: 65729 -1 26
+Encoding: 26 -1 26
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1020,7 +1012,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaO_tehtaO.shift1
-Encoding: 65756 -1 27
+Encoding: 27 -1 27
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1060,7 +1052,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaO_tehtaO.shift2
-Encoding: 65757 -1 28
+Encoding: 28 -1 28
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1100,7 +1092,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaO_tehtaO.shift3
-Encoding: 65758 -1 29
+Encoding: 29 -1 29
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1140,7 +1132,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaO_tehtaO.shift4
-Encoding: 65759 -1 30
+Encoding: 30 -1 30
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1180,7 +1172,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaU_tehtaU.shift1
-Encoding: 65760 -1 31
+Encoding: 31 -1 31
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1210,7 +1202,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaU_tehtaU.shift2
-Encoding: 65761 -1 32
+Encoding: 32 -1 32
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1221,7 +1213,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaU_tehtaU.shift3
-Encoding: 65762 -1 33
+Encoding: 33 -1 33
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1232,7 +1224,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaU_tehtaU.shift4
-Encoding: 65763 -1 34
+Encoding: 34 -1 34
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1243,7 +1235,7 @@ Validated: 5
 EndChar
 
 StartChar: tehtaE_tehtaE.shift1
-Encoding: 65764 -1 35
+Encoding: 35 -1 35
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1275,7 +1267,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaE_tehtaE.shift2
-Encoding: 65765 -1 36
+Encoding: 36 -1 36
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1307,7 +1299,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaE_tehtaE.shift3
-Encoding: 65766 -1 37
+Encoding: 37 -1 37
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1339,7 +1331,7 @@ Validated: 1
 EndChar
 
 StartChar: tehtaE_tehtaE.shift4
-Encoding: 65767 -1 38
+Encoding: 38 -1 38
 Width: 0
 VWidth: 1000
 Flags: HW
@@ -1368,6 +1360,40 @@ SplineSet
  -461.333 1261.67 -446.333 1268 -433 1268 c 0
 EndSplineSet
 Validated: 1
+EndChar
+
+StartChar: tehtaN.altnarrowlow
+Encoding: 45 -1 39
+Width: 0
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-535 867.5 m 0
+ -402 867.5 -354 818.5 -274 818.5 c 0
+ -206 818.5 -149 844.5 -100 871.5 c 0
+ -149 779.5 -203 734.5 -260 734.5 c 0
+ -426 734.5 -434 779.5 -559 779.5 c 0
+ -592 779.5 -653 761.5 -745 728.5 c 0
+ -708 796.5 -639 867.5 -535 867.5 c 0
+EndSplineSet
+EndChar
+
+StartChar: tehtaN.altwidelow
+Encoding: 46 -1 40
+Width: 0
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+-762 868 m 0
+ -576 868 -426 799 -264 799 c 0
+ -188 799 -108 827 -45 858 c 0
+ -113 762 -176 707 -348 707 c 0
+ -504 707 -626 778 -782 778 c 0
+ -909 778 -981 758 -1124 725 c 0
+ -1030 801 -912 868 -762 868 c 0
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont

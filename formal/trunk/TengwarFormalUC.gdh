@@ -257,6 +257,8 @@ table(glyph)
   tehtaU_tehtaU_shift2 = ps("tehtaU_tehtaU.shift2");
   tehtaU_tehtaU_shift3 = ps("tehtaU_tehtaU.shift3");
   tehtaU_tehtaU_shift4 = ps("tehtaU_tehtaU.shift4");
+  tehtaN_altnarrowlow = ps("tehtaN.altnarrowlow");
+  tehtaN_altwidelow = ps("tehtaN.altwidelow");
   tehtaN_narrowlow = ps("tehtaN.narrowlow");
   tehtaN_widelow = ps("tehtaN.widelow");
   tehtaW_combshift1 = ps("tehtaW.combshift1");
