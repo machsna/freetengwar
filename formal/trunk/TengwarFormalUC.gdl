@@ -65,6 +65,21 @@ table(feature)
       }
     }
   }
+  barstyle {
+    id=209;
+    name.LG_USENG = string("Bar style");
+    default = straight;
+    settings {
+      straight {
+        value=0;
+        name.LG_USENG = string("Straight");
+      }
+      tilde {
+        value=1;
+        name.LG_USENG = string("Tilde");
+      }
+    }
+  }
 
 endtable;
 
@@ -87,11 +102,11 @@ table(glyph)
   UptehtaNarrow = (tehtaA_shift2, tehtaY_shift2, tehtaI_shift2, tehtaE_shift2, tehtaO_shift2, tehtaU_shift2);
   UptehtaCarr =   (tehtaA_shift1, tehtaY_shift1, tehtaI_shift1, tehtaE_shift1, tehtaO_shift1, tehtaU_shift1);
 
-  Uptehta +=       (tehtaN,        tehtaN_narrowlow, tehtaW,        tehtaW_combshift2, tehtaYanta,        tehtaAE,        tehtaBreve,        tehtaGrave,        tehtaO_tehtaI_shift2, tehtaU_tehtaI_shift2, tehtaE_tehtaE_shift2, tehtaO_tehtaO_shift2, tehtaU_tehtaU_shift2);
-  UptehtaWide +=   (tehtaN_wide,   tehtaN_widelow,   tehtaW_shift4, tehtaW_combshift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4, tehtaGrave_shift4, tehtaO_tehtaI_shift4, tehtaU_tehtaI_shift4, tehtaE_tehtaE_shift4, tehtaO_tehtaO_shift4, tehtaU_tehtaU_shift4);
-  UptehtaNormal += (tehtaN_narrow, tehtaN_narrowlow, tehtaW_shift3, tehtaW_combshift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3, tehtaGrave_shift3, tehtaO_tehtaI_shift3, tehtaU_tehtaI_shift3, tehtaE_tehtaE_shift3, tehtaO_tehtaO_shift3, tehtaU_tehtaU_shift3);
-  UptehtaNarrow += (tehtaN_narrow, tehtaN_narrowlow, tehtaW_shift2, tehtaW_combshift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2, tehtaGrave_shift2, tehtaO_tehtaI_shift2, tehtaU_tehtaI_shift2, tehtaE_tehtaE_shift2, tehtaO_tehtaO_shift2, tehtaU_tehtaU_shift2);
-  UptehtaCarr +=   (tehtaN_narrow, tehtaN_narrowlow, tehtaW_shift1, tehtaW_combshift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1, tehtaGrave_shift1, tehtaO_tehtaI_shift1, tehtaU_tehtaI_shift1, tehtaE_tehtaE_shift1, tehtaO_tehtaO_shift1, tehtaU_tehtaU_shift1);
+  Uptehta +=       (tehtaN_narrow, tehtaN_narrowlow, tehtaN_altnarrow, tehtaN_altnarrowlow, tehtaW,        tehtaW_combshift2, tehtaYanta,        tehtaAE,        tehtaBreve,        tehtaGrave,        tehtaO_tehtaI_shift2, tehtaU_tehtaI_shift2, tehtaE_tehtaE_shift2, tehtaO_tehtaO_shift2, tehtaU_tehtaU_shift2);
+  UptehtaWide +=   (tehtaN_wide,   tehtaN_widelow,   tehtaN_altwide,   tehtaN_altwidelow,   tehtaW_shift4, tehtaW_combshift4, tehtaYanta_shift4, tehtaAE_shift4, tehtaBreve_shift4, tehtaGrave_shift4, tehtaO_tehtaI_shift4, tehtaU_tehtaI_shift4, tehtaE_tehtaE_shift4, tehtaO_tehtaO_shift4, tehtaU_tehtaU_shift4);
+  UptehtaNormal += (tehtaN_narrow, tehtaN_narrowlow, tehtaN_altnarrow, tehtaN_altnarrowlow, tehtaW_shift3, tehtaW_combshift3, tehtaYanta_shift3, tehtaAE_shift3, tehtaBreve_shift3, tehtaGrave_shift3, tehtaO_tehtaI_shift3, tehtaU_tehtaI_shift3, tehtaE_tehtaE_shift3, tehtaO_tehtaO_shift3, tehtaU_tehtaU_shift3);
+  UptehtaNarrow += (tehtaN_narrow, tehtaN_narrowlow, tehtaN_altnarrow, tehtaN_altnarrowlow, tehtaW_shift2, tehtaW_combshift2, tehtaYanta_shift2, tehtaAE_shift2, tehtaBreve_shift2, tehtaGrave_shift2, tehtaO_tehtaI_shift2, tehtaU_tehtaI_shift2, tehtaE_tehtaE_shift2, tehtaO_tehtaO_shift2, tehtaU_tehtaU_shift2);
+  UptehtaCarr +=   (tehtaN_narrow, tehtaN_narrowlow, tehtaN_altnarrow, tehtaN_altnarrowlow, tehtaW_shift1, tehtaW_combshift1, tehtaYanta_shift1, tehtaAE_shift1, tehtaBreve_shift1, tehtaGrave_shift1, tehtaO_tehtaI_shift1, tehtaU_tehtaI_shift1, tehtaE_tehtaE_shift1, tehtaO_tehtaO_shift1, tehtaU_tehtaU_shift1);
 
   Downtehta =       (tehtaAB,        tehtaYB,        tehtaIB,        tehtaEB,        tehtaEEB,        tehtaOB,        tehtaUB);
   DowntehtaWide =   (tehtaAB_shift4, tehtaYB_shift4, tehtaIB_shift4, tehtaEB_shift4, tehtaEEB_shift4, tehtaOB_shift4, tehtaUB_shift4);
@@ -100,12 +115,12 @@ table(glyph)
   DowntehtaCarr =   (tehtaAB_shift1, tehtaYB_shift1, tehtaIB_shift1, tehtaEB_shift1, tehtaEEB_shift1, tehtaOB_shift1, tehtaUB_shift1);
   DowntehtaLambe =  (tehtaAB_shift4, tehtaYB_lambe,  tehtaIB_lambe,  tehtaEB_shift4, tehtaEEB_lambe,  tehtaOB_shift4, tehtaUB_shift4);
 
-  Downtehta +=       (tehtaB,        tehtaThinnas,        tehtaX);
-  DowntehtaWide +=   (tehtaB_wide,   tehtaThinnas_shift4, tehtaX_shift4);
-  DowntehtaNormal += (tehtaB_narrow, tehtaThinnas_shift3, tehtaX_shift3);
-  DowntehtaNarrow += (tehtaB_narrow, tehtaThinnas_shift2, tehtaX_shift3);
-  DowntehtaCarr +=   (tehtaB_narrow, tehtaThinnas_shift1, tehtaX_shift3);
-  DowntehtaLambe +=  (tehtaB_lambe,  tehtaThinnas_shift4, tehtaX_shift4);
+  Downtehta +=       (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas,        tehtaX);
+  DowntehtaWide +=   (tehtaB_wide,   tehtaB_altwide,   tehtaThinnas_shift4, tehtaX_shift4);
+  DowntehtaNormal += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift3, tehtaX_shift3);
+  DowntehtaNarrow += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift2, tehtaX_shift3);
+  DowntehtaCarr +=   (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift1, tehtaX_shift3);
+  DowntehtaLambe +=  (tehtaB_lambe,  tehtaB_altlambe,  tehtaThinnas_shift4, tehtaX_shift4);
 
   AnyIsolTehta = (Uptehta,Downtehta);
   AnyTehta = (UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
@@ -126,6 +141,14 @@ table(substitution)
 
   pass(1)
 
+    if (barstyle==straight)
+      tehtaN > tehtaN_narrow / _ ;
+      tehtaB > tehtaB_narrow / _ ;
+    elseif (barstyle==tilde)
+      tehtaN > tehtaN_altnarrow / _ ;
+      tehtaB > tehtaB_altnarrow / _ ;
+    endif;
+
     aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
     hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
     silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
@@ -137,6 +160,9 @@ table(substitution)
     tehtaO tehtaO > tehtaO_tehtaO_shift2:(1 2) _ ;
     tehtaU tehtaU > tehtaU_tehtaU_shift2:(1 2) _ ;
 
+  endpass;
+  pass(2)
+
     (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
 
     tehtaX > tehtaX_shift4 / WideCombShook AnyTehtar _ ;
@@ -145,8 +171,8 @@ table(substitution)
     tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
     tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
 
-    tehtaN > tehtaN_narrowlow / _ AnyTehtar Uptehta ;
-    tehtaN > tehtaN_narrowlow / Uptehta AnyTehtar _ ;
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyTehtar Uptehta ;
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / Uptehta AnyTehtar ^ _ ;
 
 	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
 	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
@@ -165,6 +191,13 @@ table(substitution)
 
   endpass;
 
+endtable;
+
+table(position)
+  pass(1)
+    // This is a workaround for what seems to be a bug in XeTeX:
+    AnyTehta { advance.x = 0; };
+  endpass;
 endtable;
 
 endenvironment;
