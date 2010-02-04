@@ -182,10 +182,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                #'Euro': 'tehtaAE.shift3alt', # Might be duplicate
                'macron': 'tehtaAE.shift2',
                'mu1': 'tehtaAE.shift1',
-               'Oslash': 'tehtaBreve.altshift4', # It ought to be an alternative AE,
-               'Ugrave': 'tehtaBreve.altshift3', # but people use them as the breve. Bah.
-               'Uacute': 'tehtaBreve.altshift2',
-               'Ucircumflex': 'tehtaBreve.altshift1',
+               'Oslash': 'tehtaAE.altshift4', # Note that people use this as the breve...
+               'Ugrave': 'tehtaAE.altshift3',
+               'Uacute': 'tehtaAE.altshift2',
+               'Ucircumflex': 'tehtaAE.altshift1',
                'udieresis': 'tehtaThinnas.shift4',
                'yacute': 'tehtaThinnas.shift3',
                'thorn': 'tehtaThinnas.shift2',
@@ -280,6 +280,7 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'quesseC': 'quesseC',
                'hallaRoomen': 'hallaRoomen',
                'vaiya': 'vaiya',
+               'tengwarduodecimal12': 'tengwarduodecimal12',
                'tehtaGrave.shift1': 'tehtaGrave.shift1',
                'tehtaGrave.shift2': 'tehtaGrave.shift2',
                'tehtaGrave.shift3': 'tehtaGrave.shift3',
@@ -313,6 +314,14 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tehtaU_tehtaU.shift2': 'tehtaU_tehtaU.shift2',
                'tehtaU_tehtaU.shift3': 'tehtaU_tehtaU.shift3',
                'tehtaU_tehtaU.shift4': 'tehtaU_tehtaU.shift4',
+               'tehtaS.raisedalt': 'tehtaS.raisedalt',
+               'tehtaS.raisedlambe': 'tehtaS.raisedlambe',
+               'tehtaS.aha': 'tehtaS.aha',
+               'tehtaS.lambelow': 'tehtaS.lambelow',
+               'tehtaS.hyarmen': 'tehtaS.hyarmen',
+               'tehtaS.yanta': 'tehtaS.yanta',
+               'tehtaS.swashraised': 'tehtaS.swashraised',
+               'tehtaS.swashraisedlambe': 'tehtaS.swashraisedlambe',
               }}
 
 references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
@@ -337,12 +346,14 @@ references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
               ('tehtaAE','tehtaAE.shift2',psMat.identity(),0),
               ('tehtaThinnas','tehtaThinnas.shift2',psMat.identity(),0),
               ('tehtaX','tehtaX.shift3',psMat.identity(),0),
+              ('tehtaX','tehtaX.shift3',psMat.identity(),0),
               ('uni2E31','tengwarPusta',psMat.identity(),-1),
               ('colon','tengwarDoublepusta',psMat.identity(),-1),
               ('uni205D','tengwarTriplepusta',psMat.identity(),-1),
               ('uni2058','tengwarQuadruplepusta',psMat.identity(),-1),
               ('uni2E2D','tengwarQuintuplepusta',psMat.identity(),-1),
               ('osseN','tengwardigit0',psMat.identity(),-1),
+              ('tengwardigitMark','tengwardigitMark.shift2',psMat.identity(),-1),
              ]
 
 freetengenc = {'tinco': 0xE000,
@@ -457,7 +468,7 @@ freetengenc = {'tinco': 0xE000,
                'tengwardigit9': 0xE079,
                'tengwarduodecimal10': 0xE07A,
                'tengwarduodecimal11': 0xE07B,
-               'tengwarduodeciaml12': 0xE07C,
+               'tengwarduodecimal12': 0xE07C,
                'tengwardigitMark': 0xE07D,
               }
 

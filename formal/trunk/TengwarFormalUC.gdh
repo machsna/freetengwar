@@ -160,10 +160,10 @@ table(glyph)
   tehtaW_shift2 = ps("tehtaW.shift2");
   tehtaW_shift3 = ps("tehtaW.shift3");
   tehtaW_shift4 = ps("tehtaW.shift4");
-  tehtaBreve_altshift1 = ps("tehtaBreve.altshift1");
-  tehtaBreve_altshift2 = ps("tehtaBreve.altshift2");
-  tehtaBreve_altshift3 = ps("tehtaBreve.altshift3");
-  tehtaBreve_altshift4 = ps("tehtaBreve.altshift4");
+  tehtaAE_altshift1 = ps("tehtaAE.altshift1");
+  tehtaAE_altshift2 = ps("tehtaAE.altshift2");
+  tehtaAE_altshift3 = ps("tehtaAE.altshift3");
+  tehtaAE_altshift4 = ps("tehtaAE.altshift4");
   tehtaAE_shift1 = ps("tehtaAE.shift1");
   tehtaAE_shift2 = ps("tehtaAE.shift2");
   tehtaAE_shift3 = ps("tehtaAE.shift3");
@@ -269,9 +269,18 @@ table(glyph)
   tehtaGrave_shift2 = ps("tehtaGrave.shift2");
   tehtaGrave_shift3 = ps("tehtaGrave.shift3");
   tehtaGrave_shift4 = ps("tehtaGrave.shift4");
+  tehtaS_aha = ps("tehtaS.aha");
+  tehtaS_hyarmen = ps("tehtaS.hyarmen");
+  tehtaS_lambelow = ps("tehtaS.lambelow");
+  tehtaS_raisedalt = ps("tehtaS.raisedalt");
+  tehtaS_raisedlambe = ps("tehtaS.raisedlambe");
+  tehtaS_swashraised = ps("tehtaS.swashraised");
+  tehtaS_swashraisedlambe = ps("tehtaS.swashraisedlambe");
+  tehtaS_yanta = ps("tehtaS.yanta");
   tehtaDotInside = ps("tehtaDotInside");
   tengwarQuadruplepusta = ps("tengwarQuadruplepusta");
   tengwarQuintuplepusta = ps("tengwarQuintuplepusta");
+  tengwarduodecimal12 = ps("tengwarduodecimal12");
   ZWJ = ps("zwj");
   tehtaA = ps("tehtaA");
   tehtaAB = ps("tehtaAB");
@@ -301,6 +310,7 @@ table(glyph)
   uni2058 = ps("uni2058");
   uni2E2D = ps("uni2E2D");
   osseN = ps("osseN");
+  tengwardigitMark = ps("tengwardigitMark");
   middot = ps("middot");
 endtable;
 

@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1264509410
-ModificationTime: 1265144983
+ModificationTime: 1265312048
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -45,7 +45,7 @@ DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
 WinInfo: 0 16 10
-BeginChars: 49 49
+BeginChars: 50 50
 
 StartChar: quesseC
 Encoding: 3 57399 0
@@ -2191,6 +2191,34 @@ SplineSet
  -179 578 -156 582 -131 590 c 1
 EndSplineSet
 Validated: 1
+EndChar
+
+StartChar: tengwarduodecimal12
+Encoding: 49 57468 49
+Width: 806
+VWidth: 0
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+668 303 m 0
+ 668 471 508 592 371 592 c 0
+ 267 592 156 506 156 348 c 0
+ 156 205 278 66 428 66 c 0
+ 584 66 668 182 668 303 c 0
+78 299 m 1
+ 78 528 244 678 420 678 c 0
+ 545 678 606 645 680 563 c 0
+ 727 512 750 434 750 354 c 0
+ 750 289.404005978 740.683916209 246.290745038 716.876979707 182.440266139 c 0
+ 612.5 -97.5 414.842597492 -390.432460401 325 -522 c 0
+ 279.952989229 -587.967898102 243 -639 214 -639 c 0
+ 208 -639 206 -637 206 -633 c 0
+ 206 -614.594789028 469.413392618 -259.063795735 608.385872795 48.1327784951 c 1
+ 547.495559886 5.17723778016 469.411918588 -17.9999612297 379 -18 c 0
+ 248 -18 186 39 129 119 c 1
+ 98 166 80 225 78 299 c 1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
