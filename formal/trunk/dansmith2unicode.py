@@ -18,7 +18,7 @@ with Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".\n\
 Tengwar Formal Unicode copyright (c) 2010, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\
 \n\
 This Font Software is licensed under the SIL Open Font License, Version 1.1.\n\
-This license is provided in a separate file, LICENSE, supplied with the fonts,\n\
+This license is provided in a separate file, LICENSE.txt, supplied with the fonts,\n\
 and is also available with a FAQ at: http://scripts.sil.org/OFL'
 outfont.version='1.0'
 outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalUnicode10'),
@@ -173,10 +173,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'slash': 'tehtaB.altlownarrow',
                'degree': 'tehtaB.altlambe',
                'question': 'tehtaB.altlowwide',
-               'egrave': 'tehtaW.shift4',
-               'eacute': 'tehtaW.shift3',
-               'ecircumflex': 'tehtaW.shift2',
-               'edieresis': 'tehtaW.shift1',
+               'egrave': 'tehtaW.giantshift4',
+               'eacute': 'tehtaW.giantshift3',
+               'ecircumflex': 'tehtaW.giantshift2',
+               'edieresis': 'tehtaW.giantshift1',
                'ordfeminine': 'tehtaAE.shift4',
                'minus': 'tehtaAE.shift3',
                #'Euro': 'tehtaAE.shift3alt', # Might be duplicate
@@ -191,7 +191,7 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'thorn': 'tehtaThinnas.shift2',
                'ydieresis': 'tehtaThinnas.shift1',
                'plus': 'tehtaS',
-               'underscore': 'tehtaS.down',
+               'underscore': 'tehtaX.down',
                'sterling': 'tehtaS.swash',
                'yen': 'tehtaS.swashlambe',
                'Aring': 'tehtaS.upward',
@@ -264,10 +264,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'Y': 'tehtaBreve.shift3',
                'H': 'tehtaBreve.shift2',
                'N': 'tehtaBreve.shift1',
-               'dollar': 'tehtaW.narrowshift4',
-               'R': 'tehtaW.narrowshift3',
-               'F': 'tehtaW.narrowshift2',
-               'V': 'tehtaW.narrowshift1',
+               'dollar': 'tehtaW.shift4',
+               'R': 'tehtaW.shift3',
+               'F': 'tehtaW.shift2',
+               'V': 'tehtaW.shift1',
                'braceright': 'tehtaS.swashhyarmen',
               },
 
@@ -322,6 +322,9 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tehtaS.yanta': 'tehtaS.yanta',
                'tehtaS.swashraised': 'tehtaS.swashraised',
                'tehtaS.swashraisedlambe': 'tehtaS.swashraisedlambe',
+               'tehtaS.swashyanta': 'tehtaS.swashyanta',
+               'tehtaS.swashyantaalt': 'tehtaS.swashyantaalt',
+               'tehtaS.swashhyarmenalt': 'tehtaS.swashhyarmenalt',
               }}
 
 references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
