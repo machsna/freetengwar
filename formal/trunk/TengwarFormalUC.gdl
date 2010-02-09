@@ -219,6 +219,7 @@ table(substitution)
     tehtaO tehtaO > tehtaO_tehtaO_shift2:(1 2) _ ;
     tehtaU tehtaU > tehtaU_tehtaU_shift2:(1 2) _ ;
     ZWJ longCarrier > tehtaThinnas:(1 2) _ ;
+    tehtaI tehtaI > tehtaY:(1 2) _ ;
 
     if (sarincestyle==hook)
        tehtaS > tehtaS_lifted / (calmaX,quesseX,angaX,ungweX,halla,quesseC,vaiya,lambeN,roomenN) AnyTehtar _ ;
@@ -237,8 +238,8 @@ table(substitution)
        tehtaS > tehtaS_swashraised / (calma,anga,quesse,ungwe,roomen,arda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX,calmaX,quesseX,angaX,ungweX) AnyTehtar _ ; 
     endif;
 
-	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
-	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
+	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
+	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
 
   endpass;
   pass(2)
