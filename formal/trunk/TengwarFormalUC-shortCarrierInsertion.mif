@@ -604,12 +604,12 @@ Exclusive      yes
 
 wtehta	tehtaW
 uptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve tehtaDotInside tehtaE
-+	tehtaGrave tehtaI tehtaN tehtaN.narrowlow tehtaN.altnarrow tehtaN.altnarrowlow
++	tehtaGrave tehtaI
 +	tehtaO tehtaU tehtaY tehtaYanta 
 +	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-othertehtar		tehtaAB tehtaB tehtaB.altnarrow tehtaEB tehtaEEB tehtaIB tehtaOB
-+	tehtaThinnas tehtaUB tehtaX tehtaYB tengwardigitMark
+othertehtar		tehtaAB tehtaB tehtaB.altnarrow tehtaEB tehtaEEB tehtaIB tehtaOB tehtaThinnas
++	tehtaUB tehtaX tehtaYB tengwardigitMark tehtaN tehtaN.narrowlow tehtaN.altnarrow tehtaN.altnarrowlow
 
            EOT  OOB  DEL  EOL  wtehta uptehtar othertehtar
 StartText  1    1    1    1    2      3        1
