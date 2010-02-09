@@ -1,0 +1,196 @@
+%&program=xelatex
+%&encoding=UTF-8 Unicode
+
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\pagestyle{empty}
+\frenchspacing
+
+\font\formalGR="Tengwar Formal Unicode/GR" at 15pt
+\font\formalAAT="Tengwar Formal Unicode" at 15pt
+\font\formalGRdescw="Tengwar Formal Unicode/GR:204=1" at 15pt
+\font\formalAATdescw="Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash" at 15pt
+\font\formalGRossefinal="Tengwar Formal Unicode/GR:207=1" at 15pt
+\font\formalAATossefinal="Tengwar Formal Unicode:Marked Osse=Word final" at 15pt
+\font\formalGRossealways="Tengwar Formal Unicode/GR:207=2" at 15pt
+\font\formalAATossealways="Tengwar Formal Unicode:Marked Osse=Always" at 15pt
+\font\formalGRtilde="Tengwar Formal Unicode/GR:209=1" at 15pt
+\font\formalAATtilde="Tengwar Formal Unicode:Bar style=Tilde" at 15pt
+\font\formalGRcircumflex="Tengwar Formal Unicode/GR:210=1" at 15pt
+\font\formalAATcircumflex="Tengwar Formal Unicode:A-tehta style=Circumflex" at 15pt
+\font\formalGRswash="Tengwar Formal Unicode/GR:211=1" at 15pt
+\font\formalAATswash="Tengwar Formal Unicode:Sa-rince style=Swash" at 15pt
+\font\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt
+%\setmainfont{Gentium}
+\setmonofont{FreeMonoTengwar}
+
+\begin{document}
+
+
+\section{Issues that still need fixing}
+
+Graphite: \formalGR     \normalfont
+
+\noindent Compare to the AAT version: \formalAAT     \normalfont
+
+
+
+\section{Tengwar Formal Unicode: Graphite and AAT options}
+
+Here are samples of the different options. The options are specified by adding something to the font name in the \texttt{\char`\\font} command. The extended font names are all given in this document. A font specification will look like this:
+
+\paragraph{} \texttt{\char`\\font\char`\\bla="font(/GR):feature=value(;feature=value)"}
+
+\paragraph{} In this specification, the part \texttt{bla} is a string of your choice. The part \texttt{/GR} is optional. It tells Xe\TeX{} to use the Graphite information. If you leave it away, it will use the AAT information (though AAT may only work on Mac OS X). Note that you can define as many features as you like. Here is an example:
+
+\paragraph{} \texttt{\char`\\font\char`\\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt}
+
+\paragraph{} After this \texttt{\char`\\font} command has been defined, you can use \texttt{\char`\\myformal} as a command, for instance as follows:
+
+\paragraph{} \texttt{\char`\\myformal   \char`\\normalfont}
+
+\paragraph{} This will look like this: \myformal   \normalfont
+
+
+\subsection{Descending W-tengwa}
+
+\subsubsection{Default}
+
+\noindent \texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR  
+
+\noindent \texttt{"Tengwar Formal Unicode"}
+
+\formalAAT  
+
+\subsubsection{Descending W-tengwa}
+
+\texttt{"Tengwar Formal Unicode/GR:204=1"}
+
+\formalGRdescw  
+
+\noindent \texttt{"Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;"}
+
+\formalAATdescw  
+
+
+\subsection{Marked Osse}
+
+\subsubsection{Default: Never}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR 
+
+\noindent \texttt{"Tengwar Formal Unicode"}
+
+\formalAAT 
+
+\subsubsection{Word final}
+
+\texttt{"Tengwar Formal Unicode/GR:207=1"}
+
+\formalGRossefinal 
+
+\noindent \texttt{"Tengwar Formal Unicode:Marked Osse=Word final"}
+
+\formalAATossefinal 
+
+\subsubsection{Always}
+
+\texttt{"Tengwar Formal Unicode/GR:207=2"}
+
+\formalGRossealways 
+
+\noindent \texttt{"Tengwar Formal Unicode:Marked Osse=Always"}
+
+\formalAATossealways 
+
+
+\subsection{Bar style}
+
+\subsubsection{Default: Straight}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR 
+
+\noindent \texttt{"Tengwar Formal Unicode"}
+
+\formalAAT 
+
+\subsubsection{Tilde}
+
+\texttt{"Tengwar Formal Unicode/GR:209=1"}
+
+\formalGRtilde 
+
+\noindent \texttt{"Tengwar Formal Unicode:Bar style=Tilde"}
+
+\formalAATtilde 
+
+
+\subsection{A-tehta style}
+
+\subsubsection{Default: Dots}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR 
+
+\noindent \texttt{"Tengwar Formal Unicode"}
+
+\formalAAT 
+
+\subsubsection{Tilde}
+
+\texttt{"Tengwar Formal Unicode/GR:210=1"}
+
+\formalGRcircumflex 
+
+\noindent \texttt{"Tengwar Formal Unicode:A-tehta style=Circumflex"}
+
+\formalAATcircumflex 
+
+
+\subsection{Sa-rince style}
+
+\subsubsection{Default: Hook}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR 
+
+\noindent \texttt{"Tengwar Formal Unicode"}
+
+\formalAAT 
+
+\subsubsection{Swash}
+
+\texttt{"Tengwar Formal Unicode/GR:211=1"}
+
+\formalGRswash   
+
+\noindent \texttt{"Tengwar Formal Unicode:Sa-rince style=Swash"}
+
+\formalAATswash   
+
+
+\section{Sample Text}
+
+\subsection{Graphite}
+\formalGR
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  .... \\
+
+\subsection{AAT}
+\formalAAT
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  .... \\
+
+\end{document}

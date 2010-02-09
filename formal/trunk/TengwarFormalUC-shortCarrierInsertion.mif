@@ -451,6 +451,7 @@ List
 	aha_tinco	aha zwj tinco
 	hwesta_tinco	hwesta zwj tinco
 	silme_aha	silme zwj aha
+	tehtaThinnas	zwj longCarrier
 
 
 // --------------------------------------------------------------
@@ -697,17 +698,17 @@ Forward        yes
 Exclusive      yes
 
 wide	ando umbar anga ungwe anto ampa anca unque nuumen malta noldo nwalme
-+	andoX umbarX angaX ungweX lambe lambeN.alt alda silme esse maltaX roomenN
++	andoX umbarX angaX ungweX lambe lambeN.alt alda silme esse maltaX roomenN silme_aha
 +	tengwardigit3 tengwardigit6
 normal	tinco parma roomen.alt arda.alt calma quesse aha hwesta oore anna vala vilya
 +	calmaX quesseX roomen arda silmeN esseN hyarmen yanta hwestaS uure
-+	osseN lambeN osse osse.alt carrierX quesseC hwestaC valaX annaX vaiya silme_aha
++	osseN lambeN osse osse.alt carrierX quesseC hwestaC valaX annaX vaiya
 +	tengwardigit2 tengwardigit5 tengwardigit9
-narrow	suule formen tincoX parmaX aha_tinco hwesta_tinco
-carrier	longCarrier halla shortCarrier hallaRoomen
-+	tehtaS tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.lifted tehtaS.raisedalt
-+	tehtaS.yanta tehtaS.swash tehtaS.swashhyarmen tehtaS.swashhyarmenalt
+narrow	suule formen tincoX parmaX
++	tehtaS.swash tehtaS.swashhyarmen tehtaS.swashhyarmenalt
 +	tehtaS.swashlambe tehtaS.swashraised tehtaS.swashyanta tehtaS.swashyantaalt
+carrier	longCarrier halla shortCarrier hallaRoomen aha_tinco hwesta_tinco
++	tehtaS tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.lifted tehtaS.raisedalt tehtaS.yanta
 anytehtaBUTup	tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB tehtaIB tehtaOB
 +	tehtaThinnas tehtaUB tehtaX tehtaX.shift4 tehtaX.down tehtaYB tengwardigitMark
 uptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2
@@ -842,7 +843,7 @@ Forward        yes
 Exclusive      yes
 
 wide	ando umbar anga ungwe anto ampa anca unque nuumen malta noldo nwalme
-+	andoX umbarX angaX ungweX alda maltaX
++	andoX umbarX angaX ungweX alda maltaX silme_aha
 +	tengwardigit3 tengwardigit6
 normal	suule formen calma quesse aha hwesta oore anna vala vilya
 +	calmaX quesseX roomen arda silme silmeN esse esseN hyarmen yanta hwestaS uure
@@ -851,10 +852,10 @@ normal	suule formen calma quesse aha hwesta oore anna vala vilya
 narrow	tinco parma tincoX parmaX hallaRoomen roomen.alt arda.alt
 +	tengwardigit0 tengwardigit1 tengwardigit4 tengwardigit7 tengwardigit8
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-carrier	longCarrier halla shortCarrier
-+	tehtaS tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.lifted tehtaS.raisedalt
-+	tehtaS.yanta tehtaS.swash tehtaS.swashhyarmen tehtaS.swashhyarmenalt
++	tehtaS.swash tehtaS.swashhyarmen tehtaS.swashhyarmenalt
 +	tehtaS.swashlambe tehtaS.swashraised tehtaS.swashyanta tehtaS.swashyantaalt
+carrier	longCarrier halla shortCarrier aha_tinco hwesta_tinco
++	tehtaS tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.lifted tehtaS.raisedalt tehtaS.yanta
 lambe	lambe lambeN.alt
 anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaA.altshift1 tehtaA.altshift2 tehtaA.altshift3 tehtaA.altshift4
