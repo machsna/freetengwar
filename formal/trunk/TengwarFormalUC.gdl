@@ -237,8 +237,17 @@ table(substitution)
        tehtaS > tehtaS_swashraised / (calma,anga,quesse,ungwe,roomen,arda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX,calmaX,quesseX,angaX,ungweX) AnyTehtar _ ; 
     endif;
 
+	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
+	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
+
   endpass;
   pass(2)
+
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyTehtar Uptehta ;
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / Uptehta AnyTehtar _ ;
+
+  endpass;
+  pass(3)
 
     if (ossetail==final)
        (osse_alt) > (osse) / ^ _ AnyIsolTehtar ZWJ? AnyTengwa;
@@ -253,12 +262,6 @@ table(substitution)
 //    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
 
     (tehtaS_swashhyarmen,tehtaS_swashyanta) > (tehtaS_swashhyarmenalt,tehtaS_swashyantaalt) / _ AnyIsolTehtar AnyIsolTehta ;
-
-    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyTehtar Uptehta ;
-    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / Uptehta AnyTehtar ^ _ ;
-
-	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
-	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaW_combshift2,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
 
     Uptehta > UptehtaWide / (Wide,lambe,silme,esse) AnyTehtar _ ;
     Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
