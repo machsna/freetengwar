@@ -448,6 +448,7 @@ List
 	tehtaU_tehtaI.shift2	tehtaI tehtaU
 	tehtaU_tehtaI.shift2	tehtaU tehtaI
 	tehtaU_tehtaU.shift2	tehtaU tehtaU
+	tehtaY	tehtaI tehtaI
 	aha_tinco	aha zwj tinco
 	hwesta_tinco	hwesta zwj tinco
 	silme_aha	silme zwj aha
