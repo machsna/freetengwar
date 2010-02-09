@@ -6,15 +6,15 @@
 \pagestyle{empty}
 \frenchspacing
 
-\font\tengtelc="Tengwar Telcontar/GR" at 15pt
-\font\tengtelclarge="Tengwar Telcontar/GR" at 48pt
-\font\tengtelcq="Tengwar Telcontar/GR:202=3" at 15pt
-\font\rcap="Tengwar Telcontar/GR:203=1" at 15pt
-\font\tengtelcsmall="Tengwar Telcontar/GR" at 10pt
-\font\tengtelcb="Tengwar Telcontar Bold/GR" at 15pt
-\font\bul="Tengwar Telcontar Bold/GR:208=1" at 15pt
-\font\bcap="Tengwar Telcontar Bold/GR:203=1" at 15pt
-\font\bcapul="Tengwar Telcontar Bold/GR:203=1:208=1" at 15pt
+\font\tengtelc="[./tengtelc.ttf]/GR" at 15pt
+\font\tengtelclarge="[./tengtelc.ttf]/GR" at 48pt
+\font\tengtelcq="[./tengtelc.ttf]/GR:202=3" at 15pt
+\font\rcap="[./tengtelc.ttf]/GR:203=1" at 15pt
+\font\tengtelcsmall="[./tengtelc.ttf]/GR" at 10pt
+\font\tengtelcb="[./tengtelcb.ttf]/GR" at 15pt
+\font\bul="[./tengtelcb.ttf]/GR:208=1" at 15pt
+\font\bcap="[./tengtelcb.ttf]/GR:203=1" at 15pt
+\font\bcapul="[./tengtelcb.ttf]/GR:203=1:208=1" at 15pt
 \setromanfont{Gentium}
 
 \begin{document}
@@ -573,5 +573,7 @@ and even as he looked, it took a stride towards him.
 % There's evidently a bug in XeTeX involving positive kerning:
 f’n n n
 
+% Test to access variant glyph:
+\XeTeXglyph\XeTeXglyphindex "prefeanoreanqu.var"
 \end{document}
 

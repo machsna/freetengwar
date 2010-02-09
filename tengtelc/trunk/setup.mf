@@ -49,6 +49,6 @@ interpunctsize=1.1;
 
 string font_ps_name, font_name, font_weight, font_copyright, font_version;
 
-font_copyright:="Copyright (c) 2005-2010 by Johan Winge";
+font_copyright:="Copyright (c) 2005-2010 by Johan Winge, 2009-2010 J. 'Mach' Wust.";
 font_version="0.09";
 
