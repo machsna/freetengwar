@@ -2,16 +2,16 @@
 
 # Generating ttf-files:
 
-python mf2ttf.py underline
+python mf2sfd.py underline
 
 rm -f unlink.pe
-python mf2ttf.py latinr
-python mf2ttf.py tengwarr
+python mf2sfd.py latinr
+python mf2sfd.py tengwarr
 fontforge -script tengtelc.pe regular
 
 rm -f unlink.pe
-python mf2ttf.py latinb
-python mf2ttf.py tengwarb
+python mf2sfd.py latinb
+python mf2sfd.py tengwarb
 fontforge -script tengtelc.pe bold
 
 # Some cleaning up:
