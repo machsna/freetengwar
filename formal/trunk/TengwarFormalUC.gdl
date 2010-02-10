@@ -48,6 +48,11 @@ table(feature)
     default = true;
   }
 */
+/*  insertcarrier {
+    id=206;
+    name.LG_USENG = string("Short carrier insertion");
+    default = false;
+  }*/
   ossetail {
     id=207;
     name.LG_USENG = string("Marked Osse");
@@ -131,6 +136,7 @@ table(glyph)
   DownNarrow = (tinco,parma,tincoX,parmaX,roomen_alt,arda_alt,
           tengwardigit0,tengwardigit1,tengwardigit4,tengwardigit7,tengwardigit8,tengwarduodecimal10,tengwarduodecimal11,tengwarduodecimal12,
           tehtaS_swash,tehtaS_swashhyarmen,tehtaS_swashhyarmenalt,tehtaS_swashlambe,tehtaS_swashraised,tehtaS_swashyanta,tehtaS_swashyantaalt);
+/*  pseudoCarrier = pseudo(postscript("shortCarrier"));*/
   Carrier = (longCarrier,halla,shortCarrier,aha_tinco,hwesta_tinco,
           tehtaS,tehtaS_aha,tehtaS_hyarmen,tehtaS_lambelow,tehtaS_lifted,tehtaS_raisedalt,tehtaS_yanta);
 
@@ -172,6 +178,7 @@ table(glyph)
   AnyTehta = (tehtaDotInside,tehtaX,UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
 
   OomaUpTehta = (tehtaA,tehtaA_altshift2,tehtaAE,tehtaAE_altshift2,tehtaBreve,tehtaE,tehtaE_tehtaE_shift2,tehtaGrave,tehtaI,tehtaO,tehtaO_tehtaI_shift2,tehtaO_tehtaO_shift2,tehtaU,tehtaU_tehtaI_shift2,tehtaU_tehtaU_shift2,tehtaW,tehtaY,tehtaYanta)
+/*  NotUpTehta = (tehtaDotInside,tehtaX,Downtehta,DowntehtaWide);*/
 
   RightCombShook = (tinco,parma,ando,umbar,suule,formen,anto,ampa,tincoX,parmaX,andoX,umbarX,nuumen,malta,oore,vala,hallaRoomen,aha_tinco,hwesta_tinco);
   WideCombShook = (anga,ungwe,anca,unque,angaX,ungweX,noldo,nwalme);
@@ -184,6 +191,7 @@ endtable;
 
 #define AnyIsolTehtar [[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
 #define AnyTehtar [[[AnyTehta]?AnyTehta]?AnyTehta]?
+/*#define NotupORpseudoCarrier [[[[[[pseudoCarrier]?NotUpTehta]?pseudoCarrier]?NotUpTehta]?pseudoCarrier]?NotUpTehta]?*/
 
 table(substitution)
 
@@ -243,6 +251,10 @@ table(substitution)
 //    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
     endif;
 
+/*	if (insertcarrier)
+		_ > pseudoCarrier:2 / _ AnyIsolTehta ^ ;
+	endif;
+*/
   endpass;
   pass(2)
 
@@ -254,6 +266,8 @@ table(substitution)
 
     (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
 
+/*	pseudoCarrier > _ / AnyTengwa NotupORpseudoCarrier _ ;
+*/
   endpass;
   pass(3)
 
@@ -271,12 +285,13 @@ table(substitution)
     Uptehta > UptehtaWide / (Wide,lambe,silme,esse) AnyTehtar _ ;
     Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
     Uptehta > UptehtaNarrow / UpNarrow AnyTehtar _ ;
-    Uptehta > UptehtaCarr / (hallaRoomen,roomenN,Carrier) AnyTehtar _ ;
+    Uptehta > UptehtaCarr / (/*pseudoCarrier,*/hallaRoomen,roomenN,Carrier) AnyTehtar _ ;
 
     Downtehta > DowntehtaWide / Wide AnyTehtar _ ;
     Downtehta > DowntehtaNormal / (silme,esse,roomenN,DownNormal,Normal) AnyTehtar _ ;
     Downtehta > DowntehtaNarrow / (hallaRoomen,DownNarrow) AnyTehtar _ ;
     Downtehta > DowntehtaCarr / Carrier AnyTehtar _ ;
+/*    Downtehta > DowntehtaCarr / (pseudoCarrier,Carrier) AnyTehtar _ ;*/
     Downtehta > DowntehtaLambe / lambe AnyTehtar _ ;
 
   endpass;
