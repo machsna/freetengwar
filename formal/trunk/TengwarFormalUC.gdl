@@ -161,12 +161,12 @@ table(glyph)
   DowntehtaCarr =   (tehtaAB_shift1, tehtaYB_shift1, tehtaIB_shift1, tehtaEB_shift1, tehtaEEB_shift1, tehtaOB_shift1, tehtaUB_shift1);
   DowntehtaLambe =  (tehtaAB_shift4, tehtaYB_lambe,  tehtaIB_lambe,  tehtaEB_shift4, tehtaEEB_lambe,  tehtaOB_shift4, tehtaUB_shift4);
 
-  Downtehta +=       (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas,        tehtaX,        tengwardigitMark);
-  DowntehtaWide +=   (tehtaB_wide,   tehtaB_altwide,   tehtaThinnas_shift4, tehtaX_shift4, tengwardigitMark_shift4);
-  DowntehtaNormal += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift3, tehtaX_shift3, tengwardigitMark_shift3);
-  DowntehtaNarrow += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift2, tehtaX_shift3, tengwardigitMark_shift2);
-  DowntehtaCarr +=   (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift1, tehtaX_shift3, tengwardigitMark_shift1);
-  DowntehtaLambe +=  (tehtaB_lambe,  tehtaB_altlambe,  tehtaThinnas_shift4, tehtaX_shift4, tengwardigitMark_shift4);
+  Downtehta +=       (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas,        tengwardigitMark);
+  DowntehtaWide +=   (tehtaB_wide,   tehtaB_altwide,   tehtaThinnas_shift4, tengwardigitMark_shift4);
+  DowntehtaNormal += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift3, tengwardigitMark_shift3);
+  DowntehtaNarrow += (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift2, tengwardigitMark_shift2);
+  DowntehtaCarr +=   (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift1, tengwardigitMark_shift1);
+  DowntehtaLambe +=  (tehtaB_lambe,  tehtaB_altlambe,  tehtaThinnas_shift4, tengwardigitMark_shift4);
 
   AnyIsolTehta = (Uptehta,Downtehta);
   AnyTehta = (UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
