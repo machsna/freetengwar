@@ -119,7 +119,7 @@ endtable;
 
 table(glyph)
   Wide = (ando,umbar,anga,ungwe,anto,ampa,anca,unque,nuumen,malta,noldo,nwalme,
-          andoX,umbarX,angaX,ungweX,alda,maltaX,silme_aha,lambeN_alt,roomenN,tengwardigit3,tengwardigit6);
+          andoX,umbarX,angaX,ungweX,alda,maltaX,silme_aha,lambeN_alt,tengwardigit3,tengwardigit6);
   UpNormal = (tinco,parma,roomen_alt,arda_alt);
   Normal = (calma,quesse,aha,hwesta,oore,anna,vala,vilya,
           calmaX,quesseX,roomen,arda,silmeN,esseN,
@@ -131,10 +131,10 @@ table(glyph)
   DownNarrow = (tinco,parma,tincoX,parmaX,roomen_alt,arda_alt,
           tengwardigit0,tengwardigit1,tengwardigit4,tengwardigit7,tengwardigit8,tengwarduodecimal10,tengwarduodecimal11,tengwarduodecimal12,
           tehtaS_swash,tehtaS_swashhyarmen,tehtaS_swashhyarmenalt,tehtaS_swashlambe,tehtaS_swashraised,tehtaS_swashyanta,tehtaS_swashyantaalt);
-  Carrier = (longCarrier,halla,shortCarrier,hallaRoomen,aha_tinco,hwesta_tinco,
+  Carrier = (longCarrier,halla,shortCarrier,aha_tinco,hwesta_tinco,
           tehtaS,tehtaS_aha,tehtaS_hyarmen,tehtaS_lambelow,tehtaS_lifted,tehtaS_raisedalt,tehtaS_yanta);
 
-  AnyTengwa=(lambe,silme,esse,Wide,UpNormal,Normal,DownNormal,UpNarrow,DownNarrow,Carrier);
+  AnyTengwa=(lambe,silme,esse,roomenN,hallaRoomen,Wide,UpNormal,Normal,DownNormal,UpNarrow,DownNarrow,Carrier);
 
   Uptehta =       (tehtaA,        tehtaA_altshift2, tehtaY,        tehtaI,        tehtaE,        tehtaO,        tehtaU);
   UptehtaWide =   (tehtaA_shift4, tehtaA_altshift4, tehtaY_shift4, tehtaI_shift4, tehtaE_shift4, tehtaO_shift4, tehtaU_shift4);
@@ -223,13 +223,13 @@ table(substitution)
 
     if (sarincestyle==hook)
        tehtaS > tehtaS_lifted / (calmaX,quesseX,angaX,ungweX,halla,quesseC,vaiya,lambeN,roomenN) AnyTehtar _ ;
-       tehtaS > tehtaS_aha / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX) AnyTehtar _ ;
+       tehtaS > tehtaS_aha / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX,silme_aha) AnyTehtar _ ;
        tehtaS > tehtaS_hyarmen / (hyarmen) AnyTehtar _ ;
        tehtaS > tehtaS_lambelow / (lambe,esse) AnyTehtar _ ;
        tehtaS > tehtaS_raisedalt / (calma,anga,quesse,ungwe,roomen,arda,alda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX) AnyTehtar _ ;
        tehtaS > tehtaS_yanta / (yanta) AnyTehtar _ ;
     elseif (sarincestyle==swash)
-       tehtaS > tehtaS_swash / (tinco,parma,ando,umbar,suule,formen,anto,ampa,nuumen,malta,oore,vala,tincoX,parmaX,andoX,umbarX,alda,silme,esseN,shortCarrier,osseN) AnyTehtar _ ;
+       tehtaS > tehtaS_swash / (tinco,parma,ando,umbar,suule,formen,anto,ampa,nuumen,malta,oore,vala,tincoX,parmaX,andoX,umbarX,alda,silme,esseN,shortCarrier,osseN,aha_tinco,hwesta_tinco,silme_aha) AnyTehtar _ ;
        tehtaS > tehtaS_swash / (halla,quesseC,vaiya,lambeN,roomenN) AnyTehtar _ ;
        tehtaS > tehtaS_swash / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX) AnyTehtar _ ;
        tehtaS > tehtaS_swashhyarmen / (hyarmen) AnyTehtar _ ;
@@ -247,6 +247,8 @@ table(substitution)
     (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyTehtar Uptehta ;
     (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / Uptehta AnyTehtar _ ;
 
+    (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
+
   endpass;
   pass(3)
 
@@ -254,7 +256,7 @@ table(substitution)
        (osse_alt) > (osse) / ^ _ AnyIsolTehtar ZWJ? AnyTengwa;
     endif;
 
-    (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
+    (roomen_alt,arda_alt) > (roomen,arda) / _ AnyIsolTehtar (tehtaUB) ;
 
     tehtaX > tehtaX_shift4 / WideCombShook AnyTehtar _ ;
     tehtaX > tehtaX_down / RightCombShook AnyTehtar _ ;
@@ -267,11 +269,11 @@ table(substitution)
     Uptehta > UptehtaWide / (Wide,lambe,silme,esse) AnyTehtar _ ;
     Uptehta > UptehtaNormal / (UpNormal,Normal) AnyTehtar _ ;
     Uptehta > UptehtaNarrow / UpNarrow AnyTehtar _ ;
-    Uptehta > UptehtaCarr / Carrier AnyTehtar _ ;
+    Uptehta > UptehtaCarr / (hallaRoomen,roomenN,Carrier) AnyTehtar _ ;
 
     Downtehta > DowntehtaWide / Wide AnyTehtar _ ;
-    Downtehta > DowntehtaNormal / (silme,esse,DownNormal,Normal) AnyTehtar _ ;
-    Downtehta > DowntehtaNarrow / DownNarrow AnyTehtar _ ;
+    Downtehta > DowntehtaNormal / (silme,esse,roomenN,DownNormal,Normal) AnyTehtar _ ;
+    Downtehta > DowntehtaNarrow / (hallaRoomen,DownNarrow) AnyTehtar _ ;
     Downtehta > DowntehtaCarr / Carrier AnyTehtar _ ;
     Downtehta > DowntehtaLambe / lambe AnyTehtar _ ;
 
