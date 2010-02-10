@@ -168,8 +168,10 @@ table(glyph)
   DowntehtaCarr +=   (tehtaB_narrow, tehtaB_altnarrow, tehtaThinnas_shift1, tengwardigitMark_shift1);
   DowntehtaLambe +=  (tehtaB_lambe,  tehtaB_altlambe,  tehtaThinnas_shift4, tengwardigitMark_shift4);
 
-  AnyIsolTehta = (Uptehta,Downtehta);
-  AnyTehta = (UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
+  AnyIsolTehta = (tehtaDotInside,tehtaX,Uptehta,Downtehta);
+  AnyTehta = (tehtaDotInside,tehtaX,UptehtaWide,UptehtaNormal,UptehtaNarrow,UptehtaCarr,DowntehtaWide,DowntehtaNormal,DowntehtaNarrow,DowntehtaCarr,DowntehtaLambe);
+
+  OomaUpTehta = (tehtaA,tehtaA_altshift2,tehtaAE,tehtaAE_altshift2,tehtaBreve,tehtaE,tehtaE_tehtaE_shift2,tehtaGrave,tehtaI,tehtaO,tehtaO_tehtaI_shift2,tehtaO_tehtaO_shift2,tehtaU,tehtaU_tehtaI_shift2,tehtaU_tehtaU_shift2,tehtaW,tehtaY,tehtaYanta)
 
   RightCombShook = (tinco,parma,ando,umbar,suule,formen,anto,ampa,tincoX,parmaX,andoX,umbarX,nuumen,malta,oore,vala,hallaRoomen,aha_tinco,hwesta_tinco);
   WideCombShook = (anga,ungwe,anca,unque,angaX,ungweX,noldo,nwalme);
@@ -222,30 +224,33 @@ table(substitution)
     tehtaI tehtaI > tehtaY:(1 2) _ ;
 
     if (sarincestyle==hook)
-       tehtaS > tehtaS_lifted / (calmaX,quesseX,angaX,ungweX,halla,quesseC,vaiya,lambeN,roomenN) AnyTehtar _ ;
-       tehtaS > tehtaS_aha / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX,silme_aha) AnyTehtar _ ;
-       tehtaS > tehtaS_hyarmen / (hyarmen) AnyTehtar _ ;
-       tehtaS > tehtaS_lambelow / (lambe,esse) AnyTehtar _ ;
-       tehtaS > tehtaS_raisedalt / (calma,anga,quesse,ungwe,roomen,arda,alda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX) AnyTehtar _ ;
-       tehtaS > tehtaS_yanta / (yanta) AnyTehtar _ ;
+       tehtaS > tehtaS_lifted / (calmaX,quesseX,angaX,ungweX,halla,quesseC,vaiya,lambeN,roomenN) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_aha / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX,silme_aha) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_hyarmen / (hyarmen) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_lambelow / (lambe,esse) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_raisedalt / (calma,anga,quesse,ungwe,roomen,arda,alda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_yanta / (yanta,maltaX,valaX) AnyIsolTehtar _ ;
     elseif (sarincestyle==swash)
-       tehtaS > tehtaS_swash / (tinco,parma,ando,umbar,suule,formen,anto,ampa,nuumen,malta,oore,vala,tincoX,parmaX,andoX,umbarX,alda,silme,esseN,shortCarrier,osseN,aha_tinco,hwesta_tinco,silme_aha) AnyTehtar _ ;
-       tehtaS > tehtaS_swash / (halla,quesseC,vaiya,lambeN,roomenN) AnyTehtar _ ;
-       tehtaS > tehtaS_swash / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX) AnyTehtar _ ;
-       tehtaS > tehtaS_swashhyarmen / (hyarmen) AnyTehtar _ ;
-       tehtaS > tehtaS_swashyanta / (yanta) AnyTehtar _ ;
-       tehtaS > tehtaS_swashlambe / (lambe,esse) AnyTehtar _ ;
-       tehtaS > tehtaS_swashraised / (calma,anga,quesse,ungwe,roomen,arda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX,calmaX,quesseX,angaX,ungweX) AnyTehtar _ ; 
+       tehtaS > tehtaS_swash / (tinco,parma,ando,umbar,suule,formen,anto,ampa,nuumen,malta,oore,vala,tincoX,parmaX,andoX,umbarX,alda,silme,esseN,shortCarrier,osseN,maltaX,valaX,aha_tinco,hwesta_tinco,silme_aha) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swash / (halla,quesseC,vaiya,lambeN,roomenN) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swash / (aha,hwesta,anca,unque,noldo,anna,nwalme,vilya,annaX) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swashhyarmen / (hyarmen) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swashyanta / (yanta) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swashlambe / (lambe,esse) AnyIsolTehtar _ ;
+       tehtaS > tehtaS_swashraised / (calma,anga,quesse,ungwe,roomen,arda,silmeN,hwestaS,uure,hallaRoomen,osse,longCarrier,carrierX,calmaX,quesseX,angaX,ungweX) AnyIsolTehtar _ ; 
+//    tehtaS > tehtaS_lifted / LiftedShook AnyTehtar _ ;
+//    tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
+//    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
     endif;
-
-	tehtaW > tehtaW_combshift2 / _ AnyTehtar (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) ;
-	tehtaW > tehtaW_combshift2 / (tehtaA,tehtaY,tehtaI,tehtaE,tehtaO,tehtaU,tehtaW,tehtaYanta,tehtaAE,tehtaBreve,tehtaGrave,tehtaO_tehtaI_shift2,tehtaU_tehtaI_shift2) AnyTehtar _ ;
 
   endpass;
   pass(2)
 
-    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyTehtar Uptehta ;
-    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / Uptehta AnyTehtar _ ;
+	tehtaW > tehtaW_combshift2 / _ AnyIsolTehtar OomaUpTehta ;
+	tehtaW > tehtaW_combshift2 / OomaUpTehta AnyIsolTehtar _ ;
+
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyIsolTehtar (OomaUpTehta,tehtaW_combshift2) ;
+    (tehtaN_narrow,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / (OomaUpTehta,tehtaW_combshift2) AnyIsolTehtar _ ;
 
     (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar Downtehta ;
 
@@ -260,9 +265,6 @@ table(substitution)
 
     tehtaX > tehtaX_shift4 / WideCombShook AnyTehtar _ ;
     tehtaX > tehtaX_down / RightCombShook AnyTehtar _ ;
-//    tehtaS > tehtaS_lifted / LiftedShook AnyTehtar _ ;
-//    tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
-//    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
 
     (tehtaS_swashhyarmen,tehtaS_swashyanta) > (tehtaS_swashhyarmenalt,tehtaS_swashyantaalt) / _ AnyIsolTehtar AnyIsolTehta ;
 
