@@ -102,6 +102,16 @@ def apt(expr psn, apn) =
   psc(psn).ap[if unknown apn: psc(psn).ap.n elseif string apn: psc(psn).ap.lu(apn) else: apn fi]
 enddef;
 
+vardef transformadjust(expr in) =
+  save out;
+  if pair in:
+    pair out; out:=in transformed currenttransform;
+  elseif numeric in:
+    numeric out; out:=xpart((in,0) transformed currenttransform);
+  fi
+  out
+enddef;
+
 def padding(expr l, r) =
   lpad:=l; rpad:=r; w:=w+l+r;
   setap("lpad",(l,0)); apt(ps.n,lastap).forgd :=false;
@@ -142,7 +152,7 @@ enddef;
 
 def endchr =
   if tracing:
-    message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(w/un) & ");";
+    message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(transformadjust(w)/un) & ");";
     if usealiasnames:
       message "pe: SetGlyphName("& ditto & ps_to_alias(ps[ps.n].name) & ditto &",0);";
     fi
@@ -167,8 +177,9 @@ def endchr =
   apt(ps.n,lastap).forgd := false;
   for i=1 upto psc(ps.n).ap.n:
     if apt(ps.n,i).forgd:
-      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point(" & decimal round(scalefactor*xpart apt(ps.n,i).pt/un) & "m,"
-         & decimal round(scalefactor*ypart apt(ps.n,i).pt/un) & "m);"; fi
+      if tracing and forgd: message "gd:  " & apt(ps.n,i).name & " = point("
+         & decimal round(scalefactor*xpart transformadjust(apt(ps.n,i).pt)/un) & "m,"
+         & decimal round(scalefactor*ypart transformadjust(apt(ps.n,i).pt)/un) & "m);"; fi
       if not tracing: makelabel(apt(ps.n,i).name,apt(ps.n,i).pt); fi
     else:
       if not tracing: makelabel("("& apt(ps.n,i).name &")",apt(ps.n,i).pt); fi
@@ -176,6 +187,7 @@ def endchr =
   endfor
   if not tracing:
     cullit;
+    w:=transformadjust(w);
     ps[ps.n].pic := currentpicture;
     ps[ps.n].name;
     proofrule((0,ex),(w,ex));
@@ -273,9 +285,9 @@ def attach(expr psn, bapn, capn) =
       message "pe: Select("& ditto & psn & ditto &"); CopyReference();";
     fi
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); PasteWithOffset(" &
-         decimal round(xpart vec/un) & "," & decimal round(ypart vec/un) & ");";
+         decimal round(xpart transformadjust(vec)/un) & "," & decimal round(ypart transformadjust(vec)/un) & ");";
   else:
-    addto currentpicture also psc(psn).pic shifted vec;
+    addto currentpicture also psc(psn).pic shifted transformadjust(vec);
   fi
   hasattached:=true;
 enddef;

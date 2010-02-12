@@ -140,13 +140,13 @@ enddef;
 boolean draw_change_of_angle; draw_change_of_angle:=true;
 vardef change_angle(expr spt, sang, eang) =
   save p,c; path p; pair c;
-  c=spt-1/2tecil_w*dir sang;
+  c=spt-1/2tecil_w*dir sang transformed inverse currenttransform;
   if (abs(sang-eang)>1) and draw_change_of_angle:
-    p=arc(sang,eang,c,2tecil_w);
-    fill c--p--cycle; 
+    p=arc(sang,eang,(0,0),2tecil_w);
+    fill ((0,0)--(p transformed inverse currenttransform)--cycle) shifted c; 
   fi
   draw_change_of_angle:=true;
-  c+1/2tecil_w*dir eang
+  c+1/2tecil_w*dir eang transformed inverse currenttransform
 enddef;
 
 input serif;
