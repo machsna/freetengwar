@@ -653,7 +653,7 @@ def draw_luuva(expr num, side, style, h, yap) =
   elseif style=closed:
     ap1=ang(a1..a2..a3..a4);
     p1=z1{curl0.3}..z2{right}..tension1.1..z3{down}..tension1.2..z4{left};
-    t:=directiontime -dir40 of p1;
+    t:=2.7; %directiontime -dir40 of p1;
     draw_stroke(subpath(0,t) of p1 transformed rot,subpath(0,t) of ap1);
   fi
   if num=2:
@@ -668,7 +668,7 @@ def draw_luuva(expr num, side, style, h, yap) =
       z11=point t of p2; a11=penangle t of ap1;
     elseif style=closed:
       p2=z6{curl0.3}..z7{right}..tension1.1..z8{down}..tension1.2..z9{left};
-      t:=directiontime -dir40 of p2;
+      t:=2.7; %directiontime -dir40 of p2;
       draw_stroke(subpath(0,t) of p2 transformed rot, subpath(0,t) of ap1);
     fi
   fi
