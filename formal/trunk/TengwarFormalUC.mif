@@ -34,6 +34,7 @@ Exclusive      yes
 
 List
 	tehtaE_tehtaE.shift2	tehtaE tehtaE
+	tehtaGrave_tehtaGrave.shift2	tehtaGrave tehtaGrave
 	tehtaO_tehtaI.shift2	tehtaI tehtaO
 	tehtaO_tehtaI.shift2	tehtaO tehtaI
 	tehtaO_tehtaO.shift2	tehtaO tehtaO
@@ -75,7 +76,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	aha_tinco hwesta_tinco silme_aha
 oomauptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 tehtaW	tehtaW
 othertehtar	tehtaDotInside tehtaN
@@ -172,7 +173,7 @@ Exclusive     yes
 anytehta	tehtaA tehtaAB tehtaAE tehtaB tehtaBreve tehtaDotInside
 +	tehtaE tehtaEB tehtaEEB tehtaGrave tehtaI tehtaIB tehtaN tehtaO tehtaOB
 +	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX tehtaY tehtaYanta tehtaYB tengwardigitMark
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 anytengwaBUTosse	tinco parma calma quesse ando umbar anga ungwe
 +	suule formen aha hwesta anto ampa anca unque
@@ -340,7 +341,7 @@ anytehta	tehtaA tehtaA.altshift2 tehtaAB tehtaAE tehtaAE.altshift2
 +	tehtaN tehtaN.altnarrow tehtaO tehtaOB
 +	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX
 +	tehtaY tehtaYanta tehtaYB tengwardigitMark
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 tehtaS	tehtaS
 
@@ -426,7 +427,7 @@ anytehta	tehtaA tehtaA.altshift2 tehtaAB tehtaAE tehtaAE.altshift2
 +	tehtaN tehtaN.altnarrow tehtaO tehtaOB
 +	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX
 +	tehtaY tehtaYanta tehtaYB tengwardigitMark
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 tehtaS	tehtaS tehtaS.lifted tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.raisedalt tehtaS.yanta
 
@@ -529,7 +530,7 @@ roomenetc	roomen arda
 anytehtaBUTdown	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2
 +	tehtaBreve tehtaDotInside tehtaE tehtaGrave tehtaI
 +	tehtaN tehtaN.altnarrow tehtaO tehtaU tehtaW tehtaX tehtaY tehtaYanta
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 downtehtar	tehtaAB tehtaB tehtaB.altnarrow
 +	tehtaEB tehtaEEB tehtaIB tehtaOB tehtaThinnas tehtaYB tengwardigitMark
@@ -570,7 +571,7 @@ Exclusive      yes
 nasal	tehtaN tehtaN.altnarrow
 uptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve tehtaE
 +	tehtaGrave tehtaI tehtaO tehtaU tehtaW tehtaY tehtaYanta 
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 othertehtar		tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB tehtaIB tehtaOB
 +	tehtaThinnas tehtaUB tehtaX tehtaYB tengwardigitMark
@@ -608,7 +609,7 @@ Exclusive      yes
 lownasal	tehtaN.narrowlow tehtaN.altnarrowlow
 othertehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve tehtaE
 +	tehtaGrave tehtaI tehtaO tehtaU tehtaW tehtaY tehtaYanta 
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 +	tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB tehtaIB tehtaOB
 +	tehtaThinnas tehtaUB tehtaX tehtaYB tengwardigitMark
@@ -646,7 +647,7 @@ wtehta	tehtaW
 uptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve tehtaE
 +	tehtaGrave tehtaI
 +	tehtaO tehtaU tehtaY tehtaYanta 
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 othertehtar		tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB tehtaIB tehtaOB tehtaThinnas
 +	tehtaUB tehtaX tehtaYB tengwardigitMark tehtaN tehtaN.narrowlow tehtaN.altnarrow tehtaN.altnarrowlow
@@ -693,7 +694,7 @@ anytehtaBUTx	tehtaA tehtaA.altshift2 tehtaAB tehtaAE tehtaAE.altshift2
 +	tehtaEB tehtaEEB tehtaGrave tehtaI tehtaIB
 +	tehtaN tehtaN.narrowlow tehtaN.altnarrow tehtaN.altnarrowlow tehtaO tehtaOB tehtaThinnas
 +	tehtaU tehtaUB tehtaW tehtaW.combshift2 tehtaY tehtaYanta tehtaYB tengwardigitMark
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 tehtaX	tehtaX
 
@@ -754,7 +755,7 @@ anytehtaBUTup	tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB te
 uptehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2
 +	tehtaBreve tehtaE tehtaGrave tehtaI tehtaN tehtaN.narrowlow
 +	tehtaN.altnarrow tehtaN.altnarrowlow tehtaO tehtaU tehtaW tehtaW.combshift2 tehtaY tehtaYanta
-+	tehtaE_tehtaE.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 
            EOT  OOB  DEL  EOL  wide normal narrow carrier anytehtaBUTup uptehtar
@@ -800,6 +801,7 @@ wideuptehta
 	tehtaY tehtaY.shift4
 	tehtaYanta tehtaYanta.shift4
 	tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift4
+	tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift4
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift4
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift4
 	tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift4
@@ -827,6 +829,7 @@ normaluptehta
 	tehtaY tehtaY.shift3
 	tehtaYanta tehtaYanta.shift3
 	tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift3
+	tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift3
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3
 	tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift3
@@ -854,6 +857,7 @@ carrieruptehta
 	tehtaY tehtaY.shift1
 	tehtaYanta tehtaYanta.shift1
 	tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift1
+	tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift1
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift1
 	tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift1
 	tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift1
@@ -886,7 +890,7 @@ wide	ando umbar anga ungwe anto ampa anca unque nuumen malta noldo nwalme
 +	andoX umbarX angaX ungweX alda maltaX silme_aha
 +	tengwardigit3 tengwardigit6
 normal	suule formen calma quesse aha hwesta oore anna vala vilya
-+	calmaX quesseX roomen arda silme silmeN esse esseN hyarmen yanta hwestaS uure
++	calmaX quesseX roomen arda silme esse esseN hyarmen yanta hwestaS uure
 +	osseN lambeN osse osse.alt carrierX quesseC hwestaC roomenN valaX annaX vaiya
 +	tengwardigit2 tengwardigit5 tengwardigit9
 narrow	tinco parma tincoX parmaX hallaRoomen roomen.alt arda.alt
@@ -894,7 +898,7 @@ narrow	tinco parma tincoX parmaX hallaRoomen roomen.alt arda.alt
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	tehtaS.swash tehtaS.swashhyarmen tehtaS.swashhyarmenalt
 +	tehtaS.swashlambe tehtaS.swashraised tehtaS.swashyanta tehtaS.swashyantaalt
-carrier	longCarrier halla shortCarrier aha_tinco hwesta_tinco
+carrier	longCarrier halla shortCarrier silmeN aha_tinco hwesta_tinco
 +	tehtaS tehtaS.aha tehtaS.hyarmen tehtaS.lambelow tehtaS.lifted tehtaS.raisedalt tehtaS.yanta
 lambe	lambe lambeN.alt
 anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
@@ -915,6 +919,7 @@ anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
 +	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
 +	tehtaE_tehtaE.shift1 tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift3 tehtaE_tehtaE.shift4
++	tehtaGrave_tehtaGrave.shift1 tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift3 tehtaGrave_tehtaGrave.shift4
 +	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
 +	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
 +	tehtaO_tehtaO.shift1 tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift3 tehtaO_tehtaO.shift4
@@ -1002,3 +1007,141 @@ lambedowntehta
 	tehtaUB tehtaUB.shift4
 	tehtaYB tehtaYB.lambe
 	tengwardigitMark tengwardigitMark.shift4
+
+
+// --------------------------------------------------------------
+// Shift thinnas when there are other tehtar below
+
+Type           Contextual
+Name           NULL
+Namecode       16620
+Setting        NULL
+Settingcode    16621
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+nocarrDownBUTthinnas	tehtaAB tehtaAB.shift2 tehtaAB.shift3 tehtaAB.shift4
++	tehtaB tehtaB.altnarrow tehtaB.altwide tehtaB.narrow tehtaB.wide
++	tehtaEB tehtaEB.shift2 tehtaEB.shift3 tehtaEB.shift4
++	tehtaEEB tehtaEEB.shift2 tehtaEEB.shift3 tehtaEEB.shift4
++	tehtaIB tehtaIB.shift2 tehtaIB.shift3 tehtaIB.shift4
++	tehtaOB tehtaOB.shift2 tehtaOB.shift3 tehtaOB.shift4
++	tehtaUB tehtaUB.shift2 tehtaUB.shift3 tehtaUB.shift4
++	tehtaYB tehtaYB.shift2 tehtaYB.shift3 tehtaYB.shift4
++	tengwardigitMark tengwardigitMark.shift2 tengwardigitMark.shift3 tengwardigitMark.shift4
+thinnas	tehtaThinnas tehtaThinnas.shift3 tehtaThinnas.shift4
+anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
++	tehtaA.altshift1 tehtaA.altshift2 tehtaA.altshift3 tehtaA.altshift4
++	tehtaAE tehtaAE.shift1 tehtaAE.shift2 tehtaAE.shift3 tehtaAE.shift4
++	tehtaAE.altshift1 tehtaAE.altshift2 tehtaAE.altshift3 tehtaAE.altshift4
++	tehtaBreve tehtaBreve.shift1 tehtaBreve.shift2 tehtaBreve.shift3 tehtaBreve.shift4
++	tehtaDotInside
++	tehtaE tehtaE.shift1 tehtaE.shift2 tehtaE.shift3 tehtaE.shift4
++	tehtaGrave tehtaGrave.shift1 tehtaGrave.shift2 tehtaGrave.shift3 tehtaGrave.shift4
++	tehtaI tehtaI.shift1 tehtaI.shift2 tehtaI.shift3 tehtaI.shift4
++	tehtaN tehtaN.narrow tehtaN.altnarrow tehtaN.wide tehtaN.altwide
++	tehtaN.narrowlow tehtaN.altnarrowlow tehtaN.widelow tehtaN.altwidelow
++	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
++	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
++	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
++	tehtaX tehtaX.shift4 tehtaX.down
++	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
++	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
++	tehtaE_tehtaE.shift1 tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift3 tehtaE_tehtaE.shift4
++	tehtaGrave_tehtaGrave.shift1 tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift3 tehtaGrave_tehtaGrave.shift4
++	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
++	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
++	tehtaO_tehtaO.shift1 tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift3 tehtaO_tehtaO.shift4
++	tehtaU_tehtaI.shift1 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift3 tehtaU_tehtaI.shift4
++	tehtaU_tehtaI.shift1 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift3 tehtaU_tehtaI.shift4
++	tehtaU_tehtaU.shift1 tehtaU_tehtaU.shift2 tehtaU_tehtaU.shift3 tehtaU_tehtaU.shift4
+
+
+           EOT  OOB  DEL  EOL  nocarrDownBUTthinnas thinnas anytehtaBUTdown
+StartText  1    1    1    1    2                    3       1
+StartLine  1    1    1    1    2                    3       1
+sawdown    1    1    2    1    2                    4       2
+sawthinnas 1    1    5    1    6                    3       5
+didthinnas 1    1    7    1    7                    4       7
+
+   GoTo       Mark? Advance? SubstMark SubstCurrent
+1  StartText  no    yes      none      none
+2  sawdown    no    yes      none      none
+3  sawthinnas yes   yes      none      none
+4  didthinnas no    yes      none      dothinnas
+5  sawthinnas no    yes      none      none
+6  didthinnas no    yes      dothinnas none
+7  didthinnas no    yes      none      none
+
+dothinnas
+	tehtaThinnas tehtaThinnas.shift1
+	tehtaThinnas.shift2 tehtaThinnas.shift1
+	tehtaThinnas.shift3 tehtaThinnas.shift1
+	tehtaThinnas.shift4 tehtaThinnas.shift1
+
+// If you type thinnas, thinnas, downtehta, there's no way of substituting both thinnas, therefore BACKWARD:
+
+Type           Contextual
+Name           NULL
+Namecode       16620
+Setting        NULL
+Settingcode    16622
+Default        yes
+Orientation    HV
+Forward        no
+Exclusive      yes
+
+shiftedthinnas	tehtaThinnas.shift1
+othertehtar	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
++	tehtaA.altshift1 tehtaA.altshift2 tehtaA.altshift3 tehtaA.altshift4
++	tehtaAE tehtaAE.shift1 tehtaAE.shift2 tehtaAE.shift3 tehtaAE.shift4
++	tehtaAE.altshift1 tehtaAE.altshift2 tehtaAE.altshift3 tehtaAE.altshift4
++	tehtaBreve tehtaBreve.shift1 tehtaBreve.shift2 tehtaBreve.shift3 tehtaBreve.shift4
++	tehtaDotInside
++	tehtaE tehtaE.shift1 tehtaE.shift2 tehtaE.shift3 tehtaE.shift4
++	tehtaGrave tehtaGrave.shift1 tehtaGrave.shift2 tehtaGrave.shift3 tehtaGrave.shift4
++	tehtaI tehtaI.shift1 tehtaI.shift2 tehtaI.shift3 tehtaI.shift4
++	tehtaN tehtaN.narrow tehtaN.altnarrow tehtaN.wide tehtaN.altwide
++	tehtaN.narrowlow tehtaN.altnarrowlow tehtaN.widelow tehtaN.altwidelow
++	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
++	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
++	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
++	tehtaX tehtaX.shift4 tehtaX.down
++	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
++	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
++	tehtaE_tehtaE.shift1 tehtaE_tehtaE.shift2 tehtaE_tehtaE.shift3 tehtaE_tehtaE.shift4
++	tehtaGrave_tehtaGrave.shift1 tehtaGrave_tehtaGrave.shift2 tehtaGrave_tehtaGrave.shift3 tehtaGrave_tehtaGrave.shift4
++	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
++	tehtaO_tehtaI.shift1 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift3 tehtaO_tehtaI.shift4
++	tehtaO_tehtaO.shift1 tehtaO_tehtaO.shift2 tehtaO_tehtaO.shift3 tehtaO_tehtaO.shift4
++	tehtaU_tehtaI.shift1 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift3 tehtaU_tehtaI.shift4
++	tehtaU_tehtaI.shift1 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift3 tehtaU_tehtaI.shift4
++	tehtaU_tehtaU.shift1 tehtaU_tehtaU.shift2 tehtaU_tehtaU.shift3 tehtaU_tehtaU.shift4
++	tehtaAB tehtaAB.shift1 tehtaAB.shift2 tehtaAB.shift3 tehtaAB.shift4
++	tehtaB tehtaB.altlambe tehtaB.altnarrow tehtaB.altwide tehtaB.lambe tehtaB.narrow tehtaB.wide
++	tehtaEB tehtaEB.shift1 tehtaEB.shift2 tehtaEB.shift3 tehtaEB.shift4
++	tehtaEEB tehtaEEB.lambe tehtaEEB.shift1 tehtaEEB.shift2 tehtaEEB.shift3 tehtaEEB.shift4
++	tehtaIB tehtaIB.lambe tehtaIB.shift1 tehtaIB.shift2 tehtaIB.shift3 tehtaIB.shift4
++	tehtaOB tehtaOB.shift1 tehtaOB.shift2 tehtaOB.shift3 tehtaOB.shift4
++	tehtaUB tehtaUB.shift1 tehtaUB.shift2 tehtaUB.shift3 tehtaUB.shift4
++	tehtaYB tehtaYB.lambe tehtaYB.shift1 tehtaYB.shift2 tehtaYB.shift3 tehtaYB.shift4
++	tengwardigitMark tengwardigitMark.shift1 tengwardigitMark.shift2 tengwardigitMark.shift3 tengwardigitMark.shift4
+thinnas	tehtaThinnas tehtaThinnas.shift2 tehtaThinnas.shift3 tehtaThinnas.shift4
+
+            EOT  OOB  DEL  EOL  shiftedthinnas othertehtar thinnas
+StartText   1    1    1    1    2              1           1
+StartLine   1    1    1    1    2              1           1
+sawshifted  1    1    2    1    2              2           3
+
+   GoTo        Mark? Advance? SubstMark  SubstCurrent
+1  StartText   no    yes      none       none
+2  sawshifted  no    yes      none       none
+3  sawshifted  no    yes      none       shiftthinnas
+
+shiftthinnas
+	tehtaThinnas tehtaThinnas.shift1
+	tehtaThinnas.shift2 tehtaThinnas.shift1
+	tehtaThinnas.shift3 tehtaThinnas.shift1
+	tehtaThinnas.shift4 tehtaThinnas.shift1
