@@ -90,7 +90,7 @@ table(glyph)
   tehtaY_shift2 = ps("tehtaY.shift2");
   tehtaY_shift3 = ps("tehtaY.shift3");
   tehtaY_shift4 = ps("tehtaY.shift4");
-  tehtaYB_lambe = ps("tehtaYB.lambe");
+  tehtaYB_lambeoriginal = ps("tehtaYB.lambeoriginal");
   tehtaYB_shift1 = ps("tehtaYB.shift1");
   tehtaYB_shift2 = ps("tehtaYB.shift2");
   tehtaYB_shift3 = ps("tehtaYB.shift3");
@@ -99,7 +99,7 @@ table(glyph)
   tehtaI_shift2 = ps("tehtaI.shift2");
   tehtaI_shift3 = ps("tehtaI.shift3");
   tehtaI_shift4 = ps("tehtaI.shift4");
-  tehtaIB_lambe = ps("tehtaIB.lambe");
+  tehtaIB_lambeoriginal = ps("tehtaIB.lambeoriginal");
   tehtaIB_shift1 = ps("tehtaIB.shift1");
   tehtaIB_shift2 = ps("tehtaIB.shift2");
   tehtaIB_shift3 = ps("tehtaIB.shift3");
@@ -237,6 +237,8 @@ table(glyph)
   quesseC = ps("quesseC");
   hallaRoomen = ps("hallaRoomen");
   vaiya = ps("vaiya");
+  tehtaYB_lambe = ps("tehtaYB.lambe");
+  tehtaIB_lambe = ps("tehtaIB.lambe");
   tehtaE_tehtaE_shift1 = ps("tehtaE_tehtaE.shift1");
   tehtaE_tehtaE_shift2 = ps("tehtaE_tehtaE.shift2");
   tehtaE_tehtaE_shift3 = ps("tehtaE_tehtaE.shift3");
@@ -269,6 +271,10 @@ table(glyph)
   tehtaGrave_shift2 = ps("tehtaGrave.shift2");
   tehtaGrave_shift3 = ps("tehtaGrave.shift3");
   tehtaGrave_shift4 = ps("tehtaGrave.shift4");
+  tehtaGrave_tehtaGrave_shift1 = ps("tehtaGrave_tehtaGrave.shift1");
+  tehtaGrave_tehtaGrave_shift2 = ps("tehtaGrave_tehtaGrave.shift2");
+  tehtaGrave_tehtaGrave_shift3 = ps("tehtaGrave_tehtaGrave.shift3");
+  tehtaGrave_tehtaGrave_shift4 = ps("tehtaGrave_tehtaGrave.shift4");
   tehtaS_aha = ps("tehtaS.aha");
   tehtaS_hyarmen = ps("tehtaS.hyarmen");
   tehtaS_lambelow = ps("tehtaS.lambelow");
