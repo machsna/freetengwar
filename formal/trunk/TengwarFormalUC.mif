@@ -669,6 +669,43 @@ sawuptehta 1    1    3    1    6      3        3
 smallerw
 	tehtaW tehtaW.combshift2
 
+// If you type tehtaW, tehtaW, uptehta, there's no way of substituting both tehtaW, therefore BACKWARD:
+
+Type           Contextual
+Name           NULL
+Namecode       16100
+Setting        NULL
+Settingcode    16102
+Default        yes
+Orientation    HV
+Forward        no
+Exclusive      yes
+
+smallw	tehtaW.combshift2
+othertehtar	tehtaA tehtaA.altshift2 tehtaAE tehtaAE.altshift2 tehtaBreve tehtaE
++	tehtaGrave tehtaI
++	tehtaO tehtaU tehtaY tehtaYanta 
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaAB tehtaB tehtaB.altnarrow tehtaDotInside tehtaEB tehtaEEB tehtaIB tehtaOB tehtaThinnas
++	tehtaUB tehtaX tehtaYB tengwardigitMark tehtaN tehtaN.narrowlow tehtaN.altnarrow tehtaN.altnarrowlow
+wtehta	tehtaW
+
+            EOT  OOB  DEL  EOL  smallw othertehtar wtehta
+StartText   1    1    1    1    2      3           1
+StartLine   1    1    1    1    2      3           1
+sawsmall    1    1    2    1    2      3           1
+changenext  1    1    3    1    3      3           4
+
+   GoTo        Mark? Advance? SubstMark  SubstCurrent
+1  StartText   no    yes      none       none
+2  sawsmall    no    yes      none       none
+3  changenext  no    yes      none       none
+4  changenext  no    yes      none       smallerw
+
+smallerw
+	tehtaW tehtaW.combshift2
+
 
 // --------------------------------------------------------------
 // Choose combining sarince
@@ -915,6 +952,7 @@ anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
 +	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
 +	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
++	tehtaW.combshift1 tehtaW.combshift2 tehtaW.combshift3 tehtaW.combshift4
 +	tehtaX tehtaX.shift4 tehtaX.down
 +	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
 +	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
@@ -1046,6 +1084,7 @@ anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
 +	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
 +	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
++	tehtaW.combshift1 tehtaW.combshift2 tehtaW.combshift3 tehtaW.combshift4
 +	tehtaX tehtaX.shift4 tehtaX.down
 +	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
 +	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
@@ -1108,6 +1147,7 @@ othertehtar	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
 +	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
 +	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
++	tehtaW.combshift1 tehtaW.combshift2 tehtaW.combshift3 tehtaW.combshift4
 +	tehtaX tehtaX.shift4 tehtaX.down
 +	tehtaY tehtaY.shift1 tehtaY.shift2 tehtaY.shift3 tehtaY.shift4
 +	tehtaYanta tehtaYanta.shift1 tehtaYanta.shift2 tehtaYanta.shift3 tehtaYanta.shift4
