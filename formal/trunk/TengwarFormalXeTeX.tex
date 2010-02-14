@@ -3,12 +3,13 @@
 
 \documentclass[11pt,a4paper]{article}
 \usepackage{fontspec}
+\usepackage{xltxtra}
 \pagestyle{empty}
 \frenchspacing
 
 \font\formalGR="Tengwar Formal Unicode/GR" at 15pt
 \font\formalAAT="Tengwar Formal Unicode" at 15pt
-\font\formalGRinsert="Tengwar Formal Unicode/GR:206=1" at 15pt
+\font\formalGRinsert="Tengwar Formal Unicode/GR:212=1" at 15pt
 \font\formalAATinsert="Tengwar Formal Unicode:Short carrier insertion=Automatic insertion" at 15pt
 \font\formalGRdescw="Tengwar Formal Unicode/GR:204=1" at 15pt
 \font\formalAATdescw="Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash" at 15pt
@@ -43,7 +44,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \paragraph{} \texttt{\char`\\font\char`\\bla="font(/GR):feature=value(;feature=value)"}
 
-\paragraph{} In this specification, the part \texttt{bla} is a string of your choice. The part \texttt{/GR} is optional. It tells Xe\TeX{} to use the Graphite information. If you leave it away, it will use the AAT information (though AAT may only work on Mac OS X). Note that you can define as many features as you like:
+\paragraph{} In this specification, the part \texttt{bla} is a string of your choice. On Mac OS X, the part \texttt{/GR} is optional. It tells \XeTeX{} to use the Graphite information. If you leave it away, it will use the AAT information, which only works on Mac OS X. Note that you can define as many features as you like:
 
 \paragraph{} \texttt{\char`\\font\char`\\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt}
 
@@ -115,7 +116,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \subsubsection{Automatic insertion}
 
-\texttt{"Tengwar Formal Unicode/GR:206=1"}
+\texttt{"Tengwar Formal Unicode/GR:212=1"}
 
 \formalGRinsert
 \begin{tabular}{ c | c c c c c c c c}
