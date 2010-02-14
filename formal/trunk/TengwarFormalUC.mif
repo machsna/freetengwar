@@ -1,5 +1,7 @@
 // Morph Input File for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
+// Version: 2010-02-14
+// http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -1242,10 +1244,10 @@ carrieruptehta
 	tehtaE tehtaE.shift1
 	tehtaGrave tehtaGrave.shift1
 	tehtaI tehtaI.shift1
-	tehtaN tehtaN.narrow
-	tehtaN.altnarrow tehtaN.altnarrow
-	tehtaN.narrowlow tehtaN.narrowlow
-	tehtaN.altnarrowlow tehtaN.altnarrowlow
+	tehtaN tehtaN.shift1
+	tehtaN.altnarrow tehtaN.altshift1
+	tehtaN.narrowlow tehtaN.shift1low
+	tehtaN.altnarrowlow tehtaN.altshift1low
 	tehtaO tehtaO.shift1
 	tehtaU tehtaU.shift1
 	tehtaW tehtaW.shift1
@@ -1308,6 +1310,7 @@ anytehtaBUTdown	tehtaA tehtaA.shift1 tehtaA.shift2 tehtaA.shift3 tehtaA.shift4
 +	tehtaI tehtaI.shift1 tehtaI.shift2 tehtaI.shift3 tehtaI.shift4
 +	tehtaN tehtaN.narrow tehtaN.altnarrow tehtaN.wide tehtaN.altwide
 +	tehtaN.narrowlow tehtaN.altnarrowlow tehtaN.widelow tehtaN.altwidelow
++	tehtaN.shift1 tehtaN.altshift1 tehtaN.shift1low tehtaN.altshift1low
 +	tehtaO tehtaO.shift1 tehtaO.shift2 tehtaO.shift3 tehtaO.shift4
 +	tehtaU tehtaU.shift1 tehtaU.shift2 tehtaU.shift3 tehtaU.shift4
 +	tehtaW tehtaW.shift1 tehtaW.shift2 tehtaW.shift3 tehtaW.shift4
@@ -1381,8 +1384,8 @@ normaldowntehta
 
 carrierdowntehta
 	tehtaAB tehtaAB.shift1
-	tehtaB tehtaB.narrow
-	tehtaB.altnarrow tehtaB.altnarrow
+	tehtaB tehtaB.shift1
+	tehtaB.altnarrow tehtaB.altshift1
 	tehtaEB tehtaEB.shift1
 	tehtaEEB tehtaEEB.shift1
 	tehtaIB tehtaIB.shift1
