@@ -193,7 +193,7 @@ addaliasvars("extampa",  "conr",              "dec");
 addaliasvars("extanca",                       "dec");
 addaliasvars("extunque",        "conl",       "dec");
 
-addaliasvars("roomen",          "conl",       "dec","open","conl_open");
+addaliasvars("roomen",          "conl",       "dec","open","conl_open","lig");
 addaliasvars("arda",            "conl",       "dec","open","conl_open");
 addaliasvars("lambe",    "conr","conl","conb","dec","conrbot","conbbot");
 addaliasvars("alda",     "conr","conl","conb","dec");

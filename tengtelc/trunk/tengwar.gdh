@@ -185,7 +185,7 @@ table(glyph)
   ExtAmpa=(g_extampa,g_extampa_conr,g_extampa_dec);
   ExtAnca=(g_extanca,g_extanca_dec);
   ExtUnque=(g_extunque,g_extunque_conl,g_extunque_dec);
-  Roomen=(g_roomen,g_roomen_conl,g_roomen_open,g_roomen_conl_open);
+  Roomen=(g_roomen,g_roomen_conl,g_roomen_open,g_roomen_conl_open,g_roomen_lig);
   Arda=(g_arda,g_arda_conl,g_arda_open,g_arda_conl_open);
   Lambe=(g_lambe,g_lambe_conr,g_lambe_conl,g_lambe_conb,g_lambe_dec,g_lambe_conrbot,g_lambe_conbbot);
   Alda=(g_alda,g_alda_conr,g_alda_conl,g_alda_conb,g_alda_dec);
@@ -346,6 +346,7 @@ table(sub)
     (g_harma,g_hwesta,g_hwesta_conl) g_tinco > (g_extharma,g_exthwesta,g_exthwesta_conl) g_tinco_lig / ^ _ AnyIsolTehtar ZWJ _ ;
     g_silme > g_silme_lig_harma / ^ _ ZWJ Harma ;
     g_silme > g_silme_lig / ^ _ AnyIsolTehtar ZWJ AnyTengwa ;
+    (g_calma,g_quesse,g_anga,g_ungwe) g_roomen > (g_calma_conr,g_quesse_conr,g_anga_conr,g_ungwe_conr) g_roomen_lig / ^ _ AnyIsolTehtar ZWJ _ ;
 
     if (lowershook)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;

@@ -76,7 +76,6 @@ beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
   draw_diamond(12)(1.3);
 
 endchr;
-pause;
 
 beginchr(mirroredosse,0.95en);
   padding(0.6pt,0.7pt);
@@ -93,7 +92,6 @@ beginchr(mirroredosse,0.95en);
   setap("cap",(x2,1/2tex));
   setap("dap",(x4,-apy));
 endchr;
-pause;
 
 def draw_prefeanoreanqu(expr style) =
 
@@ -140,11 +138,9 @@ enddef;
 beginchr(prefeanoreanqu,1.25en);
    draw_prefeanoreanqu(descend);
 endchr;
-pause;
 beginchr(prefeanoreanqu&".var",1.25en);
    draw_prefeanoreanqu(curved);
 endchr;
-pause;
 
 def draw_whtengwavarone(expr style, secstyle) =
   padding(0.7pt,0.7pt);
@@ -195,7 +191,6 @@ enddef;
 beginchr(whtengwa&".var1",1.0ten);
   draw_whtengwavarone(normal,normal);
 endchr;
-pause;
 
 def draw_whtengwavartwo(expr style) =
   padding(1.0pt,0.65pt);
@@ -234,7 +229,6 @@ enddef;
 beginchr(whtengwa&".var2",1.0ten);
   draw_whtengwavartwo(normal);
 endchr;
-pause;
 
 def draw_whtengwavarthree(expr style) =
   padding(0.3pt,0.42pt);
@@ -274,7 +268,6 @@ enddef;
 beginchr(whtengwa,1.2ten);
   draw_whtengwavarthree(normal);
 endchr;
-pause;
 
 def draw_whtengwavarfour =
   padding(0.6pt,0.6pt);
@@ -302,7 +295,6 @@ enddef;
 %beginchr(whtengwa,1.1ten);
 %  draw_whtengwa;
 %endchr;
-%pause;
 
 def draw_hyarmenyanta(expr style,secstyle) =
   numeric hg;
@@ -403,7 +395,11 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
   fi
   a3=55; a4=a5=a6=a7=a8=35; a9=45;
   z1=(lpad,tex);
-  z2=(0.48[x1,x5],0);
+  if secstyle=conleft:
+    z2=(0.38[x1,x5],0);
+  else:
+    z2=(0.48[x1,x5],0);
+  fi
   z5=(w-rpad,0.65tex);
   if style=normal:
     ap1=ang(a0..a1..a2);
@@ -419,17 +415,27 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
   z3=change_angle(point t of p1, penangle t of ap1, a3);
   use(a4); top z4=(0.69[x3,x5],tex+1/2o);
   z6=change_angle(z2,a2,a6);
-  ap2=ang(a3..a4..a5..a6..a7..a8..a9);
   if secstyle=normal:
+    ap2=ang(a3..a4..a5..a6..a7..a8..a9);
     z7=(0.17[x1,x5],0.75[y6,y8]);
     z8=(0.43[x7,x9],-0.85tdesc);
     x9=0.70[x1,x5]; z9=z8+whatever*dir(27);
     p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{down}..tension 1.2..z8{right}..{dir a9}z9;
   elseif secstyle=open:
+    ap2=ang(a3..a4..a5..a6..a7..a8..a9);
     z7=(0.0[x1,x5],0.75[y6,y8]);
     z8=(0.50[x7,x9],-0.85tdesc);
     x9=0.32[x1,x5]; z9=z8+whatever*dir(15);
     p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{down}..tension 1.2..z8{right}..{dir a9}z9;
+  elseif secstyle=conleft:
+    if unknown quesseligappenangle:
+      quesseligappenangle=30;
+      z7=(-60.8368,-106.15085); %(-29.65926,-83.01831); 
+    else:
+      z7=apt(quesse&".conr","quesseligap").pt-(psc(quesse&".conr").width,0);
+    fi
+    ap2=ang(a3..a4..a5..a6..quesseligappenangle);
+    p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{-dir (quesseligappenangle+0)};
   fi
   draw_stroke(p2,ap2);
   if number=2:
@@ -454,6 +460,9 @@ beginchr(roomen,1.0ten);
 endchr;
 beginchr(roomen&".conl",1.0ten);
   draw_roomen(conleft,1,normal,false);
+endchr;
+beginchr(roomen&".lig",1.0ten);
+  draw_roomen(conleft,1,conleft,false);
 endchr;
 beginchr(arda,1.0ten);
   draw_roomen(normal,2,normal,false);

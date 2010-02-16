@@ -1107,6 +1107,11 @@ g_roomen_conl = ps("roomen.conl") {
  cap = point(706m,486m);
  dap = point(461m,-179m);
 };
+g_roomen_lig = ps("roomen.lig") { 
+ uap = point(582m,1011m);
+ cap = point(689m,486m);
+ dap = point(461m,-179m);
+};
 g_arda = ps("arda") { 
  uap = point(582m,1011m);
  cap = point(706m,486m);
