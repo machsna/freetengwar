@@ -4,7 +4,7 @@ FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
 Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009, 2010 j. 'mach' wust; 2010 Johan Winge.
-Version: 2010-01-20
+Version: 2010-02-26
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1263983621
+ModificationTime: 1267189404
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -15180,7 +15180,7 @@ AnchorPoint: "abovegk" -296 444 mark 0
 AnchorPoint: "above" -300 417 mark 0
 LayerCount: 2
 Fore
-Refer: 64 96 N 1 0 0 1 -600 0 0
+Refer: 64 96 S 1 0 0 1 -600 0 0
 Validated: 32769
 EndChar
 
@@ -42357,7 +42357,7 @@ Flags: HMW
 AnchorPoint: "below" -288 0 mark 0
 LayerCount: 2
 Fore
-Refer: 110 175 S 1 0 0 1 -591 -655 0
+Refer: 110 175 N 1 0 0 1 -591 -655 0
 Validated: 32769
 EndChar
 
@@ -54340,21 +54340,21 @@ EndChar
 StartChar: tehtaGrave
 Encoding: 57428 57428 2259
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 600 768 N 1 0 0 1 68 52 2
-Validated: 32769
+Refer: 64 96 N 1 0 0 1 -532 52 0
+Validated: 98305
 EndChar
 
 StartChar: tehtaE
 Encoding: 57414 57414 2260
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 601 769 N 1 0 0 1 -57 60 2
-Validated: 32769
+Refer: 115 180 N 1 0 0 1 -657 60 2
+Validated: 98305
 EndChar
 
 StartChar: tehtaBreve
@@ -54427,11 +54427,11 @@ EndChar
 StartChar: tehtaEE
 Encoding: 57416 57416 2264
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 611 779 N 1 0 0 1 0 60 2
-Validated: 32769
+Refer: 597 733 N 1 0 0 1 -600 60 0
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE
 LCarets2: 1 0 
 EndChar
@@ -54470,11 +54470,11 @@ StartChar: tehtaEB
 Encoding: 57415 57415 2266
 Width: 0
 VWidth: 200
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 2119 791 N 1 0 0 1 -3 -84 2
-Validated: 32769
+Refer: 115 180 N 1 0 0 1 -657 -774 0
+Validated: 98305
 EndChar
 
 StartChar: tehtaIB
@@ -54486,11 +54486,11 @@ VStem: -340 80<-215.607 -144.419>
 LayerCount: 2
 Fore
 SplineSet
--300 -140 m 4
- -278 -140 -260 -158 -260 -181 c 4
- -260 -202 -278 -220 -300 -220 c 4
- -322 -220 -340 -202 -340 -180 c 4
- -340 -158 -322 -140 -300 -140 c 4
+-300 -140 m 0
+ -278 -140 -260 -158 -260 -181 c 0
+ -260 -202 -278 -220 -300 -220 c 0
+ -322 -220 -340 -202 -340 -180 c 0
+ -340 -158 -322 -140 -300 -140 c 0
 EndSplineSet
 Validated: 3073
 EndChar
@@ -54540,6 +54540,7 @@ SplineSet
  -289 -70 -283 -82 -283 -94 c 2
 EndSplineSet
 Validated: 3073
+LCarets2: 1 0 
 Ligature2: "'liga' tengwar ligatures subtable" afii301 longCarrier
 EndChar
 
@@ -54650,11 +54651,11 @@ EndChar
 StartChar: tehtaN
 Encoding: 57424 57424 2274
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 604 772 N 1 0 0 1 0 -46 2
-Validated: 32769
+Refer: 110 175 N 1 0 0 1 -600 -46 0
+Validated: 98305
 EndChar
 
 StartChar: roomen
@@ -55223,11 +55224,11 @@ EndChar
 StartChar: tehtaB
 Encoding: 57425 57425 2299
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 1765 817 N 1 0 0 1 -9 9 2
-Validated: 32769
+Refer: 110 175 N 1 0 0 1 -600 -646 0
+Validated: 98305
 EndChar
 
 StartChar: tengwardigit0
@@ -55692,11 +55693,12 @@ EndChar
 StartChar: tehtaEEB
 Encoding: 57417 57417 2314
 Width: 0
-Flags: W
+Flags: HW
 LayerCount: 2
 Fore
-Refer: 611 779 N 1 0 0 1 0 -765 2
-Validated: 32769
+Refer: 597 733 N 1 0 0 1 -600 -765 0
+Validated: 98305
+LCarets2: 1 0 
 Ligature2: "'liga' tengwar ligatures subtable" tehtaEB tehtaEB
 EndChar
 
@@ -55894,14 +55896,14 @@ StartChar: alda_tehtaB
 Encoding: 1114112 -1 2321
 Width: 600
 VWidth: 1024
-Flags: W
+Flags: HW
 HStem: -102 41<201.113 420.28> 376 41<71.0051 189 223.782 510.993>
 VStem: 100 41<-5.76546 87.9884> 164 41<256.029 358.725> 483 41<-4.26595 126.371>
 LayerCount: 2
 Fore
+Refer: 110 175 N 1 0 0 1 11 -489 0
 Refer: 2284 57379 N 1 0 0 1 0 0 2
-Refer: 1765 817 N 1 0 0 1 602 166 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" alda tehtaB
 LCarets2: 1 0 
 EndChar
@@ -55910,14 +55912,14 @@ StartChar: lambe_tehtaB
 Encoding: 1114113 -1 2322
 Width: 600
 VWidth: 1024
-Flags: W
+Flags: HW
 HStem: -102 42<217.605 398.832> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962>
 LayerCount: 2
 Fore
+Refer: 110 175 N 1 0 0 1 19 -373 0
 Refer: 2276 57378 N 1 0 0 1 0 0 2
-Refer: 1765 817 N 1 0 0 1 610 282 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaB
 LCarets2: 1 0 
 EndChar
@@ -56136,14 +56138,14 @@ EndChar
 StartChar: tehtaW_tehtaE
 Encoding: 1114117 -1 2331
 Width: 0
-Flags: W
+Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
 LayerCount: 2
 Fore
-Refer: 2260 57414 N 1 0 0 1 0 0 2
+Refer: 115 180 N 1 0 0 1 -657 60 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaW
 LCarets2: 1 0 
@@ -56152,14 +56154,14 @@ EndChar
 StartChar: tehtaW_tehtaEE
 Encoding: 1114118 -1 2332
 Width: 0
-Flags: W
+Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
 LayerCount: 2
 Fore
-Refer: 2264 57416 N 1 0 0 1 0 0 2
+Refer: 597 733 N 1 0 0 1 -600 60 0
 Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE tehtaE
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE tehtaW
 LCarets2: 2 0 0 
@@ -56258,14 +56260,14 @@ EndChar
 StartChar: tehtaW_tehtaGrave
 Encoding: 1114125 -1 2338
 Width: 0
-Flags: W
+Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
 LayerCount: 2
 Fore
-Refer: 2259 57428 N 1 0 0 1 0 0 2
+Refer: 64 96 N 1 0 0 1 -532 52 0
 Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaGrave
 LCarets2: 1 0 
@@ -56372,14 +56374,14 @@ StartChar: lambeN_tehtaB
 Encoding: 1114131 -1 2344
 Width: 600
 VWidth: 1024
-Flags: W
+Flags: HW
 HStem: -88 41<93.007 270.561 310 532.995> 389 42<205.168 386.395>
 VStem: 488 41<119.038 287.216>
 LayerCount: 2
 Fore
+Refer: 110 175 N 1 0 0 1 -72 -460 0
 Refer: 2276 57378 N -1 0 0 -1 604 329 2
-Refer: 1765 817 N 1 0 0 1 519 195 2
-Validated: 32769
+Validated: 98305
 Ligature2: "'liga' tengwar ligatures subtable" lambeN tehtaB
 LCarets2: 1 0 
 EndChar
@@ -57450,7 +57452,7 @@ HStem: -102 42<217.605 398.832> 100 80<190.393 261.154 350.393 421.154> 376 41<7
 VStem: 75 41<41.7838 209.962> 186 80<104.393 175.581> 346 80<104.393 175.581>
 LayerCount: 2
 Fore
-Refer: 2276 57378 S 1 0 0 1 0 0 2
+Refer: 2276 57378 N 1 0 0 1 0 0 2
 Refer: 2268 57411 N 1 0 0 1 606 320 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaYB
@@ -57685,9 +57687,10 @@ HStem: 543 80<-330.607 -259.846> 594 21<-220 -208> 667 41<-332.469 -247.242>
 VStem: -335 80<547.393 618.581> -236 40<594.04 654.699>
 LayerCount: 2
 Fore
-Refer: 2270 57418 N 1 0 0 1 0 13 2
-Refer: 2262 57412 N 1 0 0 1 5 -20 2
+Refer: 2270 57418 S 1 0 0 1 0 13 2
+Refer: 2262 57412 S 1 0 0 1 5 -20 2
 Validated: 32769
+LCarets2: 1 0 
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI
 EndChar
@@ -57700,9 +57703,10 @@ HStem: 560 80<-396.607 -325.846> 699 41<-348.164 -263.727>
 VStem: -401 80<564.393 635.581> -254 42<597.496 689.389>
 LayerCount: 2
 Fore
-Refer: 2271 57420 N 1 0 0 1 0 0 2
-Refer: 2262 57412 N 1 0 0 1 -61 -3 2
+Refer: 2271 57420 S 1 0 0 1 0 0 2
+Refer: 2262 57412 S 1 0 0 1 -61 -3 2
 Validated: 32769
+LCarets2: 1 0 
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaU
 EndChar
@@ -57710,14 +57714,16 @@ EndChar
 StartChar: tehtaW_tehtaI_tehtaO
 Encoding: 1114162 -1 2383
 Width: 0
-Flags: W
+Flags: HW
 HStem: 543 80<-330.607 -259.846> 562 217<-548 -503> 594 21<-220 -208> 667 41<-332.469 -247.242>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -335 80<547.393 618.581> -236 40<594.04 654.699>
 LayerCount: 2
 Fore
-Refer: 2381 -1 S 1 0 0 1 0 0 2
+Refer: 2270 57418 N 1 0 0 1 0 13 2
+Refer: 2262 57412 N 1 0 0 1 5 -20 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
+Validated: 98305
+LCarets2: 2 0 0 
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaO
@@ -57727,14 +57733,15 @@ EndChar
 StartChar: tehtaW_tehtaI_tehtaU
 Encoding: 1114163 -1 2384
 Width: 0
-Flags: W
+Flags: HW
 HStem: 560 80<-396.607 -325.846> 562 217<-548 -503> 699 41<-348.164 -263.727>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -401 80<564.393 635.581> -254 42<597.496 689.389>
 LayerCount: 2
 Fore
-Refer: 2382 -1 N 1 0 0 1 0 0 2
+Refer: 2271 57420 N 1 0 0 1 0 0 2
+Refer: 2262 57412 N 1 0 0 1 -61 -3 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
+Validated: 98305
 LCarets2: 2 0 0 
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaU
@@ -57799,6 +57806,7 @@ SplineSet
  279 43 l 1xf980
 EndSplineSet
 Validated: 3073
+LCarets2: 2 0 0 
 Ligature2: "'liga' tengwar ligatures subtable" aha afii301 tinco
 EndChar
 
@@ -57850,6 +57858,7 @@ SplineSet
  279 417 l 1
 EndSplineSet
 Validated: 3073
+LCarets2: 2 0 0 
 Ligature2: "'liga' tengwar ligatures subtable" hwesta afii301 tinco
 EndChar
 
@@ -57895,6 +57904,7 @@ SplineSet
  475 504 l 17xba
 EndSplineSet
 Validated: 3073
+LCarets2: 2 0 0 
 Ligature2: "'liga' tengwar ligatures subtable" silme afii301 aha
 EndChar
 EndChars
