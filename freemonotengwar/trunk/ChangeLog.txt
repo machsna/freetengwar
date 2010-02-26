@@ -1,3 +1,8 @@
+2010-02-26 j. 'mach' wust
+	* FreeMonoTengwar.sfd:
+
+	Removed nested glyph references (this prevents buggy behaviour in Mac OS X 10.6).
+
 2010-01-20 Johan Winge
 	* FreeMonoTengwar:
 

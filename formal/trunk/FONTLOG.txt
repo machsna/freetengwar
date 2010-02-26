@@ -51,7 +51,10 @@ users) may (almost certainly will) look illegible.
 - Changed the glyph shapes of prefeanorian quesse, Lowdham HW.
 - Added glyphs for lower nasal bar, smaller following-w, and for the tehtar
   ligatures EE, OI, OO, UI, UU.
-- Released as Tengwar Formal Unicode Version ???? (reserved font name reused with permission.)
+- Duplicated glyphs for the tehtar A, OB and YB so they are no more nested glyph
+  references (this prevents buggy behaviour in Mac OS X 10.6).
+- Released as Tengwar Formal Unicode Version ???? (reserved font name reused with
+  permission.)
 
 14 Sep 2009 (Michał Nowakowski) Tengwar Formal Version 1.2c (bug-fix release)
 - Fixed horizontal metrics, that were rubbish, and different between
