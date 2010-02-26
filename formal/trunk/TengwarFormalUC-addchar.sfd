@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1264509410
-ModificationTime: 1267185235
+ModificationTime: 1267219932
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -35,7 +35,6 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
-OS2Vendor: 'PfEd'
 DEI: 91125
 LangName: 1033 "" "" "" "FontTengwarFormalUnicode10" "" "" "" "" "" "Micha+AUIA Nowakowski" "" "" "http://tengwarformal.limes.com.pl" "" "http://scripts.sil.org/OFL" 
 Encoding: Custom
@@ -2596,7 +2595,7 @@ StartChar: tehtaYB.lambe
 Encoding: 57 -1 57
 Width: 0
 VWidth: 0
-Flags: HWO
+Flags: HW
 LayerCount: 2
 Back
 SplineSet
@@ -2899,51 +2898,51 @@ Refer: 60 -1 N 1 0 0 1 0 1021 2
 Validated: 1
 EndChar
 
-StartChar: tehtaYB.shift1
+StartChar: tehtaY.shift1
 Encoding: 65 -1 65
 Width: 0
 VWidth: 1043
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 6 57434 N 1 0 0 1 133 -744 2
-Refer: 6 57434 N 1 0 0 1 383 -742 2
+Refer: 6 57434 N 1 0 0 1 133 739 2
+Refer: 6 57434 N 1 0 0 1 383 741 2
 Validated: 1
 EndChar
 
-StartChar: tehtaYB.shift2
+StartChar: tehtaY.shift2
 Encoding: 66 -1 66
 Width: 0
 VWidth: 1043
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 6 57434 N 1 0 0 1 -39 -744 2
-Refer: 6 57434 N 1 0 0 1 211 -742 2
+Refer: 6 57434 N 1 0 0 1 -39 739 2
+Refer: 6 57434 N 1 0 0 1 211 741 2
 Validated: 1
 EndChar
 
-StartChar: tehtaYB.shift3
+StartChar: tehtaY.shift3
 Encoding: 67 -1 67
 Width: 0
 VWidth: 1000
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 6 57434 N 1 0 0 1 -137 -744 2
-Refer: 6 57434 N 1 0 0 1 113 -742 2
+Refer: 6 57434 N 1 0 0 1 -137 739 2
+Refer: 6 57434 N 1 0 0 1 113 741 2
 Validated: 1
 EndChar
 
-StartChar: tehtaYB.shift4
+StartChar: tehtaY.shift4
 Encoding: 68 -1 68
 Width: 0
 VWidth: 1043
 Flags: HW
 LayerCount: 2
 Fore
-Refer: 6 57434 N 1 0 0 1 -266 -744 2
-Refer: 6 57434 N 1 0 0 1 -16 -742 2
+Refer: 6 57434 N 1 0 0 1 -266 739 2
+Refer: 6 57434 N 1 0 0 1 -16 741 2
 Validated: 1
 EndChar
 
