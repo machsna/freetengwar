@@ -89,10 +89,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'questiondown': 'roomenN',
                'scaron': 'maltaX',
                'bullet': 'hallaRoomen.alt',
-               'numbersign': 'tehtaA.shift4osx6bug',
-               'E': 'tehtaA.shift3osx6bug',
-               'D': 'tehtaA.shift2osx6bug',
-               'C': 'tehtaA.shift1osx6bug',
+               'numbersign': 'tehtaA.shift4',
+               'E': 'tehtaA.shift3',
+               'D': 'tehtaA.shift2',
+               'C': 'tehtaA.shift1',
                'Udieresis': 'tehtaA.altshift4',
                'Yacute': 'tehtaA.altshift3',
                'Thorn': 'tehtaA.altshift2',
@@ -102,10 +102,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'Ograve': 'tehtaAB.shift2',
                'Oacute': 'tehtaAB.shift1',
                #'greater': 'tehtaAB.shift1alt', # Might be duplicate
-               'Ocircumflex': 'tehtaY.shift4osx6bug',
-               'Otilde': 'tehtaY.shift3osx6bug',
-               'Odieresis': 'tehtaY.shift2osx6bug',
-               'multiply': 'tehtaY.shift1osx6bug',
+               'Ocircumflex': 'tehtaY.shift4',
+               'Otilde': 'tehtaY.shift3',
+               'Odieresis': 'tehtaY.shift2',
+               'multiply': 'tehtaY.shift1',
                'Igrave': 'tehtaYB.shift4',
                'Iacute': 'tehtaYB.shift3',
                'Icircumflex': 'tehtaYB.shift2',
@@ -139,10 +139,10 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'Y': 'tehtaO.shift3',
                'H': 'tehtaO.shift2',
                'N': 'tehtaO.shift1',
-               'adieresis': 'tehtaOB.shift4osx6bug',
-               'aring': 'tehtaOB.shift3osx6bug',
-               'ae': 'tehtaOB.shift2osx6bug',
-               'ccedilla': 'tehtaOB.shift1osx6bug',
+               'adieresis': 'tehtaOB.shift4',
+               'aring': 'tehtaOB.shift3',
+               'ae': 'tehtaOB.shift2',
+               'ccedilla': 'tehtaOB.shift1',
                'ampersand': 'tehtaU.shift4',
                'U': 'tehtaU.shift3',
                'J': 'tehtaU.shift2',
@@ -337,18 +337,6 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tehtaGrave_tehtaGrave.shift4': 'tehtaGrave_tehtaGrave.shift4',
                'tehtaYB.lambe': 'tehtaYB.lambe',
                'tehtaIB.lambe': 'tehtaIB.lambe',
-               'tehtaA.shift1': 'tehtaA.shift1',
-               'tehtaA.shift2': 'tehtaA.shift2',
-               'tehtaA.shift3': 'tehtaA.shift3',
-               'tehtaA.shift4': 'tehtaA.shift4',
-               'tehtaOB.shift1': 'tehtaOB.shift1',
-               'tehtaOB.shift2': 'tehtaOB.shift2',
-               'tehtaOB.shift3': 'tehtaOB.shift3',
-               'tehtaOB.shift4': 'tehtaOB.shift4',
-               'tehtaY.shift1': 'tehtaY.shift1',
-               'tehtaY.shift2': 'tehtaY.shift2',
-               'tehtaY.shift3': 'tehtaY.shift3',
-               'tehtaY.shift4': 'tehtaY.shift4',
               }}
 
 references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
@@ -521,7 +509,6 @@ for thefont, encoding in dansmithenc.iteritems():
    for char, alias in sorted(encoding.iteritems(), lambda x, y: cmp(ucname(x[1]),ucname(y[1]))):
       ucchar=alias
       thefont.selection.select(char)
-      newrefs=[]
       for ref in thefont[char].references:
          if thefont[ref[0]].unicode>0 and ref[0] in encoding:
             newrefname=encoding[ref[0]]
@@ -558,6 +545,27 @@ for (target, ref, transform, width) in references:
 
 gdh.write('endtable;\n\n')
 gdh.close()
+
+outfont.save("TengwarFormalUC.sfd")
+outfont=fontforge.open("TengwarFormalUC.sfd")
+
+outfont.selection.select("tehtaA.shift4","tehtaYB.lambeoriginal")
+outfont.unlinkReferences()
+
+def removenestedrefs(char):
+   if outfont[char].references==():
+      return [(char,psMat.identity())]
+   else:
+      newrefs=[]
+      for (refglyph,transform) in outfont[char].references:
+         subrefs=removenestedrefs(refglyph)
+         for (newglyph,newtrans) in subrefs:
+            newrefs.append((newglyph,psMat.compose(newtrans,transform)))
+      return newrefs
+
+for char in outfont:
+   if outfont[char].references!=():
+      outfont[char].references=tuple(removenestedrefs(char))
 
 outfont.selection.all()
 outfont.save("TengwarFormalUC.sfd")
