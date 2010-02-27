@@ -89,9 +89,9 @@ other	tehtaB tehtaEEB
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  tengwar oomaUptehtar  tehtaW  other
-StartText  1    1    1    1    2       3             4       5
-StartLine  1    1    1    1    2       3             4       5
-sawtengwa  1    1    1    1    2       6             7       8
+StartText  1    1    2    1    2       3             4       5
+StartLine  1    1    2    1    2       3             4       5
+sawtengwa  1    1    2    1    2       6             7       8
 sawoomaup  1    1    6    1    2       3             9       6
 saww       1    1    7    1    2       9             9       7
 sawother   1    1    8    1    2       6             7       8
@@ -151,13 +151,14 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+zwj	zwj
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tengwar it  other zwj
+StartText  1    1    2    1    2       3   4     1
+StartLine  1    1    2    1    2       3   4     1
+sawtengwa  1    1    2    1    2       5   6     2
+sawit      1    1    5    1    2       3   5     5
+sawother   1    1    6    1    2       5   6     6
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
@@ -212,9 +213,9 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
+StartText  1    1    2    1    2       3   4
+StartLine  1    1    2    1    2       3   4
+sawtengwa  1    1    2    1    2       5   6
 sawit      1    1    5    1    2       3   5
 sawother   1    1    6    1    2       5   6
 
@@ -271,9 +272,9 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
+StartText  1    1    2    1    2       3   4
+StartLine  1    1    2    1    2       3   4
+sawtengwa  1    1    2    1    2       5   6
 sawit      1    1    5    1    2       3   5
 sawother   1    1    6    1    2       5   6
 
@@ -330,9 +331,9 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
+StartText  1    1    2    1    2       3   4
+StartLine  1    1    2    1    2       3   4
+sawtengwa  1    1    2    1    2       5   6
 sawit      1    1    5    1    2       3   5
 sawother   1    1    6    1    2       5   6
 
@@ -389,9 +390,9 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
+StartText  1    1    2    1    2       3   4
+StartLine  1    1    2    1    2       3   4
+sawtengwa  1    1    2    1    2       5   6
 sawit      1    1    5    1    2       3   5
 sawother   1    1    6    1    2       5   6
 
@@ -448,9 +449,9 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 
            EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    1    1    2       3   4
-StartLine  1    1    1    1    2       3   4
-sawtengwa  1    1    1    1    2       5   6
+StartText  1    1    2    1    2       3   4
+StartLine  1    1    2    1    2       3   4
+sawtengwa  1    1    2    1    2       5   6
 sawit      1    1    5    1    2       3   5
 sawother   1    1    6    1    2       5   6
 
