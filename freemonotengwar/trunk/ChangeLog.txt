@@ -1,3 +1,8 @@
+2010-03-11 j. 'mach' wust
+	* FreeMonoTengwar:
+
+	Added AAT support and enhanced Graphite support.
+
 2010-02-26 j. 'mach' wust
 	* FreeMonoTengwar.sfd:
 
