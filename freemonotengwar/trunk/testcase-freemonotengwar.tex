@@ -2,98 +2,210 @@
 %&encoding=UTF-8 Unicode
 
 \documentclass[11pt,a4paper]{article}
-\usepackage{fontspec}
+\usepackage{fontspec,hyperref}
 \pagestyle{empty}
 \frenchspacing
 
-\font\freemonotengwar="FreeMonoTengwar/GR" at 15pt
-\font\tengtelc="Tengwar Telcontar/GR" at 15pt
-\font\tengtelcq="Tengwar Telcontar/GR:202=3" at 15pt
-\font\rcap="Tengwar Telcontar/GR:203=1" at 15pt
-\font\tengtelcsmall="Tengwar Telcontar/GR" at 10pt
-\font\tengtelcb="Tengwar Telcontar Bold/GR" at 15pt
-\font\bul="Tengwar Telcontar Bold/GR:208=1" at 15pt
-\font\bcap="Tengwar Telcontar Bold/GR:203=1" at 15pt
-\font\bcapul="Tengwar Telcontar Bold/GR:203=1:208=1" at 15pt
-\setromanfont{Gentium}
+\font\freeGR="FreeMonoTengwar/GR" at 15pt
+\font\freeAAT="FreeMonoTengwar/AAT" at 15pt
+\font\freeICU="FreeMonoTengwar/ICU" at 15pt
+\font\embedGR="FreeMonoTengwar/GR" at 15pt
+\font\embedAAT="FreeMonoTengwar/AAT" at 15pt
+\font\embedICU="FreeMonoTengwar/ICU" at 15pt
+\font\insertGR="FreeMonoTengwar/GR:212=1" at 15pt
+\font\insertAAT="FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion" at 15pt
+\font\embedGR="FreeMonoTengwar-embedding/GR" at 15pt
+\font\embedAAT="FreeMonoTengwar-embedding/AAT" at 15pt
+\font\embedICU="FreeMonoTengwar-embedding/ICU" at 15pt
+
+\setmainfont{Gentium}
 
 \begin{document}
 
-\section*{Test case for FreeMonoTengwar}
+\tableofcontents
 
-\subsection*{Namárië}
-\freemonotengwar
-     ⸱  \\
-   ⸱     \\
-⸱   ⸱  \\
-  ⸱     \\
-⸱  ⸬
+\newpage
 
-      ⸬ \\
-    ⸱   \\
- ⸱     \\
-    ⸱ \\
-  ⸱      \\
-      ⸱
+\section{FreeMonoTengwar.ttf}
 
-   
+\subsection{Lowdham’s Manuscript}
 
-    :
+\subsubsection*{\texttt{"FreeMonoTengwar/GR"}}
 
-\subsection*{The King’s Letter}
-\begin{center}
-\freemonotengwar
-  \\
-   \\
-   \\
-     \\
-    \\
-     \\
-     \\
-       \\
-    \\
- ⁘   \\
-    \\
-   ‍ 
-\end{center}
-
-\subsection*{Lowdham’s Manuscript}
-\freemonotengwar
+\freeGR
   ‍   ⸱‍  ‍ ⸱ \\
     ‍....  ‍  \\
   ‍   ‍ ‍ ⁊ ‍  \\
 ...  ....   \\
          ‍ \\
  ‍ ‍‍   ⁊  ‍ ‍ \\
- ‍ ⁊  . . . .  ‍ ‍‍   \\
-   ‍ . . . . . ‍ ‍   \\
-      ⁊    \\
-   ‍⸱‍   ‍  \\
-     ‍⸱ ⁊  ‍ \\
-    ⸱    \\
-⸱  ‍  .... ‍‍    \\
+ ‍ ⁊  . . . . \normalfont
 
-\subsection*{Declaration of Human Rights}
-\freemonotengwar
-\begin{center}
-           ⸱                   ⸬
-\end{center}
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT"}}
 
-\subsection*{Latin alphabet}
-\freemonotengwar
-When Frodo heard the voice he looked up, but he could
-see nothing through the thick entangled branches.
-Suddenly he felt a quiver in the gnarled tree trunk
-against which he was leaning, and before he could
-ſpring away he was pushed, or kicked, forward on to
-his knees. Picking himself up he looked at the tree,
-and even as he looked, it took a stride towards him.
+\freeAAT
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  ....   \\
+         ‍ \\
+ ‍ ‍‍   ⁊  ‍ ‍ \\
+ ‍ ⁊  . . . . \normalfont
+
+\subsubsection*{\texttt{"FreeMonoTengwar/ICU"}}
+
+\freeICU
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  ....   \\
+         ‍ \\
+ ‍ ‍‍   ⁊  ‍ ‍ \\
+ ‍ ⁊  . . . . \normalfont
+
 
 \newpage
 
-\freemonotengwar
+\subsection{Ligatures samples}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/GR"}}
+
+\freeGR
                           \\
 ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
-      ◌‍ ‍ ‍ ‍
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \freeGR ◌ \normalfont + \freeGR ◌ : 
+
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT"}}
+
+\freeAAT
+                          \\
+◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \freeAAT ◌ \normalfont + \freeAAT ◌ : 
+
+\subsubsection*{\texttt{"FreeMonoTengwar/ICU"}}
+
+\freeICU
+                          \\
+◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \freeICU ◌ \normalfont + \freeICU ◌ : 
+
+
+\newpage
+
+\subsection{Short carrier insertion}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:212=1"}}
+
+\insertGR      \normalfont Maximal number of tehtar:
+\insertGR 
+
+\newcommand{\combinationsrow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
+
+\begin{tabular}{ c | c c c c c c c c}
+	\combinationsrow{} \hline
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+\end{tabular}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion"}}
+
+\insertAAT      \normalfont Maximal number of tehtar:
+\insertAAT 
+
+\begin{tabular}{ c | c c c c c c c c}
+	\combinationsrow{} \hline
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+	\combinationsrow{}
+\end{tabular}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/ICU"}}
+
+\freeICU      \normalfont Maximal number of tehtar:
+\freeICU 
+
+
+\newpage
+
+\section{FreeMonoTengwar-embedding.ttf}
+
+\subsection{Lowdham’s Manuscript}
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/GR"}}
+
+\embedGR
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  ....   \\
+         ‍ \\
+ ‍ ‍‍   ⁊  ‍ ‍ \\
+ ‍ ⁊  . . . . \normalfont
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/AAT"}}
+
+\embedAAT
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  ....   \\
+         ‍ \\
+ ‍ ‍‍   ⁊  ‍ ‍ \\
+ ‍ ⁊  . . . . \normalfont
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/ICU"}}
+
+\embedICU
+  ‍   ⸱‍  ‍ ⸱ \\
+    ‍....  ‍  \\
+  ‍   ‍ ‍ ⁊ ‍  \\
+...  ....   \\
+         ‍ \\
+ ‍ ‍‍   ⁊  ‍ ‍ \\
+ ‍ ⁊  . . . . \normalfont
+
+
+\newpage
+
+\subsection{Ligatures samples}
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/GR"}}
+
+\embedGR
+                          \\
+◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \embedGR ◌ \normalfont + \embedGR ◌ : 
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/AAT"}}
+
+\embedAAT
+                          \\
+◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \embedAAT ◌ \normalfont + \embedAAT ◌ : 
+
+\subsubsection*{\texttt{"FreeMonoTengwar-embedding/ICU"}}
+
+\embedICU
+                          \\
+◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌ ◌\\
+      ◌‍ ‍ ‍ ‍ \\
+ \normalfont + \embedICU ◌ \normalfont + \embedICU ◌ : 
+
 
 \end{document}
