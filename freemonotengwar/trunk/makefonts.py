@@ -75,8 +75,8 @@ thefont.save("FreeMonoTengwar-embedding.sfd")
 thefont=fontforge.open("FreeMonoTengwar-embedding.sfd")
 thefont.generate("FreeMonoTengwar-embedding_nogr.ttf","",("opentype","round"))
 os.system("ttf2eot FreeMonoTengwar-embedding_nogr.ttf > FreeMonoTengwar-embedding.eot")
-os.system("ftxenhancer -m FreeMonoTengwar.mif FreeMonoTengwar-embedding_nogr.ttf")
-os.system("grcompiler FreeMonoTengwar-reduced.gdl FreeMonoTengwar-embedding_nogr.ttf FreeMonoTengwar-embedding.ttf")
+os.system("ftxenhancer -m FreeMonoTengwar-embedding.mif FreeMonoTengwar-embedding_nogr.ttf")
+os.system("grcompiler FreeMonoTengwar-embedding.gdl FreeMonoTengwar-embedding_nogr.ttf FreeMonoTengwar-embedding.ttf")
 
 exit(0)
 
