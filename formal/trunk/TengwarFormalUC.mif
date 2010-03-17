@@ -76,6 +76,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 oomaUptehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
@@ -140,6 +141,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaB tehtaEEB
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -200,6 +202,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaDotInside
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -259,6 +262,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaThinnas
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -318,6 +322,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaN
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -377,6 +382,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaX
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -436,6 +442,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
++	zwj
 it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 other	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta

@@ -376,24 +376,31 @@ table(substitution)
   // Substitution table, pass 3: deletion of superfluous pseudocarriers
   pass(3)
 
-    if (insertcarrier)
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomaup _ OomaupNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTnasal _ NasalNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdotinside _ Dotinside ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdoubler _ DoublerNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTsarince _ Sarince ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTw _ FollWNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTwORoomaup FollWNarrow AnyIsolTehtarBUTwORoomaup _ FollWNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTthinnas _ ThinnasNarrow ;
-      pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomadown _ OomadownNarrow ;
-    endif;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomaup _ OomaupNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTnasal _ NasalNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdotinside _ Dotinside ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdoubler _ DoublerNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTsarince _ Sarince ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTw _ FollWNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTwORoomaup FollWNarrow AnyIsolTehtarBUTwORoomaup _ FollWNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTthinnas _ ThinnasNarrow ;
+    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomadown _ OomadownNarrow ;
 
   endpass;
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 4: conditional glyph changes
+  // Substitution table, pass 4: pseudocarriers suppression with ZWJ
   pass(4)
+
+    pseudoCarrier > _ / ZWJ _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 5: conditional glyph changes
+  pass(5)
 
     tehtaW > tehtaW_combshift2 / _ AnyIsolTehtar (OomaupNarrow,tehtaW) ;
     tehtaW > tehtaW_combshift2 / (OomaupNarrow,tehtaW) AnyIsolTehtar _ ;
@@ -407,8 +414,8 @@ table(substitution)
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 5: mostly tehtar
-  pass(5)
+  // Substitution table, pass 6: mostly tehtar
+  pass(6)
 
     if (ossetail==final)
        (osse_alt) > (osse) / ^ _ AnyIsolTehtar ZWJ? AnyTengwa;
@@ -434,8 +441,8 @@ table(substitution)
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 6: shift thinnas
-  pass(6)
+  // Substitution table, pass 7: shift thinnas
+  pass(7)
 
     (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / TriggerThinnasShift AnyTehtar _ ;
     (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / _ AnyTehtar TriggerThinnasShift ;

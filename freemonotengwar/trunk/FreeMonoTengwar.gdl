@@ -304,26 +304,35 @@ table(substitution)
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 4: combining tehtaW
+  // Substitution table, pass 4: pseudocarriers suppression with ZWJ
   pass(4)
+
+    pseudoCarrier > _ / ZWJ _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 5: combining tehtaW
+  pass(5)
 
     tehtaW > tehtaW_alt / _ AnyTehtar (Oomaup, tehtaW) ;
     tehtaW > tehtaW_alt / (Oomaup, tehtaW) AnyTehtar _ ;
 
   endpass;
-  pass(5)
+  pass(6)
 
     (lambe,alda,lambeN) tehtaB > (lambe_tehtaB,alda_tehtaB,lambeN_tehtaB) _ / _ AnyTehtar _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
-  pass(6)
+  pass(7)
 
     takespecialX tehtaX > tookspecialX _ / _ AnyTehtar _ ;
     lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtar _ ;
     lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtar _ ;
 
   endpass;
-  pass(7)
+  pass(8)
 
     tehtaIB tehtaThinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
     tehtaThinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
