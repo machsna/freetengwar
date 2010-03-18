@@ -55,7 +55,7 @@ List
 
 
 // --------------------------------------------------------------
-// Automatic short carrier : Oomatehtar above and following W
+// Automatic short carrier : Dummy shortCarrier_tehtaX insertion
 
 Type           Insertion
 Name           Short carrier insertion
@@ -67,182 +67,36 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	afii301
-oomaUptehtar	tehtaA tehtaAE tehtaBreve
+tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
 +	tehtaOO tehtaI_tehtaU tehtaUU
-tehtaW	tehtaW
-other	tehtaB tehtaEEB
-+	tehtaDotInside
-+	tehtaThinnas
 +	tehtaN
-+	tehtaX
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-
-           EOT  OOB  DEL  EOL  tengwar oomaUptehtar  tehtaW  other
-StartText  1    1    2    1    2       3             4       5
-StartLine  1    1    2    1    2       3             4       5
-sawtengwa  1    1    2    1    2       6             7       8
-sawoomaup  1    1    6    1    2       3             9       6
-saww       1    1    7    1    2       9             9       7
-sawother   1    1    8    1    2       6             7       8
-sawcombw   1    1    9    1    2       3             4       9
-
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawoomaup  no    yes      none        carrier
-4  saww       no    yes      none        carrier
-5  sawother   no    yes      none        carrier
-6  sawoomaup  no    yes      none        none
-7  saww       no    yes      none        none
-8  sawother   no    yes      none        none
-9  sawcombw   no    yes      none        none
-
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
-
-
-// --------------------------------------------------------------
-// Automatic short carrier : Doubler
-
-Type           Insertion
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
-
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	afii301
-it	tehtaB tehtaEEB
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
-+	tehtaOO tehtaI_tehtaU tehtaUU
 +	tehtaDotInside
-+	tehtaThinnas
-+	tehtaN
-+	tehtaW
-+	tehtaX
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
-
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
-
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
-
-
-// --------------------------------------------------------------
-// Automatic short carrier : Dot inside
-
-Type           Insertion
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
-
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	afii301
-it	tehtaDotInside
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
-+	tehtaOO tehtaI_tehtaU tehtaUU
 +	tehtaB tehtaEEB
-+	tehtaThinnas
-+	tehtaN
-+	tehtaW
 +	tehtaX
++	tehtaW
++	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tehtar
+StartText  1    1    1    1    2
+StartLine  1    1    1    1    2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
+2  StartText  no    yes      none        dummy
 
-carrier
+dummy
 	IsKashidaLike yes
 	InsertBefore yes
-	Glyphs shortCarrier
+	Glyphs shortCarrier_tehtaX
 
 
 // --------------------------------------------------------------
-// Automatic short carrier : Thinnas
+// Automatic short carrier : Oomatehtar above
 
-Type           Insertion
+Type           Contextual
 Name           Short carrier insertion
 Namecode       16010
 Setting        Automatic insertion
@@ -265,44 +119,34 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
-it	tehtaThinnas
-other	tehtaA tehtaAE tehtaBreve
++	afii301 shortCarrier_tehtaX
+dummy	shortCarrier_tehtaX
+it	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
 +	tehtaOO tehtaI_tehtaU tehtaUU
-+	tehtaB tehtaEEB
-+	tehtaDotInside
-+	tehtaN
-+	tehtaW
-+	tehtaX
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tengwar  dummy  it
+StartText  1    1    2    1    2        2      1
+StartLine  1    1    2    1    2        2      1
+sawtengwa  1    1    2    1    2        3      1
+sawdummy   1    1    4    1    2        4      5
 
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
+   GoTo       Mark? Advance? SubstMark SubstCurrent
+1  StartText  no    yes      none      none
+2  sawtengwa  no    yes      none      none
+3  sawdummy   yes   yes      none      none
+4  sawdummy   no    yes      none      none
+5  StartText  no    yes      delete    none
 
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
+delete
+	shortCarrier_tehtaX DEL
 
 
 // --------------------------------------------------------------
 // Automatic short carrier : Nasalizer
 
-Type           Insertion
+Type           Contextual
 Name           Short carrier insertion
 Namecode       16010
 Setting        Automatic insertion
@@ -326,43 +170,157 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
 +	afii301
+dummy	shortCarrier_tehtaX
 it	tehtaN
-other	tehtaA tehtaAE tehtaBreve
+previous	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
 +	tehtaOO tehtaI_tehtaU tehtaUU
-+	tehtaB tehtaEEB
+
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
+
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
+
+delete
+	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Dot inside
+
+Type           Contextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osseN lambeN osse carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	tehtaS
++	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
++	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
++	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
++	aha_tinco hwesta_tinco silme_aha
++	afii301
+dummy	shortCarrier_tehtaX
+it	tehtaDotInside
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
++	tehtaOO tehtaI_tehtaU tehtaUU
++	tehtaN
+
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
+
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
+
+delete
+	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Doubler
+
+Type           Contextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osseN lambeN osse carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	tehtaS
++	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
++	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
++	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
++	aha_tinco hwesta_tinco silme_aha
++	afii301
+dummy	shortCarrier_tehtaX
+it	tehtaB tehtaEEB
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
++	tehtaOO tehtaI_tehtaU tehtaUU
++	tehtaN
 +	tehtaDotInside
-+	tehtaThinnas
-+	tehtaW
-+	tehtaX
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
 
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
 
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
+delete
+	shortCarrier_tehtaX DEL
 
 
 // --------------------------------------------------------------
 // Automatic short carrier : Combining sa-rince
 
-Type           Insertion
+Type           Contextual
 Name           Short carrier insertion
 Namecode       16010
 Setting        Automatic insertion
@@ -386,43 +344,166 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
 +	afii301
+dummy	shortCarrier_tehtaX
 it	tehtaX
-other	tehtaA tehtaAE tehtaBreve
+previous	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
 +	tehtaOO tehtaI_tehtaU tehtaUU
-+	tehtaB tehtaEEB
-+	tehtaDotInside
-+	tehtaThinnas
 +	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
+
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
+
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
+
+delete
+	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : following W
+
+Type           Contextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osseN lambeN osse carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	tehtaS
++	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
++	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
++	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
++	aha_tinco hwesta_tinco silme_aha
++	afii301
+dummy	shortCarrier_tehtaX
+it	tehtaW
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
++	tehtaOO tehtaI_tehtaU tehtaUU
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
+
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
+
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
+
+delete
+	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Thinnas
+
+Type           Contextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osseN lambeN osse carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	tehtaS
++	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
++	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
++	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
++	aha_tinco hwesta_tinco silme_aha
++	afii301
+dummy	shortCarrier_tehtaX
+it	tehtaThinnas
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
++	tehtaOO tehtaI_tehtaU tehtaUU
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
 +	tehtaW
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
 
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
 
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
+delete
+	shortCarrier_tehtaX DEL
 
 
 // --------------------------------------------------------------
 // Automatic short carrier : Oomatehtar below
 
-Type           Insertion
+Type           Contextual
 Name           Short carrier insertion
 Namecode       16010
 Setting        Automatic insertion
@@ -446,37 +527,56 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
 +	afii301
+dummy	shortCarrier_tehtaX
 it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-other	tehtaA tehtaAE tehtaBreve
+previous	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaDoubleGrave tehtaI_tehtaO
 +	tehtaOO tehtaI_tehtaU tehtaUU
-+	tehtaB tehtaEEB
-+	tehtaDotInside
-+	tehtaThinnas
 +	tehtaN
-+	tehtaW
++	tehtaDotInside
++	tehtaB tehtaEEB
 +	tehtaX
++	tehtaW
++	tehtaThinnas
 
-           EOT  OOB  DEL  EOL  tengwar it  other
-StartText  1    1    2    1    2       3   4
-StartLine  1    1    2    1    2       3   4
-sawtengwa  1    1    2    1    2       5   6
-sawit      1    1    5    1    2       3   5
-sawother   1    1    6    1    2       5   6
+           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
+StartText  1    1    2    1    2        2      5   1
+StartLine  1    1    2    1    2        2      5   1
+sawtengwa  1    1    2    1    2        3      5   2
+sawdummy   1    1    4    1    2        4      6   1
+sawit      1    1    5    1    2        7      5   1
+nextdummy  1    1    8    1    2        2      5   9
 
-   GoTo       Mark? Advance? InsertMark  InsertCurrent
-1  StartText  no    yes      none        none
-2  sawtengwa  no    yes      none        none
-3  sawit      no    yes      none        carrier
-4  sawother   no    yes      none        carrier
-5  sawit      no    yes      none        none
-6  sawother   no    yes      none        none
+   GoTo        Mark? Advance? SubstMark SubstCurrent
+1  StartText   no    yes      none      none
+2  sawtengwa   no    yes      none      none
+3  sawdummy    yes   yes      none      none
+4  sawdummy    no    yes      none      none
+5  sawit       no    yes      none      none
+6  sawit       no    yes      delete    none
+7  nextdummy   yes   yes      none      none
+8  nextdummy   no    yes      none      none
+9  StartText   no    yes      delete    none
 
-carrier
-	IsKashidaLike yes
-	InsertBefore yes
-	Glyphs shortCarrier
+delete
+	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Change dummy shortCarrier_tehtaX to real shortCarrier
+
+Type           Noncontextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+	shortCarrier_tehtaX shortCarrier
 
 
 // --------------------------------------------------------------
@@ -504,6 +604,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	afii301
 
              EOT  OOB  DEL  EOL  tinco tehtaX tehtar
 StartText    1    1    1    1    2     1      1
@@ -574,6 +675,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	afii301
 
              EOT  OOB  DEL  EOL  lambe tehtaB tehtar
 StartText    1    1    1    1    2     1      1
@@ -621,6 +723,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tengwardigitMark
++	afii301
 
              EOT  OOB  DEL  EOL  lambe tehtaIB tehtaYB tehtar
 StartText    1    1    1    1    2     1       1       1
@@ -669,6 +772,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	afii301
 
             EOT  OOB  DEL  EOL  thinnas tehtaIB tehtar
 StartText   1    1    1    1    2       3       1
@@ -717,6 +821,7 @@ other	tehtaB tehtaEEB
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	afii301
 
              EOT  OOB  DEL  EOL  oomaUPtehtar tehtaW other
 StartText    1    1    1    1    2            3      1

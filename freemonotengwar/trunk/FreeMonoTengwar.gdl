@@ -203,49 +203,30 @@ table(glyph)
   Doubler = (tehtaB, tehtaEEB);
   Oomadown = (tehtaAB, tehtaEB, tehtaIB, tehtaOB, tehtaUB, tehtaYB, tengwardigitMark);
 
-  BUToomaup = ( tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTnasal = ( Oomaup, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTdotinside = ( Oomaup, tehtaN, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTdoubler = ( Oomaup, tehtaN, tehtaDotInside, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTsarince = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaW, tehtaThinnas, Oomadown );
-  BUTw = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaThinnas, Oomadown );
-  BUTwORoomaup = ( tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaThinnas, Oomadown );
-  BUTthinnas = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, Oomadown );
-  BUToomadown = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas );
-
   AnyTehta = ( tehtaW_alt, Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
+  AnyTehtaORzwj = ( ZWJ, AnyTehta );
+
+  OomaupNasal = ( Oomaup, tehtaN );
+  OomaupNasalDotinside = ( Oomaup, tehtaN, tehtaDotInside );
+  OomaupNasalDotinsideDoubler = ( Oomaup, tehtaN, tehtaDotInside, Doubler );
+  OomaupNasalDotinsideDoublerSarince = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX );
+  OomaupNasalDotinsideDoublerSarinceW = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW );
+  OomaupNasalDotinsideDoublerSarinceWThinnas = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas );
 
 endtable;
 
-// The following limits the number of tehtar to five, but it keeps down the font size
-/*
-#define AnyTehtar [[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-
-#define AnyTehtarBUToomaup [[[[BUToomaup]?BUToomaup]?BUToomaup]?BUToomaup]?
-#define AnyTehtarBUTnasal [[[[BUTnasal]?BUTnasal]?BUTnasal]?BUTnasal]?
-#define AnyTehtarBUTdotinside [[[[BUTdotinside]?BUTdotinside]?BUTdotinside]?BUTdotinside]?
-#define AnyTehtarBUTdoubler [[[[BUTdoubler]?BUTdoubler]?BUTdoubler]?BUTdoubler]?
-#define AnyTehtarBUTsarince [[[[BUTsarince]?BUTsarince]?BUTsarince]?BUTsarince]?
-#define AnyTehtarBUTw [[[[BUTw]?BUTw]?BUTw]?BUTw]?
-#define AnyTehtarBUTwORoomaup [[[[BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?
-#define AnyTehtarBUTthinnas [[[[BUTthinnas]?BUTthinnas]?BUTthinnas]?BUTthinnas]?
-#define AnyTehtarBUToomadown [[[[BUToomadown]?BUToomadown]?BUToomadown]?BUToomadown]?
-*/
 
 // The following allows for the maximum number of tehtar (one of each class), but it severely bloats the font file to almost 500KB
 
-#define AnyTehtar [[[[[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
+#define AnyTehtarORzwj [[[[[[[AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?
 
-#define AnyTehtarBUToomaup [[[[[[[BUToomaup]?BUToomaup]?BUToomaup]?BUToomaup]?BUToomaup]?BUToomaup]?BUToomaup]?
-#define AnyTehtarBUTnasal [[[[[[[BUTnasal]?BUTnasal]?BUTnasal]?BUTnasal]?BUTnasal]?BUTnasal]?BUTnasal]?
-#define AnyTehtarBUTdotinside [[[[[[[BUTdotinside]?BUTdotinside]?BUTdotinside]?BUTdotinside]?BUTdotinside]?BUTdotinside]?BUTdotinside]?
-#define AnyTehtarBUTdoubler [[[[[[[BUTdoubler]?BUTdoubler]?BUTdoubler]?BUTdoubler]?BUTdoubler]?BUTdoubler]?BUTdoubler]?
-#define AnyTehtarBUTsarince [[[[[[[BUTsarince]?BUTsarince]?BUTsarince]?BUTsarince]?BUTsarince]?BUTsarince]?BUTsarince]?
-#define AnyTehtarBUTw [[[[[[[BUTw]?BUTw]?BUTw]?BUTw]?BUTw]?BUTw]?BUTw]?
-#define AnyTehtarBUTwORoomaup [[[[[[[BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?BUTwORoomaup]?
-#define AnyTehtarBUTthinnas [[[[[[[BUTthinnas]?BUTthinnas]?BUTthinnas]?BUTthinnas]?BUTthinnas]?BUTthinnas]?BUTthinnas]?
-#define AnyTehtarBUToomadown [[[[[[[BUToomadown]?BUToomadown]?BUToomadown]?BUToomadown]?BUToomadown]?BUToomadown]?BUToomadown]?
-
+#define AnyOomaup [Oomaup]?
+#define AnyOomaupNasal [[OomaupNasal]?OomaupNasal]?
+#define AnyOomaupNasalDotinside [[[OomaupNasalDotinside]?OomaupNasalDotinside]?OomaupNasalDotinside]?
+#define AnyOomaupNasalDotinsideDoubler [[[[OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?
+#define AnyOomaupNasalDotinsideDoublerSarince [[[[[OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?
+#define AnyOomaupNasalDotinsideDoublerSarinceW [[[[[[OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?
+#define AnyOomaupNasalDotinsideDoublerSarinceWThinnas [[[[[[[OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?
 
 table(substitution)
   pass(1)
@@ -288,24 +269,42 @@ table(substitution)
   // Substitution table, pass 3: deletion of superfluous pseudocarriers
   pass(3)
 
-    if (insertcarrier)
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUToomaup _ Oomaup ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTnasal _ tehtaN ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTdotinside _ tehtaDotInside ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTdoubler _ Doubler ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTsarince _ tehtaX ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTw _ tehtaW ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTwORoomaup tehtaW AnyTehtarBUTwORoomaup _ tehtaW ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUTthinnas _ tehtaThinnas ;
-      pseudoCarrier > _ / AnyTengwa AnyTehtarBUToomadown _ Oomadown ;
-    endif;
+    pseudoCarrier > _ / AnyTengwa _ Oomaup ;
+  endpass;
+  pass(4)
+    pseudoCarrier > _ / AnyTengwa AnyOomaup _ tehtaN ;
+    pseudoCarrier > _ / tehtaN _ Oomaup ;
+  endpass;
+  pass(5)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasal _ tehtaDotInside ;
+    pseudoCarrier > _ / tehtaDotInside _ OomaupNasal ;
+  endpass;
+  pass(6)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinside _ Doubler ;
+    pseudoCarrier > _ / Doubler _ OomaupNasalDotinside ;
+  endpass;
+  pass(7)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoubler _ tehtaX ;
+    pseudoCarrier > _ / tehtaX _ OomaupNasalDotinsideDoubler ;
+  endpass;
+  pass(8)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarince _ tehtaW ;
+    pseudoCarrier > _ / tehtaW _ OomaupNasalDotinsideDoublerSarince ;
+  endpass;
+  pass(9)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceW _ tehtaThinnas ;
+    pseudoCarrier > _ / tehtaThinnas _ OomaupNasalDotinsideDoublerSarinceW ;
+  endpass;
+  pass(10)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceWThinnas _ Oomadown ;
+    pseudoCarrier > _ / Oomadown _ OomaupNasalDotinsideDoublerSarinceWThinnas ;
 
   endpass;
 
 
   // --------------------------------------------------------------
   // Substitution table, pass 4: pseudocarriers suppression with ZWJ
-  pass(4)
+  pass(11)
 
     pseudoCarrier > _ / ZWJ _ ;
 
@@ -314,28 +313,28 @@ table(substitution)
 
   // --------------------------------------------------------------
   // Substitution table, pass 5: combining tehtaW
-  pass(5)
+  pass(12)
 
-    tehtaW > tehtaW_alt / _ AnyTehtar (Oomaup, tehtaW) ;
-    tehtaW > tehtaW_alt / (Oomaup, tehtaW) AnyTehtar _ ;
-
-  endpass;
-  pass(6)
-
-    (lambe,alda,lambeN) tehtaB > (lambe_tehtaB,alda_tehtaB,lambeN_tehtaB) _ / _ AnyTehtar _ ; // when I had glyph classes for these, XeTeX would produce errors
+    tehtaW > tehtaW_alt / _ AnyTehtarORzwj (Oomaup, tehtaW) ;
+    tehtaW > tehtaW_alt / (Oomaup, tehtaW) AnyTehtarORzwj _ ;
 
   endpass;
-  pass(7)
+  pass(13)
 
-    takespecialX tehtaX > tookspecialX _ / _ AnyTehtar _ ;
-    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtar _ ;
-    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtar _ ;
+    (lambe,alda,lambeN) tehtaB > (lambe_tehtaB,alda_tehtaB,lambeN_tehtaB) _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
-  pass(8)
+  pass(14)
 
-    tehtaIB tehtaThinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
-    tehtaThinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
+    takespecialX tehtaX > tookspecialX _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
+
+  endpass;
+  pass(15)
+
+    tehtaIB tehtaThinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    tehtaThinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
 
