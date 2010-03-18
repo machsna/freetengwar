@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-03-12
+// Version: 2010-03-18
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -119,7 +119,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301 shortCarrier_tehtaX
 dummy	shortCarrier_tehtaX
 it	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -169,7 +168,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaN
 previous	tehtaA tehtaAE tehtaBreve
@@ -178,11 +176,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaOO tehtaI_tehtaU tehtaUU
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -226,7 +224,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaDotInside
 previous	tehtaA tehtaAE tehtaBreve
@@ -236,11 +233,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -284,7 +281,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaB tehtaEEB
 previous	tehtaA tehtaAE tehtaBreve
@@ -295,11 +291,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaDotInside
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -343,7 +339,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaX
 previous	tehtaA tehtaAE tehtaBreve
@@ -355,11 +350,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaB tehtaEEB
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -403,7 +398,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaW
 previous	tehtaA tehtaAE tehtaBreve
@@ -416,11 +410,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -464,7 +458,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaThinnas
 previous	tehtaA tehtaAE tehtaBreve
@@ -478,11 +471,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -526,7 +519,6 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
 +	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
 +	aha_tinco hwesta_tinco silme_aha
-+	afii301
 dummy	shortCarrier_tehtaX
 it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 previous	tehtaA tehtaAE tehtaBreve
@@ -541,11 +533,11 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 
            EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   1
-StartLine  1    1    2    1    2        2      5   1
+StartText  1    1    2    1    2        2      5   2
+StartLine  1    1    2    1    2        2      5   2
 sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   1
-sawit      1    1    5    1    2        7      5   1
+sawdummy   1    1    4    1    2        4      6   2
+sawit      1    1    5    1    2        7      5   2
 nextdummy  1    1    8    1    2        2      5   9
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
@@ -561,6 +553,39 @@ nextdummy  1    1    8    1    2        2      5   9
 
 delete
 	shortCarrier_tehtaX DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Suppress insertion with ZWJ
+
+
+Type           Contextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+zwj	afii301
+dummy	shortCarrier_tehtaX
+
+           EOT  OOB  DEL  EOL  zwj  dummy
+StartText  1    1    1    1    2    1
+StartLine  1    1    1    1    2    1
+sawzwj     1    1    3    1    2    4
+
+   GoTo      Mark? Advance? SubstMark SubstCurrent
+1  StartText no    yes      none      none
+2  sawzwj    yes   yes      none      none
+3  sawzwj    no    yes      none      none
+4  StartText no    yes      delete    delete
+
+delete
+	shortCarrier_tehtaX DEL
+	afii301 DEL
 
 
 // --------------------------------------------------------------

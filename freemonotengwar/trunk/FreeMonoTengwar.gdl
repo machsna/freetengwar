@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-03-12
+// Version: 2010-03-18
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -213,10 +213,12 @@ table(glyph)
   OomaupNasalDotinsideDoublerSarinceW = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW );
   OomaupNasalDotinsideDoublerSarinceWThinnas = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas );
 
+  OomaupORw = ( Oomaup, tehtaW );
+
+  hwesta_tincoANDsilme_ahaWorkaround = ( hwesta_tinco, silme_aha );
+
 endtable;
 
-
-// The following allows for the maximum number of tehtar (one of each class), but it severely bloats the font file to almost 500KB
 
 #define AnyTehtarORzwj [[[[[[[AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?
 
@@ -306,7 +308,7 @@ table(substitution)
   // Substitution table, pass 4: pseudocarriers suppression with ZWJ
   pass(11)
 
-    pseudoCarrier > _ / ZWJ _ ;
+    ZWJ pseudoCarrier > _ _ ;
 
   endpass;
 
@@ -315,13 +317,13 @@ table(substitution)
   // Substitution table, pass 5: combining tehtaW
   pass(12)
 
-    tehtaW > tehtaW_alt / _ AnyTehtarORzwj (Oomaup, tehtaW) ;
-    tehtaW > tehtaW_alt / (Oomaup, tehtaW) AnyTehtarORzwj _ ;
+    tehtaW > tehtaW_alt / _ AnyTehtarORzwj OomaupORw ;
+    tehtaW > tehtaW_alt / OomaupORw AnyTehtarORzwj _ ;
 
   endpass;
   pass(13)
 
-    (lambe,alda,lambeN) tehtaB > (lambe_tehtaB,alda_tehtaB,lambeN_tehtaB) _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
+    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
   pass(14)
@@ -345,7 +347,7 @@ endtable;
 table(position)
   pass(1)
     // This is a workaround for what seems to be a bug in XeTeX:
-    (hwesta_tinco,silme_aha) { advance.x = 600m; };
+    hwesta_tincoANDsilme_ahaWorkaround { advance.x = 600m; };
   endpass;
   pass(2)
     // This isn't really necessary, but it is probably good form:

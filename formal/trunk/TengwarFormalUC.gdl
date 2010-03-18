@@ -1,6 +1,6 @@
 // Graphite Description Language file for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-02-14
+// Version: 2010-02-18
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -173,11 +173,17 @@ table(glyph)
   RightCombShook = (tinco,parma,ando,umbar,suule,formen,anto,ampa,tincoX,parmaX,andoX,umbarX,nuumen,malta,oore,vala,hallaRoomen,aha_tinco,hwesta_tinco);
   WideCombShook = (anga,ungwe,anca,unque,angaX,ungweX,noldo,nwalme);
 
+  RoomenArda = ( roomen, arda );
+  RoomenArdaAlt = ( roomen_alt, arda_alt );
+
+  Specialswash = ( tehtaS_swashhyarmen, tehtaS_swashyanta );
+  SpacySpecialswash = ( tehtaS_swashhyarmenalt, tehtaS_swashyantaalt );
+
 //  LiftedShook = (calma,anga,aha,hwesta,anca,unque,calmaX,quesseX,angaX,ungweX,noldo,anna,hyarmen,yanta,halla,annaX,quesseC,vaiya,lambeN,roomenN);
 //  RaisedShook = (quesse,ungwe,nwalme,vilya,roomen,arda,silmeN,hwestaS,hallaRoomen,osse,shortCarrier,longCarrier,carrierX);
 //  LambeswashShook = (lambe,alda,esse);
 
-  AnyTengwa=(UpWide,UpNormal,UpNarrow,UpCarrier);
+  AnyTengwa=(ZWJ,UpWide,UpNormal,UpNarrow,UpCarrier);
 
 
   // --------------------------------------------------------------
@@ -225,19 +231,23 @@ table(glyph)
 
   // Other tehtar classes
 
-  AnyIsolTehta = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
+  TehtaChar = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
+  TehtaCharORzwj = ( ZWJ, TehtaChar );
 
-  AnyIsolBUToomaup = ( NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTnasal = ( OomaupNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTdotinside = ( OomaupNarrow, NasalNarrow, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTdoubler = ( OomaupNarrow, NasalNarrow, Dotinside, Sarince, FollWNarrow, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTsarince = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, FollWNarrow, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTw = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTwORoomaup = ( NasalNarrow, Dotinside, DoublerNarrow, Sarince, ThinnasNarrow, OomadownNarrow );
-  AnyIsolBUTthinnas = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, OomadownNarrow );
-  AnyIsolBUToomadown = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow );
+  OomaupNasal = ( OomaupNarrow, NasalNarrow );
+  OomaupNasalDotinside = ( OomaupNarrow, NasalNarrow, Dotinside );
+  OomaupNasalDotinsideDoubler = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow );
+  OomaupNasalDotinsideDoublerSarince = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince );
+  OomaupNasalDotinsideDoublerSarinceW = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow );
+  OomaupNasalDotinsideDoublerSarinceWThinnas = ( OomaupNarrow, NasalNarrow, Dotinside, DoublerNarrow, Sarince, FollWNarrow, ThinnasNarrow );
 
-  AnyTehta = ( OomaupNarrow, OomaupWide, OomaupNormal, OomaupCarr,
+  OomaupTehtaW = ( OomaupNarrow, tehtaW );
+  OomaupFollW = ( OomaupNarrow, FollWNarrow );
+
+  PlainNasal  = ( tehtaN,           tehtaN_altnarrow );
+  NarrowNasal = ( tehtaN_narrowlow, tehtaN_altnarrowlow );
+
+  AnyTehtaGlyphORzwj = ( ZWJ, OomaupNarrow, OomaupWide, OomaupNormal, OomaupCarr,
                NasalNarrow, NasalWide, NasalCarr,
                Dotinside,
                DoublerWide, DoublerNormal, DoublerNarrow, DoublerCarr, DoublerLambe,
@@ -267,37 +277,17 @@ endtable;
 // --------------------------------------------------------------
 // Definition of variables
 
+#define Upto7TehtaChars [[[[[[[TehtaChar]?TehtaChar]?TehtaChar]?TehtaChar]?TehtaChar]?TehtaChar]?TehtaChar]?
+#define Upto7TehtaCharsORzwj [[[[[[[TehtaCharORzwj]?TehtaCharORzwj]?TehtaCharORzwj]?TehtaCharORzwj]?TehtaCharORzwj]?TehtaCharORzwj]?TehtaCharORzwj]?
+#define Upto7AnyTehtaGlyphsORzwj [[[[[[[AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?AnyTehtaGlyphORzwj]?
 
-// The following limits the number of tehtar to five, but it keeps down the font size
-/*
-#define AnyIsolTehtar [[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
-#define AnyTehtar [[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-
-#define AnyIsolTehtarBUToomaup [[[[AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?
-#define AnyIsolTehtarBUTnasal [[[[AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?
-#define AnyIsolTehtarBUTdotinside [[[[AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?
-#define AnyIsolTehtarBUTdoubler [[[[AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?
-#define AnyIsolTehtarBUTsarince [[[[AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?
-#define AnyIsolTehtarBUTw [[[[AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?
-#define AnyIsolTehtarBUTwORoomaup [[[[AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?
-#define AnyIsolTehtarBUTthinnas [[[[AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?
-#define AnyIsolTehtarBUToomadown [[[[AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?
-*/
-
-// The following allows for the maximum number of tehtar (one of each class), but it severely bloats the font file to almost 500KB
-
-#define AnyIsolTehtar [[[[[[[AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?AnyIsolTehta]?
-#define AnyTehtar [[[[[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-
-#define AnyIsolTehtarBUToomaup [[[[[[[AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?AnyIsolBUToomaup]?
-#define AnyIsolTehtarBUTnasal [[[[[[[AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?AnyIsolBUTnasal]?
-#define AnyIsolTehtarBUTdotinside [[[[[[[AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?AnyIsolBUTdotinside]?
-#define AnyIsolTehtarBUTdoubler [[[[[[[AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?AnyIsolBUTdoubler]?
-#define AnyIsolTehtarBUTsarince [[[[[[[AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?AnyIsolBUTsarince]?
-#define AnyIsolTehtarBUTw [[[[[[[AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?AnyIsolBUTw]?
-#define AnyIsolTehtarBUTwORoomaup [[[[[[[AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?AnyIsolBUTwORoomaup]?
-#define AnyIsolTehtarBUTthinnas [[[[[[[AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?AnyIsolBUTthinnas]?
-#define AnyIsolTehtarBUToomadown [[[[[[[AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?AnyIsolBUToomadown]?
+#define AnyOomaup [OomaupNarrow]?
+#define AnyOomaupNasal [[OomaupNasal]?OomaupNasal]?
+#define AnyOomaupNasalDotinside [[[OomaupNasalDotinside]?OomaupNasalDotinside]?OomaupNasalDotinside]?
+#define AnyOomaupNasalDotinsideDoubler [[[[OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?
+#define AnyOomaupNasalDotinsideDoublerSarince [[[[[OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?
+#define AnyOomaupNasalDotinsideDoublerSarinceW [[[[[[OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?
+#define AnyOomaupNasalDotinsideDoublerSarinceWThinnas [[[[[[[OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?
 
 
 table(substitution)
@@ -305,6 +295,84 @@ table(substitution)
   // --------------------------------------------------------------
   // Substitution table, pass 1: Switches, ligatures, spacing sarince
   pass(1)
+
+    aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
+    hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
+    silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
+    tehtaI tehtaO > tehtaO_tehtaI_shift2:(1 2) _ ;
+    tehtaO tehtaI > tehtaO_tehtaI_shift2:(1 2) _ ;
+    tehtaI tehtaU > tehtaU_tehtaI_shift2:(1 2) _ ;
+    tehtaU tehtaI > tehtaU_tehtaI_shift2:(1 2) _ ;
+    tehtaE tehtaE > tehtaE_tehtaE_shift2:(1 2) _ ;
+    tehtaGrave tehtaGrave > tehtaGrave_tehtaGrave_shift2:(1 2) _ ;
+    tehtaO tehtaO > tehtaO_tehtaO_shift2:(1 2) _ ;
+    tehtaU tehtaU > tehtaU_tehtaU_shift2:(1 2) _ ;
+    ZWJ longCarrier > tehtaThinnas:(1 2) _ ;
+    tehtaI tehtaI > tehtaY:(1 2) _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 2: Insertion of the pseudocarrier
+  pass(2)
+
+    if (insertcarrier)
+      _ > pseudoCarrier:2 / _ TehtaChar ^ ;
+    endif;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 3 to 10: deletion of superfluous pseudocarriers
+  pass(3)
+
+    pseudoCarrier > _ / AnyTengwa _ OomaupNarrow ;
+  endpass;
+  pass(4)
+    pseudoCarrier > _ / AnyTengwa AnyOomaup _ NasalNarrow ;
+    pseudoCarrier > _ / NasalNarrow _ OomaupNarrow ;
+  endpass;
+  pass(5)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasal _ Dotinside ;
+    pseudoCarrier > _ / Dotinside _ OomaupNasal ;
+  endpass;
+  pass(6)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinside _ DoublerNarrow ;
+    pseudoCarrier > _ / DoublerNarrow _ OomaupNasalDotinside ;
+  endpass;
+  pass(7)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoubler _ Sarince ;
+    pseudoCarrier > _ / Sarince _ OomaupNasalDotinsideDoubler ;
+  endpass;
+  pass(8)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarince _ FollWNarrow ;
+    pseudoCarrier > _ / FollWNarrow _ OomaupNasalDotinsideDoublerSarince ;
+  endpass;
+  pass(9)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceW _ ThinnasNarrow ;
+    pseudoCarrier > _ / ThinnasNarrow _ OomaupNasalDotinsideDoublerSarinceW ;
+  endpass;
+  pass(10)
+    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceWThinnas _ OomadownNarrow ;
+    pseudoCarrier > _ / OomadownNarrow _ OomaupNasalDotinsideDoublerSarinceWThinnas ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 11: pseudocarriers suppression with ZWJ
+  pass(11)
+
+    ZWJ pseudoCarrier > _ _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 12: Switches
+  pass(12)
 
     if (barstyle==tilde)
       tehtaN > tehtaN_altnarrow / _ ;
@@ -324,131 +392,83 @@ table(substitution)
       tehtaAE > tehtaAE_altshift2;
     endif;
 
-    aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
-    hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
-    silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
-    tehtaI tehtaO > tehtaO_tehtaI_shift2:(1 2) _ ;
-    tehtaO tehtaI > tehtaO_tehtaI_shift2:(1 2) _ ;
-    tehtaI tehtaU > tehtaU_tehtaI_shift2:(1 2) _ ;
-    tehtaU tehtaI > tehtaU_tehtaI_shift2:(1 2) _ ;
-    tehtaE tehtaE > tehtaE_tehtaE_shift2:(1 2) _ ;
-    tehtaGrave tehtaGrave > tehtaGrave_tehtaGrave_shift2:(1 2) _ ;
-    tehtaO tehtaO > tehtaO_tehtaO_shift2:(1 2) _ ;
-    tehtaU tehtaU > tehtaU_tehtaU_shift2:(1 2) _ ;
-    ZWJ longCarrier > tehtaThinnas:(1 2) _ ;
-    tehtaI tehtaI > tehtaY:(1 2) _ ;
-
     if (sarincestyle==hook)
-       tehtaS > tehtaS_lifted / TakeLiftedSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_aha / TakeAhaSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_hyarmen / TakeHyarmenSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_lambelow / TakeLambeSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_raisedalt / TakeRaisedSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_yanta / TakeYantaSarince AnyIsolTehtar _ ;
+       tehtaS > tehtaS_lifted / TakeLiftedSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_aha / TakeAhaSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_hyarmen / TakeHyarmenSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_lambelow / TakeLambeSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_raisedalt / TakeRaisedSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_yanta / TakeYantaSarince Upto7TehtaCharsORzwj _ ;
     elseif (sarincestyle==swash)
-       tehtaS > tehtaS_swashhyarmen / TakeHyarmenSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_swashyanta / TakeYantaSwash AnyIsolTehtar _ ;
-       tehtaS > tehtaS_swashlambe / TakeLambeSarince AnyIsolTehtar _ ;
-       tehtaS > tehtaS_swashraised / TakeRaisedSwash AnyIsolTehtar _ ; 
+       tehtaS > tehtaS_swashhyarmen / TakeHyarmenSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_swashyanta / TakeYantaSwash Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_swashlambe / TakeLambeSarince Upto7TehtaCharsORzwj _ ;
+       tehtaS > tehtaS_swashraised / TakeRaisedSwash Upto7TehtaCharsORzwj _ ; 
        tehtaS > tehtaS_swash / _ ;
 
-//    tehtaS > tehtaS_lifted / LiftedShook AnyTehtar _ ;
-//    tehtaS > tehtaS_raised / RaisedShook AnyTehtar _ ;
-//    tehtaS > tehtaS_swashlambe / LambeswashShook AnyTehtar _ ;
-
     endif;
 
   endpass;
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 2: Insertion of the pseudocarrier
-  pass(2)
-
-    if (insertcarrier)
-      _ > pseudoCarrier:2 / _ AnyIsolTehta ^ ;
-    endif;
-
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 3: deletion of superfluous pseudocarriers
-  pass(3)
-
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomaup _ OomaupNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTnasal _ NasalNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdotinside _ Dotinside ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTdoubler _ DoublerNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTsarince _ Sarince ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTw _ FollWNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTwORoomaup FollWNarrow AnyIsolTehtarBUTwORoomaup _ FollWNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUTthinnas _ ThinnasNarrow ;
-    pseudoCarrier > _ / AnyTengwa AnyIsolTehtarBUToomadown _ OomadownNarrow ;
-
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 4: pseudocarriers suppression with ZWJ
-  pass(4)
-
-    pseudoCarrier > _ / ZWJ _ ;
-
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 5: conditional glyph changes
-  pass(5)
-
-    tehtaW > tehtaW_combshift2 / _ AnyIsolTehtar (OomaupNarrow,tehtaW) ;
-    tehtaW > tehtaW_combshift2 / (OomaupNarrow,tehtaW) AnyIsolTehtar _ ;
-
-    (tehtaN,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / ^ _ AnyIsolTehtar (OomaupNarrow,FollWNarrow) ;
-    (tehtaN,tehtaN_altnarrow) > (tehtaN_narrowlow,tehtaN_altnarrowlow) / (OomaupNarrow,FollWNarrow) AnyIsolTehtar _ ;
-
-    (roomen,arda) > (roomen_alt,arda_alt) / _ AnyIsolTehtar DowntehtaNarrow ;
-
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 6: mostly tehtar
-  pass(6)
+  // Substitution table, pass 13
+  pass(13)
 
     if (ossetail==final)
-       (osse_alt) > (osse) / ^ _ AnyIsolTehtar ZWJ? AnyTengwa;
+       (osse_alt) > (osse) / ^ _ Upto7TehtaCharsORzwj AnyTengwa;
     endif;
 
-    (roomen_alt,arda_alt) > (roomen,arda) / _ AnyIsolTehtar (tehtaUB) ;
+    tehtaW > tehtaW_combshift2 / _ Upto7TehtaCharsORzwj OomaupTehtaW ;
+    tehtaW > tehtaW_combshift2 / OomaupTehtaW Upto7TehtaCharsORzwj _ ;
 
-    tehtaX > tehtaX_shift4 / WideCombShook AnyTehtar _ ;
-    tehtaX > tehtaX_down / RightCombShook AnyTehtar _ ;
-
-    (tehtaS_swashhyarmen,tehtaS_swashyanta) > (tehtaS_swashhyarmenalt,tehtaS_swashyantaalt) / _ AnyIsolTehtar AnyIsolTehta ;
-
-    UptehtaNarrow > UptehtaWide / UpWide AnyTehtar _ ;
-    UptehtaNarrow > UptehtaNormal / UpNormal AnyTehtar _ ;
-    UptehtaNarrow > UptehtaCarr / UpCarrier AnyTehtar _ ;
-
-    DowntehtaNarrow > DowntehtaWide / DownWide AnyTehtar _ ;
-    DowntehtaNarrow > DowntehtaNormal / DownNormal AnyTehtar _ ;
-    DowntehtaNarrow > DowntehtaCarr / DownCarrier AnyTehtar _ ;
-    DowntehtaNarrow > DowntehtaLambe / DownLambe AnyTehtar _ ;
+    RoomenArda > RoomenArdaAlt / _ Upto7TehtaCharsORzwj DowntehtaNarrow ;
 
   endpass;
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 7: shift thinnas
-  pass(7)
+  // Substitution table, pass 14: conditional glyph changes
+  pass(14)
 
-    (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / TriggerThinnasShift AnyTehtar _ ;
-    (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / _ AnyTehtar TriggerThinnasShift ;
+    PlainNasal > NarrowNasal / ^ _ Upto7TehtaCharsORzwj OomaupFollW ;
+    PlainNasal > NarrowNasal / OomaupFollW Upto7TehtaCharsORzwj _ ;
+
+    RoomenArdaAlt > RoomenArda / _ Upto7TehtaCharsORzwj tehtaUB ;
+
+    Specialswash > SpacySpecialswash / _ Upto7TehtaCharsORzwj TehtaChar ;
 
   endpass;
-  
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 15: tehtar
+  pass(15)
+
+    tehtaX > tehtaX_shift4 / WideCombShook Upto7AnyTehtaGlyphsORzwj _ ;
+    tehtaX > tehtaX_down / RightCombShook Upto7AnyTehtaGlyphsORzwj _ ;
+
+    UptehtaNarrow > UptehtaWide / UpWide Upto7AnyTehtaGlyphsORzwj _ ;
+    UptehtaNarrow > UptehtaNormal / UpNormal Upto7AnyTehtaGlyphsORzwj _ ;
+    UptehtaNarrow > UptehtaCarr / UpCarrier Upto7AnyTehtaGlyphsORzwj _ ;
+
+    DowntehtaNarrow > DowntehtaWide / DownWide Upto7AnyTehtaGlyphsORzwj _ ;
+    DowntehtaNarrow > DowntehtaNormal / DownNormal Upto7AnyTehtaGlyphsORzwj _ ;
+    DowntehtaNarrow > DowntehtaCarr / DownCarrier Upto7AnyTehtaGlyphsORzwj _ ;
+    DowntehtaNarrow > DowntehtaLambe / DownLambe Upto7AnyTehtaGlyphsORzwj _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table, pass 16: shift thinnas
+  pass(16)
+
+    (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / TriggerThinnasShift Upto7AnyTehtaGlyphsORzwj _ ;
+    (ThinnasWide,ThinnasNormal,ThinnasNarrow) > ThinnasCarr / _ Upto7AnyTehtaGlyphsORzwj TriggerThinnasShift ;
+
+  endpass;
+
 endtable;
 
 
@@ -457,7 +477,7 @@ endtable;
 
 table(position)
   pass(1)
-    AnyTehta { advance.x = 0; };
+    TehtaChar { advance.x = 0; };
   endpass;
 endtable;
 
