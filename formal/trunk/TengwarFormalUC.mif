@@ -1,6 +1,6 @@
 // Morph Input File for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-02-18
+// Version: 2010-02-19
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -63,6 +63,19 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osseN lambeN osse carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	tehtaS
++	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
++	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
++	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
++	aha_tinco hwesta_tinco silme_aha
 tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
@@ -75,13 +88,15 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  tehtar
-StartText  1    1    1    1    2
-StartLine  1    1    1    1    2
+           EOT  OOB  DEL  EOL  tengwar tehtar
+StartText  1    1    1    1    2       3
+StartLine  1    1    1    1    2       3
+sawtengwa  1    1    2    1    2       1
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
-2  StartText  no    yes      none        dummy
+2  sawtengwa  no    yes      none        none
+3  StartText  no    yes      none        dummy
 
 dummy
 	IsKashidaLike yes
@@ -90,7 +105,7 @@ dummy
 
 
 // --------------------------------------------------------------
-// Automatic short carrier : Oomatehtar above
+// Automatic short carrier : (Oomaup and) Nasalizer
 
 Type           Contextual
 Name           Short carrier insertion
@@ -102,70 +117,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
-dummy	tengwardigitMark.shift4
-it	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-
-           EOT  OOB  DEL  EOL  tengwar  dummy  it
-StartText  1    1    2    1    2        2      1
-StartLine  1    1    2    1    2        2      1
-sawtengwa  1    1    2    1    2        3      1
-sawdummy   1    1    4    1    2        4      5
-
-   GoTo       Mark? Advance? SubstMark SubstCurrent
-1  StartText  no    yes      none      none
-2  sawtengwa  no    yes      none      none
-3  sawdummy   yes   yes      none      none
-4  sawdummy   no    yes      none      none
-5  StartText  no    yes      delete    none
-
-delete
-	tengwardigitMark.shift4 DEL
-
-
-// --------------------------------------------------------------
-// Automatic short carrier : Nasalizer
-
-Type           Contextual
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
-
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaN
 previous	tehtaA tehtaAE tehtaBreve
@@ -173,24 +124,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -209,20 +162,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaDotInside
 previous	tehtaA tehtaAE tehtaBreve
@@ -231,24 +170,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
 +	tehtaN
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -267,20 +208,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaB tehtaEEB
 previous	tehtaA tehtaAE tehtaBreve
@@ -290,24 +217,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaDotInside
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -326,20 +255,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaX
 previous	tehtaA tehtaAE tehtaBreve
@@ -350,24 +265,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaDotInside
 +	tehtaB tehtaEEB
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -386,20 +303,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaW
 previous	tehtaA tehtaAE tehtaBreve
@@ -411,24 +314,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaB tehtaEEB
 +	tehtaX
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -447,20 +352,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaThinnas
 previous	tehtaA tehtaAE tehtaBreve
@@ -473,24 +364,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 +	tehtaW
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
@@ -509,20 +402,6 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-tengwar	tinco parma calma quesse ando umbar anga ungwe
-+	suule formen aha hwesta anto ampa anca unque
-+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-+	nuumen malta noldo nwalme oore vala anna vilya
-+	roomen arda lambe alda silme silmeN esse esseN
-+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-+	osseN lambeN osse carrierX annaX quesseC hwestaC
-+	roomenN maltaX valaX hallaRoomen vaiya
-+	tehtaS
-+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-+	aha_tinco hwesta_tinco silme_aha
-+	zwj
 dummy	tengwardigitMark.shift4
 it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 previous	tehtaA tehtaAE tehtaBreve
@@ -536,24 +415,26 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaThinnas
 
-           EOT  OOB  DEL  EOL  tengwar  dummy  it  previous
-StartText  1    1    2    1    2        2      5   2
-StartLine  1    1    2    1    2        2      5   2
-sawtengwa  1    1    2    1    2        3      5   2
-sawdummy   1    1    4    1    2        4      6   2
-sawit      1    1    5    1    2        7      5   2
-nextdummy  1    1    8    1    2        2      5   9
+            EOT  OOB  DEL  EOL  dummy  it  previous
+StartText   1    1    1    1    1      2   3
+StartLine   1    1    1    1    1      2   3
+sawit       1    1    2    1    4      2   3
+sawprevious 1    1    3    1    6      2   3
+itNdummy    1    1    5    1    1      2   8
+prevNdummy  1    1    7    1    1      10  3
+itNdumNprev 1    1    9    1    1      2   9 
 
    GoTo        Mark? Advance? SubstMark SubstCurrent
 1  StartText   no    yes      none      none
-2  sawtengwa   no    yes      none      none
-3  sawdummy    yes   yes      none      none
-4  sawdummy    no    yes      none      none
-5  sawit       no    yes      none      none
-6  sawit       no    yes      delete    none
-7  nextdummy   yes   yes      none      none
-8  nextdummy   no    yes      none      none
-9  StartText   no    yes      delete    none
+2  sawit       no    yes      none      none
+3  sawprevious no    yes      none      none
+4  itNdummy    yes   yes      none      none
+5  itNdummy    no    yes      none      none
+6  prevNdummy  yes   yes      none      none
+7  prevNdummy  no    yes      none      none
+8  itNdumNprev no    yes      delete    none
+9  itNdumNprev no    yes      none      none
+10 StartText   no    yes      delete    none
 
 delete
 	tengwardigitMark.shift4 DEL
