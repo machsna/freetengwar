@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-03-18
+// Version: 2010-03-19
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -109,7 +109,7 @@ table(glyph)
   tehtaAE = (ps("tehtaAE"));
   tehtaB = (ps("tehtaB"));
   tehtaBreve = (ps("tehtaBreve"));
-  tehtaDotInside = (ps("tehtaDotInside"));
+  tehtaDotinside = (ps("tehtaDotInside"));
   tehtaDoubleGrave = (ps("tehtaDoubleGrave"));
   tehtaE = (ps("tehtaE"));
   tehtaEB = (ps("tehtaEB"));
@@ -188,32 +188,37 @@ table(glyph)
   yanta = (ps("yanta"));
   yanta_tehtaX = (ps("yanta_tehtaX"));
 
-  pseudoCarrier = pseudo(ps("shortCarrier"));
+  insertedcarrier = pseudo(ps("shortCarrier"));
+  insertedcarrierIntertehtar = pseudo(ps("shortCarrier"));
 
-  AnyTengwa = (pseudoCarrier, tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha);
+  AnyTengwa = ( insertedcarrier, tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha );
 
-  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        pseudoCarrier);
+  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        insertedcarrier);
   tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX);
 
   takespecialB = (lambe, alda, lambeN);
   tookspecialB = (lambe_tehtaB, alda_tehtaB, lambeN_tehtaB);
 
   Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaDoubleGrave, tehtaI_tehtaO, tehtaOO, tehtaI_tehtaU, tehtaUU);
-  OomaupW = (tehtaW_tehtaA, tehtaW_tehtaAE, tehtaW_tehtaBreve, tehtaW_tehtaE, tehtaW_tehtaGrave, tehtaW_tehtaI, tehtaW_tehtaO, tehtaW_tehtaU, tehtaW_tehtaY, tehtaW_tehtaYanta, tehtaW_tehtaEE, tehtaW_tehtaDoubleGrave, tehtaW_tehtaI_tehtaO, tehtaW_tehtaOO, tehtaW_tehtaI_tehtaU, tehtaW_tehtaUU);
+  Nasal = (tehtaN);
+  Dotinside = (tehtaDotinside);
   Doubler = (tehtaB, tehtaEEB);
+  Sarince = (tehtaX);
+  Follw = (tehtaW);
+  Thinnas = (tehtaThinnas);
   Oomadown = (tehtaAB, tehtaEB, tehtaIB, tehtaOB, tehtaUB, tehtaYB, tengwardigitMark);
 
-  AnyTehta = ( tehtaW_alt, Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
+  AnyTehta = ( tehtaW_alt, Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
   AnyTehtaORzwj = ( ZWJ, AnyTehta );
 
-  OomaupNasal = ( Oomaup, tehtaN );
-  OomaupNasalDotinside = ( Oomaup, tehtaN, tehtaDotInside );
-  OomaupNasalDotinsideDoubler = ( Oomaup, tehtaN, tehtaDotInside, Doubler );
-  OomaupNasalDotinsideDoublerSarince = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX );
-  OomaupNasalDotinsideDoublerSarinceW = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW );
-  OomaupNasalDotinsideDoublerSarinceWThinnas = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas );
+  OomaupNasal = ( Oomaup, Nasal );
+  OomaupNasalDotinside = ( Oomaup, Nasal, Dotinside );
+  OomaupNasalDotinsideDoubler = ( Oomaup, Nasal, Dotinside, Doubler );
+  OomaupNasalDotinsideDoublerSarince = ( Oomaup, Nasal, Dotinside, Doubler, Sarince );
+  OomaupNasalDotinsideDoublerSarinceFollw = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw );
+  OomaupNasalDotinsideDoublerSarinceFollwThinnas = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas );
 
-  OomaupORw = ( Oomaup, tehtaW );
+  OomaupORw = ( Oomaup, Follw );
 
   hwesta_tincoANDsilme_ahaWorkaround = ( hwesta_tinco, silme_aha );
 
@@ -222,13 +227,12 @@ endtable;
 
 #define AnyTehtarORzwj [[[[[[[AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?
 
-#define AnyOomaup [Oomaup]?
-#define AnyOomaupNasal [[OomaupNasal]?OomaupNasal]?
-#define AnyOomaupNasalDotinside [[[OomaupNasalDotinside]?OomaupNasalDotinside]?OomaupNasalDotinside]?
-#define AnyOomaupNasalDotinsideDoubler [[[[OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?
-#define AnyOomaupNasalDotinsideDoublerSarince [[[[[OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?
-#define AnyOomaupNasalDotinsideDoublerSarinceW [[[[[[OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?OomaupNasalDotinsideDoublerSarinceW]?
-#define AnyOomaupNasalDotinsideDoublerSarinceWThinnas [[[[[[[OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?OomaupNasalDotinsideDoublerSarinceWThinnas]?
+#define AnyOomaupNasal [OomaupNasal]?
+#define AnyOomaupNasalDotinside [[OomaupNasalDotinside]?OomaupNasalDotinside]?
+#define AnyOomaupNasalDotinsideDoubler [[[OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?OomaupNasalDotinsideDoubler]?
+#define AnyOomaupNasalDotinsideDoublerSarince [[[[OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?OomaupNasalDotinsideDoublerSarince]?
+#define AnyOomaupNasalDotinsideDoublerSarinceFollw [[[[[OomaupNasalDotinsideDoublerSarinceFollw]?OomaupNasalDotinsideDoublerSarinceFollw]?OomaupNasalDotinsideDoublerSarinceFollw]?OomaupNasalDotinsideDoublerSarinceFollw]?OomaupNasalDotinsideDoublerSarinceFollw]?
+#define AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas [[[[[[OomaupNasalDotinsideDoublerSarinceFollwThinnas]?OomaupNasalDotinsideDoublerSarinceFollwThinnas]?OomaupNasalDotinsideDoublerSarinceFollwThinnas]?OomaupNasalDotinsideDoublerSarinceFollwThinnas]?OomaupNasalDotinsideDoublerSarinceFollwThinnas]?OomaupNasalDotinsideDoublerSarinceFollwThinnas]?
 
 table(substitution)
   pass(1)
@@ -241,7 +245,7 @@ table(substitution)
     aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
     hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
     silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
-    ZWJ longCarrier > tehtaThinnas:(1 2) _ ;
+    ZWJ longCarrier > Thinnas:(1 2) _ ;
     tehtaI tehtaI > tehtaY:(1 2) _ ;
     tehtaE tehtaE > tehtaEE:(1 2) _ ;
     tehtaIB tehtaIB > tehtaYB:(1 2) _ ;
@@ -261,82 +265,126 @@ table(substitution)
   pass(2)
 
     if (insertcarrier)
-      _ > pseudoCarrier:2 / _ AnyTehta ^ ;
+      _ > insertedcarrier:2 / _ AnyTehta ^ ;
     endif;
 
   endpass;
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 3: deletion of superfluous pseudocarriers
-  pass(3)
+  // Substitution table: deletion of superfluous pseudocarriers
 
-    pseudoCarrier > _ / AnyTengwa _ Oomaup ;
+  pass(3)
+    insertedcarrier > _ / AnyTengwa _ AnyTehta ;
+    insertedcarrier > insertedcarrierIntertehtar / AnyTehta _ AnyTehta ;
   endpass;
+
   pass(4)
-    pseudoCarrier > _ / AnyTengwa AnyOomaup _ tehtaN ;
-    pseudoCarrier > _ / tehtaN _ Oomaup ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Nasal _ Oomaup _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomaup _ Nasal _ ;
+    insertedcarrierIntertehtar > _ / Nasal _ Oomaup ;
+    insertedcarrierIntertehtar > _ / Oomaup _ Nasal ;
   endpass;
   pass(5)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasal _ tehtaDotInside ;
-    pseudoCarrier > _ / tehtaDotInside _ OomaupNasal ;
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasal _ ;
   endpass;
+
   pass(6)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinside _ Doubler ;
-    pseudoCarrier > _ / Doubler _ OomaupNasalDotinside ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Dotinside _ OomaupNasal AnyOomaupNasal _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasal AnyOomaupNasal _ Dotinside _ ;
+    insertedcarrierIntertehtar > _ / Dotinside _ OomaupNasal ;
+    insertedcarrierIntertehtar > _ / OomaupNasal _ Dotinside ;
   endpass;
   pass(7)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoubler _ tehtaX ;
-    pseudoCarrier > _ / tehtaX _ OomaupNasalDotinsideDoubler ;
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinside _ ;
   endpass;
+
   pass(8)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarince _ tehtaW ;
-    pseudoCarrier > _ / tehtaW _ OomaupNasalDotinsideDoublerSarince ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Doubler _ OomaupNasalDotinside AnyOomaupNasalDotinside _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinside AnyOomaupNasalDotinside _ Doubler _ ;
+    insertedcarrierIntertehtar > _ / Doubler _ OomaupNasalDotinside ;
+    insertedcarrierIntertehtar > _ / OomaupNasalDotinside _ Doubler ;
   endpass;
   pass(9)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceW _ tehtaThinnas ;
-    pseudoCarrier > _ / tehtaThinnas _ OomaupNasalDotinsideDoublerSarinceW ;
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoubler _ ;
   endpass;
+
   pass(10)
-    pseudoCarrier > _ / AnyTengwa AnyOomaupNasalDotinsideDoublerSarinceWThinnas _ Oomadown ;
-    pseudoCarrier > _ / Oomadown _ OomaupNasalDotinsideDoublerSarinceWThinnas ;
-
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Sarince _ OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ Sarince _ ;
+    insertedcarrierIntertehtar > _ / Sarince _ OomaupNasalDotinsideDoubler ;
+    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoubler _ Sarince ;
   endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 4: pseudocarriers suppression with ZWJ
   pass(11)
-
-    ZWJ pseudoCarrier > _ _ ;
-
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarince _ ;
   endpass;
 
-
-  // --------------------------------------------------------------
-  // Substitution table, pass 5: combining tehtaW
   pass(12)
-
-    tehtaW > tehtaW_alt / _ AnyTehtarORzwj OomaupORw ;
-    tehtaW > tehtaW_alt / OomaupORw AnyTehtarORzwj _ ;
-
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Follw _ OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ Follw _ ;
+    insertedcarrierIntertehtar > _ / Follw _ OomaupNasalDotinsideDoublerSarince ;
+    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarince _ Follw ;
   endpass;
   pass(13)
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollw _ ;
+  endpass;
+
+  pass(14)
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ Thinnas _ ;
+    insertedcarrierIntertehtar > _ / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw ;
+    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollw _ Thinnas ;
+  endpass;
+  pass(15)
+    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
+  endpass;
+
+  pass(16)
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
+    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown _ ;
+    insertedcarrierIntertehtar > _ / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas ;
+    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown ;
+  endpass;
+
+  pass(17)
+    insertedcarrierIntertehtar > insertedcarrier ;
+  endpass;
+
+
+
+  // --------------------------------------------------------------
+  // Substitution table: pseudocarriers suppression with ZWJ
+  pass(18)
+
+    ZWJ insertedcarrier > _ _ ;
+
+  endpass;
+
+
+  // --------------------------------------------------------------
+  // Substitution table: combining Follw
+  pass(19)
+
+    Follw > tehtaW_alt / _ AnyTehtarORzwj OomaupORw ;
+    Follw > tehtaW_alt / OomaupORw AnyTehtarORzwj _ ;
+
+  endpass;
+  pass(20)
 
     takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
-  pass(14)
+  pass(21)
 
-    takespecialX tehtaX > tookspecialX _ / _ AnyTehtarORzwj _ ;
+    takespecialX Sarince > tookspecialX _ / _ AnyTehtarORzwj _ ;
     lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
     lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
-  pass(15)
+  pass(22)
 
-    tehtaIB tehtaThinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
-    tehtaThinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    tehtaIB Thinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    Thinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
 
