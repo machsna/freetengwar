@@ -295,6 +295,7 @@ table(glyph)
   tehtaDotInside = ps("tehtaDotInside");
   tengwarQuadruplepusta = ps("tengwarQuadruplepusta");
   tengwarQuintuplepusta = ps("tengwarQuintuplepusta");
+  tengwarExclamationB = ps("tengwarExclamationB");
   tengwarduodecimal12 = ps("tengwarduodecimal12");
   ZWJ = ps("zwj");
   tehtaA = ps("tehtaA");

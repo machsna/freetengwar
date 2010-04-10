@@ -337,6 +337,7 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tehtaGrave_tehtaGrave.shift4': 'tehtaGrave_tehtaGrave.shift4',
                'tehtaYB.lambe': 'tehtaYB.lambe',
                'tehtaIB.lambe': 'tehtaIB.lambe',
+               'tengwarExclamationB': 'tengwarExclamationB',
               }}
 
 references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
@@ -469,7 +470,7 @@ freetengenc = {'tinco': 0xE000,
                'tengwarDoublesection': 0xE069,
                'tengwarQuoteleft': 0xE06A,
                'tengwarQuoteright': 0xE06B,
-               'tengwarEclamationB': 0xE06C,
+               'tengwarExclamationB': 0xE06C,
                'tengwardigit0': 0xE070,
                'tengwardigit1': 0xE071,
                'tengwardigit2': 0xE072,
