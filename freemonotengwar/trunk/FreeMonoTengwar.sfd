@@ -4,7 +4,7 @@ FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
 Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009, 2010 j. 'mach' wust; 2010 Johan Winge.
-Version: 2010-03-12
+Version: 2010-04-16
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1268386728
+ModificationTime: 1271415609
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -385,7 +385,7 @@ LangName: 1027 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.o
 LangName: 1069 "" "" "Arrunta" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "http://freetengwar.sourceforge.net/" "" "The use of this font is granted subject to GNU General Public License. As a special exception, if you create a document which uses this font, and embed this font or unaltered portions of this font into the document, this font does not by itself cause the resulting document to be covered by the GNU General Public License. This exception does not however invalidate any other reasons why the document might be covered by the GNU General Public License. If you modify this font, you may extend this exception to your version of the font, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version." "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+4BwA +4APgUuAu4ETgA+BR +4AXgFOAW4FLgEAAA +4AngFuAD4FkA +4AbgFeAB4FDgWAAA +4BbgDeBF4BQA +4BwA +4CLgF+Am4CwA +4ATgFuAH-/The quick brown fox jumps over the lazy dog." 
 GaspTable: 2 8 2 65535 3
-Encoding: UnicodeFull
+Encoding: Custom
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -36
@@ -41104,7 +41104,7 @@ Flags: HMW
 LayerCount: 2
 EndChar
 
-StartChar: afii61664
+StartChar: zwnj
 Encoding: 8204 8204 1692
 Width: 0
 VWidth: 0
@@ -41112,7 +41112,7 @@ Flags: HMW
 LayerCount: 2
 EndChar
 
-StartChar: afii301
+StartChar: zwj
 Encoding: 8205 8205 1693
 Width: 0
 VWidth: 0
@@ -54541,7 +54541,7 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 1 0 
-Ligature2: "'liga' tengwar ligatures subtable" afii301 longCarrier
+Ligature2: "'liga' tengwar ligatures subtable" zwj longCarrier
 EndChar
 
 StartChar: tehtaO
@@ -56306,7 +56306,7 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaAE
 LCarets2: 1 0 
 EndChar
 
-StartChar: tehtaDoubleGrave
+StartChar: tehtaGrave_tehtaGrave
 Encoding: 1114128 -1 2341
 Width: 0
 Flags: W
@@ -56339,7 +56339,7 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaGrave
 LCarets2: 1 0 
 EndChar
 
-StartChar: tehtaW_tehtaDoubleGrave
+StartChar: tehtaW_tehtaGrave_tehtaGrave
 Encoding: 1114129 -1 2342
 Width: 0
 Flags: W
@@ -57679,7 +57679,7 @@ Refer: 2293 57444 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaI_tehtaO
+StartChar: tehtaO_tehtaI
 Encoding: 1114160 -1 2381
 Width: 0
 Flags: W
@@ -57695,7 +57695,7 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI
 EndChar
 
-StartChar: tehtaI_tehtaU
+StartChar: tehtaU_tehtaI
 Encoding: 1114161 -1 2382
 Width: 0
 Flags: W
@@ -57711,7 +57711,7 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaU
 EndChar
 
-StartChar: tehtaW_tehtaI_tehtaO
+StartChar: tehtaW_tehtaO_tehtaI
 Encoding: 1114162 -1 2383
 Width: 0
 Flags: HW
@@ -57730,7 +57730,7 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO tehtaI
 EndChar
 
-StartChar: tehtaW_tehtaI_tehtaU
+StartChar: tehtaW_tehtaU_tehtaI
 Encoding: 1114163 -1 2384
 Width: 0
 Flags: HW
@@ -57807,7 +57807,7 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0 
-Ligature2: "'liga' tengwar ligatures subtable" aha afii301 tinco
+Ligature2: "'liga' tengwar ligatures subtable" aha zwj tinco
 EndChar
 
 StartChar: hwesta_tinco
@@ -57859,7 +57859,7 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0 
-Ligature2: "'liga' tengwar ligatures subtable" hwesta afii301 tinco
+Ligature2: "'liga' tengwar ligatures subtable" hwesta zwj tinco
 EndChar
 
 StartChar: silme_aha
@@ -57905,7 +57905,7 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0 
-Ligature2: "'liga' tengwar ligatures subtable" silme afii301 aha
+Ligature2: "'liga' tengwar ligatures subtable" silme zwj aha
 EndChar
 EndChars
 EndSplineFont
