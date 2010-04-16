@@ -50,411 +50,720 @@ List
 	tehtaThinnas	zwj longCarrier
 
 
-//// --------------------------------------------------------------
-//// Automatic short carrier : Dummy tengwardigitMark.shift4 insertion
-//
-//Type           Insertion
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//tengwar	tinco parma calma quesse ando umbar anga ungwe
-//+	suule formen aha hwesta anto ampa anca unque
-//+	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
-//+	nuumen malta noldo nwalme oore vala anna vilya
-//+	roomen arda lambe alda silme silmeN esse esseN
-//+	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
-//+	osseN lambeN osse carrierX annaX quesseC hwestaC
-//+	roomenN maltaX valaX hallaRoomen vaiya
-//+	tehtaS
-//+	tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4
-//+	tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9
-//+	tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12
-//+	aha_tinco hwesta_tinco silme_aha
-//tehtar	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//+	tehtaB tehtaEEB
-//+	tehtaX
-//+	tehtaW
-//+	tehtaThinnas
-//+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-//
-//           EOT  OOB  DEL  EOL  tengwar tehtar
-//StartText  1    1    1    1    2       3
-//StartLine  1    1    1    1    2       3
-//sawtengwa  1    1    2    1    2       1
-//
-//   GoTo       Mark? Advance? InsertMark  InsertCurrent
-//1  StartText  no    yes      none        none
-//2  sawtengwa  no    yes      none        none
-//3  StartText  no    yes      none        dummy
-//
-//dummy
-//	IsKashidaLike yes
-//	InsertBefore yes
-//	Glyphs tengwardigitMark.shift4
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : (Oomaup and) Nasalizer
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaN
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Dot inside
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaDotInside
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Doubler
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaB tehtaEEB
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Combining sa-rince
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaX
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//+	tehtaB tehtaEEB
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : following W
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaW
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//+	tehtaB tehtaEEB
-//+	tehtaX
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Thinnas
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaThinnas
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//+	tehtaB tehtaEEB
-//+	tehtaX
-//+	tehtaW
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Oomatehtar below
-//
-//Type           Contextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//dummy	tengwardigitMark.shift4
-//it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-//previous	tehtaA tehtaAE tehtaBreve
-//+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-//+	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
-//+	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
-//+	tehtaN
-//+	tehtaDotInside
-//+	tehtaB tehtaEEB
-//+	tehtaX
-//+	tehtaW
-//+	tehtaThinnas
-//
-//            EOT  OOB  DEL  EOL  dummy  it  previous
-//StartText   1    1    1    1    1      2   3
-//StartLine   1    1    1    1    1      2   3
-//sawit       1    1    2    1    4      2   3
-//sawprevious 1    1    3    1    6      2   3
-//itNdummy    1    1    5    1    1      2   8
-//prevNdummy  1    1    7    1    1      10  3
-//itNdumNprev 1    1    9    1    1      2   9 
-//
-//   GoTo        Mark? Advance? SubstMark SubstCurrent
-//1  StartText   no    yes      none      none
-//2  sawit       no    yes      none      none
-//3  sawprevious no    yes      none      none
-//4  itNdummy    yes   yes      none      none
-//5  itNdummy    no    yes      none      none
-//6  prevNdummy  yes   yes      none      none
-//7  prevNdummy  no    yes      none      none
-//8  itNdumNprev no    yes      delete    none
-//9  itNdumNprev no    yes      none      none
-//10 StartText   no    yes      delete    none
-//
-//delete
-//	tengwardigitMark.shift4 DEL
-//
-//
-//// --------------------------------------------------------------
-//// Automatic short carrier : Change dummy tengwardigitMark.shift4 to real shortCarrier
-//
-//Type           Noncontextual
-//Name           Short carrier insertion
-//Namecode       16010
-//Setting        Automatic insertion
-//Settingcode    16011
-//Default        no
-//Orientation    HV
-//Forward        yes
-//Exclusive      yes
-//
-//	tengwardigitMark.shift4 shortCarrier
-//
+// --------------------------------------------------------------
+// Automatic short carrier : Tehtar above
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
+other	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Nasalizer
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaN
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaN
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
+other	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Dot inside
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaDotInside
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaDotInside
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
+other	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Doubler
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaB tehtaEEB
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaB tehtaEEB
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
+other	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Sarince
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaX
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaX
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
+other	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Following-w
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaW
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaW
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
+other	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Thinnas
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaThinnas
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaThinnas
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
+other	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+
+           EOT  OOB  DEL  EOL  dummy  it  previous  other
+StartText  1    1    1    1    2      1   1         1
+StartLine  1    1    1    1    2      1   1         1
+sawdummy   1    1    2    1    2      3   1         1
+dummyIT    1    1    3    1    4      1   3         3
+dumITdum   1    1    5    1    2      1   6         1
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Tehtar below
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+other	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
+
+           EOT  OOB  DEL  EOL  it  other
+StartText  1    1    1    1    2   1
+StartLine  1    1    1    1    2   1
+sawit      1    1    2    1    3   2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawit      no    yes      none        none
+3  sawit      no    yes      none        dummy
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+dummy	tengwardigitMark.shift4
+it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+previous	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
+
+           EOT  OOB  DEL  EOL  dummy  it  previous
+StartText  1    1    1    1    2      1   1
+StartLine  1    1    1    1    2      1   1
+sawdummy   1    1    2    1    2      3   1
+dummyIT    1    1    3    1    4      1   3
+dumITdum   1    1    5    1    2      1   6
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawdummy  no    yes      none      none
+3 dummyIT   no    yes      none      none
+4 dumITdum  yes   yes      none      none
+5 dumITdum  no    yes      none      none
+6 StartText no    yes      delete    none
+
+delete
+	tengwardigitMark.shift4 DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Initial dummy
+
+Type           Insertion
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+tehtar	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+tengwar	tinco parma calma quesse ando umbar anga ungwe
++	suule formen aha hwesta anto ampa anca unque
++	tincoX parmaX calmaX quesseX andoX umbarX angaX ungweX
++	nuumen malta noldo nwalme oore vala anna vilya
++	roomen arda lambe alda silme silmeN esse esseN
++	hyarmen hwestaS yanta uure longCarrier halla shortCarrier
++	osse osseN lambeN carrierX annaX quesseC hwestaC
++	roomenN maltaX valaX hallaRoomen vaiya
++	aha_tinco hwesta_tinco silme_aha
++	tehtaS
++	tengwardigitMark.shift4
+
+           EOT  OOB  DEL  EOL  tehtar  tengwar
+StartText  1    1    1    1    2       3
+StartLine  1    1    1    1    2       3
+sawsigns   1    1    3    1    3       3
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawsigns   no    yes      none        dummy
+3  sawsigns   no    yes      none        none
+
+dummy
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tengwardigitMark.shift4
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Dummy suppression with zwj
+
+Type          Contextual
+Name          Short carrier insertion
+Namecode      16010
+Setting       Automatic insertion
+Settingcode   16011
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+zwj	zwj
+dummy	tengwardigitMark.shift4
+
+           EOT  OOB  DEL  EOL  zwj  dummy
+StartText  1    1    1    1    2    1
+StartLine  1    1    1    1    2    1
+sawzwj     1    1    3    1    2    4
+
+  GoTo      Mark? Advance? SubstMark SubstCurrent
+1 StartText no    yes      none      none
+2 sawzwj    yes   yes      none      none
+3 sawzwj    no    yes      none      none
+4 StartText no    yes      delete    delete
+
+delete
+	tengwardigitMark.shift4 DEL
+	zwj DEL
+
+
+// --------------------------------------------------------------
+// Automatic short carrier : Change dummy tengwardigitMark.shift4 to real shortCarrier
+
+Type           Noncontextual
+Name           Short carrier insertion
+Namecode       16010
+Setting        Automatic insertion
+Settingcode    16011
+Default        no
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+	tengwardigitMark.shift4 shortCarrier
+
 
 // --------------------------------------------------------------
 //  descwtengwa {

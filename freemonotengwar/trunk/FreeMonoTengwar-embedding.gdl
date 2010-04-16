@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar-embedding
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-03-12
+// Version: 2010-04-16
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -31,7 +31,7 @@ table(feature)
 endtable;
 
 table(glyph)
-  ZWJ = (ps("afii301"));
+  ZWJ = (ps("zwj"));
   aha = (ps("aha"));
   aha_tehtaX = (ps("aha_tehtaX"));
   aha_tinco = (ps("aha_tinco"));
@@ -110,15 +110,15 @@ table(glyph)
   tehtaB = (ps("tehtaB"));
   tehtaBreve = (ps("tehtaBreve"));
   tehtaDotInside = (ps("tehtaDotInside"));
-  tehtaDoubleGrave = (ps("tehtaDoubleGrave"));
+  tehtaGrave_tehtaGrave = (ps("tehtaGrave_tehtaGrave"));
   tehtaE = (ps("tehtaE"));
   tehtaEB = (ps("tehtaEB"));
   tehtaEE = (ps("tehtaEE"));
   tehtaEEB = (ps("tehtaEEB"));
   tehtaGrave = (ps("tehtaGrave"));
   tehtaI = (ps("tehtaI"));
-  tehtaI_tehtaO = (ps("tehtaI_tehtaO"));
-  tehtaI_tehtaU = (ps("tehtaI_tehtaU"));
+  tehtaO_tehtaI = (ps("tehtaO_tehtaI"));
+  tehtaU_tehtaI = (ps("tehtaU_tehtaI"));
   tehtaIB = (ps("tehtaIB"));
   tehtaN = (ps("tehtaN"));
   tehtaO = (ps("tehtaO"));
@@ -135,13 +135,13 @@ table(glyph)
   tehtaW_tehtaA = (ps("tehtaW_tehtaA"));
   tehtaW_tehtaAE = (ps("tehtaW_tehtaAE"));
   tehtaW_tehtaBreve = (ps("tehtaW_tehtaBreve"));
-  tehtaW_tehtaDoubleGrave = (ps("tehtaW_tehtaDoubleGrave"));
+  tehtaW_tehtaGrave_tehtaGrave = (ps("tehtaW_tehtaGrave_tehtaGrave"));
   tehtaW_tehtaE = (ps("tehtaW_tehtaE"));
   tehtaW_tehtaEE = (ps("tehtaW_tehtaEE"));
   tehtaW_tehtaGrave = (ps("tehtaW_tehtaGrave"));
   tehtaW_tehtaI = (ps("tehtaW_tehtaI"));
-  tehtaW_tehtaI_tehtaO = (ps("tehtaW_tehtaI_tehtaO"));
-  tehtaW_tehtaI_tehtaU = (ps("tehtaW_tehtaI_tehtaU"));
+  tehtaW_tehtaO_tehtaI = (ps("tehtaW_tehtaO_tehtaI"));
+  tehtaW_tehtaU_tehtaI = (ps("tehtaW_tehtaU_tehtaI"));
   tehtaW_tehtaO = (ps("tehtaW_tehtaO"));
   tehtaW_tehtaOO = (ps("tehtaW_tehtaOO"));
   tehtaW_tehtaU = (ps("tehtaW_tehtaU"));
@@ -195,8 +195,8 @@ table(glyph)
   takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        pseudoCarrier);
   tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX);
 
-  Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaDoubleGrave, tehtaI_tehtaO, tehtaOO, tehtaI_tehtaU, tehtaUU);
-  OomaupW = (tehtaW_tehtaA, tehtaW_tehtaAE, tehtaW_tehtaBreve, tehtaW_tehtaE, tehtaW_tehtaGrave, tehtaW_tehtaI, tehtaW_tehtaO, tehtaW_tehtaU, tehtaW_tehtaY, tehtaW_tehtaYanta, tehtaW_tehtaEE, tehtaW_tehtaDoubleGrave, tehtaW_tehtaI_tehtaO, tehtaW_tehtaOO, tehtaW_tehtaI_tehtaU, tehtaW_tehtaUU);
+  Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaGrave_tehtaGrave, tehtaO_tehtaI, tehtaOO, tehtaU_tehtaI, tehtaUU);
+  OomaupW = (tehtaW_tehtaA, tehtaW_tehtaAE, tehtaW_tehtaBreve, tehtaW_tehtaE, tehtaW_tehtaGrave, tehtaW_tehtaI, tehtaW_tehtaO, tehtaW_tehtaU, tehtaW_tehtaY, tehtaW_tehtaYanta, tehtaW_tehtaEE, tehtaW_tehtaGrave_tehtaGrave, tehtaW_tehtaO_tehtaI, tehtaW_tehtaOO, tehtaW_tehtaU_tehtaI, tehtaW_tehtaUU);
   Doubler = (tehtaB, tehtaEEB);
   Oomadown = (tehtaAB, tehtaEB, tehtaIB, tehtaOB, tehtaUB, tehtaYB, tengwardigitMark);
 
@@ -237,11 +237,11 @@ table(substitution)
     tehtaEB tehtaEB > tehtaEEB:(1 2) _ ;
     tehtaO tehtaO > tehtaOO:(1 2) _ ;
     tehtaU tehtaU > tehtaUU:(1 2) _ ;
-    tehtaGrave tehtaGrave > tehtaDoubleGrave:(1 2) _ ;
-    tehtaI tehtaO > tehtaI_tehtaO:(1 2) _ ;
-    tehtaO tehtaI > tehtaI_tehtaO:(1 2) _ ;
-    tehtaU tehtaI > tehtaI_tehtaU:(1 2) _ ;
-    tehtaI tehtaU > tehtaI_tehtaU:(1 2) _ ;
+    tehtaGrave tehtaGrave > tehtaGrave_tehtaGrave:(1 2) _ ;
+    tehtaI tehtaO > tehtaO_tehtaI:(1 2) _ ;
+    tehtaO tehtaI > tehtaO_tehtaI:(1 2) _ ;
+    tehtaU tehtaI > tehtaU_tehtaI:(1 2) _ ;
+    tehtaI tehtaU > tehtaU_tehtaI:(1 2) _ ;
   endpass;
 
 
