@@ -1,6 +1,6 @@
 // Graphite Description Language file for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-02-19
+// Version: 2010-04-16
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -314,105 +314,105 @@ table(substitution)
   endpass;
 
 
-  // --------------------------------------------------------------
-  // Substitution table: Insertion of the pseudocarrier
-  pass(2)
-
-    if (insertcarrier)
-      _ > insertedcarrier:2 / _ TehtaChar ^ ;
-    endif;
-
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table: deletion of superfluous pseudocarriers
-
-  pass(3)
-    insertedcarrier > _ / AnyTengwa _ TehtaChar ;
-    insertedcarrier > insertedcarrierIntertehtar / TehtaChar _ TehtaChar ;
-  endpass;
-
-  pass(4)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Nasal _ Oomaup _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomaup _ Nasal _ ;
-    insertedcarrierIntertehtar > _ / Nasal _ Oomaup ;
-    insertedcarrierIntertehtar > _ / Oomaup _ Nasal ;
-  endpass;
-  pass(5)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasal _ ;
-  endpass;
-
-  pass(6)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Dotinside _ OomaupNasal AnyOomaupNasal _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasal AnyOomaupNasal _ Dotinside _ ;
-    insertedcarrierIntertehtar > _ / Dotinside _ OomaupNasal ;
-    insertedcarrierIntertehtar > _ / OomaupNasal _ Dotinside ;
-  endpass;
-  pass(7)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinside _ ;
-  endpass;
-
-  pass(8)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Doubler _ OomaupNasalDotinside AnyOomaupNasalDotinside _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinside AnyOomaupNasalDotinside _ Doubler _ ;
-    insertedcarrierIntertehtar > _ / Doubler _ OomaupNasalDotinside ;
-    insertedcarrierIntertehtar > _ / OomaupNasalDotinside _ Doubler ;
-  endpass;
-  pass(9)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoubler _ ;
-  endpass;
-
-  pass(10)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Sarince _ OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ Sarince _ ;
-    insertedcarrierIntertehtar > _ / Sarince _ OomaupNasalDotinsideDoubler ;
-    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoubler _ Sarince ;
-  endpass;
-  pass(11)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarince _ ;
-  endpass;
-
-  pass(12)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Follw _ OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ Follw _ ;
-    insertedcarrierIntertehtar > _ / Follw _ OomaupNasalDotinsideDoublerSarince ;
-    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarince _ Follw ;
-  endpass;
-  pass(13)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollw _ ;
-  endpass;
-
-  pass(14)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ Thinnas _ ;
-    insertedcarrierIntertehtar > _ / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw ;
-    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollw _ Thinnas ;
-  endpass;
-  pass(15)
-    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
-  endpass;
-
-  pass(16)
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
-    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown _ ;
-    insertedcarrierIntertehtar > _ / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas ;
-    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown ;
-  endpass;
-
-  pass(17)
-    insertedcarrierIntertehtar > insertedcarrier ;
-  endpass;
-
-
-  // --------------------------------------------------------------
-  // Substitution table: pseudocarriers suppression with ZWJ
-  pass(18)
-
-    ZWJ insertedcarrier > _ _ ;
-
-  endpass;
-
+//  // --------------------------------------------------------------
+//  // Substitution table: Insertion of the pseudocarrier
+//  pass(2)
+//
+//    if (insertcarrier)
+//      _ > insertedcarrier:2 / _ TehtaChar ^ ;
+//    endif;
+//
+//  endpass;
+//
+//
+//  // --------------------------------------------------------------
+//  // Substitution table: deletion of superfluous pseudocarriers
+//
+//  pass(3)
+//    insertedcarrier > _ / AnyTengwa _ TehtaChar ;
+//    insertedcarrier > insertedcarrierIntertehtar / TehtaChar _ TehtaChar ;
+//  endpass;
+//
+//  pass(4)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Nasal _ Oomaup _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomaup _ Nasal _ ;
+//    insertedcarrierIntertehtar > _ / Nasal _ Oomaup ;
+//    insertedcarrierIntertehtar > _ / Oomaup _ Nasal ;
+//  endpass;
+//  pass(5)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasal _ ;
+//  endpass;
+//
+//  pass(6)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Dotinside _ OomaupNasal AnyOomaupNasal _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasal AnyOomaupNasal _ Dotinside _ ;
+//    insertedcarrierIntertehtar > _ / Dotinside _ OomaupNasal ;
+//    insertedcarrierIntertehtar > _ / OomaupNasal _ Dotinside ;
+//  endpass;
+//  pass(7)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinside _ ;
+//  endpass;
+//
+//  pass(8)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Doubler _ OomaupNasalDotinside AnyOomaupNasalDotinside _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinside AnyOomaupNasalDotinside _ Doubler _ ;
+//    insertedcarrierIntertehtar > _ / Doubler _ OomaupNasalDotinside ;
+//    insertedcarrierIntertehtar > _ / OomaupNasalDotinside _ Doubler ;
+//  endpass;
+//  pass(9)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoubler _ ;
+//  endpass;
+//
+//  pass(10)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Sarince _ OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoubler AnyOomaupNasalDotinsideDoubler _ Sarince _ ;
+//    insertedcarrierIntertehtar > _ / Sarince _ OomaupNasalDotinsideDoubler ;
+//    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoubler _ Sarince ;
+//  endpass;
+//  pass(11)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarince _ ;
+//  endpass;
+//
+//  pass(12)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Follw _ OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarince AnyOomaupNasalDotinsideDoublerSarince _ Follw _ ;
+//    insertedcarrierIntertehtar > _ / Follw _ OomaupNasalDotinsideDoublerSarince ;
+//    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarince _ Follw ;
+//  endpass;
+//  pass(13)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollw _ ;
+//  endpass;
+//
+//  pass(14)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollw AnyOomaupNasalDotinsideDoublerSarinceFollw _ Thinnas _ ;
+//    insertedcarrierIntertehtar > _ / Thinnas _ OomaupNasalDotinsideDoublerSarinceFollw ;
+//    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollw _ Thinnas ;
+//  endpass;
+//  pass(15)
+//    insertedcarrier > insertedcarrierIntertehtar / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
+//  endpass;
+//
+//  pass(16)
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ ;
+//    insertedcarrierIntertehtar insertedcarrierIntertehtar > _ insertedcarrier / OomaupNasalDotinsideDoublerSarinceFollwThinnas AnyOomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown _ ;
+//    insertedcarrierIntertehtar > _ / Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas ;
+//    insertedcarrierIntertehtar > _ / OomaupNasalDotinsideDoublerSarinceFollwThinnas _ Oomadown ;
+//  endpass;
+//
+//  pass(17)
+//    insertedcarrierIntertehtar > insertedcarrier ;
+//  endpass;
+//
+//
+//  // --------------------------------------------------------------
+//  // Substitution table: pseudocarriers suppression with ZWJ
+//  pass(18)
+//
+//    ZWJ insertedcarrier > _ _ ;
+//
+//  endpass;
+//
 
   // --------------------------------------------------------------
   // Substitution table: Switches
