@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-04-16
+// Version: 2010-05-03
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -212,27 +212,19 @@ table(glyph)
   AnyTehtaORzwj = ( ZWJ, AnyTehta );
   anysign = ( AnyTengwa, AnyTehtaORzwj );
 
-  OomaupNasal = ( Oomaup, Nasal );
-  OomaupNasalDotinside = ( Oomaup, Nasal, Dotinside );
-  OomaupNasalDotinsideDoubler = ( Oomaup, Nasal, Dotinside, Doubler );
-  OomaupNasalDotinsideDoublerSarince = ( Oomaup, Nasal, Dotinside, Doubler, Sarince );
-  OomaupNasalDotinsideDoublerSarinceFollw = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw );
-  OomaupNasalDotinsideDoublerSarinceFollwThinnas = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas );
+  followsOomaup = ( Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
+  followsNasal =         ( Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
+  followsDotinside =                ( Doubler, Sarince, Follw, Thinnas, Oomadown );
+  followsDoubler =                           ( Sarince, Follw, Thinnas, Oomadown );
+  followsSarince =                                    ( Follw, Thinnas, Oomadown );
+  followsFollw =                                             ( Thinnas, Oomadown );
 
-  tehtaBUToomaup = ( Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
-  tehtaBUTnasal = ( Oomaup, Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
-  tehtaBUTdotinside = ( Oomaup, Nasal, Doubler, Sarince, Follw, Thinnas, Oomadown );
-  tehtaBUTdoubler = ( Oomaup, Nasal, Dotinside, Sarince, Follw, Thinnas, Oomadown );
-  tehtaBUTsarince = ( Oomaup, Nasal, Dotinside, Doubler, Follw, Thinnas, Oomadown );
-  tehtaBUTfollw = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Thinnas, Oomadown );
-  tehtaBUTthinnas = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Oomadown );
-  tehtaBUToomadown = ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas );
-
-  DotinsideDoublerSarinceFollwThinnasOomadown = ( Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
-  DoublerSarinceFollwThinnasOomadown = ( Doubler, Sarince, Follw, Thinnas, Oomadown );
-  SarinceFollwThinnasOomadown = ( Sarince, Follw, Thinnas, Oomadown );
-  FollwThinnasOomadown = ( Follw, Thinnas, Oomadown );
-  ThinnasOomadown = ( Thinnas, Oomadown );
+  precedesDotinside = ( Oomaup, Nasal );
+  precedesDoubler =   ( Oomaup, Nasal, Dotinside );
+  precedesSarince =   ( Oomaup, Nasal, Dotinside, Doubler );
+  precedesFollw =     ( Oomaup, Nasal, Dotinside, Doubler, Sarince );
+  precedesThinnas =   ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw );
+  precedesOomadown =  ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas );
 
 
   OomaupORw = ( Oomaup, Follw );
@@ -245,21 +237,14 @@ endtable;
 #define AnyTehtar [[[[[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
 #define AnyTehtarORzwj [[[[[[[AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?
 
-#define AnytehtaBUToomaup [[[[[[[tehtaBUToomaup]?tehtaBUToomaup]?tehtaBUToomaup]?tehtaBUToomaup]?tehtaBUToomaup]?tehtaBUToomaup]?tehtaBUToomaup]?
-#define AnytehtaBUTnasal [[[[[[[tehtaBUTnasal]?tehtaBUTnasal]?tehtaBUTnasal]?tehtaBUTnasal]?tehtaBUTnasal]?tehtaBUTnasal]?tehtaBUTnasal]?
-#define AnytehtaBUTdotinside [[[[[[[tehtaBUTdotinside]?tehtaBUTdotinside]?tehtaBUTdotinside]?tehtaBUTdotinside]?tehtaBUTdotinside]?tehtaBUTdotinside]?tehtaBUTdotinside]?
-#define AnytehtaBUTdoubler [[[[[[[tehtaBUTdoubler]?tehtaBUTdoubler]?tehtaBUTdoubler]?tehtaBUTdoubler]?tehtaBUTdoubler]?tehtaBUTdoubler]?tehtaBUTdoubler]?
-#define AnytehtaBUTsarince [[[[[[[tehtaBUTsarince]?tehtaBUTsarince]?tehtaBUTsarince]?tehtaBUTsarince]?tehtaBUTsarince]?tehtaBUTsarince]?tehtaBUTsarince]?
-#define AnytehtaBUTfollw [[[[[[[tehtaBUTfollw]?tehtaBUTfollw]?tehtaBUTfollw]?tehtaBUTfollw]?tehtaBUTfollw]?tehtaBUTfollw]?tehtaBUTfollw]?
-#define AnytehtaBUTthinnas [[[[[[[tehtaBUTthinnas]?tehtaBUTthinnas]?tehtaBUTthinnas]?tehtaBUTthinnas]?tehtaBUTthinnas]?tehtaBUTthinnas]?tehtaBUTthinnas]?
-#define AnytehtaBUToomadown [[[[[[[tehtaBUToomadown]?tehtaBUToomadown]?tehtaBUToomadown]?tehtaBUToomadown]?tehtaBUToomadown]?tehtaBUToomadown]?tehtaBUToomadown]?
+#define AnyFollowsOomaup [[[[[[[followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?
+#define AnyFollowsNasal [[[[[[[followsNasal]?followsNasal]?followsNasal]?followsNasal]?followsNasal]?followsNasal]?followsNasal]?
+#define AnyFollowsDotinside [[[[[[[followsDotinside]?followsDotinside]?followsDotinside]?followsDotinside]?followsDotinside]?followsDotinside]?followsDotinside]?
+#define AnyFollowsDoubler [[[[[[[followsDoubler]?followsDoubler]?followsDoubler]?followsDoubler]?followsDoubler]?followsDoubler]?followsDoubler]?
+#define AnyFollowsSarince [[[[[[[followsSarince]?followsSarince]?followsSarince]?followsSarince]?followsSarince]?followsSarince]?followsSarince]?
+#define AnyFollowsFollw [[[[[[[followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?
+#define AnyFollowsThinnas [[[[[[[Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?
 
-#define AnyDotinsideDoublerSarinceFollwThinnasOomadown [[[[[[DotinsideDoublerSarinceFollwThinnasOomadown]?DotinsideDoublerSarinceFollwThinnasOomadown]?DotinsideDoublerSarinceFollwThinnasOomadown]?DotinsideDoublerSarinceFollwThinnasOomadown]?DotinsideDoublerSarinceFollwThinnasOomadown]?DotinsideDoublerSarinceFollwThinnasOomadown]?
-#define AnyDoublerSarinceFollwThinnasOomadown [[[[[DoublerSarinceFollwThinnasOomadown]?DoublerSarinceFollwThinnasOomadown]?DoublerSarinceFollwThinnasOomadown]?DoublerSarinceFollwThinnasOomadown]?DoublerSarinceFollwThinnasOomadown]?
-#define AnySarinceFollwThinnasOomadown [[[[SarinceFollwThinnasOomadown]?SarinceFollwThinnasOomadown]?SarinceFollwThinnasOomadown]?SarinceFollwThinnasOomadown]?
-#define AnyFollwThinnasOomadown [[[FollwThinnasOomadown]?FollwThinnasOomadown]?FollwThinnasOomadown]?
-#define AnyThinnasOomadown [[ThinnasOomadown]?ThinnasOomadown]?
-#define AnyOomadown [Oomadown]?
 
 table(substitution)
   pass(1)
@@ -292,7 +277,7 @@ table(substitution)
   pass(2)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Oomaup AnytehtaBUToomaup _ Oomaup ;
+      _ > insertedcarrier:3 / AnyTehta _ Oomaup ;
     endif;
 
   endpass;
@@ -303,14 +288,14 @@ table(substitution)
   pass(3)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Nasal AnytehtaBUTnasal _ Nasal ;
+      _ > insertedcarrier:3 / followsOomaup _ Nasal ;
     endif;
 
   endpass;
   pass(4)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Nasal AnyDotinsideDoublerSarinceFollwThinnasOomadown _ Oomaup ;
+      insertedcarrier > _ / Nasal AnyFollowsNasal _ Oomaup ;
     endif;
 
   endpass;
@@ -321,14 +306,14 @@ table(substitution)
   pass(5)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Dotinside AnytehtaBUTdotinside _ Dotinside ;
+      _ > insertedcarrier:3 / followsNasal _ Dotinside ;
     endif;
 
   endpass;
   pass(6)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Dotinside AnyDoublerSarinceFollwThinnasOomadown _ OomaupNasal ;
+      insertedcarrier > _ / Dotinside AnyFollowsDotinside _ precedesDotinside ;
     endif;
 
   endpass;
@@ -339,14 +324,14 @@ table(substitution)
   pass(7)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Doubler AnytehtaBUTdoubler _ Doubler ;
+      _ > insertedcarrier:3 / followsDotinside _ Doubler ;
     endif;
 
   endpass;
   pass(8)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Doubler AnySarinceFollwThinnasOomadown _ OomaupNasalDotinside ;
+      insertedcarrier > _ / Doubler AnyFollowsDoubler _ precedesDoubler ;
     endif;
 
   endpass;
@@ -357,14 +342,14 @@ table(substitution)
   pass(9)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Sarince AnytehtaBUTsarince _ Sarince ;
+      _ > insertedcarrier:3 / followsDoubler _ Sarince ;
     endif;
 
   endpass;
   pass(10)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Sarince AnyFollwThinnasOomadown _ OomaupNasalDotinsideDoubler ;
+      insertedcarrier > _ / Sarince AnyFollowsSarince _ precedesSarince ;
     endif;
 
   endpass;
@@ -375,14 +360,14 @@ table(substitution)
   pass(11)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Follw AnytehtaBUTfollw _ Follw ;
+      _ > insertedcarrier:3 / followsSarince _ Follw ;
     endif;
 
   endpass;
   pass(12)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Follw AnyThinnasOomadown _ OomaupNasalDotinsideDoublerSarince ;
+      insertedcarrier > _ / Follw AnyFollowsFollw _ precedesFollw ;
     endif;
 
   endpass;
@@ -393,14 +378,14 @@ table(substitution)
   pass(13)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Thinnas AnytehtaBUTthinnas _ Thinnas ;
+      _ > insertedcarrier:3 / followsFollw _ Thinnas ;
     endif;
 
   endpass;
   pass(14)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Thinnas AnyOomadown _ OomaupNasalDotinsideDoublerSarinceFollw ;
+      insertedcarrier > _ / Thinnas AnyFollowsThinnas _ precedesThinnas ;
     endif;
 
   endpass;
@@ -411,14 +396,14 @@ table(substitution)
   pass(15)
 
     if (insertcarrier)
-      _ > insertedcarrier:10 / Oomadown AnytehtaBUToomadown _ Oomadown ;
+      _ > insertedcarrier:3 / Oomadown _ Oomadown ;
     endif;
 
   endpass;
   pass(16)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Oomadown _ OomaupNasalDotinsideDoublerSarinceFollwThinnas ;
+      insertedcarrier > _ / Oomadown _ precedesOomadown ;
     endif;
 
   endpass;
@@ -449,6 +434,8 @@ table(substitution)
   // Substitution table: combining Follw
   pass(19)
 
+    insertedcarrier > shortCarrier ;
+    insertedcarrierIntertehtar > shortCarrier ;
     Follw > tehtaW_alt / _ AnyTehtar OomaupORw ;
     Follw > tehtaW_alt / OomaupORw AnyTehtar _ ;
 

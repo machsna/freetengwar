@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-04-16
+// Version: 2010-05-03
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -80,8 +80,8 @@ other	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -109,11 +109,7 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaN
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaDotInside
+other	tehtaDotInside
 +	tehtaB tehtaEEB
 +	tehtaX
 +	tehtaW
@@ -121,8 +117,8 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -159,19 +155,17 @@ other	tehtaDotInside
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -191,20 +185,15 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaDotInside
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaB tehtaEEB
+other	tehtaB tehtaEEB
 +	tehtaX
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -241,19 +230,17 @@ other	tehtaB tehtaEEB
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -273,20 +260,14 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaB tehtaEEB
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaDotInside
-+	tehtaX
+other	tehtaX
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -323,19 +304,17 @@ other	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -355,20 +334,13 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaX
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaDotInside
-+	tehtaB tehtaEEB
-+	tehtaW
+other	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -405,19 +377,17 @@ other	tehtaW
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -437,20 +407,12 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaW
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaDotInside
-+	tehtaB tehtaEEB
-+	tehtaX
-+	tehtaThinnas
+other	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -487,19 +449,17 @@ other	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -519,20 +479,11 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaThinnas
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaDotInside
-+	tehtaB tehtaEEB
-+	tehtaX
-+	tehtaW
-+	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+other	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
+StartText  1    1    1    1    2   2
+StartLine  1    1    1    1    2   2
 sawit      1    1    2    1    3   2
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
@@ -569,19 +520,17 @@ previous	tehtaA tehtaAE tehtaBreve
 other	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
            EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    2      1   1         1
-StartLine  1    1    1    1    2      1   1         1
-sawdummy   1    1    2    1    2      3   1         1
-dummyIT    1    1    3    1    4      1   3         3
-dumITdum   1    1    5    1    2      1   6         1
+StartText  1    1    1    1    1      2   1         1
+StartLine  1    1    1    1    1      2   1         1
+sawit      1    1    2    1    3      2   1         2
+itNdummy   1    1    4    1    1      2   5         1
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
@@ -601,21 +550,11 @@ Forward        yes
 Exclusive      yes
 
 it	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-other	tehtaA tehtaAE tehtaBreve
-+	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
-+	tehtaN
-+	tehtaDotInside
-+	tehtaB tehtaEEB
-+	tehtaX
-+	tehtaW
-+	tehtaThinnas
 
-           EOT  OOB  DEL  EOL  it  other
-StartText  1    1    1    1    2   1
-StartLine  1    1    1    1    2   1
-sawit      1    1    2    1    3   2
+           EOT  OOB  DEL  EOL  it
+StartText  1    1    1    1    2
+StartLine  1    1    1    1    2
+sawit      1    1    2    1    3
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
@@ -651,19 +590,17 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 
            EOT  OOB  DEL  EOL  dummy  it  previous
-StartText  1    1    1    1    2      1   1
-StartLine  1    1    1    1    2      1   1
-sawdummy   1    1    2    1    2      3   1
-dummyIT    1    1    3    1    4      1   3
-dumITdum   1    1    5    1    2      1   6
+StartText  1    1    1    1    1      2   1
+StartLine  1    1    1    1    1      2   1
+sawit      1    1    2    1    3      2   1
+itNdummy   1    1    4    1    1      2   5
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
-2 sawdummy  no    yes      none      none
-3 dummyIT   no    yes      none      none
-4 dumITdum  yes   yes      none      none
-5 dumITdum  no    yes      none      none
-6 StartText no    yes      delete    none
+2 sawit     no    yes      none      none
+3 itNdummy  yes   yes      none      none
+4 itNdummy  no    yes      none      none
+5 StartText no    yes      delete    none
 
 delete
 	shortCarrier_tehtaX DEL
