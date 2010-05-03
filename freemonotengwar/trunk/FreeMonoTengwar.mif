@@ -731,7 +731,6 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	zwj
 
              EOT  OOB  DEL  EOL  tinco tehtaX tehtar
 StartText    1    1    1    1    2     1      1
@@ -802,7 +801,6 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	zwj
 
              EOT  OOB  DEL  EOL  lambe tehtaB tehtar
 StartText    1    1    1    1    2     1      1
@@ -850,7 +848,6 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tengwardigitMark
-+	zwj
 
              EOT  OOB  DEL  EOL  lambe tehtaIB tehtaYB tehtar
 StartText    1    1    1    1    2     1       1       1
@@ -899,7 +896,6 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	zwj
 
             EOT  OOB  DEL  EOL  thinnas tehtaIB tehtar
 StartText   1    1    1    1    2       3       1
@@ -948,7 +944,6 @@ other	tehtaB tehtaEEB
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	zwj
 
              EOT  OOB  DEL  EOL  oomaUPtehtar tehtaW other
 StartText    1    1    1    1    2            3      1
@@ -961,28 +956,9 @@ saww         1    1    6    1    7            7      6
 2  sawoomaup    yes   yes      none      none
 3  saww         yes   yes      none      none
 4  sawoomaup    no    yes      none      none
-5  StartText    no    yes      replace   delete
+5  StartText    no    yes      none      replace
 6  saww         no    yes      none      none
-7  StartText    no    yes      delete    replace
+7  StartText    no    yes      replace   none
 
 replace
-	tehtaA tehtaW_tehtaA
-	tehtaAE tehtaW_tehtaAE
-	tehtaBreve tehtaW_tehtaBreve
-	tehtaE tehtaW_tehtaE
-	tehtaGrave tehtaW_tehtaGrave
-	tehtaI tehtaW_tehtaI
-	tehtaO tehtaW_tehtaO
-	tehtaU tehtaW_tehtaU
-	tehtaY tehtaW_tehtaY
-	tehtaYanta tehtaW_tehtaYanta
-	tehtaEE tehtaW_tehtaEE
-	tehtaGrave_tehtaGrave tehtaW_tehtaGrave_tehtaGrave
-	tehtaO_tehtaI tehtaW_tehtaO_tehtaI
-	tehtaOO tehtaW_tehtaOO
-	tehtaU_tehtaI tehtaW_tehtaU_tehtaI
-	tehtaUU tehtaW_tehtaUU
-	tehtaW tehtaW_tehtaW
-
-delete
-	tehtaW DEL
+	tehtaW tehtaW.alt
