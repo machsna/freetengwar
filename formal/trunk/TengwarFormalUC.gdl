@@ -1,6 +1,6 @@
 // Graphite Description Language file for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-05-03
+// Version: 2010-05-14
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -251,6 +251,13 @@ table(glyph)
   precedesThinnas =   ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw );
   precedesOomadown =  ( Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas );
 
+  notNasal = ( Oomaup, followsNasal );
+  notDotinside = ( precedesDotinside, followsDotinside );
+  notDoubler = ( precedesDoubler, followsDoubler );
+  notSarince = ( precedesSarince, followsSarince );
+  notFollw = ( precedesFollw, followsFollw );
+  notThinnas = ( precedesThinnas, Oomadown );
+
 
   OomaupTehtaW = ( Oomaup, tehtaW );
   OomaupFollW = ( Oomaup, Follw );
@@ -300,6 +307,15 @@ endtable;
 #define AnyFollowsFollw [[[[[[[followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?followsFollw]?
 #define AnyFollowsThinnas [[[[[[[Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?Oomadown]?
 
+#define AnyNotOomaup [[[[[[[followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?followsOomaup]?
+#define AnyNotNasal [[[[[[[notNasal]?notNasal]?notNasal]?notNasal]?notNasal]?notNasal]?notNasal]?
+#define AnyNotDotinside [[[[[[[notDotinside]?notDotinside]?notDotinside]?notDotinside]?notDotinside]?notDotinside]?notDotinside]?
+#define AnyNotDoubler [[[[[[[notDoubler]?notDoubler]?notDoubler]?notDoubler]?notDoubler]?notDoubler]?notDoubler]?
+#define AnyNotSarince [[[[[[[notSarince]?notSarince]?notSarince]?notSarince]?notSarince]?notSarince]?notSarince]?
+#define AnyNotFollw [[[[[[[notFollw]?notFollw]?notFollw]?notFollw]?notFollw]?notFollw]?notFollw]?
+#define AnyNotThinnas [[[[[[[notThinnas]?notThinnas]?notThinnas]?notThinnas]?notThinnas]?notThinnas]?notThinnas]?
+#define AnyNotOomadown [[[[[[[precedesOomadown]?precedesOomadown]?precedesOomadown]?precedesOomadown]?precedesOomadown]?precedesOomadown]?precedesOomadown]?
+
 
 table(substitution)
 
@@ -329,7 +345,7 @@ table(substitution)
   pass(2)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / AnyTehta _ Oomaup ;
+      _ > insertedcarrier:10 / Oomaup AnyNotOomaup _ Oomaup ;
     endif;
 
   endpass;
@@ -340,14 +356,15 @@ table(substitution)
   pass(3)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsOomaup _ Nasal ;
+      _ > insertedcarrier:10 / Nasal AnyNotNasal _ Nasal ;
     endif;
 
   endpass;
   pass(4)
 
     if (insertcarrier)
-      insertedcarrier > _ / Nasal AnyFollowsNasal _ Oomaup ;
+      insertedcarrier > _ / insertedcarrier Nasal AnyFollowsNasal _ Oomaup ;
+      _ > insertedcarrier:10 / Nasal AnyNotNasal _ Nasal ;
     endif;
 
   endpass;
@@ -358,14 +375,15 @@ table(substitution)
   pass(5)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsNasal _ Dotinside ;
+      _ > insertedcarrier:10 / Dotinside AnyNotDotinside _ Dotinside ;
     endif;
 
   endpass;
   pass(6)
 
     if (insertcarrier)
-      insertedcarrier > _ / Dotinside AnyFollowsDotinside _ precedesDotinside ;
+      insertedcarrier > _ / insertedcarrier Dotinside AnyFollowsDotinside _ precedesDotinside ;
+      _ > insertedcarrier:10 / Dotinside AnyNotDotinside _ Dotinside ;
     endif;
 
   endpass;
@@ -376,14 +394,15 @@ table(substitution)
   pass(7)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsDotinside _ Doubler ;
+      _ > insertedcarrier:10 / Doubler AnyNotDoubler _ Doubler ;
     endif;
 
   endpass;
   pass(8)
 
     if (insertcarrier)
-      insertedcarrier > _ / Doubler AnyFollowsDoubler _ precedesDoubler ;
+      insertedcarrier > _ / insertedcarrier Doubler AnyFollowsDoubler _ precedesDoubler ;
+      _ > insertedcarrier:10 / Doubler AnyNotDoubler _ Doubler ;
     endif;
 
   endpass;
@@ -394,14 +413,15 @@ table(substitution)
   pass(9)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsDoubler _ Sarince ;
+      _ > insertedcarrier:10 / Sarince AnyNotSarince _ Sarince ;
     endif;
 
   endpass;
   pass(10)
 
     if (insertcarrier)
-      insertedcarrier > _ / Sarince AnyFollowsSarince _ precedesSarince ;
+      insertedcarrier > _ / insertedcarrier Sarince AnyFollowsSarince _ precedesSarince ;
+      _ > insertedcarrier:10 / Sarince AnyNotSarince _ Sarince ;
     endif;
 
   endpass;
@@ -412,14 +432,15 @@ table(substitution)
   pass(11)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsSarince _ Follw ;
+      _ > insertedcarrier:10 / Follw AnyNotFollw _ Follw ;
     endif;
 
   endpass;
   pass(12)
 
     if (insertcarrier)
-      insertedcarrier > _ / Follw AnyFollowsFollw _ precedesFollw ;
+      insertedcarrier > _ / insertedcarrier Follw AnyFollowsFollw _ precedesFollw ;
+      _ > insertedcarrier:10 / Follw AnyNotFollw _ Follw ;
     endif;
 
   endpass;
@@ -430,14 +451,15 @@ table(substitution)
   pass(13)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / followsFollw _ Thinnas ;
+      _ > insertedcarrier:10 / Thinnas AnyNotThinnas _ Thinnas ;
     endif;
 
   endpass;
   pass(14)
 
     if (insertcarrier)
-      insertedcarrier > _ / Thinnas AnyFollowsThinnas _ precedesThinnas ;
+      insertedcarrier > _ / insertedcarrier Thinnas AnyFollowsThinnas _ precedesThinnas ;
+      _ > insertedcarrier:10 / Thinnas AnyNotThinnas _ Thinnas ;
     endif;
 
   endpass;
@@ -448,14 +470,15 @@ table(substitution)
   pass(15)
 
     if (insertcarrier)
-      _ > insertedcarrier:3 / Oomadown _ Oomadown ;
+      _ > insertedcarrier:10 / Oomadown AnyNotOomadown _ Oomadown ;
     endif;
 
   endpass;
   pass(16)
 
     if (insertcarrier)
-      insertedcarrier > _ / Oomadown _ precedesOomadown ;
+      insertedcarrier > _ / insertedcarrier Oomadown _ precedesOomadown ;
+      _ > insertedcarrier:10 / Oomadown AnyNotOomadown _ Oomadown ;
     endif;
 
   endpass;
