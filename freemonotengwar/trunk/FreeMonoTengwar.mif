@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-05-14
+// Version: 2010-05-28
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -114,6 +114,7 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
 +	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
 +	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
+null	.null
 other	tehtaDotInside
 +	tehtaB tehtaEEB
 +	tehtaX
@@ -121,12 +122,12 @@ other	tehtaDotInside
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -137,7 +138,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -160,6 +161,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -197,18 +199,19 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
 +	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
 +	tehtaN
+null	.null
 other	tehtaB tehtaEEB
 +	tehtaX
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -219,7 +222,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -242,6 +245,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -280,17 +284,18 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
 +	tehtaN
 +	tehtaDotInside
+null	.null
 other	tehtaX
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -301,7 +306,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -324,6 +329,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -363,16 +369,17 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaDotInside
 +	tehtaB tehtaEEB
+null	.null
 other	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -383,7 +390,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -406,6 +413,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaW
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -446,15 +454,16 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaDotInside
 +	tehtaB tehtaEEB
 +	tehtaX
+null	.null
 other	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -465,7 +474,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -488,6 +497,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 +	tehtaThinnas
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -529,14 +539,15 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaB tehtaEEB
 +	tehtaX
 +	tehtaW
+null	.null
 other	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -547,7 +558,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -570,6 +581,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 +	tehtaW
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -612,13 +624,14 @@ previous	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 +	tehtaW
 +	tehtaThinnas
+null	.null
 
-           EOT  OOB  DEL  EOL  dummy  it  previous  other
-StartText  1    1    1    1    1      2   1         1
-StartLine  1    1    1    1    1      2   1         1
-it1        1    1    2    1    1      3   2         2
-it2        1    1    3    1    4      3   1         3
-dummy      1    1    5    1    1      2   6         1
+           EOT  OOB  DEL  EOL  dummy  it  previous  null  other
+StartText  1    1    1    1    1      2   1         1     1
+StartLine  1    1    1    1    1      2   1         1     1
+it1        1    1    2    1    1      3   2         2     2
+it2        1    1    3    1    4      3   1         3     3
+dummy      1    1    5    1    1      2   6         5     1
 
   GoTo       Mark? Advance? SubstMark SubstCurrent
 1 StartText  no    yes      none      none
@@ -629,7 +642,7 @@ dummy      1    1    5    1    1      2   6         1
 6 it1        no    yes      delete    none
 
 delete
-	alda_tehtaB DEL
+	alda_tehtaB .null
 
 Type           Insertion
 Name           Short carrier insertion
@@ -652,6 +665,7 @@ other	tehtaA tehtaAE tehtaBreve
 +	tehtaX
 +	tehtaW
 +	tehtaThinnas
++	.null
 
            EOT  OOB  DEL  EOL  it  other
 StartText  1    1    1    1    2   1
@@ -704,11 +718,12 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	aha_tinco hwesta_tinco silme_aha
 +	tehtaS
 +	alda_tehtaB
+null	.null
 
-           EOT  OOB  DEL  EOL  tehtar  tengwar
-StartText  1    1    1    1    2       3
-StartLine  1    1    1    1    2       3
-sawsigns   1    1    3    1    3       3
+           EOT  OOB  DEL  EOL  tehtar  tengwar  null
+StartText  1    1    1    1    2       3        1
+StartLine  1    1    1    1    2       3        1
+sawsigns   1    1    3    1    3       3        3
 
    GoTo       Mark? Advance? InsertMark  InsertCurrent
 1  StartText  no    yes      none        none
@@ -736,11 +751,12 @@ Exclusive     yes
 
 zwj	zwj
 dummy	alda_tehtaB
+null	.null
 
-           EOT  OOB  DEL  EOL  zwj  dummy
-StartText  1    1    1    1    2    1
-StartLine  1    1    1    1    2    1
-sawzwj     1    1    3    1    2    4
+           EOT  OOB  DEL  EOL  zwj  dummy  null
+StartText  1    1    1    1    2    1      1
+StartLine  1    1    1    1    2    1      1
+sawzwj     1    1    3    1    2    4      3
 
   GoTo      Mark? Advance? SubstMark SubstCurrent
 1 StartText no    yes      none      none
@@ -749,8 +765,8 @@ sawzwj     1    1    3    1    2    4
 4 StartText no    yes      delete    delete
 
 delete
-	alda_tehtaB DEL
-	zwj DEL
+	alda_tehtaB .null
+	zwj .null
 
 
 // --------------------------------------------------------------
@@ -794,6 +810,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
              EOT  OOB  DEL  EOL  tinco tehtaX tehtar
 StartText    1    1    1    1    2     1      1
@@ -836,7 +853,7 @@ replace
 	shortCarrier shortCarrier_tehtaX
 
 delete
-	tehtaX DEL
+	tehtaX .null
 
 
 // --------------------------------------------------------------
@@ -864,6 +881,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
              EOT  OOB  DEL  EOL  lambe tehtaB tehtar
 StartText    1    1    1    1    2     1      1
@@ -882,7 +900,7 @@ replace
 	lambeN lambeN_tehtaB
 
 delete
-	tehtaB DEL
+	tehtaB .null
 
 
 // --------------------------------------------------------------
@@ -911,6 +929,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tengwardigitMark
++	.null
 
              EOT  OOB  DEL  EOL  lambe tehtaIB tehtaYB tehtar
 StartText    1    1    1    1    2     1       1       1
@@ -931,8 +950,8 @@ replaceYB
 	lambe lambe_tehtaYB
 
 delete
-	tehtaIB DEL
-	tehtaYB DEL
+	tehtaIB .null
+	tehtaYB .null
 
 
 // --------------------------------------------------------------
@@ -959,6 +978,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
             EOT  OOB  DEL  EOL  thinnas tehtaIB tehtar
 StartText   1    1    1    1    2       3       1
@@ -979,8 +999,8 @@ replace
 	tehtaIB tehtaThinnas_tehtaIB
 
 delete
-	tehtaThinnas DEL
-	tehtaIB DEL
+	tehtaThinnas .null
+	tehtaIB .null
 
 
 // --------------------------------------------------------------
@@ -1007,6 +1027,7 @@ other	tehtaB tehtaEEB
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	.null
 
              EOT  OOB  DEL  EOL  oomaUPtehtar tehtaW other
 StartText    1    1    1    1    2            3      1
