@@ -8,37 +8,34 @@
 \frenchspacing
 
 \font\formalGR="Tengwar Formal Unicode/GR" at 15pt
-\font\formalAAT="Tengwar Formal Unicode" at 15pt
-\font\formalGRinsert="Tengwar Formal Unicode/GR:212=1" at 15pt
-\font\formalAATinsert="Tengwar Formal Unicode:Short carrier insertion=Automatic insertion" at 15pt
+\font\formalAAT="Tengwar Formal Unicode/AAT" at 15pt
 \font\formalGRdescw="Tengwar Formal Unicode/GR:204=1" at 15pt
-\font\formalAATdescw="Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash" at 15pt
+\font\formalAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash" at 15pt
 \font\formalGRossefinal="Tengwar Formal Unicode/GR:207=1" at 15pt
-\font\formalAATossefinal="Tengwar Formal Unicode:Marked Osse=Word final" at 15pt
+\font\formalAATossefinal="Tengwar Formal Unicode/AAT:Marked Osse=Word final" at 15pt
 \font\formalGRossealways="Tengwar Formal Unicode/GR:207=2" at 15pt
-\font\formalAATossealways="Tengwar Formal Unicode:Marked Osse=Always" at 15pt
+\font\formalAATossealways="Tengwar Formal Unicode/AAT:Marked Osse=Always" at 15pt
 \font\formalGRtilde="Tengwar Formal Unicode/GR:209=1" at 15pt
-\font\formalAATtilde="Tengwar Formal Unicode:Bar style=Tilde" at 15pt
+\font\formalAATtilde="Tengwar Formal Unicode/AAT:Bar style=Tilde" at 15pt
 \font\formalGRcircumflex="Tengwar Formal Unicode/GR:210=1" at 15pt
-\font\formalAATcircumflex="Tengwar Formal Unicode:A-tehta style=Circumflex" at 15pt
+\font\formalAATcircumflex="Tengwar Formal Unicode/AAT:A-tehta style=Circumflex" at 15pt
 \font\formalGRswash="Tengwar Formal Unicode/GR:211=1" at 15pt
-\font\formalAATswash="Tengwar Formal Unicode:Sa-rince style=Swash" at 15pt
+\font\formalAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash" at 15pt
 \font\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt
 \font\tableGR="Tengwar Formal Unicode/GR"
-\font\tableAAT="Tengwar Formal Unicode"
+\font\tableAAT="Tengwar Formal Unicode/AAT"
 \font\tableGRdescw="Tengwar Formal Unicode/GR:204=1"
-\font\tableAATdescw="Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa"
+\font\tableAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa"
 \font\tableGRswash="Tengwar Formal Unicode/GR:211=1"
-\font\tableAATswash="Tengwar Formal Unicode:Sa-rince style=Swash"
+\font\tableAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash"
 \font\tableGRdescwswash="Tengwar Formal Unicode/GR:204=1;211=1"
-\font\tableAATdescwswash="Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash"
-%\setmainfont{Gentium}
+\font\tableAATdescwswash="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash"
 \setmonofont{FreeMonoTengwar}
 
 \begin{document}
 
 
-\section{Tengwar Formal Unicode: Graphite and AAT options}
+\section{Tengwar Formal Unicode/AAT: Graphite and AAT options}
 
 Here are samples of the different options. The options are specified by adding something to the font name in the \texttt{\char`\\font} command. The extended font names are all given in this document. A font specification will look like this:
 
@@ -63,7 +60,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGR  
 
-\noindent \texttt{"Tengwar Formal Unicode"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
 
 \formalAAT  
 
@@ -73,86 +70,9 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRdescw  
 
-\noindent \texttt{"Tengwar Formal Unicode:Character Alternatives=Descending W-tengwa;"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;"}
 
 \formalAATdescw  
-
-
-\subsection{Short carrier insertion}
-
-\subsubsection{Default}
-
-\noindent \texttt{"Tengwar Formal Unicode/GR"}
-
-\newcommand{\combinationsrow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
-
-\formalGR      \normalfont Tehtar stacking:
-\formalGR  
-
-%\begin{tabular}{ c | c c c c c c c c}
-%	\combinationsrow{} \hline
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%\end{tabular}
-
-\noindent \texttt{"Tengwar Formal Unicode"}
-
-\formalAAT      \normalfont Tehtar stacking:
-\formalAAT  
-
-%\begin{tabular}{ c | c c c c c c c c}
-%	\combinationsrow{} \hline
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%	\combinationsrow{}
-%\end{tabular}
-
-\subsubsection{Automatic insertion}
-
-\texttt{"Tengwar Formal Unicode/GR:212=1"}
-
-\formalGRinsert      \normalfont Tehtar stacking:
-\formalGRinsert  
-
-\begin{tabular}{ c | c c c c c c c c}
-	\combinationsrow{} \hline
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-\end{tabular}
-
-\noindent \texttt{"Tengwar Formal Unicode:Short carrier insertion=Automatic insertion;"}
-
-\formalAATinsert      \normalfont Tehtar stacking:
-\formalAATinsert  
-
-\begin{tabular}{ c | c c c c c c c c}
-	\combinationsrow{} \hline
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-	\combinationsrow{}
-\end{tabular}
 
 
 \subsection{Marked Osse}
@@ -163,7 +83,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGR 
 
-\noindent \texttt{"Tengwar Formal Unicode"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
 
 \formalAAT 
 
@@ -173,7 +93,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRossefinal 
 
-\noindent \texttt{"Tengwar Formal Unicode:Marked Osse=Word final"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Marked Osse=Word final"}
 
 \formalAATossefinal 
 
@@ -183,7 +103,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRossealways 
 
-\noindent \texttt{"Tengwar Formal Unicode:Marked Osse=Always"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Marked Osse=Always"}
 
 \formalAATossealways 
 
@@ -196,7 +116,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGR 
 
-\noindent \texttt{"Tengwar Formal Unicode"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
 
 \formalAAT 
 
@@ -206,7 +126,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRtilde 
 
-\noindent \texttt{"Tengwar Formal Unicode:Bar style=Tilde"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Bar style=Tilde"}
 
 \formalAATtilde 
 
@@ -219,7 +139,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGR 
 
-\noindent \texttt{"Tengwar Formal Unicode"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
 
 \formalAAT 
 
@@ -229,7 +149,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRcircumflex 
 
-\noindent \texttt{"Tengwar Formal Unicode:A-tehta style=Circumflex"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:A-tehta style=Circumflex"}
 
 \formalAATcircumflex 
 
@@ -242,7 +162,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGR 
 
-\noindent \texttt{"Tengwar Formal Unicode"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
 
 \formalAAT 
 
@@ -252,7 +172,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \formalGRswash 
 
-\noindent \texttt{"Tengwar Formal Unicode:Sa-rince style=Swash"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Sa-rince style=Swash"}
 
 \formalAATswash 
 
@@ -276,7 +196,6 @@ Here are samples of the different options. The options are specified by adding s
      ‍⸱ ⁊  ‍ \\
     ⸱    \\
 ⸱  ‍  .... ‍‍    \\
-
 
 \subsection{AAT}
 \formalAAT
