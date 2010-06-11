@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir ../tags/$(date "+%Y-%m-%d")
 cd ../tags/$(date "+%Y-%m-%d")
-cp ../../trunk/ChangeLog.txt ../../trunk/GPL.txt ../../trunk/README.txt .
+cp ../../trunk/FontLog.txt ../../trunk/GPL.txt .
 mkdir source
 cp ../../trunk/FreeMonoTengwar.sfd ../../trunk/FreeMonoTengwar.gdl ../../trunk/makefonts.py source/
 cd source/

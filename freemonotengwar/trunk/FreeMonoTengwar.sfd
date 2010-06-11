@@ -4,7 +4,7 @@ FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
 Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009, 2010 j. 'mach' wust; 2010 Johan Winge.
-Version: 2010-04-16
+Version: 2010-06-11
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1271415609
+ModificationTime: 1276247579
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
