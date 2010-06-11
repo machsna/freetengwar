@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar-embedding
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-04-16
+// Version: 2010-06-11
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -49,6 +49,22 @@ List
 
 
 // --------------------------------------------------------------
+// mark zwj for deletion
+
+Type           Noncontextual
+Name           NULL
+Namecode       16015
+Setting        NULL
+Settingcode    16016
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+	zwj 2393
+
+
+// --------------------------------------------------------------
 // tehtaX combinations
 
 Type           Contextual
@@ -73,6 +89,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	2393
 
              EOT  OOB  DEL  EOL  tinco tehtaX tehtar
 StartText    1    1    1    1    2     1      1
@@ -115,7 +132,7 @@ replace
 	shortCarrier shortCarrier_tehtaX
 
 delete
-	tehtaX DEL
+	tehtaX 2393
 
 
 // --------------------------------------------------------------
@@ -143,6 +160,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	2393
 
              EOT  OOB  DEL  EOL  lambe tehtaB tehtar
 StartText    1    1    1    1    2     1      1
@@ -161,7 +179,7 @@ replace
 	lambeN lambeN_tehtaB
 
 delete
-	tehtaB DEL
+	tehtaB 2393
 
 
 // --------------------------------------------------------------
@@ -190,6 +208,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tengwardigitMark
++	2393
 
              EOT  OOB  DEL  EOL  lambe tehtaIB tehtaYB tehtar
 StartText    1    1    1    1    2     1       1       1
@@ -210,8 +229,8 @@ replaceYB
 	lambe lambe_tehtaYB
 
 delete
-	tehtaIB DEL
-	tehtaYB DEL
+	tehtaIB 2393
+	tehtaYB 2393
 
 
 // --------------------------------------------------------------
@@ -238,6 +257,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	2393
 
             EOT  OOB  DEL  EOL  thinnas tehtaIB tehtar
 StartText   1    1    1    1    2       3       1
@@ -258,8 +278,8 @@ replace
 	tehtaIB tehtaThinnas_tehtaIB
 
 delete
-	tehtaThinnas DEL
-	tehtaIB DEL
+	tehtaThinnas 2393
+	tehtaIB 2393
 
 
 // --------------------------------------------------------------
@@ -286,6 +306,7 @@ other	tehtaB tehtaEEB
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
++	2393
 
              EOT  OOB  DEL  EOL  oomaUPtehtar tehtaW other
 StartText    1    1    1    1    2            3      1
@@ -298,28 +319,25 @@ saww         1    1    6    1    7            7      6
 2  sawoomaup    yes   yes      none      none
 3  saww         yes   yes      none      none
 4  sawoomaup    no    yes      none      none
-5  StartText    no    yes      replace   delete
+5  StartText    no    yes      none      replace
 6  saww         no    yes      none      none
-7  StartText    no    yes      delete    replace
+7  StartText    no    yes      replace   none
 
 replace
-	tehtaA tehtaW_tehtaA
-	tehtaAE tehtaW_tehtaAE
-	tehtaBreve tehtaW_tehtaBreve
-	tehtaE tehtaW_tehtaE
-	tehtaGrave tehtaW_tehtaGrave
-	tehtaI tehtaW_tehtaI
-	tehtaO tehtaW_tehtaO
-	tehtaU tehtaW_tehtaU
-	tehtaY tehtaW_tehtaY
-	tehtaYanta tehtaW_tehtaYanta
-	tehtaEE tehtaW_tehtaEE
-	tehtaGrave_tehtaGrave tehtaW_tehtaGrave_tehtaGrave
-	tehtaO_tehtaI tehtaW_tehtaO_tehtaI
-	tehtaOO tehtaW_tehtaOO
-	tehtaU_tehtaI tehtaW_tehtaU_tehtaI
-	tehtaUU tehtaW_tehtaUU
-	tehtaW tehtaW_tehtaW
+	tehtaW tehtaW.alt
 
-delete
-	tehtaW DEL
+
+// --------------------------------------------------------------
+// Glyph Deletetion
+
+Type           Noncontextual
+Name           NULL
+Namecode       16070
+Setting        NULL
+Settingcode    16071
+Default        yes
+Orientation    HV
+Forward        yes
+Exclusive      yes
+
+	2393 .null

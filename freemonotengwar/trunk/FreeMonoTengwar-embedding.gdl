@@ -1,6 +1,6 @@
-// Enhanced Graphite description language file for FreeMonoTengwar-embedding
+// Enhanced Graphite description language file for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-04-16
+// Version: 2010-06-11
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -109,7 +109,7 @@ table(glyph)
   tehtaAE = (ps("tehtaAE"));
   tehtaB = (ps("tehtaB"));
   tehtaBreve = (ps("tehtaBreve"));
-  tehtaDotInside = (ps("tehtaDotInside"));
+  tehtaDotinside = (ps("tehtaDotInside"));
   tehtaGrave_tehtaGrave = (ps("tehtaGrave_tehtaGrave"));
   tehtaE = (ps("tehtaE"));
   tehtaEB = (ps("tehtaEB"));
@@ -188,49 +188,43 @@ table(glyph)
   yanta = (ps("yanta"));
   yanta_tehtaX = (ps("yanta_tehtaX"));
 
-  pseudoCarrier = pseudo(ps("shortCarrier"));
+  AnyTengwa = ( tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha );
 
-  AnyTengwa = (pseudoCarrier, tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha);
+  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier );
+  tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX );
 
-  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        pseudoCarrier);
-  tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX);
+  takespecialB = (lambe, alda, lambeN);
+  tookspecialB = (lambe_tehtaB, alda_tehtaB, lambeN_tehtaB);
 
   Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaGrave_tehtaGrave, tehtaO_tehtaI, tehtaOO, tehtaU_tehtaI, tehtaUU);
-  OomaupW = (tehtaW_tehtaA, tehtaW_tehtaAE, tehtaW_tehtaBreve, tehtaW_tehtaE, tehtaW_tehtaGrave, tehtaW_tehtaI, tehtaW_tehtaO, tehtaW_tehtaU, tehtaW_tehtaY, tehtaW_tehtaYanta, tehtaW_tehtaEE, tehtaW_tehtaGrave_tehtaGrave, tehtaW_tehtaO_tehtaI, tehtaW_tehtaOO, tehtaW_tehtaU_tehtaI, tehtaW_tehtaUU);
+  Nasal = (tehtaN);
+  Dotinside = (tehtaDotinside);
   Doubler = (tehtaB, tehtaEEB);
+  Sarince = (tehtaX);
+  Follw = (tehtaW);
+  Thinnas = (tehtaThinnas);
   Oomadown = (tehtaAB, tehtaEB, tehtaIB, tehtaOB, tehtaUB, tehtaYB, tengwardigitMark);
 
-  BUToomaup = ( tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTnasal = ( Oomaup, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTdotinside = ( Oomaup, tehtaN, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTdoubler = ( Oomaup, tehtaN, tehtaDotInside, tehtaX, tehtaW, tehtaThinnas, Oomadown );
-  BUTsarince = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaW, tehtaThinnas, Oomadown );
-  BUTw = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaThinnas, Oomadown );
-  BUTwORoomaup = ( tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaThinnas, Oomadown );
-  BUTthinnas = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, Oomadown );
-  BUToomadown = ( Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas );
+  AnyTehta = ( tehtaW_alt, Oomaup, Nasal, Dotinside, Doubler, Sarince, Follw, Thinnas, Oomadown );
+  AnyTehtaORzwj = ( ZWJ, AnyTehta );
+  anysign = ( AnyTengwa, AnyTehtaORzwj );
 
-  AnyTehta = ( tehtaW_alt, Oomaup, tehtaN, tehtaDotInside, Doubler, tehtaX, tehtaW, tehtaThinnas, Oomadown );
+  OomaupORw = ( Oomaup, Follw );
+
+  hwesta_tincoANDsilme_ahaWorkaround = ( hwesta_tinco, silme_aha );
 
 endtable;
 
-// The following limits the number of tehtar to five, but it keeps down the font size
 
-#define AnyTehtar [[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-
-
-// The following allows for the maximum number of tehtar (one of each class), but it severely bloats the font file to almost 500KB
-/*
 #define AnyTehtar [[[[[[[AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?AnyTehta]?
-*/
-
+#define AnyTehtarORzwj [[[[[[[AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?AnyTehtaORzwj]?
 
 table(substitution)
   pass(1)
     aha ZWJ tinco > aha_tinco:(1 2 3) _ _ ;
     hwesta ZWJ tinco > hwesta_tinco:(1 2 3) _ _ ;
     silme ZWJ aha > silme_aha:(1 2 3) _ _ ;
-    ZWJ longCarrier > tehtaThinnas:(1 2) _ ;
+    ZWJ longCarrier > Thinnas:(1 2) _ ;
     tehtaI tehtaI > tehtaY:(1 2) _ ;
     tehtaE tehtaE > tehtaEE:(1 2) _ ;
     tehtaIB tehtaIB > tehtaYB:(1 2) _ ;
@@ -246,29 +240,29 @@ table(substitution)
 
 
   // --------------------------------------------------------------
-  // Substitution table, pass 4: combining tehtaW
+  // Substitution table: combining Follw
   pass(2)
 
-    tehtaW > tehtaW_alt / _ AnyTehtar (Oomaup, tehtaW) ;
-    tehtaW > tehtaW_alt / (Oomaup, tehtaW) AnyTehtar _ ;
+    Follw > tehtaW_alt / _ AnyTehtar OomaupORw ;
+    Follw > tehtaW_alt / OomaupORw AnyTehtar _ ;
 
   endpass;
   pass(3)
 
-    (lambe,alda,lambeN) tehtaB > (lambe_tehtaB,alda_tehtaB,lambeN_tehtaB) _ / _ AnyTehtar _ ; // when I had glyph classes for these, XeTeX would produce errors
+    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
   pass(4)
 
-    takespecialX tehtaX > tookspecialX _ / _ AnyTehtar _ ;
-    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtar _ ;
-    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtar _ ;
+    takespecialX Sarince > tookspecialX _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
   pass(5)
 
-    tehtaIB tehtaThinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
-    tehtaThinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtar _ ;
+    tehtaIB Thinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    Thinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
 
@@ -279,7 +273,7 @@ endtable;
 table(position)
   pass(1)
     // This is a workaround for what seems to be a bug in XeTeX:
-    (hwesta_tinco,silme_aha) { advance.x = 600m; };
+    hwesta_tincoANDsilme_ahaWorkaround { advance.x = 600m; };
   endpass;
   pass(2)
     // This isn't really necessary, but it is probably good form:

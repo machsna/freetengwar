@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-05-28
+// Version: 2010-06-11
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -607,7 +607,7 @@ anidxwhu   264  264  255  264  263 262 261 260 259 258 257 256
 dummy
 	IsKashidaLike yes
 	InsertBefore yes
-	Glyphs 2389
+	Glyphs 2392
 
 
 // --------------------------------------------------------------
@@ -644,7 +644,7 @@ tengwar	tinco parma calma quesse ando umbar anga ungwe
 +	roomenN maltaX valaX hallaRoomen vaiya
 +	aha_tinco hwesta_tinco silme_aha
 +	tehtaS
-+	2389
++	2392
 +	zwj
 
            EOT  OOB  DEL  EOL  tehtar  tengwar
@@ -677,7 +677,7 @@ Forward       yes
 Exclusive     yes
 
 zwj	zwj
-dummy	2389
+dummy	2392
 
            EOT  OOB  DEL  EOL  zwj  dummy
 StartText  1    1    1    1    2    1
@@ -690,24 +690,24 @@ sawzwj     1    1    2    1    2    3
 3 StartText no    yes      none      delete
 
 delete
-	2389 2390
+	2392 2393
 
 
 // --------------------------------------------------------------
-// Automatic short carrier : Change dummy 2389 to real shortCarrier, delete zwj
+// Automatic short carrier : Change dummy 2392 to real shortCarrier, mark zwj for deletion
 
 Type           Noncontextual
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
+Name           NULL
+Namecode       16015
+Setting        NULL
+Settingcode    16016
+Default        yes
 Orientation    HV
 Forward        yes
 Exclusive      yes
 
-	2389 shortCarrier
-	zwj 2390
+	2392 shortCarrier
+	zwj 2393
 
 
 // --------------------------------------------------------------
@@ -735,7 +735,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaThinnas
 +	tehtaN
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	2390
++	2393
 
              EOT  OOB  DEL  EOL  tinco tehtaX tehtar
 StartText    1    1    1    1    2     1      1
@@ -778,7 +778,7 @@ replace
 	shortCarrier shortCarrier_tehtaX
 
 delete
-	tehtaX 2390
+	tehtaX 2393
 
 
 // --------------------------------------------------------------
@@ -806,7 +806,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	2390
++	2393
 
              EOT  OOB  DEL  EOL  lambe tehtaB tehtar
 StartText    1    1    1    1    2     1      1
@@ -825,7 +825,7 @@ replace
 	lambeN lambeN_tehtaB
 
 delete
-	tehtaB 2390
+	tehtaB 2393
 
 
 // --------------------------------------------------------------
@@ -854,7 +854,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tengwardigitMark
-+	2390
++	2393
 
              EOT  OOB  DEL  EOL  lambe tehtaIB tehtaYB tehtar
 StartText    1    1    1    1    2     1       1       1
@@ -875,8 +875,8 @@ replaceYB
 	lambe lambe_tehtaYB
 
 delete
-	tehtaIB 2390
-	tehtaYB 2390
+	tehtaIB 2393
+	tehtaYB 2393
 
 
 // --------------------------------------------------------------
@@ -903,7 +903,7 @@ tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	2390
++	2393
 
             EOT  OOB  DEL  EOL  thinnas tehtaIB tehtar
 StartText   1    1    1    1    2       3       1
@@ -924,8 +924,8 @@ replace
 	tehtaIB tehtaThinnas_tehtaIB
 
 delete
-	tehtaThinnas 2390
-	tehtaIB 2390
+	tehtaThinnas 2393
+	tehtaIB 2393
 
 
 // --------------------------------------------------------------
@@ -952,7 +952,7 @@ other	tehtaB tehtaEEB
 +	tehtaN
 +	tehtaX
 +	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
-+	2390
++	2393
 
              EOT  OOB  DEL  EOL  oomaUPtehtar tehtaW other
 StartText    1    1    1    1    2            3      1
@@ -986,4 +986,4 @@ Orientation    HV
 Forward        yes
 Exclusive      yes
 
-	2390 .null
+	2393 .null
