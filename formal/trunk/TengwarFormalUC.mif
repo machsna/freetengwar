@@ -53,22 +53,169 @@ Type          Noncontextual
 Name          Character Alternatives
 Namecode      17
 Setting       Descending W-tengwa
-Settingcode   16021
+Settingcode   16010
 Default       no
 Orientation   HV
 Forward       yes
-Exclusive     yes
+Exclusive     no
 
 lambeN lambeN.alt
 
 
 --------------------------------------------------------------
 
-Type          Contextual
-Name          Marked Osse
+Type          Insertion
+Name          Osse diacritic (for 'full writing')
+Namecode      16040
+Setting       Dot on ambiguous osse
+Settingcode   16041
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+osse	osse
+ambiguous	tinco parma calma ando umbar anga
++	suule formen aha anto ampa anca
++	tincoX parmaX calmaX andoX umbarX angaX
++	nuumen malta noldo oore vala anna
++	longCarrier halla shortCarrier
++	carrierX
++	maltaX valaX
++	aha_tinco
+
+           EOT  OOB  DEL  EOL  osse  ambiguous
+StartText  1    1    1    1    2     1
+StartLine  1    1    1    1    2     1
+sawosse    1    1    2    1    4     3
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawosse    no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawosse    no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaI
+
+
+--------------------------------------------------------------
+
+Type          Insertion
+Name          Osse diacritic (for 'full writing')
+Namecode      16040
+Setting       Dot on every osse
+Settingcode   16042
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+osse	osse
+anytehta	tehtaA tehtaAB tehtaAE tehtaB tehtaBreve tehtaDotInside
++	tehtaE tehtaEB tehtaEEB tehtaGrave tehtaI tehtaIB tehtaN tehtaO tehtaOB
++	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX tehtaY tehtaYanta tehtaYB tengwardigitMark
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
+
+           EOT  OOB  DEL  EOL  osse  anytehta
+StartText  1    1    1    1    2     1
+StartLine  1    1    1    1    2     1
+sawosse    3    3    2    3    4     1
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawosse    no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawosse    no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaI
+
+
+--------------------------------------------------------------
+
+Type          Insertion
+Name          Carrier diacritic (for 'full writing')
 Namecode      16030
-Setting       Word final
+Setting       Dot
 Settingcode   16031
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+carrier	shortCarrier longCarrier
+anytehta	tehtaA tehtaAB tehtaAE tehtaB tehtaBreve tehtaDotInside
++	tehtaE tehtaEB tehtaEEB tehtaGrave tehtaI tehtaIB tehtaN tehtaO tehtaOB
++	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX tehtaY tehtaYanta tehtaYB tengwardigitMark
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
+
+           EOT  OOB  DEL  EOL  carrier anytehta
+StartText  1    1    1    1    2       1
+StartLine  1    1    1    1    2       1
+sawcarrier 3    3    2    3    4       1
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawcarrier no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawcarrier no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaI
+
+
+--------------------------------------------------------------
+
+Type          Insertion
+Name          Carrier diacritic (for 'full writing')
+Namecode      16030
+Setting       Acute
+Settingcode   16032
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
+
+carrier	shortCarrier longCarrier
+anytehta	tehtaA tehtaAB tehtaAE tehtaB tehtaBreve tehtaDotInside
++	tehtaE tehtaEB tehtaEEB tehtaGrave tehtaI tehtaIB tehtaN tehtaO tehtaOB
++	tehtaThinnas tehtaU tehtaUB tehtaW tehtaX tehtaY tehtaYanta tehtaYB tengwardigitMark
++	tehtaE_tehtaE.shift2 tehtaGrave_tehtaGrave.shift2 tehtaO_tehtaI.shift2 tehtaO_tehtaI.shift2
++	tehtaO_tehtaO.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaI.shift2 tehtaU_tehtaU.shift2
+
+           EOT  OOB  DEL  EOL  carrier anytehta
+StartText  1    1    1    1    2       1
+StartLine  1    1    1    1    2       1
+sawcarrier 3    3    2    3    4       1
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawcarrier no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawcarrier no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaE
+
+
+--------------------------------------------------------------
+
+Type          Contextual
+Name          Osse hook
+Namecode      16020
+Setting       Word final
+Settingcode   16021
 Default       no
 Orientation   HV
 Forward       yes
@@ -109,10 +256,10 @@ altosse
 --------------------------------------------------------------
 
 Type          Noncontextual
-Name          Marked Osse
-Namecode      16030
+Name          Osse hook
+Namecode      16020
 Setting       Always
-Settingcode   16032
+Settingcode   16022
 Default       no
 Orientation   HV
 Forward       yes
@@ -124,14 +271,14 @@ osse osse.alt
 --------------------------------------------------------------
 
 Type          Noncontextual
-Name          Bar style
-Namecode      16040
-Setting       Tilde
-Settingcode   16041
+Name          Character Alternatives
+Namecode      17
+Setting       Tilde bar
+Settingcode   16012
 Default       no
 Orientation   HV
 Forward       yes
-Exclusive     yes
+Exclusive     no
 
 tehtaN tehtaN.altnarrow
 tehtaB tehtaB.altnarrow
@@ -140,14 +287,14 @@ tehtaB tehtaB.altnarrow
 --------------------------------------------------------------
 
 Type          Noncontextual
-Name          A-tehta style
-Namecode      16050
-Setting       Circumflex
-Settingcode   16051
+Name          Character Alternatives
+Namecode      17
+Setting       Circumflex A-tehta
+Settingcode   16014
 Default       no
 Orientation   HV
 Forward       yes
-Exclusive     yes
+Exclusive     no
 
 tehtaA tehtaA.altshift2
 tehtaAE tehtaAE.altshift2
@@ -158,9 +305,9 @@ tehtaAE tehtaAE.altshift2
 
 Type           Contextual
 Name           NULL
-Namecode       16060
+Namecode       16000
 Setting        NULL
-Settingcode    16061
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -229,15 +376,15 @@ Syanta
 
 --------------------------------------------------------------
 
-Type           Contextual
-Name           Sa-rince style
-Namecode       16070
-Setting        Swash
-Settingcode    16071
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          Character Alternatives
+Namecode      17
+Setting       Swash sa-rince
+Settingcode   16016
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     no
 
 tinco	tinco parma ando umbar suule formen aha hwesta anto ampa anca unque
 +	tincoX parmaX andoX umbarX nuumen malta noldo nwalme oore vala anna vilya
@@ -345,9 +492,9 @@ Sswashyantaalt
 
 Type           Contextual
 Name           NULL
-Namecode       16080
+Namecode       16000
 Setting        NULL
-Settingcode    16081
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -387,9 +534,9 @@ altroomen
 
 Type           Contextual
 Name           NULL
-Namecode       16090
+Namecode       16000
 Setting        NULL
-Settingcode    16091
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -427,9 +574,9 @@ lowernasal
 
 Type           Contextual
 Name           NULL
-Namecode       16090
+Namecode       16000
 Setting        NULL
-Settingcode    16092
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        no
@@ -464,9 +611,9 @@ lowernasal
 
 Type           Contextual
 Name           NULL
-Namecode       16100
+Namecode       16000
 Setting        NULL
-Settingcode    16101
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -505,9 +652,9 @@ smallerw
 
 Type           Contextual
 Name           NULL
-Namecode       16100
+Namecode       16000
 Setting        NULL
-Settingcode    16102
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        no
@@ -544,9 +691,9 @@ smallerw
 
 Type           Contextual
 Name           NULL
-Namecode       16110
+Namecode       16000
 Setting        NULL
-Settingcode    16111
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -592,9 +739,9 @@ Xanga
 
 Type           Contextual
 Name           NULL
-Namecode       16600
+Namecode       16000
 Setting        NULL
-Settingcode    16601
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -735,9 +882,9 @@ carrieruptehta
 
 Type           Contextual
 Name           NULL
-Namecode       16610
+Namecode       16000
 Setting        NULL
-Settingcode    16611
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -873,9 +1020,9 @@ lambedowntehta
 
 Type           Contextual
 Name           NULL
-Namecode       16620
+Namecode       16000
 Setting        NULL
-Settingcode    16621
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        yes
@@ -946,9 +1093,9 @@ dothinnas
 
 Type           Contextual
 Name           NULL
-Namecode       16620
+Namecode       16000
 Setting        NULL
-Settingcode    16622
+Settingcode    16001
 Default        yes
 Orientation    HV
 Forward        no
