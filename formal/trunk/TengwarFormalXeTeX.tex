@@ -2,7 +2,7 @@
 %&encoding=UTF-8 Unicode
 
 \documentclass[11pt,a4paper]{article}
-\usepackage{fontspec}
+\usepackage{fontspec,hyperref}
 \usepackage{xltxtra}
 \pagestyle{empty}
 \frenchspacing
@@ -21,6 +21,15 @@
 \font\formalAATcircumflex="Tengwar Formal Unicode/AAT:A-tehta style=Circumflex" at 15pt
 \font\formalGRswash="Tengwar Formal Unicode/GR:211=1" at 15pt
 \font\formalAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash" at 15pt
+
+\font\formalGRcarrierdot="Tengwar Formal Unicode/GR:212=1" at 15pt
+\font\formalAATcarrierdot="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot" at 15pt
+\font\formalGRcarrieracute="Tengwar Formal Unicode/GR:212=2" at 15pt
+\font\formalAATcarrieracute="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute" at 15pt
+\font\formalGRosseambiguous="Tengwar Formal Unicode/GR:213=1" at 15pt
+\font\formalAATosseambiguous="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse" at 15pt
+\font\formalGRosseevery="Tengwar Formal Unicode/GR:213=2" at 15pt
+\font\formalAATosseevery="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse" at 15pt
 \font\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt
 \font\tableGR="Tengwar Formal Unicode/GR"
 \font\tableAAT="Tengwar Formal Unicode/AAT"
@@ -34,6 +43,7 @@
 
 \begin{document}
 
+\tableofcontents
 
 \section{Tengwar Formal Unicode/AAT: Graphite and AAT options}
 
@@ -177,6 +187,72 @@ Here are samples of the different options. The options are specified by adding s
 \formalAATswash 
 
 
+\subsection{Carrier diacritic (for ‘full writing’)}
+
+\subsubsection{Default: None}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
+
+\formalAAT  
+
+\subsubsection{Dot}
+
+\texttt{"Tengwar Formal Unicode/GR:212=1"}
+
+\formalGRcarrierdot  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot"}
+
+\formalAATcarrierdot   
+
+\subsubsection{Acute}
+
+\texttt{"Tengwar Formal Unicode/GR:212=2"}
+
+\formalGRcarrieracute  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute"}
+
+\formalAATcarrieracute  
+
+
+\subsection{Osse diacritic (for ‘full writing’)}
+
+\subsubsection{Default: None}
+
+\texttt{"Tengwar Formal Unicode/GR"}
+
+\formalGR  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT"}
+
+\formalAAT  
+
+\subsubsection{Dot on ambiguous osse}
+
+\texttt{"Tengwar Formal Unicode/GR:213=1"}
+
+\formalGRosseambiguous  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse"}
+
+\formalAATosseambiguous  
+
+\subsubsection{Dot on every osse}
+
+\texttt{"Tengwar Formal Unicode/GR:213=2"}
+
+\formalGRosseevery  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse"}
+
+\formalAATosseevery  
+
+
 \newpage
 
 \section{Sample Text}
@@ -212,403 +288,5 @@ Here are samples of the different options. The options are specified by adding s
      ‍⸱ ⁊  ‍ \\
     ⸱    \\
 ⸱  ‍  .... ‍‍    \\
-
-
-\newcommand{\tehtarow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1& #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGRdescw }\tehtarow{\tableAATdescw }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‌‍}\tehtarow{\tableAAT ‌‍}
-\tehtarow{\tableGR ‍‍}\tehtarow{\tableAAT ‍‍}
-\tehtarow{\tableGR ‍‍}\tehtarow{\tableAAT ‍‍}
-\tehtarow{\tableGR ‍‍}\tehtarow{\tableAAT ‍‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\newcommand{\sarincerow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR ‌}\sarincerow{\tableAAT ‌}
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGRdescw }\sarincerow{\tableAATdescw }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR }\sarincerow{\tableAAT }
-\sarincerow{\tableGR ‍}\sarincerow{\tableAAT ‍}
-\sarincerow{\tableGR ‍}\sarincerow{\tableAAT ‍}
-\sarincerow{\tableGR ‍}\sarincerow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash ‌}\sarincerow{\tableAATswash ‌}
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRdescwswash }\sarincerow{\tableAATdescwswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash }\sarincerow{\tableAATswash }
-\sarincerow{\tableGRswash ‍}\sarincerow{\tableAATswash ‍}
-\sarincerow{\tableGRswash ‍}\sarincerow{\tableAATswash ‍}
-\sarincerow{\tableGRswash ‍}\sarincerow{\tableAATswash ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGRswash }\tehtarow{\tableAATswash }
-\tehtarow{\tableGRswash }\tehtarow{\tableAATswash }
-\tehtarow{\tableGRswash }\tehtarow{\tableAATswash }
-\tehtarow{\tableGRswash ‌}\tehtarow{\tableAATswash ‌}
-\tehtarow{\tableGRswash }\tehtarow{\tableAATswash }
-\tehtarow{\tableGRswash }\tehtarow{\tableAATswash }
-\tehtarow{\tableGRswash ‍}\tehtarow{\tableAATswash ‍}
-\tehtarow{\tableGRswash ‍}\tehtarow{\tableAATswash ‍}
-\tehtarow{\tableGRswash ‍}\tehtarow{\tableAATswash ‍}
-\end{tabular}}
-
-
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\end{tabular}}
-\noindent\makebox[\textwidth]{%
-\begin{tabular}{ccccccccccccccccccccccccccc}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‌}\tehtarow{\tableAAT ‌}
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGRdescw }\tehtarow{\tableAATdescw }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR }\tehtarow{\tableAAT }
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\tehtarow{\tableGR ‍}\tehtarow{\tableAAT ‍}
-\end{tabular}}
 
 \end{document}
