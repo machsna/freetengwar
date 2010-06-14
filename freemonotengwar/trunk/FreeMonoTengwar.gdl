@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-06-11
+// Version: 2010-06-14
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -25,7 +25,19 @@ environment { MUnits = 1000; }
 table(feature)
   insertcarrier {
     id=212;
-    name.LG_USENG = string("Short carrier insertion");
+    name.LG_USENG = string("Short Carrier Insertion");
+    default = false;
+  }
+
+  carrierdiacritic {
+    id=213;
+    name.LG_USENG = string("Diacritic Dots (for 'Full Writing'): On Carriers");
+    default = false;
+  }
+
+  ossediacritic {
+    id=214;
+    name.LG_USENG = string("Diacritic Dots (for 'Full Writing'): On Osse");
     default = false;
   }
 endtable;
@@ -193,8 +205,8 @@ table(glyph)
 
   AnyTengwa = ( insertedcarrier, tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha );
 
-  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        insertedcarrier);
-  tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX);
+  takespecialX = (tinco,        parma,        calma,        quesse,        ando,        umbar,        suule,        formen,        aha,        hwesta,        anto,        ampa,        nuumen,        malta,  oore,        vala,  anna,        vilya,        tincoX,        parmaX,        calmaX,        quesseX,        andoX,        umbarX,        yanta,        uure,        shortCarrier,        insertedcarrier,     insertedcarrierIntertehtar);
+  tookspecialX = (tinco_tehtaX, parma_tehtaX, calma_tehtaX, quesse_tehtaX, ando_tehtaX, umbar_tehtaX, suule_tehtaX, formen_tehtaX, aha_tehtaX, hwesta_tehtaX, anto_tehtaX, ampa_tehtaX, nuumen_tehtaX, maltaX, oore_tehtaX, valaX, anna_tehtaX, vilya_tehtaX, tincoX_tehtaX, parmaX_tehtaX, calmaX_tehtaX, quesseX_tehtaX, andoX_tehtaX, umbarX_tehtaX, yanta_tehtaX, uure_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX, shortCarrier_tehtaX );
 
   takespecialB = (lambe, alda, lambeN);
   tookspecialB = (lambe_tehtaB, alda_tehtaB, lambeN_tehtaB);
@@ -235,6 +247,9 @@ table(glyph)
 
 
   OomaupORw = ( Oomaup, Follw );
+
+  diacriticdot = pseudo(ps("tehtaI"));
+  longAndShortCarrier = ( longCarrier, shortCarrier );
 
   hwesta_tincoANDsilme_ahaWorkaround = ( hwesta_tinco, silme_aha );
 
@@ -451,30 +466,59 @@ table(substitution)
 
   endpass;
 
+  // --------------------------------------------------------------
+  // Substitution table: Insert diacritic dots (for full writing)
+  pass(19)
+
+    if (carrierdiacritic)
+       _ > diacriticdot:1 / longAndShortCarrier _ ;
+    endif;
+
+
+    if (ossediacritic)
+       _ > diacriticdot:1 / osse _ ;
+    endif;
+
+  endpass;
+
+  // --------------------------------------------------------------
+  // Substitution table: Delete diacritic dots if any tehta follows
+  pass(20)
+
+    diacriticdot > _ / _ AnyTehta ;
+
+  endpass;
+
 
   // --------------------------------------------------------------
   // Substitution table: combining Follw
-  pass(19)
+  pass(21)
 
-    insertedcarrier > shortCarrier ;
-    insertedcarrierIntertehtar > shortCarrier ;
     Follw > tehtaW_alt / _ AnyTehtar OomaupORw ;
+
+  endpass;
+  pass(22)
+
     Follw > tehtaW_alt / OomaupORw AnyTehtar _ ;
 
   endpass;
-  pass(20)
 
-    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
+
+  // --------------------------------------------------------------
+  // Substitution table: Special combinations
+  pass(23)
+
+    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
-  pass(21)
+  pass(24)
 
     takespecialX Sarince > tookspecialX _ / _ AnyTehtarORzwj _ ;
     lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
     lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
 
   endpass;
-  pass(22)
+  pass(25)
 
     tehtaIB Thinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
     Thinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;

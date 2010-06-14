@@ -6,42 +6,52 @@
 
 \font\formalGR="Tengwar Formal Unicode/GR"
 \font\formalAAT="Tengwar Formal Unicode/AAT"
+
 \font\formalGRdescw="Tengwar Formal Unicode/GR:204=1"
-\font\formalAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash"
+\font\formalAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-Tengwa;Sa-Rince Style=Swash"
+
 \font\formalGRossefinal="Tengwar Formal Unicode/GR:207=1"
-\font\formalAATossefinal="Tengwar Formal Unicode/AAT:Marked Osse=Word final"
+\font\formalAATossefinal="Tengwar Formal Unicode/AAT:Osse Hook=Word Final"
+
 \font\formalGRossealways="Tengwar Formal Unicode/GR:207=2"
-\font\formalAATossealways="Tengwar Formal Unicode/AAT:Marked Osse=Always"
+\font\formalAATossealways="Tengwar Formal Unicode/AAT:Osse Hook=Always"
+
 \font\formalGRtilde="Tengwar Formal Unicode/GR:209=1"
-\font\formalAATtilde="Tengwar Formal Unicode/AAT:Bar style=Tilde"
+\font\formalAATtilde="Tengwar Formal Unicode/AAT:Character Alternatives=Tilde Bar"
+
 \font\formalGRcircumflex="Tengwar Formal Unicode/GR:210=1"
-\font\formalAATcircumflex="Tengwar Formal Unicode/AAT:A-tehta style=Circumflex"
+\font\formalAATcircumflex="Tengwar Formal Unicode/AAT:Character Alternatives=Circumflex A-Tehta"
+
 \font\formalGRswash="Tengwar Formal Unicode/GR:211=1"
-\font\formalAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash"
-\font\formalGRcarrierdot="Tengwar Formal Unicode/GR:212=1"
-\font\formalAATcarrierdot="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot"
-\font\formalGRcarrieracute="Tengwar Formal Unicode/GR:212=2"
-\font\formalAATcarrieracute="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute"
-\font\formalGRosseambiguous="Tengwar Formal Unicode/GR:213=1"
-\font\formalAATosseambiguous="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse"
-\font\formalGRosseevery="Tengwar Formal Unicode/GR:213=2"
-\font\formalAATosseevery="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse"
+\font\formalAATswash="Tengwar Formal Unicode/AAT:Character Alternatives=Swash Sa-Rince"
+
+\font\formalGRcarrierdot="Tengwar Formal Unicode/GR:213=1"
+\font\formalAATcarrierdot="Tengwar Formal Unicode/AAT:Carrier Diacritic (for 'Full Writing')=Dot"
+
+\font\formalGRcarrieracute="Tengwar Formal Unicode/GR:213=2"
+\font\formalAATcarrieracute="Tengwar Formal Unicode/AAT:Carrier Diacritic (for 'Full Writing')=Acute"
+
+\font\formalGRosseambiguous="Tengwar Formal Unicode/GR:214=1"
+\font\formalAATosseambiguous="Tengwar Formal Unicode/AAT:Osse Diacritic (for 'Full Writing')=Dot on Ambiguous Osse"
+
+\font\formalGRosseevery="Tengwar Formal Unicode/GR:214=2"
+\font\formalAATosseevery="Tengwar Formal Unicode/AAT:Osse Diacritic (for 'Full Writing')=Dot on Every Osse"
+
 \font\myformal="Tengwar Formal Unicode/GR:204=1;207=2"
-\font\tableGR="Tengwar Formal Unicode/GR"
-\font\tableAAT="Tengwar Formal Unicode/AAT"
-\font\tableGRdescw="Tengwar Formal Unicode/GR:204=1"
-\font\tableAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa"
-\font\tableGRswash="Tengwar Formal Unicode/GR:211=1"
-\font\tableAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash"
-\font\tableGRdescwswash="Tengwar Formal Unicode/GR:204=1;211=1"
-\font\tableAATdescwswash="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash"
+
 \setmonofont{FreeMonoTengwar}
 
+
+
 \begin{document}
+
+
 
 \tableofcontents
 
 \section{Tengwar Formal Unicode/AAT: Graphite and AAT options}
+
+
 
 Here are samples of the different options. The options are specified by adding something to the font name in the \texttt{\char`\\font} command. The extended font names are all given in this document. A font specification will look like this:
 
@@ -58,200 +68,190 @@ Here are samples of the different options. The options are specified by adding s
 \paragraph{} This will look like this: \myformal   \normalfont
 
 
-\subsection{Descending W-tengwa}
 
-\subsubsection{Default}
+\subsection{Character Alternatives}
 
-\noindent \texttt{"Tengwar Formal Unicode/GR"}
+
+
+\subsubsection{Descending W-Tengwa}
+
+
+Default
 
 \formalGR  
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT  
-
-\subsubsection{Descending W-tengwa}
-
-\texttt{"Tengwar Formal Unicode/GR:204=1"}
+\noindent \texttt{"Tengwar Formal Unicode/GR:204=1"}
 
 \formalGRdescw  
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-Tengwa;"}
 
-\formalAATdescw  
+\formalAATdescw   \normalfont
 
 
-\subsection{Marked Osse}
 
-\subsubsection{Default: Never}
+\subsubsection{Tilde Bar}
 
-\texttt{"Tengwar Formal Unicode/GR"}
 
-\formalGR 
+Default
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
+\formalGR 
 
-\formalAAT 
+\noindent\texttt{"Tengwar Formal Unicode/GR:209=1"}
 
-\subsubsection{Word final}
+\formalGRtilde 
+
+\noindent\texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Tilde Bar"}
+
+\formalAATtilde  \normalfont
+
+
+
+\subsubsection{Circumflex A-Tehta}
+
+
+Default
+
+\formalGR 
+
+\noindent\texttt{"Tengwar Formal Unicode/GR:210=1"}
+
+\formalGRcircumflex 
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Circumflex A-Tehta"}
+
+\formalAATcircumflex  \normalfont
+
+
+
+\subsubsection{Swash Sa-Rince}
+
+
+Default
+
+\formalGR 
+
+\noindent\texttt{"Tengwar Formal Unicode/GR:211=1"}
+
+\formalGRswash 
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Character Alternatives=Swash Sa-Rince"}
+
+\formalAATswash  \normalfont
+
+
+
+\subsection{Osse Hook}
+
+
+Default
+
+\formalGR  \normalfont
+
+
+
+\subsubsection*{Word Final}
+
 
 \texttt{"Tengwar Formal Unicode/GR:207=1"}
 
 \formalGRossefinal 
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Marked Osse=Word final"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse Hook=Word Final"}
 
 \formalAATossefinal 
 
-\subsubsection{Always}
+
+
+\subsubsection*{Always}
+
 
 \texttt{"Tengwar Formal Unicode/GR:207=2"}
 
 \formalGRossealways 
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Marked Osse=Always"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse Hook=Always"}
 
-\formalAATossealways 
-
-
-\subsection{Bar style}
-
-\subsubsection{Default: Straight}
-
-\texttt{"Tengwar Formal Unicode/GR"}
-
-\formalGR 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT 
-
-\subsubsection{Tilde}
-
-\texttt{"Tengwar Formal Unicode/GR:209=1"}
-
-\formalGRtilde 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Bar style=Tilde"}
-
-\formalAATtilde 
+\formalAATossealways  \normalfont
 
 
-\subsection{A-tehta style}
 
-\subsubsection{Default: Dots}
-
-\texttt{"Tengwar Formal Unicode/GR"}
-
-\formalGR 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT 
-
-\subsubsection{Circumflex}
-
-\texttt{"Tengwar Formal Unicode/GR:210=1"}
-
-\formalGRcircumflex 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT:A-tehta style=Circumflex"}
-
-\formalAATcircumflex 
+\subsection{Carrier Diacritic (for ‘Full Writing’)}
 
 
-\subsection{Sa-rince style}
-
-\subsubsection{Default: Hook}
-
-\texttt{"Tengwar Formal Unicode/GR"}
-
-\formalGR 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT 
-
-\subsubsection{Swash}
-
-\texttt{"Tengwar Formal Unicode/GR:211=1"}
-
-\formalGRswash 
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Sa-rince style=Swash"}
-
-\formalAATswash 
-
-
-\subsection{Carrier diacritic (for ‘full writing’)}
-
-\subsubsection{Default: None}
-
-\texttt{"Tengwar Formal Unicode/GR"}
+Default
 
 \formalGR  
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT  
-
-\subsubsection{Dot}
-
-\texttt{"Tengwar Formal Unicode/GR:212=1"}
-
-\formalGRcarrierdot  
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot"}
-
-\formalAATcarrierdot   
-
-\subsubsection{Acute}
-
-\texttt{"Tengwar Formal Unicode/GR:212=2"}
-
-\formalGRcarrieracute  
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute"}
-
-\formalAATcarrieracute  
 
 
-\subsection{Osse diacritic (for ‘full writing’)}
+\subsubsection*{Dot}
 
-\subsubsection{Default: None}
-
-\texttt{"Tengwar Formal Unicode/GR"}
-
-\formalGR  
-
-\noindent \texttt{"Tengwar Formal Unicode/AAT"}
-
-\formalAAT  
-
-\subsubsection{Dot on ambiguous osse}
 
 \texttt{"Tengwar Formal Unicode/GR:213=1"}
 
-\formalGRosseambiguous  
+\formalGRcarrierdot  
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier Diacritic (for 'Full Writing')=Dot"}
 
-\formalAATosseambiguous  
+\formalAATcarrierdot   
 
-\subsubsection{Dot on every osse}
+
+
+\subsubsection*{Acute}
+
 
 \texttt{"Tengwar Formal Unicode/GR:213=2"}
 
+\formalGRcarrieracute  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Carrier Diacritic (for 'Full Writing')=Acute"}
+
+\formalAATcarrieracute   \normalfont
+
+
+
+\subsection{Osse Diacritic (for ‘Full Writing’)}
+
+
+Default
+
+\formalGR  
+
+
+
+\subsubsection*{Dot on Ambiguous Osse}
+
+
+\texttt{"Tengwar Formal Unicode/GR:214=1"}
+
+\formalGRosseambiguous  
+
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse Diacritic (for 'Full Writing')=Dot on Ambiguous Osse"}
+
+\formalAATosseambiguous  
+
+
+
+\subsubsection*{Dot on every osse}
+
+
+\texttt{"Tengwar Formal Unicode/GR:214=2"}
+
 \formalGRosseevery  
 
-\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse"}
+\noindent \texttt{"Tengwar Formal Unicode/AAT:Osse Diacritic (for 'Full Writing')=Dot on Every Osse"}
 
 \formalAATosseevery  
 
 
+
 \newpage
 
+
+
 \section{Sample Text}
+
 
 \subsection{Graphite}
 \formalGR
