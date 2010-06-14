@@ -1,6 +1,6 @@
 // Morph Input File for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-06-03
+// Version: 2010-06-14
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -52,7 +52,7 @@ List
 Type          Noncontextual
 Name          Character Alternatives
 Namecode      17
-Setting       Descending W-tengwa
+Setting       Descending W-Tengwa
 Settingcode   16010
 Default       no
 Orientation   HV
@@ -65,9 +65,9 @@ lambeN lambeN.alt
 --------------------------------------------------------------
 
 Type          Insertion
-Name          Osse diacritic (for 'full writing')
+Name          Osse Diacritic (for 'Full Writing')
 Namecode      16040
-Setting       Dot on ambiguous osse
+Setting       Dot on Ambiguous Osse
 Settingcode   16041
 Default       no
 Orientation   HV
@@ -104,9 +104,9 @@ dot
 --------------------------------------------------------------
 
 Type          Insertion
-Name          Osse diacritic (for 'full writing')
+Name          Osse Diacritic (for 'Full Writing')
 Namecode      16040
-Setting       Dot on every osse
+Setting       Dot on Every Osse
 Settingcode   16042
 Default       no
 Orientation   HV
@@ -140,7 +140,7 @@ dot
 --------------------------------------------------------------
 
 Type          Insertion
-Name          Carrier diacritic (for 'full writing')
+Name          Carrier Diacritic (for 'Full Writing')
 Namecode      16030
 Setting       Dot
 Settingcode   16031
@@ -176,7 +176,7 @@ dot
 --------------------------------------------------------------
 
 Type          Insertion
-Name          Carrier diacritic (for 'full writing')
+Name          Carrier Diacritic (for 'Full Writing')
 Namecode      16030
 Setting       Acute
 Settingcode   16032
@@ -212,9 +212,9 @@ dot
 --------------------------------------------------------------
 
 Type          Contextual
-Name          Osse hook
+Name          Osse Hook
 Namecode      16020
-Setting       Word final
+Setting       Word Final
 Settingcode   16021
 Default       no
 Orientation   HV
@@ -256,7 +256,7 @@ altosse
 --------------------------------------------------------------
 
 Type          Noncontextual
-Name          Osse hook
+Name          Osse Hook
 Namecode      16020
 Setting       Always
 Settingcode   16022
@@ -273,7 +273,7 @@ osse osse.alt
 Type          Noncontextual
 Name          Character Alternatives
 Namecode      17
-Setting       Tilde bar
+Setting       Tilde Bar
 Settingcode   16012
 Default       no
 Orientation   HV
@@ -289,7 +289,7 @@ tehtaB tehtaB.altnarrow
 Type          Noncontextual
 Name          Character Alternatives
 Namecode      17
-Setting       Circumflex A-tehta
+Setting       Circumflex A-Tehta
 Settingcode   16014
 Default       no
 Orientation   HV
@@ -379,7 +379,7 @@ Syanta
 Type          Contextual
 Name          Character Alternatives
 Namecode      17
-Setting       Swash sa-rince
+Setting       Swash Sa-Rince
 Settingcode   16016
 Default       no
 Orientation   HV

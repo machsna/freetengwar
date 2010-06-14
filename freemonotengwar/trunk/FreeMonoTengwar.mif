@@ -1,6 +1,6 @@
 // Morph Input File for FreeMonoTengwar
 // Copyright: Copyleft 2010 j. 'mach' wust
-// Version: 2010-06-11
+// Version: 2010-06-14
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -17,18 +17,18 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Ligatures
 
-Type           LigatureList
-Name           NULL
-Namecode       16000
-Setting        NULL
-Settingcode    16001
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          LigatureList
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 List
 	tehtaY	tehtaI tehtaI
@@ -54,18 +54,18 @@ List
 	uniFB05	longs zwj t
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Automatic short carrier : Insert dummy
 
-Type           Insertion
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Insertion
+Name          Short Carrier Insertion
+Namecode      16020
+Setting       Automatic Insertion
+Settingcode   16021
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 A	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -610,18 +610,18 @@ dummy
 	Glyphs 2392
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Automatic short carrier : Initial short carrier
 
-Type           Insertion
-Name           Short carrier insertion
-Namecode       16010
-Setting        Automatic insertion
-Settingcode    16011
-Default        no
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Insertion
+Name          Short Carrier Insertion
+Namecode      16020
+Setting       Automatic Insertion
+Settingcode   16021
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -663,14 +663,14 @@ dummy
 	Glyphs shortCarrier
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Automatic short carrier : Dummy suppression with zwj
 
 Type          Contextual
-Name          Short carrier insertion
-Namecode      16010
-Setting       Automatic insertion
-Settingcode   16011
+Name          Short Carrier Insertion
+Namecode      16020
+Setting       Automatic Insertion
+Settingcode   16021
 Default       no
 Orientation   HV
 Forward       yes
@@ -693,35 +693,123 @@ delete
 	2392 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Automatic short carrier : Change dummy 2392 to real shortCarrier, mark zwj for deletion
 
-Type           Noncontextual
-Name           NULL
-Namecode       16015
-Setting        NULL
-Settingcode    16016
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Noncontextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 	2392 shortCarrier
 	zwj 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
+// Insert a dot on carriers (for full writing)
+
+Type          Insertion
+Name          Diacritic Dots (for 'Full Writing')
+Namecode      16010
+Setting       On Carriers
+Settingcode   16012
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+carrier	shortCarrier longCarrier
+anytehta	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+nil	2393
+
+           EOT  OOB  DEL  EOL  carrier anytehta nil
+StartText  1    1    1    1    2       1        1
+StartLine  1    1    1    1    2       1        1
+sawcarrier 3    3    2    3    4       1        2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawcarrier no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawcarrier no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaI
+
+
+--------------------------------------------------------------
+// Insert a dot on osse (for full writing)
+
+Type          Insertion
+Name          Diacritic Dots (for 'Full Writing')
+Namecode      16010
+Setting       On Osse
+Settingcode   16014
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+osse	osse
+anytehta	tehtaA tehtaAE tehtaBreve
++	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaN
++	tehtaDotInside
++	tehtaB tehtaEEB
++	tehtaX
++	tehtaW
++	tehtaThinnas
++	tehtaAB tehtaEB tehtaIB tehtaOB tehtaUB tehtaYB tengwardigitMark
+nil	2393
+
+           EOT  OOB  DEL  EOL  osse anytehta nil
+StartText  1    1    1    1    2    1        1
+StartLine  1    1    1    1    2    1        1
+sawcarrier 3    3    2    3    4    1        2
+
+   GoTo       Mark? Advance? InsertMark  InsertCurrent
+1  StartText  no    yes      none        none
+2  sawcarrier no    yes      none        none
+3  StartText  no    yes      none        dot
+4  sawcarrier no    yes      none        dot
+
+dot
+	IsKashidaLike yes
+	InsertBefore yes
+	Glyphs tehtaI
+
+
+--------------------------------------------------------------
 // tehtaX combinations
 
-Type           Contextual
-Name           NULL
-Namecode       16020
-Setting        NULL
-Settingcode    16021
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 tinco	tinco parma calma quesse ando umbar suule formen aha hwesta anto ampa nuumen malta
 +	oore vala anna vilya tincoX parmaX calmaX quesseX andoX umbarX yanta uure shortCarrier
@@ -781,18 +869,18 @@ delete
 	tehtaX 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // tehtaB combinations
 
-Type           Contextual
-Name           NULL
-Namecode       16030
-Setting        NULL
-Settingcode    16031
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 lambe	lambe alda lambeN
 tehtaB	tehtaB
@@ -828,18 +916,18 @@ delete
 	tehtaB 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // lambe + tehtaIB/tehtaYB combinations
 
-Type           Contextual
-Name           NULL
-Namecode       16040
-Setting        NULL
-Settingcode    16041
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 lambe	lambe
 tehtaIB	tehtaIB
@@ -879,18 +967,18 @@ delete
 	tehtaYB 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // tehtaThinnas tehtaIB combinations
 
-Type           Contextual
-Name           NULL
-Namecode       16050
-Setting        NULL
-Settingcode    16051
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 thinnas	tehtaThinnas
 tehtaIB	tehtaIB
@@ -928,18 +1016,18 @@ delete
 	tehtaIB 2393
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // tehtaW combinations
 
-Type           Contextual
-Name           NULL
-Namecode       16060
-Setting        NULL
-Settingcode    16061
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Contextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 oomaUPtehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
@@ -973,17 +1061,17 @@ replace
 	tehtaW tehtaW.alt
 
 
-// --------------------------------------------------------------
+--------------------------------------------------------------
 // Glyph Deletetion
 
-Type           Noncontextual
-Name           NULL
-Namecode       16070
-Setting        NULL
-Settingcode    16071
-Default        yes
-Orientation    HV
-Forward        yes
-Exclusive      yes
+Type          Noncontextual
+Name          NULL
+Namecode      16000
+Setting       NULL
+Settingcode   16001
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     yes
 
 	2393 .null

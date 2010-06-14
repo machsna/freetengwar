@@ -1,22 +1,24 @@
 %&program=xelatex
 %&encoding=UTF-8 Unicode
 
-\documentclass[11pt,a4paper]{article}
+\documentclass{article}
 \usepackage{fontspec,hyperref}
-\pagestyle{empty}
-\frenchspacing
 
-\font\freeGR="FreeMonoTengwar/GR" at 15pt
-\font\freeAAT="FreeMonoTengwar/AAT" at 15pt
-\font\freeICU="FreeMonoTengwar/ICU" at 15pt
-\font\embedGR="FreeMonoTengwar/GR" at 15pt
-\font\embedAAT="FreeMonoTengwar/AAT" at 15pt
-\font\embedICU="FreeMonoTengwar/ICU" at 15pt
-\font\insertGR="FreeMonoTengwar/GR:212=1" at 15pt
-\font\insertAAT="FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion" at 15pt
-\font\embedGR="FreeMonoTengwar-embedding/GR" at 15pt
-\font\embedAAT="FreeMonoTengwar-embedding/AAT" at 15pt
-\font\embedICU="FreeMonoTengwar-embedding/ICU" at 15pt
+\font\freeGR="FreeMonoTengwar/GR" % at 15pt
+\font\freeAAT="FreeMonoTengwar/AAT"
+\font\freeICU="FreeMonoTengwar/ICU"
+\font\carriersGR="FreeMonoTengwar/GR:213=1"
+\font\carriersAAT="FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Carriers"
+\font\osseGR="FreeMonoTengwar/GR:214=1"
+\font\osseAAT="FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Osse"
+\font\embedGR="FreeMonoTengwar/GR"
+\font\embedAAT="FreeMonoTengwar/AAT"
+\font\embedICU="FreeMonoTengwar/ICU"
+\font\insertGR="FreeMonoTengwar/GR:212=1"
+\font\insertAAT="FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion"
+\font\embedGR="FreeMonoTengwar-embedding/GR"
+\font\embedAAT="FreeMonoTengwar-embedding/AAT"
+\font\embedICU="FreeMonoTengwar-embedding/ICU"
 
 \begin{document}
 
@@ -93,12 +95,46 @@
 
 \newpage
 
+\subsection{Diacritic Dots (for ‘Full Writing’)}
+
+\subsubsection{On Carriers}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:213=1"}}
+
+\carriersGR    
+
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Carriers"}}
+
+\carriersAAT    
+
+\subsubsection*{\texttt{"FreeMonoTengwar/ICU"}}
+
+\freeICU     
+
+
+\subsubsection{On Osse}
+
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:214=1"}}
+
+\osseGR    
+
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Osse"}}
+
+\osseAAT    
+
+\subsubsection*{\texttt{"FreeMonoTengwar/ICU"}}
+
+\freeICU     
+
+
+\newpage
+
 \subsection{Short carrier insertion}
 
 \subsubsection*{\texttt{"FreeMonoTengwar/GR:212=1"}}
 
 \insertGR      \normalfont Maximal number of tehtar:
-\insertGR  
+\insertGR  
 
 \newcommand{\combinationsrow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
 
@@ -117,7 +153,7 @@
 \subsubsection*{\texttt{"FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion"}}
 
 \insertAAT      \normalfont Maximal number of tehtar:
-\insertAAT  
+\insertAAT  
 
 \begin{tabular}{ c | c c c c c c c c}
 	\combinationsrow{} \hline

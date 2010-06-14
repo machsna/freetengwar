@@ -1,6 +1,6 @@
 // Graphite Description Language file for Tengwar Formal Unicode
 // Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-06-03
+// Version: 2010-06-14
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -31,13 +31,13 @@ table(feature)
 
   descwtengwa {
     id=204;
-    name.LG_USENG = string("Descending W-tengwa");
+    name.LG_USENG = string("Descending W-Tengwa");
     default = false;
   }
 
   ossetail {
     id=207;
-    name.LG_USENG = string("Marked Osse");
+    name.LG_USENG = string("Osse Hook");
     default = none;
     settings {
       none {
@@ -46,7 +46,7 @@ table(feature)
       }
       final {
         value=1;
-        name.LG_USENG = string("Word final");
+        name.LG_USENG = string("Word Final");
       }
       all {
         value=2;
@@ -57,7 +57,7 @@ table(feature)
 
   barstyle {
     id=209;
-    name.LG_USENG = string("Bar style");
+    name.LG_USENG = string("Bar Style");
     default = straight;
     settings {
       straight {
@@ -73,7 +73,7 @@ table(feature)
 
   atehtastyle {
     id=210;
-    name.LG_USENG = string("A-tehta style");
+    name.LG_USENG = string("A-Tehta Style");
     default = dots;
     settings {
       dots {
@@ -89,7 +89,7 @@ table(feature)
 
   sarincestyle {
     id=211;
-    name.LG_USENG = string("Sa-rince style");
+    name.LG_USENG = string("Sa-Rince Style");
     default = hook;
     settings {
       hook {
@@ -104,8 +104,8 @@ table(feature)
   }
 
   carrierdiacritic {
-    id=212;
-    name.LG_USENG = string("Carrier diacritic (for 'full writing')");
+    id=213;
+    name.LG_USENG = string("Carrier Diacritic (for 'Full Writing')");
     default = none;
     settings {
       none {
@@ -124,8 +124,8 @@ table(feature)
   }
 
   ossediacritic {
-    id=213;
-    name.LG_USENG = string("Osse diacritic (for 'full writing')");
+    id=214;
+    name.LG_USENG = string("Osse Diacritic (for 'Full Writing')");
     default = none;
     settings {
       none {
@@ -134,11 +134,11 @@ table(feature)
       }
       ambiguous {
         value=1;
-        name.LG_USENG = string("Dot on ambiguous osse");
+        name.LG_USENG = string("Dot on Ambiguous Osse");
       }
       every {
         value=2;
-        name.LG_USENG = string("Dot on every osse");
+        name.LG_USENG = string("Dot on Every Osse");
       }
     }
   }
