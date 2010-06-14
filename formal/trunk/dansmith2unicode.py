@@ -569,7 +569,7 @@ for char in outfont:
       outfont[char].references=tuple(removenestedrefs(char))
 
 outfont.selection.all()
-outfont.transform(psMat.scale(1.25))
+outfont.transform(psMat.scale(1.4))
 outfont.save("TengwarFormalUC.sfd")
 outfont=fontforge.open("TengwarFormalUC.sfd")
 outfont.generate("TengwarFormalUC_dumb.ttf")

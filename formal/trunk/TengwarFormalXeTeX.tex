@@ -2,35 +2,31 @@
 %&encoding=UTF-8 Unicode
 
 \documentclass[11pt,a4paper]{article}
-\usepackage{fontspec,hyperref}
-\usepackage{xltxtra}
-\pagestyle{empty}
-\frenchspacing
+\usepackage{fontspec,hyperref,xltxtra}
 
-\font\formalGR="Tengwar Formal Unicode/GR" at 15pt
-\font\formalAAT="Tengwar Formal Unicode/AAT" at 15pt
-\font\formalGRdescw="Tengwar Formal Unicode/GR:204=1" at 15pt
-\font\formalAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash" at 15pt
-\font\formalGRossefinal="Tengwar Formal Unicode/GR:207=1" at 15pt
-\font\formalAATossefinal="Tengwar Formal Unicode/AAT:Marked Osse=Word final" at 15pt
-\font\formalGRossealways="Tengwar Formal Unicode/GR:207=2" at 15pt
-\font\formalAATossealways="Tengwar Formal Unicode/AAT:Marked Osse=Always" at 15pt
-\font\formalGRtilde="Tengwar Formal Unicode/GR:209=1" at 15pt
-\font\formalAATtilde="Tengwar Formal Unicode/AAT:Bar style=Tilde" at 15pt
-\font\formalGRcircumflex="Tengwar Formal Unicode/GR:210=1" at 15pt
-\font\formalAATcircumflex="Tengwar Formal Unicode/AAT:A-tehta style=Circumflex" at 15pt
-\font\formalGRswash="Tengwar Formal Unicode/GR:211=1" at 15pt
-\font\formalAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash" at 15pt
-
-\font\formalGRcarrierdot="Tengwar Formal Unicode/GR:212=1" at 15pt
-\font\formalAATcarrierdot="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot" at 15pt
-\font\formalGRcarrieracute="Tengwar Formal Unicode/GR:212=2" at 15pt
-\font\formalAATcarrieracute="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute" at 15pt
-\font\formalGRosseambiguous="Tengwar Formal Unicode/GR:213=1" at 15pt
-\font\formalAATosseambiguous="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse" at 15pt
-\font\formalGRosseevery="Tengwar Formal Unicode/GR:213=2" at 15pt
-\font\formalAATosseevery="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse" at 15pt
-\font\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt
+\font\formalGR="Tengwar Formal Unicode/GR"
+\font\formalAAT="Tengwar Formal Unicode/AAT"
+\font\formalGRdescw="Tengwar Formal Unicode/GR:204=1"
+\font\formalAATdescw="Tengwar Formal Unicode/AAT:Character Alternatives=Descending W-tengwa;Sa-rince style=Swash"
+\font\formalGRossefinal="Tengwar Formal Unicode/GR:207=1"
+\font\formalAATossefinal="Tengwar Formal Unicode/AAT:Marked Osse=Word final"
+\font\formalGRossealways="Tengwar Formal Unicode/GR:207=2"
+\font\formalAATossealways="Tengwar Formal Unicode/AAT:Marked Osse=Always"
+\font\formalGRtilde="Tengwar Formal Unicode/GR:209=1"
+\font\formalAATtilde="Tengwar Formal Unicode/AAT:Bar style=Tilde"
+\font\formalGRcircumflex="Tengwar Formal Unicode/GR:210=1"
+\font\formalAATcircumflex="Tengwar Formal Unicode/AAT:A-tehta style=Circumflex"
+\font\formalGRswash="Tengwar Formal Unicode/GR:211=1"
+\font\formalAATswash="Tengwar Formal Unicode/AAT:Sa-rince style=Swash"
+\font\formalGRcarrierdot="Tengwar Formal Unicode/GR:212=1"
+\font\formalAATcarrierdot="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Dot"
+\font\formalGRcarrieracute="Tengwar Formal Unicode/GR:212=2"
+\font\formalAATcarrieracute="Tengwar Formal Unicode/AAT:Carrier diacritic (for 'full writing')=Acute"
+\font\formalGRosseambiguous="Tengwar Formal Unicode/GR:213=1"
+\font\formalAATosseambiguous="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on ambiguous osse"
+\font\formalGRosseevery="Tengwar Formal Unicode/GR:213=2"
+\font\formalAATosseevery="Tengwar Formal Unicode/AAT:Osse diacritic (for 'full writing')=Dot on every osse"
+\font\myformal="Tengwar Formal Unicode/GR:204=1;207=2"
 \font\tableGR="Tengwar Formal Unicode/GR"
 \font\tableAAT="Tengwar Formal Unicode/AAT"
 \font\tableGRdescw="Tengwar Formal Unicode/GR:204=1"
@@ -53,7 +49,7 @@ Here are samples of the different options. The options are specified by adding s
 
 \paragraph{} In this specification, the part \texttt{bla} is a string of your choice. On Mac OS X, the part \texttt{/GR} is optional. It tells \XeTeX{} to use the Graphite information. If you leave it away, it will use the AAT information, which only works on Mac OS X. Note that you can define as many features as you like:
 
-\paragraph{} \texttt{\char`\\font\char`\\myformal="Tengwar Formal Unicode/GR:204=1;207=2" at 15pt}
+\paragraph{} \texttt{\char`\\font\char`\\myformal="Tengwar Formal Unicode/GR:204=1;207=2"}
 
 \paragraph{} After this \texttt{\char`\\font} command has been defined, you can use \texttt{\char`\\myformal} as a command, for instance as follows:
 
