@@ -44,6 +44,7 @@ conlefttrunc=12; flat=13;
 ascend=14; descend=15; short=16; updown=17; capital=18; extended=19;
 lower=20; single=21; double=22; nuquerna=23; carrier=24;
 conrbot=25; conbbot=26;
+roomenarda=27;
 
 interpunctsize=1.1;
 

@@ -191,7 +191,6 @@ enddef;
 beginchr(whtengwa&".var1",1.0ten);
   draw_whtengwavarone(normal,normal);
 endchr;
-pause;
 
 def draw_whtengwavartwo(expr style) =
   padding(1.0pt,0.65pt);
@@ -230,7 +229,6 @@ enddef;
 beginchr(whtengwa&".var2",1.0ten);
   draw_whtengwavartwo(normal);
 endchr;
-pause;
 
 def draw_whtengwavarthree(expr style) =
   padding(0.3pt,0.42pt);
@@ -270,7 +268,6 @@ enddef;
 beginchr(whtengwa,1.2ten);
   draw_whtengwavarthree(normal);
 endchr;
-pause;
 
 def draw_whtengwavarfour(expr style) =
   padding(0.5pt,0.5pt);
@@ -290,7 +287,6 @@ enddef;
 beginchr(whtengwa&".var4",1.5ten);
   draw_whtengwavarfour(normal);
 endchr;
-pause;
 
 def draw_whtengwavarfive =
   padding(0.6pt,0.6pt);
@@ -472,6 +468,8 @@ def draw_roomen(expr style, number, secstyle, nuquerna) =
     p3=z10{dir(a10-10)}..z11{dir(a10+10)}..z12;
     draw_stroke(p3,ap3);
   fi
+  setap("sarinceap",z9); apt(ps.n,lastap).forgd:=false;
+  roomensarincepenangle:=a9;
   setap("uap",(1/2[lpad,w-rpad],tex+apy));
   setap("cap",(0.55[x3,x5],0.55tex));
   setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
@@ -694,7 +692,6 @@ enddef;
 beginchr(silme,1ten);
   draw_silme(leftside,normal,false);
 endchr;
-pause;
 beginchr(silme&".flat",1ten);
   draw_silme(leftside,flat,false);
 endchr;
@@ -715,7 +712,6 @@ endchr;
 beginchr(silmenuq,1ten);
   draw_silme(rightside,nuquerna,false);
 endchr;
-pause;
 %beginchr(silmenuq,1ten);
 %  draw_silme(rightside,normal,false);
 %endchr;
@@ -828,7 +824,6 @@ enddef;
 beginchr(aare,1ten);
   draw_aare(leftside,normal);
 endchr;
-pause;
 beginchr(aare&".flat",1ten);
   draw_aare(leftside,flat);
 endchr;
@@ -838,7 +833,6 @@ endchr;
 beginchr(aarenuq,1ten);
   draw_aare(rightside,nuquerna);
 endchr;
-pause;
 %beginchr(aarenuq,1ten);
 %  draw_aare(rightside,normal);
 %endchr;
@@ -998,11 +992,9 @@ enddef;
 beginchr(hwestasin,1.5ten);
   draw_hwestasin(ascend);
 endchr;
-pause;
 beginchr(vaiya,1.4ten);
   draw_hwestasin(short);
 endchr;
-pause;
 
 def draw_angwhtengwa =
   padding(0.0pt,0.7pt);
@@ -1048,13 +1040,23 @@ def draw_sarince(expr style) =
   elseif style=lower:
     a1=conpenangle11; use(a1); lft z1=conpoint11;
     draw_connection(11,1,true);
+  elseif style=roomenarda:
+    z1=apt(roomen,"sarinceap").pt-(psc(roomen).width,0);
+    a1=roomensarincepenangle;
   fi
-  a2=a1; a3=a4=a5=35;
-  use(a2); x2=x3-1.5pt; y2=y1;
+  if style=roomenarda:
+    a2=35;
+    y2=ypart(conpoint11);
+  else:
+    a2=a1;
+    y2=y1;
+  fi;
+  x2=x3-1.5pt;
+  a3=a4=a5=35;
   z3=(w-rpad,0.42[y2,y4]);
-  z4=(1.1[x3,x2],if style=normal: 0.15tex elseif style=lower: -0.7tdesc fi);
+  z4=(1.1[x3,x2],if style=normal: 0.15tex else: -0.7tdesc fi);
   z5=z4+0.9pt*dir(180-30);
-  p1=z1{right}..z2..z3{down}..z4{left}..z5; ap1=ang(a1..a2..a3..a4..a5);
+  p1=z1{if style=roomenarda: dir a1 else: right fi}..z2..z3{down}..z4{left}..z5; ap1=ang(a1..a2..a3..a4..a5);
   draw_stroke(p1,ap1);
   use(a2); setap("uap",(0.40w,top y2+0.5pt));
   setap("cap",(x2,1/2tex));
@@ -1066,6 +1068,13 @@ endchr;
 beginchr(sarince&".high",1.0ten);
   draw_sarince(normal);
 endchr;
+beginchr(sarince&".roomen",1.0ten);
+  draw_sarince(roomenarda);
+endchr;
+%beginrefchr("roomensarince",psc(roomen).width+psc(sarince&".roomen").width);
+%  attach(roomen,"origo","origo");
+%  attach(sarince&".roomen","right","origo");
+%endchr;
 
 def draw_conncarr(expr style) =
   padding(1.1pt,0);
