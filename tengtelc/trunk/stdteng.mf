@@ -753,301 +753,209 @@ endchr;
 forgd:=true;
 unlinkreferences:=true;
 
-def build_tengwa(expr s, f, a, p) =
-  beginrefchr(s,xpart(apt(f,p).pt-apt(a,p).pt)+psc(a).width);
-    attach(f,"origo","origo");
-    attach(a,p,p);
+def build_tteematengwa(expr s, t, l, uap, dap) =
+  beginrefchr(s,xpart(apt(t,"lluuvap").pt-apt(l,"lluuvap").pt)+psc(l).width);
+    attach(t,"origo","origo");
+    attach(l,"lluuvap","lluuvap");
+    setap("uap",apt(ps.n,uap).pt);
+    setap("dap",apt(ps.n,dap).pt);
+  endchr;
 enddef;
-
-def set_tinco_aps =
-  setap("uap",apt(ps.n,"luuvaluap").pt);
-  setap("dap",apt(ps.n,"luuvardap").pt);
+def build_pteematengwa(expr s, t, f, l, uap, dap) =
+  beginrefchr(s,xpart(apt(t,"lbarap").pt-apt(f,"lbarap").pt)+psc(f).width);
+    attach(t,"origo","origo");
+    attach(f,"lbarap","lbarap");
+    attach(l,"lluuvap","lluuvap");
+    setap("uap",apt(ps.n,uap).pt);
+    setap("dap",apt(ps.n,dap).pt);
+  endchr;
 enddef;
-build_tengwa(tinco,"telco_leftdown","teema1luuva","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(tinco&".conr","telco_leftdown","teema1luuva_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(tinco&".conl","telco_leftdown_conl","teema1luuva","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(tinco&".conb","telco_leftdown_conl","teema1luuva_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(tinco&".dec","captelco_leftdown","capteema1luuva","lluuvap"); set_tinco_aps; endchr;
-
-build_tengwa(ando,"telco_leftdown","teema1luuvar","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(ando&".conr","telco_leftdown","teema1luuvar_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(ando&".conl","telco_leftdown_conl","teema1luuvar","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(ando&".conb","telco_leftdown_conl","teema1luuvar_conr","lluuvap"); set_tinco_aps; endchr;
-build_tengwa(ando&".dec","captelco_leftdown","capteema1luuvar","lluuvap"); set_tinco_aps; endchr;
-
-def set_thuule_aps =
-  setap("uap",apt(ps.n,"luuvaruap").pt);
-  setap("dap",apt(ps.n,"luuvaldap").pt);
+def build_cteematengwa(expr s, l, t, uap, dap) =
+  beginrefchr(s,xpart(apt(l,"rluuvap").pt-apt(t,"rluuvap").pt)+psc(t).width);
+    attach(l,"origo","origo");
+    attach(t,"rluuvap","rluuvap");
+    setap("uap",apt(ps.n,uap).pt);
+    setap("dap",apt(ps.n,dap).pt);
+  endchr;
 enddef;
-build_tengwa(thuule,"telco_leftup","teema1luuva","lluuvap"); set_thuule_aps; endchr;
-pause;
-build_tengwa(thuule&".conr","telco_leftup","teema1luuva_conr","lluuvap"); set_thuule_aps; endchr;
-build_tengwa(thuule&".dec","captelco_leftup","capteema1luuva","lluuvap"); set_thuule_aps; endchr;
-
-build_tengwa(anto,"telco_leftup","teema1luuvar","lluuvap"); set_thuule_aps; endchr;
-build_tengwa(anto&".conr","telco_leftup","teema1luuvar_conr","lluuvap"); set_thuule_aps; endchr;
-build_tengwa(anto&".dec","captelco_leftup","capteema1luuvar","lluuvap"); set_thuule_aps; endchr;
-
-def set_oore_aps =
-  setap("uap",apt(ps.n,"luuvaluap").pt);
-  setap("dap",apt(ps.n,"luuvaldap").pt);
-enddef;
-build_tengwa(oore,"telco_leftshort","teema1luuva","lluuvap"); set_oore_aps; endchr;
-pause;
-build_tengwa(oore&".conr","telco_leftshort","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(oore&".conl","telco_leftshort_conl","teema1luuva","lluuvap"); set_oore_aps; endchr;
-build_tengwa(oore&".conb","telco_leftshort_conl","teema1luuva_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(oore&".dec","captelco_leftshort","capteema1luuva","lluuvap"); set_oore_aps; endchr;
-
-build_tengwa(nuumen,"telco_leftshort","teema1luuvar","lluuvap"); set_oore_aps; endchr;
-build_tengwa(nuumen&".conr","telco_leftshort","teema1luuvar_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(nuumen&".conl","telco_leftshort_conl","teema1luuvar","lluuvap"); set_oore_aps; endchr;
-build_tengwa(nuumen&".conb","telco_leftshort_conl","teema1luuvar_conr","lluuvap"); set_oore_aps; endchr;
-build_tengwa(nuumen&".dec","captelco_leftshort","capteema1luuvar","lluuvap"); set_oore_aps; endchr;
-
-def set_extthuule_aps =
-  setap("uap",apt(ps.n,"luuvaruap").pt);
-  setap("dap",apt(ps.n,"luuvardap").pt);
-enddef;
-build_tengwa(extthuule,"telco_leftext","teema1luuva","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extthuule&".conr","telco_leftext","teema1luuva_conr","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extthuule&".dec","captelco_leftext","capteema1luuva","lluuvap"); set_extthuule_aps; endchr;
-
-build_tengwa(extanto,"telco_leftext","teema1luuvar","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extanto&".conr","telco_leftext","teema1luuvar_conr","lluuvap"); set_extthuule_aps; endchr;
-build_tengwa(extanto&".dec","captelco_leftext","capteema1luuvar","lluuvap"); set_extthuule_aps; endchr;
-
-def set_parma_aps =
-  attach("teema2luuva","lluuvap","lluuvap");
-  set_tinco_aps;
-enddef;
-build_tengwa(parma,"telco_leftdown","closingbar_low1","lbarap"); set_parma_aps; endchr;
-build_tengwa(parma&".conr","telco_leftdown","closingbar_low1_conr","lbarap"); set_parma_aps; endchr;
-build_tengwa(parma&".conl","telco_leftdown_conl","closingbar_low1","lbarap"); set_parma_aps; endchr;
-build_tengwa(parma&".conb","telco_leftdown_conl","closingbar_low1_conr","lbarap"); set_parma_aps; endchr;
-build_tengwa(parma&".dec","captelco_leftdown","closingbar_low1","lbarap");
-  attach("capteema2luuva","lluuvap","lluuvap");
-  set_tinco_aps;
-endchr;
-
-def set_umbar_aps =
-  attach("teema2luuvar","lluuvap","lluuvap");
-  set_tinco_aps;
-enddef;
-build_tengwa(umbar,"telco_leftdown","closingbar_low3","lbarap"); set_umbar_aps; endchr;
-build_tengwa(umbar&".conr","telco_leftdown","closingbar_low3_conr","lbarap"); set_umbar_aps; endchr;
-build_tengwa(umbar&".conl","telco_leftdown_conl","closingbar_low3","lbarap"); set_umbar_aps; endchr;
-build_tengwa(umbar&".conb","telco_leftdown_conl","closingbar_low3_conr","lbarap"); set_umbar_aps; endchr;
-build_tengwa(umbar&".dec","captelco_leftdown","closingbar_low3","lbarap");
-  attach("capteema2luuvar","lluuvap","lluuvap");
-  set_tinco_aps;
-endchr;
-
-def set_formen_aps =
-  attach("teema2luuva","lluuvap","lluuvap");
-  set_thuule_aps;
-enddef;
-build_tengwa(formen,"telco_leftup","closingbar_low2","lbarap"); set_formen_aps; endchr;
-build_tengwa(formen&".conr","telco_leftup","closingbar_low2_conr","lbarap"); set_formen_aps; endchr;
-build_tengwa(formen&".dec","captelco_leftup2","closingbar_low2","lbarap");
-  attach("capteema2luuva","lluuvap","lluuvap");
-  set_thuule_aps;
-endchr;
-
-def set_ampa_aps =
-  attach("teema2luuvar","lluuvap","lluuvap");
-  set_thuule_aps;
-enddef;
-build_tengwa(ampa,"telco_leftup","closingbar_low4","lbarap"); set_ampa_aps; endchr;
-build_tengwa(ampa&".conr","telco_leftup","closingbar_low4_conr","lbarap"); set_ampa_aps; endchr;
-build_tengwa(ampa&".dec","captelco_leftup2","closingbar_low4","lbarap");
-  attach("capteema2luuvar","lluuvap","lluuvap");
-  set_thuule_aps;
-endchr;
-
-def set_vala_aps =
-  attach("teema2luuva","lluuvap","lluuvap");
-  set_oore_aps;
-enddef;
-build_tengwa(vala,"telco_leftshort","closingbar_low2","lbarap"); set_vala_aps; endchr;
-build_tengwa(vala&".conr","telco_leftshort","closingbar_low2_conr","lbarap"); set_vala_aps; endchr;
-build_tengwa(vala&".conl","telco_leftshort_conl","closingbar_low2","lbarap"); set_vala_aps; endchr;
-build_tengwa(vala&".conb","telco_leftshort_conl","closingbar_low2_conr","lbarap"); set_vala_aps; endchr;
-build_tengwa(vala&".dec","captelco_leftshort2","closingbar_low2","lbarap");
-  attach("capteema2luuva","lluuvap","lluuvap");
-  set_oore_aps;
-endchr;
-
-def set_malta_aps =
-  attach("teema2luuvar","lluuvap","lluuvap");
-  set_oore_aps;
-enddef;
-build_tengwa(malta,"telco_leftshort","closingbar_low4","lbarap"); set_malta_aps; endchr;
-build_tengwa(malta&".conr","telco_leftshort","closingbar_low4_conr","lbarap"); set_malta_aps; endchr;
-build_tengwa(malta&".conl","telco_leftshort_conl","closingbar_low4","lbarap"); set_malta_aps; endchr;
-build_tengwa(malta&".conb","telco_leftshort_conl","closingbar_low4_conr","lbarap"); set_malta_aps; endchr;
-build_tengwa(malta&".dec","captelco_leftshort2","closingbar_low4","lbarap");
-  attach("capteema2luuvar","lluuvap","lluuvap");
-  set_oore_aps;
-endchr;
-
-def set_extformen_aps =
-  attach("teema2luuva","lluuvap","lluuvap");
-  set_extthuule_aps;
-enddef;
-build_tengwa(extformen,"telco_leftext","closingbar_low1","lbarap"); set_extformen_aps; endchr;
-build_tengwa(extformen&".conr","telco_leftext","closingbar_low1_conr","lbarap"); set_extformen_aps; endchr;
-build_tengwa(extformen&".dec","captelco_leftext","closingbar_low1","lbarap");
-  attach("capteema2luuva","lluuvap","lluuvap");
-  set_extthuule_aps;
-endchr;
-
-def set_extampa_aps =
-  attach("teema2luuvar","lluuvap","lluuvap");
-  set_extthuule_aps;
-enddef;
-build_tengwa(extampa,"telco_leftext","closingbar_low3","lbarap"); set_extampa_aps; endchr;
-build_tengwa(extampa&".conr","telco_leftext","closingbar_low3_conr","lbarap"); set_extampa_aps; endchr;
-build_tengwa(extampa&".dec","captelco_leftext","closingbar_low3","lbarap");
-  attach("capteema2luuvar","lluuvap","lluuvap");
-  set_extthuule_aps;
-endchr;
-
-
-def set_calma_aps =
-  setap("uap",apt(ps.n,"luuvaruap").pt);
-  setap("dap",apt(ps.n,"luuvaldap").pt);
-enddef;
-build_tengwa(calma,"teema3luuva","telco_rightdown","rluuvap"); set_calma_aps; endchr;
-pause;
-build_tengwa(calma&".conr","teema3luuva","telco_rightdown_conr","rluuvap"); set_calma_aps; endchr;
-build_tengwa(calma&".dec","capteema3luuva","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
-
-build_tengwa(anga,"teema3luuvar","telco_rightdown","rluuvap"); set_calma_aps; endchr;
-build_tengwa(anga&".conr","teema3luuvar","telco_rightdown_conr","rluuvap"); set_calma_aps; endchr;
-build_tengwa(anga&".dec","capteema3luuvar","captelco_rightdown1","rluuvap"); set_calma_aps; endchr;
-
-def set_harma_aps =
-  setap("uap",apt(ps.n,"luuvaluap").pt);
-  setap("dap",apt(ps.n,"luuvardap").pt);
-enddef;
-build_tengwa(harma,"teema3luuva","telco_rightup","rluuvap"); set_harma_aps; endchr;
-build_tengwa(harma&".conr","teema3luuva","telco_rightup_conr","rluuvap"); set_harma_aps; endchr;
-build_tengwa(harma&".dec","capteema3luuva","captelco_rightup","rluuvap"); set_harma_aps; endchr;
-
-build_tengwa(anca,"teema3luuvar","telco_rightup","rluuvap"); set_harma_aps; endchr;
-build_tengwa(anca&".conr","teema3luuvar","telco_rightup_conr","rluuvap"); set_harma_aps; endchr;
-build_tengwa(anca&".dec","capteema3luuvar","captelco_rightup","rluuvap"); set_harma_aps; endchr;
-
-def set_anna_aps =
-  setap("uap",apt(ps.n,"luuvaruap").pt);
-  setap("dap",apt(ps.n,"luuvardap").pt);
-enddef;
-build_tengwa(anna,"teema3luuva","telco_rightshort","rluuvap"); set_anna_aps; endchr;
-build_tengwa(anna&".conr","teema3luuva","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
-build_tengwa(anna&".dec","capteema3luuva","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
-build_tengwa(anna&".conrbot","teema3luuva","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
-
-build_tengwa(noldo,"teema3luuvar","telco_rightshort","rluuvap"); set_anna_aps; endchr;
-build_tengwa(noldo&".conr","teema3luuvar","telco_rightshort_conr","rluuvap"); set_anna_aps; endchr;
-build_tengwa(noldo&".dec","capteema3luuvar","captelco_rightshort1","rluuvap"); set_anna_aps; endchr;
-build_tengwa(noldo&".conrbot","teema3luuvar","telco_rightshort_conrbot","rluuvap"); set_anna_aps; endchr;
-
-def set_extharma_aps =
-  setap("uap",apt(ps.n,"luuvaluap").pt);
-  setap("dap",apt(ps.n,"luuvaldap").pt);
-enddef;
-build_tengwa(extharma,"teema3luuva","telco_rightext","rluuvap"); set_extharma_aps; endchr;
-build_tengwa(extharma&".dec","capteema3luuva","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
-
-build_tengwa(extanca,"teema3luuvar","telco_rightext","rluuvap"); set_extharma_aps; endchr;
-build_tengwa(extanca&".dec","capteema3luuvar","captelco_rightext","rluuvap"); set_extharma_aps; endchr;
-
-
-def build_qteematengwa(expr s, f, t, l) =
+def build_qteematengwa(expr s, f, t, l, uap, dap) =
   beginrefchr(s,psc(f).width);
     attach(f,"origo","origo");
     attach(t,"rbarap","rbarap");
     attach(l,"rluuvap","rluuvap");
+    setap("uap",apt(ps.n,uap).pt);
+    setap("dap",apt(ps.n,dap).pt);
+  endchr;
+enddef;
+def build_qteematengwab(expr s, f, t, l, uap, dap) =
+  beginrefchr(s,xpart(apt(f,"rbarap").pt-apt(t,"rbarap").pt)+psc(t).width);
+    attach(f,"origo","origo");
+    attach(t,"rbarap","rbarap");
+    attach(l,"rluuvap","rluuvap");
+    setap("uap",apt(ps.n,uap).pt);
+    setap("dap",apt(ps.n,dap).pt);
+  endchr;
 enddef;
 
-build_qteematengwa(quesse,"closingbar_high2","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
-pause;
-build_qteematengwa(quesse&".conl","closingbar_high2_conl","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse&".conr","closingbar_high2_conr","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse&".conb","closingbar_high2_conb","telco_rightdown2","teema4luuva"); set_calma_aps; endchr;
-build_qteematengwa(quesse&".dec","capclosingbar_high2","captelco_rightdown2","capteema4luuva"); set_calma_aps; endchr;
+build_tteematengwa(tinco,"telco_leftdown","teema1luuva","luuvaluap","luuvardap");
+build_tteematengwa(tinco&".conr","telco_leftdown","teema1luuva_conr","luuvaluap","luuvardap");
+build_tteematengwa(tinco&".conl","telco_leftdown_conl","teema1luuva","luuvaluap","luuvardap");
+build_tteematengwa(tinco&".conb","telco_leftdown_conl","teema1luuva_conr","luuvaluap","luuvardap");
+build_tteematengwa(tinco&".dec","captelco_leftdown","capteema1luuva","luuvaluap","luuvardap");
 
-build_qteematengwa(ungwe,"closingbar_high4","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
-pause;
-build_qteematengwa(ungwe&".conl","closingbar_high4_conl","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe&".conr","closingbar_high4_conr","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe&".conb","closingbar_high4_conb","telco_rightdown2","teema4luuvar"); set_calma_aps; endchr;
-build_qteematengwa(ungwe&".dec","capclosingbar_high4","captelco_rightdown2","capteema4luuvar"); set_calma_aps; endchr;
+build_tteematengwa(ando,"telco_leftdown","teema1luuvar","luuvaluap","luuvardap");
+build_tteematengwa(ando&".conr","telco_leftdown","teema1luuvar_conr","luuvaluap","luuvardap");
+build_tteematengwa(ando&".conl","telco_leftdown_conl","teema1luuvar","luuvaluap","luuvardap");
+build_tteematengwa(ando&".conb","telco_leftdown_conl","teema1luuvar_conr","luuvaluap","luuvardap");
+build_tteematengwa(ando&".dec","captelco_leftdown","capteema1luuvar","luuvaluap","luuvardap");
 
-def set_hwesta_aps =
-  attach("teema4luuva","rluuvap","rluuvap");
-  set_harma_aps;
-enddef;
-build_tengwa(hwesta,"closingbar_high1","telco_rightup","rbarap"); set_hwesta_aps; endchr;
-build_tengwa(hwesta&".conr","closingbar_high1","telco_rightup_conr","rbarap"); set_hwesta_aps; endchr;
-build_tengwa(hwesta&".conl","closingbar_high1_conl","telco_rightup","rbarap"); set_hwesta_aps; endchr;
-build_tengwa(hwesta&".conb","closingbar_high1_conl","telco_rightup_conr","rbarap"); set_hwesta_aps; endchr;
-build_tengwa(hwesta&".dec","capclosingbar_high1","captelco_rightup","rbarap");
-  attach("capteema4luuva","rluuvap","rluuvap");
-  set_harma_aps;
-endchr;
+build_tteematengwa(thuule,"telco_leftup","teema1luuva","luuvaruap","luuvaldap");
+build_tteematengwa(thuule&".conr","telco_leftup","teema1luuva_conr","luuvaruap","luuvaldap");
+build_tteematengwa(thuule&".dec","captelco_leftup","capteema1luuva","luuvaruap","luuvaldap");
 
-def set_unque_aps =
-  attach("teema4luuvar","rluuvap","rluuvap");
-  set_harma_aps;
-enddef;
-build_tengwa(unque,"closingbar_high3","telco_rightup","rbarap"); set_unque_aps; endchr;
-build_tengwa(unque&".conr","closingbar_high3","telco_rightup_conr","rbarap"); set_unque_aps; endchr;
-build_tengwa(unque&".conl","closingbar_high3_conl","telco_rightup","rbarap"); set_unque_aps; endchr;
-build_tengwa(unque&".conb","closingbar_high3_conl","telco_rightup_conr","rbarap"); set_unque_aps; endchr;
-build_tengwa(unque&".dec","capclosingbar_high3","captelco_rightup","rbarap");
-  attach("capteema4luuvar","rluuvap","rluuvap");
-  set_harma_aps;
-endchr;
+build_tteematengwa(anto,"telco_leftup","teema1luuvar","luuvaruap","luuvaldap");
+build_tteematengwa(anto&".conr","telco_leftup","teema1luuvar_conr","luuvaruap","luuvaldap");
+build_tteematengwa(anto&".dec","captelco_leftup","capteema1luuvar","luuvaruap","luuvaldap");
 
-build_qteematengwa(vilya,"closingbar_high2","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".conl","closingbar_high2_conl","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".conr","closingbar_high2_conr","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".conb","closingbar_high2_conb","telco_rightshort2","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".dec","capclosingbar_high2","captelco_rightshort2","capteema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".conrbot","closingbar_high2","telco_rightshort2_conrbot","teema4luuva"); set_anna_aps; endchr;
-build_qteematengwa(vilya&".conbbot","closingbar_high2_conl","telco_rightshort2_conrbot","teema4luuva"); set_anna_aps; endchr;
+build_tteematengwa(oore,"telco_leftshort","teema1luuva","luuvaluap","luuvaldap");
+build_tteematengwa(oore&".conr","telco_leftshort","teema1luuva_conr","luuvaluap","luuvaldap");
+build_tteematengwa(oore&".conl","telco_leftshort_conl","teema1luuva","luuvaluap","luuvaldap");
+build_tteematengwa(oore&".conb","telco_leftshort_conl","teema1luuva_conr","luuvaluap","luuvaldap");
+build_tteematengwa(oore&".dec","captelco_leftshort","capteema1luuva","luuvaluap","luuvaldap");
 
-build_qteematengwa(nwalme,"closingbar_high4","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".conl","closingbar_high4_conl","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".conr","closingbar_high4_conr","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".conb","closingbar_high4_conb","telco_rightshort2","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".dec","capclosingbar_high4","captelco_rightshort2","capteema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".conrbot","closingbar_high4","telco_rightshort2_conrbot","teema4luuvar"); set_anna_aps; endchr;
-build_qteematengwa(nwalme&".conbbot","closingbar_high4_conl","telco_rightshort2_conrbot","teema4luuvar"); set_anna_aps; endchr;
+build_tteematengwa(nuumen,"telco_leftshort","teema1luuvar","luuvaluap","luuvaldap");
+build_tteematengwa(nuumen&".conr","telco_leftshort","teema1luuvar_conr","luuvaluap","luuvaldap");
+build_tteematengwa(nuumen&".conl","telco_leftshort_conl","teema1luuvar","luuvaluap","luuvaldap");
+build_tteematengwa(nuumen&".conb","telco_leftshort_conl","teema1luuvar_conr","luuvaluap","luuvaldap");
+build_tteematengwa(nuumen&".dec","captelco_leftshort","capteema1luuvar","luuvaluap","luuvaldap");
 
-def set_exthwesta_aps =
-  attach("teema4luuva","rluuvap","rluuvap");
-  set_extharma_aps;
-enddef;
-build_tengwa(exthwesta,"closingbar_high1","telco_rightext","rbarap"); set_exthwesta_aps; endchr;
-build_tengwa(exthwesta&".conl","closingbar_high1_conl","telco_rightext","rbarap"); set_exthwesta_aps; endchr;
-build_tengwa(exthwesta&".dec","capclosingbar_high1","captelco_rightext","rbarap");
-  attach("capteema4luuva","rluuvap","rluuvap");
-  set_extharma_aps;
-endchr;
+build_tteematengwa(extthuule,"telco_leftext","teema1luuva","luuvaruap","luuvardap");
+build_tteematengwa(extthuule&".conr","telco_leftext","teema1luuva_conr","luuvaruap","luuvardap");
+build_tteematengwa(extthuule&".dec","captelco_leftext","capteema1luuva","luuvaruap","luuvardap");
 
-def set_extunque_aps =
-  attach("teema4luuvar","rluuvap","rluuvap");
-  set_extharma_aps;
-enddef;
-build_tengwa(extunque,"closingbar_high3","telco_rightext","rbarap"); set_extunque_aps; endchr;
-build_tengwa(extunque&".conl","closingbar_high3_conl","telco_rightext","rbarap"); set_extunque_aps; endchr;
-build_tengwa(extunque&".dec","capclosingbar_high3","captelco_rightext","rbarap");
-  attach("capteema4luuvar","rluuvap","rluuvap");
-  set_extharma_aps;
-endchr;
+build_tteematengwa(extanto,"telco_leftext","teema1luuvar","luuvaruap","luuvardap");
+build_tteematengwa(extanto&".conr","telco_leftext","teema1luuvar_conr","luuvaruap","luuvardap");
+build_tteematengwa(extanto&".dec","captelco_leftext","capteema1luuvar","luuvaruap","luuvardap");
+
+build_pteematengwa(parma,"telco_leftdown","closingbar_low1","teema2luuva","luuvaluap","luuvardap");
+build_pteematengwa(parma&".conr","telco_leftdown","closingbar_low1_conr","teema2luuva","luuvaluap","luuvardap");
+build_pteematengwa(parma&".conl","telco_leftdown_conl","closingbar_low1","teema2luuva","luuvaluap","luuvardap");
+build_pteematengwa(parma&".conb","telco_leftdown_conl","closingbar_low1_conr","teema2luuva","luuvaluap","luuvardap");
+build_pteematengwa(parma&".dec","captelco_leftdown","closingbar_low1","capteema2luuva","luuvaluap","luuvardap");
+
+build_pteematengwa(umbar,"telco_leftdown","closingbar_low3","teema2luuvar","luuvaluap","luuvardap");
+build_pteematengwa(umbar&".conr","telco_leftdown","closingbar_low3_conr","teema2luuvar","luuvaluap","luuvardap");
+build_pteematengwa(umbar&".conl","telco_leftdown_conl","closingbar_low3","teema2luuvar","luuvaluap","luuvardap");
+build_pteematengwa(umbar&".conb","telco_leftdown_conl","closingbar_low3_conr","teema2luuvar","luuvaluap","luuvardap");
+build_pteematengwa(umbar&".dec","captelco_leftdown","closingbar_low3","capteema2luuvar","luuvaluap","luuvardap");
+
+build_pteematengwa(formen,"telco_leftup","closingbar_low2","teema2luuva","luuvaruap","luuvaldap");
+build_pteematengwa(formen&".conr","telco_leftup","closingbar_low2_conr","teema2luuva","luuvaruap","luuvaldap");
+build_pteematengwa(formen&".dec","captelco_leftup2","closingbar_low2","capteema2luuva","luuvaruap","luuvaldap");
+
+build_pteematengwa(ampa,"telco_leftup","closingbar_low4","teema2luuvar","luuvaruap","luuvaldap");
+build_pteematengwa(ampa&".conr","telco_leftup","closingbar_low4_conr","teema2luuvar","luuvaruap","luuvaldap");
+build_pteematengwa(ampa&".dec","captelco_leftup2","closingbar_low4","capteema2luuvar","luuvaruap","luuvaldap");
+
+build_pteematengwa(vala,"telco_leftshort","closingbar_low2","teema2luuva","luuvaluap","luuvaldap");
+build_pteematengwa(vala&".conr","telco_leftshort","closingbar_low2_conr","teema2luuva","luuvaluap","luuvaldap");
+build_pteematengwa(vala&".conl","telco_leftshort_conl","closingbar_low2","teema2luuva","luuvaluap","luuvaldap");
+build_pteematengwa(vala&".conb","telco_leftshort_conl","closingbar_low2_conr","teema2luuva","luuvaluap","luuvaldap");
+build_pteematengwa(vala&".dec","captelco_leftshort2","closingbar_low2","capteema2luuva","luuvaluap","luuvaldap");
+
+build_pteematengwa(malta,"telco_leftshort","closingbar_low4","teema2luuvar","luuvaluap","luuvaldap");
+build_pteematengwa(malta&".conr","telco_leftshort","closingbar_low4_conr","teema2luuvar","luuvaluap","luuvaldap");
+build_pteematengwa(malta&".conl","telco_leftshort_conl","closingbar_low4","teema2luuvar","luuvaluap","luuvaldap");
+build_pteematengwa(malta&".conb","telco_leftshort_conl","closingbar_low4_conr","teema2luuvar","luuvaluap","luuvaldap");
+build_pteematengwa(malta&".dec","captelco_leftshort2","closingbar_low4","capteema2luuvar","luuvaluap","luuvaldap");
+
+build_pteematengwa(extformen,"telco_leftext","closingbar_low1","teema2luuva","luuvaruap","luuvardap");
+build_pteematengwa(extformen&".conr","telco_leftext","closingbar_low1_conr","teema2luuva","luuvaruap","luuvardap");
+build_pteematengwa(extformen&".dec","captelco_leftext","closingbar_low1","capteema2luuva","luuvaruap","luuvardap");
+
+build_pteematengwa(extampa,"telco_leftext","closingbar_low3","teema2luuvar","luuvaruap","luuvardap");
+build_pteematengwa(extampa&".conr","telco_leftext","closingbar_low3_conr","teema2luuvar","luuvaruap","luuvardap");
+build_pteematengwa(extampa&".dec","captelco_leftext","closingbar_low3","capteema2luuvar","luuvaruap","luuvardap");
+
+build_cteematengwa(calma,"teema3luuva","telco_rightdown","luuvaruap","luuvaldap");
+build_cteematengwa(calma&".conr","teema3luuva","telco_rightdown_conr","luuvaruap","luuvaldap");
+build_cteematengwa(calma&".dec","capteema3luuva","captelco_rightdown1","luuvaruap","luuvaldap");
+
+build_cteematengwa(anga,"teema3luuvar","telco_rightdown","luuvaruap","luuvaldap");
+build_cteematengwa(anga&".conr","teema3luuvar","telco_rightdown_conr","luuvaruap","luuvaldap");
+build_cteematengwa(anga&".dec","capteema3luuvar","captelco_rightdown1","luuvaruap","luuvaldap");
+
+build_cteematengwa(harma,"teema3luuva","telco_rightup","luuvaluap","luuvardap");
+build_cteematengwa(harma&".conr","teema3luuva","telco_rightup_conr","luuvaluap","luuvardap");
+build_cteematengwa(harma&".dec","capteema3luuva","captelco_rightup","luuvaluap","luuvardap");
+
+build_cteematengwa(anca,"teema3luuvar","telco_rightup","luuvaluap","luuvardap");
+build_cteematengwa(anca&".conr","teema3luuvar","telco_rightup_conr","luuvaluap","luuvardap");
+build_cteematengwa(anca&".dec","capteema3luuvar","captelco_rightup","luuvaluap","luuvardap");
+
+build_cteematengwa(anna,"teema3luuva","telco_rightshort","luuvaruap","luuvardap");
+build_cteematengwa(anna&".conr","teema3luuva","telco_rightshort_conr","luuvaruap","luuvardap");
+build_cteematengwa(anna&".dec","capteema3luuva","captelco_rightshort1","luuvaruap","luuvardap");
+build_cteematengwa(anna&".conrbot","teema3luuva","telco_rightshort_conrbot","luuvaruap","luuvardap");
+
+build_cteematengwa(noldo,"teema3luuvar","telco_rightshort","luuvaruap","luuvardap");
+build_cteematengwa(noldo&".conr","teema3luuvar","telco_rightshort_conr","luuvaruap","luuvardap");
+build_cteematengwa(noldo&".dec","capteema3luuvar","captelco_rightshort1","luuvaruap","luuvardap");
+build_cteematengwa(noldo&".conrbot","teema3luuvar","telco_rightshort_conrbot","luuvaruap","luuvardap");
+
+build_cteematengwa(extharma,"teema3luuva","telco_rightext","luuvaluap","luuvaldap");
+build_cteematengwa(extharma&".dec","capteema3luuva","captelco_rightext","luuvaluap","luuvaldap");
+
+build_cteematengwa(extanca,"teema3luuvar","telco_rightext","luuvaluap","luuvaldap");
+build_cteematengwa(extanca&".dec","capteema3luuvar","captelco_rightext","luuvaluap","luuvaldap");
+
+build_qteematengwa(quesse,"closingbar_high2","telco_rightdown2","teema4luuva","luuvaruap","luuvaldap");
+build_qteematengwa(quesse&".conl","closingbar_high2_conl","telco_rightdown2","teema4luuva","luuvaruap","luuvaldap");
+build_qteematengwa(quesse&".conr","closingbar_high2_conr","telco_rightdown2","teema4luuva","luuvaruap","luuvaldap");
+build_qteematengwa(quesse&".conb","closingbar_high2_conb","telco_rightdown2","teema4luuva","luuvaruap","luuvaldap");
+build_qteematengwa(quesse&".dec","capclosingbar_high2","captelco_rightdown2","capteema4luuva","luuvaruap","luuvaldap");
+
+build_qteematengwa(ungwe,"closingbar_high4","telco_rightdown2","teema4luuvar","luuvaruap","luuvaldap");
+build_qteematengwa(ungwe&".conl","closingbar_high4_conl","telco_rightdown2","teema4luuvar","luuvaruap","luuvaldap");
+build_qteematengwa(ungwe&".conr","closingbar_high4_conr","telco_rightdown2","teema4luuvar","luuvaruap","luuvaldap");
+build_qteematengwa(ungwe&".conb","closingbar_high4_conb","telco_rightdown2","teema4luuvar","luuvaruap","luuvaldap");
+build_qteematengwa(ungwe&".dec","capclosingbar_high4","captelco_rightdown2","capteema4luuvar","luuvaruap","luuvaldap");
+
+build_qteematengwab(hwesta,"closingbar_high1","telco_rightup","teema4luuva","luuvaluap","luuvardap");
+build_qteematengwab(hwesta&".conr","closingbar_high1","telco_rightup_conr","teema4luuva","luuvaluap","luuvardap");
+build_qteematengwab(hwesta&".conl","closingbar_high1_conl","telco_rightup","teema4luuva","luuvaluap","luuvardap");
+build_qteematengwab(hwesta&".conb","closingbar_high1_conl","telco_rightup_conr","teema4luuva","luuvaluap","luuvardap");
+build_qteematengwab(hwesta&".dec","capclosingbar_high1","captelco_rightup","capteema4luuva","luuvaluap","luuvardap");
+
+build_qteematengwab(unque,"closingbar_high3","telco_rightup","teema4luuvar","luuvaluap","luuvardap");
+build_qteematengwab(unque&".conr","closingbar_high3","telco_rightup_conr","teema4luuvar","luuvaluap","luuvardap");
+build_qteematengwab(unque&".conl","closingbar_high3_conl","telco_rightup","teema4luuvar","luuvaluap","luuvardap");
+build_qteematengwab(unque&".conb","closingbar_high3_conl","telco_rightup_conr","teema4luuvar","luuvaluap","luuvardap");
+build_qteematengwab(unque&".dec","capclosingbar_high3","captelco_rightup","capteema4luuvar","luuvaluap","luuvardap");
+
+build_qteematengwa(vilya,"closingbar_high2","telco_rightshort2","teema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".conl","closingbar_high2_conl","telco_rightshort2","teema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".conr","closingbar_high2_conr","telco_rightshort2","teema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".conb","closingbar_high2_conb","telco_rightshort2","teema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".dec","capclosingbar_high2","captelco_rightshort2","capteema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".conrbot","closingbar_high2","telco_rightshort2_conrbot","teema4luuva","luuvaruap","luuvardap");
+build_qteematengwa(vilya&".conbbot","closingbar_high2_conl","telco_rightshort2_conrbot","teema4luuva","luuvaruap","luuvardap");
+
+build_qteematengwa(nwalme,"closingbar_high4","telco_rightshort2","teema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".conl","closingbar_high4_conl","telco_rightshort2","teema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".conr","closingbar_high4_conr","telco_rightshort2","teema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".conb","closingbar_high4_conb","telco_rightshort2","teema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".dec","capclosingbar_high4","captelco_rightshort2","capteema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".conrbot","closingbar_high4","telco_rightshort2_conrbot","teema4luuvar","luuvaruap","luuvardap");
+build_qteematengwa(nwalme&".conbbot","closingbar_high4_conl","telco_rightshort2_conrbot","teema4luuvar","luuvaruap","luuvardap");
+
+build_qteematengwab(exthwesta,"closingbar_high1","telco_rightext","teema4luuva","luuvaluap","luuvaldap");
+build_qteematengwab(exthwesta&".conl","closingbar_high1_conl","telco_rightext","teema4luuva","luuvaluap","luuvaldap");
+build_qteematengwab(exthwesta&".dec","capclosingbar_high1","captelco_rightext","capteema4luuva","luuvaluap","luuvaldap");
+
+build_qteematengwab(extunque,"closingbar_high3","telco_rightext","teema4luuvar","luuvaluap","luuvaldap");
+build_qteematengwab(extunque&".conl","closingbar_high3_conl","telco_rightext","teema4luuvar","luuvaluap","luuvaldap");
+build_qteematengwab(extunque&".dec","capclosingbar_high3","captelco_rightext","capteema4luuvar","luuvaluap","luuvaldap");
 
 %beginrefchr(longcarr,psc("telco_leftdown").width);
 %  padding(0.1pt,0.0pt);
@@ -1136,28 +1044,32 @@ beginrefchr(tinco&".lig",psc("teema1luuva").width
                            -apt("teema1luuva","lluuvap").pt));
   setap("lluuvap",apt("telco_rightext","lluuvap").pt-(psc("telco_rightext").width,0));
   attach("teema1luuva","lluuvap","lluuvap");
-  set_extthuule_aps;
+  setap("uap",apt(ps.n,"luuvaruap").pt);
+  setap("dap",apt(ps.n,"luuvardap").pt);
 endchr;
 pause;
 
-build_tengwa(mhtengwa,"telco_leftshort","closingbar_low4_desc","lbarap");
-  attach("teema2luuvar","lluuvap","lluuvap");
+def build_tengwa(expr s, t, f, l) =
+  beginrefchr(s,xpart(apt(t,"lbarap").pt-apt(f,"lbarap").pt)+psc(f).width);
+    attach(t,"origo","origo");
+    attach(f,"lbarap","lbarap");
+    attach(l,"lluuvap","lluuvap");
+enddef;
+
+build_tengwa(mhtengwa,"telco_leftshort","closingbar_low4_desc","teema2luuvar");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
 endchr;
-build_tengwa(mhtengwa&".dec","captelco_leftshort2","closingbar_low4_desc","lbarap");
-  attach("capteema2luuvar","lluuvap","lluuvap");
+build_tengwa(mhtengwa&".dec","captelco_leftshort2","closingbar_low4_desc","capteema2luuvar");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
 endchr;
 
-build_tengwa(beleriandicmh,"telco_leftshort","closingbar_low2_desc","lbarap");
-  attach("teema2luuva","lluuvap","lluuvap");
+build_tengwa(beleriandicmh,"telco_leftshort","closingbar_low2_desc","teema2luuva");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.54w,-apy));
 endchr;
-build_tengwa(beleriandicmh&".dec","captelco_leftshort2","closingbar_low2_desc","lbarap");
-  attach("capteema2luuva","lluuvap","lluuvap");
+build_tengwa(beleriandicmh&".dec","captelco_leftshort2","closingbar_low2_desc","capteema2luuva");
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.6w,-apy));
 endchr;
