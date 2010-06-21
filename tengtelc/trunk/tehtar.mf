@@ -30,6 +30,10 @@ numeric dotsize[];
 %dotsize1=0.98; dotsize2=1.00; dotsize3=1.04;
 dotsize1=1.03; dotsize2=1.04; dotsize3=1.09;
 
+def shifttehta(expr base,var,ap,disp) =
+  shiftchr(base&"."&var, base&".norm", ap, disp);
+enddef;
+
 beginchr(thinnas&".norm",0);
   a1=35; a2=35; a3=50;
   y1=-1pt;
@@ -189,7 +193,6 @@ beginchr(downutehta&".long",0);
     setap("uap",(-0.6pt,-apy));
 endchr;
 
-
 beginchr(atehta&".norm",0);
   z0=(0,tex+2.2pt);
   y1=y2=y0-1.1pt;
@@ -204,6 +207,19 @@ beginchr(atehta&".norm",0);
   setap("uap",(0,tex+3.0pt));
 endchr;
 combinechr(atehta,dottedcircle,"uap",atehta&".norm","dap");
+shifttehta(atehta,"tinco", "dap", averageap("uap",tinco,parma,calma,oore,vala,anna,beleriandicmh));
+shifttehta(atehta,"quesse","dap", averageap("uap",quesse,vilya,roomen,silmenuq,openanna,prefeanoreanqu));
+shifttehta(atehta,"ando",  "dap", averageap("uap",ando,umbar,anga,nuumen,malta,noldo,mhtengwa));
+shifttehta(atehta,"ungwe", "dap", averageap("uap",ungwe,nwalme,anto,ampa,extanto,extampa));
+shifttehta(atehta,"thuule","dap", averageap("uap",thuule,formen,extthuule,extformen,uure,mirroredosse,conncarr));
+shifttehta(atehta,"harma", "dap", averageap("uap",harma,extharma));
+shifttehta(atehta,"hwesta","dap", averageap("uap",hwesta,exthwesta));
+shifttehta(atehta,"anca",  "dap", averageap("uap",anca,extanca));
+shifttehta(atehta,"unque", "dap", averageap("uap",unque,extunque,hwestasin));
+shifttehta(atehta,"lambe", "dap", averageap("uap",lambe,alda,vaiya));
+shifttehta(atehta,"yanta", "dap", averageap("uap",yanta));
+shifttehta(atehta,"carr",  "dap", averageap("uap",longcarr,shortcarr));
+shifttehta(atehta,"ateng", "dap", averageap("uap",atengwa));
 
 beginchr(downatehta&".norm",0);
   z0=(0,-2.2pt);
@@ -247,6 +263,7 @@ beginchr(ytehta&".norm",0);
   setap("uap",(0,y0+(y0-tex)-apy));
 endchr;
 combinechr(ytehta,dottedcircle,"uap",ytehta&".norm","dap");
+
 beginchr(downytehta&".norm",0);
   y0=y1=-1.1pt;
   1/2[x0,x1]=0; x1-x0=1.50pt;
@@ -269,6 +286,7 @@ beginchr(itehta&".norm",0);
   setap("uap",(0,y0+(y0-tex)-apy));
 endchr;
 combinechr(itehta,dottedcircle,"uap",itehta&".norm","dap");
+
 beginchr(downitehta&".norm",0);
   z0=(0,-1.1pt);
   draw_dot(0)(dotsize3);

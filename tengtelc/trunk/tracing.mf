@@ -308,4 +308,39 @@ def exit =
   fi
 enddef;
 
+% Given a name of an attachpoint (or anchor point, as they are usually known) and a list of chars,
+% this function calculates the average position of the attachpoint in these chars,
+% relative to the right hand side of the chars.
+vardef averageap(expr apname)(text chars) =
+  save i, psn, num, attachpt, psnames, avg;
+  pair attachpt[], avg;
+  string psn, psnames[];
+  num:=0; avg:=(0,0);
+  for psn = chars:
+     psnames[incr num]=psn;
+     if ps.lu(psn)=0:
+        message "Warning: Unknown character "&psn;
+        attachpt[num]=(0,0);
+     else:
+        attachpt[num]=(apt(psn,apname).pt-(psc(psn).width,0));
+     fi
+  endfor
+  for i=1 upto num:
+     avg:=avg + attachpt[i]/num;
+  endfor
+  for i=1 upto num:
+     if abs(avg-attachpt[i]) > 0.05pt:
+       message "Warning: " & apname & " of " & psnames[i] & " is " & decimal(abs(avg-attachpt[i])/pt) & "pt from the average.";
+     fi
+  endfor
+  avg
+enddef;
+
+def shiftchr(expr s, chr, ap, disp) =
+  beginrefchr(s,psc(chr).width);
+    setap("shiftap",disp);
+    attach(chr,"shiftap",ap);
+  endchr;
+enddef;
+
 if tracing: message ""; fi
