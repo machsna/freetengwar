@@ -85,7 +85,7 @@ addalias(tengcb & "36","openanna");
 addalias(tengcb & "37","prefeanoreanqu");
 addaliasvars("prefeanoreanqu","var");
 addalias(tengcb & "39","whtengwa");
-addaliasvars("whtengwa","var1","var2","var3");
+addaliasvars("whtengwa","var1","var2","var3","var4");
 addalias(tengcb & "3A","mhtengwa");
 addalias(tengcb & "3B","beleriandicmh");
 addalias(tengcb & "3C","angwhtengwa");
@@ -105,11 +105,11 @@ addalias(tengcb & "4B","downotehta");
 addalias(tengcb & "4C","utehta");
 addalias(tengcb & "4D","downutehta");
 
-addaliasvars("atehta","norm");
+addaliasvars("atehta","norm","tinco","quesse","ando","ungwe","thuule","harma","hwesta","anca","unque","lambe","yanta","carr","ateng");
 addaliasvars("downatehta","norm");
-addaliasvars("ytehta","norm");
+addaliasvars("ytehta","norm","tinco","quesse","ando","ungwe","thuule","harma","hwesta","anca","unque","lambe","yanta","carr","ateng");
 addaliasvars("downytehta","norm");
-addaliasvars("itehta","norm");
+addaliasvars("itehta","norm","tinco","quesse","ando","ungwe","thuule","harma","hwesta","anca","unque","lambe","yanta","carr","ateng");
 addaliasvars("downitehta","norm");
 addaliasvars("etehta","norm","double_norm");
 addaliasvars("downetehta","norm","double_norm");
@@ -218,6 +218,6 @@ addaliasvars("conncarr","long","conr");
 addaliasvars("openanna","conl","dec");
 addaliasvars("mhtengwa","dec");
 addaliasvars("beleriandicmh","dec");
-addaliasvars("sarince","high");
+addaliasvars("sarince","high","roomen");
 
 
