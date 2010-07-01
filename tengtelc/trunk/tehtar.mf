@@ -55,10 +55,10 @@ def get_utehta_path(suffix $)(expr v,l,cent) =
   a$a:=v-5; a$b:=35; a$c:=35;
   y$a=tex+0.05pt; cent=0.17[x$a,x$b];
   z$b=z$a+l*dir(v);
-  z$c=z$b+1.3pt*dir(180);
+  z$c=z$b+1.4pt*dir(v+122);
   ap$=ang(a$a..a$b..a$c);
 %  p$=z$a{dir a$a}..{dir (60)}z$b..tension 1 and 1.2..z$c;
-  p$=z$a{dir a$a}..{dir (70)}z$b..tension 1 and 1.2..z$c;
+  p$=z$a{dir a$a}..{dir (v+15)}z$b..tension 1 and 1.2..z$c;
 enddef;
 def draw_utehta(expr v,l,num,style) =
   transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
@@ -92,20 +92,41 @@ def draw_utehta(expr v,l,num,style) =
   fi
 enddef;
 beginchr("utehtadot.norm",0);
-  draw_utehta(60,2.0pt,dotlig,ascend)
+  draw_utehta(60,2.2pt,dotlig,ascend)
 endchr;
 pause;
 beginchr(utehta&".norm",0);
-  draw_utehta(60,2.0pt,single,ascend)
+  draw_utehta(60,2.2pt,single,ascend)
 endchr;
-combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
 pause;
-beginchr(utehta&".double_norm",0);
-  draw_utehta(60,2.0pt,double,ascend)
+beginchr(utehta&".wide",0);
+  draw_utehta(50,2.3pt,single,ascend)
 endchr;
+pause;
+beginchr(utehta&".narrow",0);
+  draw_utehta(65,2.1pt,single,ascend)
+endchr;
+pause;
+combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
+shifttehta(utehta,"tinco", "norm","dap",averageap("uap",tinco,parma,calma,oore,vala,anna,beleriandicmh,quesse,vilya,silmenuq,openanna,prefeanoreanqu));
+shifttehta(utehta,"roomen","wide","dap",averageap("uap",roomen)-(0.5pt,0pt));
+shifttehta(utehta,"ando",  "norm","dap",averageap("uap",ando,umbar,anga,nuumen,malta,noldo,mhtengwa,ungwe,nwalme,anto,ampa,extanto,extampa));
+shifttehta(utehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuule,extformen,uure,mirroredosse,conncarr));
+shifttehta(utehta,"harma", "narrow","dap",averageap("uap",harma,extharma,hwesta,exthwesta)-(0.33pt,0pt));
+shifttehta(utehta,"hwestasin","narrow","dap",averageap("uap",hwestasin)-(0.35pt,0.43pt));
+shifttehta(utehta,"anca",  "norm","dap",averageap("uap",anca,extanca,unque,extunque));
+shifttehta(utehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
+shifttehta(utehta,"yanta", "norm","dap",averageap("uap",yanta));
+shifttehta(utehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr)+(0.2pt,0pt));
+shifttehta(utehta,"carr_narrow","narrow","dap",averageap("uap",longcarr,shortcarr));
+shifttehta(utehta,"ateng", "norm","dap",averageap("uap",atengwa));
 
+beginchr(utehta&".double_norm",0);
+  draw_utehta(60,2.2pt,double,ascend)
+endchr;
+pause;
 beginchr(downotehta&".norm",0);
-  draw_utehta(50,2.0pt,single,descend)
+  draw_utehta(50,2.2pt,single,descend)
 endchr;
 combinechr(downotehta,dottedcircle,"dap",downotehta&".norm","uap");
 
@@ -225,8 +246,8 @@ shifttehta(atehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuule,
 shifttehta(atehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(atehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(atehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(atehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(atehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(atehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(atehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(atehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(atehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(atehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -246,6 +267,21 @@ beginchr(downatehta&".norm",0);
   setap("dap",(0,-2.5pt));
 endchr;
 combinechr(downatehta,dottedcircle,"dap",downatehta&".norm","uap");
+shifttehta(downatehta,"tinco","norm","uap",averageap("dap",tinco,parma,extthuule,extformen,uure,mirroredosse)); % Also wtengwa?
+shifttehta(downatehta,"hwesta","norm","uap",averageap("dap",hwesta,vilya)); % Also openanna,silme
+shifttehta(downatehta,"thuule","norm","uap",averageap("dap",thuule,oore,formen,vala,harma,anna)); % Also prefeanoreanqu
+shifttehta(downatehta,"quesse","norm","uap",averageap("dap",quesse,exthwesta));
+shifttehta(downatehta,"calma","norm","uap",averageap("dap",calma,extharma)); % Also hwestasin,vaiya
+shifttehta(downatehta,"ando","norm","uap",averageap("dap",ando,extanto,umbar,extampa,unque,nwalme));
+shifttehta(downatehta,"anto","norm","uap",averageap("dap",ungwe,extunque,anto,nuumen,anca,noldo,ampa,malta,anga,extanca));
+shifttehta(downatehta,"carr","norm","uap",averageap("dap",shortcarr,halla));
+shifttehta(downatehta,"hyarmen","norm","uap",averageap("dap",hyarmen,yanta)+(0pt,0.2pt));
+shifttehta(downatehta,"roomen","norm","luap",averageap("dap",roomen&".open",arda&".open"));
+shifttehta(downatehta,"lambe","norm","cap",averageap("cap",lambe));
+shifttehta(downatehta,"silmenuq","norm","ruap",averageap("dap",silmenuq));
+shifttehta(downatehta,"alda","norm","ruap",averageap("dap",alda));
+shifttehta(downatehta,"mhteng","norm","ruap",averageap("dap",mhtengwa));
+shifttehta(downatehta,"ateng","norm","uap",averageap("dap",atengwa,wtengwa,conncarr));
 
 beginchr(invatehta&".norm",0);
   z0=(0,tex+1.1pt);
@@ -269,8 +305,8 @@ shifttehta(invatehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuu
 shifttehta(invatehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(invatehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(invatehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(invatehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(invatehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(invatehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(invatehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(invatehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(invatehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(invatehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -294,8 +330,8 @@ shifttehta(ytehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuule,
 shifttehta(ytehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(ytehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(ytehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(ytehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(ytehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(ytehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(ytehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(ytehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(ytehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(ytehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -312,6 +348,21 @@ beginchr(downytehta&".norm",0);
   setap("ruap",(x1+0.4pt,-apy+0.1pt));
 endchr;
 combinechr(downytehta,dottedcircle,"dap",downytehta&".norm","uap");
+shifttehta(downytehta,"tinco","norm","uap",averageap("dap",tinco,parma,extthuule,extformen,uure,mirroredosse)); % Also wtengwa?
+shifttehta(downytehta,"hwesta","norm","uap",averageap("dap",hwesta,vilya)); % Also openanna,silme
+shifttehta(downytehta,"thuule","norm","uap",averageap("dap",thuule,oore,formen,vala,harma,anna)); % Also prefeanoreanqu
+shifttehta(downytehta,"quesse","norm","uap",averageap("dap",quesse,exthwesta));
+shifttehta(downytehta,"calma","norm","uap",averageap("dap",calma,extharma)); % Also whestasin,vaiya
+shifttehta(downytehta,"ando","norm","uap",averageap("dap",ando,extanto,umbar,extampa,unque,nwalme));
+shifttehta(downytehta,"anto","norm","uap",averageap("dap",ungwe,extunque,anto,nuumen,anca,noldo,ampa,malta,anga,extanca));
+shifttehta(downytehta,"carr","norm","uap",averageap("dap",shortcarr,halla));
+shifttehta(downytehta,"hyarmen","norm","uap",averageap("dap",hyarmen,yanta)+(0pt,0.2pt));
+shifttehta(downytehta,"roomen","norm","luap",averageap("dap",roomen&".open",arda&".open"));
+shifttehta(downytehta,"lambe","norm","cap",averageap("cap",lambe));
+shifttehta(downytehta,"silmenuq","norm","ruap",averageap("dap",silmenuq));
+shifttehta(downytehta,"alda","norm","ruap",averageap("dap",alda));
+shifttehta(downytehta,"mhteng","norm","ruap",averageap("dap",mhtengwa));
+shifttehta(downytehta,"ateng","norm","uap",averageap("dap",atengwa,wtengwa,conncarr));
 
 beginchr(itehta&".norm",0);
   z0=(0,tex+1.1pt);
@@ -330,8 +381,8 @@ shifttehta(itehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuule,
 shifttehta(itehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(itehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(itehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(itehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(itehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(itehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(itehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(itehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(itehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(itehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -346,6 +397,21 @@ beginchr(downitehta&".norm",0);
   setap("ruap",(0.9pt,-apy+0.2pt));
 endchr;
 combinechr(downitehta,dottedcircle,"dap",downitehta&".norm","uap");
+shifttehta(downitehta,"tinco","norm","uap",averageap("dap",tinco,parma,extthuule,extformen,uure,mirroredosse)); % Also wtengwa?
+shifttehta(downitehta,"hwesta","norm","uap",averageap("dap",hwesta,vilya)); % Also openanna,silme
+shifttehta(downitehta,"thuule","norm","uap",averageap("dap",thuule,oore,formen,vala,harma,anna)); % Also prefeanoreanqu
+shifttehta(downitehta,"quesse","norm","uap",averageap("dap",quesse,exthwesta));
+shifttehta(downitehta,"calma","norm","uap",averageap("dap",calma,extharma)); % Also whestasin,vaiya
+shifttehta(downitehta,"ando","norm","uap",averageap("dap",ando,extanto,umbar,extampa,unque,nwalme));
+shifttehta(downitehta,"anto","norm","uap",averageap("dap",ungwe,extunque,anto,nuumen,anca,noldo,ampa,malta,anga,extanca));
+shifttehta(downitehta,"carr","norm","uap",averageap("dap",shortcarr,halla));
+shifttehta(downitehta,"hyarmen","norm","uap",averageap("dap",hyarmen,yanta)+(0pt,0.6pt));
+shifttehta(downitehta,"roomen","norm","luap",averageap("dap",roomen&".open",arda&".open"));
+shifttehta(downitehta,"lambe","norm","cap",averageap("cap",lambe));
+shifttehta(downitehta,"silmenuq","norm","ruap",averageap("dap",silmenuq));
+shifttehta(downitehta,"alda","norm","ruap",averageap("dap",alda));
+shifttehta(downitehta,"mhteng","norm","ruap",averageap("dap",mhtengwa));
+shifttehta(downitehta,"ateng","norm","uap",averageap("dap",atengwa,wtengwa,conncarr));
 
 def draw_dotinside(expr style) =
   z0=(0,1/2tex);
@@ -416,8 +482,8 @@ shifttehta(etehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuule,
 shifttehta(etehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(etehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(etehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(etehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(etehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(etehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(etehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(etehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(etehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(etehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -432,8 +498,8 @@ shifttehta(etehta,"double_thuule","double_norm","dap",averageap("uap",thuule,for
 shifttehta(etehta,"double_harma", "double_norm","dap",averageap("uap",harma,extharma));
 shifttehta(etehta,"double_hwesta","double_norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(etehta,"double_anca",  "double_norm","dap",averageap("uap",anca,extanca));
-shifttehta(etehta,"double_unque", "double_norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(etehta,"double_lambe", "double_norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(etehta,"double_unque", "double_norm","dap",averageap("uap",unque,extunque));
+shifttehta(etehta,"double_lambe", "double_norm","dap",averageap("uap",lambe,alda));
 shifttehta(etehta,"double_yanta", "double_norm","dap",averageap("uap",yanta));
 shifttehta(etehta,"double_carr",  "double_norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(etehta,"double_ateng", "double_norm","dap",averageap("uap",atengwa));
@@ -465,46 +531,56 @@ shifttehta(revetehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuu
 shifttehta(revetehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(revetehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(revetehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(revetehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(revetehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(revetehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(revetehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(revetehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(revetehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(revetehta,"ateng", "norm","dap",averageap("uap",atengwa));
 
-def draw_overbar(expr l)=
+def define_overbar(expr l)=
   x4-x1=l; 1/2[x1,x4]=0;
   x2=0.2[x1,x4]; x3=0.8[x1,x4];
-  y1=y4+0.025pt=tex+0.9pt;
+  y1=y4+0.025pt=0.55pt;
   y1-y2=y4-y3=0.1pt;
   p1=z1..z2{dir-2}..{dir2}z3..z4;
   ap1=ang(36--33--35--37);
-  draw_stroke(p1,ap1);
-  setap("dap",(0,tex+0.5pt));
   penlabels(range 1 thru 4);
 enddef;
 beginchr(overbar&".norm",0);
-  draw_overbar(1.05ten);
+  define_overbar(1.08ten);
+  draw_stroke(p1 shifted (0,tex+apy),ap1);
+  setap("dap",(0,tex+apy));
   setap("uap",(0,tex+1.35pt));
   setap("luap",(-0.3pt,tex+1.35pt));
-  setap("ldap",(-0.3pt,tex+0.5pt));
+  setap("ldap",(-0.3pt,tex+apy));
   setap("ruap",(0.3pt,tex+1.35pt));
-  setap("rdap",(0.3pt,tex+0.5pt));
-endchr;
-combinechr(overbar,dottedcircle,"uap",overbar&".norm","dap");
-beginchr(overbar&".lambe",0);
-  draw_overbar(1.5ten);
-  setap("uap",(0,tex+1.35pt));
+  setap("rdap",(0.3pt,tex+apy));
 endchr;
 beginchr(overbar&".wide",0);
-  draw_overbar(1.9ten);
+  define_overbar(1.9ten);
+  draw_stroke(p1 shifted (0,tex+apy),ap1);
+  setap("dap",(0,tex+0.5pt));
   setap("uap",(0,tex+1.35pt));
   setap("luap",(-0.1pt,tex+1.35pt));
   setap("ldap",(-0.1pt,tex+0.5pt));
   setap("ruap",(0.2pt,tex+1.35pt));
   setap("rdap",(0.2pt,tex+0.5pt));
 endchr;
+combinechr(overbar,dottedcircle,"uap",overbar&".norm","dap");
+shifttehta(overbar,"tinco","norm","dap",averageap("uap",tinco,parma,oore,vala,beleriandicmh)); % Also thuule,formen,extthuule,extformen,yanta
+shifttehta(overbar,"calma","norm","dap",averageap("uap",calma,quesse,anna,vilya)+(0.1pt,0pt)); % Also roomen,arda,silmenuq,aarenuq,uure,mirroredosse,wtengwa,openanna,prefeanoreanqu
+shifttehta(overbar,"ando","wide","dap",averageap("uap",ando,umbar,nuumen,malta,mhtengwa)); % Also anto,ampa,extanto,extampa
+shifttehta(overbar,"anga","wide","dap",averageap("uap",anga,ungwe,noldo,nwalme)+(0.2pt,0pt));
+shifttehta(overbar,"harma","norm","dap",averageap("uap",harma,extharma,hwesta,exthwesta)+(0.2pt,0pt));
+shifttehta(overbar,"anca","wide","dap",averageap("uap",anca,extanca,unque,extunque)-(0.1pt,0pt));
+beginchr(overbar&".lambe",0);
+  define_overbar(1.5ten);
+  draw_stroke(p1 shifted averageap("uap",lambe,alda),ap1);
+endchr;
 beginchr(overbar&".silme",0);
-  draw_overbar(0.8ten);
+  define_overbar(0.8ten);
+  draw_stroke(p1,ap1);
+  setap("dap",(0,tex+0.5pt));
   setap("luap",(-0.2pt,tex+1.35pt));
   setap("ruap",(0.8pt,tex+1.35pt));
   setap("rdap",(x4-0.8pt,tex+0.5pt));
@@ -602,8 +678,8 @@ shifttehta(engytehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthuu
 shifttehta(engytehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(engytehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(engytehta,"anca",  "wide","dap",averageap("uap",anca,extanca));
-shifttehta(engytehta,"unque", "wide","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(engytehta,"lambe", "wide","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(engytehta,"unque", "wide","dap",averageap("uap",unque,extunque));
+shifttehta(engytehta,"lambe", "wide","dap",averageap("uap",lambe,alda));
 shifttehta(engytehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(engytehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(engytehta,"ateng", "norm","dap",averageap("uap",atengwa));
@@ -640,8 +716,8 @@ shifttehta(yantatehta,"thuule","norm","dap",averageap("uap",thuule,formen,extthu
 shifttehta(yantatehta,"harma", "norm","dap",averageap("uap",harma,extharma));
 shifttehta(yantatehta,"hwesta","norm","dap",averageap("uap",hwesta,exthwesta));
 shifttehta(yantatehta,"anca",  "norm","dap",averageap("uap",anca,extanca));
-shifttehta(yantatehta,"unque", "norm","dap",averageap("uap",unque,extunque,hwestasin));
-shifttehta(yantatehta,"lambe", "norm","dap",averageap("uap",lambe,alda,vaiya));
+shifttehta(yantatehta,"unque", "norm","dap",averageap("uap",unque,extunque));
+shifttehta(yantatehta,"lambe", "norm","dap",averageap("uap",lambe,alda));
 shifttehta(yantatehta,"yanta", "norm","dap",averageap("uap",yanta));
 shifttehta(yantatehta,"carr",  "norm","dap",averageap("uap",longcarr,shortcarr));
 shifttehta(yantatehta,"ateng", "norm","dap",averageap("uap",atengwa));
