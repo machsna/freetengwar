@@ -133,7 +133,7 @@ addalias(tengcb & "59","sarincetehta");
 addalias(tengcb & "5A","dotinside");
 
 addaliasvars("overbar","norm","wide","tinco","calma","ando","anga","harma","anca","lambe","silme");
-addaliasvars("underbar","norm","wide","roomen","lambe","silme");
+addaliasvars("underbar","norm","wide","tinco","calma","thuule","ando","anga","anto","roomen","lambe","silme");
 addaliasvars("wtehta","norm","wide","narrow");
 addaliasvars("engytehta","norm","wide","tinco","quesse","ando","ungwe","thuule","harma","hwesta","anca","unque","lambe","yanta","carr","ateng");
 addaliasvars("revetehta","norm","tinco","quesse","ando","ungwe","thuule","harma","hwesta","anca","unque","lambe","yanta","carr","ateng");
