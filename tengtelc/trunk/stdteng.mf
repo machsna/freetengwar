@@ -752,7 +752,6 @@ beginchr("capteema4luuvar",1.8cten);
 endchr;
 
 forgd:=true;
-unlinkreferences:=true;
 
 def build_tteematengwa(expr s, t, l, uap, dap) =
   beginrefchr(s,xpart(apt(t,"lluuvap").pt-apt(l,"lluuvap").pt)+psc(l).width);
@@ -1074,8 +1073,6 @@ build_tengwa(beleriandicmh&".dec","captelco_leftshort2","closingbar_low2_desc","
   setap("uap",apt(ps.n,"luuvaluap").pt);
   setap("dap",(0.6w,-apy));
 endchr;
-
-unlinkreferences:=false;
 
 def draw_openanna(expr style) =
   padding(0.9pt,if style=capital: psc("captelco_rightshort1").width-xpart(apt("captelco_rightshort1","rluuvap").pt) else: 1pt fi);
