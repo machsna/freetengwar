@@ -39,7 +39,7 @@
 tracingtitles:=1;
 boolean tracing; tracing=(mode=pixpt);
 
-scalefactor=1.25; % Should match scale factor in tengtelc.pe
+scalefactor=1.25; % Should match scale factor in tengtelc.py
 
 un#:=1/2048em#; define_pixels(un);
 if tracing:
@@ -70,7 +70,6 @@ mf_char_c:=-1;            % Metafont character counter
 ref_char_c:=255;          % Reference character counter
 boolean isrefchar;
 boolean forgd; forgd:=true; % Output gdh-data?
-boolean unlinkreferences; unlinkreferences:=false;
 boolean hasattached;
 boolean usealiasnames; usealiasnames:=true;
 
@@ -156,15 +155,7 @@ def endchr =
     if usealiasnames:
       message "pe: SetGlyphName("& ditto & ps_to_alias(ps[ps.n].name) & ditto &",0);";
     fi
-    if isrefchar:
-      if unlinkreferences:
-        if usealiasnames:
-          if tracing: message "ur: Select("& ditto & ps_to_alias(ps[ps.n].name) & ditto &"); UnlinkReference(); RemoveOverlap();"; message""; fi
-        else:
-          if tracing: message "ur: Select("& ditto & ps[ps.n].name & ditto &"); UnlinkReference(); RemoveOverlap();"; message""; fi
-        fi
-      fi
-    else:
+    if not isrefchar:
       message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
       message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
       if hasattached:
