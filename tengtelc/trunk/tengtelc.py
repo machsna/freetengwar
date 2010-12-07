@@ -1,3 +1,4 @@
+import sys
 import fontforge
 import psMat
 
@@ -66,7 +67,8 @@ font.mergeFonts("numerals.sfd")
 font.encoding="unicode"
 font.encoding="compacted"
 
-font.os2_version=3  # Current version of grcompiler can't handle version=4
+# Older versions of grcompiler can't handle version=4 (fixed in SVN rev. 1105)
+font.os2_version=3  
 
 font.save(sfdfilename)
 font.generate(ttffilename,"",("omit-instructions"))

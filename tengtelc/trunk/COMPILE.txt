@@ -82,11 +82,11 @@ II.) To add Graphite tables to the resulting fonts, you will need:
     repository: http://packages.sil.org/ubuntu/
 
 
-
 *** EXAMPLE OF COMPILATION UNDER WINDOWS XP ***
 
 Here, as a reference, is how I set up a minimal system to compile
-Tengwar Telcontar, starting from a normal Windows XP installation:
+Tengwar Telcontar, starting from a normal Windows XP installation.
+This guide has not been tested recently, and so might be out of date.
 
 0.) First I went to http://www.cygwin.com/ and followed the link
 "Install or update now!", and a small installation program is
@@ -148,56 +148,89 @@ generated.
 Good luck!
 
 
-*** EXAMPLE OF COMPILATION UNDER UBUNTU 9.10 KARMIC KOALA ***
+*** EXAMPLE OF COMPILATION UNDER UBUNTU 10.10 MAVERICK MEERKAT ***
 
-Starting from a clean installation of Karmic, begin with adding the
-SIL repository to your list of repositories (this is needed to get
-the program grcompiler):
+These instructions work on a clean installation of Maverick, but I hope
+that it will give you some guidance how to compile TengTelc on other
+Linux distributions as well.
+
+1.) Install grcompiler. You can choose to install a precompiled version
+by adding the SIL repository to your list of repositories:
 
   sudo wget http://packages.sil.org/ubuntu/sil.gpg -O- | sudo apt-key add -
-  echo "deb http://packages.sil.org/ubuntu karmic main" | sudo tee -a /etc/apt/sources.list > /dev/null
+  echo "deb http://packages.sil.org/ubuntu maverick main" | sudo tee -a /etc/apt/sources.list > /dev/null
   sudo apt-get update
+  sudo apt-get install grcompiler
 
-If you are using another Ubuntu version, replace "karmic" in the 
-second line with the relevant name. If the SIL repository does not
-work for you, for some reason, you can compile grcompiler yourself;
-see below for instructions.
+If you are using another Ubuntu version, replace "maverick" in the 
+second line with the relevant name: to find the codename of your
+Ubuntu distribution, run "lsb_release -a".
 
-Then install the necessary software. Conveniently, all programs that
-are needed are available from the repositories:
+If, for some reason, the SIL repository does not work for you, or if
+you prefer not to use it, you can compile grcompiler yourself:
 
-  sudo apt-get install python texlive fontforge potrace grcompiler
+  sudo apt-get install subversion build-essential automake libtool gettext libicu-dev libgraphite-dev docbook2x
+  svn co http://scripts.sil.org/svn-public/graphite/grcompiler/trunk@1110 grcompiler
+  cd grcompiler
+  autoreconf -i
+  ./configure
+  make
+  sudo make install
 
-However, at the time of this writing there is one complicating
-factor. Due to a bug, you will have to check that you have a working
-version of Fontforge:
+(The program is continuously being developed. The suffix @1110 in
+the second line specifies a fixed version which has been confirmed to
+work. You might want to test a later version; simply remove the suffix
+to download the latest one.)
 
-  fontforge -version
+2.) Install FontForge. You can download a precompiled version:
 
-If the version (date) is 20090622 or earlier, you unfortunately
-have to remove Fontforge, and install a newer version. I recommend
-that you build it from sources. 
+  sudo apt-get install fontforge
 
-  sudo apt-get remove fontforge
+As long as the version (date) is 20090923 or later, this will work.
+However, I would recommend instead that you compile FontForge yourself:
+
   sudo apt-get build-dep fontforge
+  sudo apt-get install subversion cvs
+  cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge login
+  cvs -d:pserver:anonymous@fontforge.cvs.sourceforge.net:/cvsroot/fontforge co fontforge
+  cd fontforge
 
-For detailed instructions on what to do next, see
+At this stage you can choose to include a patch that restores an older
+bezier simplification routine, which I think gives a better result.
+This is optional of course:
+
+  cd fontforge
+  patch < path/to/tengtelc/fontforge.patch
+  cd ..
+
+The regular compilation continues:
+
+  ./configure --enable-pasteafter --enable-double
+  make
+  make install
+
+You can of course configure FontForge to your liking; this is simply
+what I use. For further details, see
 http://fontforge.sourceforge.net/source-build.html#src-source
+http://openfontlibrary.org/wiki/How_to_install_FontForge
 
-When all the necessary software is installed, enter the directory
-where the tengtelc source code resides, and do
+3.) Install the rest of the necessary software. Conveniently, all
+programs that are needed are available from the repositories:
+
+  sudo apt-get install python texlive potrace
+
+4.) Finally enter the directory where the tengtelc source code
+resides, and do
 
   ./compile
 
-That's it!
-If you could not, or didn't want to, use the SIL repository to get
-grcompiler, you can download the source code and compile it yourself:
+That's it! (You might want to verify that a new font indeed has been
+produced, so that you don't end up using the precompiled version.)
 
-  sudo apt-get install subversion build-essential g++-4.3 automake libtool gettext libicu-dev libgraphite-dev docbook2x
-  svn co http://scripts.sil.org/svn-public/graphite/grcompiler/tags/v2.4.1 grcompiler
-  cd grcompiler
-  autoreconf -i
-  CXX=g++-4.3 ./configure
-  make
-  sudo make install
+5.) To test the font, you can compile the XeLaTeX document testcase.tex:
+
+  sudo apt-get install texlive-xetex ttf-sil-gentium
+  xelatex testcase.tex
+
+Open testcase.pdf to verify that the rendering works correctly.
 
