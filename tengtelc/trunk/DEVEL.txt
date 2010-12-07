@@ -45,10 +45,9 @@ The file tracing.mf provides the subroutines which take care of the output of da
  .
  .
  |
- |- "fontforge -script tengtelc.pe regular"
- |   > unlink.pe
+ |- "fontforge -script tengtelc.py regular"
  |   
- |     This compiles tengwarr.sfd and latinr.sfd into tengtelc.sfd, ang generates tengtelc_nogr.ttf
+ |     This compiles tengwarr.sfd and latinr.sfd into tengtelc.sfd, and generates tengtelc_nogr.ttf
  |
  |
  >- addgr.bat
