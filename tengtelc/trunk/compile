@@ -12,6 +12,8 @@ python mf2sfd.py latinb
 python mf2sfd.py tengwarb
 fontforge -script tengtelc.py bold
 
+python tehtarshift.py
+
 # Some cleaning up:
 
 rm -f underline.21681gf
