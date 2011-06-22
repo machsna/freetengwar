@@ -42,10 +42,9 @@ forgd:=true;
 
 addalias("uni200B","zwsp"); beginrefchr(zwsp,0); endchr;
 addalias("uni200C","zwnj"); %beginrefchr(zwnj,0); endchr;
-addalias("uni200C.hidden","zwnj_hidden"); beginrefchr(zwnj_hidden,0); endchr;
+beginrefchr(zwnj&".hidden",0); endchr;
 addalias("uni200D","zwj"); %beginrefchr(zwj,0); endchr;
-addalias("uni200D.hidden","zwj_hidden"); beginrefchr(zwj_hidden,0); endchr;
-%addalias("uni200D.visible","zwj_visible");
+beginrefchr(zwj&".hidden",0); endchr;
 beginchr(zwnj,0);
   numeric le;
   le:=em/30;

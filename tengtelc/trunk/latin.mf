@@ -2046,19 +2046,18 @@ def draw_j(expr style) =
 enddef;
 
 addalias("uni0237","dotlessj");
-addalias("uni0237.conl","dotlessj_conl");
 
 beginchr(dotlessj,0.68en);
   draw_j(normal);
 endchr;
 
-beginchr(dotlessj_conl,0.68en);
+beginchr(dotlessj&".conl",0.68en);
   draw_j(conleft);
 endchr;
 
 combinechr("j",dotlessj,"uap","dotaccentcmb.normal","dap");
 
-combinechr("j.conl",dotlessj_conl,"uap","dotaccentcmb.normal","dap");
+combinechr("j.conl",dotlessj&".conl","uap","dotaccentcmb.normal","dap");
 
 
 def draw_k(expr style) =
@@ -2167,6 +2166,10 @@ def draw_m(expr style) =
   labels(range 1 thru 10);
 enddef;
 
+beginchr("m.conl",1.5en);
+  draw_m(conleft);
+endchr;
+
 % "m" is not a valid Graphite name for a glyph, so we have to work around it.
 boolean defaultusealiasnames;
 defaultusealiasnames:=usealiasnames;
@@ -2176,10 +2179,6 @@ beginchr(mletter,1.5en);
   draw_m(normal);
 endchr;
 usealiasnames:=defaultusealiasnames;
-
-beginchr("m.conl",1.5en);
-  draw_m(conleft);
-endchr;
 
 def draw_n(expr style, secstyle) =
   padding(1pt,0.85pt);

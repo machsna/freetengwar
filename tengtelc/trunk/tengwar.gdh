@@ -258,17 +258,17 @@ table(glyph)
 
   IsolUpTehtar=(atehta,ytehta,itehta,etehta,otehta,utehta,overbar,wtehta,engytehta,revetehta,yantatehta,invatehta);
   IsolCentralTehtar=(dotinside);
-  IsolDownTehtar=(downatehta,downytehta,downitehta,downetehta,dblunderstroke,downotehta,downutehta,underbar,longcarrtehta,sarincetehta,thinnas);
+  IsolDownTehtar=(downatehta,downytehta,downitehta,downetehta,dblunderstroke,downotehta,downutehta,underbar,longcarr_tehta,sarincetehta,thinnas);
   IsolTehtar=(IsolUpTehtar,IsolCentralTehtar,IsolDownTehtar);
 
   CombUpTehtar=(atehta_norm,ytehta_norm,itehta_norm,etehta_norm,otehta_norm,utehta_norm,overbar_norm,wtehta_norm,engytehta_norm,revetehta_norm,yantatehta_norm,invatehta_norm);
   CombCentralTehtar=(dotinside_norm);
-  CombDownTehtar=(downatehta_norm,downytehta_norm,downitehta_norm,downetehta_norm,dblunderstroke_norm,downotehta_norm,downutehta_norm,underbar_norm,longcarrtehta_norm,sarincetehta_norm,thinnas_norm);
+  CombDownTehtar=(downatehta_norm,downytehta_norm,downitehta_norm,downetehta_norm,dblunderstroke_norm,downotehta_norm,downutehta_norm,underbar_norm,longcarr_lig,sarincetehta_norm,thinnas_norm);
   CombTehtar=(CombUpTehtar,CombCentralTehtar,CombDownTehtar);
 
   VarUpTehtar=(eetehta_norm,otehta_wide,otehta_narrow,ootehta_norm,ootehta_wide,ootehta_narrow,uutehta_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
   VarCentralTehtar=(dotinside_conu,dotinside_cond);
-  VarDownTehtar=(downetehta_double_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarrtehta_lambe);
+  VarDownTehtar=(downetehta_double_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarr_lig_lambe);
   VarTehtar=(VarUpTehtar,VarCentralTehtar,VarDownTehtar);
 
   AnyUpTehta=(CombUpTehtar,VarUpTehtar);
@@ -317,7 +317,7 @@ table(sub)
       atengwa > atengwa_desc / ^ _ ;
     endif;
 
-    zwj longcarr > _ longcarrtehta;
+    zwj longcarr > _ longcarr_tehta;
     zwj > zwj_hidden;
     zwnj > zwnj_hidden;
 
