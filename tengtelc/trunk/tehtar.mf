@@ -820,11 +820,11 @@ def draw_longcarrtehta(expr sy)=
   setap("dap",(0,-0.5pt));
   penlabels(1,2);
 enddef;
-beginchr(longcarrtehta_norm,0);
+beginchr(longcarr&".lig",0);
   draw_longcarrtehta(-0.3pt);
 endchr;
-combinechr(longcarrtehta,dottedcircle,"dap",longcarrtehta_norm,"uap");
-beginchr(longcarrtehta_lambe,0);
+combinechr(longcarr&".tehta",dottedcircle,"dap",longcarr&".lig","uap");
+beginchr(longcarr&".lig_lambe",0);
   draw_longcarrtehta(0.42tex);
   setap("cap",(0,ypart(apt(lambe,"cap").pt)));
 endchr;

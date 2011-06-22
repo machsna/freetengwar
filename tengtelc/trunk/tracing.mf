@@ -217,16 +217,10 @@ def addalias(expr psn, gdn) =
   scantokens ("string " & cleandots(gdn)); scantokens cleandots(gdn)=psn; setgdalias(psn,gdn);
 enddef;
 
-def addaliasvars(expr balias)(text vars) =
-  for i=vars:
-    setgdalias(scantokens balias & "." & i , balias & "." & i);
-  endfor
-enddef;
-
 vardef ps_to_alias(expr s) =
   save n,ss; string ss;
-  n=gdalias.lu(s);
-  ss = if n=0: s else: gdalias[n].gdname fi;
+  n=gdalias.lu(leftofdot(s));
+  ss = if n=0: s else: gdalias[n].gdname & rightofdot(s) fi;
   ss
 enddef;
 
@@ -237,6 +231,30 @@ vardef cleandots(expr s) =
     c:=substring(i,i+1) of s;
     if c=".": c:="_"; fi
     ss:= ss & c;
+  endfor
+  ss
+enddef;
+
+vardef leftofdot(expr s) =
+  save c,ss,founddot; string c,ss; boolean founddot;
+  ss:="";
+  founddot:=false;
+  for i=0 upto length(s)-1:
+    c:=substring(i,i+1) of s;
+    if c=".": founddot:=true; fi
+    if not founddot: ss:= ss & c; fi
+  endfor
+  ss
+enddef;
+
+vardef rightofdot(expr s) =
+  save c,ss,founddot; string c,ss; boolean founddot;
+  ss:="";
+  founddot:=false;
+  for i=0 upto length(s)-1:
+    c:=substring(i,i+1) of s;
+    if c=".": founddot:=true; fi
+    if founddot: ss:= ss & c; fi
   endfor
   ss
 enddef;
