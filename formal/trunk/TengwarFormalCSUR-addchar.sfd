@@ -1,9 +1,9 @@
 SplineFontDB: 3.0
-FontName: TengwarFormalUnicode-Regular
-FullName: Tengwar Formal Unicode
-FamilyName: Tengwar Formal Unicode
+FontName: TengwarFormalCSUR-Regular
+FullName: Tengwar Formal CSUR
+FamilyName: Tengwar Formal CSUR
 Weight: Medium
-Copyright: Copyright (c) September 2009, Michal Nowakowski (http://tengwarformal.limes.com.pl),\nwith Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".\n\nTengwar Formal Unicode copyright (c) 2010, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is provided in a separate file, LICENSE, supplied with the fonts,\nand is also available with a FAQ at: http://scripts.sil.org/OFL
+Copyright: Copyright (c) September 2009, Michal Nowakowski (http://tengwarformal.limes.com.pl),\nwith Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".\n\nTengwar Formal CSUR copyright (c) 2011, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is provided in a separate file, LICENSE, supplied with the fonts,\nand is also available with a FAQ at: http://scripts.sil.org/OFL
 UComments: "2010-1-26: Created." 
 Version: 1.0
 ItalicAngle: 0
@@ -37,7 +37,7 @@ HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
 DEI: 91125
-LangName: 1033 "" "" "" "FontTengwarFormalUnicode10" "" "" "" "" "" "Micha+AUIA Nowakowski" "" "" "http://tengwarformal.limes.com.pl" "" "http://scripts.sil.org/OFL" 
+LangName: 1033 "" "" "" "FontTengwarFormalCSUR10" "" "" "" "" "" "Micha+AUIA Nowakowski" "" "" "http://tengwarformal.limes.com.pl" "" "http://scripts.sil.org/OFL" 
 Encoding: Custom
 UnicodeInterp: none
 NameList: Adobe Glyph List

@@ -1,7 +1,7 @@
 Copyright (c) September 2009, Michał Nowakowski (http://tengwarformal.limes.com.pl),
 with Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".
 
-Tengwar Formal Unicode copyright (c) 2010, Johan Winge and J. "Mach" Wust
+Tengwar Formal CSUR copyright (c) 2011, Johan Winge and J. "Mach" Wust
 (http://freetengwar.sourceforge.net/)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
