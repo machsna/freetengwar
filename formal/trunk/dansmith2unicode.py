@@ -9,19 +9,19 @@ outfont.em=2048
 for layer in outfont.layers:
   outfont.layers[layer].is_quadratic = True;
 
-outfont.fontname='TengwarFormalUnicode-Regular'
-outfont.familyname='Tengwar Formal Unicode'
-outfont.fullname='Tengwar Formal Unicode'
+outfont.fontname='TengwarFormalCSUR-Regular'
+outfont.familyname='Tengwar Formal CSUR'
+outfont.fullname='Tengwar Formal CSUR'
 outfont.copyright='Copyright (c) September 2009, Michal Nowakowski (http://tengwarformal.limes.com.pl),\n\
 with Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".\n\
 \n\
-Tengwar Formal Unicode copyright (c) 2010, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\
+Tengwar Formal CSUR copyright (c) 2011, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\
 \n\
 This Font Software is licensed under the SIL Open Font License, Version 1.1.\n\
 This license is provided in a separate file, LICENSE.txt, supplied with the fonts,\n\
 and is also available with a FAQ at: http://scripts.sil.org/OFL'
 outfont.version='1.0'
-outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalUnicode10'),
+outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalCSUR10'),
                     ('English (US)', 'Designer', 'Micha\xc5\x82 Nowakowski'),
                     ('English (US)', 'Designer URL', 'http://tengwarformal.limes.com.pl'),
                     ('English (US)', 'License URL', 'http://scripts.sil.org/OFL'),
@@ -271,7 +271,7 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'braceright': 'tehtaS.swashhyarmen',
               },
 
-              fontforge.open("TengwarFormalUC-addchar.sfd"): {
+              fontforge.open("TengwarFormalCSUR-addchar.sfd"): {
                'tengwarQuadruplepusta': 'tengwarQuadruplepusta',
                'uni10FB': 'uni10FB',
                'uni2E2C': 'uni2E2C',
@@ -503,7 +503,7 @@ def ucname(alias):
        name=name+comp
    return name+var
 
-gdh=open('TengwarFormalUC.gdh','w')
+gdh=open('TengwarFormalCSUR.gdh','w')
 gdh.write('table(glyph)\n')
 
 for thefont, encoding in dansmithenc.iteritems():
@@ -547,8 +547,8 @@ for (target, ref, transform, width) in references:
 gdh.write('endtable;\n\n')
 gdh.close()
 
-outfont.save("TengwarFormalUC.sfd")
-outfont=fontforge.open("TengwarFormalUC.sfd")
+outfont.save("TengwarFormalCSUR.sfd")
+outfont=fontforge.open("TengwarFormalCSUR.sfd")
 
 outfont.selection.select("tehtaA.shift4","tehtaYB.lambeoriginal")
 outfont.unlinkReferences()
@@ -570,7 +570,7 @@ for char in outfont:
 
 outfont.selection.all()
 outfont.transform(psMat.scale(1.4))
-outfont.save("TengwarFormalUC.sfd")
-outfont=fontforge.open("TengwarFormalUC.sfd")
-outfont.generate("TengwarFormalUC_dumb.ttf")
+outfont.save("TengwarFormalCSUR.sfd")
+outfont=fontforge.open("TengwarFormalCSUR.sfd")
+outfont.generate("TengwarFormalCSUR_dumb.ttf")
 

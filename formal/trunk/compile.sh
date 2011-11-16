@@ -2,7 +2,7 @@
 
 fontforge -script dansmith2unicode.py
 
-cp TengwarFormalUC_dumb.ttf TengwarFormalUC_AAT.ttf
-ftxenhancer -m TengwarFormalUC.mif TengwarFormalUC_AAT.ttf
+cp TengwarFormalCSUR_dumb.ttf TengwarFormalCSUR_AAT.ttf
+ftxenhancer -m TengwarFormalCSUR.mif TengwarFormalCSUR_AAT.ttf
 
-grcompiler TengwarFormalUC.gdl TengwarFormalUC_AAT.ttf TengwarFormalUC.ttf
+grcompiler TengwarFormalCSUR.gdl TengwarFormalCSUR_AAT.ttf TengwarFormalCSUR.ttf

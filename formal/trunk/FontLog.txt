@@ -1,18 +1,18 @@
-FontLog for Tengwar Formal Unicode
+FontLog for Tengwar Formal CSUR
 ==================================
 
-1 About Tengwar Formal Unicode
+1 About Tengwar Formal CSUR
 ==============================
 
 1.1 Purpose
 
-Tengwar Formal Unicode is a Tengwar font based on Michał Nowakowski's
+Tengwar Formal CSUR is a Tengwar font based on Michał Nowakowski's
 Tengwar Formal font. The difference from Michał's font is that it encodes
 the Tengwar in the Personal Use Area of Unicode. Like this, it does not
 violate the Unicode standard. Also, it uses the smart font technologies
 Graphite and AAT for correct placement of tehtar and for font options.
 
-Tengwar Formal Unicode is an example of how a Tengwar font with a legacy
+Tengwar Formal CSUR is an example of how a Tengwar font with a legacy
 Dan-Smithian encoding can be converted into a Tengwar font with a Personal
 Use Area encoding.
 
@@ -22,7 +22,7 @@ http://freetengwar.sourceforge.net/formal.html
 
 1.2 Installation
 
-Tengwar Formal Unicode can be used in any modern operating system, even if
+Tengwar Formal CSUR can be used in any modern operating system, even if
 the smart tehtar placement may not work.
 
 This document explains how to install it on some common systems.
@@ -84,7 +84,7 @@ This document explains how to install it on some common systems.
 
 1.3 Files
 
-TengwarFormalUC.ttf
+TengwarFormalCSUR.ttf
     This is the font.
 
 TengwarFormal12c.sfd
@@ -93,7 +93,7 @@ TengwarFormalA12c.sfd
     They have been made with FontForge, the free outline font editor:
     http://fontforge.sourceforge.net/
 
-TengwarFormalUC-addchar.sfd
+TengwarFormalCSUR-addchar.sfd
     This is a source file that contains new glyphs that were not part of
     Michał's original font.
 
@@ -107,29 +107,29 @@ dansmith2unicode.py
     Use Area of Unicode, and a GDH file that contains all glyph names of that
     font:
 
-        TengwarFormalUC.sfd
-        TengwarFormalUC_dumb.ttf
-        TengwarFormalUC.gdh
+        TengwarFormalCSUR.sfd
+        TengwarFormalCSUR_dumb.ttf
+        TengwarFormalCSUR.gdh
 
-TengwarFormalUC.mif
+TengwarFormalCSUR.mif
     This is a Morph Input File that is used to add AAT information to
-    TengwarFormalUC. It requires Apple's font tools:
+    TengwarFormalCSUR. It requires Apple's font tools:
     http://developer.apple.com/fonts/download/
 
-        ftxenhancer -m TengwarFormalUC.mif TengwarFormalUC_dumb.ttf
+        ftxenhancer -m TengwarFormalCSUR.mif TengwarFormalCSUR_dumb.ttf
 
-TengwarFormalUC.gdl
+TengwarFormalCSUR.gdl
     This is a Graphite Description Language file that is used to add
-    Graphite information to TengwarFormalUC. It requires a Graphite
+    Graphite information to TengwarFormalCSUR. It requires a Graphite
     Compiler:
     http://scripts.sil.org/GraphiteCompilerDownload
 
-        grcompiler TengwarFormalUC.gdl TengwarFormalUC_dumb.ttf TengwarFormalUC.ttf
+        grcompiler TengwarFormalCSUR.gdl TengwarFormalCSUR_dumb.ttf TengwarFormalCSUR.ttf
 
 compile.sh
     This is a small shell script that automates the generation of
-    TengwarFormalUC with dansmith2unicode.py, TengwarFormalUC.mif and
-    TengwarFormalUC.gdl:
+    TengwarFormalCSUR with dansmith2unicode.py, TengwarFormalCSUR.mif and
+    TengwarFormalCSUR.gdl:
 
         ./compile.sh
 
@@ -185,6 +185,10 @@ users) may (almost certainly will) look illegible.
 
 3  ChangeLog
 ============
+
+2010-11-?? (Johan Winge & J. "Mach" Wust) Tengwar Formal CSUR Version 1.0
+- Name changed from Tengwar Formal Unicode to Tengwar Formal CSUR.
+- Anything else?
 
 2010-06-11 (Johan Winge & J. "Mach" Wust) Tengwar Formal Unicode Version 1.0
 - Converted to Unicode PUA, with smart rendering using Graphite and AAT.
