@@ -519,7 +519,7 @@ for thefont, encoding in dansmithenc.iteritems():
       thefont[char].references=()
       thefont.copy()
       thefont.clear()
-      outfont.createChar(-1,ucchar).width=thefont[char].width
+      outfont.createChar(fontforge.unicodeFromName(ucchar),ucchar).width=thefont[char].width
       outfont.selection.select(ucchar)
       outfont.paste()
       if ucchar in outfont:
@@ -539,7 +539,7 @@ for (target, ref, transform, width) in references:
    if target in outfont:
       outfont[target].addReference(ref,transform).width=width
    else:
-      outfont.createChar(-1,target).addReference(ref,transform).width=width
+      outfont.createChar(fontforge.unicodeFromName(target),target).addReference(ref,transform).width=width
       if target in freetengenc:
         outfont[target].unicode=freetengenc[target]
       gdh.write('  ' + target.replace('.', '_') + ' = ps("'+ target + '");\n')
@@ -570,6 +570,7 @@ for char in outfont:
 
 outfont.selection.all()
 outfont.transform(psMat.scale(1.4))
+outfont.os2_version=3
 outfont.save("TengwarFormalCSUR.sfd")
 outfont=fontforge.open("TengwarFormalCSUR.sfd")
 outfont.generate("TengwarFormalCSUR_dumb.ttf")
