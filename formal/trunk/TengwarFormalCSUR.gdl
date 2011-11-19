@@ -1,6 +1,6 @@
 // Graphite Description Language file for Tengwar Formal CSUR
 // Copyright: Copyleft 2011 j. 'mach' wust, Johan Winge
-// Version: 2011-11-16
+// Version: 2011-11-19
 // http://freetengwar.sourceforge.net/formal.html
 //
 // This is free software: you can redistribute it and/or
@@ -239,8 +239,8 @@ table(glyph)
 
   // Other tehtar classes
 
-  diacriticdot = pseudo(ps("tehtaA"));
-  diacriticacute = pseudo(ps("tehtaE"));
+  diacriticdot = pseudo(glyphid(1)); // Temporary glyphs, so the content is irrelevant.
+  diacriticacute = pseudo(glyphid(1));
   longAndShortCarrier = ( longCarrier, shortCarrier );
   ambiguousToOsse = ( osse, tinco, parma, calma, ando, umbar, anga, suule, formen, aha, anto, ampa, anca, tincoX, parmaX, calmaX, andoX, umbarX, angaX, nuumen, malta, noldo, oore, vala, anna, longCarrier, halla, shortCarrier, carrierX, maltaX, valaX, aha_tinco );
   diacritics =    ( diacriticdot, diacriticacute );
@@ -331,7 +331,7 @@ table(substitution)
   // --------------------------------------------------------------
   // Substitution table: Switches
   pass(4)
-    diacritics > _ / _ AnyTehta ;
+    diacritics AnyTehta > _ AnyTehta:(1 2) / _ _ ;
     diacritics > notDiacritics / _ ;
   endpass;
 

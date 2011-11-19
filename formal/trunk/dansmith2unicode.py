@@ -28,6 +28,7 @@ outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalCSUR10'),
                     ('English (US)', 'Vendor URL', 'http://freetengwar.sourceforge.net/')
                    )
 
+## List the source font files, their glyphs, and what these glyphs should be mapped to.
 dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'one': 'tinco',
                'q': 'parma',
@@ -340,6 +341,9 @@ dansmithenc ={fontforge.open("TengwarFormal12c.sfd"): {
                'tengwarExclamationB': 'tengwarExclamationB',
               }}
 
+## Apart from all the glyphs above, we also define some new ones by referencing other glyphs:
+## Format: (new glyph, original glyph, transformation, width)
+## The function that deals with this list later on sets a width < 0 to the width of the original glyph.
 references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
               ('tehtaAB','tehtaAB.shift2',psMat.identity(),0),
               ('tehtaY','tehtaY.shift2',psMat.identity(),0),
@@ -371,6 +375,7 @@ references = [('tehtaA','tehtaA.shift2',psMat.identity(),0),
               ('tengwardigitMark','tengwardigitMark.shift2',psMat.identity(),-1),
              ]
 
+## The Free Tengwar Font Project encoding. Mapping of the new glyph names to their Unicode position:
 freetengenc = {'tinco': 0xE000,
                'parma': 0xE001,
                'calma': 0xE002,
@@ -487,6 +492,19 @@ freetengenc = {'tinco': 0xE000,
                'tengwardigitMark': 0xE07D,
               }
 
+## You can choose if the glyphs in the final font should have names which
+## describe them ("tehtaA.shift3"), or names which map to the Unicode position ("uniE040.shift3").
+## This makes a difference in one very specific circumstance:
+## when copying text from a PDF file, a variant glyph named, e.g., "uniE040.shift3"
+## will be copied as U+E040, but "tehtaA.shift3" will not be copied as a Unicode character.
+## However, the MIF file currently depends on the glyph names being descriptive:
+descriptiveglyphnames=True
+
+## A function to replace glyphnames with the unicode value. For example:
+##   tinco  ->  uniE000
+##   hwesta_tinco.var1  ->  uniE00B_uniE000.var1
+## If descriptiveglyphnames is set to True, this function is only used
+## to give a means to sort the glyphs in a sensible order.
 def ucname(alias):
    if '.' in alias:
      (base,var)=alias.split('.',1)
@@ -506,9 +524,15 @@ def ucname(alias):
 gdh=open('TengwarFormalCSUR.gdh','w')
 gdh.write('table(glyph)\n')
 
+## Copy all the glyphs from the original fonts, according to the mapping defined above.
+## References can not simply be copied, so they are added to the list of references,
+## which in turn is handled later.
 for thefont, encoding in dansmithenc.iteritems():
    for char, alias in sorted(encoding.iteritems(), lambda x, y: cmp(ucname(x[1]),ucname(y[1]))):
-      ucchar=alias
+      if descriptiveglyphnames:
+         ucchar=alias
+      else:
+         ucchar=ucname(alias)
       thefont.selection.select(char)
       for ref in thefont[char].references:
          if thefont[ref[0]].unicode>0 and ref[0] in encoding:
@@ -533,7 +557,13 @@ outfont.createChar(0x200C,"zwnj").width=0
 outfont.createChar(0x200D,"zwj").width=0
 gdh.write('  ZWJ = ps("zwj");\n')
 
-for (target, ref, transform, width) in references:
+## Create referenced glyphs.
+for (aliastarget, ref, transform, width) in references:
+   if descriptiveglyphnames:
+      target=aliastarget
+   else:
+      target=ucname(aliastarget)
+      ref=ucname(ref)
    if width<0:
       width=outfont[ref].width
    if target in outfont:
@@ -542,15 +572,23 @@ for (target, ref, transform, width) in references:
       outfont.createChar(fontforge.unicodeFromName(target),target).addReference(ref,transform).width=width
       if target in freetengenc:
         outfont[target].unicode=freetengenc[target]
-      gdh.write('  ' + target.replace('.', '_') + ' = ps("'+ target + '");\n')
+      gdh.write('  ' + aliastarget.replace('.', '_') + ' = ps("'+ target + '");\n')
 
 gdh.write('endtable;\n\n')
 gdh.close()
 
+## This save and immediate open is a workaround for a bug in FontForge, fixed on April 28, 2011.
 outfont.save("TengwarFormalCSUR.sfd")
 outfont=fontforge.open("TengwarFormalCSUR.sfd")
 
-outfont.selection.select("tehtaA.shift4","tehtaYB.lambeoriginal")
+## Some systems (OS X 10.6.2) have problems with fonts with nested references.
+## So let's un-nest them, making all references directly to the original glyph.
+## This is done automatically below, but before that, let's unlink some characters.
+## (It's excessive to have each A-tehta be made up of references to the I-tehta.)
+if descriptiveglyphnames:
+   outfont.selection.select("tehtaA.shift4","tehtaYB.lambeoriginal")
+else:
+   outfont.selection.select(ucname("tehtaA.shift4"),ucname("tehtaYB.lambeoriginal"))
 outfont.unlinkReferences()
 
 def removenestedrefs(char):
@@ -568,10 +606,15 @@ for char in outfont:
    if outfont[char].references!=():
       outfont[char].references=tuple(removenestedrefs(char))
 
+## Some users have complained that the font is too small, compared to other fonts. So we scale it 140%:
 outfont.selection.all()
 outfont.transform(psMat.scale(1.4))
+
+## Old versions of GrCompiler can't handle OS2 version = 4, which is the default in later versions of FontForge.
 outfont.os2_version=3
+
 outfont.save("TengwarFormalCSUR.sfd")
 outfont=fontforge.open("TengwarFormalCSUR.sfd")
+
 outfont.generate("TengwarFormalCSUR_dumb.ttf")
 
