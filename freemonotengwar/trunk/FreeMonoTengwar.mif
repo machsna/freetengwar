@@ -17,7 +17,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Ligatures
 
 Type          LigatureList
@@ -54,7 +54,7 @@ List
 	uniFB05	longs zwj t
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Automatic short carrier : Insert dummy
 
 Type          Insertion
@@ -69,8 +69,8 @@ Exclusive     yes
 
 A	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaUU
 N	tehtaN
 I	tehtaDotInside
 D	tehtaB tehtaEEB
@@ -610,7 +610,7 @@ dummy
 	Glyphs 2392
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Automatic short carrier : Initial short carrier
 
 Type          Insertion
@@ -625,8 +625,8 @@ Exclusive     yes
 
 tehtar	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaUU
 +	tehtaN
 +	tehtaDotInside
 +	tehtaB tehtaEEB
@@ -663,7 +663,7 @@ dummy
 	Glyphs shortCarrier
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Automatic short carrier : Dummy suppression with zwj
 
 Type          Contextual
@@ -693,7 +693,7 @@ delete
 	2392 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Automatic short carrier : Change dummy 2392 to real shortCarrier, mark zwj for deletion
 
 Type          Noncontextual
@@ -710,7 +710,7 @@ Exclusive     yes
 	zwj 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Insert a dot on carriers (for full writing)
 
 Type          Insertion
@@ -726,8 +726,8 @@ Exclusive     no
 carrier	shortCarrier longCarrier
 anytehta	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaUU
 +	tehtaN
 +	tehtaDotInside
 +	tehtaB tehtaEEB
@@ -754,7 +754,7 @@ dot
 	Glyphs tehtaI
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Insert a dot on osse (for full writing)
 
 Type          Insertion
@@ -770,8 +770,8 @@ Exclusive     no
 osse	osse
 anytehta	tehtaA tehtaAE tehtaBreve
 +	tehtaE tehtaGrave tehtaI tehtaO tehtaU tehtaY tehtaYanta
-+	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI tehtaO_tehtaI
-+	tehtaOO tehtaU_tehtaI tehtaU_tehtaI tehtaUU
++	tehtaEE tehtaGrave_tehtaGrave tehtaO_tehtaI
++	tehtaOO tehtaU_tehtaI tehtaUU
 +	tehtaN
 +	tehtaDotInside
 +	tehtaB tehtaEEB
@@ -798,7 +798,7 @@ dot
 	Glyphs tehtaI
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // tehtaX combinations
 
 Type          Contextual
@@ -869,7 +869,7 @@ delete
 	tehtaX 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // tehtaB combinations
 
 Type          Contextual
@@ -916,7 +916,7 @@ delete
 	tehtaB 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // lambe + tehtaIB/tehtaYB combinations
 
 Type          Contextual
@@ -967,7 +967,7 @@ delete
 	tehtaYB 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // tehtaThinnas tehtaIB combinations
 
 Type          Contextual
@@ -1016,7 +1016,7 @@ delete
 	tehtaIB 2393
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // tehtaW combinations
 
 Type          Contextual
@@ -1061,7 +1061,7 @@ replace
 	tehtaW tehtaW.alt
 
 
---------------------------------------------------------------
+//--------------------------------------------------------------
 // Glyph Deletetion
 
 Type          Noncontextual
