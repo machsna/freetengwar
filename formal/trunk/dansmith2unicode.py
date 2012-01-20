@@ -15,13 +15,13 @@ outfont.fullname='Tengwar Formal CSUR'
 outfont.copyright='Copyright (c) September 2009, Michal Nowakowski (http://tengwarformal.limes.com.pl),\n\
 with Reserved Font Names "Tengwar Formal" and "Tengwar Formal A".\n\
 \n\
-Tengwar Formal CSUR copyright (c) 2011, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\
+Tengwar Formal CSUR copyright (c) 2010-2012, Johan Winge and J. "Mach" Wust (http://freetengwar.sourceforge.net/)\n\
 \n\
 This Font Software is licensed under the SIL Open Font License, Version 1.1.\n\
 This license is provided in a separate file, LICENSE.txt, supplied with the fonts,\n\
 and is also available with a FAQ at: http://scripts.sil.org/OFL'
-outfont.version='1.0'
-outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalCSUR10'),
+outfont.version='1.1'
+outfont.sfnt_names=(('English (US)', 'UniqueID', 'FontTengwarFormalCSUR11'),
                     ('English (US)', 'Designer', 'Micha\xc5\x82 Nowakowski'),
                     ('English (US)', 'Designer URL', 'http://tengwarformal.limes.com.pl'),
                     ('English (US)', 'License URL', 'http://scripts.sil.org/OFL'),

@@ -186,9 +186,9 @@ users) may (almost certainly will) look illegible.
 3  ChangeLog
 ============
 
-2010-11-?? (Johan Winge & J. "Mach" Wust) Tengwar Formal CSUR Version 1.0
+2012-01-20 (Johan Winge & J. "Mach" Wust) Tengwar Formal CSUR Version 1.1
 - Name changed from Tengwar Formal Unicode to Tengwar Formal CSUR.
-- Anything else?
+- Minor code updates in order to conform with updated Graphite and AAT compilers.
 
 2010-06-11 (Johan Winge & J. "Mach" Wust) Tengwar Formal Unicode Version 1.0
 - Converted to Unicode PUA, with smart rendering using Graphite and AAT.
