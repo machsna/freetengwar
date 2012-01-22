@@ -438,10 +438,14 @@ table(sub)
 
   pass(4)
 
+    dotinside_norm > DotinsideShift$1 / AllTengwar _ ;
+
     downatehta_norm > DownAtehtaShift$1 / AllTengwar _ ;
     downytehta_norm > DownYtehtaShift$1 / AllTengwar _ ;
     downitehta_norm > DownItehtaShift$1 / AllTengwar _ ;
+    downetehta_norm > DownEtehtaShift$1 / AllTengwar _ ;
     underbar_norm > UnderbarShift$1 / AllTengwar _ ;
+    thinnas_norm > ThinnasShift$1 / AllTengwar _ ;
 
   endpass;
 
