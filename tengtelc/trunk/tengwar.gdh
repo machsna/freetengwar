@@ -26,7 +26,7 @@
 
 table(feature)
   tengconnect {
-    id=201;
+    id="ss01";
     name.LG_USENG = string("Connect tengwar");
     default = some;
     settings {
@@ -45,7 +45,7 @@ table(feature)
     }
   }
   silmepref {
-    id=202;
+    id="cv01";
     name.LG_USENG = string("Tehta on Silme");
     default = left;
     settings {
@@ -68,7 +68,7 @@ table(feature)
     }
   }
   decteng {
-    id=203;
+    id="ss02";
     name.LG_USENG = string("Decorated tengwar");
     default = non;
     settings {
@@ -87,17 +87,17 @@ table(feature)
     }
   }
   descwtengwa {
-    id=204;
+    id="cv03";
     name.LG_USENG = string("Descending W-tengwa");
     default = true;
   }
   lowershook {
-    id=205;
+    id="cv04";
     name.LG_USENG = string("Prefer low S-hook");
     default = true;
   }
-  whtengwavar {
-    id=206;
+  whtengwa {
+    id="cv05";
     name.LG_USENG = string("WH-tengwa variant");
     default = common;
     settings {
@@ -116,7 +116,7 @@ table(feature)
     }
   }
   ossetail {
-    id=207;
+    id="cv06";
     name.LG_USENG = string("Marked Osse");
     default = none;
     settings {
@@ -135,7 +135,7 @@ table(feature)
     }
   }
   underline {
-    id=208;
+    id="ss03";
     name.LG_USENG = string("Underline");
     default = no;
     settings {
