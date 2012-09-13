@@ -20,14 +20,14 @@ for col in zip(*csvreader):
    rownum=0
    for cell in col:
       if rownum==0:
-         gdf.write(cell.replace('.', '_').ljust(16)+"= (")
+         gdf.write(cell.replace('.', '_').ljust(20)+"= (")
          if cell=="Underliners":
             underliners=True
          else:
             underliners=False
       else:
          uniquechars.add(cell)
-         gdf.write(cell.replace('.', '_').rjust(20))
+         gdf.write(cell.replace('.', '_').rjust(24))
          if rownum==len(col)-1:
             gdf.write(" );\r\n")
          else:

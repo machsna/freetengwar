@@ -55,13 +55,13 @@ for char in font:
 font.selection.all()
 font.removeOverlap()
 font.transform(psMat.scale(1.25))  # Should match scale factor in tracing.mf
-font.addExtrema()
-font.simplify(2,("removesingletonpoints"),0,0,5000)
-font.round()
-font.simplify(2,("ignoreextrema"),0,0,5000)
-font.addExtrema()
-font.round()
-font.simplify(2,("setstarttoextremum"),0,0,5000)
+#font.addExtrema()
+#font.simplify(2,("removesingletonpoints"),0,0,5000)
+#font.round()
+#font.simplify(2,("ignoreextrema"),0,0,5000)
+#font.addExtrema()
+#font.round()
+#font.simplify(2,("setstarttoextremum"),0,0,5000)
 
 font.mergeFonts("numerals.sfd")
 font.encoding="unicode"
