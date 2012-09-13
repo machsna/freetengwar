@@ -54,6 +54,8 @@ while logline!='':
   if raw!=None: pef.write(raw.group(1)+'\r\n')
   raw=re.search("^gd: ([^\n]*)",logline)
   if raw!=None: gdf.write(raw.group(1)+'\r\n')
+  raw=re.search("^INFO: ([^\n]*)",logline)
+  if raw!=None: print raw.group(1)
   gf=re.search("^Output written on (\S*)",logline)
   logline=f.readline()
 f.close()

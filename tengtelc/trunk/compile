@@ -3,15 +3,15 @@
 # Generating ttf-files:
 
 python tehtarshift.py
-python mf2sfd.py underline
+#python mf2sfd.py underline
 
-python mf2sfd.py latinr
+#python mf2sfd.py latinr
 python mf2sfd.py tengwarr
 fontforge -script tengtelc.py regular
 
-python mf2sfd.py latinb
-python mf2sfd.py tengwarb
-fontforge -script tengtelc.py bold
+#python mf2sfd.py latinb
+#python mf2sfd.py tengwarb
+#fontforge -script tengtelc.py bold
 
 # Some cleaning up:
 
@@ -57,5 +57,5 @@ rm -f tengwarb.tfm
 
 # Adding Graphite tables:
 
-. ./addgr.bat
+#. ./addgr.bat
 

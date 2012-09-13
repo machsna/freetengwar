@@ -96,7 +96,7 @@ table(feature)
     name.LG_USENG = string("Prefer low S-hook");
     default = true;
   }
-  whtengwa {
+  whtengwavar {
     id="cv05";
     name.LG_USENG = string("WH-tengwa variant");
     default = common;
