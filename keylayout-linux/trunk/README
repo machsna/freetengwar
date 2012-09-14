@@ -8,7 +8,7 @@ INSTALLATION
 
 If you are using Ubuntu, you can install the layout using the
 automatic script. This has been tested on Ubuntu 8.04, 8.10,
-9.04, and 9.10. Use at your own risk.
+9.04, 9.10, and Linux Mint 13. Use at your own risk.
 
 $ chmod +x install.sh
 $ sudo ./install.sh
@@ -29,7 +29,7 @@ the following code just before "</layoutList>"
     <layout>
       <configItem>
         <name>ucteng</name>
-        <shortDescription>Tengwar</shortDescription>
+        <shortDescription>teng</shortDescription>
         <description>Tengwar Unicode</description>
         <languageList><iso639Id>art</iso639Id></languageList>
       </configItem>
