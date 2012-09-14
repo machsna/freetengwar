@@ -18,7 +18,7 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 LAYOUTFILE="ucteng"
-SHORTDESC="Tengwar"
+SHORTDESC="teng"
 DESCRIPTION="Tengwar Unicode"
 LANGUAGE="art"
 
