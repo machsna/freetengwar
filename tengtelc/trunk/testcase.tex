@@ -8,37 +8,56 @@
 
 \font\tengtelc="[./tengtelc.ttf]/GR" at 15pt
 \font\tengtelclarge="[./tengtelc.ttf]/GR" at 48pt
-\font\tengtelcq="[./tengtelc.ttf]/GR:202=3" at 15pt
-\font\rcap="[./tengtelc.ttf]/GR:203=1" at 15pt
 \font\tengtelcsmall="[./tengtelc.ttf]/GR" at 10pt
 \font\tengtelcb="[./tengtelcb.ttf]/GR" at 15pt
 \font\bul="[./tengtelcb.ttf]/GR:208=1" at 15pt
 \font\bcap="[./tengtelcb.ttf]/GR:203=1" at 15pt
 \font\bcapul="[./tengtelcb.ttf]/GR:203=1:208=1" at 15pt
-\setromanfont{Gentium}
+\font\tengtelcConnectingLess="[./tengtelc.ttf]/GR:201=0" at 15pt
+\font\tengtelcConnectingDefault="[./tengtelc.ttf]/GR:201=1" at 15pt
+\font\tengtelcConnectingMore="[./tengtelc.ttf]/GR:201=2" at 15pt
+\font\tengtelcTehtaOnSilmeDefault="[./tengtelc.ttf]/GR:202=0" at 15pt
+\font\tengtelcTehtaOnSilme="[./tengtelc.ttf]/GR:202=3" at 15pt
+\font\tengtelcDecoratedDefault="[./tengtelc.ttf]/GR:203=0" at 15pt
+\font\tengtelcDecoratedInitially="[./tengtelc.ttf]/GR:203=1" at 15pt
+\font\tengtelcDecoratedAlways="[./tengtelc.ttf]/GR:203=2" at 15pt
+\font\tengtelcDescendingWtengwa="[./tengtelc.ttf]/GR:204=0" at 15pt
+\font\tengtelcDescendingWtengwaDefault="[./tengtelc.ttf]/GR:204=1" at 15pt
+\font\tengtelcShookPlacementHigh="[./tengtelc.ttf]/GR:205=0" at 15pt
+\font\tengtelcShookPlacementDefault="[./tengtelc.ttf]/GR:205=1" at 15pt
+\font\tengtelcHWtengwaDefault="[./tengtelc.ttf]/GR:206=0" at 15pt
+\font\tengtelcHWtengwaRoomenNuquerna="[./tengtelc.ttf]/GR:206=1" at 15pt
+\font\tengtelcHWtengwaMirroredHyarmen="[./tengtelc.ttf]/GR:206=2" at 15pt
+\font\tengtelcMarkedOsseDefault="[./tengtelc.ttf]/GR:207=0" at 15pt
+\font\tengtelcMarkedOsseFinal="[./tengtelc.ttf]/GR:207=1" at 15pt
+\font\tengtelcMarkedOsseAlways="[./tengtelc.ttf]/GR:207=2" at 15pt
+\font\tengtelcUnderliningDefault="[./tengtelc.ttf]/GR:208=0" at 15pt
+\font\tengtelcUnderliningOn="[./tengtelc.ttf]/GR:208=1" at 15pt
+
+\setromanfont{Gentium Basic}
 
 \begin{document}
 
 \section*{Test case for Tengwar Telcontar}
 
 \subsection*{Namárië}
-\tengtelcq
-{\rcap }     ⸱  \\
+\tengtelcTehtaOnSilme
+{\tengtelcDecoratedInitially }     ⸱  \\
    ⸱     \\
 ⸱   ⸱  \\
- {\rcap } ⸱     \\
+ {\tengtelcDecoratedInitially } ⸱     \\
 ⸱  ⸬
 
       ⸬ \\
-  {\rcap  } ⸱   \\
-{\rcap } ⸱     \\
+  {\tengtelcDecoratedInitially  } ⸱   \\
+{\tengtelcDecoratedInitially } ⸱     \\
     ⸱ \\
   ⸱      \\
-    {\rcap }  {\rcap ⸱}
+    {\tengtelcDecoratedInitially }  {\tengtelcDecoratedInitially ⸱}
 
-{\rcap }   {\rcap }
+{\tengtelcDecoratedInitially }   {\tengtelcDecoratedInitially }
 
-   {\rcap } :
+   {\tengtelcDecoratedInitially } :
 
 \subsection*{The King’s Letter}
 \begin{center}
@@ -88,6 +107,47 @@ against which he was leaning, and before he could
 ſpring away he was pushed, or kicked, forward on to
 his knees. Picking himself up he looked at the tree,
 and even as he looked, it took a stride towards him.
+\normalfont
+
+\newpage
+
+\subsection*{All Graphite features}
+
+\begin{tabular}{cccc}
+\hline\hline
+Plain & Feature & XeTeX code & Default \\
+\hline
+{\tengtelc  } & {\tengtelcConnectingLess  } & \texttt{201=0} \\
+{\tengtelc  } & {\tengtelcConnectingDefault  }\* & \texttt{201=1} & $\times$ \\
+{\tengtelc  } & {\tengtelcConnectingMore  } & \texttt{201=2} \\
+\hline
+{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* & \texttt{202=0} & $\times$ \\
+{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* \\
+{\tengtelc       } & {\tengtelcTehtaOnSilme       } & \texttt{202=3} \\
+{\tengtelc       } & {\tengtelcTehtaOnSilme       }\* & \\
+\hline
+{\tengtelc } & {\tengtelcDecoratedDefault }\* & \texttt{203=0} & $\times$ \\
+{\tengtelc } & {\tengtelcDecoratedInitially } & \texttt{203=1} \\
+{\tengtelc } & {\tengtelcDecoratedAlways } & \texttt{203=2} \\
+\hline
+{\tengtelc    } & {\tengtelcDescendingWtengwa    } & \texttt{204=0} \\
+{\tengtelc    } & {\tengtelcDescendingWtengwaDefault    } & \texttt{204=1} & $\times$ \\
+\hline
+{\tengtelc    } & {\tengtelcShookPlacementHigh    } & \texttt{205=0} \\
+{\tengtelc    } & {\tengtelcShookPlacementDefault    } & \texttt{205=1} & $\times$ \\
+\hline
+{\tengtelc } & {\tengtelcHWtengwaDefault } & \texttt{206=0} & $\times$ \\
+{\tengtelc } & {\tengtelcHWtengwaRoomenNuquerna } & \texttt{206=1} \\
+{\tengtelc } & {\tengtelcHWtengwaMirroredHyarmen } & \texttt{206=2} \\
+\hline
+{\tengtelc } & {\tengtelcMarkedOsseDefault } & \texttt{207=0} & $\times$ \\
+{\tengtelc } & {\tengtelcMarkedOsseFinal } & \texttt{207=1} \\
+{\tengtelc } & {\tengtelcMarkedOsseAlways } & \texttt{207=2} \\
+\hline
+{\tengtelc } & {\tengtelcUnderliningDefault } & \texttt{208=0} & $\times$ \\
+{\tengtelc } & {\tengtelcUnderliningOn } & \texttt{208=1} \\
+\hline\hline
+\end{tabular}
 
 \newpage
 
