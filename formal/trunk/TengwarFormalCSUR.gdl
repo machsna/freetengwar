@@ -317,14 +317,14 @@ table(substitution)
   // Substitution table: Switches
   pass(3)
     if (carrierdiacritic==dot)
-       _ > diacriticdot:1 / longAndShortCarrier _ ;
+       longAndShortCarrier _ > longAndShortCarrier:1 diacriticdot:1 / _ _  ;
     elseif (carrierdiacritic==acute)
-       _ > diacriticacute:1 / longAndShortCarrier _ ;
+       longAndShortCarrier _ > longAndShortCarrier:1 diacriticacute:1 / _ _  ;
     endif;
     if (ossediacritic==ambiguous)
-       _ > diacriticdot:1 / osse _ ^ ambiguousToOsse ;
+       osse _ > osse:1 diacriticdot:1 / _ _ ^ ambiguousToOsse ;
     elseif (ossediacritic==every)
-       _ > diacriticdot:1 / osse _ ;
+       osse _ > osse:1 diacriticdot:1 / _ _  ;
     endif;
   endpass;
 
