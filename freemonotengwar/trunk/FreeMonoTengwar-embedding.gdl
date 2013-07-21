@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
-// Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-06-11
+// Copyright: Copyleft 2010 - 2013 j. 'mach' wust, Johan Winge
+// Version: 2013-07-21
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -21,14 +21,6 @@
 
 environment { MUnits = 1000; }
 
-
-table(feature)
-  insertcarrier {
-    id=212;
-    name.LG_USENG = string("Short carrier insertion");
-    default = false;
-  }
-endtable;
 
 table(glyph)
   ZWJ = (ps("zwj"));
@@ -249,20 +241,20 @@ table(substitution)
   endpass;
   pass(3)
 
-    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
+    takespecialB tehtaB > tookspecialB:1 _ / _ AnyTehtarORzwj _ ; // when I had glyph classes for these, XeTeX would produce errors
 
   endpass;
   pass(4)
 
-    takespecialX Sarince > tookspecialX _ / _ AnyTehtarORzwj _ ;
-    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
-    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
+    takespecialX Sarince > tookspecialX:1 _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaIB > lambe_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaYB > lambe_tehtaYB:1 _ / _ AnyTehtarORzwj _ ;
 
   endpass;
   pass(5)
 
-    tehtaIB Thinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
-    Thinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    tehtaIB Thinnas > tehtaThinnas_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
+    Thinnas tehtaIB > tehtaThinnas_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
 
   endpass;
 

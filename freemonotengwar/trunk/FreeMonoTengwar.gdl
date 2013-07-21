@@ -1,6 +1,6 @@
 // Enhanced Graphite description language file for FreeMonoTengwar
-// Copyright: Copyleft 2010 j. 'mach' wust, Johan Winge
-// Version: 2010-06-14
+// Copyright: Copyleft 2010 - 2013 j. 'mach' wust, Johan Winge
+// Version: 2013-07-21
 // http://freetengwar.sourceforge.net/freemonotengwar.html
 //
 // This is free software: you can redistribute it and/or
@@ -24,19 +24,19 @@ environment { MUnits = 1000; }
 
 table(feature)
   insertcarrier {
-    id=212;
+    id="ss03";
     name.LG_USENG = string("Short Carrier Insertion");
     default = false;
   }
 
   carrierdiacritic {
-    id=213;
+    id="ss01";
     name.LG_USENG = string("Diacritic Dots (for 'Full Writing'): On Carriers");
     default = false;
   }
 
   ossediacritic {
-    id=214;
+    id="ss02";
     name.LG_USENG = string("Diacritic Dots (for 'Full Writing'): On Osse");
     default = false;
   }
@@ -129,6 +129,7 @@ table(glyph)
   tehtaEEB = (ps("tehtaEEB"));
   tehtaGrave = (ps("tehtaGrave"));
   tehtaI = (ps("tehtaI"));
+//  tehtaI_tehtaE = (ps("tehtaI_tehtaE"));
   tehtaO_tehtaI = (ps("tehtaO_tehtaI"));
   tehtaU_tehtaI = (ps("tehtaU_tehtaI"));
   tehtaIB = (ps("tehtaIB"));
@@ -152,6 +153,7 @@ table(glyph)
   tehtaW_tehtaEE = (ps("tehtaW_tehtaEE"));
   tehtaW_tehtaGrave = (ps("tehtaW_tehtaGrave"));
   tehtaW_tehtaI = (ps("tehtaW_tehtaI"));
+//  tehtaW_tehtaI_tehtaE = (ps("tehtaW_tehtaI_tehtaE"));
   tehtaW_tehtaO_tehtaI = (ps("tehtaW_tehtaO_tehtaI"));
   tehtaW_tehtaU_tehtaI = (ps("tehtaW_tehtaU_tehtaI"));
   tehtaW_tehtaO = (ps("tehtaW_tehtaO"));
@@ -200,8 +202,8 @@ table(glyph)
   yanta = (ps("yanta"));
   yanta_tehtaX = (ps("yanta_tehtaX"));
 
-  insertedcarrier = pseudo(ps("shortCarrier"));
-  insertedcarrierIntertehtar = pseudo(postscript("shortCarrier"));
+  insertedcarrier = pseudo(glyphid(1));
+  insertedcarrierIntertehtar = pseudo(glyphid(1));
 
   AnyTengwa = ( insertedcarrier, tinco, parma, calma, quesse, ando, umbar, anga, ungwe, suule, formen, aha, hwesta, anto, ampa, anca, unque, tincoX, parmaX, calmaX, quesseX, andoX, umbarX, angaX, ungweX, nuumen, malta, noldo, nwalme, oore, vala, anna, vilya, roomen, arda, lambe, alda, silme, silmeN, esse, esseN, hyarmen, hwestaS, yanta, uure, longCarrier, halla, shortCarrier, osseN, lambeN, osse, carrierX, annaX, quesseC, hwestaC, roomenN, maltaX, valaX, hallaRoomen, vaiya, tehtaS, tengwardigit0, tengwardigit1, tengwardigit2, tengwardigit3, tengwardigit4, tengwardigit5, tengwardigit6, tengwardigit7, tengwardigit8, tengwardigit9, tengwarduodecimal10, tengwarduodecimal11, tengwarduodecimal12, aha_tinco, hwesta_tinco, silme_aha );
 
@@ -211,7 +213,8 @@ table(glyph)
   takespecialB = (lambe, alda, lambeN);
   tookspecialB = (lambe_tehtaB, alda_tehtaB, lambeN_tehtaB);
 
-  Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaGrave_tehtaGrave, tehtaO_tehtaI, tehtaOO, tehtaU_tehtaI, tehtaUU);
+  Oomaup = (tehtaA, tehtaAE, tehtaBreve, tehtaE, tehtaGrave, tehtaI, tehtaO, tehtaU, tehtaY, tehtaYanta, tehtaEE, tehtaGrave_tehtaGrave, //tehtaI_tehtaE, 
+  tehtaO_tehtaI, tehtaOO, tehtaU_tehtaI, tehtaUU);
   Nasal = (tehtaN);
   Dotinside = (tehtaDotinside);
   Doubler = (tehtaB, tehtaEEB);
@@ -248,7 +251,7 @@ table(glyph)
 
   OomaupORw = ( Oomaup, Follw );
 
-  diacriticdot = pseudo(ps("tehtaI"));
+  diacriticdot = pseudo(glyphid(1));
   longAndShortCarrier = ( longCarrier, shortCarrier );
 
   hwesta_tincoANDsilme_ahaWorkaround = ( hwesta_tinco, silme_aha );
@@ -295,6 +298,7 @@ table(substitution)
     tehtaO tehtaO > tehtaOO:(1 2) _ ;
     tehtaU tehtaU > tehtaUU:(1 2) _ ;
     tehtaGrave tehtaGrave > tehtaGrave_tehtaGrave:(1 2) _ ;
+//    tehtaI tehtaE > tehtaI_tehtaE:(1 2) _ ;
     tehtaI tehtaO > tehtaO_tehtaI:(1 2) _ ;
     tehtaO tehtaI > tehtaO_tehtaI:(1 2) _ ;
     tehtaU tehtaI > tehtaU_tehtaI:(1 2) _ ;
@@ -325,7 +329,7 @@ table(substitution)
   pass(4)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Nasal AnyFollowsNasal _ Oomaup ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Nasal AnyFollowsNasal _ Oomaup ;
       _ > insertedcarrier:10 / Nasal AnyNotNasal _ Nasal ;
     endif;
 
@@ -344,7 +348,7 @@ table(substitution)
   pass(6)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Dotinside AnyFollowsDotinside _ precedesDotinside ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Dotinside AnyFollowsDotinside _ precedesDotinside ;
       _ > insertedcarrier:10 / Dotinside AnyNotDotinside _ Dotinside ;
     endif;
 
@@ -363,7 +367,7 @@ table(substitution)
   pass(8)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Doubler AnyFollowsDoubler _ precedesDoubler ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Doubler AnyFollowsDoubler _ precedesDoubler ;
       _ > insertedcarrier:10 / Doubler AnyNotDoubler _ Doubler ;
     endif;
 
@@ -382,7 +386,7 @@ table(substitution)
   pass(10)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Sarince AnyFollowsSarince _ precedesSarince ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Sarince AnyFollowsSarince _ precedesSarince ;
       _ > insertedcarrier:10 / Sarince AnyNotSarince _ Sarince ;
     endif;
 
@@ -401,7 +405,7 @@ table(substitution)
   pass(12)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Follw AnyFollowsFollw _ precedesFollw ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Follw AnyFollowsFollw _ precedesFollw ;
       _ > insertedcarrier:10 / Follw AnyNotFollw _ Follw ;
     endif;
 
@@ -420,7 +424,7 @@ table(substitution)
   pass(14)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Thinnas AnyFollowsThinnas _ precedesThinnas ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Thinnas AnyFollowsThinnas _ precedesThinnas ;
       _ > insertedcarrier:10 / Thinnas AnyNotThinnas _ Thinnas ;
     endif;
 
@@ -439,7 +443,7 @@ table(substitution)
   pass(16)
 
     if (insertcarrier)
-      insertedcarrier > _ / insertedcarrier Oomadown _ precedesOomadown ;
+      insertedcarrier insertedcarrier > insertedcarrier:1 _ / _ Oomadown _ precedesOomadown ;
       _ > insertedcarrier:10 / Oomadown AnyNotOomadown _ Oomadown ;
     endif;
 
@@ -461,8 +465,10 @@ table(substitution)
   // Substitution table: Delete superfluous carriers
   pass(18)
 
-    insertedcarrierIntertehtar > _ / anysign _ ;
-    ZWJ insertedcarrier > _ _ ;
+    anysign insertedcarrierIntertehtar > anysign:(1 2) _ / ^ _ _ ;
+    ZWJ insertedcarrier AnyTehta > _ _ AnyTehta:(1 2) / _ _ _ ;
+    insertedcarrier > shortCarrier / _ ;
+    insertedcarrierIntertehtar > shortCarrier / _ ;
 
   endpass;
 
@@ -471,12 +477,12 @@ table(substitution)
   pass(19)
 
     if (carrierdiacritic)
-       _ > diacriticdot:1 / longAndShortCarrier _ ;
+       longAndShortCarrier _ > longAndShortCarrier:1 diacriticdot:1 / _ _  ;
     endif;
 
 
     if (ossediacritic)
-       _ > diacriticdot:1 / osse _ ;
+       osse _ > osse:1 diacriticdot:1 / _ _  ;
     endif;
 
   endpass;
@@ -486,6 +492,7 @@ table(substitution)
   pass(20)
 
     diacriticdot > _ / _ AnyTehta ;
+    diacriticdot > tehtaI / _ ;
 
   endpass;
 
@@ -508,20 +515,20 @@ table(substitution)
   // Substitution table: Special combinations
   pass(23)
 
-    takespecialB tehtaB > tookspecialB _ / _ AnyTehtarORzwj _ ;
+    takespecialB tehtaB > tookspecialB:1 _ / _ AnyTehtarORzwj _ ;
 
   endpass;
   pass(24)
 
-    takespecialX Sarince > tookspecialX _ / _ AnyTehtarORzwj _ ;
-    lambe tehtaIB > lambe_tehtaIB _ / _ AnyTehtarORzwj _ ;
-    lambe tehtaYB > lambe_tehtaYB _ / _ AnyTehtarORzwj _ ;
+    takespecialX Sarince > tookspecialX:1 _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaIB > lambe_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
+    lambe tehtaYB > lambe_tehtaYB:1 _ / _ AnyTehtarORzwj _ ;
 
   endpass;
   pass(25)
 
-    tehtaIB Thinnas > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
-    Thinnas tehtaIB > tehtaThinnas_tehtaIB _ / _ AnyTehtarORzwj _ ;
+    tehtaIB Thinnas > tehtaThinnas_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
+    Thinnas tehtaIB > tehtaThinnas_tehtaIB:1 _ / _ AnyTehtarORzwj _ ;
 
   endpass;
 

@@ -7,18 +7,29 @@
 \font\freeGR="FreeMonoTengwar/GR" % at 15pt
 \font\freeAAT="FreeMonoTengwar/AAT"
 \font\freeICU="FreeMonoTengwar/ICU"
-\font\carriersGR="FreeMonoTengwar/GR:213=1"
+\font\carriersGR="FreeMonoTengwar/GR:+ss01"
 \font\carriersAAT="FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Carriers"
-\font\osseGR="FreeMonoTengwar/GR:214=1"
+\font\osseGR="FreeMonoTengwar/GR:+ss02"
 \font\osseAAT="FreeMonoTengwar/AAT:Diacritic Dots (for 'Full Writing')=On Osse"
 \font\embedGR="FreeMonoTengwar/GR"
 \font\embedAAT="FreeMonoTengwar/AAT"
 \font\embedICU="FreeMonoTengwar/ICU"
-\font\insertGR="FreeMonoTengwar/GR:212=1"
+\font\insertGR="FreeMonoTengwar/GR:+ss03"
 \font\insertAAT="FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion"
 \font\embedGR="FreeMonoTengwar-embedding/GR"
 \font\embedAAT="FreeMonoTengwar-embedding/AAT"
 \font\embedICU="FreeMonoTengwar-embedding/ICU"
+
+% The following snippet is copied from Jonathan Kew's 2005-10-17 XeTeX-notes.tex documentation.
+% Version of the XeTeX logo that doesn't depend on Ǝ being available in the font
+% NB: not suitable for use in italic!
+% Requires XeTeX 0.7 or later
+\def\reflect#1{{\setbox0=\hbox{#1}\rlap{\kern0.5\wd0
+  \special{x:gsave}\special{x:scale -1 1}}\box0 \special{x:grestore}}}
+\def\XeTeX{\leavevmode
+  \setbox0=\hbox{X\lower.5ex\hbox{\kern-.15em\reflect{E}}\kern-.1667em \TeX}%
+  \dp0=0pt\ht0=0pt\box0 }
+
 
 \begin{document}
 
@@ -41,7 +52,7 @@
  ‍ ‍‍   ⁊  ‍ ‍ \\
  ‍ ⁊  . . . . \normalfont
 
-\subsubsection*{\texttt{"FreeMonoTengwar/AAT"}}
+\subsubsection*{\texttt{"FreeMonoTengwar/AAT"}\footnote{Note that \XeTeX{} will only do AAT on Mac OS, and only if the font has been properly installed on the system (no using the font directly from the mirrored trunk directory).}}
 
 \freeAAT
   ‍   ⸱‍  ‍ ⸱ \\
@@ -99,7 +110,7 @@
 
 \subsubsection{On Carriers}
 
-\subsubsection*{\texttt{"FreeMonoTengwar/GR:213=1"}}
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:+ss01"}\footnote{Up to version \texttt{2010-06-11}, the syntax was \texttt{"FreeMonoTengwar/GR:213=1"}.}}
 
 \carriersGR    
 
@@ -114,7 +125,7 @@
 
 \subsubsection{On Osse}
 
-\subsubsection*{\texttt{"FreeMonoTengwar/GR:214=1"}}
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:+ss02"}\footnote{Up to version \texttt{2010-06-11}, the syntax was \texttt{"FreeMonoTengwar/GR:214=1"}.}}
 
 \osseGR    
 
@@ -131,10 +142,11 @@
 
 \subsection{Short carrier insertion}
 
-\subsubsection*{\texttt{"FreeMonoTengwar/GR:212=1"}}
+\subsubsection*{\texttt{"FreeMonoTengwar/GR:+ss03"}\footnote{Up to version \texttt{2010-06-11}, the syntax was \texttt{"FreeMonoTengwar/GR:212=1"}.}}
+
 
 \insertGR      \normalfont Maximal number of tehtar:
-\insertGR  
+\insertGR  
 
 \newcommand{\combinationsrow}[1]{#1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 & #1 \\}
 
@@ -153,7 +165,7 @@
 \subsubsection*{\texttt{"FreeMonoTengwar/AAT:Short carrier insertion=Automatic insertion"}}
 
 \insertAAT      \normalfont Maximal number of tehtar:
-\insertAAT  
+\insertAAT  
 
 \begin{tabular}{ c | c c c c c c c c}
 	\combinationsrow{} \hline
