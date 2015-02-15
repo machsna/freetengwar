@@ -38,6 +38,7 @@ for char in ("telco_leftdown","telco_leftdown_conl","telco_leftup","telco_leftsh
              "closingbar_low3","closingbar_low3_conr","closingbar_low4","closingbar_low4_conr","closingbar_low4_desc",
              "closingbar_high1","closingbar_high1_conl","closingbar_high2","closingbar_high2_conr","closingbar_high2_conl","closingbar_high2_conb",
              "closingbar_high3","closingbar_high3_conl","closingbar_high4","closingbar_high4_conr","closingbar_high4_conl","closingbar_high4_conb",
+             "capclosingbar_low1","capclosingbar_low2","capclosingbar_low3","capclosingbar_low4",
              "capclosingbar_high1","capclosingbar_high2","capclosingbar_high3","capclosingbar_high4",
              "teema1luuva","teema1luuva_conr","teema1luuvar","teema1luuvar_conr",
              "teema2luuva","teema2luuvar","teema3luuva","teema3luuvar","teema4luuva","teema4luuvar",
