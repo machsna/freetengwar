@@ -10,29 +10,29 @@
 \font\tengtelclarge="[./tengtelc.ttf]/GR" at 48pt
 \font\tengtelcsmall="[./tengtelc.ttf]/GR" at 10pt
 \font\tengtelcb="[./tengtelcb.ttf]/GR" at 15pt
-\font\bul="[./tengtelcb.ttf]/GR:208=1" at 15pt
-\font\bcap="[./tengtelcb.ttf]/GR:203=1" at 15pt
-\font\bcapul="[./tengtelcb.ttf]/GR:203=1:208=1" at 15pt
-\font\tengtelcConnectingLess="[./tengtelc.ttf]/GR:201=0" at 15pt
-\font\tengtelcConnectingDefault="[./tengtelc.ttf]/GR:201=1" at 15pt
-\font\tengtelcConnectingMore="[./tengtelc.ttf]/GR:201=2" at 15pt
-\font\tengtelcTehtaOnSilmeDefault="[./tengtelc.ttf]/GR:202=0" at 15pt
-\font\tengtelcTehtaOnSilme="[./tengtelc.ttf]/GR:202=3" at 15pt
-\font\tengtelcDecoratedDefault="[./tengtelc.ttf]/GR:203=0" at 15pt
-\font\tengtelcDecoratedInitially="[./tengtelc.ttf]/GR:203=1" at 15pt
-\font\tengtelcDecoratedAlways="[./tengtelc.ttf]/GR:203=2" at 15pt
-\font\tengtelcDescendingWtengwa="[./tengtelc.ttf]/GR:204=0" at 15pt
-\font\tengtelcDescendingWtengwaDefault="[./tengtelc.ttf]/GR:204=1" at 15pt
-\font\tengtelcShookPlacementHigh="[./tengtelc.ttf]/GR:205=0" at 15pt
-\font\tengtelcShookPlacementDefault="[./tengtelc.ttf]/GR:205=1" at 15pt
-\font\tengtelcHWtengwaDefault="[./tengtelc.ttf]/GR:206=0" at 15pt
-\font\tengtelcHWtengwaRoomenNuquerna="[./tengtelc.ttf]/GR:206=1" at 15pt
-\font\tengtelcHWtengwaMirroredHyarmen="[./tengtelc.ttf]/GR:206=2" at 15pt
-\font\tengtelcMarkedOsseDefault="[./tengtelc.ttf]/GR:207=0" at 15pt
-\font\tengtelcMarkedOsseFinal="[./tengtelc.ttf]/GR:207=1" at 15pt
-\font\tengtelcMarkedOsseAlways="[./tengtelc.ttf]/GR:207=2" at 15pt
-\font\tengtelcUnderliningDefault="[./tengtelc.ttf]/GR:208=0" at 15pt
-\font\tengtelcUnderliningOn="[./tengtelc.ttf]/GR:208=1" at 15pt
+\font\bul="[./tengtelcb.ttf]/GR:Underline=True" at 15pt
+\font\bcap="[./tengtelcb.ttf]/GR:Decorated tengwar=Word initially" at 15pt
+\font\bcapul="[./tengtelcb.ttf]/GR:Decorated tengwar=Word initially:Underline=True" at 15pt
+\font\tengtelcConnectingLess="[./tengtelc.ttf]/GR:Connect tengwar=Minimal" at 15pt
+\font\tengtelcConnectingDefault="[./tengtelc.ttf]/GR:Connect tengwar=Normal" at 15pt
+\font\tengtelcConnectingMore="[./tengtelc.ttf]/GR:Connect tengwar=Maximal" at 15pt
+\font\tengtelcTehtaOnSilmeDefault="[./tengtelc.ttf]/GR:Tehta on Silme=To the left" at 15pt
+\font\tengtelcTehtaOnSilme="[./tengtelc.ttf]/GR:Tehta on Silme=To the right" at 15pt
+\font\tengtelcDecoratedDefault="[./tengtelc.ttf]/GR:Decorated tengwar=None" at 15pt
+\font\tengtelcDecoratedInitially="[./tengtelc.ttf]/GR:Decorated tengwar=Word initially" at 15pt
+\font\tengtelcDecoratedAlways="[./tengtelc.ttf]/GR:Decorated tengwar=All" at 15pt
+\font\tengtelcDescendingWtengwa="[./tengtelc.ttf]/GR:Descending W-tengwa=False" at 15pt
+\font\tengtelcDescendingWtengwaDefault="[./tengtelc.ttf]/GR:Descending W-tengwa=True" at 15pt
+\font\tengtelcShookPlacementHigh="[./tengtelc.ttf]/GR:Prefer low S-hook=False" at 15pt
+\font\tengtelcShookPlacementDefault="[./tengtelc.ttf]/GR:Prefer low S-hook=True" at 15pt
+\font\tengtelcHWtengwaDefault="[./tengtelc.ttf]/GR:WH-tengwa variant=Common" at 15pt
+\font\tengtelcHWtengwaRoomenNuquerna="[./tengtelc.ttf]/GR:WH-tengwa variant=Roomen nuquerna" at 15pt
+\font\tengtelcHWtengwaMirroredHyarmen="[./tengtelc.ttf]/GR:WH-tengwa variant=Mirrored Hyarmen" at 15pt
+\font\tengtelcMarkedOsseDefault="[./tengtelc.ttf]/GR:Marked Osse=Never" at 15pt
+\font\tengtelcMarkedOsseFinal="[./tengtelc.ttf]/GR:Marked Osse=Word final" at 15pt
+\font\tengtelcMarkedOsseAlways="[./tengtelc.ttf]/GR:Marked Osse=Always" at 15pt
+\font\tengtelcUnderliningDefault="[./tengtelc.ttf]/GR:Underline=False" at 15pt
+\font\tengtelcUnderliningOn="[./tengtelc.ttf]/GR:Underline=True" at 15pt
 
 \setromanfont{Gentium Basic}
 
@@ -117,35 +117,35 @@ and even as he looked, it took a stride towards him.
 \hline\hline
 Plain & Feature & XeTeX code & Default \\
 \hline
-{\tengtelc  } & {\tengtelcConnectingLess  } & \texttt{201=0} \\
-{\tengtelc  } & {\tengtelcConnectingDefault  }\* & \texttt{201=1} & $\times$ \\
-{\tengtelc  } & {\tengtelcConnectingMore  } & \texttt{201=2} \\
+{\tengtelc  } & {\tengtelcConnectingLess  } & \texttt{ss01=0} \\
+{\tengtelc  } & {\tengtelcConnectingDefault  }\* & \texttt{ss01=1} & $\times$ \\
+{\tengtelc  } & {\tengtelcConnectingMore  } & \texttt{ss01=2} \\
 \hline
-{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* & \texttt{202=0} & $\times$ \\
+{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* & \texttt{cv01=0} & $\times$ \\
 {\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* \\
-{\tengtelc       } & {\tengtelcTehtaOnSilme       } & \texttt{202=3} \\
+{\tengtelc       } & {\tengtelcTehtaOnSilme       } & \texttt{cv01=3} \\
 {\tengtelc       } & {\tengtelcTehtaOnSilme       }\* & \\
 \hline
-{\tengtelc } & {\tengtelcDecoratedDefault }\* & \texttt{203=0} & $\times$ \\
-{\tengtelc } & {\tengtelcDecoratedInitially } & \texttt{203=1} \\
-{\tengtelc } & {\tengtelcDecoratedAlways } & \texttt{203=2} \\
+{\tengtelc } & {\tengtelcDecoratedDefault }\* & \texttt{ss02=0} & $\times$ \\
+{\tengtelc } & {\tengtelcDecoratedInitially } & \texttt{ss02=1} \\
+{\tengtelc } & {\tengtelcDecoratedAlways } & \texttt{ss02=2} \\
 \hline
-{\tengtelc    } & {\tengtelcDescendingWtengwa    } & \texttt{204=0} \\
-{\tengtelc    } & {\tengtelcDescendingWtengwaDefault    } & \texttt{204=1} & $\times$ \\
+{\tengtelc    } & {\tengtelcDescendingWtengwa    } & \texttt{cv03=0} \\
+{\tengtelc    } & {\tengtelcDescendingWtengwaDefault    } & \texttt{cv03=1} & $\times$ \\
 \hline
-{\tengtelc    } & {\tengtelcShookPlacementHigh    } & \texttt{205=0} \\
-{\tengtelc    } & {\tengtelcShookPlacementDefault    } & \texttt{205=1} & $\times$ \\
+{\tengtelc    } & {\tengtelcShookPlacementHigh    } & \texttt{cv04=0} \\
+{\tengtelc    } & {\tengtelcShookPlacementDefault    } & \texttt{cv04=1} & $\times$ \\
 \hline
-{\tengtelc } & {\tengtelcHWtengwaDefault } & \texttt{206=0} & $\times$ \\
-{\tengtelc } & {\tengtelcHWtengwaRoomenNuquerna } & \texttt{206=1} \\
-{\tengtelc } & {\tengtelcHWtengwaMirroredHyarmen } & \texttt{206=2} \\
+{\tengtelc } & {\tengtelcHWtengwaDefault } & \texttt{cv05=0} & $\times$ \\
+{\tengtelc } & {\tengtelcHWtengwaRoomenNuquerna } & \texttt{cv05=1} \\
+{\tengtelc } & {\tengtelcHWtengwaMirroredHyarmen } & \texttt{cv05=2} \\
 \hline
-{\tengtelc } & {\tengtelcMarkedOsseDefault } & \texttt{207=0} & $\times$ \\
-{\tengtelc } & {\tengtelcMarkedOsseFinal } & \texttt{207=1} \\
-{\tengtelc } & {\tengtelcMarkedOsseAlways } & \texttt{207=2} \\
+{\tengtelc } & {\tengtelcMarkedOsseDefault } & \texttt{cv06=0} & $\times$ \\
+{\tengtelc } & {\tengtelcMarkedOsseFinal } & \texttt{cv06=1} \\
+{\tengtelc } & {\tengtelcMarkedOsseAlways } & \texttt{cv06=2} \\
 \hline
-{\tengtelc } & {\tengtelcUnderliningDefault } & \texttt{208=0} & $\times$ \\
-{\tengtelc } & {\tengtelcUnderliningOn } & \texttt{208=1} \\
+{\tengtelc } & {\tengtelcUnderliningDefault } & \texttt{ss03=0} & $\times$ \\
+{\tengtelc } & {\tengtelcUnderliningOn } & \texttt{ss03=1} \\
 \hline\hline
 \end{tabular}
 
