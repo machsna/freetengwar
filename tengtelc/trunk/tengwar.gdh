@@ -32,15 +32,15 @@ table(feature)
     settings {
       none {
         value=0;
-        name.LG_USENG = string("Only when necessary");
+        name.LG_USENG = string("Minimal");
       }
       some {
         value=1;
-        name.LG_USENG = string("Sometimes");
+        name.LG_USENG = string("Normal");
       }
       all {
         value=2;
-        name.LG_USENG = string("Whenever possible");
+        name.LG_USENG = string("Maximal");
       }
     }
   }
@@ -141,11 +141,11 @@ table(feature)
     settings {
       no {
         value=0;
-        name.LG_USENG = string("No");
+        name.LG_USENG = string("False");
       }
       yes {
         value=1;
-        name.LG_USENG = string("Yes");
+        name.LG_USENG = string("True");
       }
     }
   }
@@ -317,7 +317,7 @@ table(sub)
       atengwa > atengwa_desc / ^ _ ;
     endif;
 
-    zwj longcarr > _ longcarr_tehta;
+    zwj longcarr > _ longcarr_tehta:(1 2);
     zwj > zwj_hidden;
     zwnj > zwnj_hidden;
 
