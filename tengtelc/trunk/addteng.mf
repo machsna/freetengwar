@@ -24,6 +24,77 @@
 %% You should have received a copy of the GNU General Public License
 %% along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+def draw_caproomen(expr number, secstyle, nuquerna) =
+  padding(0.7pt,0.7pt);
+  a0=46; a1=1/2[a0,a2]; a2=50;
+  a3=55; a4=a5=a6=a7=a8=35; a9=45;
+  a21=a22=50;
+  z1=(lpad,ctex);
+  z21-z20prim = 1.5tecil_w*dir(50);
+  z2=(0.5[x1,x5],0)-0.5*(z21-z20prim);
+  z5=(w-rpad,0.65ctex);
+  ap1=ang(a0..a1..a2);
+  p1=topserif(1,2)(0.5pt,0.4*abs(z1-z2),25,3,ap1)..z2;
+  draw_stroke(p1,ap1);
+  z20prim=whatever[z1,z2];
+  use(a21); top y21=y1;
+  t:=xpart(p1 intersectiontimes (z20prim..z21));
+  z20=point t of p1; a20=penangle t of ap1;
+  z22prim=z21+ctex*dir(angle(z2-z20));
+  t:=(z21--z22prim) heighttimes 0.6ctex;
+  z3=change_angle(point t of (z21--z22prim), a21, a3);
+  use(a4); top z4=(0.69[x3,x5],ctex+1/2o);
+  z6=change_angle(z2,a2,a6);
+  if secstyle=normal:
+    ap2=ang(a3..a4..a5..a6..a7..a8..a9);
+    z7=(0.19[x1,x5],0.7[y6,y8]);
+    z8=(0.43[x7,x9],-0.9tdesc);
+    x9=0.65[x1,x5]; z9=z8+whatever*dir(27);
+    p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{down}..tension 1.2..z8{right}..{dir a9}z9;
+  elseif secstyle=open:
+    ap2=ang(a3..a4..a5..a6..a7..a8..a9);
+    z7=(0.08[x1,x5],0.75[y6,y8]);
+    z8=(0.50[x7,x9],-0.95tdesc);
+    x9=0.32[x1,x5]; z9=z8+whatever*dir(15);
+    p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{down}..tension 1.2..z8{right}..{dir a9}z9;
+  fi
+  draw_stroke(p2,ap2);
+  t:=xpart(p2 intersectiontimes subpath (0.75,1) of (z21--z22prim));
+  z22=change_angle(point t of p2, penangle t of ap2, a22);
+  p4=z20..z21 & z21--z22;
+  ap4=ang(a20..a21..a22);
+  draw_stroke(p4,ap4);
+  if number=2:
+    a10=angle direction 3 of p2;
+    a11=a10; a12=35-180;
+    t:=p1 heighttimes 0.28tex;
+    z10=change_angle(point t of p1,penangle t of ap1-180,a10);
+    z11=z10+2pt*dir(a10);
+    z12=z11+0.5pt*dir(-70);
+    ap3=ang(a10..a11..a12);
+    p3=z10{dir(a10-10)}..z11{dir(a10+10)}..z12;
+    draw_stroke(p3,ap3);
+  fi
+  %setap("sarinceap",z9); apt(ps.n,lastap).forgd:=false;
+  %roomensarincepenangle:=a9;
+  setap("uap",(1/2[lpad,w-rpad],ctex+apy));
+  setap("cap",(0.55[x3,x5],0.55ctex));
+  setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
+  penlabels(range 1 thru 22);
+enddef;
+beginchr(roomen&".dec",1.3ten);
+  draw_caproomen(1,normal,false);
+endchr;
+beginchr(roomen&".dec_open",1.3ten);
+  draw_caproomen(1,open,false);
+endchr;
+beginchr(arda&".dec",1.3ten);
+  draw_caproomen(2,normal,false);
+endchr;
+beginchr(arda&".dec_open",1.3ten);
+  draw_caproomen(2,open,false);
+endchr;
+
 def draw_sarincecross(expr style) =
   padding(0pt,0.8pt);
   if style=normal:
