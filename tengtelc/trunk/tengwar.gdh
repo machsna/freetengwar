@@ -189,10 +189,10 @@ table(glyph)
   Arda=(arda,arda_conl,arda_open,arda_conl_open,arda_dec,arda_dec_open);
   Lambe=(lambe,lambe_conr,lambe_conl,lambe_conb,lambe_dec,lambe_conrbot,lambe_conbbot);
   Alda=(alda,alda_conr,alda_conl,alda_conb,alda_dec);
-  Silme=(silme,silme_open,silme_flat,silme_lig,silme_lig_open,silme_lig_flat,silme_lig_harma);
-  SilmeNuq=(silmenuq);
-  Aare=(aare,aare_open,aare_flat);
-  AareNuq=(aarenuq);
+  Silme=(silme,silme_open,silme_flat,silme_lig,silme_lig_open,silme_lig_flat,silme_lig_harma,silme_dec,silme_dec_open,silme_dec_flat);
+  SilmeNuq=(silmenuq,silmenuq_dec);
+  Aare=(aare,aare_open,aare_flat,aare_dec,aare_dec_open,aare_dec_flat);
+  AareNuq=(aarenuq,aarenuq_dec);
   Hyarmen=(hyarmen,hyarmen_conr,hyarmen_dec);
   HwestaSin=(hwestasin);
   Yanta=(yanta,yanta_conr,yanta_dec);
@@ -219,13 +219,15 @@ table(glyph)
                  thuule,formen,harma,hwesta,anto,ampa,anca,unque,
                  nuumen,malta,noldo,nwalme,oore,vala,anna,vilya,
                  extthuule,extformen,extharma,exthwesta,extanto,extampa,extanca,extunque,
-                 lambe,alda,roomen,arda,hyarmen,yanta,longcarr,halla,shortcarr,
+                 lambe,alda,roomen,arda,silme,silmenuq,aare,aarenuq,
+                 hyarmen,yanta,longcarr,halla,shortcarr,
                  atengwa,openanna,mhtengwa,beleriandicmh);
   dectengwar=   (tinco_dec,parma_dec,calma_dec,quesse_dec,ando_dec,umbar_dec,anga_dec,ungwe_dec,
                  thuule_dec,formen_dec,harma_dec,hwesta_dec,anto_dec,ampa_dec,anca_dec,unque_dec,
                  nuumen_dec,malta_dec,noldo_dec,nwalme_dec,oore_dec,vala_dec,anna_dec,vilya_dec,
                  extthuule_dec,extformen_dec,extharma_dec,exthwesta_dec,extanto_dec,extampa_dec,extanca_dec,extunque_dec,
-                 lambe_dec,alda_dec,roomen_dec,arda_dec,hyarmen_dec,yanta_dec,longcarr_dec,halla_dec,shortcarr_dec,
+                 lambe_dec,alda_dec,roomen_dec,arda_dec,silme_dec,silmenuq_dec,aare_dec,aarenuq_dec,
+                 hyarmen_dec,yanta_dec,longcarr_dec,halla_dec,shortcarr_dec,
                  atengwa_dec,openanna_dec,mhtengwa_dec,beleriandicmh_dec);
 
   WideTengwar=(Ando,Umbar,Anga,Ungwe,Anto,Ampa,Anca,Unque,Nuumen,Malta,Noldo,Nwalme,ExtAnto,ExtAmpa,ExtAnca,ExtUnque,Mhtengwa);
@@ -352,9 +354,9 @@ table(sub)
     (roomen,roomen_conl,roomen_dec,arda,arda_conl,arda_dec) > (roomen_open,roomen_conl_open,roomen_dec_open,arda_open,arda_conl_open,arda_dec_open)
            / _ AnyIsolUpTehtar IsolDownTehtar ;
     if (silmepref==left)
-      (silme,silme_lig,aare) > (silme_flat,silme_lig_flat,aare_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
+      (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_flat,silme_lig_flat,silme_dec_flat,aare_flat,aare_dec_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
     elseif (silmepref==right)
-      (silme,silme_lig,aare) > (silme_open,silme_lig_open,aare_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
+      (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_open,silme_lig_open,silme_dec_open,aare_open,aare_dec_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
     endif;
     if (descwtengwa)
       wtengwa > wtengwa_desc;
