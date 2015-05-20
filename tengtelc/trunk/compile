@@ -3,7 +3,7 @@
 # Generating ttf-files:
 
 python tehtarshift.py
-#python mf2sfd.py underline
+python mf2sfd.py underline
 
 #python mf2sfd.py latinr
 python mf2sfd.py tengwarr
@@ -57,5 +57,5 @@ rm -f tengwarb.tfm
 
 # Adding Graphite tables:
 
-#. ./addgr.bat
+. ./addgr.bat
 

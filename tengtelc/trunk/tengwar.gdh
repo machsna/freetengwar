@@ -382,40 +382,21 @@ table(sub)
     AnyUpTehta AnyUpTehta AnyUpTehta AnyDownTehta > @4 @1 @2 @3 / ^ _ _ _ _ ;
     AnyUpTehta AnyUpTehta AnyDownTehta > @3 @1 @2 / ^ _ _ _ ;
     AnyUpTehta AnyDownTehta > @2 @1 / ^ _ _ ;
-/*
-    (underbar_norm) > underbar_roomen / Roomen _ ;
-    (underbar_norm) > underbar_silme / (SilmeNuq,AareNuq) _ ;
-    (overbar_norm) > overbar_silme / (Silme,Aare) AnyDownTehtar _ ;
-    (overbar_norm,underbar_norm,otehta_norm,wtehta_norm,engytehta_norm) > (overbar_wide,underbar_wide,otehta_wide,wtehta_wide,engytehta_wide)
-           / WideTengwar ^ AnyTehtar _ ;
-    otehta_norm > otehta_wide / (Tinco,Parma,Thuule,Formen,Oore,Vala,ExtThuule,ExtFormen,OpenAnna,BeleriandicMh) ^ AnyTehtar _ ;
-    (otehta_norm,overbar_norm,underbar_norm,engytehta_norm) > (otehta_wide,overbar_lambe,underbar_lambe,engytehta_wide)
-           / (Lambe,Alda) ^ AnyTehtar _ ;
-    longcarrtehta_norm > longcarrtehta_lambe / Lambe underbar_lambe? ^ _ ;
-    (downutehta_norm) > (downutehta_long) / (Roomen,Arda,Lambe,Alda,AngWhtengwa) UnderbarTehta? _ ;
-    (downutehta_norm) > (downutehta_narrow) / (Tinco,Parma,ExtThuule,ExtFormen) UnderbarTehta? _ ;
-    (downutehta_norm) > (downutehta_wide) / WideTengwar UnderbarTehta? _ ;
-    wtehta_norm > wtehta_narrow / (StemUpRightTengwar,StemUpLeftTengwar,NarrowTengwar) AnyTehtar _ ;
-    (otehta_norm,otehta_double_norm) > (otehta_narrow,otehta_double_narrow)
-           / NarrowTengwar AnyTehtar ^ _ AnyTehtar StemUpLeftTengwar;
-    (otehta_norm,otehta_double_norm) > (otehta_narrow,otehta_double_narrow) / StemUpRightTengwar AnyTehtar _ ;
+
+//    (otehta_norm,otehta_double_norm) > (otehta_narrow,otehta_double_narrow)
+//           / NarrowTengwar AnyTehtar ^ _ AnyTehtar StemUpLeftTengwar;
  
-    itehta_norm itehta_norm > ytehta_norm _ / ^ _ _ ;
-    etehta_norm etehta_norm > etehta_double_norm _ / ^ _ _ ;
-    downetehta_norm downetehta_norm > downetehta_double_norm _ / ^ _ _ ;
-    otehta_narrow otehta_narrow > otehta_double_narrow _ / ^ _ _ ;
-    otehta_norm otehta_norm > otehta_double_norm _ / ^ _ _ ;
-    otehta_wide otehta_wide > otehta_double_wide _ / ^ _ _ ;
-    utehta_norm utehta_norm > utehta_double_norm _ / ^ _ _ ;
+    itehta_norm itehta_norm > ytehta_norm:(1 2) _ / ^ _ _ ;
+    etehta_norm etehta_norm > eetehta_norm:(1 2) _ / ^ _ _ ;
+    downetehta_norm downetehta_norm > downeetehta_norm:(1 2) _ / ^ _ _ ;
+    otehta_norm otehta_norm > ootehta_norm:(1 2) _ / ^ _ _ ;
+    utehta_norm utehta_norm > uutehta_norm:(1 2) _ / ^ _ _ ;
 
-    itehta_norm utehta_norm > utehtadot_norm _ / ^ _ _ ;
-    utehta_norm itehta_norm > utehtadot_norm _ / ^ _ _ ;
-    itehta_norm (otehta_narrow,otehta_norm,otehta_wide) > otehtadot_norm _ / ^ _ _ ;
-    (otehta_narrow,otehta_norm,otehta_wide) itehta_norm > otehtadot_norm _ / ^ _ _ ;
+    itehta_norm utehta_norm > utehtadot_norm:(1 2) _ / ^ _ _ ;
+    utehta_norm itehta_norm > utehtadot_norm:(1 2) _ / ^ _ _ ;
+    itehta_norm otehta_norm > otehtadot_norm:(1 2) _ / ^ _ _ ;
+    otehta_norm itehta_norm > otehtadot_norm:(1 2) _ / ^ _ _ ;
 
-    dotinside_norm > dotinside_conu / (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya,ExtHwesta,ExtUnque) ^ _ ;
-    dotinside_norm > dotinside_cond / (Parma,Umbar,Formen,Ampa,Malta,Vala,ExtFormen,ExtAmpa,PreFeaQu,BeleriandicMh) ^ _ ;
-*/
   endpass;
 
   pass(3)
@@ -423,6 +404,8 @@ table(sub)
        uline_end AllTengwar _ > Underliners$2:2 @2 uline_end:2 / _ _ AnyTehtar ZWJ? ^ _ ;
        _ _ AllTengwar _ > uline_start:3 Underliners$3:3 @3 uline_end:3 / _ _ _ AnyTehtar ZWJ? ^ _ ;
     endif;
+
+	atehta_norm > AtehtaBarShift$1 / AllTengwar AnyDownTehtar OverbarShift _ ;
 
     atehta_norm > AtehtaShift$1 / AllTengwar AnyDownTehtar _ ;
     invatehta_norm > InvAtehtaShift$1 / AllTengwar AnyDownTehtar _ ;

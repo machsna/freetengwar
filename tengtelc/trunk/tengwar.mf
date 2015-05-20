@@ -87,8 +87,8 @@ enddef;
 input tengenc;
 if tracing:
 input stdteng;
-input addteng;
 fi
+input addteng;
 input tehtar;
 
 
