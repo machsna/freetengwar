@@ -49,6 +49,9 @@ beginchr(atehta&".norm",0);
   setap("uap",(0,tex+3.0pt));
 endchr;
 combinechr(atehta,dottedcircle,"uap",atehta&".norm","dap");
+for i=0 upto 40:
+  shiftedref(atehta&".norm", atehta&".test"&decimal i, (-0.125pt*i,0.25pt*2));
+endfor
 
 beginchr(downatehta&".norm",0);
   z0=(0,-2.2pt);
@@ -66,6 +69,10 @@ beginchr(downatehta&".norm",0);
 endchr;
 combinechr(downatehta,dottedcircle,"dap",downatehta&".norm","uap");
 shifttehta(downatehta,"lambe","norm","cap",averageap("cap",lambe));
+
+for i=0 upto 40:
+  shiftedref(downatehta&".norm", downatehta&".test"&decimal i, (-0.125pt*i,0.25pt*0));
+endfor
 
 beginchr(invatehta&".norm",0);
   z0=(0,tex+1.1pt);
