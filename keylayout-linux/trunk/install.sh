@@ -2,7 +2,7 @@
 
 ##  Installation script for keyboard layouts, intended for Ubuntu.
 ##
-##  Copyright (C) 2009  Johan Winge
+##  Copyright (C) 2009-2015 Johan Winge
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
@@ -18,8 +18,8 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 LAYOUTFILE="ucteng"
-SHORTDESC="teng"
-DESCRIPTION="Tengwar Unicode"
+SHORTDESC=""
+DESCRIPTION="Tengwar CSUR QWERTY"
 LANGUAGE="art"
 
 ## This script must be run as root.
@@ -81,6 +81,13 @@ then
   exit 1
 fi
 
+## Copy the icon for Cinnamon
+CINNAMONICONDIR="/usr/share/cinnamon/applets/keyboard@cinnamon.org/flags/"
+if [ -d $CINNAMONICONDIR ]
+then
+   cp $LAYOUTFILE.png $CINNAMONICONDIR
+fi
+
 ## Adding the layout to the list of installed layouts
 ROT="/xkbConfigRegistry/layoutList/layout[last()]"
 xmlstarlet ed -P \
@@ -113,6 +120,10 @@ fi
 echo "#!/bin/bash" > uninstall.sh
 echo "sudo rm $TARGETDIR$LAYOUTFILE" >> uninstall.sh
 echo "sudo mv $RULESFILE~ $RULESFILE" >> uninstall.sh
+if [ -f $CINNAMONICONDIR$LAYOUTFILE.png ]
+then
+  echo "sudo rm $CINNAMONICONDIR$LAYOUTFILE.png" >> uninstall.sh
+fi
 chmod +x uninstall.sh
 
 ## Success!

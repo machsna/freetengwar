@@ -1,7 +1,7 @@
 //
-//  Tengwar Unicode keyboard layout (based on US-QWERTY)
+//  Tengwar CSUR keyboard layout (based on US-QWERTY)
 //
-//  Copyright (C) 2009  Johan Winge
+//  Copyright (C) 2009-2015 Johan Winge
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 
 xkb_symbols "basic"
 {
-	name[Group1] = "Tengwar Unicode";
+	name[Group1] = "Tengwar CSUR QWERTY";
 	key <AB01> { [          UE026,          UE027                                 ] };
 	key <AB02> { [          UE058,          UE059                                 ] };
 	key <AB03> { [          UE002,          UE00A,          UE01A                 ] };
