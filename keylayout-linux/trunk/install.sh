@@ -81,6 +81,21 @@ then
   exit 1
 fi
 
+## Add the layout to the LXDE layout list
+LXPANELCFG="/usr/share/lxpanel/xkeyboardconfig/layouts.cfg"
+if [ -f $LXPANELCFG ]
+then
+  cp $LXPANELCFG $LXPANELCFG~
+  echo "$LAYOUTFILE = $DESCRIPTION" >> $LXPANELCFG
+fi
+
+## Copy the icon for LXDE
+LXPANELICONDIR="/usr/share/lxpanel/images/xkb-flags/"
+if [ -d $LXPANELICONDIR ]
+then
+   cp $LAYOUTFILE.png $LXPANELICONDIR
+fi
+
 ## Copy the icon for Cinnamon
 CINNAMONICONDIR="/usr/share/cinnamon/applets/keyboard@cinnamon.org/flags/"
 if [ -d $CINNAMONICONDIR ]
@@ -120,6 +135,14 @@ fi
 echo "#!/bin/bash" > uninstall.sh
 echo "sudo rm $TARGETDIR$LAYOUTFILE" >> uninstall.sh
 echo "sudo mv $RULESFILE~ $RULESFILE" >> uninstall.sh
+if [ -f $LXPANELCFG~ ]
+then
+  echo "sudo mv $LXPANELCFG~ $LXPANELCFG" >> uninstall.sh
+fi
+if [ -f $LXPANELICONDIR$LAYOUTFILE.png ]
+then
+  echo "sudo rm $LXPANELICONDIR$LAYOUTFILE.png" >> uninstall.sh
+fi
 if [ -f $CINNAMONICONDIR$LAYOUTFILE.png ]
 then
   echo "sudo rm $CINNAMONICONDIR$LAYOUTFILE.png" >> uninstall.sh
@@ -127,7 +150,7 @@ fi
 chmod +x uninstall.sh
 
 ## Success!
-echo; echo "The file $LAYOUTFILE has been copied to $TARGETDIR, and $RULESFILE has been updated to reflect this. An uninstall script, uninstall.sh, has been generated."; echo
+echo; echo "The file $LAYOUTFILE has been copied to $TARGETDIR, and $RULESFILE has been updated to reflect this. An uninstall script, uninstall.sh, has been generated."; echo "To ensure that the new layout is properly recognized, please restart your system before attempting to activate the layout."
 
 exit 0
 
