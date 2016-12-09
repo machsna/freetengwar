@@ -1,0 +1,95 @@
+%% Tengwar Telcontar - a Unicode Tengwar font
+%% Copyright (c) 2005-2010 Johan Winge
+%% 
+%% Tengwar Telcontar is free software: you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation, either version 3 of
+%% the License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this font,
+%% and embed this font or unaltered portions of this font into the
+%% document, this font does not by itself cause the resulting document
+%% to be covered by the GNU General Public License. This exception does
+%% not however invalidate any other reasons why the document might be
+%% covered by the GNU General Public License. If you modify this font,
+%% you may extend this exception to your version of the font, but you are
+%% not obligated to do so. If you do not wish to do so, delete this
+%% exception statement from your version.
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+forgd:=false; % We have this character in the latin font too.
+addalias("uni25CC","dottedcircle");
+beginchr(dottedcircle,1.1tex);
+  padding(0.3pt,0.3pt);
+  numeric le;
+  le=tex/19.5; path dot;
+  dot=superellipse((le,0),(0,le),(-le,0),(0,-le),0.76);
+  for i=0 upto 15:
+    fill dot shifted (1/2(w,tex)+((9.2le,0) rotated (22.5*i)));
+  endfor
+  setap("uap",(1/2w,tex+apy));
+  setap("cap",1/2(w,tex));
+  setap("dap",(1/2w,-apy));
+endchr;
+forgd:=true;
+
+addalias("uni200B","zwsp"); beginrefchr(zwsp,0); endchr;
+addalias("uni200C","zwnj"); %beginrefchr(zwnj,0); endchr;
+addalias("uni200C.hidden","zwnj_hidden"); beginrefchr(zwnj_hidden,0); endchr;
+addalias("uni200D","zwj"); %beginrefchr(zwj,0); endchr;
+addalias("uni200D.hidden","zwj_hidden"); beginrefchr(zwj_hidden,0); endchr;
+%addalias("uni200D.visible","zwj_visible");
+beginchr(zwnj,0);
+  numeric le;
+  le:=em/30;
+  pickup pensquare xscaled 1le yscaled 0.5le;
+  bot y1=0; x1=x2=0;
+  y2=tasc+1pt;
+  draw z1--z2; 
+endchr;
+beginchr(zwj,0);
+  numeric le;
+  le:=em/30;
+  pickup pensquare xscaled 1le yscaled 0.5le;
+  bot y1=0; x1=x2=0;
+  y2=tasc+1pt;
+  draw z1--z2; 
+  pickup pensquare scaled 1le rotated 45;
+  z2=1/2[z3,z6]=1/2[z5,z4];
+  x3=x5; y3=y4;
+  x4-x3=y3-y5=1pt;
+  show z3,z4,z5,z6;
+  draw z3--z6; draw z4--z5;
+endchr;
+
+% Move to stdteng when you're done...
+vardef find_telcoap(expr yoffset, pena, side, telcop, telcoap) =
+  save t,y,finaly,ap,lastt; pair ap; finaly:=if pair yoffset: ypart fi yoffset;
+  y:=finaly;
+  t:=telcop heighttimes y;
+  forever:
+    draw_change_of_angle:=false;
+    ap:=change_angle(point t of telcop, penangle t of telcoap+side, pena+side);
+    y:=y+(finaly-ypart(ap));
+    lastt:=t; t:=telcop heighttimes y;
+    if t=-1: t:= if lastt<0.5: 0 else: length telcop fi; fi
+    exitif abs(t-lastt) <= epsilon;
+  endfor
+  (xpart ap,finaly)
+enddef;
+
+input tengenc;
+if tracing:
+input stdteng;
+input addteng;
+fi
+input tehtar;
+
+

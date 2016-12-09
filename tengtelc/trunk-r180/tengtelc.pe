@@ -1,0 +1,118 @@
+if ( $1=="regular" )
+  Open("latinr.sfd")
+  MergeFonts("tengwarr.sfd")
+  MergeFonts("underline.sfd")
+  SetFontNames("tengtelc","Tengwar Telcontar","Tengwar Telcontar","Regular")
+elseif ( $1=="bold" )
+  Open("latinb.sfd")
+  MergeFonts("tengwarb.sfd")
+  MergeFonts("underline.sfd")
+  SetFontNames("tengtelcb","Tengwar Telcontar","Tengwar Telcontar Bold","Bold")
+endif
+
+unlink.pe();
+
+Select("telco_leftdown"); Clear();
+Select("telco_leftdown_conl"); Clear();
+Select("telco_leftup"); Clear();
+Select("telco_leftshort"); Clear();
+Select("telco_leftshort_conl"); Clear();
+Select("telco_leftext"); Clear();
+Select("telco_rightdown"); Clear();
+Select("telco_rightdown_conr"); Clear();
+Select("telco_rightdown2"); Clear();
+Select("telco_rightup"); Clear();
+Select("telco_rightup_conr"); Clear();
+Select("telco_rightshort"); Clear();
+Select("telco_rightshort_conr"); Clear();
+Select("telco_rightshort_conrbot"); Clear();
+Select("telco_rightshort2"); Clear();
+Select("telco_rightshort2_conrbot"); Clear();
+Select("telco_rightext"); Clear();
+Select("captelco_leftdown"); Clear();
+Select("captelco_leftup"); Clear();
+Select("captelco_leftshort"); Clear();
+Select("captelco_leftup2"); Clear();
+Select("captelco_leftshort2"); Clear();
+Select("captelco_leftext"); Clear();
+Select("captelco_rightdown1"); Clear();
+Select("captelco_rightdown2"); Clear();
+Select("captelco_rightup"); Clear();
+Select("captelco_rightshort1"); Clear();
+Select("captelco_rightshort2"); Clear();
+Select("captelco_rightext"); Clear();
+Select("closingbar_low1"); Clear();
+Select("closingbar_low1_conr"); Clear();
+Select("closingbar_low2"); Clear();
+Select("closingbar_low2_conr"); Clear();
+Select("closingbar_low2_desc"); Clear();
+Select("closingbar_low3"); Clear();
+Select("closingbar_low3_conr"); Clear();
+Select("closingbar_low4"); Clear();
+Select("closingbar_low4_conr"); Clear();
+Select("closingbar_low4_desc"); Clear();
+Select("closingbar_high1"); Clear();
+Select("closingbar_high1_conl"); Clear();
+Select("closingbar_high2"); Clear();
+Select("closingbar_high2_conr"); Clear();
+Select("closingbar_high2_conl"); Clear();
+Select("closingbar_high2_conb"); Clear();
+Select("closingbar_high3"); Clear();
+Select("closingbar_high3_conl"); Clear();
+Select("closingbar_high4"); Clear();
+Select("closingbar_high4_conr"); Clear();
+Select("closingbar_high4_conl"); Clear();
+Select("closingbar_high4_conb"); Clear();
+Select("capclosingbar_high1"); Clear();
+Select("capclosingbar_high2"); Clear();
+Select("capclosingbar_high3"); Clear();
+Select("capclosingbar_high4"); Clear();
+Select("teema1luuva"); Clear();
+Select("teema1luuva_conr"); Clear();
+Select("teema1luuvar"); Clear();
+Select("teema1luuvar_conr"); Clear();
+Select("teema2luuva"); Clear();
+Select("teema2luuvar"); Clear();
+Select("teema3luuva"); Clear();
+Select("teema3luuvar"); Clear();
+Select("teema4luuva"); Clear();
+Select("teema4luuvar"); Clear();
+Select("capteema1luuva"); Clear();
+Select("capteema1luuvar"); Clear();
+Select("capteema2luuva"); Clear();
+Select("capteema2luuvar"); Clear();
+Select("capteema3luuva"); Clear();
+Select("capteema3luuvar"); Clear();
+Select("capteema4luuva"); Clear();
+Select("capteema4luuvar"); Clear();
+
+SelectAll();
+Scale(125,0,0);
+AddExtrema();
+Simplify(0,2,0,0,1,5000);
+RoundToInt();
+Simplify(2,2,0,0,1,5000);
+AddExtrema();
+RoundToInt();
+Simplify(128,2,0,0,1,5000);
+ClearBackground();
+MergeFonts("numerals.sfd")
+Reencode("unicode");
+Reencode("compacted");
+SetTTFName(0x409,3,"FontForge: " + $fullname + " " + $fontversion)
+SetTTFName(0x409,9,"Johan Winge")
+SetTTFName(0x409,11,"http://freetengwar.sourceforge.net/")
+SetTTFName(0x409,12,"http://freetengwar.sourceforge.net/")
+SetTTFName(0x409,13,"Tengwar Telcontar is distributed under the terms of the GNU General Public License.")
+SetTTFName(0x409,14,"http://www.gnu.org/copyleft/gpl.html")
+if ( $1=="regular" )
+  Save("tengtelc.sfd");
+  SetFontOrder(2);
+  Generate("tengtelc_nogr.ttf","",152)
+elseif ( $1=="bold" )
+  Save("tengtelcb.sfd");
+  SetFontOrder(2);
+  Generate("tengtelcb_nogr.ttf","",152)
+endif
+Quit(0)
+
