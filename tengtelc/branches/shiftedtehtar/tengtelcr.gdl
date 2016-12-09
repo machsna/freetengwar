@@ -1,0 +1,15 @@
+// Tengwar Telcontar - a Unicode Tengwar font
+// Copyright (c) 2005-2010 Johan Winge
+
+#include "stddef.gdh"
+#define ps postscript
+
+AutoPseudo=0; // ?
+
+#include "latinr.gdh"
+#include "tengwarr.gdh"
+#include "underline.gdh"
+
+#include "latin.gdh"
+#include "tengwar.gdh"
+

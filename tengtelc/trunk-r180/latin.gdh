@@ -1,0 +1,108 @@
+// Tengwar Telcontar - a Unicode Tengwar font
+// Copyright (c) 2005-2010 Johan Winge
+// 
+// Tengwar Telcontar is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation, either version 3 of
+// the License, or (at your option) any later version.
+// 
+// As a special exception, if you create a document which uses this font,
+// and embed this font or unaltered portions of this font into the
+// document, this font does not by itself cause the resulting document
+// to be covered by the GNU General Public License. This exception does
+// not however invalidate any other reasons why the document might be
+// covered by the GNU General Public License. If you modify this font,
+// you may extend this exception to your version of the font, but you are
+// not obligated to do so. If you do not wish to do so, delete this
+// exception statement from your version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+table(glyph)
+  c_latmayconr=(g_f,g_f_conl,g_g,g_t,     g_t_conl);
+  c_latconr   =(g_f,g_f_conl,g_g,g_t_conr,g_t_conb);
+  c_latmayconl=(g_f,     g_i,     g_dotlessi,     g_j,     g_dotlessj,     g_m,     g_n,     g_p,     g_r,     g_t,     g_u,     g_v,     g_w,     g_y,     g_z);
+  c_latconl   =(g_f_conl,g_i_conl,g_dotlessi_conl,g_j_conl,g_dotlessj_conl,g_m_conl,g_n_conl,g_p_conl,g_r_conl,g_t_conl,g_u_conl,g_v_conl,g_w_conl,g_y_conl,g_z_conl);
+
+  c_lathighconr=(g_f,g_f_conl,g_longs,g_F);
+  c_latmayhighconl=(g_b,     g_h,     g_k,     g_l);
+  c_lathighconl   =(g_b_conl,g_h_conl,g_k_conl,g_l_conl);
+
+  c_latmaydotligr=(g_f,       g_f_conl);
+  c_latdotligr   =(g_f_dotlig,g_f_conl_dotlig);
+  c_latmaydotligl=(g_i_conl,       g_j_conl);
+  c_latdotligl   =(g_dotlessi_conl,g_dotlessj_conl);
+
+  c_isoldiac=(g_gravecmb,g_acutecmb,g_circumflexcmb,g_tildecmb,g_macroncmb,g_dotaccentcmb,g_dieresiscmb,g_ringcmb,g_caroncmb,g_uni0364);
+  c_diac=(g_gravecmb_normal,g_acutecmb_normal,g_circumflexcmb_normal,g_tildecmb_normal,g_macroncmb_normal,g_dotaccentcmb_normal,g_dieresiscmb_normal,g_ringcmb_normal,g_caroncmb_normal,g_uni0364_normal);
+  c_diacbase=(g_dottedcircle,g_a,g_e,g_dotlessi,g_dotlessi_conl,g_dotlessj,g_dotlessj_conl,g_n,g_o,g_s,g_u,g_u_conl,g_y,g_y_conl,g_z,g_z_conl,g_A,g_E,g_I,g_N,g_O,g_S,g_U,g_Y,g_Z);
+
+  c_avariant=(g_a,g_aacute,g_agrave,g_acircumflex,g_atilde,g_adieresis,g_aring);
+  c_evariant=(g_e,g_eacute,g_egrave,g_ecircumflex,g_edieresis);
+
+endtable;
+
+table(feature)
+  latconnect {
+    id=101;
+    name.LG_USENG = string("Connect Latin");
+    default = true;
+  }
+  roundr {
+    id=102;
+    name.LG_USENG = string("Round r");
+    default = no;
+    settings {
+      no { value=0; name.LG_USENG = string("Never"); }
+      onlyo { value=1; name.LG_USENG = string("After o only"); }
+      round { value=2; name.LG_USENG = string("After b, o, p"); }
+      all { value=3; name.LG_USENG = string("Always"); }
+    }
+  }
+endtable;
+
+table(sub)
+  pass(2)
+    c_isoldiac > c_diac / c_diacbase _ ;
+    if (roundr==onlyo)
+      g_r > g_r_round / g_o _ ;
+    elseif (roundr==round)
+      g_r > g_r_round / (g_b,g_o,g_p) _ ;
+    elseif (roundr==all)
+      g_r > g_r_round ;
+    endif;
+
+    if (latconnect)
+      c_latmayconr c_latmayconl > c_latconr c_latconl / _ ^ _ ;
+    endif;
+    c_latmayhighconl > c_lathighconl / c_lathighconr _ ;
+  endpass;
+  pass(3)
+    c_latmaydotligr c_latmaydotligl > c_latdotligr c_latdotligl / _ _ ;
+  endpass;
+endtable;
+
+table(pos)
+  pass(1)
+    c_diacbase (c_diac,g_dieresiscmb_narrow) { attach{ to=@1; at=uap; with=dap }; insert=false;} / _ ^ _;
+  endpass;
+  pass(2)
+    c_avariant g_v  {kern.x = -110m} / _ c_diac? ^ _;
+    c_avariant g_w  {kern.x = -110m} / _ c_diac? ^ _;
+    (g_v,g_v_conl) c_avariant {kern.x = -100m} / _ ^ _;
+    (g_w,g_w_conl) c_avariant {kern.x = -100m} / _ ^ _;
+    (g_r,g_r_conl) c_avariant {kern.x = -60m} / _ ^ _;
+    g_T c_evariant {kern.x = -160m} / _ ^ _;
+    (g_quoteleft,g_quotedblleft) (g_a,g_c,g_d,g_e,g_g,g_o,g_q,g_s) {kern.x = -100m} / _ ^ _;
+    (g_quoteright,g_quotedblright) (g_a,g_c,g_d,g_e,g_g,g_o,g_q,g_s) {kern.x = -200m} / _ ^ _;
+    (g_a) (g_quoteright,g_quotedblright)  {kern.x = -50m} / _ ^ _;
+    (g_f,g_f_conl) (g_quoteright,g_quotedblright) {kern.x = +450m} / _ ^ _;
+  endpass;
+endtable;
+
