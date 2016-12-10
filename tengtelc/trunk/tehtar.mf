@@ -248,9 +248,9 @@ beginchr(invatehta&".norm",0);
 endchr;
 combinechr(invatehta,dottedcircle,"uap",invatehta&".norm","dap");
 
-beginchr(ytehta&".norm",0);
+def draw_ytehta(expr width) =
   y0=y1=tex+1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.50pt;
+  1/2[x0,x1]=0; x1-x0=width;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,tex+apy));
@@ -365,7 +365,7 @@ beginchr(etehta&".norm",0);
   draw_etehta(ascend,single);
 endchr;
 combinechr(etehta,dottedcircle,"uap",etehta&".norm","dap");
-beginchr(etehta&".double_norm",0);
+beginchr(eetehta&".norm",0);
   draw_etehta(ascend,double);
 endchr;
 beginchr(downetehta&".norm",0);
@@ -575,11 +575,11 @@ def draw_longcarrtehta(expr sy)=
   setap("dap",(0,-0.5pt));
   penlabels(1,2);
 enddef;
-beginchr(longcarrtehta_norm,0);
+beginchr(longcarr&".lig",0);
   draw_longcarrtehta(-0.3pt);
 endchr;
-combinechr(longcarrtehta,dottedcircle,"dap",longcarrtehta_norm,"uap");
-beginchr(longcarrtehta_lambe,0);
+combinechr(longcarr&".tehta",dottedcircle,"dap",longcarr&".lig","uap");
+beginchr(longcarr&".lig_lambe",0);
   draw_longcarrtehta(0.42tex);
   setap("cap",(0,ypart(apt(lambe,"cap").pt)));
 endchr;
