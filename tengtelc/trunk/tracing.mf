@@ -140,11 +140,7 @@ def initchr(expr s, m, width) =
   apt(ps.n,lastap).forgd := false;
   numeric a[], t; path p[], ap[];
   if tracing and forgd:
-    if usealiasnames:
-      message "gd: " & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps_to_alias(ps[ps.n].name) & ditto & ") { ";
-    else:
-      message "gd: " & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
-    fi
+    message "gd: " & cleandots(ps_to_alias(s)) & " = ps(" & ditto & if usealiasnames: ps_to_alias(s) else: s fi & ditto & ") { ";
   fi
   hasattached:=false;
 enddef;
@@ -184,11 +180,7 @@ def endchr =
     proofrule((0,ex),(w,ex));
   else:
     if forgd: message "gd: };"; fi
-    if usealiasnames:
-       message "pe: Print(" & ditto & "Done " & ps_to_alias(ps[ps.n].name) & ditto & ");";
-    else:
-       message "pe: Print(" & ditto & "Done " & ps[ps.n].name & ditto & ");";
-    fi
+    message "pe: Print(" & ditto & "Done " & if usealiasnames: ps_to_alias(ps[ps.n].name) else: ps[ps.n].name fi & ditto & ");";
     message "ec: " & ps[ps.n].name if isrefchar: & " [" & decimal(incr ref_char_c) & "]" fi;
   fi
   if isrefchar and not tracing or not isrefchar:
@@ -214,7 +206,7 @@ def setgdalias(expr psn, gdn) =
 enddef;
 
 def addalias(expr psn, gdn) =
-  scantokens ("string " & cleandots(gdn)); scantokens cleandots(gdn)=psn; setgdalias(psn,gdn);
+  scantokens ("string " & gdn); scantokens gdn=psn; setgdalias(psn,gdn);
 enddef;
 
 vardef ps_to_alias(expr s) =
@@ -292,11 +284,7 @@ def attach(expr psn, bapn, capn) =
     fi
   endfor
   if tracing:
-    if usealiasnames:
-      message "pe: Select("& ditto & ps_to_alias(psn) & ditto &"); CopyReference();";
-    else:
-      message "pe: Select("& ditto & psn & ditto &"); CopyReference();";
-    fi
+    message "pe: Select("& ditto & if usealiasnames: ps_to_alias(psn) else: psn fi & ditto &"); CopyReference();";
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); PasteWithOffset(" &
          decimal round(xpart transformadjust(vec)/un) & "," & decimal round(ypart transformadjust(vec)/un) & ");";
   else:
