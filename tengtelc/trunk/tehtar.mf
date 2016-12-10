@@ -311,7 +311,7 @@ beginchr(downetehta&".narrow",0);
   draw_etehta(descend,narrow,single);
 endchr;
 combinechr(downetehta,dottedcircle,"dap",downetehta&".norm","uap");
-beginchr(downetehta&".double_norm",0); % BYT NAMN?!
+beginchr(downeetehta&".norm",0);
   draw_etehta(descend,normal,double);
 endchr;
 
