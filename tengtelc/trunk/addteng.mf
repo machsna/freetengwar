@@ -24,6 +24,50 @@
 %% You should have received a copy of the GNU General Public License
 %% along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+def draw_sarincecross(expr style) =
+  padding(0pt,0.8pt);
+  if style=normal:
+    a1=conpenangle7; use(a1); lft z1=conpoint7;
+    draw_connection(7,1,true);
+  elseif style=lower:
+    a1=conpenangle11; use(a1); lft z1=conpoint11;
+    draw_connection(11,1,true);
+  elseif style=roomenarda:
+    z1=apt(roomen,"sarinceap").pt-(psc(roomen).width,0);
+    a1=roomensarincepenangle;
+  fi
+  if style=roomenarda:
+    a2=35;
+    y2=ypart(conpoint11);
+  else:
+    a2=a1;
+    y2=y1;
+  fi;
+  x2=x3-1.5pt;
+  a3=a4-5=a5=a6=35;
+  z3=(w-rpad,0.6[y2,y4]);
+  z4=(0.7[x3,x2],y2+0.65tex);
+  y5=y2-(y4-y2);
+  z5=z4+whatever*dir(if style=lower: 44 else: 50 fi);
+  z6=z5+0.9pt*dir(180-30);
+  p1=z1{right}..z2..z3{up}..z4{left}..z5{left}..z6; ap1=ang(a1..a2..a3..a4..a5..a6);
+  draw_stroke(p1,ap1);
+  use(a2); setap("uap",(0.40w,top y2+0.5pt));
+  setap("cap",(x2,1/2tex));
+  use(a4); setap("dap",(0.40w,bot y4-0.5pt));
+enddef;
+beginchr(sarince&".cross",1.8ten);
+  draw_sarincecross(lower);
+endchr;
+pause;
+beginchr(sarince&".cross_high",2.0ten);
+  draw_sarincecross(normal);
+endchr;
+pause;
+%beginchr(sarince&".cross_roomen",1.0ten);
+%  draw_sarincecross(roomenarda);
+%endchr;
+
 beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
   padding(0.5pt,0.5pt);
   a1=a2=a3+4=a4=35;

@@ -170,17 +170,12 @@ If, for some reason, the SIL repository does not work for you, or if
 you prefer not to use it, you can compile grcompiler yourself:
 
   sudo apt-get install subversion build-essential automake libtool gettext libicu-dev libgraphite-dev docbook2x
-  svn co http://scripts.sil.org/svn-public/graphite/grcompiler/trunk@1157 grcompiler
+  svn co http://scripts.sil.org/svn-public/graphite/grcompiler/tags/4.2 grcompiler
   cd grcompiler
   autoreconf -i
   ./configure
   make
   sudo make install
-
-(The program is continuously being developed. The suffix @1157 in
-the second line specifies a fixed version which has been confirmed to
-work. You might want to test a later version; simply remove the suffix
-to download the latest one.)
 
 2.) Install FontForge. You can download a precompiled version:
 
