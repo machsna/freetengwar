@@ -30,133 +30,6 @@ numeric dotsize[];
 %dotsize1=0.98; dotsize2=1.00; dotsize3=1.04;
 dotsize1=1.03; dotsize2=1.04; dotsize3=1.09;
 
-beginchr(thinnas&".norm",0);
-  a1=35; a2=35; a3=50;
-  y1=-1pt;
-  y2=0.7[y3,y1];
-  y3=-desc;
-  x1=0.25[x3,x2];
-  x2-x3=0.6pt;
-  0=0.55[x3,x2];
-  p1=z1{curl 4}..z2{down}..{-dir a3}z3;
-  ap1=ang(a1..a2..a3);
-  draw_stroke(p1,ap1);
-  setap("uap",(0,-apy));
-  setap("dap",(0,-3pt));
-endchr;
-combinechr(thinnas,dottedcircle,"dap",thinnas&".norm","uap");
-pause;
-
-def get_utehta_path(suffix $)(expr v,l,cent) =
-  a$a:=v-5; a$b:=35; a$c:=35;
-  y$a=tex+0.05pt; cent=0.17[x$a,x$b];
-  z$b=z$a+l*dir(v);
-  z$c=z$b+1.4pt*dir(v+122);
-  ap$=ang(a$a..a$b..a$c);
-%  p$=z$a{dir a$a}..{dir (60)}z$b..tension 1 and 1.2..z$c;
-  p$=z$a{dir a$a}..{dir (v+15)}z$b..tension 1 and 1.2..z$c;
-enddef;
-def draw_utehta(expr v,l,num,style) =
-  transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
-  if (num=single) or (num=dotlig):
-    get_utehta_path(1)(v,l,0);
-  elseif num=double:
-    numeric sep;
-    sep=(0.92-0.004*v)*pt;
-    get_utehta_path(2)(v-1.5,l,sep);
-    get_utehta_path(1)(v+1.5,l-0.1pt,-sep);
-    t:=xpart(p2 intersectiontimes p1); if t=-1: t:=1.8; fi
-    draw_stroke((subpath(0,t) of p2) transformed rot,subpath(0,t) of ap2);
-  fi
-  if (num=dotlig):
-    t:=1.85;
-    draw_stroke((subpath(0,t) of p1) shifted (0.2pt,0),subpath(0,t) of ap1);
-    z4=(1.0[x1a,x1c]+0.2pt,0.7[y1a,y1c]);
-    draw_dot(4)(dotsize2);
-  else:
-    draw_stroke(p1 transformed rot,ap1);
-  fi
-  if style=ascend:
-    setap("uap",(0,y1b));
-    setap("dap",(0,tex+apy));
-    setap("ldap",(x1a-1pt,tex+apy));
-    setap("rdap",(x1b,tex+apy));
-  elseif style=descend:
-    setap("uap",(0,-apy));
-    setap("cap",(0,-apy-1.5pt));
-    setap("dap",(0,-3pt));
-  fi
-enddef;
-beginchr("utehtadot.norm",0);
-  draw_utehta(60,2.2pt,dotlig,ascend)
-endchr;
-pause;
-beginchr(utehta&".norm",0);
-  draw_utehta(60,2.2pt,single,ascend)
-endchr;
-pause;
-beginchr(utehta&".wide",0);
-  draw_utehta(50,2.3pt,single,ascend)
-endchr;
-pause;
-beginchr(utehta&".narrow",0);
-  draw_utehta(65,2.1pt,single,ascend)
-endchr;
-pause;
-combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
-beginchr(uutehta&".norm",0);
-  draw_utehta(60,2.2pt,double,ascend)
-endchr;
-beginchr(uutehta&".wide",0);
-  draw_utehta(50,2.3pt,double,ascend)
-endchr;
-beginchr(uutehta&".narrow",0);
-  draw_utehta(65,2.1pt,double,ascend)
-endchr;
-beginchr(downotehta&".norm",0);
-  draw_utehta(50,2.2pt,single,descend)
-endchr;
-combinechr(downotehta,dottedcircle,"dap",downotehta&".norm","uap");
-
-def get_otehta_path(suffix $)(expr v,l,cent) =
-  a$a:=v+5; a$b:=a$a-5; a$c:=v-35; %25;
-  y$a=tex+0.05pt; cent=if v>90:0 else: 0.5 fi[x$a,x$b]; % Don't change this now. I have kerning data depending on it... Yes, I know, it should be updated automatically, but I don't bother now. Damn, I will regret it...
-  z$b=z$a+l*dir(v);
-  z$c=z$b+1.2pt*dir(v-100); %-45
-  ap$=ang(a$a--a$b--a$c);
-  p$=z$a{dir a$a}..{dir (a$b-12)}z$b..tension 0.8..{-dir a$c}z$c;
-enddef;
-def draw_otehta(expr v,l,num,style) =
-  transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
-  if (num=single) or (num=dotlig):
-    get_otehta_path(1)(v,l,0);
-  elseif num=double:
-    numeric sep;
-    sep=(0.92-0.004*v)*pt;
-    get_otehta_path(1)(v-2,l,sep);
-    get_otehta_path(2)(v+2,l-0.2pt,-sep);
-    t:=xpart(p2 intersectiontimes p1); if t=-1: t:=infinity; fi
-    draw_stroke((subpath(0,t) of p2) transformed rot,subpath(0,t) of ap2);
-  fi
-  if (num=dotlig):
-    t:=1.75;
-    draw_stroke((subpath(0,t) of p1) shifted (-0.2pt,0),subpath(0,t) of ap1);
-    z4=(0.7[x1a,x1c]-0.2pt,0.8[y1a,y1c]);
-    draw_dot(4)(dotsize2);
-  else:
-    draw_stroke(p1 transformed rot,ap1);
-  fi
-  if style=ascend:
-    setap("uap",(0,tex+3pt));
-    setap("dap",(0,tex+apy));
-    setap("ldap",(x1a,tex+apy));
-    setap("rdap",(x1c,tex+apy));
-  elseif style=descend:
-    setap("dap",(0,-1.0pt));
-  fi
-  penlabels(range 1 thru 4);
-enddef;
-
 beginchr(atehta&".norm",0);
   z0=(0,tex+2.2pt);
   y1=y2=y0-1.1pt;
@@ -303,6 +176,7 @@ endchr;
 beginchr(eetehta&".norm",0);
   draw_etehta(ascend,normal,double);
 endchr;
+combinechr(eetehta,dottedcircle,"uap",eetehta&".norm","dap");
 
 beginchr(downetehta&".norm",0);
   draw_etehta(descend,normal,single);
@@ -328,6 +202,136 @@ beginchr(revetehta&".norm",0);
 endchr;
 combinechr(revetehta,dottedcircle,"uap",revetehta&".norm","dap");
 
+beginchr(thinnas&".norm",0);
+  a1=35; a2=35; a3=50;
+  y1=-1pt;
+  y2=0.7[y3,y1];
+  y3=-desc;
+  x1=0.25[x3,x2];
+  x2-x3=0.6pt;
+  0=0.55[x3,x2];
+  p1=z1{curl 4}..z2{down}..{-dir a3}z3;
+  ap1=ang(a1..a2..a3);
+  draw_stroke(p1,ap1);
+  setap("uap",(0,-apy));
+  setap("dap",(0,-3pt));
+endchr;
+combinechr(thinnas,dottedcircle,"dap",thinnas&".norm","uap");
+pause;
+
+def get_utehta_path(suffix $)(expr v,l,cent) =
+  a$a:=v-5; a$b:=35; a$c:=35;
+  y$a=tex+0.05pt; cent=0.17[x$a,x$b];
+  z$b=z$a+l*dir(v);
+  z$c=z$b+1.4pt*dir(v+122);
+  ap$=ang(a$a..a$b..a$c);
+%  p$=z$a{dir a$a}..{dir (60)}z$b..tension 1 and 1.2..z$c;
+  p$=z$a{dir a$a}..{dir (v+15)}z$b..tension 1 and 1.2..z$c;
+enddef;
+def draw_utehta(expr v,l,num,style) =
+  transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
+  if (num=single) or (num=dotlig):
+    get_utehta_path(1)(v,l,0);
+  elseif num=double:
+    numeric sep;
+    sep=(0.92-0.004*v)*pt;
+    get_utehta_path(2)(v-1.5,l,sep);
+    get_utehta_path(1)(v+1.5,l-0.1pt,-sep);
+    t:=xpart(p2 intersectiontimes p1); if t=-1: t:=1.8; fi
+    draw_stroke((subpath(0,t) of p2) transformed rot,subpath(0,t) of ap2);
+  fi
+  if (num=dotlig):
+    t:=1.85;
+    draw_stroke((subpath(0,t) of p1) shifted (0.2pt,0),subpath(0,t) of ap1);
+    z4=(1.0[x1a,x1c]+0.2pt,0.7[y1a,y1c]);
+    draw_dot(4)(dotsize2);
+  else:
+    draw_stroke(p1 transformed rot,ap1);
+  fi
+  if style=ascend:
+    setap("uap",(0,y1b));
+    setap("dap",(0,tex+apy));
+    setap("ldap",(x1a-1pt,tex+apy));
+    setap("rdap",(x1b,tex+apy));
+  elseif style=descend:
+    setap("uap",(0,-apy));
+    setap("cap",(0,-apy-1.5pt));
+    setap("dap",(0,-3pt));
+  fi
+enddef;
+beginchr("utehtadot.norm",0);
+  draw_utehta(60,2.2pt,dotlig,ascend)
+endchr;
+pause;
+beginchr(utehta&".norm",0);
+  draw_utehta(60,2.2pt,single,ascend)
+endchr;
+pause;
+beginchr(utehta&".wide",0);
+  draw_utehta(50,2.3pt,single,ascend)
+endchr;
+pause;
+beginchr(utehta&".narrow",0);
+  draw_utehta(65,2.1pt,single,ascend)
+endchr;
+pause;
+combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
+
+beginchr(uutehta&".norm",0);
+  draw_utehta(60,2.2pt,double,ascend)
+endchr;
+beginchr(uutehta&".wide",0);
+  draw_utehta(50,2.3pt,double,ascend)
+endchr;
+beginchr(uutehta&".narrow",0);
+  draw_utehta(65,2.1pt,double,ascend)
+endchr;
+combinechr(uutehta,dottedcircle,"uap",uutehta&".norm","dap");
+
+beginchr(downotehta&".norm",0);
+  draw_utehta(50,2.2pt,single,descend)
+endchr;
+combinechr(downotehta,dottedcircle,"dap",downotehta&".norm","uap");
+
+def get_otehta_path(suffix $)(expr v,l,cent) =
+  a$a:=v+5; a$b:=a$a-5; a$c:=v-35; %25;
+  y$a=tex+0.05pt; cent=if v>90:0 else: 0.5 fi[x$a,x$b]; % Don't change this now. I have kerning data depending on it... Yes, I know, it should be updated automatically, but I don't bother now. Damn, I will regret it...
+  z$b=z$a+l*dir(v);
+  z$c=z$b+1.2pt*dir(v-100); %-45
+  ap$=ang(a$a--a$b--a$c);
+  p$=z$a{dir a$a}..{dir (a$b-12)}z$b..tension 0.8..{-dir a$c}z$c;
+enddef;
+def draw_otehta(expr v,l,num,style) =
+  transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
+  if (num=single) or (num=dotlig):
+    get_otehta_path(1)(v,l,0);
+  elseif num=double:
+    numeric sep;
+    sep=(0.92-0.004*v)*pt;
+    get_otehta_path(1)(v-2,l,sep);
+    get_otehta_path(2)(v+2,l-0.2pt,-sep);
+    t:=xpart(p2 intersectiontimes p1); if t=-1: t:=infinity; fi
+    draw_stroke((subpath(0,t) of p2) transformed rot,subpath(0,t) of ap2);
+  fi
+  if (num=dotlig):
+    t:=1.75;
+    draw_stroke((subpath(0,t) of p1) shifted (-0.2pt,0),subpath(0,t) of ap1);
+    z4=(0.7[x1a,x1c]-0.2pt,0.8[y1a,y1c]);
+    draw_dot(4)(dotsize2);
+  else:
+    draw_stroke(p1 transformed rot,ap1);
+  fi
+  if style=ascend:
+    setap("uap",(0,tex+3pt));
+    setap("dap",(0,tex+apy));
+    setap("ldap",(x1a,tex+apy));
+    setap("rdap",(x1c,tex+apy));
+  elseif style=descend:
+    setap("dap",(0,-1.0pt));
+  fi
+  penlabels(range 1 thru 4);
+enddef;
+
 beginchr("otehtadot.norm",0);
   draw_otehta(60,2.4pt,dotlig,ascend);
 endchr;
@@ -342,6 +346,7 @@ endchr;
 beginchr(otehta&".narrow",0);
   draw_otehta(100,2.0pt,single,ascend);
 endchr;
+
 beginchr(ootehta&".norm",0);
   draw_otehta(60,2.4pt,double,ascend);
 endchr;
@@ -351,6 +356,7 @@ endchr;
 beginchr(ootehta&".narrow",0);
   draw_otehta(100,2.0pt,double,ascend);
 endchr;
+combinechr(ootehta,dottedcircle,"uap",ootehta&".norm","dap");
 
 beginchr(downutehta&".norm",0);
   draw_otehta(67,3.1pt,single,descend);

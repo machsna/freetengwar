@@ -270,7 +270,7 @@ table(glyph)
 
   VarUpTehtar=(eetehta_norm,otehta_wide,otehta_narrow,ootehta_norm,ootehta_wide,ootehta_narrow,uutehta_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
   VarCentralTehtar=(dotinside_conu,dotinside_cond);
-  VarDownTehtar=(downetehta_double_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarr_lig_lambe);
+  VarDownTehtar=(downeetehta_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarr_lig_lambe);
   VarTehtar=(VarUpTehtar,VarCentralTehtar,VarDownTehtar);
 
   AnyUpTehta=(CombUpTehtar,VarUpTehtar);
@@ -416,18 +416,18 @@ table(sub)
            / NarrowTengwar AnyTehtar ^ _ AnyTehtar StemUpLeftTengwar;
     (otehta_norm,ootehta_norm) > (otehta_narrow,ootehta_narrow) / StemUpRightTengwar AnyTehtar _ ;
  
-    itehta_norm itehta_norm > ytehta_norm _ / ^ _ _ ;
-    etehta_norm etehta_norm > eetehta_norm _ / ^ _ _ ;
-    downetehta_norm downetehta_norm > downetehta_double_norm _ / ^ _ _ ;
-    otehta_narrow otehta_narrow > ootehta_narrow _ / ^ _ _ ;
-    otehta_norm otehta_norm > ootehta_norm _ / ^ _ _ ;
-    otehta_wide otehta_wide > ootehta_wide _ / ^ _ _ ;
-    utehta_norm utehta_norm > uutehta_norm _ / ^ _ _ ;
+    itehta_norm itehta_norm > ytehta_norm:(1 2) _ / ^ _ _ ;
+    etehta_norm etehta_norm > eetehta_norm:(1 2) _ / ^ _ _ ;
+    downetehta_norm downetehta_norm > downeetehta_norm:(1 2) _ / ^ _ _ ;
+    otehta_narrow otehta_narrow > ootehta_narrow:(1 2) _ / ^ _ _ ;
+    otehta_norm otehta_norm > ootehta_norm:(1 2) _ / ^ _ _ ;
+    otehta_wide otehta_wide > ootehta_wide:(1 2) _ / ^ _ _ ;
+    utehta_norm utehta_norm > uutehta_norm:(1 2) _ / ^ _ _ ;
 
-    itehta_norm utehta_norm > utehtadot_norm _ / ^ _ _ ;
-    utehta_norm itehta_norm > utehtadot_norm _ / ^ _ _ ;
-    itehta_norm (otehta_narrow,otehta_norm,otehta_wide) > otehtadot_norm _ / ^ _ _ ;
-    (otehta_narrow,otehta_norm,otehta_wide) itehta_norm > otehtadot_norm _ / ^ _ _ ;
+    itehta_norm utehta_norm > utehtadot_norm:(1 2) _ / ^ _ _ ;
+    utehta_norm itehta_norm > utehtadot_norm:(1 2) _ / ^ _ _ ;
+    itehta_norm (otehta_narrow,otehta_norm,otehta_wide) > otehtadot_norm :(1 2)_ / ^ _ _ ;
+    (otehta_narrow,otehta_norm,otehta_wide) itehta_norm > otehtadot_norm:(1 2) _ / ^ _ _ ;
 
     dotinside_norm > dotinside_conu / (Quesse,Ungwe,Hwesta,Unque,Nwalme,Vilya,ExtHwesta,ExtUnque) ^ _ ;
     dotinside_norm > dotinside_cond / (Parma,Umbar,Formen,Ampa,Malta,Vala,ExtFormen,ExtAmpa,PreFeaQu,BeleriandicMh) ^ _ ;

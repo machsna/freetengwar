@@ -1,0 +1,46 @@
+--- fontforge/splineutil2.c.orig	2010-07-22 20:31:26.340933047 +0200
++++ fontforge/splineutil2.c	2010-07-22 22:23:47.996580100 +0200
+@@ -1040,6 +1040,7 @@
+     }
+     fromunit.x /= flen; fromunit.y /= flen;
+ 
++if (false) {
+     ftunit.x = (to->me.x-from->me.x); ftunit.y = (to->me.y-from->me.y);
+     ftlen = sqrt(ftunit.x*ftunit.x + ftunit.y*ftunit.y);
+     if ( ftlen!=0 ) {
+@@ -1111,6 +1112,7 @@
+   rfbad = rf; rtbad = -rt;
+     } else
+   rfbad = rtbad = -2;
++}
+ 
+ 
+ 
+@@ -1127,6 +1129,12 @@
+ 	if ( trylen>tlen ) tlen = trylen;
+     }
+ 
++    ftunit.x = (to->me.x-from->me.x); ftunit.y = (to->me.y-from->me.y);	 
++    ftlen = sqrt(ftunit.x*ftunit.x + ftunit.y*ftunit.y);	 
++    if ( ftlen!=0 ) {	 
++        ftunit.x /= ftlen; ftunit.y /= ftlen;	 
++    }
++
+     fdotft = fromunit.x*ftunit.x + fromunit.y*ftunit.y;
+     fmax = fdotft>0 ? ftlen/fdotft : 1e10;
+     tdotft = -tounit.x*ftunit.x - tounit.y*ftunit.y;
+@@ -1134,6 +1142,14 @@
+     /* At fmax, tmax the control points will stretch beyond the other endpoint*/
+     /*  when projected along the line between the two endpoints */
+ 
++    if ( (dot=fromunit.x*tounit.y - fromunit.y*tounit.x)<.0001 && dot>-.0001 &&	 
++             (dot=ftunit.x*tounit.y - ftunit.y*tounit.x)<.0001 && dot>-.0001 ) {	 
++         /* It's a line. Slopes are parallel, and parallel to vector between (from,to) */	 
++         from->nonextcp = to->noprevcp = true;	 
++         from->nextcp = from->me; to->prevcp = to->me;	 
++ return( SplineMake3(from,to));	 
++     }
++
+     db.base = from->me;
+     db.unit = ftunit;
+     db.len = ftlen;
