@@ -28,7 +28,8 @@ numeric luuvbardiff[];
 
 def draw_telco(expr side, type, conn, sectype) =
   lp:= if (side=carrier): 1.3pt elseif (side=leftside) and ((type=short) or (type=descend)): 1.2pt else: 1.0pt fi; %  and (conn=normal)
-  rp:= if ((side=rightside) and ((type=descend) or (type=short))): 0.9pt else: if (side=carrier): 1.1pt else: 1.0pt fi fi;
+%  rp:= if ((side=rightside) and ((type=descend) or (type=short))): 0.9pt else: if (side=carrier): 1.1pt else: 1.0pt fi fi;
+  rp:= if (side=rightside): 0.9pt else: if (side=carrier): 1.1pt else: 1.0pt fi fi;
   padding(lp,rp);
 
   if (side=leftside) or (side=carrier):
@@ -88,9 +89,9 @@ def draw_telco(expr side, type, conn, sectype) =
       if type=descend:
         p1=topserif(1,2)(0.7pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       elseif type=ascend:
-        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+        p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.6pt,25,ap1);
       elseif type=short:
-        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.5pt,25,ap1);
+        p1=topserif(1,2)(0.7pt, 0.4tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.03pt,0.6pt,25,ap1);
       elseif type=extended:
         p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)..botfootserif(1,2)(0.5pt,0.1pt,0.8pt,40,ap1);
       fi
@@ -681,8 +682,8 @@ def draw_luuva(expr num, side, style, h, yap) =
     setap("lluuvap",z1 transformed rot);
     setap("luuvaluap",(0.5w,h+apy)); apt(ps.n,lastap).forgd:=false;
     setap("luuvaruap",(0.5w+apshift,h+apy)); apt(ps.n,lastap).forgd:=false;
-    setap("luuvaldap",(0.5w,-apy)); apt(ps.n,lastap).forgd:=false;
-    setap("luuvardap",(0.5w+apshift,-apy)); apt(ps.n,lastap).forgd:=false;
+    setap("luuvaldap",(0.5w-0.25pt,-apy)); apt(ps.n,lastap).forgd:=false;
+    setap("luuvardap",(0.5w-0.10pt+apshift,-apy)); apt(ps.n,lastap).forgd:=false;
   elseif side=rightside:
     setap("rluuvap",z1 transformed rot);
     setap("luuvaluap",(0.5w+0.10pt-apshift,h+apy)); apt(ps.n,lastap).forgd:=false;
