@@ -8,37 +8,56 @@
 
 \font\tengtelc="[./tengtelc.ttf]/GR" at 15pt
 \font\tengtelclarge="[./tengtelc.ttf]/GR" at 48pt
-\font\tengtelcq="[./tengtelc.ttf]/GR:202=3" at 15pt
-\font\rcap="[./tengtelc.ttf]/GR:203=1" at 15pt
 \font\tengtelcsmall="[./tengtelc.ttf]/GR" at 10pt
 \font\tengtelcb="[./tengtelcb.ttf]/GR" at 15pt
-\font\bul="[./tengtelcb.ttf]/GR:208=1" at 15pt
-\font\bcap="[./tengtelcb.ttf]/GR:203=1" at 15pt
-\font\bcapul="[./tengtelcb.ttf]/GR:203=1:208=1" at 15pt
-\setromanfont{Gentium}
+\font\bul="[./tengtelcb.ttf]/GR:Underline=True" at 15pt
+\font\bcap="[./tengtelcb.ttf]/GR:Decorated tengwar=Word initially" at 15pt
+\font\bcapul="[./tengtelcb.ttf]/GR:Decorated tengwar=Word initially:Underline=True" at 15pt
+\font\tengtelcConnectingLess="[./tengtelc.ttf]/GR:Connect tengwar=Minimal" at 15pt
+\font\tengtelcConnectingDefault="[./tengtelc.ttf]/GR:Connect tengwar=Normal" at 15pt
+\font\tengtelcConnectingMore="[./tengtelc.ttf]/GR:Connect tengwar=Maximal" at 15pt
+\font\tengtelcTehtaOnSilmeDefault="[./tengtelc.ttf]/GR:Tehta on Silme=To the left" at 15pt
+\font\tengtelcTehtaOnSilme="[./tengtelc.ttf]/GR:Tehta on Silme=To the right" at 15pt
+\font\tengtelcDecoratedDefault="[./tengtelc.ttf]/GR:Decorated tengwar=None" at 15pt
+\font\tengtelcDecoratedInitially="[./tengtelc.ttf]/GR:Decorated tengwar=Word initially" at 15pt
+\font\tengtelcDecoratedAlways="[./tengtelc.ttf]/GR:Decorated tengwar=All" at 15pt
+\font\tengtelcDescendingWtengwa="[./tengtelc.ttf]/GR:Descending W-tengwa=False" at 15pt
+\font\tengtelcDescendingWtengwaDefault="[./tengtelc.ttf]/GR:Descending W-tengwa=True" at 15pt
+\font\tengtelcShookPlacementHigh="[./tengtelc.ttf]/GR:Prefer low S-hook=False" at 15pt
+\font\tengtelcShookPlacementDefault="[./tengtelc.ttf]/GR:Prefer low S-hook=True" at 15pt
+\font\tengtelcHWtengwaDefault="[./tengtelc.ttf]/GR:WH-tengwa variant=Common" at 15pt
+\font\tengtelcHWtengwaRoomenNuquerna="[./tengtelc.ttf]/GR:WH-tengwa variant=Roomen nuquerna" at 15pt
+\font\tengtelcHWtengwaMirroredHyarmen="[./tengtelc.ttf]/GR:WH-tengwa variant=Mirrored Hyarmen" at 15pt
+\font\tengtelcMarkedOsseDefault="[./tengtelc.ttf]/GR:Marked Osse=Never" at 15pt
+\font\tengtelcMarkedOsseFinal="[./tengtelc.ttf]/GR:Marked Osse=Word final" at 15pt
+\font\tengtelcMarkedOsseAlways="[./tengtelc.ttf]/GR:Marked Osse=Always" at 15pt
+\font\tengtelcUnderliningDefault="[./tengtelc.ttf]/GR:Underline=False" at 15pt
+\font\tengtelcUnderliningOn="[./tengtelc.ttf]/GR:Underline=True" at 15pt
+
+\setromanfont{Gentium Basic}
 
 \begin{document}
 
 \section*{Test case for Tengwar Telcontar}
 
 \subsection*{Namárië}
-\tengtelcq
-{\rcap }     ⸱  \\
+\tengtelcTehtaOnSilme
+{\tengtelcDecoratedInitially }     ⸱  \\
    ⸱     \\
 ⸱   ⸱  \\
- {\rcap } ⸱     \\
+ {\tengtelcDecoratedInitially } ⸱     \\
 ⸱  ⸬
 
       ⸬ \\
-  {\rcap  } ⸱   \\
-{\rcap } ⸱     \\
+  {\tengtelcDecoratedInitially  } ⸱   \\
+{\tengtelcDecoratedInitially } ⸱     \\
     ⸱ \\
   ⸱      \\
-    {\rcap }  {\rcap ⸱}
+    {\tengtelcDecoratedInitially }  {\tengtelcDecoratedInitially ⸱}
 
-{\rcap }   {\rcap }
+{\tengtelcDecoratedInitially }   {\tengtelcDecoratedInitially }
 
-   {\rcap } :
+   {\tengtelcDecoratedInitially } :
 
 \subsection*{The King’s Letter}
 \begin{center}
@@ -88,6 +107,47 @@ against which he was leaning, and before he could
 ſpring away he was pushed, or kicked, forward on to
 his knees. Picking himself up he looked at the tree,
 and even as he looked, it took a stride towards him.
+\normalfont
+
+\newpage
+
+\subsection*{All Graphite features}
+
+\begin{tabular}{cccc}
+\hline\hline
+Plain & Feature & XeTeX code & Default \\
+\hline
+{\tengtelc  } & {\tengtelcConnectingLess  } & \texttt{ss01=0} \\
+{\tengtelc  } & {\tengtelcConnectingDefault  }\* & \texttt{ss01=1} & $\times$ \\
+{\tengtelc  } & {\tengtelcConnectingMore  } & \texttt{ss01=2} \\
+\hline
+{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* & \texttt{cv01=0} & $\times$ \\
+{\tengtelc       } & {\tengtelcTehtaOnSilmeDefault       }\* \\
+{\tengtelc       } & {\tengtelcTehtaOnSilme       } & \texttt{cv01=3} \\
+{\tengtelc       } & {\tengtelcTehtaOnSilme       }\* & \\
+\hline
+{\tengtelc } & {\tengtelcDecoratedDefault }\* & \texttt{ss02=0} & $\times$ \\
+{\tengtelc } & {\tengtelcDecoratedInitially } & \texttt{ss02=1} \\
+{\tengtelc } & {\tengtelcDecoratedAlways } & \texttt{ss02=2} \\
+\hline
+{\tengtelc    } & {\tengtelcDescendingWtengwa    } & \texttt{cv03=0} \\
+{\tengtelc    } & {\tengtelcDescendingWtengwaDefault    } & \texttt{cv03=1} & $\times$ \\
+\hline
+{\tengtelc    } & {\tengtelcShookPlacementHigh    } & \texttt{cv04=0} \\
+{\tengtelc    } & {\tengtelcShookPlacementDefault    } & \texttt{cv04=1} & $\times$ \\
+\hline
+{\tengtelc } & {\tengtelcHWtengwaDefault } & \texttt{cv05=0} & $\times$ \\
+{\tengtelc } & {\tengtelcHWtengwaRoomenNuquerna } & \texttt{cv05=1} \\
+{\tengtelc } & {\tengtelcHWtengwaMirroredHyarmen } & \texttt{cv05=2} \\
+\hline
+{\tengtelc } & {\tengtelcMarkedOsseDefault } & \texttt{cv06=0} & $\times$ \\
+{\tengtelc } & {\tengtelcMarkedOsseFinal } & \texttt{cv06=1} \\
+{\tengtelc } & {\tengtelcMarkedOsseAlways } & \texttt{cv06=2} \\
+\hline
+{\tengtelc } & {\tengtelcUnderliningDefault } & \texttt{ss03=0} & $\times$ \\
+{\tengtelc } & {\tengtelcUnderliningOn } & \texttt{ss03=1} \\
+\hline\hline
+\end{tabular}
 
 \newpage
 

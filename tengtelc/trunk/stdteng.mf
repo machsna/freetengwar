@@ -573,6 +573,19 @@ beginchr("closingbar_low4_desc",2.0ten+luuvbardiff2);
   draw_lowclosingbar(descend);
 endchr;
 
+beginchr("capclosingbar_low1",1.22ten+luuvbardiff1);
+  draw_lowclosingbar(normal);
+endchr;
+beginchr("capclosingbar_low2",1.1ten+luuvbardiff2);
+  draw_lowclosingbar(normal);
+endchr;
+beginchr("capclosingbar_low3",2.06ten+luuvbardiff1);
+  draw_lowclosingbar(normal);
+endchr;
+beginchr("capclosingbar_low4",1.95ten+luuvbardiff2);
+  draw_lowclosingbar(normal);
+endchr;
+
 beginchr("closingbar_high1",1.3ten+luuvbardiff3);
   draw_highclosingbar(truncated,tex,ypart conpoint6);
 endchr;
@@ -610,16 +623,16 @@ beginchr("closingbar_high4_conb",2.1ten+luuvbardiff4);
   draw_highclosingbar(conboth,tex,ypart conpoint6);
 endchr;
 
-beginchr("capclosingbar_high1",1.2cten);
+beginchr("capclosingbar_high1",1.26cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high2",1.6cten+1.5*(tecil_w-0.93pt));
+beginchr("capclosingbar_high2",1.66cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high3",2.0cten);
+beginchr("capclosingbar_high3",2.06cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high4",2.4cten+1.5*(tecil_w-0.93pt));
+beginchr("capclosingbar_high4",2.46cten+1.5*(tecil_w-0.93pt));
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 
@@ -841,41 +854,41 @@ build_pteematengwa(parma,"telco_leftdown","closingbar_low1","teema2luuva","luuva
 build_pteematengwa(parma&".conr","telco_leftdown","closingbar_low1_conr","teema2luuva","luuvaluap","luuvardap");
 build_pteematengwa(parma&".conl","telco_leftdown_conl","closingbar_low1","teema2luuva","luuvaluap","luuvardap");
 build_pteematengwa(parma&".conb","telco_leftdown_conl","closingbar_low1_conr","teema2luuva","luuvaluap","luuvardap");
-build_pteematengwa(parma&".dec","captelco_leftdown","closingbar_low1","capteema2luuva","luuvaluap","luuvardap");
+build_pteematengwa(parma&".dec","captelco_leftdown","capclosingbar_low1","capteema2luuva","luuvaluap","luuvardap");
 
 build_pteematengwa(umbar,"telco_leftdown","closingbar_low3","teema2luuvar","luuvaluap","luuvardap");
 build_pteematengwa(umbar&".conr","telco_leftdown","closingbar_low3_conr","teema2luuvar","luuvaluap","luuvardap");
 build_pteematengwa(umbar&".conl","telco_leftdown_conl","closingbar_low3","teema2luuvar","luuvaluap","luuvardap");
 build_pteematengwa(umbar&".conb","telco_leftdown_conl","closingbar_low3_conr","teema2luuvar","luuvaluap","luuvardap");
-build_pteematengwa(umbar&".dec","captelco_leftdown","closingbar_low3","capteema2luuvar","luuvaluap","luuvardap");
+build_pteematengwa(umbar&".dec","captelco_leftdown","capclosingbar_low3","capteema2luuvar","luuvaluap","luuvardap");
 
 build_pteematengwa(formen,"telco_leftup","closingbar_low2","teema2luuva","luuvaruap","luuvaldap");
 build_pteematengwa(formen&".conr","telco_leftup","closingbar_low2_conr","teema2luuva","luuvaruap","luuvaldap");
-build_pteematengwa(formen&".dec","captelco_leftup2","closingbar_low2","capteema2luuva","luuvaruap","luuvaldap");
+build_pteematengwa(formen&".dec","captelco_leftup2","capclosingbar_low2","capteema2luuva","luuvaruap","luuvaldap");
 
 build_pteematengwa(ampa,"telco_leftup","closingbar_low4","teema2luuvar","luuvaruap","luuvaldap");
 build_pteematengwa(ampa&".conr","telco_leftup","closingbar_low4_conr","teema2luuvar","luuvaruap","luuvaldap");
-build_pteematengwa(ampa&".dec","captelco_leftup2","closingbar_low4","capteema2luuvar","luuvaruap","luuvaldap");
+build_pteematengwa(ampa&".dec","captelco_leftup2","capclosingbar_low4","capteema2luuvar","luuvaruap","luuvaldap");
 
 build_pteematengwa(vala,"telco_leftshort","closingbar_low2","teema2luuva","luuvaluap","luuvaldap");
 build_pteematengwa(vala&".conr","telco_leftshort","closingbar_low2_conr","teema2luuva","luuvaluap","luuvaldap");
 build_pteematengwa(vala&".conl","telco_leftshort_conl","closingbar_low2","teema2luuva","luuvaluap","luuvaldap");
 build_pteematengwa(vala&".conb","telco_leftshort_conl","closingbar_low2_conr","teema2luuva","luuvaluap","luuvaldap");
-build_pteematengwa(vala&".dec","captelco_leftshort2","closingbar_low2","capteema2luuva","luuvaluap","luuvaldap");
+build_pteematengwa(vala&".dec","captelco_leftshort2","capclosingbar_low2","capteema2luuva","luuvaluap","luuvaldap");
 
 build_pteematengwa(malta,"telco_leftshort","closingbar_low4","teema2luuvar","luuvaluap","luuvaldap");
 build_pteematengwa(malta&".conr","telco_leftshort","closingbar_low4_conr","teema2luuvar","luuvaluap","luuvaldap");
 build_pteematengwa(malta&".conl","telco_leftshort_conl","closingbar_low4","teema2luuvar","luuvaluap","luuvaldap");
 build_pteematengwa(malta&".conb","telco_leftshort_conl","closingbar_low4_conr","teema2luuvar","luuvaluap","luuvaldap");
-build_pteematengwa(malta&".dec","captelco_leftshort2","closingbar_low4","capteema2luuvar","luuvaluap","luuvaldap");
+build_pteematengwa(malta&".dec","captelco_leftshort2","capclosingbar_low4","capteema2luuvar","luuvaluap","luuvaldap");
 
 build_pteematengwa(extformen,"telco_leftext","closingbar_low1","teema2luuva","luuvaruap","luuvardap");
 build_pteematengwa(extformen&".conr","telco_leftext","closingbar_low1_conr","teema2luuva","luuvaruap","luuvardap");
-build_pteematengwa(extformen&".dec","captelco_leftext","closingbar_low1","capteema2luuva","luuvaruap","luuvardap");
+build_pteematengwa(extformen&".dec","captelco_leftext","capclosingbar_low1","capteema2luuva","luuvaruap","luuvardap");
 
 build_pteematengwa(extampa,"telco_leftext","closingbar_low3","teema2luuvar","luuvaruap","luuvardap");
 build_pteematengwa(extampa&".conr","telco_leftext","closingbar_low3_conr","teema2luuvar","luuvaruap","luuvardap");
-build_pteematengwa(extampa&".dec","captelco_leftext","closingbar_low3","capteema2luuvar","luuvaruap","luuvardap");
+build_pteematengwa(extampa&".dec","captelco_leftext","capclosingbar_low3","capteema2luuvar","luuvaruap","luuvardap");
 
 build_cteematengwa(calma,"teema3luuva","telco_rightdown","luuvaruap","luuvaldap");
 build_cteematengwa(calma&".conr","teema3luuva","telco_rightdown_conr","luuvaruap","luuvaldap");
