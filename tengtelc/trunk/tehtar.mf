@@ -157,51 +157,6 @@ def draw_otehta(expr v,l,num,style) =
   penlabels(range 1 thru 4);
 enddef;
 
-beginchr("otehtadot.norm",0);
-  draw_otehta(60,2.4pt,dotlig,ascend);
-endchr;
-pause;
-beginchr(otehta&".norm",0);
-  draw_otehta(60,2.4pt,single,ascend);
-endchr;
-combinechr(otehta,dottedcircle,"uap",otehta&".norm","dap");
-beginchr(otehta&".wide",0);
-  draw_otehta(50,2.6pt,single,ascend);
-endchr;
-beginchr(otehta&".narrow",0);
-  draw_otehta(100,2.0pt,single,ascend);
-endchr;
-beginchr(ootehta&".norm",0);
-  draw_otehta(60,2.4pt,double,ascend);
-endchr;
-beginchr(ootehta&".wide",0);
-  draw_otehta(50,2.6pt,double,ascend);
-endchr;
-beginchr(ootehta&".narrow",0);
-  draw_otehta(100,2.0pt,double,ascend);
-endchr;
-
-beginchr(downutehta&".norm",0);
-  draw_otehta(67,3.1pt,single,descend);
-    setap("uap",(+0.5pt,-apy));
-endchr;
-combinechr(downutehta,dottedcircle,"dap",downutehta&".norm","uap");
-beginchr(downutehta&".narrow",0);
-  draw_otehta(100,2.3pt,single,descend);
-    setap("uap",(-0.05pt,-apy));
-endchr;
-beginchr(downutehta&".wide",0);
-  draw_otehta(57,3.2pt,single,descend);
-    setap("uap",(-0.6pt,-apy));
-endchr;
-pause;
-beginchr(downutehta&".long",0);
-  draw_otehta(55,4.0pt,single,descend);
-    setap("luap",(0.3pt,-apy+1pt));
-    setap("cap",(0.9pt,-apy+0.9pt));
-    setap("uap",(-0.6pt,-apy));
-endchr;
-
 beginchr(atehta&".norm",0);
   z0=(0,tex+2.2pt);
   y1=y2=y0-1.1pt;
@@ -249,7 +204,7 @@ endchr;
 combinechr(invatehta,dottedcircle,"uap",invatehta&".norm","dap");
 
 def draw_ytehta(expr width) =
-  y0=y1=tex+1.1pt;
+  y0=y1=tex+1.2pt;
   1/2[x0,x1]=0; x1-x0=width;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
@@ -267,7 +222,7 @@ beginchr(ytehta&".narrow",0);
 endchr;
 
 def draw_downytehta(expr width) =
-  y0=y1=-1.1pt;
+  y0=y1=-1.2pt;
   1/2[x0,x1]=0; x1-x0=width;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
@@ -286,7 +241,7 @@ beginchr(downytehta&".narrow",0);
 endchr;
 
 beginchr(itehta&".norm",0);
-  z0=(0,tex+1.1pt);
+  z0=(0,tex+1.4pt);
   draw_dot(0)(dotsize3);
   setap("dap",(0,tex+apy));
   setap("ldap",(-1.0pt,tex+apy));
@@ -296,7 +251,7 @@ endchr;
 combinechr(itehta,dottedcircle,"uap",itehta&".norm","dap");
 
 beginchr(downitehta&".norm",0);
-  z0=(0,-1.1pt);
+  z0=(0,-1.3pt);
   draw_dot(0)(dotsize3);
   setap("dap",(0,y0+y0+apy));
   setap("cap",z0);
@@ -305,6 +260,118 @@ beginchr(downitehta&".norm",0);
   setap("ruap",(0.9pt,-apy+0.2pt));
 endchr;
 combinechr(downitehta,dottedcircle,"dap",downitehta&".norm","uap");
+
+def draw_etehta(expr style,secstyle,number) =
+  transform rot;
+  if style=ascend: rot=identity; elseif style=descend: rot=identity rotatedaround ((0,1/2tex),180); fi
+  y0=tex+1.1pt;
+  if secstyle=normal:
+    z1=z0+1.9pt*dir(55);
+     a1=35; a2=27;
+  elseif secstyle=narrow:
+    z1=z0+1.8pt*dir(65);
+    a1=45; a2=37;
+  fi
+  0=0.1[x0,x1];
+  if number=single:
+    draw_stroke((z0--z1) transformed rot,ang(a1--a2));
+  elseif number=double:
+    draw_stroke(((z0--z1) shifted (-0.6pt,0)) transformed rot,ang(a1--a2));
+    draw_stroke(((z0--z1) shifted (0.6pt,0)) transformed rot,ang(a1--a2));
+  fi
+  if style=ascend:
+    setap("dap",(0,tex+apy));
+    setap("ldap",(x0-0.4pt,tex+apy));
+    setap("rdap",(x1-0.4pt,tex+apy));
+    setap("uap",(0,tex+2pt));
+  elseif style=descend:
+    setap("uap",(0,-apy));
+    setap("cap",1/2[z0,z1] transformed rot);
+    setap("luap",(x0-0.4pt,-apy));
+    setap("ruap",(x1-0.4pt,-apy));
+    setap("dap",(0,-2pt));
+  fi
+enddef;
+beginchr(etehta&".norm",0);
+  draw_etehta(ascend,normal,single);
+endchr;
+combinechr(etehta,dottedcircle,"uap",etehta&".norm","dap");
+beginchr(etehta&".narrow",0);
+  draw_etehta(ascend,narrow,single);
+endchr;
+
+beginchr(eetehta&".norm",0);
+  draw_etehta(ascend,normal,double);
+endchr;
+
+beginchr(downetehta&".norm",0);
+  draw_etehta(descend,normal,single);
+endchr;
+beginchr(downetehta&".narrow",0);
+  draw_etehta(descend,narrow,single);
+endchr;
+combinechr(downetehta,dottedcircle,"dap",downetehta&".norm","uap");
+beginchr(downetehta&".double_norm",0); % BYT NAMN?!
+  draw_etehta(descend,normal,double);
+endchr;
+
+beginchr(revetehta&".norm",0);
+  y0=tex+1.1pt;
+  z1=z0+1.8pt*dir(180-52);
+  0=0.1[x0,x1];
+  a1=180-35; a2=180-27;
+  draw_stroke(z0--z1,ang(a1--a2));
+  setap("dap",(0,tex+apy));
+  setap("ldap",(x0-0.4pt,tex+apy));
+  setap("rdap",(x1+0.4pt,tex+apy));
+  setap("uap",(0,tex+2pt));
+endchr;
+combinechr(revetehta,dottedcircle,"uap",revetehta&".norm","dap");
+
+beginchr("otehtadot.norm",0);
+  draw_otehta(60,2.4pt,dotlig,ascend);
+endchr;
+pause;
+beginchr(otehta&".norm",0);
+  draw_otehta(60,2.4pt,single,ascend);
+endchr;
+combinechr(otehta,dottedcircle,"uap",otehta&".norm","dap");
+beginchr(otehta&".wide",0);
+  draw_otehta(50,2.6pt,single,ascend);
+endchr;
+beginchr(otehta&".narrow",0);
+  draw_otehta(100,2.0pt,single,ascend);
+endchr;
+beginchr(ootehta&".norm",0);
+  draw_otehta(60,2.4pt,double,ascend);
+endchr;
+beginchr(ootehta&".wide",0);
+  draw_otehta(50,2.6pt,double,ascend);
+endchr;
+beginchr(ootehta&".narrow",0);
+  draw_otehta(100,2.0pt,double,ascend);
+endchr;
+
+beginchr(downutehta&".norm",0);
+  draw_otehta(67,3.1pt,single,descend);
+  setap("uap",(+0.5pt,-apy));
+endchr;
+combinechr(downutehta,dottedcircle,"dap",downutehta&".norm","uap");
+beginchr(downutehta&".narrow",0);
+  draw_otehta(100,2.3pt,single,descend);
+  setap("uap",(-0.05pt,-apy));
+endchr;
+beginchr(downutehta&".wide",0);
+  draw_otehta(57,3.2pt,single,descend);
+  setap("uap",(-0.6pt,-apy));
+endchr;
+pause;
+beginchr(downutehta&".long",0);
+  draw_otehta(55,4.0pt,single,descend);
+  setap("luap",(0.3pt,-apy+1pt));
+  setap("cap",(0.9pt,-apy+0.9pt));
+  setap("uap",(-0.6pt,-apy));
+endchr;
 
 def draw_dotinside(expr style) =
   z0=(0,1/2tex);
@@ -334,61 +401,6 @@ endchr;
 beginchr(dotinside&".cond",0);
   draw_dotinside(descend);
 endchr;
-
-def draw_etehta(expr style,number) =
-  transform rot;
-  if style=ascend: rot=identity; elseif style=descend: rot=identity rotatedaround ((0,1/2tex),180); fi
-  y0=tex+1.1pt;
-  z1=z0+1.8pt*dir(55); %52
-  0=0.1[x0,x1];
-  a1=35; a2=27;
-  if number=single:
-    draw_stroke((z0--z1) transformed rot,ang(a1--a2));
-  elseif number=double:
-    draw_stroke(((z0--z1) shifted (-0.6pt,0)) transformed rot,ang(a1--a2));
-    draw_stroke(((z0--z1) shifted (0.6pt,0)) transformed rot,ang(a1--a2));
-  fi
-  if style=ascend:
-    setap("dap",(0,tex+apy));
-    setap("ldap",(x0-0.4pt,tex+apy));
-    setap("rdap",(x1-0.4pt,tex+apy));
-    setap("uap",(0,tex+2pt));
-  elseif style=descend:
-    setap("uap",(0,-apy));
-    setap("cap",(0,-(1/2[apy,2pt])));
-    setap("luap",(x0-0.4pt,-apy));
-    setap("ruap",(x1-0.4pt,-apy));
-    setap("dap",(0,-2pt));
-  fi
-enddef;
-beginchr(etehta&".norm",0);
-  draw_etehta(ascend,single);
-endchr;
-combinechr(etehta,dottedcircle,"uap",etehta&".norm","dap");
-beginchr(eetehta&".norm",0);
-  draw_etehta(ascend,double);
-endchr;
-beginchr(downetehta&".norm",0);
-  draw_etehta(descend,single);
-endchr;
-combinechr(downetehta,dottedcircle,"dap",downetehta&".norm","uap");
-beginchr(downetehta&".double_norm",0);
-  draw_etehta(descend,double);
-endchr;
-
-beginchr(revetehta&".norm",0);
-  y0=tex+1.1pt;
-  z1=z0+1.8pt*dir(180-52);
-  0=0.1[x0,x1];
-  a1=180-35; a2=180-27;
-  draw_stroke(z0--z1,ang(a1--a2));
-  setap("dap",(0,tex+apy));
-  setap("ldap",(x0-0.4pt,tex+apy));
-  setap("rdap",(x1+0.4pt,tex+apy));
-  setap("uap",(0,tex+2pt));
-endchr;
-combinechr(revetehta,dottedcircle,"uap",revetehta&".norm","dap");
-
 
 def draw_overbar(expr l)=
   x4-x1=l; 1/2[x1,x4]=0;
