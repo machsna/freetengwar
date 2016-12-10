@@ -252,8 +252,8 @@ table(glyph)
   MayConL=(SomeMayConL,quesse,ungwe,hwesta,unque,nwalme,vilya,exthwesta,extunque);
   DoConL=(SomeDoConL,quesse_conl,ungwe_conl,hwesta_conl,unque_conl,nwalme_conl,vilya_conl,exthwesta_conl,extunque_conl);
 
-  MayConRLow=(tinco,tinco_conl,ando,ando_conl,umbar,umbar_conl,parma,parma_conl,thuule,formen,harma,hwesta,hwesta_conl,anto,ampa,anca,unque,unque_conl,nuumen,nuumen_conl,malta,malta_conl,noldo,nwalme,nwalme_conl,oore,oore_conl,vala,vala_conl,anna,vilya,vilya_conl,shortcarr,shortcarr_conl,lambe,lambe_conl,hyarmen,yanta);
-  DoConRLow=(tinco_conr,tinco_conb,ando_conr,ando_conb,umbar_conr,umbar_conb,parma_conr,parma_conb,thuule_conr,formen_conr,harma_conr,hwesta_conr,hwesta_conb,anto_conr,ampa_conr,anca_conr,unque_conr,unque_conr,nuumen_conr,nuumen_conb,malta_conr,malta_conb,noldo_conrbot,nwalme_conrbot,nwalme_conbbot,oore_conr,oore_conb,vala_conr,vala_conb,anna_conrbot,vilya_conrbot,vilya_conbbot,shortcarr_conr,shortcarr_conb,lambe_conrbot,lambe_conbbot,hyarmen_conr,yanta_conr);
+  MayConRLow=(tinco,tinco_conl,ando,ando_conl,umbar,umbar_conl,parma,parma_conl,thuule,formen,harma,hwesta,hwesta_conl,anto,ampa,anca,unque,unque_conl,nuumen,nuumen_conl,malta,malta_conl,noldo,nwalme,nwalme_conl,oore,oore_conl,vala,vala_conl,anna,vilya,vilya_conl,shortcarr,shortcarr_conl,lambe,lambe_conl,hyarmen,yanta,extthuule,extformen,extanto,extampa);
+  DoConRLow=(tinco_conr,tinco_conb,ando_conr,ando_conb,umbar_conr,umbar_conb,parma_conr,parma_conb,thuule_conr,formen_conr,harma_conr,hwesta_conr,hwesta_conb,anto_conr,ampa_conr,anca_conr,unque_conr,unque_conr,nuumen_conr,nuumen_conb,malta_conr,malta_conb,noldo_conrbot,nwalme_conrbot,nwalme_conbbot,oore_conr,oore_conb,vala_conr,vala_conb,anna_conrbot,vilya_conrbot,vilya_conbbot,shortcarr_conr,shortcarr_conb,lambe_conrbot,lambe_conbbot,hyarmen_conr,yanta_conr,extthuule_conr,extformen_conr,extanto_conr,extampa_conr);
   MayConLLow=(sarince); DoConLLow=(sarince);
 
   IsolUpTehtar=(atehta,ytehta,itehta,etehta,otehta,utehta,overbar,wtehta,engytehta,revetehta,yantatehta,invatehta);
@@ -266,7 +266,7 @@ table(glyph)
   CombDownTehtar=(downatehta_norm,downytehta_norm,downitehta_norm,downetehta_norm,dblunderstroke_norm,downotehta_norm,downutehta_norm,underbar_norm,longcarrtehta_norm,sarincetehta_norm,thinnas_norm);
   CombTehtar=(CombUpTehtar,CombCentralTehtar,CombDownTehtar);
 
-  VarUpTehtar=(etehta_double_norm,otehta_wide,otehta_narrow,otehta_double_norm,otehta_double_wide,otehta_double_narrow,utehta_double_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
+  VarUpTehtar=(eetehta_norm,otehta_wide,otehta_narrow,ootehta_norm,ootehta_wide,ootehta_narrow,uutehta_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
   VarCentralTehtar=(dotinside_conu,dotinside_cond);
   VarDownTehtar=(downetehta_double_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarrtehta_lambe);
   VarTehtar=(VarUpTehtar,VarCentralTehtar,VarDownTehtar);
@@ -358,6 +358,7 @@ table(sub)
       SomeMayConR SomeMayConL > SomeDoConR SomeDoConL / ^ _ AnyIsolTehtar  _ ;
     endif;
     MayConR (sarince) > DoConR (sarince_high) / ^ _ AnyIsolTehtar _ ;
+    sarince > sarince_roomen / (roomen,arda) AnyIsolTehtar ZWJ? ^ _ ;
     conncarr MayConL > conncarr_conr DoConL / ^ _ AnyIsolTehtar _ ;
     conncarr > conncarr_long / ^ _ AnyIsolTehtar ZWJ? (Calma,Anga,Harma,Anca,Noldo,Anna,ExtHarma,ExtAnca,Hyarmen,whtengwa);
     if (!lowershook)

@@ -104,10 +104,15 @@ beginchr(utehta&".narrow",0);
 endchr;
 pause;
 combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
-beginchr(utehta&".double_norm",0);
+beginchr(uutehta&".norm",0);
   draw_utehta(60,2.2pt,double,ascend)
 endchr;
-pause;
+beginchr(uutehta&".wide",0);
+  draw_utehta(50,2.3pt,double,ascend)
+endchr;
+beginchr(uutehta&".narrow",0);
+  draw_utehta(65,2.1pt,double,ascend)
+endchr;
 beginchr(downotehta&".norm",0);
   draw_utehta(50,2.2pt,single,descend)
 endchr;
@@ -166,13 +171,13 @@ endchr;
 beginchr(otehta&".narrow",0);
   draw_otehta(100,2.0pt,single,ascend);
 endchr;
-beginchr(otehta&".double_norm",0);
+beginchr(ootehta&".norm",0);
   draw_otehta(60,2.4pt,double,ascend);
 endchr;
-beginchr(otehta&".double_wide",0);
+beginchr(ootehta&".wide",0);
   draw_otehta(50,2.6pt,double,ascend);
 endchr;
-beginchr(otehta&".double_narrow",0);
+beginchr(ootehta&".narrow",0);
   draw_otehta(100,2.0pt,double,ascend);
 endchr;
 
@@ -252,12 +257,18 @@ beginchr(ytehta&".norm",0);
   setap("ldap",(x0-0.5pt,tex+apy-0.1pt));
   setap("rdap",(x1+0.5pt,tex+apy-0.1pt));
   setap("uap",(0,y0+(y0-tex)-apy));
+enddef;
+beginchr(ytehta&".norm",0);
+  draw_ytehta(1.50pt);
 endchr;
 combinechr(ytehta,dottedcircle,"uap",ytehta&".norm","dap");
+beginchr(ytehta&".narrow",0);
+  draw_ytehta(1.30pt);
+endchr;
 
-beginchr(downytehta&".norm",0);
+def draw_downytehta(expr width) =
   y0=y1=-1.1pt;
-  1/2[x0,x1]=0; x1-x0=1.50pt;
+  1/2[x0,x1]=0; x1-x0=width;
   draw_dot(0)(dotsize2);
   draw_dot(1)(dotsize2);
   setap("dap",(0,y0+y0+apy));
@@ -265,8 +276,14 @@ beginchr(downytehta&".norm",0);
   setap("uap",(0,-apy));
   setap("luap",(x0-0.4pt,-apy+0.1pt));
   setap("ruap",(x1+0.4pt,-apy+0.1pt));
+enddef;
+beginchr(downytehta&".norm",0);
+  draw_downytehta(1.50pt);
 endchr;
 combinechr(downytehta,dottedcircle,"dap",downytehta&".norm","uap");
+beginchr(downytehta&".narrow",0);
+  draw_downytehta(1.30pt);
+endchr;
 
 beginchr(itehta&".norm",0);
   z0=(0,tex+1.1pt);
@@ -314,11 +331,9 @@ combinechr(dotinside,dottedcircle,"cap",dotinside&".norm","cap");
 beginchr(dotinside&".conu",0);
   draw_dotinside(ascend);
 endchr;
-pause;
 beginchr(dotinside&".cond",0);
   draw_dotinside(descend);
 endchr;
-pause;
 
 def draw_etehta(expr style,number) =
   transform rot;

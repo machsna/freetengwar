@@ -99,11 +99,14 @@ addalias(tengcb & "44","itehta");
 addalias(tengcb & "45","downitehta");
 addalias(tengcb & "46","etehta");
 addalias(tengcb & "47","downetehta");
+addalias(tengcb & "48","eetehta");
 addalias(tengcb & "49","dblunderstroke");
 addalias(tengcb & "4A","otehta");
 addalias(tengcb & "4B","downotehta");
 addalias(tengcb & "4C","utehta");
 addalias(tengcb & "4D","downutehta");
+addalias(tengcb & "4E","ootehta");
+addalias(tengcb & "4F","uutehta");
 
 addaliasvars("atehta","norm");
 addaliasvars("downatehta","norm");
