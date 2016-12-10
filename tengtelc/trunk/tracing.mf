@@ -142,9 +142,9 @@ def initchr(expr s, m, width) =
   numeric a[], t; path p[], ap[];
   if tracing and forgd:
     if usealiasnames:
-      message "gd: g_" & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps_to_alias(ps[ps.n].name) & ditto & ") { ";
+      message "gd: " & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps_to_alias(ps[ps.n].name) & ditto & ") { ";
     else:
-      message "gd: g_" & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
+      message "gd: " & cleandots(ps_to_alias(ps[ps.n].name)) & " = ps(" & ditto & ps[ps.n].name & ditto & ") { ";
     fi
   fi
   hasattached:=false;
@@ -193,7 +193,11 @@ def endchr =
     proofrule((0,ex),(w,ex));
   else:
     if forgd: message "gd: };"; fi
-    message "pe: Print(" & ditto & "Done " & ps[ps.n].name & ditto & ");";
+    if usealiasnames:
+       message "pe: Print(" & ditto & "Done " & ps_to_alias(ps[ps.n].name) & ditto & ");";
+    else:
+       message "pe: Print(" & ditto & "Done " & ps[ps.n].name & ditto & ");";
+    fi
     message "ec: " & ps[ps.n].name if isrefchar: & " [" & decimal(incr ref_char_c) & "]" fi;
   fi
   if isrefchar and not tracing or not isrefchar:

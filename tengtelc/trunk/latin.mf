@@ -2166,9 +2166,17 @@ def draw_m(expr style) =
   draw_stroke(z7{curl 0.5}..z8{right}...{down}p3,ang(a7..a8..a9..ap3));
   labels(range 1 thru 10);
 enddef;
-beginchr("m",1.5en);
+
+% "m" is not a valid Graphite name for a glyph, so we have to work around it.
+boolean defaultusealiasnames;
+defaultusealiasnames:=usealiasnames;
+usealiasnames:=false;
+addalias("m","mletter");
+beginchr(mletter,1.5en);
   draw_m(normal);
 endchr;
+usealiasnames:=defaultusealiasnames;
+
 beginchr("m.conl",1.5en);
   draw_m(conleft);
 endchr;
