@@ -957,7 +957,7 @@ beginchr(wtengwa&".desc",1.05ten);
 endchr;
 
 def draw_hwestasin(expr style) =
-  padding(0.7pt,0.2pt);
+  padding(0.7pt,-0.2pt);
   a3=a4=a5=a6=a7=a8=a9=35;
   z1=(x5+0.95ten,tasc); z2=(x1,0);
   z5=(lpad,0.47tex);
@@ -1091,7 +1091,7 @@ def draw_conncarr(expr style) =
     draw_stroke(p2,ap2);
   fi
   setap("uap",(x1,tex+0.5pt));
-  setap("dap",(x1,-0.5pt));
+  setap("dap",(x1+0.1pt,-0.5pt));
   penlabels(range 1 thru 6);
 enddef;
 beginchr(conncarr,0.7ten);

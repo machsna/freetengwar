@@ -51,10 +51,10 @@ def get_utehta_path(suffix $)(expr v,l,cent) =
   a$a:=v-5; a$b:=35; a$c:=35;
   y$a=tex+0.05pt; cent=0.17[x$a,x$b];
   z$b=z$a+l*dir(v);
-  z$c=z$b+1.3pt*dir(180);
+  z$c=z$b+1.4pt*dir(v+122);
   ap$=ang(a$a..a$b..a$c);
 %  p$=z$a{dir a$a}..{dir (60)}z$b..tension 1 and 1.2..z$c;
-  p$=z$a{dir a$a}..{dir (70)}z$b..tension 1 and 1.2..z$c;
+  p$=z$a{dir a$a}..{dir (v+15)}z$b..tension 1 and 1.2..z$c;
 enddef;
 def draw_utehta(expr v,l,num,style) =
   transform rot; rot=identity if style=descend: rotatedaround ((0,1/2tex),180) fi;
@@ -88,20 +88,28 @@ def draw_utehta(expr v,l,num,style) =
   fi
 enddef;
 beginchr("utehtadot.norm",0);
-  draw_utehta(60,2.0pt,dotlig,ascend)
+  draw_utehta(60,2.2pt,dotlig,ascend)
 endchr;
 pause;
 beginchr(utehta&".norm",0);
-  draw_utehta(60,2.0pt,single,ascend)
+  draw_utehta(60,2.2pt,single,ascend)
 endchr;
-combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
 pause;
-beginchr(utehta&".double_norm",0);
-  draw_utehta(60,2.0pt,double,ascend)
+beginchr(utehta&".wide",0);
+  draw_utehta(50,2.3pt,single,ascend)
 endchr;
-
+pause;
+beginchr(utehta&".narrow",0);
+  draw_utehta(65,2.1pt,single,ascend)
+endchr;
+pause;
+combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
+beginchr(utehta&".double_norm",0);
+  draw_utehta(60,2.2pt,double,ascend)
+endchr;
+pause;
 beginchr(downotehta&".norm",0);
-  draw_utehta(50,2.0pt,single,descend)
+  draw_utehta(50,2.2pt,single,descend)
 endchr;
 combinechr(downotehta,dottedcircle,"dap",downotehta&".norm","uap");
 
