@@ -85,7 +85,7 @@ addalias(tengcb & "36","openanna");
 addalias(tengcb & "37","prefeanoreanqu");
 addaliasvars("prefeanoreanqu","var");
 addalias(tengcb & "39","whtengwa");
-addaliasvars("whtengwa","var1","var2","var3");
+addaliasvars("whtengwa","var1","var2","var3","var4");
 addalias(tengcb & "3A","mhtengwa");
 addalias(tengcb & "3B","beleriandicmh");
 addalias(tengcb & "3C","angwhtengwa");
@@ -218,6 +218,6 @@ addaliasvars("conncarr","long","conr");
 addaliasvars("openanna","conl","dec");
 addaliasvars("mhtengwa","dec");
 addaliasvars("beleriandicmh","dec");
-addaliasvars("sarince","high");
+addaliasvars("sarince","high","roomen");
 
 

@@ -189,7 +189,6 @@ beginchr(downutehta&".long",0);
     setap("uap",(-0.6pt,-apy));
 endchr;
 
-
 beginchr(atehta&".norm",0);
   z0=(0,tex+2.2pt);
   y1=y2=y0-1.1pt;
@@ -247,6 +246,7 @@ beginchr(ytehta&".norm",0);
   setap("uap",(0,y0+(y0-tex)-apy));
 endchr;
 combinechr(ytehta,dottedcircle,"uap",ytehta&".norm","dap");
+
 beginchr(downytehta&".norm",0);
   y0=y1=-1.1pt;
   1/2[x0,x1]=0; x1-x0=1.50pt;
@@ -269,6 +269,7 @@ beginchr(itehta&".norm",0);
   setap("uap",(0,y0+(y0-tex)-apy));
 endchr;
 combinechr(itehta,dottedcircle,"uap",itehta&".norm","dap");
+
 beginchr(downitehta&".norm",0);
   z0=(0,-1.1pt);
   draw_dot(0)(dotsize3);
