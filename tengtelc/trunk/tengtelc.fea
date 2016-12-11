@@ -1,0 +1,99 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+# GSUB 
+
+@spacingtehta = [\i \atehta \itehta \etehta \otehta \utehta ];
+@tengwa = [\q \tinco \parma \calma \quesse \ando \umbar \anga \ungwe 
+	\thuule \formen \harma \hwesta \anto \ampa \anca \unque 
+	\nuumen \malta \noldo \nwalme \oore \vala \anna \vilya 
+	\extthuule \extformen \extharma \exthwesta \extanto \extampa \extanca \extunque 
+	\roomen \arda \lambe \alda \silme \silmenuq \aare \aarenuq 
+	\hyarmen \hwestasin \yanta \uure \longcarr \halla \shortcarr \mirroredosse 
+	\wtengwa \atengwa \conncarr \openanna \prefeanoreanqu \whtengwa \mhtengwa \beleriandicmh 
+	\angwhtengwa \vaiya ];
+@realtehta = [\itehta.norm \atehta.norm \itehta.norm \etehta.norm \otehta.norm \utehta.norm ];
+@canconnectright = [\q \quesse \ungwe \nwalme \vilya ];
+@connectright = [\quesse.conr \quesse.conr \ungwe.conr \nwalme.conr \vilya.conr ];
+@canconnectleft = [\t \lambe \sarince ];
+@connectleft = [\lambe.conl \lambe.conl \sarince.high ];
+
+lookup smarttehtarreplacement {
+  lookupflag 0;
+    sub @tengwa @spacingtehta' by @realtehta ;
+} smarttehtarreplacement;
+
+lookup connect {
+  lookupflag 0;
+    sub @canconnectright by @connectright ;
+    sub @canconnectleft by @connectleft ;
+} connect;
+
+lookup smartconnectionright {
+  lookupflag IgnoreMarks;
+    sub @canconnectright' lookup connect @canconnectleft' lookup connect ;
+} smartconnectionright;
+
+feature calt {
+  lookup smarttehtarreplacement;
+  lookup smartconnectionright;
+} calt;
+
+# GPOS 
+
+#Mark attachment classes (defined in GDEF, used in lookupflags)
+
+@GDEF_Simple = [\section \multiply \paragraph \currency \sterling \degree 
+	\guilsinglleft \guilsinglright \trademark \numbersign \dollar \fraction 
+	\ampersand \asterisk \equal \figuredash \plus \divide \logicalnot \slash \zero 
+	\one \two \three \four \five \six 
+	\seven \eight \nine \at \A \B \C \Euro \D \E \G \H \I \J \K \L \M \N \O \Q \R \copyright 
+	\registered \U \V \X \Y \yen \Z \bracketleft \backslash \bracketright \asciicircum 
+	\underscore \braceleft \bar \brokenbar \dagger \daggerdbl \braceright 
+	\asciitilde \AE \Oslash \Eth \Thorn \T \f \f.conl \f.dotlig \f.conl_dotlig \florin 
+	\longs \germandbls 
+	\F \P \S \W \a \ordfeminine \ae \b 
+	\b.conl \c \cent \d \eth \e \g \h \h.conl \dotlessi \dotlessi.conl 
+	\k \k.conl \l \l.conl \m \m.conl \n \n.conl \eng \o \ordmasculine 
+	\oslash \p \p.conl \thorn \q \r \r.conl \r.round \s \t \t.conl \t.conr \t.conb \u 
+	\u.conl \v \v.conl \w \w.conl \x \y \y.conl \z \z.conl \interpunctdot \bullet 
+	\interpunctcomma \interpunctinvcomma \parenleft \parenright \less \greater 
+	\hyphen \endash \emdash \quotesingle \quotedbl \exclam \exclamdown \question 
+	\questiondown \space \guillemotleft \guillemotright 
+	\plusminus \percent \perthousand \onequarter \onehalf \threequarters \OE 
+	\grave \acute \circumflex \tilde 
+	\macron \dotaccent \dieresis \ring 
+	\caron \cedilla \Agrave \Aacute \Acircumflex \Atilde 
+	\Adieresis \Aring \Ccedilla \Egrave \Eacute \Ecircumflex \Edieresis \Igrave 
+	\Iacute \Icircumflex \Idieresis \Ntilde \Ograve \Oacute \Ocircumflex \Otilde 
+	\Odieresis \Ugrave \Uacute \Ucircumflex \Udieresis \Yacute \Ydieresis \Zcaron 
+	\Scaron \agrave \aacute \acircumflex \atilde \adieresis \aring \ccedilla \egrave 
+	\eacute \ecircumflex \edieresis \i \i.conl \igrave \igrave.conl \iacute 
+	\iacute.conl \icircumflex \icircumflex.conl \idieresis \idieresis.conl \j 
+	\j.conl \ntilde \ograve \oacute \ocircumflex \otilde \odieresis \oe \scaron 
+	\ugrave \ugrave.conl \uacute \uacute.conl \ucircumflex \ucircumflex.conl 
+	\udieresis \udieresis.conl \yacute \yacute.conl \ydieresis \ydieresis.conl 
+	\zcaron \period \periodcentered \comma \semicolon \quoteleft \quoteright 
+	\quotesinglbase \quotedblleft \quotedblright \quotedblbase \ellipsis 
+	\longcarr \longcarr.conl \halla \shortcarr 
+	\shortcarr.conl \shortcarr.conr \shortcarr.conb \openanna \openanna.conl \openanna.dec 
+	\silme.lig_harma \mirroredosse \prefeanoreanqu \prefeanoreanqu.var 
+	\whtengwa.var1 \whtengwa.var2 \whtengwa \hyarmen \hyarmen.conr \hyarmen.dec 
+	\yanta \yanta.conr \yanta.dec \roomen \roomen.conl \arda 
+	\arda.conl \roomen.open \roomen.conl_open \arda.open 
+	\arda.conl_open \lambe \lambe.conr \lambe.conl \lambe.conb 
+	\lambe.dec \lambe.conrbot \lambe.conbbot \alda \alda.conr 
+	\alda.conl \alda.conb \alda.dec \silme \silme.flat \silme.open 
+	\silme.lig \silme.lig_flat \silme.lig_open \silmenuq \aare 
+	\aare.flat \aare.open \aarenuq \uure \uure.conr \atengwa 
+	\atengwa.desc \atengwa.dec \wtengwa \wtengwa.desc \hwestasin \vaiya \angwhtengwa 
+	\sarince \sarince.high \conncarr \conncarr.long \conncarr.conr 
+	];
+@GDEF_Mark = [\utehta.norm \otehta.norm \atehta.norm \itehta.norm 
+	\etehta.norm ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;
+
+} GDEF;
+
