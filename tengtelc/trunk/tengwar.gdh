@@ -152,7 +152,7 @@ table(feature)
 // Alternative features with original numerical ids.
   tengconnectorig {
     id=201;
-    name.LG_USENG = string("Connect tengwar");
+    name.LG_USENG = string("Connect tengwar (original)");
     default = some;
     settings {
       none {
@@ -171,7 +171,7 @@ table(feature)
   }
   silmepreforig {
     id=202;
-    name.LG_USENG = string("Tehta on Silme");
+    name.LG_USENG = string("Tehta on Silme (original)");
     default = left;
     settings {
       left {
@@ -194,7 +194,7 @@ table(feature)
   }
   dectengorig {
     id=203;
-    name.LG_USENG = string("Decorated tengwar");
+    name.LG_USENG = string("Decorated tengwar (original)");
     default = non;
     settings {
       non {
@@ -213,17 +213,17 @@ table(feature)
   }
   descwtengwaorig {
     id=204;
-    name.LG_USENG = string("Descending W-tengwa");
+    name.LG_USENG = string("Descending W-tengwa (original)");
     default = true;
   }
   lowershookorig {
     id=205;
-    name.LG_USENG = string("Prefer low S-hook");
+    name.LG_USENG = string("Prefer low S-hook (original)");
     default = true;
   }
   whtengwavarorig {
     id=206;
-    name.LG_USENG = string("WH-tengwa variant");
+    name.LG_USENG = string("WH-tengwa variant (original)");
     default = common;
     settings {
       common {
@@ -242,7 +242,7 @@ table(feature)
   }
   ossetailorig {
     id=207;
-    name.LG_USENG = string("Marked Osse");
+    name.LG_USENG = string("Marked Osse (original)");
     default = none;
     settings {
       none {
@@ -261,7 +261,7 @@ table(feature)
   }
   underlineorig {
     id=208;
-    name.LG_USENG = string("Underline");
+    name.LG_USENG = string("Underline (original)");
     default = no;
     settings {
       no {
@@ -475,13 +475,13 @@ table(sub)
     silme > silme_lig / ^ _ AnyIsolTehtar ZWJ AnyTengwa ;
     (calma,quesse,anga,ungwe) roomen > (calma_conr,quesse_conr,anga_conr,ungwe_conr) roomen_lig / ^ _ AnyIsolTehtar ZWJ _ ;
 
-    if (lowershook || lowershookorig)
+    if (lowershook && lowershookorig)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
     MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ _ ;
     if (tengconnect==all || tengconnectorig==all)
       MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar _ ;
-    elseif (tengconnect==some || tengconnectorig==some)
+    elseif (tengconnect==some && tengconnectorig==some)
       SomeMayConR SomeMayConL > SomeDoConR SomeDoConL / ^ _ AnyIsolTehtar  _ ;
     endif;
     MayConR (sarince) > DoConR (sarince_high) / ^ _ AnyIsolTehtar _ ;
@@ -494,12 +494,12 @@ table(sub)
 
     (roomen,roomen_conl,roomen_dec,arda,arda_conl,arda_dec) > (roomen_open,roomen_conl_open,roomen_dec_open,arda_open,arda_conl_open,arda_dec_open)
            / _ AnyIsolUpTehtar IsolDownTehtar ;
-    if (silmepref==left || silmepreforig==left)
+    if (silmepref==left && silmepreforig==left)
       (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_flat,silme_lig_flat,silme_dec_flat,aare_flat,aare_dec_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
     elseif (silmepref==right || silmepreforig==right)
       (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_open,silme_lig_open,silme_dec_open,aare_open,aare_dec_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
     endif;
-    if (descwtengwa || descwtengwaorig)
+    if (descwtengwa && descwtengwaorig)
       wtengwa > wtengwa_desc;
     endif;
     if (whtengwavar==roomen || whtengwavarorig==roomen)
@@ -610,7 +610,7 @@ table(pos)
     (silmenuq,aarenuq,Alda,Mhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ ^ _ ;
 
     underbar_roomen AnyDownTehta { attach{ to=@1; at=ldap; with=luap }; insert=true;} / _ _ ;
-    if (silmepref==left || silmepreforig==left)
+    if (silmepref==left && silmepreforig==left)
 //      overbar_silme AnyUpTehta { attach{ to=@2; at=ruap; with=rdap }; insert=true;} / (silme_flat,silme_lig_flat) _ _ ;
 //      underbar_silme AnyDownTehta { attach{ to=@2; at=ldap; with=luap }; insert=true;} / (silmenuq_flat) _ _ ;
       overbar_silme AnyUpTehta { attach{ to=@1; at=ruap; with=rdap }; insert=true;} / _ _ ;
