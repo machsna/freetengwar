@@ -26,7 +26,7 @@
 
 table(feature)
   tengconnect {
-    id="ss01";
+    id="201";
     name.LG_USENG = string("Connect tengwar");
     default = some;
     settings {
@@ -45,7 +45,7 @@ table(feature)
     }
   }
   silmepref {
-    id="cv01";
+    id="202";
     name.LG_USENG = string("Tehta on Silme");
     default = left;
     settings {
@@ -68,7 +68,7 @@ table(feature)
     }
   }
   decteng {
-    id="ss02";
+    id="203";
     name.LG_USENG = string("Decorated tengwar");
     default = non;
     settings {
@@ -87,17 +87,17 @@ table(feature)
     }
   }
   descwtengwa {
-    id="cv03";
+    id="204";
     name.LG_USENG = string("Descending W-tengwa");
     default = true;
   }
   lowershook {
-    id="cv04";
+    id="205";
     name.LG_USENG = string("Prefer low S-hook");
     default = true;
   }
   whtengwavar {
-    id="cv05";
+    id="206";
     name.LG_USENG = string("WH-tengwa variant");
     default = common;
     settings {
@@ -116,7 +116,7 @@ table(feature)
     }
   }
   ossetail {
-    id="cv06";
+    id="207";
     name.LG_USENG = string("Marked Osse");
     default = none;
     settings {
@@ -135,7 +135,132 @@ table(feature)
     }
   }
   underline {
-    id="ss03";
+    id="208";
+    name.LG_USENG = string("Underline");
+    default = no;
+    settings {
+      no {
+        value=0;
+        name.LG_USENG = string("False");
+      }
+      yes {
+        value=1;
+        name.LG_USENG = string("True");
+      }
+    }
+  }
+// Alternative features with original numerical ids.
+  tengconnectorig {
+    id=201;
+    name.LG_USENG = string("Connect tengwar");
+    default = some;
+    settings {
+      none {
+        value=0;
+        name.LG_USENG = string("Minimal");
+      }
+      some {
+        value=1;
+        name.LG_USENG = string("Normal");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("Maximal");
+      }
+    }
+  }
+  silmepreforig {
+    id=202;
+    name.LG_USENG = string("Tehta on Silme");
+    default = left;
+    settings {
+      left {
+        value=0;
+        name.LG_USENG = string("To the left");
+      }
+//      prefleft {
+//        value=1;
+//        name.LG_USENG = string("Prefer left");
+//      }
+//      prefright {
+//        value=2;
+//        name.LG_USENG = string("Prefer right");
+//      }
+      right {
+        value=3;
+        name.LG_USENG = string("To the right");
+      }
+    }
+  }
+  dectengorig {
+    id=203;
+    name.LG_USENG = string("Decorated tengwar");
+    default = non;
+    settings {
+      non {
+        value=0;
+        name.LG_USENG = string("None");
+      }
+      init {
+        value=1;
+        name.LG_USENG = string("Word initially");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("All");
+      }
+    }
+  }
+  descwtengwaorig {
+    id=204;
+    name.LG_USENG = string("Descending W-tengwa");
+    default = true;
+  }
+  lowershookorig {
+    id=205;
+    name.LG_USENG = string("Prefer low S-hook");
+    default = true;
+  }
+  whtengwavarorig {
+    id=206;
+    name.LG_USENG = string("WH-tengwa variant");
+    default = common;
+    settings {
+      common {
+        value=0;
+        name.LG_USENG = string("Common");
+      }
+      roomen {
+        value=1;
+        name.LG_USENG = string("Roomen nuquerna");
+      }
+      hyarmen {
+        value=2;
+        name.LG_USENG = string("Mirrored Hyarmen");
+      }
+    }
+  }
+  ossetailorig {
+    id=207;
+    name.LG_USENG = string("Marked Osse");
+    default = none;
+    settings {
+      none {
+        value=0;
+        name.LG_USENG = string("Never");
+      }
+      final {
+        value=1;
+        name.LG_USENG = string("Word final");
+      }
+      all {
+        value=2;
+        name.LG_USENG = string("Always");
+      }
+    }
+  }
+  underlineorig {
+    id=208;
     name.LG_USENG = string("Underline");
     default = no;
     settings {
@@ -325,13 +450,13 @@ endtable;
 table(sub)
 
   pass(1)
-    if (decteng==all || decteng==init)
+    if (decteng==all || dectengorig==all || decteng==init || dectengorig==init)
       Notdectengwar > dectengwar / ^ _ {decadjusted==false};
     endif;
-    if (decteng==init)
+    if (decteng==init || dectengorig==init)
       dectengwar > Notdectengwar {decadjusted=true} / (AnyTengwa,IsolTehtar) ZWJ? ^ _ ;
     endif;
-    if (ossetail==all || ossetail==final)
+    if (ossetail==all || ossetailorig==all || ossetail==final || ossetailorig==final)
       atengwa > atengwa_desc / ^ _ ;
     endif;
 
@@ -350,39 +475,39 @@ table(sub)
     silme > silme_lig / ^ _ AnyIsolTehtar ZWJ AnyTengwa ;
     (calma,quesse,anga,ungwe) roomen > (calma_conr,quesse_conr,anga_conr,ungwe_conr) roomen_lig / ^ _ AnyIsolTehtar ZWJ _ ;
 
-    if (lowershook)
+    if (lowershook || lowershookorig)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
     MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar ZWJ _ ;
-    if (tengconnect==all)
+    if (tengconnect==all || tengconnectorig==all)
       MayConR MayConL > DoConR DoConL / ^ _ AnyIsolTehtar _ ;
-    elseif (tengconnect==some)
+    elseif (tengconnect==some || tengconnectorig==some)
       SomeMayConR SomeMayConL > SomeDoConR SomeDoConL / ^ _ AnyIsolTehtar  _ ;
     endif;
     MayConR (sarince) > DoConR (sarince_high) / ^ _ AnyIsolTehtar _ ;
     sarince > sarince_roomen / (roomen,arda) AnyIsolTehtar ZWJ? ^ _ ;
     conncarr MayConL > conncarr_conr DoConL / ^ _ AnyIsolTehtar _ ;
     conncarr > conncarr_long / ^ _ AnyIsolTehtar ZWJ? (Calma,Anga,Harma,Anca,Noldo,Anna,ExtHarma,ExtAnca,Hyarmen,whtengwa);
-    if (!lowershook)
+    if (!lowershook || !lowershookorig)
       MayConRLow MayConLLow > DoConRLow DoConLLow / ^ _ AnyIsolTehtar ZWJ? _ ;
     endif;
 
     (roomen,roomen_conl,roomen_dec,arda,arda_conl,arda_dec) > (roomen_open,roomen_conl_open,roomen_dec_open,arda_open,arda_conl_open,arda_dec_open)
            / _ AnyIsolUpTehtar IsolDownTehtar ;
-    if (silmepref==left)
+    if (silmepref==left || silmepreforig==left)
       (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_flat,silme_lig_flat,silme_dec_flat,aare_flat,aare_dec_flat) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
-    elseif (silmepref==right)
+    elseif (silmepref==right || silmepreforig==right)
       (silme,silme_lig,silme_dec,aare,aare_dec) > (silme_open,silme_lig_open,silme_dec_open,aare_open,aare_dec_open) / ^ _ AnyIsolDownTehtar IsolUpTehtar ;
     endif;
-    if (descwtengwa)
+    if (descwtengwa || descwtengwaorig)
       wtengwa > wtengwa_desc;
     endif;
-    if (whtengwavar==roomen)
+    if (whtengwavar==roomen || whtengwavarorig==roomen)
        whtengwa > whtengwa_var1;
-    elseif (whtengwavar==hyarmen)
+    elseif (whtengwavar==hyarmen || whtengwavarorig==hyarmen)
        whtengwa > whtengwa_var2;
     endif;
-    if (ossetail==final)
+    if (ossetail==final || ossetailorig==final)
        atengwa_desc > atengwa / ^ _ AnyIsolUpTehtar ZWJ? AnyTengwa;
     endif;
 
@@ -435,7 +560,7 @@ table(sub)
   endpass;
 
   pass(3)
-    if (underline==yes)
+    if (underline==yes || underlineorig==yes)
        uline_end Underlinees _ > Underliners$2:2 @2 uline_end:2 / _ _ AnyTehtar ZWJ? ^ _ ;
        _ _ Underlinees _ > uline_start:3 Underliners$3:3 @3 uline_end:3 / _ _ _ AnyTehtar ZWJ? ^ _ ;
     endif;
@@ -449,7 +574,7 @@ table(pos)
 
   pass(1)
 
-    if (underline==yes)
+    if (underline==yes || underlineorig==yes)
       uline_start { attach{ to=@2; at=point(0m,0m); with=point(0m,0m) }; } Underliners  / _ ^ _;
       Underliners { attach{ to=@2; at=point(0m,0m); with=point(0m,0m) }; } Underlinees  / _ ^ _;
     endif;
@@ -485,12 +610,12 @@ table(pos)
     (silmenuq,aarenuq,Alda,Mhtengwa) AnyDownTehta { attach{ to=@1; at=dap; with=ruap }; insert=true;} / _ ^ _ ;
 
     underbar_roomen AnyDownTehta { attach{ to=@1; at=ldap; with=luap }; insert=true;} / _ _ ;
-    if (silmepref==left)
+    if (silmepref==left || silmepreforig==left)
 //      overbar_silme AnyUpTehta { attach{ to=@2; at=ruap; with=rdap }; insert=true;} / (silme_flat,silme_lig_flat) _ _ ;
 //      underbar_silme AnyDownTehta { attach{ to=@2; at=ldap; with=luap }; insert=true;} / (silmenuq_flat) _ _ ;
       overbar_silme AnyUpTehta { attach{ to=@1; at=ruap; with=rdap }; insert=true;} / _ _ ;
       underbar_silme AnyDownTehta { attach{ to=@1; at=ldap; with=luap }; insert=true;} /  _ _ ;
-    elseif (silmepref==right)
+    elseif (silmepref==right || silmepreforig==right)
 //      overbar_silme AnyUpTehta { attach{ to=@2; at=luap; with=ldap }; insert=true;} / (silme_open,silme_lig_open) _ _ ;
 //      underbar_silme AnyDownTehta { attach{ to=@2; at=rdap; with=ruap }; insert=true;} / (silmenuq_open) _ _ ;
       overbar_silme AnyUpTehta { attach{ to=@1; at=luap; with=ldap }; insert=true;} / _ _ ;
