@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2017 Johan Winge, j. 'mach' wust
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -136,3 +136,65 @@ addalias(tengcb & "6A","startmodechange");
 addalias(tengcb & "6B","endmodechange");
 addalias(tengcb & "6C","bilboexclam");
 
+addalias(tengcb & "80","TINCO");
+addalias(tengcb & "81","PARMA");
+addalias(tengcb & "82","CALMA");
+addalias(tengcb & "83","QUESSE");
+addalias(tengcb & "84","ANDO");
+addalias(tengcb & "85","UMBAR");
+addalias(tengcb & "86","ANGA");
+addalias(tengcb & "87","UNGWE");
+addalias(tengcb & "88","THUULE");
+addalias(tengcb & "89","FORMEN");
+addalias(tengcb & "8A","HARMA");
+addalias(tengcb & "8B","HWESTA");
+addalias(tengcb & "8C","ANTO");
+addalias(tengcb & "8D","AMPA");
+addalias(tengcb & "8E","ANCA");
+addalias(tengcb & "8F","UNQUE");
+
+addalias(tengcb & "90","NUUMEN");
+addalias(tengcb & "91","MALTA");
+addalias(tengcb & "92","NOLDO");
+addalias(tengcb & "93","NWALME");
+addalias(tengcb & "94","OORE");
+addalias(tengcb & "95","VALA");
+addalias(tengcb & "96","ANNA");
+addalias(tengcb & "97","VILYA");
+addalias(tengcb & "98","EXTTHUULE");
+addalias(tengcb & "99","EXTFORMEN");
+addalias(tengcb & "9A","EXTHARMA");
+addalias(tengcb & "9B","EXTHWESTA");
+addalias(tengcb & "9C","EXTANTO");
+addalias(tengcb & "9D","EXTAMPA");
+addalias(tengcb & "9E","EXTANCA");
+addalias(tengcb & "9F","EXTUNQUE");
+
+addalias(tengcb & "A0","ROOMEN");
+addalias(tengcb & "A1","ARDA");
+addalias(tengcb & "A2","LAMBE");
+addalias(tengcb & "A3","ALDA");
+addalias(tengcb & "A4","SILME");
+addalias(tengcb & "A5","SILMENUQ");
+addalias(tengcb & "A6","AARE");
+addalias(tengcb & "A7","AARENUQ");
+addalias(tengcb & "A8","HYARMEN");
+% addalias(tengcb & "A9","HWESTASIN");
+addalias(tengcb & "AA","YANTA");
+% addalias(tengcb & "AB","UURE");
+addalias(tengcb & "AC","LONGCARR");
+addalias(tengcb & "AD","HALLA");
+addalias(tengcb & "AE","SHORTCARR");
+% addalias(tengcb & "AF","EXTENDEDTELCO");
+
+% addalias(tengcb & "B0","MIRROREDOSSE");
+% addalias(tengcb & "B1","WTENGWA");
+addalias(tengcb & "B2","ATENGWA");
+% addalias(tengcb & "B4","CONNCARR");
+addalias(tengcb & "B6","OPENANNA");
+% addalias(tengcb & "B7","PREFEANOREANQU");
+% addalias(tengcb & "B9","WHTENGWA");
+addalias(tengcb & "BA","MHTENGWA");
+addalias(tengcb & "BB","BELERIANDICMH");
+% addalias(tengcb & "BC","ANGWHTENGWA");
+% addalias(tengcb & "BD","VAIYA");

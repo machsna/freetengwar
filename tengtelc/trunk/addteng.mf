@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2017 Johan Winge, j. 'mach' wust
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -393,7 +393,7 @@ endchr;
 beginchr(hyarmen&".conr",1.0ten);
   draw_hyarmenyanta(ascend,conright);
 endchr;
-beginchr(hyarmen&".dec",1ten);
+beginchr(HYARMEN,1ten);
   draw_hyarmenyanta(ascend,capital);
 endchr;
 beginchr(yanta,1ten);
@@ -402,7 +402,7 @@ endchr;
 beginchr(yanta&".conr",1ten);
   draw_hyarmenyanta(short,conright);
 endchr;
-beginchr(yanta&".dec",1ten);
+beginchr(YANTA,1ten);
   draw_hyarmenyanta(short,capital);
 endchr;
 
@@ -562,16 +562,16 @@ def draw_caproomen(expr number, secstyle, nuquerna) =
   setap("dap",(0.35[lpad,w-rpad],-apy-0.2pt));
   penlabels(range 1 thru 22);
 enddef;
-beginchr(roomen&".dec",1.3ten);
+beginchr(ROOMEN,1.3ten);
   draw_caproomen(1,normal,false);
 endchr;
-beginchr(roomen&".dec_open",1.3ten);
+beginchr(ROOMEN&".open",1.3ten);
   draw_caproomen(1,open,false);
 endchr;
-beginchr(arda&".dec",1.3ten);
+beginchr(ARDA,1.3ten);
   draw_caproomen(2,normal,false);
 endchr;
-beginchr(arda&".dec_open",1.3ten);
+beginchr(ARDA&".open",1.3ten);
   draw_caproomen(2,open,false);
 endchr;
 
@@ -662,7 +662,7 @@ endchr;
 beginchr(lambe&".conb",1.5ten);
   draw_lambe(conboth,1);
 endchr;
-beginchr(lambe&".dec",1.8cten);
+beginchr(LAMBE,1.8cten);
   draw_lambe(capital,1);
 endchr;
 beginchr(lambe&".conrbot",1.5ten);
@@ -684,7 +684,7 @@ endchr;
 beginchr(alda&".conb",1.5ten);
   draw_lambe(conboth,2);
 endchr;
-beginchr(alda&".dec",1.8cten);
+beginchr(ALDA,1.8cten);
   draw_lambe(capital,2);
 endchr;
 
@@ -813,20 +813,20 @@ endchr;
 %  draw_silme(rightside,open,false,false);
 %endchr;
 
-beginchr(silme&".dec",1.2ten);
+beginchr(SILME,1.2ten);
   draw_silme(leftside,normal,false,true);
 endchr;
 pause;
-beginchr(silme&".dec_flat",1.2ten);
+beginchr(SILME&".flat",1.2ten);
   draw_silme(leftside,flat,false,true);
 endchr;
 pause;
-beginchr(silme&".dec_open",1.2ten);
+beginchr(SILME&".open",1.2ten);
   draw_silme(leftside,open,false,true);
 endchr;
 pause;
 
-beginchr(silmenuq&".dec",1.2ten);
+beginchr(SILMENUQ,1.2ten);
   draw_silme(rightside,nuquerna,false,true);
 endchr;
 pause;
@@ -972,16 +972,16 @@ endchr;
 %  draw_aare(rightside,open);
 %endchr;
 
-beginchr(aare&".dec",1.2ten);
+beginchr(AARE,1.2ten);
   draw_aare(leftside,normal,true);
 endchr;
-beginchr(aare&".dec_flat",1.2ten);
+beginchr(AARE&".flat",1.2ten);
   draw_aare(leftside,flat,true);
 endchr;
-beginchr(aare&".dec_open",1.2ten);
+beginchr(AARE&".open",1.2ten);
   draw_aare(leftside,open,true);
 endchr;
-beginchr(aarenuq&".dec",1.2ten);
+beginchr(AARENUQ,1.2ten);
   draw_aare(rightside,nuquerna,true);
 endchr;
 
@@ -1049,7 +1049,7 @@ endchr;
 beginchr(atengwa&".desc",1.0ten);
   draw_atengwa(descend);
 endchr;
-beginchr(atengwa&".dec",1.05cten);
+beginchr(ATENGWA,1.05cten);
   draw_atengwa(capital);
 endchr;
 
