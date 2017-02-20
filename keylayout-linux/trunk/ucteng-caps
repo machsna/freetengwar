@@ -31,7 +31,7 @@ xkb_symbols "basic"
 	key <AB07> { [          UE011,          UE091,          UE012,          UE092 ] };
 	key <AB08> { [          UE060,           less,          comma                 ] };
 	key <AB09> { [          UE061,        greater,         period                 ] };
-	key <AB10> { [          UE068,          UE066,              !,       question ] };
+	key <AB10> { [          UE068,          UE066,          U0021,       question ] };
 	key <AC01> { [          UE032,          UE0B2,          UE030,          UE0B0 ] };
 	key <AC02> { [          UE024,          UE0A4,          UE025,          UE0A5 ] };
 	key <AC03> { [          UE004,          UE084,          UE01C,          UE09C ] };
@@ -41,7 +41,7 @@ xkb_symbols "basic"
 	key <AC07> { [          UE006,          UE086,          UE01E,          UE09E ] };
 	key <AC08> { [          UE003,          UE083,          UE01B,          UE09B ] };
 	key <AC09> { [          UE022,          UE0A2,          UE023,          UE0A3 ] };
-	key <AC10> { [          UE00C,          UE08C,              ;,              : ] };
+	key <AC10> { [          UE00C,          UE08C,          U003B,          U003A ] };
 	key <AC11> { [          UE017,          UE097,          UE056,          UE054 ] };
 	key <AD01> { [          UE029,          UE0A9,          UE039,          UE0B9 ] };
 	key <AD02> { [          UE015,          UE095,          UE031,          UE0B1 ] };
