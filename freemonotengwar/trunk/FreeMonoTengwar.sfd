@@ -3,23 +3,23 @@ FontName: FreeMonoTengwar
 FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
-Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 - 2013 j. 'mach' wust; 2010 - 2013 Johan Winge.
-Version: 2013-07-21
+Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 - 2017 j. 'mach' wust, Johan Winge.
+Version: 2017-02-20
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
+InvalidEm: 0
 LayerCount: 2
-Layer: 0 0 "Back"  1
-Layer: 1 0 "Fore"  0
-NeedsXUIDChange: 1
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
 FSType: 0
 OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1374418199
+ModificationTime: 1487610925
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -52,10 +52,13 @@ OS2StrikeYPos: 258
 OS2Vendor: 'GNU '
 OS2CodePages: 600001bf.dff70000
 OS2UnicodeRanges: e4000eff.50007fff.00048020.00000000
-Lookup: 4 0 1 "'liga' tengwar ligatures"  {"'liga' tengwar ligatures subtable"  } ['liga' ('DFLT' <'dflt' > 'armn' <'dflt' > 'brai' <'dflt' > 'cyrl' <'dflt' > 'geor' <'dflt' > 'grek' <'dflt' > 'hebr' <'dflt' > 'latn' <'dflt' > 'runr' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Greek"  {"'mark' Mark Positioning in Greek subtable"  } ['mark' ('grek' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Latin 1"  {"'mark' Mark Positioning in Latin 1 subtable"  } ['mark' ('latn' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Latin 2"  {"'mark' Mark Positioning in Latin 2 subtable"  } ['mark' ('latn' <'dflt' > ) ]
+Lookup: 4 0 1 "'liga' tengwar ligatures" { "'liga' tengwar ligatures subtable"  } ['liga' ('DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Greek" { "'mark' Mark Positioning in Greek subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Latin 1" { "'mark' Mark Positioning in Latin 1 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Tengwar" { "'mark' Mark Positioning in Tengwar subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Latin 2" { "'mark' Mark Positioning in Latin 2 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 262 0 0 "'mkmk' Mark to Mark lookup in Tengwar" { "'mkmk' Mark to Mark lookup in Tengwar subtable"  } ['mkmk' ('DFLT' <'dflt' > ) ]
+MarkAttachClasses: 1
 DEI: 91125
 ShortTable: maxp 16
   0
@@ -358,40 +361,40 @@ ShortTable: cvt  7
   41
   41
 EndShort
-LangName: 1066 "" "" "th+AbABoQMA-ng" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1055 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1053 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 2058 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1034 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Jovencillo emponzo+APEA-ado de whisky, qu+AOkA mala figurota exhibes." 
-LangName: 3082 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1060 "" "" "navadno" "" "" "" "" "" "" "" "" "" "" "Dovoljena je uporaba v skladu z licenco GNU General Public License." "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+AWAA-erif bo za vajo spet kuhal doma+AQ0A-e +AX4A-gance." 
-LangName: 1051 "" "" "Norm+AOEA-lne" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1049 "" "" "+BB4EMQRLBEcEPQRLBDkA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+BBIA +BEcEMARJBDAERQAA +BE4EMwQw +BDYEOAQ7--+BDEESwQ7 +BEYEOARCBEAEQwRB...+IBQENAQw, +BD0EPgAA +BEQEMAQ7BEwESAQ4BDIESwQ5 +BE0EOgQ3BDUEPAQ/BDsETwRABEoA!" 
-LangName: 2070 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1046 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1045 "" "" "Normalny" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Pchn+AQUBBwAA w t+ARkA +AUIA8wAA-d+AXoA je+AXwA-a lub o+AVsA-m skrzy+AUQA fig+AAoA" 
-LangName: 1044 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1040 "" "" "Normale" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Pranzo d'acqua fa volti sghembi." 
-LangName: 1038 "" "" "Norm+AOEA-l" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+AMEA-rv+AO0A-zt+AXEA-r+AVEA t+APwA-k+APYA-rf+APoA-r+APMA-g+AOkA-p+AAoA" 
-LangName: 1032 "" "" "+A5oDsQO9A78DvQO5A7oDrAAA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+A5MDsQO2A60DtQPC +A7oDsR92 +A7wDxQPBA8QDuR9yA8IA +A7QfcgO9 +A7gfcAAA +A7IDwR/2 +A8ADuR9w +A8MDxB94 +A8cDwQPFA8MDsQPGH3YA +A74DrQPGA8kDxAO/AAoA" 
-LangName: 1031 "" "" "Standard" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zw+APYA-lf Boxk+AOQA-mpfer jagen Victor quer +APwA-ber den gro+AN8A-en Sylter Deich." 
-LangName: 1036 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Portez ce vieux whisky au juge blond qui fume." 
-LangName: 3084 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1035 "" "" "Normaali" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1043 "" "" "Standaard" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zweedse ex-VIP, behoorl+ATMA-k gek op quantumfysica." 
-LangName: 1030 "" "" "normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1029 "" "" "oby+AQ0A-ejn+AOkA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1027 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zel de grum: quetxup, whisky, caf+AOgA, bon vi; ja!" 
-LangName: 1069 "" "" "Arrunta" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" 
-LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "http://freetengwar.sourceforge.net/" "" "The use of this font is granted subject to GNU General Public License. As a special exception, if you create a document which uses this font, and embed this font or unaltered portions of this font into the document, this font does not by itself cause the resulting document to be covered by the GNU General Public License. This exception does not however invalidate any other reasons why the document might be covered by the GNU General Public License. If you modify this font, you may extend this exception to your version of the font, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version." "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+4BwA +4APgUuAu4ETgA+BR +4AXgFOAW4FLgEAAA +4AngFuAD4FkA +4AbgFeAB4FDgWAAA +4BbgDeBF4BQA +4BwA +4CLgF+Am4CwA +4ATgFuAH-/The quick brown fox jumps over the lazy dog." 
-GaspTable: 2 8 2 65535 3
+LangName: 1066 "" "" "th+AbABoQMA-ng" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1055 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1053 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1034 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Jovencillo emponzo+APEA-ado de whisky, qu+AOkA mala figurota exhibes."
+LangName: 3082 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 2058 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1060 "" "" "navadno" "" "" "" "" "" "" "" "" "" "" "Dovoljena je uporaba v skladu z licenco GNU General Public License." "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+AWAA-erif bo za vajo spet kuhal doma+AQ0A-e +AX4A-gance."
+LangName: 1051 "" "" "Norm+AOEA-lne" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1049 "" "" "+BB4EMQRLBEcEPQRLBDkA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+BBIA +BEcEMARJBDAERQAA +BE4EMwQw +BDYEOAQ7--+BDEESwQ7 +BEYEOARCBEAEQwRB...+IBQENAQw, +BD0EPgAA +BEQEMAQ7BEwESAQ4BDIESwQ5 +BE0EOgQ3BDUEPAQ/BDsETwRABEoA!"
+LangName: 1046 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 2070 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1045 "" "" "Normalny" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Pchn+AQUBBwAA w t+ARkA +AUIA8wAA-d+AXoA je+AXwA-a lub o+AVsA-m skrzy+AUQA fig+AAoA"
+LangName: 1044 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1040 "" "" "Normale" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Pranzo d'acqua fa volti sghembi."
+LangName: 1038 "" "" "Norm+AOEA-l" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+AMEA-rv+AO0A-zt+AXEA-r+AVEA t+APwA-k+APYA-rf+APoA-r+APMA-g+AOkA-p+AAoA"
+LangName: 1032 "" "" "+A5oDsQO9A78DvQO5A7oDrAAA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+A5MDsQO2A60DtQPC +A7oDsR92 +A7wDxQPBA8QDuR9yA8IA +A7QfcgO9 +A7gfcAAA +A7IDwR/2 +A8ADuR9w +A8MDxB94 +A8cDwQPFA8MDsQPGH3YA +A74DrQPGA8kDxAO/AAoA"
+LangName: 1031 "" "" "Standard" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zw+APYA-lf Boxk+AOQA-mpfer jagen Victor quer +APwA-ber den gro+AN8A-en Sylter Deich."
+LangName: 1036 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Portez ce vieux whisky au juge blond qui fume."
+LangName: 3084 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1035 "" "" "Normaali" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1043 "" "" "Standaard" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zweedse ex-VIP, behoorl+ATMA-k gek op quantumfysica."
+LangName: 1030 "" "" "normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1029 "" "" "oby+AQ0A-ejn+AOkA" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1027 "" "" "Normal" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "Zel de grum: quetxup, whisky, caf+AOgA, bon vi; ja!"
+LangName: 1069 "" "" "Arrunta" "" "" "" "" "" "" "" "" "" "" "" "http://www.gnu.org/copyleft/gpl.html"
+LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "http://freetengwar.sourceforge.net/" "" "The use of this font is granted subject to GNU General Public License. As a special exception, if you create a document which uses this font, and embed this font or unaltered portions of this font into the document, this font does not by itself cause the resulting document to be covered by the GNU General Public License. This exception does not however invalidate any other reasons why the document might be covered by the GNU General Public License. If you modify this font, you may extend this exception to your version of the font, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version." "http://www.gnu.org/copyleft/gpl.html" "" "" "" "" "+4BwA +4APgUuAu4ETgA+BR +4AXgFOAW4FLgEAAA +4AngFuAD4FkA +4AbgFeAB4FDgWAAA +4BbgDeBF4BQA +4BwA +4CLgF+Am4CwA +4ATgFuAH-/The quick brown fox jumps over the lazy dog."
+GaspTable: 2 8 2 65535 3 0
 Encoding: UnicodeFull
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -36
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 57344 16 8
+WinInfo: 57344 16 12
 BeginPrivate: 8
 UniqueID 7 5020945
 BlueValues 31 [-20 0 417 437 563 583 603 623]
@@ -461,14 +464,16 @@ Grid
  -164 530 -155 523 -155 510 c 0
  -155 497 -164 490 -182 490 c 2
 EndSplineSet
-AnchorClass2: "abovegk"  "'mark' Mark Positioning in Greek subtable" "below"  "'mark' Mark Positioning in Latin 1 subtable" "above"  "'mark' Mark Positioning in Latin 2 subtable" 
-BeginChars: 1114167 2389
+AnchorClass2: "mkmkTengwar" "'mkmk' Mark to Mark lookup in Tengwar subtable" "abovetengwar" "'mark' Mark Positioning in Tengwar subtable" "abovegk" "'mark' Mark Positioning in Greek subtable" "below" "'mark' Mark Positioning in Latin 1 subtable" "above" "'mark' Mark Positioning in Latin 2 subtable"
+BeginChars: 1114169 2451
 
 StartChar: space
 Encoding: 32 32 0
 Width: 600
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: exclam
@@ -2506,23 +2511,23 @@ AnchorPoint: "above" 314 431 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-535 88 m 0
- 535 67 445 -16 309 -16 c 0
- 178 -16 84 76 84 204 c 0
- 84 336 180 431 314 431 c 0
- 375 431 429 412 470 376 c 1
- 470 389 l 2
- 470 408 477 417 491 417 c 0
- 504 417 511 408 511 389 c 2
- 511 298 l 2
- 511 280 504 271 491 271 c 0
- 478 271 472 278 470 295 c 0
- 466 348 395 390 311 390 c 0
- 201 390 125 315 125 205 c 0
- 125 100 202 25 311 25 c 0
- 384 25 446 49 498 97 c 0
- 506 105 509 107 516 107 c 0
- 526 107 535 98 535 88 c 0
+535 88 m 4
+ 535 67 445 -16 309 -16 c 4
+ 178 -16 84 76 84 204 c 4
+ 84 336 180 431 314 431 c 4
+ 375 431 429 412 470 376 c 5
+ 470 389 l 6
+ 470 408 477 417 491 417 c 4
+ 504 417 511 408 511 389 c 6
+ 511 298 l 6
+ 511 280 504 271 491 271 c 4
+ 478 271 472 278 470 295 c 4
+ 466 348 395 390 311 390 c 4
+ 201 390 125 315 125 205 c 4
+ 125 100 202 25 311 25 c 4
+ 384 25 446 49 498 97 c 4
+ 506 105 509 107 516 107 c 4
+ 526 107 535 98 535 88 c 4
 EndSplineSet
 Validated: 3073
 EndChar
@@ -2916,16 +2921,16 @@ AnchorPoint: "above" 295 431 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-300 431 m 0
- 428 431 528 332 528 205 c 0
- 528 83 426 -16 300 -16 c 0
- 173 -16 72 83 72 208 c 0
- 72 331 173 431 300 431 c 0
-300 390 m 0
- 196 390 113 309 113 208 c 0
- 113 106 196 25 300 25 c 0
- 403 25 487 106 487 205 c 0
- 487 310 405 390 300 390 c 0
+300 431 m 4
+ 428 431 528 332 528 205 c 4
+ 528 83 426 -16 300 -16 c 4
+ 173 -16 72 83 72 208 c 4
+ 72 331 173 431 300 431 c 4
+300 390 m 4
+ 196 390 113 309 113 208 c 4
+ 113 106 196 25 300 25 c 4
+ 403 25 487 106 487 205 c 4
+ 487 310 405 390 300 390 c 4
 EndSplineSet
 Validated: 3073
 EndChar
@@ -3107,28 +3112,28 @@ AnchorPoint: "above" 291 431 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-439 0 m 1
- 439 66 l 1
- 384 12 323 -16 257 -16 c 0
- 177 -16 124 36 124 115 c 2
- 124 376 l 1
- 70 376 l 2
- 52 376 43 383 43 397 c 0
- 43 410 52 417 70 417 c 2
- 165 417 l 1
- 165 115 l 2
- 165 65 205 25 256 25 c 0
- 323 25 384 55 439 115 c 1
- 439 376 l 1
- 365 376 l 2
- 346 376 337 383 337 397 c 0
- 337 410 346 417 365 417 c 2
- 480 417 l 1
- 480 41 l 1
- 514 41 l 2
- 532 41 541 34 541 21 c 0
- 541 7 532 0 514 0 c 2
- 439 0 l 1
+439 0 m 5
+ 439 66 l 5
+ 384 12 323 -16 257 -16 c 4
+ 177 -16 124 36 124 115 c 6
+ 124 376 l 5
+ 70 376 l 6
+ 52 376 43 383 43 397 c 4
+ 43 410 52 417 70 417 c 6
+ 165 417 l 5
+ 165 115 l 6
+ 165 65 205 25 256 25 c 4
+ 323 25 384 55 439 115 c 5
+ 439 376 l 5
+ 365 376 l 6
+ 346 376 337 383 337 397 c 4
+ 337 410 346 417 365 417 c 6
+ 480 417 l 5
+ 480 41 l 5
+ 514 41 l 6
+ 532 41 541 34 541 21 c 4
+ 541 7 532 0 514 0 c 6
+ 439 0 l 5
 EndSplineSet
 Validated: 3073
 EndChar
@@ -3140,27 +3145,27 @@ Flags: MW
 LayerCount: 2
 Fore
 SplineSet
-336 0 m 1
- 266 0 l 1
- 98 376 l 1
- 57 376 l 2
- 39 376 30 383 30 397 c 0
- 30 410 39 417 57 417 c 2
- 208 417 l 2
- 227 417 236 410 236 397 c 0
- 236 383 227 376 208 376 c 2
- 143 376 l 1
- 293 41 l 1
- 312 41 l 1
- 459 376 l 1
- 391 376 l 2
- 373 376 364 383 364 397 c 0
- 364 410 373 417 391 417 c 2
- 543 417 l 2
- 561 417 570 410 570 397 c 0
- 570 383 561 376 543 376 c 2
- 502 376 l 1
- 336 0 l 1
+336 0 m 5
+ 266 0 l 5
+ 98 376 l 5
+ 57 376 l 6
+ 39 376 30 383 30 397 c 4
+ 30 410 39 417 57 417 c 6
+ 208 417 l 6
+ 227 417 236 410 236 397 c 4
+ 236 383 227 376 208 376 c 6
+ 143 376 l 5
+ 293 41 l 5
+ 312 41 l 5
+ 459 376 l 5
+ 391 376 l 6
+ 373 376 364 383 364 397 c 4
+ 364 410 373 417 391 417 c 6
+ 543 417 l 6
+ 561 417 570 410 570 397 c 4
+ 570 383 561 376 543 376 c 6
+ 502 376 l 5
+ 336 0 l 5
 EndSplineSet
 Validated: 3073
 EndChar
@@ -3904,7 +3909,7 @@ LayerCount: 2
 Fore
 SplineSet
 418 536 m 2
- 182 536 l 2
+ 182 536 l 6
  164 536 155 543 155 556 c 0
  155 569 164 576 182 576 c 2
  418 576 l 2
@@ -12266,22 +12271,22 @@ Flags: MW
 LayerCount: 2
 Fore
 SplineSet
-103 107 m 0
- 134 107 156 25 308 25 c 0
- 417 25 494 100 494 205 c 0
- 494 315 418 390 308 390 c 0
- 224 390 153 348 149 295 c 0
- 147 278 141 271 128 271 c 0
- 115 271 108 280 108 298 c 2
- 108 389 l 2
- 108 408 115 417 128 417 c 0
- 142 417 149 408 149 389 c 2
- 149 376 l 1
- 190 412 244 431 305 431 c 0
- 439 431 535 336 535 204 c 0
- 535 76 441 -16 310 -16 c 0
- 168 -16 84 67 84 88 c 0
- 84 98 93 107 103 107 c 0
+103 107 m 4
+ 134 107 156 25 308 25 c 4
+ 417 25 494 100 494 205 c 4
+ 494 315 418 390 308 390 c 4
+ 224 390 153 348 149 295 c 4
+ 147 278 141 271 128 271 c 4
+ 115 271 108 280 108 298 c 6
+ 108 389 l 6
+ 108 408 115 417 128 417 c 4
+ 142 417 149 408 149 389 c 6
+ 149 376 l 5
+ 190 412 244 431 305 431 c 4
+ 439 431 535 336 535 204 c 4
+ 535 76 441 -16 310 -16 c 4
+ 168 -16 84 67 84 88 c 4
+ 84 98 93 107 103 107 c 4
 EndSplineSet
 Validated: 3073
 EndChar
@@ -15223,6 +15228,8 @@ StartChar: macroncomb
 Encoding: 772 772 604
 Width: 0
 Flags: MW
+AnchorPoint: "mkmkTengwar" -300 450 mark 0
+AnchorPoint: "mkmkTengwar" -300 600 basemark 0
 AnchorPoint: "above" -300 417 mark 0
 LayerCount: 2
 Fore
@@ -15274,7 +15281,9 @@ EndChar
 StartChar: diaeresiscomb
 Encoding: 776 776 608
 Width: 0
-Flags: MW
+Flags: HMW
+AnchorPoint: "mkmkTengwar" -300 600 basemark 0
+AnchorPoint: "mkmkTengwar" -300 450 mark 0
 AnchorPoint: "above" -300 417 mark 0
 LayerCount: 2
 Fore
@@ -36527,6 +36536,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: emquad
@@ -36535,6 +36546,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: enspace
@@ -36543,6 +36556,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: emspace
@@ -36551,6 +36566,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: thinspace
@@ -36559,6 +36576,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: notsubset
@@ -41054,6 +41073,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2005
@@ -41062,6 +41083,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2006
@@ -41070,6 +41093,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2007
@@ -41078,6 +41103,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2008
@@ -41086,6 +41113,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni200A
@@ -41094,6 +41123,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni200B
@@ -41102,6 +41133,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: zwnj
@@ -41110,6 +41143,8 @@ Width: 0
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: zwj
@@ -41118,6 +41153,8 @@ Width: 0
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: afii300
@@ -41126,6 +41163,8 @@ Width: 0
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: afii299
@@ -41134,6 +41173,8 @@ Width: 0
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2028
@@ -41142,6 +41183,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2029
@@ -41150,6 +41193,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni202A
@@ -41158,6 +41203,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni202B
@@ -41166,6 +41213,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: afii61573
@@ -41174,6 +41223,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: afii61574
@@ -41182,6 +41233,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: afii61575
@@ -41190,6 +41243,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni202F
@@ -41198,6 +41253,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2042
@@ -41572,6 +41629,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni20B0
@@ -41769,6 +41828,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2061
@@ -41777,6 +41838,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2062
@@ -41785,6 +41848,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2063
@@ -41793,6 +41858,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni206B
@@ -41801,6 +41868,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni206C
@@ -41809,6 +41878,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni206D
@@ -41817,6 +41888,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni206E
@@ -41825,6 +41898,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni206F
@@ -41833,6 +41908,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2038
@@ -42006,6 +42083,8 @@ Width: 600
 VWidth: 0
 Flags: MW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uni2A05
@@ -45198,6 +45277,8 @@ Width: 600
 VWidth: 0
 Flags: HMW
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: blank
@@ -52808,9 +52889,11 @@ EndChar
 StartChar: tinco
 Encoding: 57344 57344 2217
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 298.23 335 376> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -52841,9 +52924,11 @@ EndChar
 StartChar: parma
 Encoding: 57345 57345 2218
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 42 298.23 335 376> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -52879,15 +52964,17 @@ EndChar
 StartChar: calma
 Encoding: 57346 57346 2219
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 376.251 416.75> 461 41<-146 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 461 -187 m 1xea
  461 89 l 1
- 414 19 354 -16 279 -16 c 0
+ 414 19 354 -16 279 -16 c 4
  160 -16 63 85 63 208 c 0
  63 331 160 431 279 431 c 0
  297 431 306 424 306 411 c 0
@@ -52912,9 +52999,11 @@ EndChar
 StartChar: quesse
 Encoding: 57347 57347 2220
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<119.447 287.313> 461 41<-146 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -52938,7 +53027,7 @@ SplineSet
  583 -180 574 -187 556 -187 c 2
  461 -187 l 1
  461 89 l 1
- 414 19 354 -16 279 -16 c 0
+ 414 19 354 -16 279 -16 c 4
  160 -16 63 78 63 201 c 0
  63 274 88 332 159 376 c 1
 EndSplineSet
@@ -52949,19 +53038,21 @@ StartChar: ando
 Encoding: 57348 57348 2221
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-125 306 m 5xd7
- 125 -190 l 5xd7
- 49 -190 l 6
- 31 -190 22 -183 22 -170 c 4xdb
- 22 -156 31 -149 49 -149 c 6
- 84 -149 l 5
- 84 376 l 5xe7
+125 306 m 1xd7
+ 125 -190 l 1xd7
+ 49 -190 l 2
+ 31 -190 22 -183 22 -170 c 0xdb
+ 22 -156 31 -149 49 -149 c 2
+ 84 -149 l 1
+ 84 376 l 1xe7
  49 376 l 2
  31 376 22 383 22 396 c 0xeb
  22 410 31 417 49 417 c 2
@@ -52971,7 +53062,7 @@ SplineSet
  261 431 290 405 311 360 c 1
  347 405 387 431 425 431 c 0
  510 431 543 306 543 194 c 0
- 543 20 476 -15 442 -15 c 0
+ 543 20 476 -15 442 -15 c 4
  424 -15 415 -8 415 6 c 0
  415 18 423 26 439 26 c 0
  440 26 441 26 442 26 c 0
@@ -52987,7 +53078,7 @@ SplineSet
  234 26 234 26 235 26 c 0
  251 26 294 68 294 194 c 0
  294 300 257 389 219 389 c 0
- 186 389 162 361 125 306 c 5xd7
+ 186 389 162 361 125 306 c 1xd7
 EndSplineSet
 Validated: 3073
 EndChar
@@ -52996,26 +53087,28 @@ StartChar: anga
 Encoding: 57350 57350 2222
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 376.25 416.749> 475 41<-149 40 80.9167 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 475 -190 m 1xed
  475 40 l 1
  440 3 417 -16 382 -16 c 0
- 339 -16 310 10 289 55 c 5
- 253 10 213 -16 175 -16 c 4
- 90 -16 57 109 57 221 c 4
+ 339 -16 310 10 289 55 c 1
+ 253 10 213 -16 175 -16 c 0
+ 90 -16 57 109 57 221 c 0
  57 395 124 430 158 430 c 4
- 176 430 185 423 185 409 c 4
- 185 397 177 389 161 389 c 4
- 160 389 159 389 158 389 c 4
- 158 389 158 389 157 389 c 4
- 141 389 98 347 98 221 c 4
- 98 115 135 26 173 26 c 4
- 207 26 242 54 277 109 c 5
+ 176 430 185 423 185 409 c 0
+ 185 397 177 389 161 389 c 0
+ 160 389 159 389 158 389 c 0
+ 158 389 158 389 157 389 c 0
+ 141 389 98 347 98 221 c 0
+ 98 115 135 26 173 26 c 0
+ 207 26 242 54 277 109 c 1
  271 124 265 158 265 221 c 0
  265 395 332 430 366 430 c 0
  384 430 393 423 393 409 c 0
@@ -53043,9 +53136,11 @@ StartChar: umbar
 Encoding: 57349 57349 2223
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 0 41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53066,7 +53161,7 @@ SplineSet
  22 410 31 417 49 417 c 2
  125 417 l 17xe7
  125 375 l 1
- 160 412 183 431 218 431 c 0
+ 160 412 183 431 218 431 c 4
  261 431 290 405 311 360 c 1
  347 405 387 431 425 431 c 0
  510 431 543 306 543 194 c 0
@@ -53091,29 +53186,31 @@ StartChar: ungwe
 Encoding: 57351 57351 2224
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<516 577.993> -13 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
 VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<-189.749 -149.25> 475 41<-149 43 83.9167 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 475 376 m 1xfa
  343 376 l 1
- 325 355 306 309 306 224 c 0
- 306 118 343 29 381 29 c 0
- 414 29 438 57 475 112 c 1
+ 325 355 306 307 306 222 c 4
+ 306 116 343 27 381 27 c 4
+ 414 27 438 55 475 110 c 5
  475 376 l 1xfa
 475 -190 m 17
- 475 43 l 1xfa
- 440 6 417 -13 382 -13 c 0
- 339 -13 310 13 289 58 c 1
- 253 13 213 -13 175 -13 c 4
- 90 -13 57 112 57 224 c 4
- 57 297 69 344 85 376 c 13
- 66 376 l 22
- 48 376 39 383 39 396 c 4
- 39 410 48 417 66 417 c 6
- 551 417 l 6
+ 475 41 l 5xfa
+ 440 4 417 -15 382 -15 c 4
+ 339 -15 310 11 289 56 c 5
+ 253 11 213 -15 175 -15 c 4
+ 90 -15 57 110 57 222 c 4
+ 57 295 69 344 85 376 c 9
+ 66 376 l 18
+ 48 376 39 383 39 396 c 0
+ 39 410 48 417 66 417 c 2
+ 551 417 l 2
  569 417 578 410 578 397 c 0xfc
  578 383 569 376 551 376 c 2
  516 376 l 1
@@ -53122,13 +53219,13 @@ SplineSet
  569 -149 578 -156 578 -169 c 0xfc
  578 -183 569 -190 551 -190 c 2
  475 -190 l 17
-293 376 m 5
- 135 376 l 5
- 117 355 98 309 98 224 c 4
- 98 118 135 29 173 29 c 4
- 207 29 242 57 277 112 c 1
- 271 127 265 161 265 224 c 0
- 265 297 277 344 293 376 c 5
+293 376 m 1
+ 135 376 l 1
+ 117 355 98 307 98 222 c 4
+ 98 116 135 27 173 27 c 4
+ 207 27 242 55 277 110 c 5
+ 271 125 265 159 265 222 c 4
+ 265 295 277 344 293 376 c 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -53136,9 +53233,11 @@ EndChar
 StartChar: suule
 Encoding: 57352 57352 2225
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 390 41<237.682 399.871> 562 41<22.0066 103>
 VStem: 22 122<0.251221 40.7501 562.251 602.75> 103 41<41 298.23 335 562> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53169,9 +53268,11 @@ EndChar
 StartChar: formen
 Encoding: 57353 57353 2226
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 390 41<237.682 406.229> 562 41<22.0066 103>
 VStem: 103 41<41 298.23 335 562> 500 41<135.375 298.785>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53205,9 +53306,11 @@ EndChar
 StartChar: aha
 Encoding: 57354 57354 2227
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53238,9 +53341,11 @@ EndChar
 StartChar: hwesta
 Encoding: 57355 57355 2228
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<119.447 287.313> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 376 417 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53277,9 +53382,11 @@ StartChar: anto
 Encoding: 57356 57356 2229
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<0.249912 40.7488 567.25 607.749> 84 41<41 334.083 375 567> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53324,9 +53431,11 @@ StartChar: ampa
 Encoding: 57357 57357 2230
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<567.25 607.749> 84 41<41 334.083 375 567> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53370,9 +53479,11 @@ StartChar: anca
 Encoding: 57358 57358 2231
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 389 41<131.997 184.993 339.997 392.993> 567 41<516 577.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249939 39.9951 567.25 607.749> 475 41<80.9167 567>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53417,17 +53528,19 @@ StartChar: unque
 Encoding: 57359 57359 2232
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -13 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475> 567 41<516 577.993>
 VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<0.251221 40.7501 567.251 607.75> 475 41<41 43 83.9167 376 417 567>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 475 376 m 1xbd
  343 376 l 1
- 325 355 306 309 306 224 c 0
- 306 118 343 29 381 29 c 0
- 414 29 438 57 475 112 c 1
+ 325 355 306 307 306 222 c 0
+ 306 116 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
  475 376 l 1xbd
 475 608 m 1
  551 608 l 2
@@ -53439,12 +53552,12 @@ SplineSet
  569 41 578 34 578 21 c 0x7e
  578 7 569 0 551 0 c 2
  475 0 l 17x7d
- 475 43 l 1
- 440 6 417 -13 382 -13 c 0
- 339 -13 310 13 289 58 c 1
- 253 13 213 -13 175 -13 c 0
- 90 -13 57 112 57 224 c 0
- 57 297 69 344 85 376 c 9
+ 475 41 l 1
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 11 289 56 c 1
+ 253 11 213 -15 175 -15 c 0
+ 90 -15 57 110 57 222 c 0
+ 57 295 69 344 85 376 c 9
  66 376 l 18
  48 376 39 383 39 396 c 0
  39 410 48 417 66 417 c 2
@@ -53452,11 +53565,11 @@ SplineSet
  475 608 l 1
 293 376 m 1
  135 376 l 1
- 117 355 98 309 98 224 c 0
- 98 118 135 29 173 29 c 0
- 207 29 242 57 277 112 c 1
- 271 127 265 161 265 224 c 0
- 265 297 277 344 293 376 c 1
+ 117 355 98 307 98 222 c 0
+ 98 116 135 27 173 27 c 0
+ 207 27 242 55 277 110 c 1
+ 271 125 265 159 265 222 c 0
+ 265 295 277 344 293 376 c 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -53465,9 +53578,11 @@ StartChar: nuumen
 Encoding: 57360 57360 2233
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<0.249912 40.7488 376.25 416.749> 84 41<41 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53512,9 +53627,11 @@ StartChar: malta
 Encoding: 57361 57361 2234
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53558,9 +53675,11 @@ StartChar: noldo
 Encoding: 57362 57362 2235
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249908 39.9951 376.25 416.749> 475 41<80.9167 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53605,17 +53724,19 @@ StartChar: nwalme
 Encoding: 57363 57363 2236
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -13 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
 VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<0.251221 40.7501> 475 41<41 43 83.9167 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 475 376 m 1xba
  343 376 l 1
- 325 355 306 309 306 224 c 0
- 306 118 343 29 381 29 c 0
- 414 29 438 57 475 112 c 1
+ 325 355 306 307 306 222 c 4
+ 306 116 343 27 381 27 c 4
+ 414 27 438 55 475 110 c 5
  475 376 l 1xba
 551 417 m 2
  569 417 578 410 578 397 c 0xbc
@@ -53626,23 +53747,23 @@ SplineSet
  569 41 578 34 578 21 c 0x7c
  578 7 569 0 551 0 c 2
  475 0 l 17x7a
- 475 43 l 1
- 440 6 417 -13 382 -13 c 0
- 339 -13 310 13 289 58 c 1
- 253 13 213 -13 175 -13 c 0
- 90 -13 57 112 57 224 c 0
- 57 297 69 344 85 376 c 9
+ 475 41 l 5
+ 440 4 417 -15 382 -15 c 4
+ 339 -15 310 11 289 56 c 5
+ 253 11 213 -15 175 -15 c 4
+ 90 -15 57 110 57 222 c 4
+ 57 295 69 344 85 376 c 9
  66 376 l 18
  48 376 39 383 39 396 c 0
  39 410 48 417 66 417 c 2
  551 417 l 2
 293 376 m 1
  135 376 l 1
- 117 355 98 309 98 224 c 0
- 98 118 135 29 173 29 c 0
- 207 29 242 57 277 112 c 1
- 271 127 265 161 265 224 c 0
- 265 297 277 344 293 376 c 1
+ 117 355 98 307 98 222 c 4
+ 98 116 135 27 173 27 c 4
+ 207 27 242 55 277 110 c 5
+ 271 125 265 159 265 222 c 4
+ 265 295 277 344 293 376 c 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -53650,9 +53771,11 @@ EndChar
 StartChar: oore
 Encoding: 57364 57364 2237
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<0.251221 40.7501 376.251 416.75> 103 41<41 298.23 335 376> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53683,9 +53806,11 @@ EndChar
 StartChar: vala
 Encoding: 57365 57365 2238
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 103 41<41 298.23 335 376> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53719,9 +53844,11 @@ EndChar
 StartChar: anna
 Encoding: 57366 57366 2239
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 376.251 416.75> 461 41<41 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53752,35 +53879,37 @@ EndChar
 StartChar: vilya
 Encoding: 57367 57367 2240
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<119.447 287.313> 461 41<41 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-271 376 m 4xb8
- 172 376 104 302 104 201 c 4
- 104 99 183 25 283 25 c 4
- 381 25 461 106 461 206 c 4
- 461 376 l 5
- 271 376 l 4xb8
-159 376 m 5
- 90 376 l 6
- 72 376 63 383 63 397 c 4
- 63 410 72 417 90 417 c 6
- 556 417 l 6
- 574 417 583 410 583 397 c 4
- 583 383 574 376 556 376 c 6
- 502 376 l 5
- 502 41 l 5
- 556 41 l 6
- 574 41 583 34 583 21 c 4
- 583 7 574 0 556 0 c 6
- 461 0 l 5x78
- 461 89 l 5
- 414 19 354 -16 279 -16 c 4
- 160 -16 63 78 63 201 c 4
- 63 274 88 332 159 376 c 5
+271 376 m 0xb8
+ 172 376 104 302 104 201 c 0
+ 104 99 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 376 l 1
+ 271 376 l 0xb8
+159 376 m 1
+ 90 376 l 2
+ 72 376 63 383 63 397 c 0
+ 63 410 72 417 90 417 c 2
+ 556 417 l 2
+ 574 417 583 410 583 397 c 0
+ 583 383 574 376 556 376 c 2
+ 502 376 l 1
+ 502 41 l 1
+ 556 41 l 2
+ 574 41 583 34 583 21 c 0
+ 583 7 574 0 556 0 c 2
+ 461 0 l 1x78
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 78 63 201 c 0
+ 63 274 88 332 159 376 c 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -53788,9 +53917,11 @@ EndChar
 StartChar: tincoX
 Encoding: 57368 57368 2241
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 390 41<237.682 399.871> 563 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 298.23 335 563> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53821,37 +53952,39 @@ EndChar
 StartChar: parmaX
 Encoding: 57369 57369 2242
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 390 41<237.682 406.229> 563 41<33.0066 103>
 VStem: 103 41<-145 0 42 298.23 335 563> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-144 42 m 5
- 330 42 l 4
- 424 42 500 121 500 220 c 4
- 500 316 423 390 322 390 c 4
- 223 390 144 315 144 221 c 4
- 144 42 l 5
-49 -186 m 6
- 31 -186 22 -179 22 -165 c 4
- 22 -152 31 -145 49 -145 c 6
- 103 -145 l 5
- 103 563 l 5
- 60 563 l 6
- 42 563 33 570 33 584 c 4
- 33 597 42 604 60 604 c 6
- 144 604 l 5
- 144 335 l 5
- 197 404 247 431 323 431 c 4
- 447 431 541 340 541 221 c 4
- 541 145 513 94 444 41 c 5
- 514 41 l 6
- 532 41 541 34 541 21 c 4
- 541 7 532 0 514 0 c 6
- 144 0 l 21
- 144 -186 l 5
- 49 -186 l 6
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 121 500 220 c 0
+ 500 316 423 390 322 390 c 0
+ 223 390 144 315 144 221 c 0
+ 144 42 l 1
+49 -186 m 2
+ 31 -186 22 -179 22 -165 c 0
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 563 l 1
+ 49 563 l 6
+ 31 563 22 570 22 584 c 4
+ 22 597 31 604 49 604 c 6
+ 144 604 l 1
+ 144 335 l 1
+ 197 404 247 431 323 431 c 0
+ 447 431 541 340 541 221 c 0
+ 541 145 513 94 444 41 c 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 144 0 l 17
+ 144 -186 l 1
+ 49 -186 l 2
 EndSplineSet
 Validated: 3073
 EndChar
@@ -53859,9 +53992,11 @@ EndChar
 StartChar: calmaX
 Encoding: 57370 57370 2243
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53892,9 +54027,11 @@ EndChar
 StartChar: quesseX
 Encoding: 57371 57371 2244
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<119.447 287.313> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 376 417 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53931,9 +54068,11 @@ StartChar: andoX
 Encoding: 57372 57372 2245
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 334.083 375 563> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -53978,9 +54117,11 @@ StartChar: umbarX
 Encoding: 57373 57373 2246
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 0 41 334.083 375 563> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54026,9 +54167,11 @@ StartChar: angaX
 Encoding: 57374 57374 2247
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 389 41<131.997 184.993 339.997 392.993> 563 41<516 577.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 563.25 603.749> 475 41<-149 40 80.9167 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54073,17 +54216,19 @@ StartChar: ungweX
 Encoding: 57375 57375 2248
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -190 41<516 577.993> -13 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475> 563 41<516 577.993>
 VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<-189.749 -149.25 563.251 603.75> 475 41<-149 43 83.9167 376 417 563>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
 475 376 m 1xfd
  343 376 l 1
- 325 355 306 309 306 224 c 0
- 306 118 343 29 381 29 c 0
- 414 29 438 57 475 112 c 1
+ 325 355 306 307 306 222 c 0
+ 306 116 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
  475 376 l 1xfd
 475 604 m 1
  551 604 l 2
@@ -54095,12 +54240,12 @@ SplineSet
  569 -149 578 -156 578 -169 c 0xfe
  578 -183 569 -190 551 -190 c 2
  475 -190 l 17
- 475 43 l 1
- 440 6 417 -13 382 -13 c 0
- 339 -13 310 13 289 58 c 1
- 253 13 213 -13 175 -13 c 0
- 90 -13 57 112 57 224 c 0
- 57 297 69 344 85 376 c 9
+ 475 41 l 1
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 11 289 56 c 1
+ 253 11 213 -15 175 -15 c 0
+ 90 -15 57 110 57 222 c 0
+ 57 295 69 344 85 376 c 9
  66 376 l 18
  48 376 39 383 39 396 c 0
  39 410 48 417 66 417 c 2
@@ -54108,11 +54253,11 @@ SplineSet
  475 604 l 1
 293 376 m 1
  135 376 l 1
- 117 355 98 309 98 224 c 0
- 98 118 135 29 173 29 c 0
- 207 29 242 57 277 112 c 1
- 271 127 265 161 265 224 c 0
- 265 297 277 344 293 376 c 1
+ 117 355 98 307 98 222 c 0
+ 98 116 135 27 173 27 c 0
+ 207 27 242 55 277 110 c 1
+ 271 125 265 159 265 222 c 0
+ 265 295 277 344 293 376 c 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -54120,36 +54265,40 @@ EndChar
 StartChar: shortCarrier
 Encoding: 57390 57390 2249
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
-Refer: 240 305 N 1 0 0 1 0 0 2
+Refer: 240 305 S 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
 StartChar: halla
 Encoding: 57389 57389 2250
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<92.0066 279 320 507.993> 487 41<135.007 279>
 VStem: 279 41<41 487>
+AnchorPoint: "abovetengwar" 300 565 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-320 528 m 5
- 320 41 l 5
- 480 41 l 6
- 499 41 508 34 508 21 c 4
- 508 7 498 0 480 0 c 6
- 119 0 l 6
- 101 0 92 7 92 21 c 4
- 92 34 101 41 119 41 c 6
- 279 41 l 5
- 279 487 l 5
- 162 487 l 6
- 144 487 135 494 135 508 c 4
- 135 521 144 528 162 528 c 6
- 320 528 l 5
+320 528 m 1
+ 320 41 l 1
+ 480 41 l 2
+ 499 41 508 34 508 21 c 0
+ 508 7 498 0 480 0 c 2
+ 119 0 l 2
+ 101 0 92 7 92 21 c 0
+ 92 34 101 41 119 41 c 2
+ 279 41 l 1
+ 279 487 l 1
+ 162 487 l 2
+ 144 487 135 494 135 508 c 0
+ 135 521 144 528 162 528 c 2
+ 320 528 l 1
 EndSplineSet
 Validated: 3073
 EndChar
@@ -54157,7 +54306,9 @@ EndChar
 StartChar: longCarrier
 Encoding: 57388 57388 2251
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 1602 567 N 1 0 0 1 0 0 2
@@ -54167,7 +54318,9 @@ EndChar
 StartChar: uure
 Encoding: 57387 57387 2252
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 79 111 N 1 0 0 1 0 0 2
@@ -54177,7 +54330,9 @@ EndChar
 StartChar: yanta
 Encoding: 57386 57386 2253
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 86 118 N -1 0 0 -1 600 417 0
@@ -54187,9 +54342,11 @@ EndChar
 StartChar: hyarmen
 Encoding: 57384 57384 2254
 Width: 599
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
 VStem: 135 42<333.033 351>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54227,9 +54384,11 @@ EndChar
 StartChar: esseN
 Encoding: 57383 57383 2255
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 390 41<204.797 388.621> 397 20G<137.5 150.5>
 VStem: 124 41<293.007 354.67 385 416.992> 428 45<277.353 357.759> 454 40<69.5876 176.823>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54269,9 +54428,11 @@ StartChar: lambeN
 Encoding: 57393 57393 2256
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -88 41<93.0066 270.561 310 532.995> 389 42<205.168 386.395>
 VStem: 488 41<119.038 287.216>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 2276 57378 N -1 0 0 -1 604 329 2
@@ -54281,10 +54442,14 @@ EndChar
 StartChar: tehtaA
 Encoding: 57408 57408 2257
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 563 80<-415.607 -344.846 -255.607 -184.846> 673 80<-335.607 -264.846>
 VStem: -420 80<567.393 638.581> -340 80<677.393 748.581> -260 80<567.393 638.581>
 CounterMasks: 1 38
+AnchorPoint: "mkmkTengwar" -300 773 basemark 0
+AnchorPoint: "mkmkTengwar" -300 564 mark 0
+AnchorPoint: "abovetengwar" -300 564 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54311,6 +54476,7 @@ StartChar: tehtaAB
 Encoding: 57409 57409 2258
 Width: 0
 VWidth: 200
+GlyphClass: 4
 Flags: W
 HStem: -330 80<-335.607 -264.846> -220 80<-415.607 -344.846 -255.607 -184.846>
 VStem: -420 80<-215.607 -144.419> -340 80<-325.607 -254.419> -260 80<-215.607 -144.419>
@@ -54340,17 +54506,25 @@ EndChar
 StartChar: tehtaGrave
 Encoding: 57428 57428 2259
 Width: 0
+GlyphClass: 4
 Flags: HW
+AnchorPoint: "mkmkTengwar" -300 542 mark 0
+AnchorPoint: "mkmkTengwar" -300 712 basemark 0
+AnchorPoint: "abovetengwar" -300 542 mark 0
 LayerCount: 2
 Fore
-Refer: 64 96 N 1 0 0 1 -532 52 0
+Refer: 64 96 S 1 0 0 1 -532 52 0
 Validated: 32769
 EndChar
 
 StartChar: tehtaE
 Encoding: 57414 57414 2260
 Width: 0
+GlyphClass: 4
 Flags: HW
+AnchorPoint: "mkmkTengwar" -300 551 mark 0
+AnchorPoint: "mkmkTengwar" -300 719 basemark 0
+AnchorPoint: "abovetengwar" -300 551 mark 0
 LayerCount: 2
 Fore
 Refer: 115 180 N 1 0 0 1 -657 60 2
@@ -54360,9 +54534,13 @@ EndChar
 StartChar: tehtaBreve
 Encoding: 57427 57427 2261
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 552 41<-360.874 -235.319>
 VStem: -423 41<614.576 681.993> -214 41<614.576 681.993>
+AnchorPoint: "abovetengwar" -298 553 mark 0
+AnchorPoint: "mkmkTengwar" -298 553 mark 0
+AnchorPoint: "mkmkTengwar" -298 702 basemark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54382,9 +54560,13 @@ EndChar
 StartChar: tehtaI
 Encoding: 57412 57412 2262
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 563 80<-335.607 -264.846>
 VStem: -340 80<567.393 638.581>
+AnchorPoint: "mkmkTengwar" -300 564 mark 0
+AnchorPoint: "mkmkTengwar" -300 663 basemark 0
+AnchorPoint: "abovetengwar" -300 564 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54400,9 +54582,13 @@ EndChar
 StartChar: tehtaY
 Encoding: 57410 57410 2263
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 563 80<-415.607 -344.846 -255.607 -184.846>
 VStem: -420 80<567.393 638.581> -260 80<567.393 638.581>
+AnchorPoint: "mkmkTengwar" -300 564 mark 0
+AnchorPoint: "mkmkTengwar" -300 663 basemark 0
+AnchorPoint: "abovetengwar" -300 564 mark 0
 LayerCount: 2
 Back
 Refer: 608 776 N 1 0 0 1 0 0 2
@@ -54421,29 +54607,36 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaI
-LCarets2: 1 0 
 EndChar
 
 StartChar: tehtaEE
 Encoding: 57416 57416 2264
 Width: 0
+GlyphClass: 4
 Flags: HW
+AnchorPoint: "abovetengwar" -300 551 mark 0
+AnchorPoint: "mkmkTengwar" -300 719 basemark 0
+AnchorPoint: "mkmkTengwar" -300 551 mark 0
 LayerCount: 2
 Fore
 Refer: 597 733 N 1 0 0 1 -600 60 0
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaAE
 Encoding: 57430 57430 2265
 Width: 0
 VWidth: 200
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 547 80<-335.154 -264.846> 657 80<-415.154 -344.846 -255.154 -184.846>
 VStem: -420 80<661.393 732.395> -340 80<551.393 622.395> -260 80<661.393 732.395>
 CounterMasks: 1 38
+AnchorPoint: "mkmkTengwar" -300 548 mark 0
+AnchorPoint: "mkmkTengwar" -300 757 basemark 0
+AnchorPoint: "abovetengwar" -300 548 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54470,6 +54663,7 @@ StartChar: tehtaEB
 Encoding: 57415 57415 2266
 Width: 0
 VWidth: 200
+GlyphClass: 4
 Flags: HW
 LayerCount: 2
 Fore
@@ -54480,6 +54674,7 @@ EndChar
 StartChar: tehtaIB
 Encoding: 57413 57413 2267
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: -220 80<-335.607 -264.846>
 VStem: -340 80<-215.607 -144.419>
@@ -54499,6 +54694,7 @@ StartChar: tehtaYB
 Encoding: 57411 57411 2268
 Width: 0
 VWidth: 200
+GlyphClass: 4
 Flags: W
 HStem: -220 80<-415.607 -344.846 -255.607 -184.846>
 VStem: -420 80<-215.607 -144.419> -260 80<-215.607 -144.419>
@@ -54518,13 +54714,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaIB tehtaIB
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaThinnas
 Encoding: 57431 57431 2269
 Width: 0
 VWidth: 0
+GlyphClass: 4
 Flags: W
 HStem: -238 168<-322.929 -283.071>
 VStem: -323 40<-237.991 -70.0087>
@@ -54540,16 +54737,20 @@ SplineSet
  -289 -70 -283 -82 -283 -94 c 2
 EndSplineSet
 Validated: 3073
-LCarets2: 1 0 
+LCarets2: 1 0
 Ligature2: "'liga' tengwar ligatures subtable" zwj longCarrier
 EndChar
 
 StartChar: tehtaO
 Encoding: 57418 57418 2270
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 581 21G<-220 -208> 654 41<-332.469 -247.242>
 VStem: -236 40<581.04 641.699>
+AnchorPoint: "abovetengwar" -300 530 mark 0
+AnchorPoint: "mkmkTengwar" -300 715 basemark 0
+AnchorPoint: "mkmkTengwar" -300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54572,9 +54773,13 @@ EndChar
 StartChar: tehtaU
 Encoding: 57420 57420 2271
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 699 41<-348.164 -263.727>
 VStem: -254 42<597.496 689.389>
+AnchorPoint: "mkmkTengwar" -300 530 mark 0
+AnchorPoint: "mkmkTengwar" -300 760 basemark 0
+AnchorPoint: "abovetengwar" -300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54599,6 +54804,7 @@ EndChar
 StartChar: tehtaOB
 Encoding: 57419 57419 2272
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: -301 41<-345.976 -261.602>
 VStem: -398 43<-252.196 -156.42>
@@ -54626,6 +54832,7 @@ EndChar
 StartChar: tehtaUB
 Encoding: 57421 57421 2273
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: -267 41<-338.657 -254.529>
 VStem: -391 40<-213.699 -153.04>
@@ -54651,7 +54858,11 @@ EndChar
 StartChar: tehtaN
 Encoding: 57424 57424 2274
 Width: 0
+GlyphClass: 4
 Flags: HW
+AnchorPoint: "mkmkTengwar" -300 572 basemark 0
+AnchorPoint: "mkmkTengwar" -300 490 mark 0
+AnchorPoint: "abovetengwar" -300 490 mark 0
 LayerCount: 2
 Fore
 Refer: 110 175 N 1 0 0 1 -600 -46 0
@@ -54661,9 +54872,11 @@ EndChar
 StartChar: roomen
 Encoding: 57376 57376 2275
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -193 41<120.487 195.99> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
 VStem: 63 41<-135.337 -7.25638> 497 41<247.818 357.492>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54696,9 +54909,11 @@ StartChar: lambe
 Encoding: 57378 57378 2276
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -102 42<217.605 398.832> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54726,9 +54941,11 @@ EndChar
 StartChar: silme
 Encoding: 57380 57380 2277
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<215.321 384.322> 205 41<406.007 487> 492 38<435 444.988>
 VStem: 73 40<126.795 280.847> 487 41<126.27 205>
+AnchorPoint: "abovetengwar" 260 535 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54756,9 +54973,11 @@ EndChar
 StartChar: hwestaS
 Encoding: 57385 57385 2278
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<201.008 366.542 400 542> 390 41<200.29 365.006> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 41<119.938 290.814 327 563> 542 41<-96.9934 -16>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54791,29 +55010,35 @@ EndChar
 StartChar: osse
 Encoding: 57394 57394 2279
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
-Refer: 67 99 S 1 0 0 1 0 0 2
+Refer: 67 99 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
 StartChar: annaX
 Encoding: 57398 57398 2280
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
-Refer: 85 117 S 1 0 0 1 0 0 2
+Refer: 85 117 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
 StartChar: roomenN
 Encoding: 57401 57401 2281
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -13 41<134.854 214.99> -1 41<368.007 445 494 536.993> 568 41<404.01 479.513>
 VStem: 62 41<58.5079 168.182> 496 41<423.256 551.337>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 2275 57376 N -1 0 0 -1 600 416 2
@@ -54823,9 +55048,11 @@ EndChar
 StartChar: esse
 Encoding: 57382 57382 2282
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -17 41<229.379 413.203> -3 21G<467.5 480.5>
 VStem: 124 40<237.177 341.241> 145 45<56.2409 136.647> 453 41<-2.99196 29 59.3304 120.993>
+AnchorPoint: "abovetengwar" 260 535 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54864,9 +55091,11 @@ EndChar
 StartChar: arda
 Encoding: 57377 57377 2283
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -193 41<127.984 215.99> 133 42<63.0058 83> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
 VStem: 63 41<-129.644 -7.25638> 497 41<247.818 357.492>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54905,9 +55134,11 @@ StartChar: alda
 Encoding: 57379 57379 2284
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -102 41<201.113 420.28> 376 41<71.0051 189 223.782 510.993>
 VStem: 100 41<-5.76546 87.9884> 164 41<256.029 358.725> 483 41<-4.26595 126.371>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54936,9 +55167,11 @@ EndChar
 StartChar: silmeN
 Encoding: 57381 57381 2285
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -110 38<155.012 165> 169 41<113 193.993> 390 41<215.678 384.679>
 VStem: 72 41<210 288.73> 487 40<133.884 288.205>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54966,9 +55199,11 @@ EndChar
 StartChar: vaiya
 Encoding: 57405 57405 2286
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<201.008 366.542 400 542> 390 41<199.502 356.395>
 VStem: 63 41<125.218 290.386> 461 41<120.986 286.66> 542 41<-96.9934 -16>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -54995,9 +55230,11 @@ EndChar
 StartChar: hallaRoomen
 Encoding: 57404 57404 2287
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -193 41<120.487 195.99> 388 41<385.01 467.791> 487 41<63.0066 148>
 VStem: 63 41<-135.337 -7.81445> 148 41<96 487> 497 41<247.947 358.651>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55026,33 +55263,21 @@ EndChar
 StartChar: carrierX
 Encoding: 57396 57396 2288
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<320 507.993> 376 41<134.007 279 320 721.993>
 VStem: 279 41<41 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
-SplineSet
-694 376 m 2
- 320 376 l 1
- 320 41 l 1
- 480 41 l 2
- 499 41 508 34 508 21 c 0
- 508 7 498 0 480 0 c 2
- 279 0 l 1
- 279 376 l 1
- 161 376 l 2
- 143 376 134 383 134 397 c 0
- 134 410 143 417 161 417 c 2
- 694 417 l 2
- 713 417 722 410 722 397 c 0
- 722 383 712 376 694 376 c 2
-EndSplineSet
-Validated: 3073
+Refer: 240 305 N 1 0 0 1 0 0 2
+Validated: 32769
 EndChar
 
 StartChar: tengwarPusta
 Encoding: 57440 57440 2289
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55063,6 +55288,7 @@ EndChar
 StartChar: tengwarDoublepusta
 Encoding: 57441 57441 2290
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55074,6 +55300,7 @@ EndChar
 StartChar: tengwarTriplepusta
 Encoding: 57442 57442 2291
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -6 100<259.396 340.604> 180 100<259.396 340.604> 360 100<259.396 340.604>
 VStem: 250 100<3.39608 84.5443 189.396 270.544 369.396 450.544>
@@ -55102,6 +55329,7 @@ EndChar
 StartChar: tengwarQuadruplepusta
 Encoding: 57443 57443 2292
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55115,6 +55343,7 @@ EndChar
 StartChar: tengwarQuintuplepusta
 Encoding: 57444 57444 2293
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55129,6 +55358,7 @@ EndChar
 StartChar: tengwarExclamation
 Encoding: 57445 57445 2294
 Width: 600
+GlyphClass: 2
 Flags: W
 VStem: 232 41<291.007 383.292> 327 41<120.566 206.513>
 LayerCount: 2
@@ -55150,6 +55380,7 @@ EndChar
 StartChar: tengwarQuestion
 Encoding: 57446 57446 2295
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: 85 41<243 327.937> 246 41<243 312.371> 402 41<242 327.632> 584 20G<215.5 228.5>
 VStem: 202 40<-123.993 85 126 246 287 402 443 603.993> 361 41<152.791 207.931 323.147 373.638>
@@ -55183,6 +55414,7 @@ EndChar
 StartChar: tengwarParanthesis
 Encoding: 57447 57447 2296
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55193,6 +55425,7 @@ EndChar
 StartChar: tengwarSection
 Encoding: 57448 57448 2297
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: 212 41<344.487 430.434> 307 41<167.708 259.993>
 LayerCount: 2
@@ -55214,6 +55447,7 @@ EndChar
 StartChar: tengwarDoublesection
 Encoding: 57449 57449 2298
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -55224,6 +55458,7 @@ EndChar
 StartChar: tehtaB
 Encoding: 57425 57425 2299
 Width: 0
+GlyphClass: 4
 Flags: HW
 LayerCount: 2
 Fore
@@ -55234,7 +55469,9 @@ EndChar
 StartChar: tengwardigit0
 Encoding: 57456 57456 2300
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 499 596 N 1 0 0 1 0 0 2
@@ -55244,9 +55481,11 @@ EndChar
 StartChar: tengwardigit1
 Encoding: 57457 57457 2301
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -17 41<274.02 389.865> 376 41<146.009 214 255 382.991>
 VStem: 214 41<43.1584 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55272,9 +55511,11 @@ EndChar
 StartChar: tengwardigit2
 Encoding: 57458 57458 2302
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -17 41<210.02 298.291 337.422 453.865> 376 41<82.0088 150 191 278 319 446.991>
 VStem: 150 41<43.1584 376> 278 41<42.9602 376>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55309,10 +55550,12 @@ EndChar
 StartChar: tengwardigit3
 Encoding: 57459 57459 2303
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -17 41<145.02 233.291 272.422 355.688 400.394 514.894> 376 41<17.0088 85 126 213 254 341 382 509.991>
 VStem: 85 41<43.1584 376> 213 41<42.9602 376> 341 41<42.9602 376>
 CounterMasks: 1 38
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55357,9 +55600,11 @@ StartChar: tengwardigit4
 Encoding: 57460 57460 2304
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<295.031 431.024> 567 41<251 312.993>
 VStem: 210 103<567.25 607.749> 210 41<-7.09534 567>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55383,9 +55628,11 @@ StartChar: tengwardigit5
 Encoding: 57461 57461 2305
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<208.031 344.024> -17 41<311.02 426.865> 376 41<164 251 292 419.991> 567 41<164 225.993>
 VStem: 123 103<567.25 607.749> 123 41<-7.09534 376 417 567> 251 41<43.1584 376>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55422,9 +55669,11 @@ StartChar: tengwardigit6
 Encoding: 57462 57462 2306
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<150.031 286.024> -17 41<253.02 341.291 380.422 496.865> 376 41<106 193 234 321 362 489.991> 567 41<106 167.993>
 VStem: 65 103<567.25 607.749> 65 41<-7.09534 376 417 567> 193 41<43.1584 376> 321 41<42.9602 376>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55470,9 +55719,11 @@ StartChar: tengwardigit7
 Encoding: 57463 57463 2307
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<129.976 265.969> 567 41<351 412.993>
 VStem: 310 103<567.25 607.749> 310 41<-7.09534 567>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55496,9 +55747,11 @@ StartChar: tengwardigit8
 Encoding: 57464 57464 2308
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<29.9762 166.567> 0 41<251 395.564 433 478.993> 390 41<301.114 375.589> 567 41<251 312.993>
 VStem: 210 103<567.25 607.749> 210 41<42.4419 334.176 375 567> 420 41<69.4711 321.511>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55535,9 +55788,11 @@ StartChar: tengwardigit9
 Encoding: 57465 57465 2309
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -93 41<17.0066 92.1628> 0 41<147 291.564 329 499.564 537 582.993> 390 41<197.231 271.719 399.552 479.926> 567 41<147 208.993>
 VStem: 106 103<567.25 607.749> 106 41<-39.2113 0 41 334.176 375 567> 316 41<69.5847 313.318> 524 41<69.3631 322.165>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55581,9 +55836,11 @@ EndChar
 StartChar: tengwarduodecimal10
 Encoding: 57466 57466 2310
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<216.678 385.679> 205 41<114 194.993>
 VStem: 73 41<126.27 205> 488 40<126.795 280.308>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55611,9 +55868,11 @@ EndChar
 StartChar: tengwarduodecimal11
 Encoding: 57467 57467 2311
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -12 41<204.797 388.621>
 VStem: 124 41<2.00804 34 64.3304 125.993> 428 45<61.2409 141.647> 454 40<242.177 346.241>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55652,9 +55911,11 @@ EndChar
 StartChar: tengwarduodecimal12
 Encoding: 57468 57468 2312
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<215.252 385.53> 390 41<215.252 385.175>
 VStem: 72 41<124.806 290.386> 487 41<125.825 289.617>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55683,6 +55944,7 @@ StartChar: tengwardigitMark
 Encoding: 57469 57469 2313
 Width: 0
 VWidth: 200
+GlyphClass: 4
 Flags: W
 LayerCount: 2
 Fore
@@ -55693,21 +55955,26 @@ EndChar
 StartChar: tehtaEEB
 Encoding: 57417 57417 2314
 Width: 0
+GlyphClass: 4
 Flags: HW
 LayerCount: 2
 Fore
 Refer: 597 733 N 1 0 0 1 -600 -765 0
 Validated: 32769
-LCarets2: 1 0 
+LCarets2: 1 0
 Ligature2: "'liga' tengwar ligatures subtable" tehtaEB tehtaEB
 EndChar
 
 StartChar: tehtaYanta
 Encoding: 57429 57429 2315
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 554 149
 VStem: -427 250<563 582>
+AnchorPoint: "mkmkTengwar" -300 555 mark 0
+AnchorPoint: "mkmkTengwar" -300 723 basemark 0
+AnchorPoint: "abovetengwar" -300 555 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55729,9 +55996,13 @@ EndChar
 StartChar: tehtaW
 Encoding: 57426 57426 2316
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 659 41<-371.474 -289.338>
 VStem: -425 41<712.734 773.979> -280 43<557.552 651.196>
+AnchorPoint: "mkmkTengwar" -300 529 mark 0
+AnchorPoint: "mkmkTengwar" -300 794 basemark 0
+AnchorPoint: "abovetengwar" -300 529 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55757,6 +56028,7 @@ StartChar: tehtaX
 Encoding: 57433 57433 2317
 Width: 0
 VWidth: 1024
+GlyphClass: 4
 Flags: W
 HStem: -176 41<-485.875 -415.007> -16 41<-485.382 -398.007>
 VStem: -543 41<-119.82 -32.3927>
@@ -55780,9 +56052,11 @@ EndChar
 StartChar: tehtaS
 Encoding: 57432 57432 2318
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -156 41<233.007 306.024> 0 41<-124.993 304.365>
 VStem: 320 41<-101.037 -15.3071>
+AnchorPoint: "abovetengwar" 300 90 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55804,9 +56078,11 @@ EndChar
 StartChar: maltaX
 Encoding: 57402 57402 2319
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 269.564 307 477.564> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<68.9056 321.95> 542 41<-116.078 -19.7413>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55848,15 +56124,17 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" malta tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: valaX
 Encoding: 57403 57403 2320
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 103 41<41 298.23 335 376> 504 41<-116.078 -20.3553 145.536 290.195>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55889,13 +56167,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" vala tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: alda_tehtaB
 Encoding: 1114112 -1 2321
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: HW
 HStem: -102 41<201.113 420.28> 376 41<71.0051 189 223.782 510.993>
 VStem: 100 41<-5.76546 87.9884> 164 41<256.029 358.725> 483 41<-4.26595 126.371>
@@ -55905,13 +56184,14 @@ Refer: 110 175 N 1 0 0 1 11 -489 0
 Refer: 2284 57379 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" alda tehtaB
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: lambe_tehtaB
 Encoding: 1114113 -1 2322
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: HW
 HStem: -102 42<217.605 398.832> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962>
@@ -55921,13 +56201,14 @@ Refer: 110 175 N 1 0 0 1 19 -373 0
 Refer: 2276 57378 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaB
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaU
 Encoding: 1114120 -1 2323
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 699 41<-348.164 -263.727>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -254 42<597.496 689.389>
 LayerCount: 2
@@ -55937,15 +56218,19 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaOO
 Encoding: 57422 57422 2324
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 612 21G<-179 -168.5> 685 40<-388.285 -330.338 -288.172 -210.485>
 VStem: -446 41<528.008 668.432> -345 41<528.021 669.757> -197 41<612.038 670.726>
+AnchorPoint: "mkmkTengwar" -300 530 mark 0
+AnchorPoint: "mkmkTengwar" -300 745 basemark 0
+AnchorPoint: "abovetengwar" -300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -55972,15 +56257,19 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaO
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaUU
 Encoding: 57423 57423 2325
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 699 41<-431.164 -347.015 -302.599 -223.024>
 VStem: -338 43<595.418 687.444> -214 43<595.418 691.088>
+AnchorPoint: "mkmkTengwar" -300 530 mark 0
+AnchorPoint: "mkmkTengwar" -300 760 basemark 0
+AnchorPoint: "abovetengwar" -300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -56013,15 +56302,17 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaU
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: quesseC
 Encoding: 57399 57399 2326
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -186 41<497 577.993> 0 42<59.0066 156 192.558 456> 390 41<193.771 362.604>
 VStem: 59 41<135.491 298.785> 456 41<-145 0 42 298.23>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -56052,9 +56343,11 @@ EndChar
 StartChar: hwestaC
 Encoding: 57400 57400 2327
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: 0 41<59.0066 156 192.558 456 497 577.993> 390 41<193.771 362.318> 562 41<497 577.993>
 VStem: 59 41<135.375 298.785> 456 41<41 298.23 335 562>
+AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -56088,7 +56381,8 @@ EndChar
 StartChar: tehtaW_tehtaA
 Encoding: 1114114 -1 2328
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 563 80<-415.607 -344.846 -255.607 -184.846> 673 80<-335.607 -264.846>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<567.393 638.581> -340 80<677.393 748.581> -260 80<567.393 638.581>
 LayerCount: 2
@@ -56098,13 +56392,14 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaA
 Ligature2: "'liga' tengwar ligatures subtable" tehtaA tehtaW
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaY
 Encoding: 1114115 -1 2329
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 563 80<-415.607 -344.846 -255.607 -184.846>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<567.393 638.581> -260 80<567.393 638.581>
 LayerCount: 2
@@ -56116,13 +56411,14 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaY
 Ligature2: "'liga' tengwar ligatures subtable" tehtaY tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaI tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaI
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: tehtaW_tehtaI
 Encoding: 1114116 -1 2330
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 563 80<-335.607 -264.846>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -340 80<567.393 638.581>
 LayerCount: 2
@@ -56132,12 +56428,13 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaW
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaE
 Encoding: 1114117 -1 2331
 Width: 0
+GlyphClass: 4
 Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
@@ -56148,12 +56445,13 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaW
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaEE
 Encoding: 1114118 -1 2332
 Width: 0
+GlyphClass: 4
 Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
@@ -56164,13 +56462,14 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE tehtaE
 Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE tehtaW
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: tehtaW_tehtaO
 Encoding: 1114119 -1 2333
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 581 21<-220 -208> 654 41<-332.469 -247.242>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -236 40<581.04 641.699>
 LayerCount: 2
@@ -56180,12 +56479,13 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW.alt
 Encoding: 1114121 -1 2334
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
@@ -56208,7 +56508,8 @@ EndChar
 StartChar: tehtaW_tehtaOO
 Encoding: 1114122 -1 2335
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 612 21<-137 -126.5> 685 40<-346.285 -288.338 -246.172 -168.485>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -404 41<528.008 668.432> -303 41<528.021 669.757> -155 41<612.038 670.726>
 LayerCount: 2
@@ -56220,13 +56521,14 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaOO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO tehtaO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaO tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaOO tehtaW
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: tehtaW_tehtaUU
 Encoding: 1114123 -1 2336
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 699 41<-413.164 -329.015 -284.599 -205.024>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -320 43<595.418 687.444> -196 43<595.418 691.088>
 LayerCount: 2
@@ -56238,13 +56540,14 @@ Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaUU
 Ligature2: "'liga' tengwar ligatures subtable" tehtaUU tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaU tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU tehtaU
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: tehtaW_tehtaBreve
 Encoding: 1114124 -1 2337
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 552 41<-360.874 -235.319> 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -423 41<614.576 681.993> -214 41<614.576 681.993>
 LayerCount: 2
@@ -56254,12 +56557,13 @@ Refer: 2261 57427 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaBreve
 Ligature2: "'liga' tengwar ligatures subtable" tehtaBreve tehtaW
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaGrave
 Encoding: 1114125 -1 2338
 Width: 0
+GlyphClass: 4
 Flags: HW
 HStem: 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
@@ -56270,13 +56574,14 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaGrave
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaYanta
 Encoding: 1114126 -1 2339
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 554 149 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -427 250<563 582>
 LayerCount: 2
@@ -56286,14 +56591,15 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaYanta tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaYanta
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaAE
 Encoding: 1114127 -1 2340
 Width: 0
 VWidth: 200
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 547 80<-335.154 -264.846> 562 217<-548 -503> 657 80<-415.154 -344.846 -255.154 -184.846>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<661.393 732.395> -340 80<551.393 622.395> -260 80<661.393 732.395>
 LayerCount: 2
@@ -56303,12 +56609,13 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaAE tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaAE
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaGrave_tehtaGrave
 Encoding: 1114128 -1 2341
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 550 143
 VStem: -445 290
@@ -56336,12 +56643,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaGrave
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaW_tehtaGrave_tehtaGrave
 Encoding: 1114129 -1 2342
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 550 143 562 217<-548 -503>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -445 290
@@ -56352,13 +56660,14 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaGrave tehtaGrave
 Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaGrave tehtaW
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: tehtaW_tehtaW
 Encoding: 1114130 -1 2343
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 562 217<-548 -503> 659 41<-371.474 -289.338>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -425 41<712.734 773.979> -280 43<557.552 651.196>
 LayerCount: 2
@@ -56367,13 +56676,14 @@ Refer: 2334 -1 N 1 0 0 1 0 0 2
 Refer: 2316 57426 N 1 0 0 1 0 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaW
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: lambeN_tehtaB
 Encoding: 1114131 -1 2344
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: HW
 HStem: -88 41<93.007 270.561 310 532.995> 389 42<205.168 386.395>
 VStem: 488 41<119.038 287.216>
@@ -56383,12 +56693,13 @@ Refer: 110 175 N 1 0 0 1 -72 -460 0
 Refer: 2276 57378 N -1 0 0 -1 604 329 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" lambeN tehtaB
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tinco_tehtaX
 Encoding: 1114132 -1 2345
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -176 41<417.007 487.745> -12 41<295.007 399.037> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 298.23 335 376> 504 41<-119.672 -29.2152 137.255 280.544>
@@ -56425,12 +56736,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tinco tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: parma_tehtaX
 Encoding: 1114133 -1 2346
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -176 41<417.007 485.704> 0 41<144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 41 298.23 335 376> 504 41<-116.078 -20.3553 145.536 290.195>
@@ -56468,12 +56780,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" parma tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: calma_tehtaX
 Encoding: 1114134 -1 2347
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -176 41<120.125 190.993> -16 41<201.008 363.114> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<-119.82 -32.6537 124.175 290.386> 461 122<-186.749 -146.25 376.251 416.75> 461 41<-146 89 123.583 376>
@@ -56510,12 +56823,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" calma tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: quesse_tehtaX
 Encoding: 1114135 -1 2348
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -176 41<120.125 190.993> -16 41<197.172 363.114> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<-119.82 -33.0767 117.766 287.313> 461 41<-146 89 123.583 376>
@@ -56555,13 +56869,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" quesse tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: ando_tehtaX
 Encoding: 1114136 -1 2349
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -176 41<417.007 487.875> -15 41<207.007 260.003 415.007 468.338> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 334.083 375 376> 294 41<71.8074 313.103> 504 41<-119.211 -32.3783 75.2391 315.358>
@@ -56610,13 +56925,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" ando tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: umbar_tehtaX
 Encoding: 1114137 -1 2350
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -176 41<455.007 523.704> 0 41<125 269.564 307 477.564> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 0 41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.1762 321.95> 542 41<-116.078 -19.7413>
@@ -56663,12 +56979,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" umbar tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: suule_tehtaX
 Encoding: 1114138 -1 2351
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 487.745> -12 41<295.007 399.037> 0 41<22.0066 103> 390 41<237.682 399.871> 562 41<22.0066 103>
 VStem: 22 122<0.251221 40.7501 562.251 602.75> 103 41<41 298.23 335 562> 504 41<-119.672 -29.2152 137.255 280.544>
@@ -56705,12 +57022,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" suule tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: formen_tehtaX
 Encoding: 1114139 -1 2352
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 407.442 444 484.288> 390 41<237.682 406.229> 562 41<22.0066 103>
 VStem: 103 41<41 298.23 335 562> 504 41<-116.078 -20.3553 145.536 290.195>
@@ -56746,12 +57064,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" formen tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: aha_tehtaX
 Encoding: 1114140 -1 2353
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<120.125 190.993> -16 41<201.008 363.114> 0 41<502 582.993> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<-119.82 -32.6537 124.175 290.386> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 563>
@@ -56788,12 +57107,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" aha tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: hwesta_tehtaX
 Encoding: 1114141 -1 2354
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<120.125 190.993> -16 41<197.172 363.114> 0 41<502 582.993> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<-119.82 -33.0767 118.901 287.313> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 376 417 563>
@@ -56835,13 +57155,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" hwesta tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: anto_tehtaX
 Encoding: 1114142 -1 2355
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 487.875> -15 41<207.007 260.003 415.007 468.338> 0 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<0.249912 40.7488 567.25 607.749> 84 41<41 334.083 375 567> 294 41<71.8074 313.103> 504 41<-119.211 -32.3783 75.2391 315.358>
@@ -56890,13 +57211,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" anto tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: ampa_tehtaX
 Encoding: 1114143 -1 2356
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 269.564 307 477.564> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<567.25 607.749> 84 41<41 334.083 375 567> 294 41<69.5847 313.103> 502 41<69.1762 321.95> 542 41<-116.078 -19.7413>
@@ -56941,13 +57263,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" ampa tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: nuumen_tehtaX
 Encoding: 1114144 -1 2357
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 487.875> -15 41<207.007 260.003 415.007 468.338> 0 41<22.0066 84> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<0.249912 40.7488 376.25 416.749> 84 41<41 334.083 375 376> 294 41<71.8074 313.103> 504 41<-119.211 -32.3783 75.2391 315.358>
@@ -56996,12 +57319,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" nuumen tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: oore_tehtaX
 Encoding: 1114145 -1 2358
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 487.745> -12 41<295.007 399.037> 0 41<22.0066 103> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<0.251221 40.7501 376.251 416.75> 103 41<41 298.23 335 376> 504 41<-119.672 -29.2152 137.255 280.544>
@@ -57038,12 +57362,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" oore tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: anna_tehtaX
 Encoding: 1114146 -1 2359
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<120.125 190.993> -16 41<201.008 363.114> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<-119.82 -32.6537 124.175 290.386> 461 122<0.251221 40.7501 376.251 416.75> 461 41<41 89 123.583 376>
@@ -57080,12 +57405,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" anna tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: vilya_tehtaX
 Encoding: 1114147 -1 2360
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<120.125 190.993> -16 41<197.172 363.114> 0 41<502 582.993> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<-119.82 -33.0767 118.901 287.313> 461 41<41 89 123.583 376>
@@ -57125,12 +57451,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" vilya tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tincoX_tehtaX
 Encoding: 1114148 -1 2361
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -176 41<417.007 487.745> -12 41<295.007 399.037> 390 41<237.682 399.871> 563 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 298.23 335 563> 504 41<-119.672 -29.2152 137.255 280.544>
@@ -57167,12 +57494,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" tincoX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: parmaX_tehtaX
 Encoding: 1114149 -1 2362
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -176 41<417.007 485.704> 0 41<144 407.442 444 484.288> 390 41<237.682 406.229> 563 41<33.0066 103>
 VStem: 103 41<-145 0 41 298.23 335 563> 504 41<-116.078 -20.3553 145.449 290.195>
@@ -57210,12 +57538,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" parmaX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: calmaX_tehtaX
 Encoding: 1114150 -1 2363
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -176 41<120.125 190.993> -16 41<201.008 363.114> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<-119.82 -32.6537 124.175 290.386> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 563>
@@ -57252,12 +57581,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" calmaX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: quesseX_tehtaX
 Encoding: 1114151 -1 2364
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -176 41<120.125 190.993> -16 41<197.172 363.114> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<-119.82 -33.0767 118.901 287.313> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 376 417 563>
@@ -57299,13 +57629,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" quesseX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: andoX_tehtaX
 Encoding: 1114152 -1 2365
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -176 41<417.007 487.875> -15 41<207.007 260.003 415.007 468.338> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 334.083 375 563> 294 41<71.8074 313.103> 504 41<-119.211 -32.3783 75.2391 315.358>
@@ -57354,13 +57685,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" andoX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: umbarX_tehtaX
 Encoding: 1114153 -1 2366
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -176 41<455.007 523.704> 0 41<125 269.564 307 477.564> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 0 41 334.083 375 563> 294 41<69.5847 313.103> 502 41<69.1762 321.95> 542 41<-116.078 -19.7413>
@@ -57407,13 +57739,14 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" umbarX tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: tehtaThinnas_tehtaIB
 Encoding: 1114154 -1 2367
 Width: 0
 VWidth: 0
+GlyphClass: 4
 Flags: W
 HStem: -238 168<-332.929 -293.071> -220 80<-255.607 -184.846>
 VStem: -333 40<-237.991 -70.0087> -260 80<-215.607 -144.419>
@@ -57424,14 +57757,15 @@ Refer: 2269 57431 N 1 0 0 1 -10 0 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" tehtaThinnas tehtaIB
 Ligature2: "'liga' tengwar ligatures subtable" tehtaIB tehtaThinnas
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: lambe_tehtaIB
 Encoding: 1114155 -1 2368
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -102 42<217.605 398.832> 94 80<268.393 339.154> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962> 264 80<98.393 169.581>
 LayerCount: 2
@@ -57440,14 +57774,15 @@ Refer: 2276 57378 N 1 0 0 1 0 0 2
 Refer: 2267 57413 N 1 0 0 1 604 314 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaIB
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: lambe_tehtaYB
 Encoding: 1114156 -1 2369
 Width: 600
 VWidth: 1024
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -102 42<217.605 398.832> 100 80<190.393 261.154 350.393 421.154> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962> 186 80<104.393 175.581> 346 80<104.393 175.581>
 LayerCount: 2
@@ -57457,12 +57792,13 @@ Refer: 2268 57411 N 1 0 0 1 606 320 2
 Validated: 32769
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaYB
 Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaIB tehtaIB
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 EndChar
 
 StartChar: yanta_tehtaX
 Encoding: 1114157 -1 2370
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<455.007 523.704> 0 41<30.0066 98 141 235.993 364.007 457> 376 41<288 307>
 VStem: 542 41<-116.078 -18.0735>
@@ -57496,12 +57832,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" yanta tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: uure_tehtaX
 Encoding: 1114158 -1 2371
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 487.745> -16 41<215.953 385.01> 390 41<215.252 385.175>
 VStem: 72 41<124.806 290.386> 487 41<125.267 289.617> 504 41<-119.672 -36.5431>
@@ -57528,12 +57865,13 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" uure tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: shortCarrier_tehtaX
 Encoding: 1114159 -1 2372
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 485.704> 0 41<92.0066 279 320 484.288> 376 41<134.007 279>
 VStem: 279 41<41 376> 504 41<-116.078 -20.3553>
@@ -57561,7 +57899,7 @@ SplineSet
 EndSplineSet
 Validated: 3073
 Ligature2: "'liga' tengwar ligatures subtable" shortCarrier tehtaX
-LCarets2: 1 0 
+LCarets2: 1 0
 EndChar
 
 StartChar: uni2E31
@@ -57577,7 +57915,9 @@ EndChar
 StartChar: osseN
 Encoding: 57392 57392 2374
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 499 596 N 1 0 0 1 0 0 2
@@ -57587,6 +57927,7 @@ EndChar
 StartChar: tehtaDotInside
 Encoding: 57434 57434 2375
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: 179 80<-335.607 -264.846>
 VStem: -340 80<183.393 254.581>
@@ -57605,6 +57946,7 @@ EndChar
 StartChar: tengwarQuoteleft
 Encoding: 57450 57450 2376
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: 406 198<216.25 255.75 344.25 383.75>
 VStem: 216 40<406.007 603.993> 344 40<406.007 603.993>
@@ -57632,6 +57974,7 @@ EndChar
 StartChar: tengwarQuoteright
 Encoding: 57451 57451 2377
 Width: 600
+GlyphClass: 2
 Flags: W
 HStem: -124 198<216.25 255.75 344.25 383.75>
 VStem: 216 40<-123.993 73.9934> 344 40<-123.993 73.9934>
@@ -57644,6 +57987,7 @@ EndChar
 StartChar: tengwarExclamationB
 Encoding: 57452 57452 2378
 Width: 600
+GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -57682,14 +58026,16 @@ EndChar
 StartChar: tehtaO_tehtaI
 Encoding: 1114160 -1 2381
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 543 80<-330.607 -259.846> 594 21<-220 -208> 667 41<-332.469 -247.242>
 VStem: -335 80<547.393 618.581> -236 40<594.04 654.699>
 LayerCount: 2
 Fore
 Refer: 2270 57418 N 1 0 0 1 0 13 2
 Refer: 2262 57412 S 1 0 0 1 5 -31 2
-LCarets2: 1 0 
+Validated: 32769
+LCarets2: 1 0
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI
 EndChar
@@ -57697,14 +58043,16 @@ EndChar
 StartChar: tehtaU_tehtaI
 Encoding: 1114161 -1 2382
 Width: 0
+GlyphClass: 4
 Flags: W
-HStem: 560 80<-396.607 -325.846> 699 41<-348.164 -263.727>
-VStem: -401 80<564.393 635.581> -254 42<597.496 689.389>
+HStem: 552 80<-411.607 -340.846> 699 41<-348.164 -263.727>
+VStem: -416 80<556.393 627.581> -254 42<597.496 689.389>
 LayerCount: 2
 Fore
 Refer: 2271 57420 N 1 0 0 1 0 0 2
 Refer: 2262 57412 S 1 0 0 1 -76 -11 2
-LCarets2: 1 0 
+Validated: 32769
+LCarets2: 1 0
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaU
 EndChar
@@ -57712,7 +58060,8 @@ EndChar
 StartChar: tehtaW_tehtaO_tehtaI
 Encoding: 1114162 -1 2383
 Width: 0
-Flags: W
+GlyphClass: 4
+Flags: HW
 HStem: 532 80<-330.607 -259.846> 562 217<-548 -503> 594 21<-220 -208> 667 41<-332.469 -247.242>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -335 80<536.393 607.581> -236 40<594.04 654.699>
 LayerCount: 2
@@ -57721,7 +58070,7 @@ Refer: 2270 57418 N 1 0 0 1 0 13 2
 Refer: 2262 57412 N 1 0 0 1 5 -20 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI tehtaW
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaO
@@ -57731,6 +58080,7 @@ EndChar
 StartChar: tehtaW_tehtaU_tehtaI
 Encoding: 1114163 -1 2384
 Width: 0
+GlyphClass: 4
 Flags: HW
 HStem: 560 80<-396.607 -325.846> 562 217<-548 -503> 699 41<-348.164 -263.727>
 VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -401 80<564.393 635.581> -254 42<597.496 689.389>
@@ -57740,7 +58090,7 @@ Refer: 2271 57420 N 1 0 0 1 0 0 2
 Refer: 2262 57412 N 1 0 0 1 -61 -3 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU tehtaI
 Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaU
 Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI tehtaW
@@ -57750,19 +58100,22 @@ EndChar
 StartChar: annaS
 Encoding: 57397 57397 2385
 Width: 600
-Flags: W
+GlyphClass: 2
+Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 41<41 89 123.583 376> 461 122<0.251221 40.7501 376.251 416.75>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 2239 57366 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: aha_tinco
-Encoding: 1114164 -1 2386
+StartChar: hwesta_tinco
+Encoding: 1114165 -1 2386
 Width: 600
 VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<217.007 279> -16 42<142.074 222.345 415.026 468.003> 389 42<131.997 184.974 375.216 457.926> 487 41<320 381.993>
 VStem: 57 41<93.0504 343.193> 217 103<-189.75 -149.251> 279 103<487.25 527.749> 279 41<-149 43 83.6399 331.961 370 487> 502 41<71.8074 321.95>
@@ -57804,14 +58157,93 @@ SplineSet
  279 43 l 1xf980
 EndSplineSet
 Validated: 3073
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 Ligature2: "'liga' tengwar ligatures subtable" aha zwj tinco
 EndChar
 
-StartChar: hwesta_tinco
-Encoding: 1114165 -1 2387
+StartChar: silme_aha
+Encoding: 1114166 -1 2387
 Width: 600
 VWidth: 1024
+GlyphClass: 2
+Flags: W
+HStem: -16 42<135.52 224.168 347.007 426.14> 0 41<516 577.993> 314 41<331.912 392.993>
+VStem: 57 40<76.8018 263.217> 265 41<97.9009 286.217> 475 103<0.249912 39.9951> 475 41<80.9167 504>
+LayerCount: 2
+Fore
+SplineSet
+516 41 m 1x7a
+ 551 41 l 2
+ 569 41 578 34 578 20 c 0x7c
+ 578 7 569 0 551 0 c 2
+ 475 0 l 1x7a
+ 475 40 l 1
+ 440 3 417 -16 382 -16 c 0
+ 339 -16 310 10 289 55 c 1
+ 253 10 213 -16 175 -16 c 0xba
+ 90 -16 57 76 57 188 c 0
+ 57 334 181 402 332 478 c 2
+ 486 556 l 1
+ 489 558 492 558 495 558 c 0
+ 500 558 516 555 516 539 c 0
+ 516 41 l 1x7a
+475 504 m 17xba
+ 352 442 l 2
+ 204 367 97 299 97 188 c 0
+ 97 82 135 26 173 26 c 0
+ 207 26 242 54 277 109 c 1
+ 271 124 265 144 265 207 c 0
+ 265 323 332 355 366 355 c 0
+ 384 355 393 348 393 334 c 0
+ 393 322 385 314 369 314 c 0
+ 368 314 367 314 366 314 c 0
+ 366 314 366 314 365 314 c 0
+ 349 314 306 289 306 207 c 0
+ 306 101 343 26 381 26 c 0
+ 414 26 438 54 475 109 c 9
+ 475 504 l 17xba
+EndSplineSet
+Validated: 3073
+LCarets2: 2 0 0
+Ligature2: "'liga' tengwar ligatures subtable" silme zwj aha
+EndChar
+
+StartChar: tehtaI_tehtaE
+Encoding: 1114167 -1 2388
+Width: 0
+GlyphClass: 4
+Flags: HW
+HStem: 563 80<-335.607 -264.846>
+VStem: -340 80<567.393 638.581>
+LayerCount: 2
+Fore
+Refer: 2262 57412 N 1 0 0 1 0 -47 2
+Refer: 115 180 N 1 0 0 1 -657 119 2
+Validated: 32769
+LCarets2: 1 0
+Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaE
+EndChar
+
+StartChar: tehtaW_tehtaI_tehtaE
+Encoding: 1114168 -1 2389
+Width: 0
+GlyphClass: 4
+Flags: HW
+HStem: 562 217<-548 -503> 563 80<-335.607 -264.846>
+VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -340 80<567.393 638.581>
+LayerCount: 2
+Fore
+Refer: 2262 57412 S 1 0 0 1 0 -47 2
+Refer: 115 180 S 1 0 0 1 -657 119 2
+Refer: 2334 -1 N 1 0 0 1 0 0 2
+Validated: 32769
+EndChar
+
+StartChar: hwesta_tinco
+Encoding: 1114165 -1 2390
+Width: 600
+VWidth: 1024
+GlyphClass: 2
 Flags: W
 HStem: -190 41<217.007 279> -16 42<142.074 222.345 415.026 468.003> 376 41<39.0066 85 122.436 279> 389 42<375.216 457.926> 487 41<320 381.993>
 VStem: 57 41<94.8978 347.84> 217 103<-189.75 -149.251> 279 103<487.25 527.749> 279 41<-149 43 83.6399 331.961 370 376 417 487> 502 41<71.8074 321.95>
@@ -57856,81 +58288,2216 @@ SplineSet
  279 417 l 1
 EndSplineSet
 Validated: 3073
-LCarets2: 2 0 0 
+LCarets2: 2 0 0
 Ligature2: "'liga' tengwar ligatures subtable" hwesta zwj tinco
 EndChar
 
-StartChar: silme_aha
-Encoding: 1114166 -1 2388
+StartChar: uniE080
+Encoding: 57472 57472 2391
 Width: 600
-VWidth: 1024
-Flags: W
-HStem: -16 42<135.52 224.168 347.007 426.14> 0 41<516 577.993> 314 41<331.912 392.993>
-VStem: 57 40<76.8018 263.217> 265 41<97.9009 286.217> 475 103<0.249912 39.9951> 475 41<80.9167 504>
+Flags: HW
+HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 376 41<22.0066 103> 390 41<237.682 399.871>
+VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 298.23 335 376> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-516 41 m 1x7a
- 551 41 l 2
- 569 41 578 34 578 20 c 0x7c
- 578 7 569 0 551 0 c 2
- 475 0 l 1x7a
+144 -186 m 1xd6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xda
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 436 l 1xe6
+ 49 436 l 2
+ 31 436 22 443 22 457 c 0xea
+ 22 470 31 477 49 477 c 2
+ 144 477 l 1xe6
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 359 541 240 c 4
+ 541 121 445 -12 322 -12 c 0
+ 304 -12 295 -5 295 9 c 0
+ 295 22 304 29 322 29 c 0
+ 420 29 500 145 500 238 c 4
+ 500 335 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 -186 l 1xd6
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE081
+Encoding: 57473 57473 2392
+Width: 600
+Flags: HW
+HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
+VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 42 298.23 335 376> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 42 m 1xd6
+ 330 42 l 0
+ 424 42 500 151 500 250 c 4
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 42 l 1xd6
+49 -186 m 2
+ 31 -186 22 -179 22 -165 c 0xda
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 436 l 1xe6
+ 49 436 l 2
+ 31 436 22 443 22 457 c 0xea
+ 22 470 31 477 49 477 c 2
+ 144 477 l 1xe6
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 4
+ 541 175 513 94 444 41 c 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 144 0 l 17
+ 144 -186 l 1
+ 49 -186 l 2
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE082
+Encoding: 57474 57474 2393
+Width: 600
+Flags: HW
+HStem: -187 41<502 582.993> -16 41<200.463 363.507> 376 41<502 582.993> 390 41<199.919 305.993>
+VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 376.251 416.75> 461 41<-146 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+461 -187 m 1xea
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 115 63 238 c 4
+ 63 361 160 491 279 491 c 0
+ 297 491 306 484 306 471 c 0
+ 306 457 297 450 279 450 c 0xda
+ 180 450 104 339 104 238 c 4
+ 104 136 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 477 l 1xea
+ 556 477 l 2
+ 574 477 583 470 583 457 c 0xec
+ 583 443 574 436 556 436 c 2
+ 502 436 l 1
+ 502 -146 l 1xea
+ 556 -146 l 2
+ 574 -146 583 -153 583 -166 c 0xec
+ 583 -180 574 -187 556 -187 c 2
+ 461 -187 l 1xea
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE083
+Encoding: 57475 57475 2394
+Width: 600
+Flags: HW
+HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461 502 582.993>
+VStem: 63 41<119.447 287.313> 461 41<-146 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+271 436 m 0
+ 172 436 104 332 104 231 c 4
+ 104 129 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 436 l 1
+ 271 436 l 0
+159 436 m 1
+ 90 436 l 2
+ 72 436 63 443 63 457 c 0
+ 63 470 72 477 90 477 c 2
+ 556 477 l 2
+ 574 477 583 470 583 457 c 0
+ 583 443 574 436 556 436 c 2
+ 502 436 l 1
+ 502 -146 l 1
+ 556 -146 l 2
+ 574 -146 583 -153 583 -166 c 0
+ 583 -180 574 -187 556 -187 c 2
+ 461 -187 l 1
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 108 63 231 c 4
+ 63 304 88 392 159 436 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE084
+Encoding: 57476 57476 2395
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
+VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 366 m 1xd7
+ 125 -190 l 1xd7
+ 49 -190 l 2
+ 31 -190 22 -183 22 -170 c 0xdb
+ 22 -156 31 -149 49 -149 c 2
+ 84 -149 l 1
+ 84 436 l 1xe7
+ 49 436 l 2
+ 31 436 22 443 22 456 c 0xeb
+ 22 470 31 477 49 477 c 2
+ 125 477 l 17xe7
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 0
+ 543 50 476 -15 442 -15 c 0
+ 424 -15 415 -8 415 6 c 0
+ 415 18 423 26 439 26 c 0
+ 440 26 441 26 442 26 c 0
+ 442 26 442 26 443 26 c 0
+ 459 26 502 98 502 224 c 0
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 0
+ 335 50 268 -15 234 -15 c 4
+ 216 -15 207 -8 207 6 c 0
+ 207 18 215 26 231 26 c 0
+ 232 26 233 26 234 26 c 0
+ 234 26 234 26 235 26 c 0
+ 251 26 294 98 294 224 c 0
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1xd7
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE085
+Encoding: 57477 57477 2396
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
+VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 0 41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 41 m 1xd7
+ 257 41 l 1
+ 275 63 294 139 294 224 c 4
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1
+ 125 41 l 1xd7
+125 -190 m 1
+ 49 -190 l 2
+ 31 -190 22 -183 22 -170 c 0xdb
+ 22 -156 31 -149 49 -149 c 2
+ 84 -149 l 1
+ 84 436 l 1xe7
+ 49 436 l 2
+ 31 436 22 443 22 456 c 0xeb
+ 22 470 31 477 49 477 c 2
+ 125 477 l 17xe7
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 4
+ 543 151 531 73 515 41 c 9
+ 534 41 l 18
+ 552 41 561 34 561 21 c 0
+ 561 7 552 0 534 0 c 2
+ 125 0 l 17
+ 125 -190 l 1
+307 41 m 1
+ 465 41 l 1
+ 483 63 502 139 502 224 c 4
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 4
+ 335 151 323 73 307 41 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE086
+Encoding: 57478 57478 2397
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
+VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 376.25 416.749> 475 41<-149 40 80.9167 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 -190 m 1xed
+ 475 40 l 1
+ 440 3 417 -16 382 -16 c 0
+ 339 -16 310 19 289 64 c 1
+ 253 19 213 -16 175 -16 c 0
+ 90 -16 57 139 57 251 c 0
+ 57 425 124 490 158 490 c 0
+ 176 490 185 483 185 469 c 0
+ 185 457 177 449 161 449 c 0
+ 160 449 159 449 158 449 c 0
+ 158 449 158 449 157 449 c 0
+ 141 449 98 377 98 251 c 0
+ 98 145 135 26 173 26 c 0
+ 207 26 242 64 277 119 c 1
+ 271 134 265 188 265 251 c 0
+ 265 425 332 490 366 490 c 0
+ 384 490 393 483 393 469 c 0
+ 393 457 385 449 369 449 c 0
+ 368 449 367 449 366 449 c 0
+ 366 449 366 449 365 449 c 0xdd
+ 349 449 306 377 306 251 c 0
+ 306 145 343 26 381 26 c 0
+ 414 26 438 54 475 109 c 9
+ 475 477 l 25xed
+ 551 477 l 2
+ 569 477 578 470 578 456 c 0xee
+ 578 443 569 436 551 436 c 2
+ 516 436 l 1
+ 516 -149 l 1xed
+ 551 -149 l 2
+ 569 -149 578 -156 578 -170 c 0xee
+ 578 -183 569 -190 551 -190 c 2
+ 475 -190 l 1xed
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE087
+Encoding: 57479 57479 2398
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<516 577.993> -13 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
+VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<-189.749 -149.25> 475 41<-149 43 83.9167 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 436 m 1xfa
+ 343 436 l 1
+ 325 415 306 337 306 252 c 0
+ 306 146 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
+ 475 436 l 1xfa
+475 -190 m 17
+ 475 41 l 1xfa
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 19 289 64 c 1
+ 253 19 213 -15 175 -15 c 0
+ 90 -15 57 140 57 252 c 0
+ 57 325 69 404 85 436 c 9
+ 66 436 l 18
+ 48 436 39 443 39 456 c 0
+ 39 470 48 477 66 477 c 2
+ 551 477 l 2
+ 569 477 578 470 578 457 c 0xfc
+ 578 443 569 436 551 436 c 2
+ 516 436 l 1
+ 516 -149 l 1xfa
+ 551 -149 l 2
+ 569 -149 578 -156 578 -169 c 0xfc
+ 578 -183 569 -190 551 -190 c 2
+ 475 -190 l 17
+293 436 m 1
+ 135 436 l 1
+ 117 415 98 337 98 252 c 0
+ 98 146 135 27 173 27 c 0
+ 207 27 242 65 277 120 c 1
+ 271 135 265 189 265 252 c 0
+ 265 325 277 404 293 436 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE088
+Encoding: 57480 57480 2399
+Width: 600
+Flags: HW
+HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 390 41<237.682 399.871> 562 41<22.0066 103>
+VStem: 22 122<0.251221 40.7501 562.251 602.75> 103 41<41 298.23 335 562> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 395 m 1x76
+ 197 464 247 491 323 491 c 0
+ 447 491 541 359 541 240 c 0
+ 541 121 445 -12 322 -12 c 0
+ 304 -12 295 -5 295 9 c 0
+ 295 22 304 29 322 29 c 0xb6
+ 420 29 500 145 500 238 c 0
+ 500 335 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 0 l 1x76
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0x7a
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 592 l 1x76
+ 49 592 l 2
+ 31 592 22 599 22 613 c 0x7a
+ 22 626 31 633 49 633 c 2
+ 144 633 l 1
+ 144 395 l 1x76
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE089
+Encoding: 57481 57481 2400
+Width: 600
+Flags: HW
+HStem: 0 41<22.0066 103 144 407.442 444 540.993> 390 41<237.682 406.229> 562 41<22.0066 103>
+VStem: 103 41<41 298.23 335 562> 500 41<135.375 298.785>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 41 m 1
+ 330 41 l 0
+ 424 41 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 41 l 1
+144 633 m 1
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 0
+ 541 175 513 94 444 41 c 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 592 l 1
+ 49 592 l 2
+ 31 592 22 599 22 613 c 0
+ 22 626 31 633 49 633 c 2
+ 144 633 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE08A
+Encoding: 57482 57482 2401
+Width: 600
+Flags: HW
+HStem: -16 41<200.463 363.507> 0 41<502 582.993> 390 41<199.919 305.993> 563 41<502 582.993>
+VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+502 593 m 1xba
+ 502 41 l 1x7a
+ 556 41 l 2
+ 574 41 583 34 583 21 c 0x7c
+ 583 7 574 0 556 0 c 2
+ 461 0 l 1x7a
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 115 63 238 c 0
+ 63 361 160 491 279 491 c 0
+ 297 491 306 484 306 471 c 0
+ 306 457 297 450 279 450 c 0
+ 180 450 104 339 104 238 c 0
+ 104 136 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 634 l 1xba
+ 556 634 l 2
+ 574 634 583 627 583 614 c 0xbc
+ 583 600 574 593 556 593 c 2
+ 502 593 l 1xba
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE08B
+Encoding: 57483 57483 2402
+Width: 600
+Flags: HW
+HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
+VStem: 63 41<119.447 287.313> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 376 417 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+271 436 m 0xba
+ 172 436 104 332 104 231 c 0
+ 104 129 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 436 l 1
+ 271 436 l 0xba
+461 634 m 1
+ 556 634 l 2
+ 574 634 583 627 583 614 c 0xbc
+ 583 600 574 593 556 593 c 2
+ 502 593 l 1
+ 502 41 l 1x7a
+ 556 41 l 2
+ 574 41 583 34 583 21 c 0x7c
+ 583 7 574 0 556 0 c 2
+ 461 0 l 1x7a
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 108 63 231 c 0
+ 63 304 88 392 159 436 c 1
+ 90 436 l 2
+ 72 436 63 443 63 457 c 0
+ 63 470 72 477 90 477 c 2
+ 461 477 l 1
+ 461 634 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE08C
+Encoding: 57484 57484 2403
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
+VStem: 22 103<0.249912 40.7488 567.25 607.749> 84 41<41 334.083 375 567> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 366 m 1xb7
+ 125 0 l 1x77
+ 49 0 l 2
+ 31 0 22 7 22 20 c 0x7b
+ 22 34 31 41 49 41 c 2
+ 84 41 l 1
+ 84 597 l 1x77
+ 49 597 l 2
+ 31 597 22 604 22 617 c 0x7b
+ 22 631 31 638 49 638 c 2
+ 125 638 l 17
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 0
+ 543 50 476 -15 442 -15 c 0
+ 424 -15 415 -8 415 6 c 0
+ 415 18 423 26 439 26 c 0
+ 440 26 441 26 442 26 c 0
+ 442 26 442 26 443 26 c 0
+ 459 26 502 98 502 224 c 0
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 0
+ 335 50 268 -15 234 -15 c 0
+ 216 -15 207 -8 207 6 c 0
+ 207 18 215 26 231 26 c 0
+ 232 26 233 26 234 26 c 0
+ 234 26 234 26 235 26 c 0
+ 251 26 294 98 294 224 c 0
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1xb7
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE08D
+Encoding: 57485 57485 2404
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
+VStem: 22 103<567.25 607.749> 84 41<41 334.083 375 567> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 41 m 1xee
+ 257 41 l 1
+ 275 63 294 139 294 224 c 0
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1
+ 125 41 l 1xee
+49 0 m 2
+ 31 0 22 7 22 20 c 0xf6
+ 22 34 31 41 49 41 c 2
+ 84 41 l 1
+ 84 597 l 1xee
+ 49 597 l 2
+ 31 597 22 604 22 617 c 0xf6
+ 22 631 31 638 49 638 c 2
+ 125 638 l 17
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 0
+ 543 151 531 73 515 41 c 9
+ 534 41 l 18
+ 552 41 561 34 561 21 c 0
+ 561 7 552 0 534 0 c 2
+ 49 0 l 2
+307 41 m 1
+ 465 41 l 1
+ 483 63 502 139 502 224 c 0
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 0
+ 335 151 323 73 307 41 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE08E
+Encoding: 57486 57486 2405
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 389 41<131.997 184.993 339.997 392.993> 567 41<516 577.993>
+VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249939 39.9951 567.25 607.749> 475 41<80.9167 567>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 0 m 1x7d
  475 40 l 1
  440 3 417 -16 382 -16 c 0
  339 -16 310 10 289 55 c 1
- 253 10 213 -16 175 -16 c 0xba
- 90 -16 57 76 57 188 c 0
- 57 334 181 402 332 478 c 2
- 486 556 l 1
- 489 558 492 558 495 558 c 0
- 500 558 516 555 516 539 c 0
- 516 41 l 1x7a
-475 504 m 17xba
- 352 442 l 2
- 204 367 97 299 97 188 c 0
- 97 82 135 26 173 26 c 0
+ 253 10 213 -16 175 -16 c 0
+ 90 -16 57 139 57 251 c 0
+ 57 425 124 490 158 490 c 0
+ 176 490 185 483 185 469 c 0
+ 185 457 177 449 161 449 c 0
+ 160 449 159 449 158 449 c 0
+ 158 449 158 449 157 449 c 0
+ 141 449 98 377 98 251 c 0
+ 98 145 135 26 173 26 c 0
  207 26 242 54 277 109 c 1
- 271 124 265 144 265 207 c 0
- 265 323 332 355 366 355 c 0
- 384 355 393 348 393 334 c 0
- 393 322 385 314 369 314 c 0
- 368 314 367 314 366 314 c 0
- 366 314 366 314 365 314 c 0
- 349 314 306 289 306 207 c 0
- 306 101 343 26 381 26 c 0
+ 271 124 265 188 265 251 c 0
+ 265 425 332 490 366 490 c 0
+ 384 490 393 483 393 469 c 0
+ 393 457 385 449 369 449 c 0
+ 368 449 367 449 366 449 c 0
+ 366 449 366 449 365 449 c 0
+ 349 449 306 377 306 251 c 0
+ 306 145 343 26 381 26 c 0
  414 26 438 54 475 109 c 9
- 475 504 l 17xba
+ 475 638 l 25xbd
+ 551 638 l 2
+ 569 638 578 631 578 617 c 0xbe
+ 578 604 569 597 551 597 c 2
+ 516 597 l 1
+ 516 41 l 1x7d
+ 551 41 l 2
+ 569 41 578 34 578 20 c 0x7e
+ 578 7 569 0 551 0 c 2
+ 475 0 l 1x7d
 EndSplineSet
 Validated: 3073
-LCarets2: 2 0 0 
-Ligature2: "'liga' tengwar ligatures subtable" silme zwj aha
 EndChar
 
-StartChar: tehtaI_tehtaE
-Encoding: 1114167 -1 2389
-Width: 0
+StartChar: uniE08F
+Encoding: 57487 57487 2406
+Width: 600
+VWidth: 1024
 Flags: HW
-HStem: 563 80<-335.607 -264.846>
-VStem: -340 80<567.393 638.581>
+HStem: -13 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475> 567 41<516 577.993>
+VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<0.251221 40.7501 567.251 607.75> 475 41<41 43 83.9167 376 417 567>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2262 57412 N 1 0 0 1 0 -47 2
-Refer: 115 180 N 1 0 0 1 -657 119 2
-LCarets2: 1 0 
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaE
+SplineSet
+475 436 m 1xbd
+ 343 436 l 1
+ 325 415 306 337 306 252 c 0
+ 306 146 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
+ 475 436 l 1xbd
+475 638 m 1
+ 551 638 l 2
+ 569 638 578 631 578 618 c 0xbe
+ 578 604 569 597 551 597 c 2
+ 516 597 l 1
+ 516 41 l 1x7d
+ 551 41 l 2
+ 569 41 578 34 578 21 c 0x7e
+ 578 7 569 0 551 0 c 2
+ 475 0 l 17x7d
+ 475 41 l 1
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 11 289 56 c 1
+ 253 11 213 -15 175 -15 c 0
+ 90 -15 57 140 57 252 c 0
+ 57 325 69 404 85 436 c 9
+ 66 436 l 18
+ 48 436 39 443 39 456 c 0
+ 39 470 48 477 66 477 c 2
+ 475 477 l 1
+ 475 638 l 1
+293 436 m 1
+ 135 436 l 1
+ 117 415 98 337 98 252 c 0
+ 98 146 135 27 173 27 c 0
+ 207 27 242 55 277 110 c 1
+ 271 125 265 189 265 252 c 0
+ 265 325 277 404 293 436 c 1
+EndSplineSet
+Validated: 3073
 EndChar
 
-StartChar: tehtaW_tehtaI_tehtaE
-Encoding: 1114168 -1 2390
-Width: 0
+StartChar: uniE090
+Encoding: 57488 57488 2407
+Width: 600
+VWidth: 1024
 Flags: HW
-HStem: 562 217<-548 -503> 563 80<-335.607 -264.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -340 80<567.393 638.581>
+HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
+VStem: 22 103<0.249912 40.7488 376.25 416.749> 84 41<41 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2262 57412 S 1 0 0 1 0 -47 2
-Refer: 115 180 S 1 0 0 1 -657 119 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
+SplineSet
+125 366 m 5x97
+ 125 0 l 1x57
+ 49 0 l 2
+ 31 0 22 7 22 20 c 0x5b
+ 22 34 31 41 49 41 c 2
+ 84 41 l 1
+ 84 436 l 5x67
+ 49 436 l 6
+ 31 436 22 443 22 456 c 4x6b
+ 22 470 31 477 49 477 c 6
+ 125 477 l 21x67
+ 125 435 l 5
+ 160 472 183 491 218 491 c 4
+ 261 491 290 465 311 420 c 5
+ 347 465 387 491 425 491 c 4
+ 510 491 543 336 543 224 c 0
+ 543 50 476 -15 442 -15 c 0
+ 424 -15 415 -8 415 6 c 0
+ 415 18 423 26 439 26 c 0
+ 440 26 441 26 442 26 c 0
+ 442 26 442 26 443 26 c 0
+ 459 26 502 98 502 224 c 0
+ 502 330 465 449 427 449 c 4
+ 393 449 358 421 323 366 c 5
+ 329 351 335 287 335 224 c 0
+ 335 50 268 -15 234 -15 c 0
+ 216 -15 207 -8 207 6 c 0
+ 207 18 215 26 231 26 c 0
+ 232 26 233 26 234 26 c 0
+ 234 26 234 26 235 26 c 0
+ 251 26 294 98 294 224 c 0
+ 294 330 257 449 219 449 c 4
+ 186 449 162 421 125 366 c 5x97
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE091
+Encoding: 57489 57489 2408
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
+VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 41 m 1xae
+ 257 41 l 1
+ 275 63 294 139 294 224 c 0
+ 294 330 257 449 219 449 c 4
+ 186 449 162 421 125 366 c 5
+ 125 41 l 1xae
+49 0 m 2
+ 31 0 22 7 22 20 c 0xb6
+ 22 34 31 41 49 41 c 2
+ 84 41 l 1
+ 84 436 l 5xce
+ 49 436 l 6
+ 31 436 22 443 22 456 c 4xd6
+ 22 470 31 477 49 477 c 6
+ 125 477 l 21xce
+ 125 435 l 5
+ 160 472 183 491 218 491 c 4
+ 261 491 290 465 311 420 c 5
+ 347 465 387 491 425 491 c 4
+ 510 491 543 336 543 224 c 0
+ 543 151 531 73 515 41 c 9
+ 534 41 l 18
+ 552 41 561 34 561 21 c 0
+ 561 7 552 0 534 0 c 2
+ 49 0 l 2
+307 41 m 1
+ 465 41 l 1
+ 483 63 502 139 502 224 c 0
+ 502 330 465 449 427 449 c 4
+ 393 449 358 421 323 366 c 5
+ 329 351 335 287 335 224 c 0
+ 335 151 323 73 307 41 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE092
+Encoding: 57490 57490 2409
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
+VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249908 39.9951 376.25 416.749> 475 41<80.9167 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 0 m 1x6d
+ 475 40 l 1
+ 440 3 417 -16 382 -16 c 0
+ 339 -16 310 10 289 55 c 1
+ 253 10 213 -16 175 -16 c 0
+ 90 -16 57 139 57 251 c 0
+ 57 425 124 490 158 490 c 4
+ 176 490 185 483 185 469 c 4
+ 185 457 177 449 161 449 c 4
+ 160 449 159 449 158 449 c 4
+ 158 449 158 449 157 449 c 4
+ 141 449 98 377 98 251 c 0
+ 98 145 135 26 173 26 c 0
+ 207 26 242 54 277 109 c 1
+ 271 124 265 188 265 251 c 0
+ 265 425 332 490 366 490 c 4
+ 384 490 393 483 393 469 c 4
+ 393 457 385 449 369 449 c 4
+ 368 449 367 449 366 449 c 4
+ 366 449 366 449 365 449 c 4x9d
+ 349 449 306 377 306 251 c 0
+ 306 145 343 26 381 26 c 0
+ 414 26 438 54 475 109 c 9
+ 475 477 l 29xad
+ 551 477 l 6
+ 569 477 578 470 578 456 c 4xae
+ 578 443 569 436 551 436 c 6
+ 516 436 l 5
+ 516 41 l 1x6d
+ 551 41 l 2
+ 569 41 578 34 578 20 c 0x6e
+ 578 7 569 0 551 0 c 2
+ 475 0 l 1x6d
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE093
+Encoding: 57491 57491 2410
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -13 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
+VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<0.251221 40.7501> 475 41<41 43 83.9167 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 436 m 5xba
+ 343 436 l 5
+ 325 415 306 337 306 252 c 0
+ 306 146 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
+ 475 436 l 5xba
+551 477 m 6
+ 569 477 578 470 578 457 c 4xbc
+ 578 443 569 436 551 436 c 6
+ 516 436 l 5
+ 516 41 l 1x7a
+ 551 41 l 2
+ 569 41 578 34 578 21 c 0x7c
+ 578 7 569 0 551 0 c 2
+ 475 0 l 17x7a
+ 475 41 l 1
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 11 289 56 c 1
+ 253 11 213 -15 175 -15 c 0
+ 90 -15 57 140 57 252 c 0
+ 57 325 69 404 85 436 c 13
+ 66 436 l 22
+ 48 436 39 443 39 456 c 4
+ 39 470 48 477 66 477 c 6
+ 551 477 l 6
+293 436 m 5
+ 135 436 l 5
+ 117 415 98 337 98 252 c 0
+ 98 146 135 27 173 27 c 0
+ 207 27 242 55 277 110 c 1
+ 271 125 265 189 265 252 c 0
+ 265 325 277 404 293 436 c 5
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE094
+Encoding: 57492 57492 2411
+Width: 600
+Flags: HW
+HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 376 41<22.0066 103> 390 41<237.682 399.871>
+VStem: 22 122<0.251221 40.7501 376.251 416.75> 103 41<41 298.23 335 376> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 0 m 1x56
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0x5a
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 436 l 5x66
+ 49 436 l 6
+ 31 436 22 443 22 457 c 4x6a
+ 22 470 31 477 49 477 c 6
+ 144 477 l 5x66
+ 144 395 l 5
+ 197 464 247 491 323 491 c 4
+ 447 491 541 359 541 240 c 0
+ 541 121 445 -12 322 -12 c 0
+ 304 -12 295 -5 295 9 c 0
+ 295 22 304 29 322 29 c 0x96
+ 420 29 500 145 500 238 c 0
+ 500 335 423 450 322 450 c 4
+ 223 450 144 375 144 281 c 4
+ 144 0 l 1x56
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE095
+Encoding: 57493 57493 2412
+Width: 600
+Flags: HW
+HStem: 0 41<22.0066 103 144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
+VStem: 103 41<41 298.23 335 376> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 41 m 1xb8
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 4
+ 223 450 144 375 144 281 c 4
+ 144 41 l 1xb8
+49 0 m 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 436 l 5
+ 49 436 l 6
+ 31 436 22 443 22 457 c 4
+ 22 470 31 477 49 477 c 6
+ 144 477 l 5xd8
+ 144 395 l 5
+ 197 464 247 491 323 491 c 4
+ 447 491 541 370 541 251 c 0
+ 541 175 513 94 444 41 c 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 49 0 l 2
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE096
+Encoding: 57494 57494 2413
+Width: 600
+Flags: HW
+HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
+VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 376.251 416.75> 461 41<41 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+461 0 m 1x6a
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 115 63 238 c 0
+ 63 361 160 491 279 491 c 4
+ 297 491 306 484 306 471 c 4
+ 306 457 297 450 279 450 c 4x9a
+ 180 450 104 339 104 238 c 0
+ 104 136 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 477 l 5xaa
+ 556 477 l 6
+ 574 477 583 470 583 457 c 4xac
+ 583 443 574 436 556 436 c 6
+ 502 436 l 5
+ 502 41 l 1x6a
+ 556 41 l 2
+ 574 41 583 34 583 21 c 0x6c
+ 583 7 574 0 556 0 c 2
+ 461 0 l 1x6a
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE097
+Encoding: 57495 57495 2414
+Width: 600
+Flags: HW
+HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461 502 582.993>
+VStem: 63 41<119.447 287.313> 461 41<41 89 123.583 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+271 436 m 4xb8
+ 172 436 104 332 104 231 c 0
+ 104 129 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 436 l 5
+ 271 436 l 4xb8
+159 436 m 5
+ 90 436 l 6
+ 72 436 63 443 63 457 c 4
+ 63 470 72 477 90 477 c 6
+ 556 477 l 6
+ 574 477 583 470 583 457 c 4
+ 583 443 574 436 556 436 c 6
+ 502 436 l 5
+ 502 41 l 1
+ 556 41 l 2
+ 574 41 583 34 583 21 c 0
+ 583 7 574 0 556 0 c 2
+ 461 0 l 1x78
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 108 63 231 c 0
+ 63 304 88 392 159 436 c 5
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE098
+Encoding: 57496 57496 2415
+Width: 600
+Flags: HW
+HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 390 41<237.682 399.871> 563 41<22.0066 103>
+VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 298.23 335 563> 500 41<129.587 289.542>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 -186 m 1xf6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xfa
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 593 l 1xf6
+ 49 593 l 2
+ 31 593 22 600 22 614 c 0xfa
+ 22 627 31 634 49 634 c 2
+ 144 634 l 1
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 359 541 240 c 0
+ 541 121 445 -12 322 -12 c 0
+ 304 -12 295 -5 295 9 c 0
+ 295 22 304 29 322 29 c 0
+ 420 29 500 145 500 238 c 0
+ 500 335 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 -186 l 1xf6
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE099
+Encoding: 57497 57497 2416
+Width: 600
+Flags: HW
+HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 390 41<237.682 406.229> 563 41<33.0066 103>
+VStem: 103 41<-145 0 42 298.23 335 563> 500 41<135.491 298.785>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 42 l 1
+49 -186 m 2
+ 31 -186 22 -179 22 -165 c 0
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 593 l 1
+ 49 593 l 2
+ 31 593 22 600 22 614 c 0
+ 22 627 31 634 49 634 c 2
+ 144 634 l 1
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 0
+ 541 175 513 94 444 41 c 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 144 0 l 17
+ 144 -186 l 1
+ 49 -186 l 2
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09A
+Encoding: 57498 57498 2417
+Width: 600
+Flags: HW
+HStem: -187 41<502 582.993> -16 41<200.463 363.507> 390 41<199.919 305.993> 563 41<502 582.993>
+VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+461 -187 m 1xfa
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 115 63 238 c 0
+ 63 361 160 491 279 491 c 0
+ 297 491 306 484 306 471 c 0
+ 306 457 297 450 279 450 c 0
+ 180 450 104 339 104 238 c 0
+ 104 136 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 634 l 1xfa
+ 556 634 l 2
+ 574 634 583 627 583 614 c 0xfc
+ 583 600 574 593 556 593 c 2
+ 502 593 l 1
+ 502 -146 l 1xfa
+ 556 -146 l 2
+ 574 -146 583 -153 583 -166 c 0xfc
+ 583 -180 574 -187 556 -187 c 2
+ 461 -187 l 1xfa
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09B
+Encoding: 57499 57499 2418
+Width: 600
+Flags: HW
+HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
+VStem: 63 41<119.447 287.313> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 376 417 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+271 436 m 0xfa
+ 172 436 104 332 104 231 c 0
+ 104 129 183 25 283 25 c 0
+ 381 25 461 106 461 206 c 0
+ 461 436 l 1
+ 271 436 l 0xfa
+461 634 m 1
+ 556 634 l 2
+ 574 634 583 627 583 614 c 0xfc
+ 583 600 574 593 556 593 c 2
+ 502 593 l 1
+ 502 -146 l 1xfa
+ 556 -146 l 2
+ 574 -146 583 -153 583 -166 c 0xfc
+ 583 -180 574 -187 556 -187 c 2
+ 461 -187 l 1
+ 461 89 l 1
+ 414 19 354 -16 279 -16 c 0
+ 160 -16 63 108 63 231 c 0
+ 63 304 88 392 159 436 c 1
+ 90 436 l 2
+ 72 436 63 443 63 457 c 0
+ 63 470 72 477 90 477 c 2
+ 461 477 l 1
+ 461 634 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09C
+Encoding: 57500 57500 2419
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
+VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 334.083 375 563> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 366 m 1xf7
+ 125 -190 l 1xf7
+ 49 -190 l 2
+ 31 -190 22 -183 22 -170 c 0xfb
+ 22 -156 31 -149 49 -149 c 2
+ 84 -149 l 1
+ 84 593 l 1xf7
+ 49 593 l 2
+ 31 593 22 600 22 613 c 0xfb
+ 22 627 31 634 49 634 c 2
+ 125 634 l 17
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 0
+ 543 50 476 -15 442 -15 c 0
+ 424 -15 415 -8 415 6 c 0
+ 415 18 423 26 439 26 c 0
+ 440 26 441 26 442 26 c 0
+ 442 26 442 26 443 26 c 0
+ 459 26 502 98 502 224 c 0
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 0
+ 335 50 268 -15 234 -15 c 0
+ 216 -15 207 -8 207 6 c 0
+ 207 18 215 26 231 26 c 0
+ 232 26 233 26 234 26 c 0
+ 234 26 234 26 235 26 c 0
+ 251 26 294 98 294 224 c 0
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1xf7
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09D
+Encoding: 57501 57501 2420
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
+VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 0 41 334.083 375 563> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+125 41 m 1xf7
+ 257 41 l 1
+ 275 63 294 139 294 224 c 0
+ 294 330 257 449 219 449 c 0
+ 186 449 162 421 125 366 c 1
+ 125 41 l 1xf7
+125 -190 m 1
+ 49 -190 l 2
+ 31 -190 22 -183 22 -170 c 0xfb
+ 22 -156 31 -149 49 -149 c 2
+ 84 -149 l 1
+ 84 593 l 1xf7
+ 49 593 l 2
+ 31 593 22 600 22 613 c 0xfb
+ 22 627 31 634 49 634 c 2
+ 125 634 l 17
+ 125 435 l 1
+ 160 472 183 491 218 491 c 0
+ 261 491 290 465 311 420 c 1
+ 347 465 387 491 425 491 c 0
+ 510 491 543 336 543 224 c 0
+ 543 151 531 73 515 41 c 9
+ 534 41 l 18
+ 552 41 561 34 561 21 c 0
+ 561 7 552 0 534 0 c 2
+ 125 0 l 17
+ 125 -190 l 1
+307 41 m 1
+ 465 41 l 1
+ 483 63 502 139 502 224 c 0
+ 502 330 465 449 427 449 c 0
+ 393 449 358 421 323 366 c 1
+ 329 351 335 287 335 224 c 0
+ 335 151 323 73 307 41 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09E
+Encoding: 57502 57502 2421
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 389 41<131.997 184.993 339.997 392.993> 563 41<516 577.993>
+VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 563.25 603.749> 475 41<-149 40 80.9167 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 -190 m 1xfd
+ 475 40 l 1
+ 440 3 417 -16 382 -16 c 0
+ 339 -16 310 10 289 55 c 1
+ 253 10 213 -16 175 -16 c 0
+ 90 -16 57 139 57 251 c 0
+ 57 425 124 490 158 490 c 0
+ 176 490 185 483 185 469 c 0
+ 185 457 177 449 161 449 c 0
+ 160 449 159 449 158 449 c 0
+ 158 449 158 449 157 449 c 0
+ 141 449 98 377 98 251 c 0
+ 98 145 135 26 173 26 c 0
+ 207 26 242 54 277 109 c 1
+ 271 124 265 188 265 251 c 0
+ 265 425 332 490 366 490 c 0
+ 384 490 393 483 393 469 c 0
+ 393 457 385 449 369 449 c 0
+ 368 449 367 449 366 449 c 0
+ 366 449 366 449 365 449 c 0
+ 349 449 306 377 306 251 c 0
+ 306 145 343 26 381 26 c 0
+ 414 26 438 54 475 109 c 9
+ 475 634 l 25xfd
+ 551 634 l 2
+ 569 634 578 627 578 613 c 0xfe
+ 578 600 569 593 551 593 c 2
+ 516 593 l 1
+ 516 -149 l 1xfd
+ 551 -149 l 2
+ 569 -149 578 -156 578 -170 c 0xfe
+ 578 -183 569 -190 551 -190 c 2
+ 475 -190 l 1xfd
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE09F
+Encoding: 57503 57503 2422
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -190 41<516 577.993> -13 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475> 563 41<516 577.993>
+VStem: 57 41<96.0504 347.84> 265 41<104.897 347.84> 475 103<-189.749 -149.25 563.251 603.75> 475 41<-149 43 83.9167 376 417 563>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+475 436 m 1xfd
+ 343 436 l 1
+ 325 415 306 337 306 252 c 0
+ 306 146 343 27 381 27 c 0
+ 414 27 438 55 475 110 c 1
+ 475 436 l 1xfd
+475 634 m 1
+ 551 634 l 2
+ 569 634 578 627 578 614 c 0xfe
+ 578 600 569 593 551 593 c 2
+ 516 593 l 1
+ 516 -149 l 1xfd
+ 551 -149 l 2
+ 569 -149 578 -156 578 -169 c 0xfe
+ 578 -183 569 -190 551 -190 c 2
+ 475 -190 l 17
+ 475 41 l 1
+ 440 4 417 -15 382 -15 c 0
+ 339 -15 310 11 289 56 c 1
+ 253 11 213 -15 175 -15 c 0
+ 90 -15 57 140 57 252 c 0
+ 57 325 69 404 85 436 c 9
+ 66 436 l 18
+ 48 436 39 443 39 456 c 0
+ 39 470 48 477 66 477 c 2
+ 475 477 l 1
+ 475 634 l 1
+293 436 m 1
+ 135 436 l 1
+ 117 415 98 337 98 252 c 0
+ 98 146 135 27 173 27 c 0
+ 207 27 242 55 277 110 c 1
+ 271 125 265 189 265 252 c 0
+ 265 325 277 404 293 436 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A0
+Encoding: 57504 57504 2423
+Width: 600
+Flags: HW
+HStem: -193 41<120.487 195.99> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
+VStem: 63 41<-135.337 -7.25638> 497 41<247.818 357.492>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+104 -78 m 0xb8
+ 104 -122 123 -152 169 -152 c 0
+ 182 -152 196 -159 196 -173 c 0
+ 196 -186 187 -193 169 -193 c 0
+ 115 -193 63 -163 63 -78 c 0
+ 63 49 163 112 255 151 c 4
+ 106 436 l 1
+ 90 436 l 2
+ 72 436 63 443 63 457 c 0
+ 63 470 72 477 90 477 c 2
+ 205 477 l 2
+ 223 477 232 470 232 457 c 0
+ 232 443 223 436 205 436 c 2
+ 155 436 l 1xd8
+ 302 173 l 5
+ 410 223 497 275 497 374 c 0
+ 497 395 468 448 412 448 c 0
+ 399 448 385 455 385 469 c 0
+ 385 482 394 489 412 489 c 0
+ 466 489 538 441 538 374 c 0
+ 538 121 104 143 104 -78 c 0xb8
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A1
+Encoding: 57505 57505 2424
+Width: 600
+Flags: HW
+HStem: -193 41<127.984 215.99> 133 42<63.0058 83> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
+VStem: 63 41<-129.644 -7.25638> 497 41<247.818 357.492>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+82 172 m 0xdc
+ 71 172 63 182 63 193 c 0
+ 63 204 69 209 83 214 c 2
+ 197 262 l 17
+ 106 436 l 1
+ 90 436 l 2
+ 72 436 63 443 63 457 c 0
+ 63 470 72 477 90 477 c 2
+ 205 477 l 2
+ 223 477 232 470 232 457 c 0
+ 232 443 223 436 205 436 c 2
+ 155 436 l 1xec
+ 302 173 l 5
+ 410 223 497 275 497 374 c 0
+ 497 395 468 448 412 448 c 0
+ 399 448 385 455 385 469 c 0
+ 385 482 394 489 412 489 c 0
+ 466 489 538 441 538 374 c 0
+ 538 121 104 143 104 -78 c 0
+ 104 -122 133 -152 189 -152 c 0
+ 202 -152 216 -159 216 -173 c 0
+ 216 -186 207 -193 189 -193 c 0
+ 135 -193 63 -163 63 -78 c 0
+ 63 49 163 112 255 151 c 4
+ 219 222 l 1
+ 96 175 l 2
+ 91 173 87 172 82 172 c 0xdc
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A2
+Encoding: 57506 57506 2425
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -102 42<217.605 398.832> 376 41<71.0051 294 333.439 510.993>
+VStem: 75 41<41.7838 209.962>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+513 4 m 0
+ 474 -63 389 -102 304 -102 c 0
+ 172 -102 75 30 75 156 c 0
+ 75 296 207 419 294 436 c 5
+ 90 436 l 6
+ 77 436 71 443 71 457 c 4
+ 71 470 78 477 91 477 c 6
+ 484 477 l 6
+ 502 477 511 470 511 456 c 4
+ 511 443 502 436 484 436 c 6
+ 398 436 l 5
+ 278 407 116 309 116 156 c 0
+ 116 53 198 -60 304 -60 c 0
+ 386 -60 445 -21 472 23 c 0
+ 477 35 485 40 494 40 c 1
+ 503 40 517 34 517 19 c 1
+ 517 13 515 8 513 4 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A3
+Encoding: 57507 57507 2426
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -102 41<201.113 420.28> 376 41<71.0051 189 223.782 510.993>
+VStem: 100 41<-5.76546 87.9884> 164 41<256.029 358.725> 483 41<-4.26595 126.371>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+483 92 m 0
+ 483 247 164 189 164 353 c 0
+ 164 377 172 400 189 436 c 1
+ 90 436 l 2
+ 77 436 71 443 71 457 c 0
+ 71 470 78 477 91 477 c 2
+ 484 477 l 2
+ 502 477 511 470 511 456 c 0
+ 511 443 502 436 484 436 c 2
+ 236 436 l 1
+ 213 402 205 373 205 353 c 0
+ 205 238 524 279 524 92 c 0
+ 524 -42 421 -102 304 -102 c 0
+ 172 -102 100 -46 100 61 c 0
+ 100 72 103 88 121 88 c 0
+ 137 88 141 73 141 61 c 0
+ 141 -20 198 -61 304 -61 c 0
+ 455 -61 483 22 483 92 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A4
+Encoding: 57508 57508 2427
+Width: 600
+Flags: HW
+HStem: -16 41<215.321 384.322> 205 41<406.007 487> 492 38<435 444.988>
+VStem: 73 40<126.795 280.847> 487 41<126.27 205>
+AnchorPoint: "abovetengwar" 260 595 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+528 276 m 1
+ 528 235 l 2
+ 528 111 426 -16 300 -16 c 0
+ 173 -16 73 113 73 238 c 0
+ 73 368 184 470 256 507 c 2
+ 415 588 l 1
+ 418 590 421 590 424 590 c 0
+ 429 590 445 587 445 571 c 0
+ 445 563 442 556 435 552 c 0
+ 276 471 l 2
+ 200 432 113 332 113 238 c 0
+ 113 136 196 25 300 25 c 0
+ 403 25 487 134 487 235 c 1
+ 433 235 l 2
+ 415 235 406 242 406 256 c 0
+ 406 269 415 276 433 276 c 2
+ 528 276 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A5
+Encoding: 57509 57509 2428
+Width: 600
+Flags: HW
+HStem: -110 38<155.012 165> 169 41<113 193.993> 390 41<215.678 384.679>
+VStem: 72 41<210 288.73> 487 40<133.884 288.205>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+72 199 m 1
+ 72 240 l 2
+ 72 364 174 491 300 491 c 4
+ 427 491 527 362 527 237 c 0
+ 527 107 417 3 344 -32 c 2
+ 185 -108 l 1
+ 182 -110 179 -110 176 -110 c 0
+ 171 -110 155 -107 155 -91 c 0
+ 155 -83 158 -76 165 -72 c 0
+ 324 4 l 2
+ 401 41 487 143 487 237 c 0
+ 487 339 404 450 300 450 c 4
+ 197 450 113 341 113 240 c 1
+ 167 240 l 2
+ 185 240 194 233 194 219 c 0
+ 194 206 185 199 167 199 c 2
+ 72 199 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A6
+Encoding: 57510 57510 2429
+Width: 600
+Flags: HW
+HStem: -17 41<229.379 413.203> -3 21G<467.5 480.5>
+VStem: 124 40<237.177 341.241> 145 45<56.2409 136.647> 453 41<-2.99196 29 59.3304 120.993>
+AnchorPoint: "abovetengwar" 260 595 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+402 315 m 0xa8
+ 417 315 421 300 421 295 c 0
+ 421 287 415 280 408 276 c 2
+ 222 174 l 2
+ 203 157 190 135 190 114 c 0
+ 190 77 246 24 320 24 c 0x98
+ 396 24 448 53 453 98 c 0
+ 455 114 462 121 474 121 c 0
+ 487 121 494 112 494 94 c 2
+ 494 25 l 2
+ 494 6 487 -3 474 -3 c 0x58
+ 461 -3 453 8 453 25 c 2
+ 453 29 l 1
+ 418 -2 373 -17 316 -17 c 0
+ 218 -17 145 53 145 111 c 0x98
+ 145 148 164 187 191 205 c 2
+ 201 211 l 1
+ 156 228 124 280 124 333 c 0
+ 124 423 186 457 256 502 c 2
+ 404 588 l 1
+ 407 590 410 590 413 590 c 0
+ 418 590 434 587 434 571 c 0
+ 434 563 431 556 424 552 c 0
+ 276 466 l 2
+ 202 418 164 395 164 333 c 0
+ 164 290 187 257 249 237 c 1
+ 384 310 l 2
+ 389 313 396 315 402 315 c 0xa8
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A7
+Encoding: 57511 57511 2430
+Width: 600
+Flags: HW
+HStem: 390 41<204.797 388.621> 397 20G<137.5 150.5>
+VStem: 124 41<293.007 354.67 385 416.992> 428 45<277.353 357.759> 454 40<69.5876 176.823>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+216 159 m 0xa8
+ 201 159 197 174 197 179 c 0
+ 197 187 203 194 210 198 c 2
+ 396 300 l 2
+ 416 309 428 347 428 360 c 0
+ 428 412 372 450 298 450 c 0xb0
+ 222 450 170 421 165 376 c 0
+ 163 360 156 353 144 353 c 0
+ 131 353 124 362 124 380 c 2
+ 124 449 l 2
+ 124 468 131 477 144 477 c 0x70
+ 157 477 165 466 165 449 c 2
+ 165 445 l 1
+ 200 476 245 491 302 491 c 0
+ 400 491 473 437 473 363 c 0xb0
+ 473 336 454 282 427 269 c 2
+ 417 263 l 1
+ 462 241 494 208 494 141 c 0
+ 494 66 434 6 362 -28 c 2
+ 208 -108 l 1
+ 205 -110 202 -110 199 -110 c 0
+ 194 -110 178 -107 178 -91 c 0
+ 178 -83 181 -76 188 -72 c 0
+ 342 8 l 2
+ 418 43 454 92 454 141 c 0
+ 454 200 431 210 369 237 c 1
+ 234 164 l 2
+ 229 161 222 159 216 159 c 0xa8
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A8
+Encoding: 57512 57512 2431
+Width: 599
+Flags: HW
+HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
+VStem: 135 42<333.033 351>
+AnchorPoint: "abovetengwar" 340 610 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+155 393 m 0
+ 148 393 135 398 135 412 c 0
+ 135 418 136 422 139 428 c 2
+ 210 588 l 1
+ 280 588 l 1
+ 512 41 l 1
+ 538 41 l 2
+ 553 41 563 33 563 20 c 0
+ 563 6 552 -0 535 0 c 2
+ 425 0 l 2
+ 411 0 400 6 400 20 c 0
+ 400 34 410 41 425 41 c 2
+ 468 41 l 1
+ 334 374 l 1
+ 199 41 l 1
+ 217 41 l 2
+ 233 41 244 35 244 20 c 0
+ 244 5 233 -0 217 0 c 2
+ 107 0 l 2
+ 94 0 80 3 80 20 c 0
+ 80 34 93 41 107 41 c 2
+ 154 41 l 1
+ 312 422 l 1
+ 255 547 l 1
+ 237 547 l 1
+ 177 411 l 2
+ 172 401 166 393 155 393 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0A9
+Encoding: 57513 57513 2432
+Width: 600
+Flags: HW
+HStem: -16 41<201.008 366.542 400 542> 390 41<200.29 365.006> 563 41<502 582.993>
+VStem: 63 41<125.218 290.386> 461 41<119.938 290.814 327 563> 542 41<-96.9934 -16>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+542 -16 m 1
+ 279 -16 l 1
+ 160 -16 63 115 63 238 c 0
+ 63 361 160 491 279 491 c 0
+ 372 491 428 442 461 387 c 1
+ 461 634 l 1
+ 556 634 l 2
+ 574 634 583 627 583 614 c 0
+ 583 600 574 593 556 593 c 2
+ 502 593 l 1
+ 502 236 l 0
+ 502 161 471 74 400 25 c 1
+ 583 25 l 1
+ 583 -70 l 2
+ 583 -88 576 -97 563 -97 c 0
+ 549 -97 542 -88 542 -70 c 2
+ 542 -16 l 1
+461 236 m 0
+ 461 340 383 450 282 450 c 0
+ 183 450 104 339 104 238 c 0
+ 104 136 183 25 283 25 c 0
+ 387 25 461 135 461 236 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0AA
+Encoding: 57514 57514 2433
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+264 477 m 1
+ 334 477 l 1
+ 502 41 l 1
+ 543 41 l 2
+ 561 41 570 34 570 20 c 0
+ 570 7 561 0 543 0 c 2
+ 392 0 l 2
+ 373 0 364 7 364 20 c 0
+ 364 34 373 41 392 41 c 2
+ 457 41 l 1
+ 307 431 l 5
+ 288 431 l 5
+ 141 41 l 1
+ 209 41 l 2
+ 227 41 236 34 236 20 c 0
+ 236 7 227 0 209 0 c 2
+ 57 0 l 2
+ 39 0 30 7 30 20 c 0
+ 30 34 39 41 57 41 c 2
+ 98 41 l 1
+ 264 477 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0AB
+Encoding: 57515 57515 2434
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+300 491 m 0
+ 428 491 528 362 528 235 c 0
+ 528 113 426 -16 300 -16 c 0
+ 173 -16 72 113 72 238 c 0
+ 72 361 173 491 300 491 c 0
+300 450 m 0
+ 196 450 113 339 113 238 c 0
+ 113 136 196 25 300 25 c 0
+ 403 25 487 136 487 235 c 0
+ 487 340 405 450 300 450 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0AC
+Encoding: 57516 57516 2435
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+417 436 m 5
+ 176 436 l 6
+ 158 436 149 443 149 457 c 4
+ 149 470 158 477 176 477 c 6
+ 458 477 l 5
+ 458 -28 l 2
+ 458 -121 394 -186 303 -186 c 2
+ 174 -186 l 2
+ 156 -186 147 -179 147 -165 c 0
+ 147 -152 156 -145 174 -145 c 2
+ 302 -145 l 2
+ 368 -145 417 -96 417 -28 c 2
+ 417 436 l 5
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0AD
+Encoding: 57517 57517 2436
+Width: 600
+Flags: HW
+HStem: 0 41<92.0066 279 320 507.993> 487 41<135.007 279>
+VStem: 279 41<41 487>
+AnchorPoint: "abovetengwar" 300 625 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+320 588 m 1
+ 320 41 l 1
+ 480 41 l 2
+ 499 41 508 34 508 21 c 0
+ 508 7 498 0 480 0 c 2
+ 119 0 l 2
+ 101 0 92 7 92 21 c 0
+ 92 34 101 41 119 41 c 2
+ 279 41 l 1
+ 279 547 l 1
+ 162 547 l 2
+ 144 547 135 554 135 568 c 0
+ 135 581 144 588 162 588 c 2
+ 320 588 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0AE
+Encoding: 57518 57518 2437
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+320 477 m 5
+ 320 41 l 1
+ 480 41 l 2
+ 499 41 508 34 508 21 c 0
+ 508 7 498 0 480 0 c 2
+ 119 0 l 2
+ 101 0 92 7 92 21 c 0
+ 92 34 101 41 119 41 c 2
+ 279 41 l 1
+ 279 436 l 5
+ 161 436 l 6
+ 143 436 134 443 134 457 c 4
+ 134 470 143 477 161 477 c 6
+ 320 477 l 5
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B0
+Encoding: 57520 57520 2438
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+103 107 m 0
+ 134 107 156 25 308 25 c 0
+ 417 25 494 130 494 235 c 0
+ 494 345 418 450 308 450 c 4
+ 224 450 153 408 149 355 c 4
+ 147 338 141 331 128 331 c 4
+ 115 331 108 340 108 358 c 6
+ 108 449 l 6
+ 108 468 115 477 128 477 c 4
+ 142 477 149 468 149 449 c 6
+ 149 436 l 5
+ 190 472 244 491 305 491 c 4
+ 439 491 535 366 535 234 c 0
+ 535 106 441 -16 310 -16 c 0
+ 168 -16 84 67 84 88 c 0
+ 84 98 93 107 103 107 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B1
+Encoding: 57521 57521 2439
+Width: 600
+VWidth: 1024
+Flags: HW
+HStem: -88 41<93.0066 270.561 310 532.995> 389 42<205.168 386.395>
+VStem: 488 41<119.038 287.216>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+Refer: 2425 57506 N -1 0 0 -1 604 389 2
+Validated: 32769
+EndChar
+
+StartChar: uniE0B2
+Encoding: 57522 57522 2440
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+535 88 m 0
+ 535 67 445 -16 309 -16 c 0
+ 178 -16 84 106 84 234 c 0
+ 84 366 180 491 314 491 c 4
+ 375 491 429 472 470 436 c 5
+ 470 449 l 6
+ 470 468 477 477 491 477 c 4
+ 504 477 511 468 511 449 c 6
+ 511 358 l 6
+ 511 340 504 331 491 331 c 4
+ 478 331 472 338 470 355 c 4
+ 466 408 395 450 311 450 c 4
+ 201 450 125 345 125 235 c 0
+ 125 130 202 25 311 25 c 0
+ 384 25 446 49 498 97 c 0
+ 506 105 509 107 516 107 c 0
+ 526 107 535 98 535 88 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B4
+Encoding: 57524 57524 2441
+Width: 600
+Flags: HW
+HStem: 0 41<320 507.993> 376 41<134.007 279 320 721.993>
+VStem: 279 41<41 376>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+Refer: 2437 57518 N 1 0 0 1 0 0 2
+Validated: 32769
+EndChar
+
+StartChar: uniE0B5
+Encoding: 57525 57525 2442
+Width: 600
+Flags: HW
+HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
+VStem: 63 41<125.218 290.386> 461 41<41 89 123.583 376> 461 122<0.251221 40.7501 376.251 416.75>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+Refer: 2413 57494 S 1 0 0 1 0 0 2
+Validated: 32769
+EndChar
+
+StartChar: uniE0B6
+Encoding: 57526 57526 2443
+Width: 600
+Flags: HW
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+439 0 m 1
+ 439 66 l 1
+ 384 12 323 -16 257 -16 c 0
+ 177 -16 124 36 124 115 c 2
+ 124 436 l 5
+ 70 436 l 6
+ 52 436 43 443 43 457 c 4
+ 43 470 52 477 70 477 c 6
+ 165 477 l 5
+ 165 115 l 2
+ 165 65 205 25 256 25 c 0
+ 323 25 384 55 439 115 c 1
+ 439 436 l 5
+ 365 436 l 6
+ 346 436 337 443 337 457 c 4
+ 337 470 346 477 365 477 c 6
+ 480 477 l 5
+ 480 41 l 1
+ 514 41 l 2
+ 532 41 541 34 541 21 c 0
+ 541 7 532 0 514 0 c 2
+ 439 0 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B7
+Encoding: 57527 57527 2444
+Width: 600
+Flags: HW
+HStem: -186 41<497 577.993> 0 42<59.0066 156 192.558 456> 390 41<193.771 362.604>
+VStem: 59 41<135.491 298.785> 456 41<-145 0 42 298.23>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+456 42 m 1
+ 456 251 l 0
+ 456 345 377 450 278 450 c 4
+ 177 450 100 346 100 250 c 0
+ 100 151 176 42 270 42 c 0
+ 456 42 l 1
+497 247 m 2
+ 497 -145 l 1
+ 551 -145 l 2
+ 569 -145 578 -152 578 -165 c 0
+ 578 -179 569 -186 551 -186 c 2
+ 456 -186 l 1
+ 456 0 l 9
+ 86 0 l 2
+ 68 0 59 7 59 21 c 0
+ 59 34 68 41 86 41 c 2
+ 156 41 l 1
+ 87 94 59 175 59 251 c 0
+ 59 370 153 491 277 491 c 4
+ 422 491 497 351 497 247 c 2
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B8
+Encoding: 57528 57528 2445
+Width: 600
+Flags: HW
+HStem: 0 41<59.0066 156 192.558 456 497 577.993> 390 41<193.771 362.318> 562 41<497 577.993>
+VStem: 59 41<135.375 298.785> 456 41<41 298.23 335 562>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+456 41 m 1
+ 456 281 l 0
+ 456 375 377 450 278 450 c 0
+ 177 450 100 346 100 250 c 0
+ 100 151 176 41 270 41 c 0
+ 456 41 l 1
+456 633 m 1
+ 551 633 l 2
+ 569 633 578 626 578 613 c 0
+ 578 599 569 592 551 592 c 2
+ 497 592 l 1
+ 497 41 l 1
+ 551 41 l 2
+ 569 41 578 34 578 21 c 0
+ 578 7 569 0 551 0 c 2
+ 86 0 l 2
+ 68 0 59 7 59 21 c 0
+ 59 34 68 41 86 41 c 2
+ 156 41 l 1
+ 87 94 59 175 59 251 c 0
+ 59 370 153 491 277 491 c 0
+ 353 491 403 464 456 395 c 1
+ 456 633 l 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0B9
+Encoding: 57529 57529 2446
+Width: 600
+Flags: HW
+HStem: -13 41<134.854 214.99> -1 41<368.007 445 494 536.993> 568 41<404.01 479.513>
+VStem: 62 41<58.5079 168.182> 496 41<423.256 551.337>
+AnchorPoint: "abovetengwar" 260 550 basechar 0
+LayerCount: 2
+Fore
+Refer: 2423 57504 N -1 0 0 -1 600 476 2
+Validated: 32769
+EndChar
+
+StartChar: uniE0BA
+Encoding: 57530 57530 2447
+Width: 600
+Flags: HW
+HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 269.564 307 477.564> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
+VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<68.9056 321.95> 542 41<-116.078 -19.7413>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+307 41 m 1xd3
+ 465 41 l 1
+ 483 62 502 139 502 224 c 0
+ 502 330 465 449 427 449 c 4
+ 393 449 358 421 323 366 c 5
+ 329 351 335 287 335 224 c 0
+ 335 151 323 73 307 41 c 1xd3
+482 0 m 1
+ 49 0 l 2
+ 31 0 22 7 22 20 c 0xda80
+ 22 34 31 41 49 41 c 2
+ 84 41 l 1
+ 84 436 l 5xe6
+ 49 436 l 6
+ 31 436 22 443 22 456 c 4xea
+ 22 470 31 477 49 477 c 6
+ 125 477 l 5xe6
+ 125 435 l 5
+ 160 472 183 491 218 491 c 4
+ 261 491 290 465 311 420 c 5
+ 347 465 387 491 425 491 c 4
+ 510 491 543 336 543 224 c 0xd7
+ 543 151 533 92 512 35 c 1
+ 552 21 583 -27 583 -69 c 0
+ 583 -117 533 -176 482 -176 c 0
+ 464 -176 455 -169 455 -155 c 0
+ 455 -142 464 -135 482 -135 c 0
+ 516 -135 542 -100 542 -69 c 0xd280
+ 542 -37 515 0 482 0 c 1
+125 41 m 1xd6
+ 257 41 l 1
+ 275 63 294 139 294 224 c 0
+ 294 330 257 449 219 449 c 4
+ 186 449 162 421 125 366 c 5
+ 125 41 l 1xd6
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0BB
+Encoding: 57531 57531 2448
+Width: 600
+Flags: HW
+HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
+VStem: 103 41<41 298.23 335 376> 504 41<-116.078 -20.3553 145.536 290.195>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+144 41 m 1xdc
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 4
+ 223 450 144 375 144 281 c 4
+ 144 41 l 1xdc
+444 0 m 1
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 436 l 5
+ 49 436 l 6
+ 31 436 22 443 22 457 c 4
+ 22 470 31 477 49 477 c 6
+ 144 477 l 5xec
+ 144 395 l 5
+ 197 464 247 491 323 491 c 4
+ 447 491 541 370 541 251 c 0
+ 541 175 513 94 444 41 c 1
+ 497 40 545 -17 545 -69 c 0
+ 545 -117 495 -176 444 -176 c 0
+ 426 -176 417 -169 417 -155 c 0
+ 417 -142 426 -135 444 -135 c 0
+ 478 -135 504 -100 504 -69 c 0
+ 504 -37 477 0 444 0 c 1
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0BC
+Encoding: 57532 57532 2449
+Width: 600
+Flags: HW
+HStem: -193 41<120.487 195.99> 388 41<385.01 467.791> 487 41<63.0066 148>
+VStem: 63 41<-135.337 -7.81445> 148 41<96 487> 497 41<247.947 358.651>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+63 -78 m 0
+ 63 -2 98 47 148 83 c 1
+ 148 547 l 1
+ 90 547 l 2
+ 72 547 63 554 63 568 c 0
+ 63 581 72 588 90 588 c 2
+ 189 588 l 1
+ 189 106 l 1
+ 317 168 497 243 497 374 c 0
+ 497 401 468 448 412 448 c 0
+ 399 448 385 455 385 469 c 0
+ 385 482 394 489 412 489 c 0
+ 466 489 538 441 538 374 c 0
+ 538 111 104 143 104 -78 c 0
+ 104 -122 123 -152 169 -152 c 0
+ 182 -152 196 -159 196 -173 c 0
+ 196 -186 187 -193 169 -193 c 0
+ 115 -193 63 -163 63 -78 c 0
+EndSplineSet
+Validated: 3073
+EndChar
+
+StartChar: uniE0BD
+Encoding: 57533 57533 2450
+Width: 600
+Flags: HW
+HStem: -16 41<201.008 366.542 400 542> 390 41<199.502 356.395>
+VStem: 63 41<125.218 290.386> 461 41<120.986 286.66> 542 41<-96.9934 -16>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+502 238 m 0
+ 502 163 471 74 400 25 c 1
+ 583 25 l 1
+ 583 -70 l 2
+ 583 -88 576 -97 563 -97 c 0
+ 549 -97 542 -88 542 -70 c 2
+ 542 -16 l 1
+ 279 -16 l 1
+ 160 -16 63 115 63 238 c 0
+ 63 361 160 491 279 491 c 4
+ 402 491 502 365 502 238 c 0
+461 238 m 0
+ 461 330 377 450 280 450 c 4
+ 181 450 104 339 104 238 c 0
+ 104 136 183 25 283 25 c 0
+ 387 25 461 137 461 238 c 0
+EndSplineSet
+Validated: 3073
 EndChar
 EndChars
 EndSplineFont
