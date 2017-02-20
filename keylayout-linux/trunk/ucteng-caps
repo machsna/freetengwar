@@ -1,0 +1,74 @@
+//
+//  Tengwar CSUR keyboard layout (based on US-QWERTY)
+//
+//  Copyright (C) 2009-2017 Johan Winge, j. 'mach' wust
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  This layout is part of the Free Tengwar Font Project. For more
+//  information, see http://freetengwar.sourceforge.net/
+
+xkb_symbols "basic"
+{
+	name[Group1] = "Tengwar-caps";
+	key <AB01> { [          UE026,          UE0A6,          UE027,          UE0A7 ] };
+	key <AB02> { [          UE00A,          UE08A,          UE00E,          UE08E ] };
+	key <AB03> { [          UE002,          UE082,          UE01A,          UE09A ] };
+	key <AB04> { [          UE00D,          UE08D,          UE036,          UE0B6 ] };
+	key <AB05> { [          UE005,          UE085,          UE01D,          UE09D ] };
+	key <AB06> { [          UE010,          UE090,          UE013,          UE093 ] };
+	key <AB07> { [          UE011,          UE091,          UE012,          UE092 ] };
+	key <AB08> { [          UE060,           less,          comma                 ] };
+	key <AB09> { [          UE061,        greater,         period                 ] };
+	key <AB10> { [          UE068,          UE066,              !,       question ] };
+	key <AC01> { [          UE032,          UE0B2,          UE030,          UE0B0 ] };
+	key <AC02> { [          UE024,          UE0A4,          UE025,          UE0A5 ] };
+	key <AC03> { [          UE004,          UE084,          UE01C,          UE09C ] };
+	key <AC04> { [          UE009,          UE089                                 ] };
+	key <AC05> { [          UE007,          UE087,          UE01F,          UE09F ] };
+	key <AC06> { [          UE028,          UE0A8,          UE02D,          UE0AD ] };
+	key <AC07> { [          UE006,          UE086,          UE01E,          UE09E ] };
+	key <AC08> { [          UE003,          UE083,          UE01B,          UE09B ] };
+	key <AC09> { [          UE022,          UE0A2,          UE023,          UE0A3 ] };
+	key <AC10> { [          UE00C,          UE08C,              ;,              : ] };
+	key <AC11> { [          UE017,          UE097,          UE056,          UE054 ] };
+	key <AD01> { [          UE029,          UE0A9,          UE039,          UE0B9 ] };
+	key <AD02> { [          UE015,          UE095,          UE031,          UE0B1 ] };
+	key <AD03> { [          UE02A,          UE0AA,          UE055                 ] };
+	key <AD04> { [          UE020,          UE0A0,          UE021,          UE0A1 ] };
+	key <AD05> { [          UE000,          UE080,          UE018,          UE098 ] };
+	key <AD06> { [          UE016,          UE096,          UE00F,          UE08F ] };
+	key <AD07> { [          UE052,          UE053                                 ] };
+	key <AD08> { [          UE044,          UE045,          UE05A                 ] };
+	key <AD09> { [          UE02B,          UE0AB,          UE03D,          UE0BD ] };
+	key <AD10> { [          UE001,          UE081,          UE019,          UE099 ] };
+	key <AD11> { [          UE06A,      parenleft,          U201C,          U201D ] };
+	key <AD12> { [          UE06B,     parenright,          U2018,          U2019 ] };
+	key <AE01> { [          UE040,          UE041,          UE071,          UE07B ] };
+	key <AE02> { [          UE058,          UE059,          UE072,          UE07C ] };
+	key <AE03> { [          UE046,          UE047,          UE073                 ] };
+	key <AE04> { [          UE014,          UE094,          UE074                 ] };
+	key <AE05> { [          UE008,          UE088,          UE075                 ] };
+	key <AE06> { [          UE042,          UE043,          UE076,          UE06C ] };
+	key <AE07> { [          UE04C,          UE04D,          UE077,          U204A ] };
+	key <AE08> { [          UE00B,          UE08B,          UE078,          U2E2D ] };
+	key <AE09> { [          UE04A,          UE04B,          UE079                 ] };
+	key <AE10> { [          UE05B,          UE07D,          UE070,          UE07A ] };
+	key <AE11> { [          UE050,          UE051,          UE049,          UE057 ] };
+	key <AE12> { [          UE069,          U200D,          U200C                 ] };
+	key <BKSL> { [          UE065,          UE067,          U2058                 ] };
+	key <LSGT> { [          UE02C,          UE0AC,          UE02E,          UE0AE ] };
+	key <TLDE> { [          UE02E,          UE0AE,          UE02C,          UE0AC ] };
+};
+
