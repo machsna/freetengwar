@@ -39,7 +39,7 @@ gdhfile.write("endtable;\n\n")
 feafile.close()
 gdhfile.close()
 
-os.system("ftxenhancer -m FreeMonoTengwar.mif FreeMonoTengwar_nogr.ttf")
+#os.system("ftxenhancer -m FreeMonoTengwar.mif FreeMonoTengwar_nogr.ttf")
 os.system("grcompiler FreeMonoTengwar.gdl FreeMonoTengwar_nogr.ttf FreeMonoTengwar.ttf")
 
 ## Generate the smaller Embedding version:
@@ -74,7 +74,7 @@ thefont.replaceWithReference()
 thefont.save("FreeMonoTengwar-embedding.sfd")
 thefont=fontforge.open("FreeMonoTengwar-embedding.sfd")
 thefont.generate("FreeMonoTengwar-embedding_nogr.ttf","",("opentype","round"))
-os.system("ttf2eot FreeMonoTengwar-embedding_nogr.ttf > FreeMonoTengwar-embedding.eot")
+#os.system("ttf2eot FreeMonoTengwar-embedding_nogr.ttf > FreeMonoTengwar-embedding.eot")
 os.system("ftxenhancer -m FreeMonoTengwar-embedding.mif FreeMonoTengwar-embedding_nogr.ttf")
 os.system("grcompiler FreeMonoTengwar-embedding.gdl FreeMonoTengwar-embedding_nogr.ttf FreeMonoTengwar-embedding.ttf")
 
