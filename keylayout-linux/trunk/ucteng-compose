@@ -3,56 +3,56 @@
 # These letters are placed in the PUA.
 # For the mapping, see http://freetengwar.sourceforge.net/mapping.html
 
-<Multi_key> <UE000>               : ""  # <UE080>: CAPITAL TINCO
-<Multi_key> <UE001>               : ""  # <UE081>: CAPITAL PARMA
-<Multi_key> <UE002>               : ""  # <UE082>: CAPITAL CALMA
-<Multi_key> <UE003>               : ""  # <UE083>: CAPITAL QUESSE
-<Multi_key> <UE004>               : ""  # <UE084>: CAPITAL ANDO
-<Multi_key> <UE005>               : ""  # <UE085>: CAPITAL UMBAR
-<Multi_key> <UE006>               : ""  # <UE086>: CAPITAL ANGA
-<Multi_key> <UE007>               : ""  # <UE087>: CAPITAL UNGWE
-<Multi_key> <UE008>               : ""  # <UE088>: CAPITAL SUULE
-<Multi_key> <UE009>               : ""  # <UE089>: CAPITAL FORMEN
-<Multi_key> <UE00A>               : ""  # <UE08A>: CAPITAL AHA
-<Multi_key> <UE00B>               : ""  # <UE08B>: CAPITAL HWESTA
-<Multi_key> <UE00C>               : ""  # <UE08C>: CAPITAL ANTO
-<Multi_key> <UE00D>               : ""  # <UE08D>: CAPITAL AMPA
-<Multi_key> <UE00E>               : ""  # <UE08E>: CAPITAL ANCA
-<Multi_key> <UE00F>               : ""  # <UE08F>: CAPITAL UNQUE
-<Multi_key> <UE010>               : ""  # <UE090>: CAPITAL NUUMEN
-<Multi_key> <UE011>               : ""  # <UE091>: CAPITAL MALTA
-<Multi_key> <UE012>               : ""  # <UE092>: CAPITAL NOLDO
-<Multi_key> <UE013>               : ""  # <UE093>: CAPITAL NWALME
-<Multi_key> <UE014>               : ""  # <UE094>: CAPITAL OORE
-<Multi_key> <UE015>               : ""  # <UE095>: CAPITAL VALA
-<Multi_key> <UE016>               : ""  # <UE096>: CAPITAL YANTA
-<Multi_key> <UE017>               : ""  # <UE097>: CAPITAL VILYA
-<Multi_key> <UE018>               : ""  # <UE098>: CAPITAL EXTENDED TINCO
-<Multi_key> <UE019>               : ""  # <UE099>: CAPITAL EXTENDED PARMA
-<Multi_key> <UE01A>               : ""  # <UE09A>: CAPITAL EXTENDED CALMA
-<Multi_key> <UE01B>               : ""  # <UE09B>: CAPITAL EXTENDED QUESSE
-<Multi_key> <UE01C>               : ""  # <UE09C>: CAPITAL EXTENDED ANTO
-<Multi_key> <UE01D>               : ""  # <UE09D>: CAPITAL EXTENDED AMPA
-<Multi_key> <UE01E>               : ""  # <UE09E>: CAPITAL EXTENDED ANCA
-<Multi_key> <UE01F>               : ""  # <UE09F>: CAPITAL EXTENDED UNQUE
-<Multi_key> <UE020>               : ""  # <UE0A0>: CAPITAL ROOMEN
-<Multi_key> <UE021>               : ""  # <UE0A1>: CAPITAL ARDA
-<Multi_key> <UE022>               : ""  # <UE0A2>: CAPITAL LAMBE
-<Multi_key> <UE023>               : ""  # <UE0A3>: CAPITAL ALDA
-<Multi_key> <UE024>               : ""  # <UE0A4>: CAPITAL SILME
-<Multi_key> <UE025>               : ""  # <UE0A5>: CAPITAL SILME NUQUERNA
-<Multi_key> <UE026>               : ""  # <UE0A6>: CAPITAL ESSE
-<Multi_key> <UE027>               : ""  # <UE0A7>: CAPITAL ESSE NUQUERNA
-<Multi_key> <UE028>               : ""  # <UE0A8>: CAPITAL HYARMEN
-<Multi_key> <UE029>               : ""  # <UE0A9>: CAPITAL HWESTA SINDARINWA
-<Multi_key> <UE02A>               : ""  # <UE0AA>: CAPITAL YANTA
-<Multi_key> <UE02B>               : ""  # <UE0AB>: CAPITAL UURE
-<Multi_key> <UE02C>               : ""  # <UE0AC>: CAPITAL ANDATELCO
-<Multi_key> <UE02D>               : ""  # <UE0AD>: CAPITAL HALLA
-<Multi_key> <UE02E>               : ""  # <UE0AE>: CAPITAL TELCO
-<Multi_key> <UE030>               : ""  # <UE0B0>: CAPITAL TURNED OSSE
-<Multi_key> <UE031>               : ""  # <UE0B1>: CAPITAL TURNED LAMBE
-<Multi_key> <UE032>               : ""  # <UE0B2>: CAPITAL OSSE
-<Multi_key> <UE036>               : ""  # <UE0B6>: CAPITAL MODIFIED ANNA
-<Multi_key> <UE039>               : ""  # <UE0B9>: CAPITAL TURNED ROOMEN
-<Multi_key> <UE03D>               : ""  # <UE0BD>: CAPITAL VAIYA
+<dead_currency> <UE000>               : ""  # <UE080>: CAPITAL TINCO
+<dead_currency> <UE001>               : ""  # <UE081>: CAPITAL PARMA
+<dead_currency> <UE002>               : ""  # <UE082>: CAPITAL CALMA
+<dead_currency> <UE003>               : ""  # <UE083>: CAPITAL QUESSE
+<dead_currency> <UE004>               : ""  # <UE084>: CAPITAL ANDO
+<dead_currency> <UE005>               : ""  # <UE085>: CAPITAL UMBAR
+<dead_currency> <UE006>               : ""  # <UE086>: CAPITAL ANGA
+<dead_currency> <UE007>               : ""  # <UE087>: CAPITAL UNGWE
+<dead_currency> <UE008>               : ""  # <UE088>: CAPITAL SUULE
+<dead_currency> <UE009>               : ""  # <UE089>: CAPITAL FORMEN
+<dead_currency> <UE00A>               : ""  # <UE08A>: CAPITAL AHA
+<dead_currency> <UE00B>               : ""  # <UE08B>: CAPITAL HWESTA
+<dead_currency> <UE00C>               : ""  # <UE08C>: CAPITAL ANTO
+<dead_currency> <UE00D>               : ""  # <UE08D>: CAPITAL AMPA
+<dead_currency> <UE00E>               : ""  # <UE08E>: CAPITAL ANCA
+<dead_currency> <UE00F>               : ""  # <UE08F>: CAPITAL UNQUE
+<dead_currency> <UE010>               : ""  # <UE090>: CAPITAL NUUMEN
+<dead_currency> <UE011>               : ""  # <UE091>: CAPITAL MALTA
+<dead_currency> <UE012>               : ""  # <UE092>: CAPITAL NOLDO
+<dead_currency> <UE013>               : ""  # <UE093>: CAPITAL NWALME
+<dead_currency> <UE014>               : ""  # <UE094>: CAPITAL OORE
+<dead_currency> <UE015>               : ""  # <UE095>: CAPITAL VALA
+<dead_currency> <UE016>               : ""  # <UE096>: CAPITAL YANTA
+<dead_currency> <UE017>               : ""  # <UE097>: CAPITAL VILYA
+<dead_currency> <UE018>               : ""  # <UE098>: CAPITAL EXTENDED TINCO
+<dead_currency> <UE019>               : ""  # <UE099>: CAPITAL EXTENDED PARMA
+<dead_currency> <UE01A>               : ""  # <UE09A>: CAPITAL EXTENDED CALMA
+<dead_currency> <UE01B>               : ""  # <UE09B>: CAPITAL EXTENDED QUESSE
+<dead_currency> <UE01C>               : ""  # <UE09C>: CAPITAL EXTENDED ANTO
+<dead_currency> <UE01D>               : ""  # <UE09D>: CAPITAL EXTENDED AMPA
+<dead_currency> <UE01E>               : ""  # <UE09E>: CAPITAL EXTENDED ANCA
+<dead_currency> <UE01F>               : ""  # <UE09F>: CAPITAL EXTENDED UNQUE
+<dead_currency> <UE020>               : ""  # <UE0A0>: CAPITAL ROOMEN
+<dead_currency> <UE021>               : ""  # <UE0A1>: CAPITAL ARDA
+<dead_currency> <UE022>               : ""  # <UE0A2>: CAPITAL LAMBE
+<dead_currency> <UE023>               : ""  # <UE0A3>: CAPITAL ALDA
+<dead_currency> <UE024>               : ""  # <UE0A4>: CAPITAL SILME
+<dead_currency> <UE025>               : ""  # <UE0A5>: CAPITAL SILME NUQUERNA
+<dead_currency> <UE026>               : ""  # <UE0A6>: CAPITAL ESSE
+<dead_currency> <UE027>               : ""  # <UE0A7>: CAPITAL ESSE NUQUERNA
+<dead_currency> <UE028>               : ""  # <UE0A8>: CAPITAL HYARMEN
+<dead_currency> <UE029>               : ""  # <UE0A9>: CAPITAL HWESTA SINDARINWA
+<dead_currency> <UE02A>               : ""  # <UE0AA>: CAPITAL YANTA
+<dead_currency> <UE02B>               : ""  # <UE0AB>: CAPITAL UURE
+<dead_currency> <UE02C>               : ""  # <UE0AC>: CAPITAL ANDATELCO
+<dead_currency> <UE02D>               : ""  # <UE0AD>: CAPITAL HALLA
+<dead_currency> <UE02E>               : ""  # <UE0AE>: CAPITAL TELCO
+<dead_currency> <UE030>               : ""  # <UE0B0>: CAPITAL TURNED OSSE
+<dead_currency> <UE031>               : ""  # <UE0B1>: CAPITAL TURNED LAMBE
+<dead_currency> <UE032>               : ""  # <UE0B2>: CAPITAL OSSE
+<dead_currency> <UE036>               : ""  # <UE0B6>: CAPITAL MODIFIED ANNA
+<dead_currency> <UE039>               : ""  # <UE0B9>: CAPITAL TURNED ROOMEN
+<dead_currency> <UE03D>               : ""  # <UE0BD>: CAPITAL VAIYA
