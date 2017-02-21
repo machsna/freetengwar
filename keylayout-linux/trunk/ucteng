@@ -68,7 +68,7 @@ xkb_symbols "basic"
 	key <AE11> { [          UE050,          UE051,          UE049,          UE057 ] };
 	key <AE12> { [          UE069,          U200D,          U200C                 ] };
 	key <BKSL> { [          UE02E,          UE02C,          UE034                 ] };
-	key <LSGT> { [          UE02E,          UE02C,          UE034                 ] };
+	key <LSGT> { [  dead_currency                                                 ] };
 	key <TLDE> { [          UE054                                                 ] };
 };
 
