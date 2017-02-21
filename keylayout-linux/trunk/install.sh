@@ -2,7 +2,7 @@
 
 ##  Installation script for keyboard layouts, intended for Ubuntu.
 ##
-##  Copyright (C) 2009-2015 Johan Winge
+##  Copyright (C) 2009-2017 Johan Winge, j. 'mach' wust
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
@@ -18,9 +18,11 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 LAYOUTFILE="ucteng"
+COMPOSEFILE="ucteng-compose"
 SHORTDESC=""
 DESCRIPTION="Tengwar CSUR QWERTY"
 LANGUAGE="art"
+TIMESTAMP="$(date +%s)"
 
 ## This script must be run as root.
 if [ "$UID" -ne 0 ]
@@ -53,6 +55,16 @@ then
    fi
 fi
 
+## Where should we store the Compose rules for the layout?
+SYSTEMCOMPOSEFILE="/usr/share/X11/locale/en_US.UTF-8/Compose"
+if [ -f $SYSTEMCOMPOSEFILE ]
+then
+   cp $SYSTEMCOMPOSEFILE $SYSTEMCOMPOSEFILE~#$TIMESTAMP#
+   cat $COMPOSEFILE >> $SYSTEMCOMPOSEFILE
+else
+   echo; echo "WARNING: Couldn't find $SYSTEMCOMPOSEFILE. Proceeding without installing custom compose rules."; echo
+fi
+
 ## Installation depends on xmlstarlet
 which xmlstarlet &>/dev/null
 if [ $? -ne 0 ]
@@ -74,7 +86,7 @@ then
 fi
 
 ## Create a backup of the rules file
-cp $RULESFILE $RULESFILE~
+cp $RULESFILE $RULESFILE~#$TIMESTAMP#
 if [ $? -ne 0 ]
 then
   echo; echo "ERROR: Could not create backup of $RULESFILE. Exiting."; echo
@@ -85,7 +97,7 @@ fi
 LXPANELCFG="/usr/share/lxpanel/xkeyboardconfig/layouts.cfg"
 if [ -f $LXPANELCFG ]
 then
-  cp $LXPANELCFG $LXPANELCFG~
+  cp $LXPANELCFG $LXPANELCFG~#$TIMESTAMP#
   echo "$LAYOUTFILE = $DESCRIPTION" >> $LXPANELCFG
 fi
 
@@ -123,10 +135,10 @@ xmlstarlet ed -P \
       " -a $ROT"/configItem" -t text -n "" -v "
       " -a $ROT"/variantList" -t text -n "" -v "
     " -a $ROT -t text -n "" -v "
-" $RULESFILE~ > $RULESFILE
+" $RULESFILE~#$TIMESTAMP# > $RULESFILE
 if [ $? -ne 0 ]
 then
-  cp $RULESFILE~ $RULESFILE
+  cp $RULESFILE~#$TIMESTAMP# $RULESFILE
   echo; echo "ERROR: Some error occured while editing $RULESFILE. Exiting."; echo
   exit 1
 fi
@@ -134,10 +146,14 @@ fi
 ## Generate uninstall script
 echo "#!/bin/bash" > uninstall.sh
 echo "sudo rm $TARGETDIR$LAYOUTFILE" >> uninstall.sh
-echo "sudo mv $RULESFILE~ $RULESFILE" >> uninstall.sh
-if [ -f $LXPANELCFG~ ]
+echo "sudo mv $RULESFILE~#$TIMESTAMP# $RULESFILE" >> uninstall.sh
+if [ -f $SYSTEMCOMPOSEFILE~#$TIMESTAMP# ]
 then
-  echo "sudo mv $LXPANELCFG~ $LXPANELCFG" >> uninstall.sh
+  echo "sudo mv $SYSTEMCOMPOSEFILE~#$TIMESTAMP# $SYSTEMCOMPOSEFILE" >> uninstall.sh
+fi
+if [ -f $LXPANELCFG~#$TIMESTAMP# ]
+then
+  echo "sudo mv $LXPANELCFG~#$TIMESTAMP# $LXPANELCFG" >> uninstall.sh
 fi
 if [ -f $LXPANELICONDIR$LAYOUTFILE.png ]
 then
@@ -153,4 +169,3 @@ chmod +x uninstall.sh
 echo; echo "The file $LAYOUTFILE has been copied to $TARGETDIR, and $RULESFILE has been updated to reflect this. An uninstall script, uninstall.sh, has been generated."; echo "To ensure that the new layout is properly recognized, please restart your system before attempting to activate the layout."
 
 exit 0
-
