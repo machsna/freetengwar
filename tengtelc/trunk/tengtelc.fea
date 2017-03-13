@@ -1,99 +1,390 @@
 languagesystem DFLT dflt;
 languagesystem latn dflt;
 
-# GSUB 
+# GSUB
 
-@spacingtehta = [\i \atehta \itehta \etehta \otehta \utehta ];
-@tengwa = [\q \tinco \parma \calma \quesse \ando \umbar \anga \ungwe 
-	\thuule \formen \harma \hwesta \anto \ampa \anca \unque 
-	\nuumen \malta \noldo \nwalme \oore \vala \anna \vilya 
-	\extthuule \extformen \extharma \exthwesta \extanto \extampa \extanca \extunque 
-	\roomen \arda \lambe \alda \silme \silmenuq \aare \aarenuq 
-	\hyarmen \hwestasin \yanta \uure \longcarr \halla \shortcarr \mirroredosse 
-	\wtengwa \atengwa \conncarr \openanna \prefeanoreanqu \whtengwa \mhtengwa \beleriandicmh 
-	\angwhtengwa \vaiya ];
-@realtehta = [\itehta.norm \atehta.norm \itehta.norm \etehta.norm \otehta.norm \utehta.norm ];
-@canconnectright = [\q \quesse \ungwe \nwalme \vilya ];
-@connectright = [\quesse.conr \quesse.conr \ungwe.conr \nwalme.conr \vilya.conr ];
-@canconnectleft = [\t \lambe \sarince ];
-@connectleft = [\lambe.conl \lambe.conl \sarince.high ];
+# class definitions
+###################
 
-lookup smarttehtarreplacement {
-  lookupflag 0;
-    sub @tengwa @spacingtehta' by @realtehta ;
-} smarttehtarreplacement;
+@Tinco = [tinco tinco.conr tinco.conl tinco.conb tinco.lig TINCO];
+@Parma = [parma parma.conr parma.conl parma.conb PARMA];
+@Calma = [calma calma.conr CALMA];
+@Quesse = [quesse quesse.conr quesse.conl quesse.conb QUESSE];
+@Ando = [ando ando.conr ando.conl ando.conb ANDO];
+@Umbar = [umbar umbar.conr umbar.conl umbar.conb UMBAR];
+@Anga = [anga anga.conr ANGA];
+@Ungwe = [ungwe ungwe.conr ungwe.conl ungwe.conb UNGWE];
+@Thuule = [thuule thuule.conr THUULE];
+@Formen = [formen formen.conr FORMEN];
+@Harma = [harma harma.conr HARMA];
+@Hwesta = [hwesta hwesta.conr hwesta.conl hwesta.conb HWESTA];
+@Anto = [anto anto.conr ANTO];
+@Ampa = [ampa ampa.conr AMPA];
+@Anca = [anca anca.conr ANCA];
+@Unque = [unque unque.conr unque.conl unque.conb UNQUE];
+@Nuumen = [nuumen nuumen.conr nuumen.conl nuumen.conb NUUMEN];
+@Malta = [malta malta.conr malta.conl malta.conb MALTA];
+@Noldo = [noldo noldo.conr NOLDO noldo.conrbot];
+@Nwalme = [nwalme nwalme.conr nwalme.conl nwalme.conb NWALME nwalme.conrbot nwalme.conbbot];
+@Oore = [oore oore.conr oore.conl oore.conb OORE];
+@Vala = [vala vala.conr vala.conl vala.conb VALA];
+@Anna = [anna anna.conr ANNA anna.conrbot];
+@Vilya = [vilya vilya.conr vilya.conl vilya.conb VILYA vilya.conrbot vilya.conbbot];
+@ExtThuule = [extthuule extthuule.conr EXTTHUULE];
+@ExtFormen = [extformen extformen.conr EXTFORMEN];
+@ExtHarma = [extharma EXTHARMA];
+@ExtHwesta = [exthwesta exthwesta.conl EXTHWESTA];
+@ExtAnto = [extanto extanto.conr EXTANTO];
+@ExtAmpa = [extampa extampa.conr EXTAMPA];
+@ExtAnca = [extanca EXTANCA];
+@ExtUnque = [extunque extunque.conl EXTUNQUE];
+@Roomen = [roomen roomen.conl roomen.open roomen.conl_open roomen.lig ROOMEN ROOMEN.open];
+@Arda = [arda arda.conl arda.open arda.conl_open ARDA ARDA.open];
+@Lambe = [lambe lambe.conr lambe.conl lambe.conb LAMBE lambe.conrbot lambe.conbbot];
+@Alda = [alda alda.conr alda.conl alda.conb ALDA];
+@Silme = [silme silme.open silme.flat silme.lig silme.lig_open silme.lig_flat silme.lig_harma SILME SILME.open SILME.flat];
+@SilmeNuq = [silmenuq SILMENUQ];
+@Aare = [aare aare.open aare.flat AARE AARE.open AARE.flat];
+@AareNuq = [aarenuq AARENUQ];
+@Hyarmen = [hyarmen hyarmen.conr HYARMEN];
+@HwestaSin = [hwestasin];
+@Yanta = [yanta yanta.conr YANTA];
+@Uure = [uure uure.conr];
+@LongCarr = [longcarr longcarr.conl LONGCARR];
+@Halla = [halla HALLA];
+@ShortCarr = [shortcarr shortcarr.conr shortcarr.conl shortcarr.conb SHORTCARR];
+@MirroredOsse = [mirroredosse];
+@Wtengwa = [wtengwa wtengwa.desc];
+@Atengwa = [atengwa ATENGWA atengwa.desc];
+@ConnCarr = [conncarr conncarr.long conncarr.conr];
+@Whtengwa = [whtengwa whtengwa.var1 whtengwa.var2];
+@OpenAnna = [openanna openanna.conl OPENANNA];
+@PreFeaQu = [prefeanoreanqu prefeanoreanqu.var];
+@Mhtengwa = [mhtengwa MHTENGWA];
+@BeleriandicMh = [beleriandicmh BELERIANDICMH];
+@AngWhtengwa = [angwhtengwa];
+@Vaiya = [vaiya];
+@SHook = [sarince sarince.high];
 
-lookup connect {
-  lookupflag 0;
-    sub @canconnectright by @connectright ;
-    sub @canconnectleft by @connectleft ;
-} connect;
+@LargeInterp = [tenginterrog tengexlam tengparen];
 
-lookup smartconnectionright {
+@Notdectengwar = [tinco parma calma quesse ando umbar anga ungwe
+               thuule formen harma hwesta anto ampa anca unque
+               nuumen malta noldo nwalme oore vala anna vilya
+               extthuule extformen extharma exthwesta extanto extampa extanca extunque
+               lambe alda roomen arda silme silmenuq aare aarenuq
+               hyarmen yanta longcarr halla shortcarr
+               atengwa openanna mhtengwa beleriandicmh];
+@dectengwar =   [TINCO PARMA CALMA QUESSE ANDO UMBAR ANGA UNGWE
+               THUULE FORMEN HARMA HWESTA ANTO AMPA ANCA UNQUE
+               NUUMEN MALTA NOLDO NWALME OORE VALA ANNA VILYA
+               EXTTHUULE EXTFORMEN EXTHARMA EXTHWESTA EXTANTO EXTAMPA EXTANCA EXTUNQUE
+               LAMBE ALDA ROOMEN ARDA SILME SILMENUQ AARE AARENUQ
+               HYARMEN YANTA LONGCARR HALLA SHORTCARR
+               ATENGWA OPENANNA MHTENGWA BELERIANDICMH];
+
+@WideTengwar = [@Ando @Umbar @Anga @Ungwe @Anto @Ampa @Anca @Unque @Nuumen @Malta @Noldo @Nwalme @ExtAnto @ExtAmpa @ExtAnca @ExtUnque @Mhtengwa];
+@StemUpRightTengwar = [@Harma @Hwesta @Anca @Unque @ExtHarma @ExtHwesta @ExtAnca @ExtUnque silme.flat silme.lig_flat aare.flat @HwestaSin];
+@StemUpLeftTengwar = [@Thuule @Formen @Anto @Ampa @ExtThuule @ExtFormen @ExtAnto @ExtAmpa silme.open silme.lig_open aare.open @Hyarmen @AngWhtengwa tinco.lig @LargeInterp @LongCarr @Halla @ShortCarr];
+@StemDownRightTengwar = [@Calma @Quesse @Anga @Ungwe @ExtHarma @ExtHwesta @ExtAnca @ExtUnque silmenuq aarenuq];
+@StemDownLeftTengwar = [@Tinco @Parma @Ando @Umbar @ExtThuule @ExtFormen @ExtAnto @ExtAmpa @Roomen @Arda @AngWhtengwa];
+@NarrowTengwar = [@LongCarr @Halla @ShortCarr @ConnCarr @Atengwa @MirroredOsse];
+
+@AnyTengwa = [@Tinco @Parma @Calma @Quesse @Ando @Umbar @Anga @Ungwe @Thuule @Formen @Harma @Hwesta
+           @Anto @Ampa @Anca @Unque @Nuumen @Malta @Noldo @Nwalme @Oore @Vala @Anna @Vilya
+           @ExtThuule @ExtFormen @ExtHarma @ExtHwesta @ExtAnto @ExtAmpa @ExtAnca @ExtUnque
+           @Roomen @Arda @Lambe @Alda @Silme @SilmeNuq @Aare @AareNuq @Hyarmen @HwestaSin @Yanta @Uure @LongCarr @Halla @ShortCarr
+           @MirroredOsse @Wtengwa @Atengwa @ConnCarr @Whtengwa @OpenAnna @PreFeaQu @Mhtengwa @BeleriandicMh @AngWhtengwa @Vaiya @SHook
+           dottedcircle];
+
+@SomeMayConR = [calma quesse quesse.conl anga ungwe ungwe.conl noldo nwalme nwalme.conl anna vilya vilya.conl conncarr];
+@SomeDoConR = [calma.conr quesse.conr quesse.conb anga.conr ungwe.conr ungwe.conb noldo.conr nwalme.conr nwalme.conb anna.conr vilya.conr vilya.conb conncarr.conr];
+@MayConR = [@SomeMayConR lambe lambe.conl alda alda.conl uure];
+@DoConR = [@SomeDoConR lambe.conr lambe.conb alda.conr alda.conb uure.conr];
+
+@SomeMayConL = [tinco parma ando umbar nuumen malta oore vala roomen arda lambe alda shortcarr longcarr openanna];
+@SomeDoConL = [tinco.conl parma.conl ando.conl umbar.conl nuumen.conl malta.conl oore.conl vala.conl roomen.conl arda.conl lambe.conl alda.conl shortcarr.conl longcarr.conl openanna.conl];
+@MayConL = [@SomeMayConL quesse ungwe hwesta unque nwalme vilya exthwesta extunque];
+@DoConL = [@SomeDoConL quesse.conl ungwe.conl hwesta.conl unque.conl nwalme.conl vilya.conl exthwesta.conl extunque.conl];
+
+@MayConRLow = [tinco tinco.conl ando ando.conl umbar umbar.conl parma parma.conl thuule formen harma hwesta hwesta.conl anto ampa anca unque unque.conl nuumen nuumen.conl malta malta.conl noldo noldo.conr nwalme nwalme.conl nwalme.conr nwalme.conb oore oore.conl vala vala.conl anna anna.conr vilya vilya.conl vilya.conr vilya.conb shortcarr shortcarr.conl lambe lambe.conl lambe.conr lambe.conb hyarmen yanta extthuule extformen extanto extampa];
+@DoConRLow = [tinco.conr tinco.conb ando.conr ando.conb umbar.conr umbar.conb parma.conr parma.conb thuule.conr formen.conr harma.conr hwesta.conr hwesta.conb anto.conr ampa.conr anca.conr unque.conr unque.conr nuumen.conr nuumen.conb malta.conr malta.conb noldo.conrbot noldo.conrbot nwalme.conrbot nwalme.conbbot nwalme.conrbot nwalme.conbbot oore.conr oore.conb vala.conr vala.conb anna.conrbot anna.conrbot vilya.conrbot vilya.conbbot vilya.conrbot vilya.conbbot shortcarr.conr shortcarr.conb lambe.conrbot lambe.conbbot lambe.conrbot lambe.conbbot hyarmen.conr yanta.conr extthuule.conr extformen.conr extanto.conr extampa.conr];
+@MayConRHigh = [noldo.conrbot nwalme.conrbot nwalme.conbbot anna.conrbot vilya.conrbot vilya.conbbot lambe.conrbot lambe.conbbot];
+@DoConRHigh = [noldo.conr nwalme.conr nwalme.conb anna.conr vilya.conr vilya.conb lambe.conr lambe.conb];
+
+@IsolUpTehtar = [atehta ytehta itehta etehta otehta utehta overbar wtehta engytehta revetehta yantatehta invatehta];
+@IsolCentralTehtar = [dotinside];
+@IsolDownTehtar = [downatehta downytehta downitehta downetehta dblunderstroke downotehta downutehta underbar longcarr.tehta sarincetehta thinnas];
+@IsolTehtar = [@IsolUpTehtar @IsolCentralTehtar @IsolDownTehtar];
+
+@CombUpTehtar = [atehta.norm ytehta.norm itehta.norm etehta.norm otehta.norm utehta.norm overbar.norm wtehta.norm engytehta.norm revetehta.norm yantatehta.norm invatehta.norm];
+@CombCentralTehtar = [dotinside.norm];
+@CombDownTehtar = [downatehta.norm downytehta.norm downitehta.norm downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm underbar.norm longcarr.lig sarincetehta.norm thinnas.norm];
+@CombTehtar = [@CombUpTehtar @CombCentralTehtar @CombDownTehtar];
+
+@VarUpTehtar = [eetehta.norm otehta.wide otehta.narrow ootehta.norm ootehta.wide ootehta.narrow uutehta.norm overbar.wide overbar.lambe overbar.silme wtehta.wide wtehta.narrow engytehta.wide otehtadot.norm utehtadot.norm];
+@VarCentralTehtar = [dotinside.conu dotinside.cond];
+@VarDownTehtar = [downeetehta.norm downutehta.wide downutehta.narrow downutehta.long underbar.wide underbar.roomen underbar.silme underbar.lambe longcarr.lig_lambe];
+@VarTehtar = [@VarUpTehtar @VarCentralTehtar @VarDownTehtar];
+
+@AnyUpTehta = [@CombUpTehtar @VarUpTehtar];
+@AnyCentralTehta = [@CombCentralTehtar @VarCentralTehtar];
+@AnyDownTehta = [@CombDownTehtar @VarDownTehtar];
+@AnyTehta = [@CombTehtar @AnyCentralTehta @VarTehtar];
+
+@OverbarTehta = [overbar.norm overbar.wide overbar.lambe overbar.silme];
+@UnderbarTehta = [underbar.norm underbar.wide underbar.roomen underbar.silme underbar.lambe];
+
+@ZWNJ = [zwnj zwnj.hidden];
+@ZWJ = [zwj zwj.hidden];
+
+@Underlinees = [tinco  tinco.conr tinco.conl tinco.conb  ando   ando.conr ando.conl ando.conb  thuule thuule.conr  anto   anto.conr  oore   oore.conr oore.conl oore.conb  nuumen nuumen.conr nuumen.conl nuumen.conb  extthuule extthuule.conr  extanto extanto.conr
+  parma  parma.conr parma.conl parma.conb  umbar  umbar.conr umbar.conl umbar.conb  formen formen.conr  ampa   ampa.conr  vala   vala.conr vala.conl vala.conb  malta  malta.conr malta.conl malta.conb  extformen extformen.conr  extampa extampa.conr
+  calma   calma.conr  anga    anga.conr  harma  harma.conr  anca   anca.conr  anna   anna.conr anna.conrbot  noldo  noldo.conr noldo.conrbot  extharma  extanca
+  quesse  quesse.conr quesse.conl quesse.conb  ungwe   ungwe.conr ungwe.conl ungwe.conb  hwesta hwesta.conr hwesta.conl hwesta.conb  unque  unque.conr unque.conl unque.conb  vilya  vilya.conr vilya.conl vilya.conb vilya.conrbot vilya.conbbot nwalme nwalme.conr nwalme.conl nwalme.conb nwalme.conrbot nwalme.conbbot  exthwesta exthwesta.conl  extunque extunque.conl
+  roomen  roomen.conl roomen.open roomen.conl_open  arda    arda.conl arda.open arda.conl_open lambe   lambe.conr lambe.conl lambe.conb lambe.conrbot lambe.conbbot alda    alda.conr alda.conl alda.conb
+  silme   silme.open silme.flat silme.lig silme.lig_open silme.lig_flat silme.lig_harma silmenuq aare    aare.open aare.flat aarenuq hyarmen hyarmen.conr hwestasin yanta   yanta.conr uure    uure.conr longcarr longcarr.conl halla   shortcarr shortcarr.conr shortcarr.conl shortcarr.conb
+  mirroredosse wtengwa atengwa.desc wtengwa.desc atengwa conncarr conncarr.long conncarr.conr openanna openanna.conl prefeanoreanqu whtengwa whtengwa.var1 whtengwa.var2 mhtengwa beleriandicmh angwhtengwa vaiya   sarince   sarince.high
+  TINCO PARMA EXTTHUULE EXTFORMEN ANDO EXTANTO AMPA MALTA THUULE OORE FORMEN VALA ANTO NUUMEN NWALME UMBAR EXTAMPA CALMA EXTHARMA QUESSE EXTHWESTA
+  ANGA UNGWE EXTUNQUE HARMA ANNA HWESTA VILYA ANCA NOLDO EXTANCA UNQUE LONGCARR HALLA SHORTCARR OPENANNA HYARMEN YANTA LAMBE ALDA ATENGWA MHTENGWA BELERIANDICMH];
+@Underliners = [uline0 uline0     uline0     uline0      uline1 uline1    uline1    uline1     uline2 uline2       uline3 uline3     uline4 uline4    uline4    uline4     uline5 uline5      uline5      uline5       uline6    uline6          uline7  uline7
+  uline0 uline0     uline0     uline0      uline1 uline1     uline1     uline1      uline2 uline2       uline3 uline3     uline4 uline4    uline4    uline4     uline5 uline5     uline5     uline5      uline6    uline6          uline7  uline7
+  uline22 uline22     uline23 uline23    uline2 uline2      uline3 uline3     uline2 uline2    uline2        uline3 uline3     uline3         uline22   uline23
+  uline22 uline22     uline22     uline22      uline23 uline23    uline23    uline23     uline2 uline2      uline2      uline2       uline3 uline3     uline3     uline3      uline2 uline2     uline2     uline2     uline2        uline2        uline3 uline3      uline3      uline3      uline3         uline3          uline22   uline22         uline23  uline23
+  uline32 uline32     uline33     uline33           uline32 uline32   uline33   uline33        uline34 uline34    uline34    uline34    uline34       uline34       uline35 uline35   uline35   uline35
+  uline36 uline36    uline36    uline37   uline37        uline37        uline37         uline38  uline39 uline39   uline39   uline40 uline41 uline42      uline43   uline41 uline45    uline46 uline47   uline48  uline48       uline49 uline49   uline49        uline49        uline49
+  uline50      uline50 uline50      uline51      uline52 uline53  uline53       uline53       uline54  uline54       uline55        uline56  uline57         uline58         uline59  uline60       uline61     uline62 uline63 uline64
+  uline65   uline65   uline65       uline65       uline66  uline66     uline68  uline68   uline67    uline67  uline67    uline67  uline68  uline68    uline68    uline69   uline69     uline70   uline70      uline70    uline70
+  uline71  uline71   uline71      uline72   uline72  uline72    uline72   uline73  uline73   uline71     uline73   uline74      uline75   uline75       uline76      uline77     uline77   uline78   uline79  uline57     uline80      uline81];
+
+
+# second order lookups (order does not matter)
+######################
+
+lookup VARIANTS {
+  sub atengwa.desc from [atengwa.desc atengwa];
+  sub tinco from [tinco.conl tinco];
+  sub parma from [parma.conl parma];
+  sub ando from [ando.conl ando];
+  sub umbar from [umbar.conl umbar];
+  sub nuumen from [nuumen.conl nuumen];
+  sub malta from [malta.conl malta];
+  sub oore from [oore.conl oore];
+  sub vala from [vala.conl vala];
+  sub roomen from [roomen.conl roomen];
+  sub arda from [arda.conl arda];
+  sub lambe from [lambe.conl lambe];
+  sub alda from [alda.conl alda];
+  sub shortcarr from [shortcarr.conl shortcarr];
+  sub longcarr from [longcarr.conl longcarr];
+  sub openanna from [openanna.conl openanna];
+  sub quesse from [quesse.conl quesse];
+  sub ungwe from [ungwe.conl ungwe];
+  sub hwesta from [hwesta.conl hwesta];
+  sub unque from [unque.conl unque];
+  sub nwalme from [nwalme.conl nwalme];
+  sub vilya from [vilya.conl vilya];
+  sub vilya.conr from [vilya.conb vilya.conr];
+  sub exthwesta from [exthwesta.conl exthwesta];
+  sub extunque from [extunque.conl extunque];
+  sub tinco.conl from [tinco.conl tinco];
+  sub parma.conl from [parma.conl parma];
+  sub ando.conl from [ando.conl ando];
+  sub umbar.conl from [umbar.conl umbar];
+  sub nuumen.conl from [nuumen.conl nuumen];
+  sub malta.conl from [malta.conl malta];
+  sub oore.conl from [oore.conl oore];
+  sub vala.conl from [vala.conl vala];
+  sub roomen.conl from [roomen.conl roomen];
+  sub arda.conl from [arda.conl arda];
+  sub lambe.conl from [lambe.conl lambe];
+  sub alda.conl from [alda.conl alda];
+  sub shortcarr.conl from [shortcarr.conl shortcarr];
+  sub longcarr.conl from [longcarr.conl longcarr];
+  sub openanna.conl from [openanna.conl openanna];
+} VARIANTS;
+
+lookup SUBSTITUTIONS {
+  sub harma by extharma;
+  sub hwesta by exthwesta;
+  sub hwesta.conl by exthwesta.conl;
+  sub tinco by tinco.lig;
+  sub calma by calma.conr;
+  sub quesse by quesse.conr;
+  sub anga by anga.conr;
+  sub ungwe by ungwe.conr;
+  sub roomen by roomen.lig;
+} SUBSTITUTIONS;
+
+
+# ordered lookups
+#################
+
+# decteng==all || decteng==init
+feature ss01 {
+  sub @Notdectengwar by @dectengwar;
+} ss01;
+
+lookup SMARTTEHTARREPLACEMENT {
+    sub @AnyTengwa @IsolTehtar' by @CombTehtar;
+} SMARTTEHTARREPLACEMENT;
+
+# decteng==init (order after SMARTTEHTARREPLACEMENT)
+feature ss02 {
   lookupflag IgnoreMarks;
-    sub @canconnectright' lookup connect @canconnectleft' lookup connect ;
-} smartconnectionright;
+  ignore sub @AnyTengwa @Notdectengwar';
+  ignore sub @AnyTengwa @ZWJ @Notdectengwar';
+  sub @Notdectengwar' by @dectengwar;
+} ss02;
+
+# ossetail (order after ss02)
+feature cv01 {
+  lookupflag IgnoreMarks;
+  # ossetail==all || ossetail==final
+  sub atengwa by atengwa.desc;
+  # ossetail==final
+  sub atengwa.desc' lookup VARIANTS @AnyTengwa;
+} cv01;
+
+# forced connections 1 (order after cv01)
+lookup TENGWAR_COMPOSITIONS1 {
+  lookupflag IgnoreMarks;
+  sub [harma hwesta hwesta.conl]' lookup SUBSTITUTIONS @ZWJ' tinco' lookup SUBSTITUTIONS;
+  sub silme' zwj harma by silme.lig_harma;
+  sub silme' zwj @AnyTengwa by silme.lig;
+  sub [calma quesse anga ungwe]' lookup SUBSTITUTIONS zwj' roomen' lookup SUBSTITUTIONS;
+} TENGWAR_COMPOSITIONS1;
+
+# default connections 1 (order after TENGWAR_COMPOSITIONS1)
+lookup TENGWAR_CONTEXTUALS1 {
+  lookupflag IgnoreMarks;
+  sub @SomeMayConR @SomeMayConL' by @SomeDoConL;
+} TENGWAR_CONTEXTUALS1;
+
+# forced connections 2 (order after TENGWAR_CONTEXTUALS1)
+lookup TENGWAR_COMPOSITIONS2a {
+  lookupflag IgnoreMarks;
+  sub @MayConR zwj @MayConL' by @DoConL;
+} TENGWAR_COMPOSITIONS2a;
+# a second pass is necessary because some signs may connect on both sides
+lookup TENGWAR_COMPOSITIONS2b {
+  lookupflag IgnoreMarks;
+  sub @MayConR' zwj @DoConL by @DoConR;
+} TENGWAR_COMPOSITIONS2b;
+
+# ss03: tengconnect (order after TENGWAR_COMPOSITIONS2b)
+lookup SET_CONNECTION1 {
+  lookupflag IgnoreMarks;
+  sub @SomeMayConR @SomeDoConL' lookup VARIANTS;
+  sub @MayConR @MayConL' lookup VARIANTS;
+} SET_CONNECTION1;
+
+# default connections 2 (order after ss03: SET_CONNECTION1)
+lookup TENGWAR_CONTEXTUALS2 {
+  lookupflag IgnoreMarks;
+  sub @MayConR' @DoConL by @DoConR;
+  sub @MayConR' sarince by @DoConR;
+  sub [roomen arda] sarince' by sarince.roomen;
+  sub [roomen arda] zwj sarince' by sarince.roomen;
+  sub conncarr' @MayConL by conncarr.conr;
+  sub conncarr.conr @MayConL' by @DoConL;
+  sub conncarr' [@Calma @Anga @Harma @Anca @Noldo @Anna @ExtHarma @ExtAnca @Hyarmen whtengwa] by conncarr.long;
+  sub conncarr' zwj [@Calma @Anga @Harma @Anca @Noldo @Anna @ExtHarma @ExtAnca @Hyarmen whtengwa] by conncarr.long;
+} TENGWAR_CONTEXTUALS2;
+
+# default connections 3 (order after TENGWAR_CONTEXTUALS2)
+lookup TENGWAR_CONTEXTUALS3 {
+  lookupflag IgnoreMarks;
+  sub @MayConRLow' sarince by @DoConRLow;
+  sub @MayConRLow' zwj sarince by @DoConRLow;
+} TENGWAR_CONTEXTUALS3;
+
+# cv02: !lowershook (order after TENGWAR_CONTEXTUALS3)
+feature cv02 {
+  sub @MayConRHigh by @DoConRHigh;
+} cv02;
+
+# default connections 4 (order after cv02)
+lookup TENGWAR_CONTEXTUALS4 {
+  sub @DoConR sarince' by sarince.high;
+} TENGWAR_CONTEXTUALS4;
+
+
+# Bare features (not important for lookup ordering)
+###############
 
 feature calt {
-  lookup smarttehtarreplacement;
-  lookup smartconnectionright;
+  lookup SMARTTEHTARREPLACEMENT;
+  lookup TENGWAR_CONTEXTUALS1;
+  lookup TENGWAR_CONTEXTUALS2;
+  lookup TENGWAR_CONTEXTUALS3;
+  lookup TENGWAR_CONTEXTUALS4;
 } calt;
 
-# GPOS 
+feature ccmp {
+  lookup TENGWAR_COMPOSITIONS1;
+  lookup TENGWAR_COMPOSITIONS2a;
+  lookup TENGWAR_COMPOSITIONS2b;
+} ccmp;
+
+feature ss03 {
+  lookup SET_CONNECTION1;
+} ss03;
+
+
+# GPOS
 
 #Mark attachment classes (defined in GDEF, used in lookupflags)
 
-@GDEF_Simple = [\section \multiply \paragraph \currency \sterling \degree 
-	\guilsinglleft \guilsinglright \trademark \numbersign \dollar \fraction 
-	\ampersand \asterisk \equal \figuredash \plus \divide \logicalnot \slash \zero 
-	\one \two \three \four \five \six 
-	\seven \eight \nine \at \A \B \C \Euro \D \E \G \H \I \J \K \L \M \N \O \Q \R \copyright 
-	\registered \U \V \X \Y \yen \Z \bracketleft \backslash \bracketright \asciicircum 
-	\underscore \braceleft \bar \brokenbar \dagger \daggerdbl \braceright 
-	\asciitilde \AE \Oslash \Eth \Thorn \T \f \f.conl \f.dotlig \f.conl_dotlig \florin 
-	\longs \germandbls 
-	\F \P \S \W \a \ordfeminine \ae \b 
-	\b.conl \c \cent \d \eth \e \g \h \h.conl \dotlessi \dotlessi.conl 
-	\k \k.conl \l \l.conl \m \m.conl \n \n.conl \eng \o \ordmasculine 
-	\oslash \p \p.conl \thorn \q \r \r.conl \r.round \s \t \t.conl \t.conr \t.conb \u 
-	\u.conl \v \v.conl \w \w.conl \x \y \y.conl \z \z.conl \interpunctdot \bullet 
-	\interpunctcomma \interpunctinvcomma \parenleft \parenright \less \greater 
-	\hyphen \endash \emdash \quotesingle \quotedbl \exclam \exclamdown \question 
-	\questiondown \space \guillemotleft \guillemotright 
-	\plusminus \percent \perthousand \onequarter \onehalf \threequarters \OE 
-	\grave \acute \circumflex \tilde 
-	\macron \dotaccent \dieresis \ring 
-	\caron \cedilla \Agrave \Aacute \Acircumflex \Atilde 
-	\Adieresis \Aring \Ccedilla \Egrave \Eacute \Ecircumflex \Edieresis \Igrave 
-	\Iacute \Icircumflex \Idieresis \Ntilde \Ograve \Oacute \Ocircumflex \Otilde 
-	\Odieresis \Ugrave \Uacute \Ucircumflex \Udieresis \Yacute \Ydieresis \Zcaron 
-	\Scaron \agrave \aacute \acircumflex \atilde \adieresis \aring \ccedilla \egrave 
-	\eacute \ecircumflex \edieresis \i \i.conl \igrave \igrave.conl \iacute 
-	\iacute.conl \icircumflex \icircumflex.conl \idieresis \idieresis.conl \j 
-	\j.conl \ntilde \ograve \oacute \ocircumflex \otilde \odieresis \oe \scaron 
-	\ugrave \ugrave.conl \uacute \uacute.conl \ucircumflex \ucircumflex.conl 
-	\udieresis \udieresis.conl \yacute \yacute.conl \ydieresis \ydieresis.conl 
-	\zcaron \period \periodcentered \comma \semicolon \quoteleft \quoteright 
-	\quotesinglbase \quotedblleft \quotedblright \quotedblbase \ellipsis 
-	\longcarr \longcarr.conl \halla \shortcarr 
-	\shortcarr.conl \shortcarr.conr \shortcarr.conb \openanna \openanna.conl \openanna.dec 
-	\silme.lig_harma \mirroredosse \prefeanoreanqu \prefeanoreanqu.var 
-	\whtengwa.var1 \whtengwa.var2 \whtengwa \hyarmen \hyarmen.conr \hyarmen.dec 
-	\yanta \yanta.conr \yanta.dec \roomen \roomen.conl \arda 
-	\arda.conl \roomen.open \roomen.conl_open \arda.open 
-	\arda.conl_open \lambe \lambe.conr \lambe.conl \lambe.conb 
-	\lambe.dec \lambe.conrbot \lambe.conbbot \alda \alda.conr 
-	\alda.conl \alda.conb \alda.dec \silme \silme.flat \silme.open 
-	\silme.lig \silme.lig_flat \silme.lig_open \silmenuq \aare 
-	\aare.flat \aare.open \aarenuq \uure \uure.conr \atengwa 
-	\atengwa.desc \atengwa.dec \wtengwa \wtengwa.desc \hwestasin \vaiya \angwhtengwa 
-	\sarince \sarince.high \conncarr \conncarr.long \conncarr.conr 
+@GDEF_Simple = [section multiply paragraph currency sterling degree
+	guilsinglleft guilsinglright trademark numbersign dollar fraction
+	ampersand asterisk equal figuredash plus divide logicalnot slash zero
+	one two three four five six
+	seven eight nine at A B C Euro D E G H I J K L M N O Q R copyright
+	registered U V X Y yen Z bracketleft backslash bracketright asciicircum
+	underscore braceleft bar brokenbar dagger daggerdbl braceright
+	asciitilde AE Oslash Eth Thorn T f f.conl f.dotlig f.conl_dotlig florin
+	longs germandbls
+	F P S W a ordfeminine ae b
+	b.conl c cent d eth e g h h.conl dotlessi dotlessi.conl
+	k k.conl l l.conl m m.conl n n.conl eng o ordmasculine
+	oslash p p.conl thorn q r r.conl r.round s t t.conl t.conr t.conb u
+	u.conl v v.conl w w.conl x y y.conl z z.conl interpunctdot bullet
+	interpunctcomma interpunctinvcomma parenleft parenright less greater
+	hyphen endash emdash quotesingle quotedbl exclam exclamdown question
+	questiondown space guillemotleft guillemotright
+	plusminus percent perthousand onequarter onehalf threequarters OE
+	grave acute circumflex tilde
+	macron dotaccent dieresis ring
+	caron cedilla Agrave Aacute Acircumflex Atilde
+	Adieresis Aring Ccedilla Egrave Eacute Ecircumflex Edieresis Igrave
+	Iacute Icircumflex Idieresis Ntilde Ograve Oacute Ocircumflex Otilde
+	Odieresis Ugrave Uacute Ucircumflex Udieresis Yacute Ydieresis Zcaron
+	Scaron agrave aacute acircumflex atilde adieresis aring ccedilla egrave
+	eacute ecircumflex edieresis i i.conl igrave igrave.conl iacute
+	iacute.conl icircumflex icircumflex.conl idieresis idieresis.conl j
+	j.conl ntilde ograve oacute ocircumflex otilde odieresis oe scaron
+	ugrave ugrave.conl uacute uacute.conl ucircumflex ucircumflex.conl
+	udieresis udieresis.conl yacute yacute.conl ydieresis ydieresis.conl
+	zcaron period periodcentered comma semicolon quoteleft quoteright
+	quotesinglbase quotedblleft quotedblright quotedblbase ellipsis
+	longcarr longcarr.conl halla shortcarr
+	shortcarr.conl shortcarr.conr shortcarr.conb openanna openanna.conl OPENANNA
+	silme.lig_harma mirroredosse prefeanoreanqu prefeanoreanqu.var
+	whtengwa.var1 whtengwa.var2 whtengwa hyarmen hyarmen.conr HYARMEN
+	yanta yanta.conr YANTA roomen roomen.conl arda
+	arda.conl roomen.open roomen.conl_open arda.open
+	arda.conl_open lambe lambe.conr lambe.conl lambe.conb
+	LAMBE lambe.conrbot lambe.conbbot alda alda.conr
+	alda.conl alda.conb ALDA silme silme.flat silme.open
+	silme.lig silme.lig_flat silme.lig_open silmenuq aare
+	aare.flat aare.open aarenuq uure uure.conr atengwa
+	atengwa.desc ATENGWA wtengwa wtengwa.desc hwestasin vaiya angwhtengwa
+	sarince sarince.high conncarr conncarr.long conncarr.conr
 	];
-@GDEF_Mark = [\utehta.norm \otehta.norm \atehta.norm \itehta.norm 
-	\etehta.norm ];
+@GDEF_Mark = [@AnyTehta];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;
 
 } GDEF;
-
