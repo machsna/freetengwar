@@ -135,6 +135,16 @@ languagesystem latn dflt;
 @OverbarTehta = [overbar.norm overbar.wide overbar.lambe overbar.silme];
 @UnderbarTehta = [underbar.norm underbar.wide underbar.roomen underbar.silme underbar.lambe];
 
+@MayWidenTehta = [overbar.norm underbar.norm otehta.norm wtehta.norm engytehta.norm];
+@DoWidenTehta = [overbar.wide underbar.wide otehta.wide wtehta.wide engytehta.wide];
+@Otehta = [otehta.norm];
+@MayHaveLambeFormTehta = [otehta.norm overbar.norm underbar.norm engytehta.norm];
+@DoHaveLambeFormTehta = [otehta.wide overbar.lambe underbar.lambe engytehta.wide];
+@LongcarrTehta = [longcarr.lig];
+@Downutehta = [downutehta.norm];
+@Wtehta = [wtehta.norm];
+@OtehtaOotehta = [otehta.norm ootehta.norm];
+
 @ZWNJ = [zwnj zwnj.hidden];
 @ZWJ = [zwj zwj.hidden];
 
@@ -202,6 +212,7 @@ lookup VARIANTS {
   sub shortcarr.conl from [shortcarr.conl shortcarr];
   sub longcarr.conl from [longcarr.conl longcarr];
   sub openanna.conl from [openanna.conl openanna];
+  sub whtengwa from [whtengwa.var1 whtengwa.var2];
 } VARIANTS;
 
 lookup SUBSTITUTIONS {
@@ -225,8 +236,15 @@ feature ss01 {
   sub @Notdectengwar by @dectengwar;
 } ss01;
 
+# forced connections 1
+lookup TENGWAR_COMPOSITIONS_1 {
+  sub zwj longcarr by longcarr.tehta;
+} TENGWAR_COMPOSITIONS_1;
+
+# smart tehtar replacement
 lookup SMARTTEHTARREPLACEMENT {
     sub @AnyTengwa @IsolTehtar' by @CombTehtar;
+    sub @CombTehtar @IsolTehtar' by @CombTehtar;
 } SMARTTEHTARREPLACEMENT;
 
 # decteng==init (order after SMARTTEHTARREPLACEMENT)
@@ -246,33 +264,33 @@ feature cv01 {
   sub atengwa.desc' lookup VARIANTS @AnyTengwa;
 } cv01;
 
-# forced connections 1 (order after cv01)
-lookup TENGWAR_COMPOSITIONS1 {
+# forced connections 2 (order after cv01)
+lookup TENGWAR_COMPOSITIONS_2 {
   lookupflag IgnoreMarks;
   sub [harma hwesta hwesta.conl]' lookup SUBSTITUTIONS @ZWJ' tinco' lookup SUBSTITUTIONS;
   sub silme' zwj harma by silme.lig_harma;
   sub silme' zwj @AnyTengwa by silme.lig;
   sub [calma quesse anga ungwe]' lookup SUBSTITUTIONS zwj' roomen' lookup SUBSTITUTIONS;
-} TENGWAR_COMPOSITIONS1;
+} TENGWAR_COMPOSITIONS_2;
 
-# default connections 1 (order after TENGWAR_COMPOSITIONS1)
-lookup TENGWAR_CONTEXTUALS1 {
+# default connections 1 (order after TENGWAR_COMPOSITIONS_2)
+lookup TENGWAR_CONTEXTUALS_1 {
   lookupflag IgnoreMarks;
   sub @SomeMayConR @SomeMayConL' by @SomeDoConL;
-} TENGWAR_CONTEXTUALS1;
+} TENGWAR_CONTEXTUALS_1;
 
-# forced connections 2 (order after TENGWAR_CONTEXTUALS1)
-lookup TENGWAR_COMPOSITIONS2a {
+# forced connections 3 (order after TENGWAR_CONTEXTUALS_1)
+lookup TENGWAR_COMPOSITIONS_3a {
   lookupflag IgnoreMarks;
   sub @MayConR zwj @MayConL' by @DoConL;
-} TENGWAR_COMPOSITIONS2a;
+} TENGWAR_COMPOSITIONS_3a;
 # a second pass is necessary because some signs may connect on both sides
-lookup TENGWAR_COMPOSITIONS2b {
+lookup TENGWAR_COMPOSITIONS_3b {
   lookupflag IgnoreMarks;
   sub @MayConR' zwj @DoConL by @DoConR;
-} TENGWAR_COMPOSITIONS2b;
+} TENGWAR_COMPOSITIONS_3b;
 
-# ss03: tengconnect (order after TENGWAR_COMPOSITIONS2b)
+# ss03: tengconnect (order after TENGWAR_COMPOSITIONS_3b)
 lookup SET_CONNECTION1 {
   lookupflag IgnoreMarks;
   sub @SomeMayConR @SomeDoConL' lookup VARIANTS;
@@ -280,7 +298,7 @@ lookup SET_CONNECTION1 {
 } SET_CONNECTION1;
 
 # default connections 2 (order after ss03: SET_CONNECTION1)
-lookup TENGWAR_CONTEXTUALS2 {
+lookup TENGWAR_CONTEXTUALS_2 {
   lookupflag IgnoreMarks;
   sub @MayConR' @DoConL by @DoConR;
   sub @MayConR' sarince by @DoConR;
@@ -290,41 +308,153 @@ lookup TENGWAR_CONTEXTUALS2 {
   sub conncarr.conr @MayConL' by @DoConL;
   sub conncarr' [@Calma @Anga @Harma @Anca @Noldo @Anna @ExtHarma @ExtAnca @Hyarmen whtengwa] by conncarr.long;
   sub conncarr' zwj [@Calma @Anga @Harma @Anca @Noldo @Anna @ExtHarma @ExtAnca @Hyarmen whtengwa] by conncarr.long;
-} TENGWAR_CONTEXTUALS2;
+} TENGWAR_CONTEXTUALS_2;
 
-# default connections 3 (order after TENGWAR_CONTEXTUALS2)
-lookup TENGWAR_CONTEXTUALS3 {
+# default connections 3 (order after TENGWAR_CONTEXTUALS_2)
+lookup TENGWAR_CONTEXTUALS_3 {
   lookupflag IgnoreMarks;
   sub @MayConRLow' sarince by @DoConRLow;
   sub @MayConRLow' zwj sarince by @DoConRLow;
-} TENGWAR_CONTEXTUALS3;
+} TENGWAR_CONTEXTUALS_3;
 
-# cv02: !lowershook (order after TENGWAR_CONTEXTUALS3)
+# cv02: !lowershook (order after TENGWAR_CONTEXTUALS_3)
 feature cv02 {
+  lookupflag IgnoreMarks;
   sub @MayConRHigh by @DoConRHigh;
 } cv02;
 
 # default connections 4 (order after cv02)
-lookup TENGWAR_CONTEXTUALS4 {
+lookup TENGWAR_CONTEXTUALS_4 {
+  lookupflag IgnoreMarks;
   sub @DoConR sarince' by sarince.high;
-} TENGWAR_CONTEXTUALS4;
+  sub [roomen roomen.conl ROOMEN arda arda.conl ARDA]' @AnyDownTehta by [roomen.open roomen.conl_open ROOMEN.open arda.open arda.conl_open ARDA.open] ;
+} TENGWAR_CONTEXTUALS_4;
 
+# default connections 4 (order after cv02)
+lookup TENGWAR_CONTEXTUALS_4 {
+  lookupflag IgnoreMarks;
+  sub @DoConR sarince' by sarince.high;
+  sub [roomen roomen.conl ROOMEN arda arda.conl ARDA]' @AnyDownTehta by [roomen.open roomen.conl_open ROOMEN.open arda.open arda.conl_open ARDA.open] ;
+} TENGWAR_CONTEXTUALS_4;
+
+# default connections 4 (order after cv02)
+lookup TENGWAR_CONTEXTUALS_4 {
+  lookupflag IgnoreMarks;
+  sub @DoConR sarince' by sarince.high;
+} TENGWAR_CONTEXTUALS_4;
+
+# variant forms depending on tehtar 1 (order after TENGWAR_CONTEXTUALS_4)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_01 {
+  lookupflag UseMarkFilteringSet @AnyDownTehta;
+  sub [roomen roomen.conl ROOMEN arda arda.conl ARDA]' @AnyDownTehta by [roomen.open roomen.conl_open ROOMEN.open arda.open arda.conl_open ARDA.open] ;
+} TENGWAR_TEHTAR_CONTEXTUALS_01;
+
+# variant forms depending on tehtar 2 (order after TENGWAR_TEHTAR_CONTEXTUALS_01)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_02 {
+  lookupflag UseMarkFilteringSet @AnyUpTehta;
+  sub [silme silme.lig SILME aare AARE]' @AnyUpTehta by [silme.flat silme.lig_flat SILME.flat aare.flat AARE.flat];
+} TENGWAR_TEHTAR_CONTEXTUALS_02;
+
+# cv03: silmepref==right (order after TENGWAR_TEHTAR_CONTEXTUALS_02)
+feature cv03 {
+  sub [silme.flat silme.lig_flat SILME.flat aare.flat AARE.flat] by [silme.open silme.lig_open SILME.open aare.open AARE.open];
+} cv03;
+
+# simple substitutions (order after cv03)
+# (this is pointless; consider changing the metafont generation instead)
+lookup SIMPLE_SUBSTITUTIONS {
+  sub wtengwa by wtengwa.desc;
+} SIMPLE_SUBSTITUTIONS;
+
+# cv04: descwtengwa (order after SIMPLE_SUBSTITUTIONS)
+feature cv04 {
+  sub wtengwa.desc by wtengwa;
+} cv04;
+
+#cv05: whtengwavar (order after cv04)
+feature cv05 {
+  sub whtengwa' lookup VARIANTS;
+} cv05;
+
+# variant forms depending on tehtar 3 (order after cv05)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_03 {
+  lookupflag UseMarkFilteringSet @UnderbarTehta;
+  sub @Roomen underbar.norm' by underbar.roomen;
+  sub [@SilmeNuq @AareNuq] underbar.norm' by underbar.silme;
+} TENGWAR_TEHTAR_CONTEXTUALS_03;
+
+# variant forms depending on tehtar 4 (order after TENGWAR_TEHTAR_CONTEXTUALS_03)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_04 {
+  lookupflag UseMarkFilteringSet @MayWidenTehta;
+  sub @WideTengwar @MayWidenTehta' by @DoWidenTehta;
+} TENGWAR_TEHTAR_CONTEXTUALS_04;
+
+# variant forms depending on tehtar 5 (order after TENGWAR_TEHTAR_CONTEXTUALS_04)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_05 {
+  lookupflag UseMarkFilteringSet @Otehta;
+  sub [@Tinco @Parma @Thuule @Formen @Oore @Vala @ExtThuule @ExtFormen @OpenAnna @BeleriandicMh] otehta.norm' by otehta.wide;
+} TENGWAR_TEHTAR_CONTEXTUALS_05;
+
+# variant forms depending on tehtar 6 (order after TENGWAR_TEHTAR_CONTEXTUALS_05)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_06 {
+  lookupflag UseMarkFilteringSet @MayHaveLambeFormTehta;
+  sub [@Lambe @Alda] @MayHaveLambeFormTehta' by @DoHaveLambeFormTehta;
+} TENGWAR_TEHTAR_CONTEXTUALS_06;
+
+# variant forms depending on tehtar 7 (order after TENGWAR_TEHTAR_CONTEXTUALS_06)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_07 {
+  lookupflag UseMarkFilteringSet @LongcarrTehta;
+  sub @Lambe longcarr.lig' by longcarr.lig_lambe;
+} TENGWAR_TEHTAR_CONTEXTUALS_07;
+
+# variant forms depending on tehtar 8 (order after TENGWAR_TEHTAR_CONTEXTUALS_07)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_08 {
+  lookupflag UseMarkFilteringSet @Downutehta;
+  sub [@Roomen @Arda @Lambe @Alda @AngWhtengwa] downutehta.norm' by downutehta.long;
+  sub [@Tinco @Parma @ExtThuule @ExtFormen] downutehta.norm' by downutehta.narrow;
+  sub @WideTengwar downutehta.norm' by downutehta.wide;
+} TENGWAR_TEHTAR_CONTEXTUALS_08;
+
+# variant forms depending on tehtar 9 (order after TENGWAR_TEHTAR_CONTEXTUALS_08)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_09 {
+  lookupflag UseMarkFilteringSet @Wtehta;
+  sub [@StemUpRightTengwar @StemUpLeftTengwar @NarrowTengwar] wtehta.norm' by wtehta.narrow;
+} TENGWAR_TEHTAR_CONTEXTUALS_09;
+
+# variant forms depending on tehtar 10 (order after TENGWAR_TEHTAR_CONTEXTUALS_09)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_10 {
+  lookupflag UseMarkFilteringSet @OtehtaOotehta;
+  sub @NarrowTengwar [otehta.norm ootehta.norm]' @StemUpLeftTengwar by [otehta.narrow ootehta.narrow];
+  sub @StemUpRightTengwar [otehta.norm ootehta.norm]' by [otehta.narrow ootehta.narrow];
+} TENGWAR_TEHTAR_CONTEXTUALS_10;
 
 # Bare features (not important for lookup ordering)
 ###############
 
 feature calt {
   lookup SMARTTEHTARREPLACEMENT;
-  lookup TENGWAR_CONTEXTUALS1;
-  lookup TENGWAR_CONTEXTUALS2;
-  lookup TENGWAR_CONTEXTUALS3;
-  lookup TENGWAR_CONTEXTUALS4;
+  lookup TENGWAR_CONTEXTUALS_1;
+  lookup TENGWAR_CONTEXTUALS_2;
+  lookup TENGWAR_CONTEXTUALS_3;
+  lookup TENGWAR_CONTEXTUALS_4;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_01;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_02;
+  lookup SIMPLE_SUBSTITUTIONS;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_03;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_04;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_05;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_06;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_07;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_08;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_09;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_10;
 } calt;
 
 feature ccmp {
-  lookup TENGWAR_COMPOSITIONS1;
-  lookup TENGWAR_COMPOSITIONS2a;
-  lookup TENGWAR_COMPOSITIONS2b;
+  lookup TENGWAR_COMPOSITIONS_1;
+  lookup TENGWAR_COMPOSITIONS_2;
+  lookup TENGWAR_COMPOSITIONS_3a;
+  lookup TENGWAR_COMPOSITIONS_3b;
 } ccmp;
 
 feature ss03 {
