@@ -144,6 +144,7 @@ languagesystem latn dflt;
 @Downutehta = [downutehta.norm];
 @Wtehta = [wtehta.norm];
 @OtehtaOotehta = [otehta.norm ootehta.norm];
+@Dotinside = [dotinside.norm];
 
 @ZWNJ = [zwnj zwnj.hidden];
 @ZWJ = [zwj zwj.hidden];
@@ -428,6 +429,29 @@ lookup TENGWAR_TEHTAR_CONTEXTUALS_10 {
   sub @StemUpRightTengwar [otehta.norm ootehta.norm]' by [otehta.narrow ootehta.narrow];
 } TENGWAR_TEHTAR_CONTEXTUALS_10;
 
+# forced connections 4 (order after TENGWAR_TEHTAR_CONTEXTUALS_10)
+lookup TENGWAR_COMPOSITIONS_4 {
+  sub itehta.norm itehta.norm by ytehta.norm;
+  sub etehta.norm etehta.norm by eetehta.norm;
+  sub downetehta.norm downetehta.norm by downeetehta.norm;
+  sub otehta.narrow otehta.narrow by ootehta.narrow;
+  sub otehta.norm otehta.norm by ootehta.norm;
+  sub otehta.wide otehta.wide by ootehta.wide;
+  sub utehta.norm utehta.norm by uutehta.norm;
+  sub itehta.norm utehta.norm by utehtadot.norm;
+  sub utehta.norm itehta.norm by utehtadot.norm;
+  sub itehta.norm [otehta.narrow otehta.norm otehta.wide] by otehtadot.norm;
+  sub [otehta.narrow otehta.norm otehta.wide] itehta.norm by otehtadot.norm;
+} TENGWAR_COMPOSITIONS_4;
+
+# forced connections 5 (order after TENGWAR_COMPOSITIONS_4)
+lookup TENGWAR_COMPOSITIONS_5 {
+  lookupflag UseMarkFilteringSet @Dotinside;
+  sub [@Quesse @Ungwe @Hwesta @Unque @Nwalme @Vilya @ExtHwesta @ExtUnque] dotinside.norm' by dotinside.conu;
+  sub [@Parma @Umbar @Formen @Ampa @Malta @Vala @ExtFormen @ExtAmpa @PreFeaQu @BeleriandicMh] dotinside.norm' by dotinside.cond;
+} TENGWAR_COMPOSITIONS_5;
+
+
 # Bare features (not important for lookup ordering)
 ###############
 
@@ -455,6 +479,8 @@ feature ccmp {
   lookup TENGWAR_COMPOSITIONS_2;
   lookup TENGWAR_COMPOSITIONS_3a;
   lookup TENGWAR_COMPOSITIONS_3b;
+  lookup TENGWAR_COMPOSITIONS_4;
+  lookup TENGWAR_COMPOSITIONS_5;
 } ccmp;
 
 feature ss03 {
