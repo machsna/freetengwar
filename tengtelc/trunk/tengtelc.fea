@@ -885,7 +885,13 @@ lookup TENGWAR_TEHTAR_CONTEXTUALS_10 {
   sub @StemUpRightTengwar [otehta.norm ootehta.norm]' by [otehta.narrow ootehta.narrow];
 } TENGWAR_TEHTAR_CONTEXTUALS_10;
 
-# forced connections 4 (order after TENGWAR_TEHTAR_CONTEXTUALS_10)
+# variant forms depending on tehtar 11 (order after TENGWAR_TEHTAR_CONTEXTUALS_10)
+lookup TENGWAR_TEHTAR_CONTEXTUALS_11 {
+  lookupflag UseMarkFilteringSet @OverbarTehta;
+  sub [@Silme @Aare] overbar.norm' by overbar.silme;
+} TENGWAR_TEHTAR_CONTEXTUALS_11;
+
+# forced connections 4 (order after TENGWAR_TEHTAR_CONTEXTUALS_11)
 lookup TENGWAR_COMPOSITIONS_4 {
   sub itehta.norm itehta.norm by ytehta.norm;
   sub etehta.norm etehta.norm by eetehta.norm;
@@ -950,6 +956,7 @@ feature calt {
   lookup TENGWAR_TEHTAR_CONTEXTUALS_08;
   lookup TENGWAR_TEHTAR_CONTEXTUALS_09;
   lookup TENGWAR_TEHTAR_CONTEXTUALS_10;
+  lookup TENGWAR_TEHTAR_CONTEXTUALS_11;
 } calt;
 
 feature ccmp {
@@ -1233,6 +1240,68 @@ lookup OVERBAR_RIGHT {
   position base [extthuule extthuule.conr] <anchor 793 1011> mark @OVERBAR_RIGHT_ANCHOR;
   position base [thuule thuule.conr] <anchor 796 1011> mark @OVERBAR_RIGHT_ANCHOR;
 } OVERBAR_RIGHT;
+lookup LEFT_UPTEHTA {
+  # not defined for overbar.lambe
+  @LEFT_UPTEHTA_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @LEFT_UPTEHTA_LOOKUP;
+  markClass [revetehta.norm] <anchor -153 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [engytehta.norm] <anchor 102 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [overbar.silme] <anchor 118 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [itehta.norm] <anchor 128 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [engytehta.wide] <anchor 141 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [etehta.norm eetehta.norm] <anchor 149 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [wtehta.narrow] <anchor 192 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [otehta.narrow] <anchor 218 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [utehtadot.norm utehta.norm] <anchor 234 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [atehta.norm invatehta.norm] <anchor 294 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [ytehta.norm] <anchor 320 986> @LEFT_UPTEHTA_ANCHOR;
+  markClass [yantatehta.norm] <anchor 324 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [wtehta.norm] <anchor 358 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [ootehta.narrow] <anchor 369 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [otehtadot.norm otehta.norm] <anchor 389 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [uutehta.norm] <anchor 39 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [otehta.wide] <anchor 411 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [wtehta.wide] <anchor 486 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [overbar.wide] <anchor 51 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [ootehta.norm] <anchor 565 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [ootehta.wide] <anchor 596 1011> @LEFT_UPTEHTA_ANCHOR;
+  markClass [overbar.norm] <anchor 77 1011> @LEFT_UPTEHTA_ANCHOR;
+  position base [aare.flat] <anchor 617 1114> mark @LEFT_UPTEHTA_ANCHOR;
+  position base [silme.flat] <anchor 639 1088> mark @LEFT_UPTEHTA_ANCHOR;
+  position base [silme.lig_flat] <anchor 662 1088> mark @LEFT_UPTEHTA_ANCHOR;
+} LEFT_UPTEHTA;
+lookup RIGHT_UPTEHTA {
+  # not defined for overbar.lambe
+  @RIGHT_UPTEHTA_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @RIGHT_UPTEHTA_LOOKUP;
+  markClass [engytehta.norm] <anchor -102 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [overbar.silme] <anchor -118 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [etehta.norm eetehta.norm] <anchor -130 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [engytehta.wide] <anchor -141 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [otehtadot.norm otehta.norm] <anchor -154 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [wtehta.narrow] <anchor -192 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [otehta.wide] <anchor -214 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [itehta.norm] <anchor -256 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [overbar.wide] <anchor -26 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [yantatehta.norm] <anchor -265 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [atehta.norm invatehta.norm] <anchor -294 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [utehtadot.norm utehta.norm] <anchor -304 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [ytehta.norm] <anchor -320 986> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [wtehta.norm] <anchor -358 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [ootehta.wide] <anchor -38 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [uutehta.norm] <anchor -474 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [wtehta.wide] <anchor -486 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [revetehta.norm] <anchor -74 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [overbar.norm] <anchor -77 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [otehta.narrow] <anchor 0 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [ootehta.norm] <anchor 11 1011> @RIGHT_UPTEHTA_ANCHOR;
+  markClass [ootehta.narrow] <anchor 133 1011> @RIGHT_UPTEHTA_ANCHOR;
+  position base [HYARMEN] <anchor 1003 1272> mark @RIGHT_UPTEHTA_ANCHOR;
+  position base [silme.open] <anchor 609 883> mark @RIGHT_UPTEHTA_ANCHOR;
+  position base [silme.lig_open] <anchor 630 883> mark @RIGHT_UPTEHTA_ANCHOR;
+  position base [aare.open] <anchor 664 883> mark @RIGHT_UPTEHTA_ANCHOR;
+  position base [hyarmen hyarmen.conr] <anchor 665 1139> mark @RIGHT_UPTEHTA_ANCHOR;
+} RIGHT_UPTEHTA;
 lookup UPTEHTA_UPTEHTA {
   # this is not defined if the preceding tehta is overbar.silme
   @UPTEHTA_UPTEHTA_LOOKUP = [@AnyUpTehta];
@@ -1425,8 +1494,9 @@ lookup LAMBE_DOWNTEHTA {
   position base [LAMBE] <anchor 967 210> mark @LAMBE_DOWNTEHTA_ANCHOR;
 } LAMBE_DOWNTEHTA;
 lookup ALDA_DOWNTEHTA {
-  @ALDA_DOWNTEHTA_LOOKUP = [underbar.lambe];
+  @ALDA_DOWNTEHTA_LOOKUP = [underbar.lambe downutehta.long];
   lookupflag UseMarkFilteringSet @ALDA_DOWNTEHTA_LOOKUP;
+  markClass [downutehta.long] <anchor 230 102> @ALDA_DOWNTEHTA_ANCHOR;
   markClass [underbar.lambe] <anchor -181 -538> @ALDA_DOWNTEHTA_ANCHOR;
   position base [alda.conl] <anchor 809 236> mark @ALDA_DOWNTEHTA_ANCHOR;
   position base [alda] <anchor 809 243> mark @ALDA_DOWNTEHTA_ANCHOR;
@@ -1434,6 +1504,44 @@ lookup ALDA_DOWNTEHTA {
   position base [alda.conr] <anchor 809 246> mark @ALDA_DOWNTEHTA_ANCHOR;
   position base [ALDA] <anchor 967 299> mark @ALDA_DOWNTEHTA_ANCHOR;
 } ALDA_DOWNTEHTA;
+lookup RIGHT_DOWNTEHTA {
+  # not defined for [thinnas.norm downotehta.norm downutehta.norm downutehta.narrow downutehta.wide underbar.lambe sarincetehta.norm ]
+  @RIGHT_DOWNTEHTA_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @RIGHT_DOWNTEHTA_LOOKUP;
+  markClass [underbar.silme] <anchor -118 -128> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [downetehta.norm downeetehta.norm] <anchor -130 -128> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [downitehta.norm] <anchor -230 -77> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [dblunderstroke.norm longcarr.lig longcarr.lig_lambe] <anchor -256 -128> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [underbar.roomen] <anchor -256 -205> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [downytehta.norm] <anchor -294 -102> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [downatehta.norm] <anchor -294 -128> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [underbar.norm underbar.wide] <anchor -51 -166> @RIGHT_DOWNTEHTA_ANCHOR;
+  markClass [downutehta.long] <anchor 77 128> @RIGHT_DOWNTEHTA_ANCHOR;
+######### the following must be fixed in another place!
+#  position base [downutehta.long] <anchor 0 -256> mark @RIGHT_DOWNTEHTA_ANCHOR;
+  position base [angwhtengwa] <anchor 325 -128> mark @RIGHT_DOWNTEHTA_ANCHOR;
+  position base [roomen.open roomen.conl_open arda.open arda.conl_open] <anchor 461 -179> mark @RIGHT_DOWNTEHTA_ANCHOR;
+} RIGHT_DOWNTEHTA;
+lookup LEFT_DOWNTEHTA {
+  # not defined for [thinnas.norm downotehta.norm downutehta.norm downutehta.narrow downutehta.wide downutehta.long underbar.roomen underbar.lambe longcarr.lig longcarr.lig_lambe sarincetehta.norm]
+  @LEFT_DOWNTEHTA_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @LEFT_DOWNTEHTA_LOOKUP;
+  markClass [underbar.silme] <anchor 118 -128> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [downetehta.norm downeetehta.norm] <anchor 149 -128> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [downitehta.norm] <anchor 230 -77> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [dblunderstroke.norm] <anchor 256 -128> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [downytehta.norm] <anchor 294 -102> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [downatehta.norm] <anchor 294 -128> @LEFT_DOWNTEHTA_ANCHOR;
+  markClass [underbar.norm underbar.wide] <anchor 51 -166> @LEFT_DOWNTEHTA_ANCHOR;
+  position base [mhtengwa] <anchor 1086 -128> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [MHTENGWA] <anchor 1273 -128> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [aarenuq] <anchor 323 -438> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [silmenuq] <anchor 623 0> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [alda.conr] <anchor 658 -123> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [alda alda.conb] <anchor 658 -125> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [alda.conl] <anchor 658 -131> mark @LEFT_DOWNTEHTA_ANCHOR;
+  position base [ALDA] <anchor 875 -97> mark @LEFT_DOWNTEHTA_ANCHOR;
+} LEFT_DOWNTEHTA;
 lookup DOWNTEHTA_DOWNTEHTA {
   # this is not defined if the preceding tehta is underbar.roomen or underbar.silme!!!
   @DOWNTEHTA_DOWNTEHTA_LOOKUP = [@AnyDownTehta];
@@ -1450,29 +1558,40 @@ lookup DOWNTEHTA_DOWNTEHTA {
   position mark [longcarr.lig longcarr.lig_lambe] <anchor 0 -128> mark @DOWNTEHTA_ANCHOR;
   position mark [sarincetehta.norm] <anchor 0 -512> mark @DOWNTEHTA_ANCHOR;
 } DOWNTEHTA_DOWNTEHTA;
-lookup LAMBE_AND_ALDA_DOWNTEHTA_COMBOS {
-  @LAMBE_AND_ALDA_DOWNTEHTA_COMBOS_LOOKUP = [@AnyDownTehta];
+lookup ADJUST_LAMBE_OR_ALDA_DOWNTEHTA {
+  @ADJUST_LAMBE_OR_ALDA_DOWNTEHTA_LOOKUP = [@AnyDownTehta];
   @AnyDownTehtaButUnderbar = [downatehta.norm downytehta.norm downitehta.norm downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm underbar.norm longcarr.lig sarincetehta.norm thinnas.norm downeetehta.norm downutehta.wide downutehta.narrow downutehta.long longcarr.lig_lambe];
-  lookupflag UseMarkFilteringSet @LAMBE_AND_ALDA_DOWNTEHTA_COMBOS_LOOKUP;
+  lookupflag UseMarkFilteringSet @ADJUST_LAMBE_OR_ALDA_DOWNTEHTA_LOOKUP;
+  position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA [downutehta.long longcarr.lig_lambe]' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
+  position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA [downutehta.long longcarr.lig_lambe]' lookup LAMBE_DOWNTEHTA;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA_DOWNTEHTA;
-  position @Alda underbar.lambe' lookup ALDA_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
+  position @Alda [underbar.lambe downutehta.long]' lookup ALDA_DOWNTEHTA @AnyDownTehta' lookup LEFT_DOWNTEHTA;
   position @Lambe @AnyDownTehtaButUnderbar' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
-} LAMBE_AND_ALDA_DOWNTEHTA_COMBOS;
+} ADJUST_LAMBE_OR_ALDA_DOWNTEHTA;
+lookup ADJUST_LAMBE_DOWNTEHTA {
+  @ADJUST_LAMBE_DOWNTEHTA_LOOKUP = [downutehta.long longcarr.lig_lambe];
+  lookupflag UseMarkFilteringSet @ADJUST_LAMBE_DOWNTEHTA_LOOKUP;
+  position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA [downutehta.long longcarr.lig_lambe]' lookup LAMBE_DOWNTEHTA;
+} ADJUST_LAMBE_DOWNTEHTA;
 
 feature mark {
   lookup TEHTA_INSIDE;
   lookup UPTEHTA;
   lookup OVERBAR_LEFT;
   lookup OVERBAR_RIGHT;
+  lookup LEFT_UPTEHTA;
+  lookup RIGHT_UPTEHTA;
 # UPTEHTA_UPTEHTA
   lookup DOWNTEHTA;
   lookup UNDERBAR_LEFT;
   lookup UNDERBAR_RIGHT;
+  lookup RIGHT_DOWNTEHTA;
+  lookup LEFT_DOWNTEHTA;
   lookup LAMBE_DOWNTEHTA;
   lookup ALDA_DOWNTEHTA;
 # DOWNTEHTA_DOWNTEHTA
-  lookup LAMBE_AND_ALDA_DOWNTEHTA_COMBOS;
+  lookup ADJUST_LAMBE_OR_ALDA_DOWNTEHTA;
 } mark;
 
 feature mkmk {
