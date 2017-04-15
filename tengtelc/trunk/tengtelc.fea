@@ -860,7 +860,8 @@ lookup TENGWAR_TEHTAR_CONTEXTUALS_06 {
 
 # variant forms depending on tehtar 7 (order after TENGWAR_TEHTAR_CONTEXTUALS_06)
 lookup TENGWAR_TEHTAR_CONTEXTUALS_07 {
-  lookupflag UseMarkFilteringSet @LongcarrTehta;
+  @TENGWAR_TEHTAR_CONTEXTUALS_07_LOOKUP = @AnyDownTehta;
+  lookupflag UseMarkFilteringSet @TENGWAR_TEHTAR_CONTEXTUALS_07_LOOKUP;
   sub @Lambe longcarr.lig' by longcarr.lig_lambe;
 } TENGWAR_TEHTAR_CONTEXTUALS_07;
 
@@ -1180,6 +1181,100 @@ lookup UPTEHTA {
   position base [AARE] <anchor 993 1016> mark @UPTEHTA_ANCHOR;
   position base [unque unque.conr unque.conl unque.conb] <anchor 995 1011> mark @UPTEHTA_ANCHOR;
 } UPTEHTA;
+lookup UPTEHTA_SHIFT_1 {
+  @UPTEHTA_SHIFT_1_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_1_LOOKUP;
+  markClass [utehta.norm] <anchor 125 1011> @UPTEHTA_SHIFT_1_ANCHOR;
+  position base [roomen roomen.conl roomen.lig arda arda.conl roomen.open roomen.conl_open arda.open arda.conl_open] <anchor 582 1011> mark @UPTEHTA_SHIFT_1_ANCHOR;
+  position base [ROOMEN ROOMEN.open ARDA ARDA.open] <anchor 704 1144> mark @UPTEHTA_SHIFT_1_ANCHOR;
+} UPTEHTA_SHIFT_1;
+lookup UPTEHTA_SHIFT_2 {
+  @UPTEHTA_SHIFT_2_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_2_LOOKUP;
+  markClass [otehta.norm] <anchor 120 1011> @UPTEHTA_SHIFT_2_ANCHOR;
+  position base [roomen roomen.conl roomen.lig arda arda.conl roomen.open roomen.conl_open arda.open arda.conl_open] <anchor 582 1011> mark @UPTEHTA_SHIFT_2_ANCHOR;
+  position base [ROOMEN ROOMEN.open ARDA ARDA.open] <anchor 704 1144> mark @UPTEHTA_SHIFT_2_ANCHOR;
+} UPTEHTA_SHIFT_2;
+lookup UPTEHTA_SHIFT_3 {
+  @UPTEHTA_SHIFT_3_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_3_LOOKUP;
+  markClass [otehta.wide] <anchor 190 1011> @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [TINCO OORE] <anchor 1011 1144> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [THUULE EXTTHUULE] <anchor 1088 1144> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [tinco.lig] <anchor 307 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [beleriandicmh] <anchor 726 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [tinco tinco.conr] <anchor 766 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [tinco.conl tinco.conb oore oore.conr oore.conl oore.conb] <anchor 767 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [extthuule extthuule.conr] <anchor 793 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [thuule thuule.conr] <anchor 796 1011> mark @UPTEHTA_SHIFT_3_ANCHOR;
+  position base [BELERIANDICMH] <anchor 969 1144> mark @UPTEHTA_SHIFT_3_ANCHOR;
+} UPTEHTA_SHIFT_3;
+lookup UPTEHTA_SHIFT_4 {
+  @UPTEHTA_SHIFT_4_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_4_LOOKUP;
+  markClass [otehta.wide] <anchor 170 1011> @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [UNQUE] <anchor 1029 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [EXTUNQUE] <anchor 1033 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [EXTFORMEN] <anchor 1045 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [FORMEN] <anchor 1046 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [openanna openanna.conl] <anchor 624 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [OPENANNA] <anchor 637 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [parma parma.conr] <anchor 725 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [parma.conl parma.conb vala vala.conr] <anchor 726 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [vala.conl vala.conb] <anchor 727 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [extformen extformen.conr] <anchor 753 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [formen formen.conr] <anchor 756 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [PARMA VALA] <anchor 969 1144> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [extunque extunque.conl] <anchor 992 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+  position base [unque unque.conr unque.conl unque.conb] <anchor 995 1011> mark @UPTEHTA_SHIFT_4_ANCHOR;
+} UPTEHTA_SHIFT_4;
+lookup UPTEHTA_SHIFT_5 {
+  @UPTEHTA_SHIFT_5_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_5_LOOKUP;
+  markClass [otehta.wide] <anchor 150 1011> @UPTEHTA_SHIFT_5_ANCHOR;
+  position base [anga anga.conr noldo noldo.conr noldo.conrbot] <anchor 1009 1011> mark @UPTEHTA_SHIFT_5_ANCHOR;
+  position base [ANGA NOLDO] <anchor 1047 1144> mark @UPTEHTA_SHIFT_5_ANCHOR;
+  position base [anca anca.conr extanca] <anchor 945 1011> mark @UPTEHTA_SHIFT_5_ANCHOR;
+  position base [ANCA EXTANCA] <anchor 983 1144> mark @UPTEHTA_SHIFT_5_ANCHOR;
+} UPTEHTA_SHIFT_5;
+lookup UPTEHTA_SHIFT_6 {
+  @UPTEHTA_SHIFT_6_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_6_LOOKUP;
+#  markClass [atehta.norm invatehta.norm ytehta.norm itehta.norm etehta.norm eetehta.norm revetehta.norm utehtadot.norm utehta.norm uutehta.norm otehtadot.norm otehta.norm otehta.wide otehta.narrow ootehta.norm ootehta.wide ootehta.narrow overbar.norm overbar.lambe overbar.wide overbar.silme engytehta.norm engytehta.wide yantatehta.norm wtehta.narrow wtehta.norm wtehta.wide] <anchor 0 1011> @UPTEHTA_SHIFT_6_ANCHOR;
+  markClass [otehta.norm] <anchor -120 1011> @UPTEHTA_SHIFT_6_ANCHOR;
+  position base [shortcarr shortcarr.conr] <anchor 275 1011> mark @UPTEHTA_SHIFT_6_ANCHOR;
+  position base [longcarr] <anchor 279 1011> mark @UPTEHTA_SHIFT_6_ANCHOR;
+  position base [LONGCARR SHORTCARR] <anchor 394 1144> mark @UPTEHTA_SHIFT_6_ANCHOR;
+  position base [atengwa atengwa.desc] <anchor 586 1011> mark @UPTEHTA_SHIFT_6_ANCHOR;
+  position base [ATENGWA] <anchor 677 1144> mark @UPTEHTA_SHIFT_6_ANCHOR;
+} UPTEHTA_SHIFT_6;
+lookup UPTEHTA_SHIFT_7 {
+  @UPTEHTA_SHIFT_7_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_7_LOOKUP;
+  markClass [otehta.narrow] <anchor 125 1011> @UPTEHTA_SHIFT_7_ANCHOR;
+  position base [exthwesta exthwesta.conl] <anchor 619 1011> mark @UPTEHTA_SHIFT_7_ANCHOR;
+  position base [hwesta hwesta.conr hwesta.conl hwesta.conb] <anchor 621 1011> mark @UPTEHTA_SHIFT_7_ANCHOR;
+  position base [HWESTA] <anchor 639 1144> mark @UPTEHTA_SHIFT_7_ANCHOR;
+  position base [EXTHWESTA] <anchor 643 1144> mark @UPTEHTA_SHIFT_7_ANCHOR;
+} UPTEHTA_SHIFT_7;
+lookup UPTEHTA_SHIFT_8 {
+  @UPTEHTA_SHIFT_8_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_8_LOOKUP;
+  markClass [utehta.norm] <anchor 130 1011> @UPTEHTA_SHIFT_8_ANCHOR;
+  position base [exthwesta exthwesta.conl] <anchor 619 1011> mark @UPTEHTA_SHIFT_8_ANCHOR;
+  position base [hwesta hwesta.conr hwesta.conl hwesta.conb] <anchor 621 1011> mark @UPTEHTA_SHIFT_8_ANCHOR;
+  position base [HWESTA] <anchor 639 1144> mark @UPTEHTA_SHIFT_8_ANCHOR;
+  position base [EXTHWESTA] <anchor 643 1144> mark @UPTEHTA_SHIFT_8_ANCHOR;
+} UPTEHTA_SHIFT_8;
+lookup UPTEHTA_SHIFT_9 {
+  @UPTEHTA_SHIFT_9_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_SHIFT_9_LOOKUP;
+  markClass [wtehta.narrow] <anchor 60 1011> @UPTEHTA_SHIFT_9_ANCHOR;
+  position base [exthwesta exthwesta.conl] <anchor 619 1011> mark @UPTEHTA_SHIFT_9_ANCHOR;
+  position base [hwesta hwesta.conr hwesta.conl hwesta.conb] <anchor 621 1011> mark @UPTEHTA_SHIFT_9_ANCHOR;
+  position base [HWESTA] <anchor 639 1144> mark @UPTEHTA_SHIFT_9_ANCHOR;
+  position base [EXTHWESTA] <anchor 643 1144> mark @UPTEHTA_SHIFT_9_ANCHOR;
+} UPTEHTA_SHIFT_9;
 lookup OVERBAR_LEFT {
   # not defined for overbar.lambe
   @OVERBAR_LEFT_LOOKUP = [@AnyUpTehta];
@@ -1302,6 +1397,13 @@ lookup UPTEHTA_RIGHT {
   position base [aare.open] <anchor 664 883> mark @UPTEHTA_RIGHT_ANCHOR;
   position base [hyarmen hyarmen.conr] <anchor 665 1139> mark @UPTEHTA_RIGHT_ANCHOR;
 } UPTEHTA_RIGHT;
+lookup UPTEHTA_RIGHT_SHIFT_1 {
+  @UPTEHTA_RIGHT_SHIFT_1_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_RIGHT_SHIFT_1_LOOKUP;
+  markClass [itehta.norm] <anchor -156 1011> @UPTEHTA_RIGHT_SHIFT_1_ANCHOR;
+  position base [silme.open] <anchor 609 883> mark @UPTEHTA_RIGHT_SHIFT_1_ANCHOR;
+  position base [aare.open] <anchor 664 883> mark @UPTEHTA_RIGHT_SHIFT_1_ANCHOR;
+} UPTEHTA_RIGHT_SHIFT_1;
 lookup UPTEHTA_UPTEHTA {
   # this is not defined if the preceding tehta is overbar.silme
   @UPTEHTA_UPTEHTA_LOOKUP = [@AnyUpTehta];
@@ -1316,6 +1418,13 @@ lookup UPTEHTA_UPTEHTA {
   position mark [itehta.norm] <anchor 0 1472> mark @UPTEHTA_ANCHOR;
   position mark [atehta.norm invatehta.norm otehtadot.norm otehta.norm otehta.wide otehta.narrow ootehta.norm ootehta.wide ootehta.narrow] <anchor 0 1651> mark @UPTEHTA_ANCHOR;
 } UPTEHTA_UPTEHTA;
+lookup UPTEHTA_UPTEHTA_SHIFT_1 {
+  # this is not defined if the preceding tehta is overbar.silme
+  @UPTEHTA_UPTEHTA_SHIFT_1_LOOKUP = [@AnyUpTehta];
+  lookupflag UseMarkFilteringSet @UPTEHTA_UPTEHTA_SHIFT_1_LOOKUP;
+  markClass [atehta.norm] <anchor -60 1011> @UPTEHTA_UPTEHTA_SHIFT_1_ANCHOR;
+  position mark [wtehta.norm] <anchor 0 1293> mark @UPTEHTA_UPTEHTA_SHIFT_1_ANCHOR;
+} UPTEHTA_UPTEHTA_SHIFT_1;
 lookup ADJUST_SILME_UPTEHTA_LEFT {
   @ADJUST_SILME_UPTEHTA_LEFT_LOOKUP = [@AnyUpTehta];
   lookupflag UseMarkFilteringSet @ADJUST_SILME_UPTEHTA_LEFT_LOOKUP;
@@ -1443,6 +1552,149 @@ lookup DOWNTEHTA {
   position base [unque unque.conr unque.conl unque.conb] <anchor 995 -128> mark @DOWNTEHTA_ANCHOR;
   position base [extampa extampa.conr] <anchor 999 -128> mark @DOWNTEHTA_ANCHOR;
 } DOWNTEHTA;
+lookup DOWNTEHTA_SHIFT_1 {
+  @DOWNTEHTA_SHIFT_1_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_1_LOOKUP;
+  markClass [sarincetehta.norm] <anchor -85 -128> @DOWNTEHTA_SHIFT_1_ANCHOR;
+  position base [TINCO] <anchor 1062 -128> mark @DOWNTEHTA_SHIFT_1_ANCHOR;
+  position base [tinco.lig] <anchor 282 -128> mark @DOWNTEHTA_SHIFT_1_ANCHOR;
+  position base [tinco tinco.conr] <anchor 817 -128> mark @DOWNTEHTA_SHIFT_1_ANCHOR;
+  position base [tinco.conl tinco.conb] <anchor 818 -128> mark @DOWNTEHTA_SHIFT_1_ANCHOR;
+} DOWNTEHTA_SHIFT_1;
+lookup DOWNTEHTA_SHIFT_2 {
+  @DOWNTEHTA_SHIFT_2_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_2_LOOKUP;
+  markClass [sarincetehta.norm] <anchor -320 -128> @DOWNTEHTA_SHIFT_2_ANCHOR;
+  position base [PARMA] <anchor 1020 -128> mark @DOWNTEHTA_SHIFT_2_ANCHOR;
+  position base [parma parma.conr] <anchor 776 -128> mark @DOWNTEHTA_SHIFT_2_ANCHOR;
+  position base [parma.conl parma.conb] <anchor 777 -128> mark @DOWNTEHTA_SHIFT_2_ANCHOR;
+} DOWNTEHTA_SHIFT_2;
+lookup DOWNTEHTA_SHIFT_3 {
+  @DOWNTEHTA_SHIFT_3_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_3_LOOKUP;
+  markClass [downotehta.norm] <anchor 400 -128> @DOWNTEHTA_SHIFT_3_ANCHOR;
+  position base [harma harma.conr] <anchor 623 -128> mark @DOWNTEHTA_SHIFT_3_ANCHOR;
+  position base [HARMA] <anchor 645 -128> mark @DOWNTEHTA_SHIFT_3_ANCHOR;
+} DOWNTEHTA_SHIFT_3;
+lookup DOWNTEHTA_SHIFT_4 {
+  @DOWNTEHTA_SHIFT_4_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_4_LOOKUP;
+  markClass [downotehta.norm] <anchor -75 -128> @DOWNTEHTA_SHIFT_4_ANCHOR;
+  position base [atengwa] <anchor 502 -128> mark @DOWNTEHTA_SHIFT_4_ANCHOR;
+} DOWNTEHTA_SHIFT_4;
+lookup DOWNTEHTA_SHIFT_5 {
+  @DOWNTEHTA_SHIFT_5_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_5_LOOKUP;
+  markClass [downatehta.norm] <anchor 150 -128> @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [UNGWE] <anchor 1000 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [EXTUNQUE] <anchor 1007 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [PARMA EXTFORMEN] <anchor 1020 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [nuumen nuumen.conr] <anchor 1025 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [nuumen.conl nuumen.conb] <anchor 1026 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [BELERIANDICMH] <anchor 1027 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [UNQUE] <anchor 1029 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [NWALME] <anchor 1032 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [extanto extanto.conr] <anchor 1039 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [umbar umbar.conr] <anchor 1048 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [umbar.conl umbar.conb] <anchor 1049 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [TINCO EXTTHUULE] <anchor 1062 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [mhtengwa] <anchor 1086 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ando ando.conr] <anchor 1088 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ando.conl ando.conb] <anchor 1089 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [MALTA] <anchor 1243 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [AMPA] <anchor 1244 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [MHTENGWA] <anchor 1273 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ANTO NUUMEN] <anchor 1286 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [EXTAMPA] <anchor 1307 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [UMBAR] <anchor 1308 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ANDO EXTANTO] <anchor 1350 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [tinco.lig] <anchor 282 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [longcarr] <anchor 283 -947> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [longcarr.conl] <anchor 293 -947> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [halla] <anchor 302 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [shortcarr shortcarr.conl shortcarr.conr shortcarr.conb] <anchor 303 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [conncarr conncarr.long conncarr.conr] <anchor 307 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [aarenuq] <anchor 323 -438> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [angwhtengwa] <anchor 325 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [AARENUQ] <anchor 369 -498> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [LONGCARR] <anchor 394 -1029> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [sarince.high] <anchor 404 -67> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [HALLA SHORTCARR] <anchor 410 -256> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [sarince] <anchor 437 -773> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [roomen roomen.conl roomen.lig arda arda.conl roomen.open roomen.conl_open arda.open arda.conl_open] <anchor 461 -179> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [mirroredosse] <anchor 500 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [atengwa atengwa.desc] <anchor 502 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ATENGWA] <anchor 535 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [silme silme.flat silme.open] <anchor 542 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [aare aare.flat aare.open] <anchor 542 -571> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [calma calma.conr extharma] <anchor 546 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ROOMEN ROOMEN.open ARDA ARDA.open] <anchor 546 -179> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [prefeanoreanqu prefeanoreanqu.var] <anchor 548 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [uure uure.conr] <anchor 555 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [silme.lig silme.lig_flat silme.lig_open] <anchor 560 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [whtengwa] <anchor 561 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [CALMA EXTHARMA silme.lig_harma] <anchor 568 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [wtengwa] <anchor 570 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [wtengwa.desc] <anchor 570 -590> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [whtengwa.var1] <anchor 582 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [hwestasin vaiya] <anchor 584 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [quesse quesse.conl quesse.conr quesse.conb] <anchor 590 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [exthwesta exthwesta.conl] <anchor 593 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [openanna openanna.conl] <anchor 594 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [QUESSE] <anchor 610 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [formen formen.conr SILME SILME.flat SILME.open] <anchor 615 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [AARE AARE.flat AARE.open] <anchor 615 -631> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [EXTHWESTA] <anchor 617 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [hyarmen hyarmen.conr HYARMEN yanta yanta.conr YANTA] <anchor 619 -77> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [harma harma.conr anna anna.conr anna.conrbot] <anchor 623 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [silmenuq] <anchor 623 0> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [HARMA ANNA] <anchor 645 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [thuule thuule.conr] <anchor 656 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [alda.conr] <anchor 658 -123> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [alda alda.conb] <anchor 658 -125> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [alda.conl] <anchor 658 -131> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [whtengwa.var2] <anchor 659 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [vala vala.conr] <anchor 662 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [vala.conl vala.conb] <anchor 663 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [vilya vilya.conl vilya.conr vilya.conb vilya.conrbot vilya.conbbot] <anchor 664 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [hwesta hwesta.conr hwesta.conl hwesta.conb] <anchor 672 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [HWESTA] <anchor 690 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [VILYA] <anchor 693 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [oore oore.conr oore.conl oore.conb] <anchor 703 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [SILMENUQ] <anchor 711 0> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [extformen extformen.conr] <anchor 727 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [beleriandicmh] <anchor 737 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [OPENANNA] <anchor 742 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [extthuule extthuule.conr] <anchor 768 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [lambe lambe.conr lambe.conl lambe.conb] <anchor 773 -548> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [lambe.conrbot lambe.conbbot] <anchor 773 -638> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [parma parma.conr] <anchor 776 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [parma.conl parma.conb] <anchor 777 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [tinco tinco.conr] <anchor 817 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [tinco.conl tinco.conb] <anchor 818 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ALDA] <anchor 875 -97> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [FORMEN VALA] <anchor 905 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [anga anga.conr extanca] <anchor 919 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [LAMBE] <anchor 921 -585> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ampa ampa.conr] <anchor 938 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [anca anca.conr noldo noldo.conr noldo.conrbot] <anchor 945 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [THUULE OORE] <anchor 947 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ANGA EXTANCA] <anchor 958 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ungwe ungwe.conl ungwe.conr ungwe.conb] <anchor 963 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [extunque extunque.conl] <anchor 967 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [anto anto.conr] <anchor 978 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [ANCA NOLDO] <anchor 983 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [malta malta.conr malta.conl malta.conb] <anchor 985 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [nwalme nwalme.conl nwalme.conr nwalme.conb nwalme.conrbot nwalme.conbbot] <anchor 987 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [unque unque.conr unque.conl unque.conb] <anchor 995 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+  position base [extampa extampa.conr] <anchor 999 -128> mark @DOWNTEHTA_SHIFT_5_ANCHOR;
+} DOWNTEHTA_SHIFT_5;
+lookup DOWNTEHTA_SHIFT_6 {
+  @DOWNTEHTA_SHIFT_6_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_SHIFT_6_LOOKUP;
+  markClass [downitehta.norm] <anchor 0 -278> @DOWNTEHTA_SHIFT_6_ANCHOR;
+  position base [hyarmen hyarmen.conr HYARMEN yanta yanta.conr YANTA] <anchor 619 -77> mark @DOWNTEHTA_SHIFT_6_ANCHOR;
+} DOWNTEHTA_SHIFT_6;
 lookup UNDERBAR_LEFT {
   # not defined for underbar.lambe
   @UNDERBAR_LEFT_LOOKUP = [@AnyDownTehta];
@@ -1564,6 +1816,18 @@ lookup DOWNTEHTA_DOWNTEHTA {
   position mark [longcarr.lig longcarr.lig_lambe] <anchor 0 -128> mark @DOWNTEHTA_ANCHOR;
   position mark [sarincetehta.norm] <anchor 0 -512> mark @DOWNTEHTA_ANCHOR;
 } DOWNTEHTA_DOWNTEHTA;
+lookup DOWNTEHTA_DOWNTEHTA_SHIFT_1 {
+  @DOWNTEHTA_DOWNTEHTA_SHIFT_1_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_DOWNTEHTA_SHIFT_1_LOOKUP;
+  markClass [longcarr.lig] <anchor -346 -478> @DOWNTEHTA_DOWNTEHTA_SHIFT_1_ANCHOR;
+  position mark [downutehta.long] <anchor 0 -256> mark @DOWNTEHTA_DOWNTEHTA_SHIFT_1_ANCHOR;
+} DOWNTEHTA_DOWNTEHTA_SHIFT_1;
+lookup DOWNTEHTA_DOWNTEHTA_SHIFT_2 {
+  @DOWNTEHTA_DOWNTEHTA_SHIFT_2_LOOKUP = [@AnyDownTehta];
+  lookupflag UseMarkFilteringSet @DOWNTEHTA_DOWNTEHTA_SHIFT_2_LOOKUP;
+  markClass [longcarr.lig] <anchor -450 -588> @DOWNTEHTA_DOWNTEHTA_SHIFT_2_ANCHOR;
+  position mark [downatehta.norm] <anchor 0 -640> mark @DOWNTEHTA_DOWNTEHTA_SHIFT_2_ANCHOR;
+} DOWNTEHTA_DOWNTEHTA_SHIFT_2;
 lookup ALDA_DOWNTEHTA {
   @ALDA_DOWNTEHTA_LOOKUP = [underbar.lambe downutehta.long];
   lookupflag UseMarkFilteringSet @ALDA_DOWNTEHTA_LOOKUP;
@@ -1591,33 +1855,57 @@ lookup ADJUST_LAMBE_OR_ALDA_DOWNTEHTA {
   @ADJUST_LAMBE_OR_ALDA_DOWNTEHTA_LOOKUP = [@AnyDownTehta];
   @AnyDownTehtaButUnderbar = [downatehta.norm downytehta.norm downitehta.norm downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm underbar.norm longcarr.lig sarincetehta.norm thinnas.norm downeetehta.norm downutehta.wide downutehta.narrow downutehta.long longcarr.lig_lambe];
   lookupflag UseMarkFilteringSet @ADJUST_LAMBE_OR_ALDA_DOWNTEHTA_LOOKUP;
+  position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA downutehta.long' lookup LAMBE_DOWNTEHTA longcarr.lig' lookup DOWNTEHTA_DOWNTEHTA_SHIFT_1;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA [downutehta.long longcarr.lig_lambe]' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
+  position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA downutehta.long' lookup DOWNTEHTA_DOWNTEHTA longcarr.lig' lookup DOWNTEHTA_DOWNTEHTA_SHIFT_1;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA [downutehta.long longcarr.lig_lambe]' lookup LAMBE_DOWNTEHTA;
   position @Lambe underbar.lambe' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA_DOWNTEHTA;
   position @Alda [underbar.lambe downutehta.long]' lookup ALDA_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA_LEFT;
+  position @Lambe downutehta.long' lookup LAMBE_DOWNTEHTA longcarr.lig' lookup DOWNTEHTA_DOWNTEHTA_SHIFT_1;
   position @Lambe @AnyDownTehtaButUnderbar' lookup LAMBE_DOWNTEHTA @AnyDownTehta' lookup DOWNTEHTA;
+  position [silme.lig_harma] @ZWJ @Harma [downotehta.norm]' lookup DOWNTEHTA_SHIFT_3;
+  position downatehta.norm' lookup DOWNTEHTA_SHIFT_5 longcarr.lig' lookup DOWNTEHTA_DOWNTEHTA_SHIFT_2;
 } ADJUST_LAMBE_OR_ALDA_DOWNTEHTA;
 
 feature mark {
   # mkmk lookups and second order lookups are included so this list is an overview of the actual order
   lookup TEHTA_INSIDE;
   lookup UPTEHTA;
+  lookup UPTEHTA_SHIFT_1;
+  lookup UPTEHTA_SHIFT_2;
+  lookup UPTEHTA_SHIFT_3;
+  lookup UPTEHTA_SHIFT_4;
+  lookup UPTEHTA_SHIFT_5;
+  lookup UPTEHTA_SHIFT_6;
+  lookup UPTEHTA_SHIFT_7;
+  lookup UPTEHTA_SHIFT_8;
+  lookup UPTEHTA_SHIFT_9;
   lookup OVERBAR_LEFT;
   lookup OVERBAR_RIGHT;
   lookup UPTEHTA_LEFT;
   lookup UPTEHTA_RIGHT;
+  lookup UPTEHTA_RIGHT_SHIFT_1;
 # UPTEHTA_UPTEHTA (implemented by mkmk)
+# UPTEHTA_UPTEHTA_SHIFT_1 (implemented by mkmk)
 ## ADJUST_SILME_UPTEHTA_LEFT (implemented by mkmk) (second order lookup)
 ## ADJUST_SILME_UPTEHTA_RIGHT (implemented by mkmk) (second order lookup)
 # ADJUST_SILME_UPTEHTA (implemented by mkmk)
   lookup DOWNTEHTA;
+  lookup DOWNTEHTA_SHIFT_1;
+  lookup DOWNTEHTA_SHIFT_2;
+## DOWNTEHTA_SHIFT_3 (second order lookup)
+  lookup DOWNTEHTA_SHIFT_4;
+## DOWNTEHTA_SHIFT_5 (second order lookup)
+  lookup DOWNTEHTA_SHIFT_6;
   lookup UNDERBAR_LEFT;
   lookup UNDERBAR_RIGHT;
   lookup DOWNTEHTA_LEFT;
   lookup DOWNTEHTA_RIGHT;
   lookup LAMBE_DOWNTEHTA;
 # DOWNTEHTA_DOWNTEHTA (implemented by mkmk)
+## DOWNTEHTA_DOWNTEHTA_SHIFT_1 (second order lookup)
+## DOWNTEHTA_DOWNTEHTA_SHIFT_2 (second order lookup)
   lookup ALDA_DOWNTEHTA;
 # ADJUST_ROOMEN_DOWNTEHTA (implemented by mkmk)
 # ADJUST_SILMENUQUERNA_DOWNTEHTA (implemented by mkmk)
@@ -1626,6 +1914,7 @@ feature mark {
 
 feature mkmk {
   lookup UPTEHTA_UPTEHTA;
+  lookup UPTEHTA_UPTEHTA_SHIFT_1;
 ## ADJUST_SILME_UPTEHTA_LEFT (second order lookup)
 ## ADJUST_SILME_UPTEHTA_RIGHT (second order lookup)
   lookup ADJUST_SILME_UPTEHTA;
@@ -1633,6 +1922,25 @@ feature mkmk {
   lookup ADJUST_ROOMEN_DOWNTEHTA;
   lookup ADJUST_SILMENUQUERNA_DOWNTEHTA;
 } mkmk;
+
+feature kern {
+  lookupflag IgnoreMarks;
+  position [silme.lig silme.lig_flat silme.lig_open]' 105 @ZWJ [@Calma @Anga @Harma @Anca @Noldo @Anna @Uure];
+# maybe delete the next one?
+  position [silme.lig silme.lig_flat silme.lig_open]' 10 @ZWJ [@Quesse @Ungwe @Hwesta @Unque @Nwalme @Vilya];
+  position [silme.lig silme.lig_flat silme.lig_open]' -50 @ZWJ [@Roomen @Arda];
+  position [silme.lig silme.lig_flat silme.lig_open]' -90 @ZWJ [@Lambe];
+  position [silme.lig silme.lig_flat silme.lig_open]' 115 @ZWJ [@Silme];
+  position [@Roomen @Arda]' -150 [@Hyarmen @Yanta];
+  position @Hyarmen' -110 @Roomen;
+  position @Yanta' -160 @Roomen;
+  position [conncarr]' -135 [@SilmeNuq @AareNuq @HwestaSin @Yanta @Uure @Atengwa @Vaiya];
+  position [@Tinco @Ando @Thuule @Anto @Nuumen @Oore @ExtThuule @ExtAnto @Roomen @Arda @Silme @Uure @AngWhtengwa]' -80 @Aare;
+  position [startmodechange quoteleft quotedblleft]' -100 [@Tinco @Parma @Quesse @Ando @Umbar @Ungwe @Hwesta @Unque @Nuumen @Malta @Nwalme @Oore @Vala @Vilya @ExtHwesta @ExtUnque @Roomen @Arda @Lambe @Alda silme aare @Yanta @Mhtengwa @BeleriandicMh];
+  position [startmodechange quoteleft quotedblleft]' -200 [@Anga @Harma @SilmeNuq @AareNuq @HwestaSin @Uure @Wtengwa @Atengwa @PreFeaQu @Vaiya];
+  position [startmodechange quoteleft quotedblleft]' -300 [@Calma @Anca @Noldo @Anna @ExtHarma @ExtAnca];
+  position [@Tinco @Ando @Thuule @Anto @ExtThuule @ExtAnto @Nuumen @Oore @Roomen @Arda @Silme @Uure @AngWhtengwa]' -150 [endmodechange quoteright quotedblright];
+} kern;
 
 
 
