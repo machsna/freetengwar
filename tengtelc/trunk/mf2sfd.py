@@ -31,10 +31,10 @@ import re
 import os
 fn=sys.argv[1].strip();
 
-print "Running MetaFont."
+print("Running MetaFont.")
 os.system("mf \"\\mode:=pixpt; mag:=300; input %s.mf\"" % fn)
 
-print "Generating enc, pe and gdh file."
+print("Generating enc, pe and gdh file.")
 charnames=[]
 for i in range(256):
   charnames.append('.notdef')
