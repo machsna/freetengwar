@@ -153,7 +153,6 @@ def endchr =
     fi
     if not isrefchar:
       message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";
-      message "pe: Simplify(0,1,0,0,1,5000); Simplify(2,1,0,0,1,5000);";
       if hasattached:
          if tracing: message "pe: UnlinkReference(); RemoveOverlap();"; message""; fi
       fi
