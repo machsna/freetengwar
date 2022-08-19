@@ -1,18 +1,13 @@
 #!/bin/bash
 
-# Generating ttf-files:
-
 python3 mf2sfd.py underline
 
-python3 mf2sfd.py latinr
-python3 mf2sfd.py tengwarr
-fontforge -script tengtelc.py regular
-
-python3 mf2sfd.py latinb
-python3 mf2sfd.py tengwarb
-fontforge -script tengtelc.py bold
-
-# Some cleaning up:
+for WEIGHT in 100 200 300 400 500 600 700 800 900
+do
+	python3 mf2sfd.py latin $WEIGHT
+	python3 mf2sfd.py tengwar $WEIGHT
+	fontforge -script tengtelc.py $WEIGHT
+done
 
 rm -f underline.21681gf
 rm -f underline.log
@@ -20,41 +15,25 @@ rm -f underline.enc
 rm -f underline.pe
 rm -f underline.pk
 rm -f underline.tfm
-#rm -f underline.sfd
+rm -f underline.sfd
 
-rm -f latinr.21681gf
-rm -f latinr.log
-rm -f latinr.enc
-rm -f latinr.pe
-rm -f latinr.pk
-rm -f latinr.tfm
-#rm -f latinr.sfd
+rm -f latin.21681gf
+rm -f latin.log
+rm -f latin.enc
+rm -f latin.pe
+rm -f latin.pk
+rm -f latin.tfm
+rm -f latin???.sfd
+rm -f latin???.gdh
 
-rm -f tengwarr.21681gf
-rm -f tengwarr.log
-rm -f tengwarr.enc
-rm -f tengwarr.pe
-rm -f tengwarr.pk
-rm -f tengwarr.tfm
-#rm -f tengwarr.sfd
+rm -f tengwar.21681gf
+rm -f tengwar.log
+rm -f tengwar.enc
+rm -f tengwar.pe
+rm -f tengwar.pk
+rm -f tengwar.tfm
+rm -f tengwar???.sfd
+rm -f tengwar???.gdh
 
-rm -f latinb.21681gf
-rm -f latinb.log
-rm -f latinb.enc
-rm -f latinb.pe
-rm -f latinb.pk
-rm -f latinb.tfm
-#rm -f latinb.sfd
-
-rm -f tengwarb.21681gf
-rm -f tengwarb.log
-rm -f tengwarb.enc
-rm -f tengwarb.pe
-rm -f tengwarb.pk
-rm -f tengwarb.tfm
-#rm -f tengwarb.sfd
-
-# Adding Graphite tables:
-
-. ./addgr.bat
-
+rm -f tengtelc???.gdl
+rm -f tengtelc???.ttf

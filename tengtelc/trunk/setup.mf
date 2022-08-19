@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2022 Johan Winge
 
 designsize:=10pt#;
 
@@ -48,12 +48,43 @@ roomenarda=27;
 narrow=28; wide=29;
 
 interpunctsize=1.1;
+decsep = 0.4pt;
 
 % Change the following number to set the horizontal stretch.
 currenttransform := identity xscaled 1.0;
 
 string font_ps_name, font_name, font_weight, font_copyright, font_version;
 
-font_copyright:="Copyright (c) 2005-2010 by Johan Winge, 2009-2010 J. 'Mach' Wust.";
+font_copyright:="Copyright (c) 2005-2022 by Johan Winge, 2009-2022 J. 'Mach' Wust.";
 font_version="0.09";
 
+if known weight:
+if weight = 100:
+  font_weight := "Thin";
+  tecil_w := 0.590pt; tecil_h := 0.13pt;
+elseif weight = 200:
+  font_weight := "Extra-Light";
+  tecil_w := 0.675pt; tecil_h := 0.15pt;
+elseif weight = 300:
+  font_weight := "Light";
+  tecil_w := 0.760pt; tecil_h := 0.17pt;
+elseif weight = 400:
+  font_weight := "Regular";
+  tecil_w := 0.845pt; tecil_h := 0.19pt;
+elseif weight = 500:
+  font_weight := "Medium";
+  tecil_w := 0.930pt; tecil_h := 0.21pt;
+elseif weight = 600:
+  font_weight := "Semi-Bold";
+  tecil_w := 1.015pt; tecil_h := 0.23pt;
+elseif weight = 700:
+  font_weight := "Bold";
+  tecil_w := 1.100pt; tecil_h := 0.25pt;
+elseif weight = 800:
+  font_weight := "Extra-Bold";
+  tecil_w := 1.185pt; tecil_h := 0.27pt;
+elseif weight = 900:
+  font_weight := "Black";
+  tecil_w := 1.270pt; tecil_h := 0.29pt;
+fi
+fi

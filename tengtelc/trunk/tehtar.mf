@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2022 Johan Winge
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -33,7 +33,7 @@ dotsize1=1.03; dotsize2=1.04; dotsize3=1.09;
 beginchr(atehta&".norm",0);
   z0=(0,tex+2.2pt);
   y1=y2=y0-1.1pt;
-  x2-x1=1.3pt;
+  x2-x1=max(1.3pt, 1.18tecil_w);
   x0=1/2[x1,x2];
   draw_dot(0)(dotsize1);
   draw_dot(1)(dotsize1);
@@ -48,7 +48,7 @@ combinechr(atehta,dottedcircle,"uap",atehta&".norm","dap");
 beginchr(downatehta&".norm",0);
   z0=(0,-2.2pt);
   y1=y2=y0+1.1pt;
-  x2-x1=1.3pt;
+  x2-x1=max(1.3pt, 1.18tecil_w);
   x0=1/2[x1,x2];
   draw_dot(0)(dotsize1);
   draw_dot(1)(dotsize1);
@@ -64,7 +64,7 @@ combinechr(downatehta,dottedcircle,"dap",downatehta&".norm","uap");
 beginchr(invatehta&".norm",0);
   z0=(0,tex+1.1pt);
   y1=y2=y0+1.1pt;
-  x2-x1=1.3pt;
+  x2-x1=max(1.3pt, 1.18tecil_w);
   x0=1/2[x1,x2];
   draw_dot(0)(dotsize1);
   draw_dot(1)(dotsize1);
@@ -217,7 +217,6 @@ beginchr(thinnas&".norm",0);
   setap("dap",(0,-3pt));
 endchr;
 combinechr(thinnas,dottedcircle,"dap",thinnas&".norm","uap");
-pause;
 
 def get_utehta_path(suffix $)(expr v,l,cent) =
   a$a:=v-5; a$b:=35; a$c:=35;
@@ -262,19 +261,15 @@ enddef;
 beginchr("utehtadot.norm",0);
   draw_utehta(60,2.2pt,dotlig,ascend)
 endchr;
-pause;
 beginchr(utehta&".norm",0);
   draw_utehta(60,2.2pt,single,ascend)
 endchr;
-pause;
 beginchr(utehta&".wide",0);
   draw_utehta(50,2.3pt,single,ascend)
 endchr;
-pause;
 beginchr(utehta&".narrow",0);
   draw_utehta(65,2.1pt,single,ascend)
 endchr;
-pause;
 combinechr(utehta,dottedcircle,"uap",utehta&".norm","dap");
 
 beginchr(uutehta&".norm",0);
@@ -335,7 +330,6 @@ enddef;
 beginchr("otehtadot.norm",0);
   draw_otehta(60,2.4pt,dotlig,ascend);
 endchr;
-pause;
 beginchr(otehta&".norm",0);
   draw_otehta(60,2.4pt,single,ascend);
 endchr;
@@ -371,7 +365,6 @@ beginchr(downutehta&".wide",0);
   draw_otehta(57,3.2pt,single,descend);
   setap("uap",(-0.6pt,-apy));
 endchr;
-pause;
 beginchr(downutehta&".long",0);
   draw_otehta(55,4.0pt,single,descend);
   setap("luap",(0.3pt,-apy+1pt));
@@ -763,7 +756,8 @@ endchr;
 
 beginchr(startmodechange,1.0en);
   a1=a2=a3=a4=35;
-  x2-x1=1.15pt;
+  use(a1); rt x1prim + 0.4pt = lft x2;
+  x2-x1=max(1.15pt, x2-x1prim);
   1/2[x1,x2]=1/2w;
   x3=x1; x4=x2;
   y1=y2-0.15pt=tasc;
@@ -798,5 +792,4 @@ beginchr(bilboexclam,2en);
   draw_stroke(p1,ang(a4..a3..a2));
   draw_stroke(p2,ang(a4..a5..a6));
 endchr;
-pause;
 

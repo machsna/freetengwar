@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 ## Tengwar Telcontar - a Unicode Tengwar font
-## Copyright (c) 2005-2010, 2022 Johan Winge
+## Copyright (c) 2005-2022 Johan Winge
 ## 
 ## Tengwar Telcontar is free software: you can redistribute it and/or
 ## modify it under the terms of the GNU General Public License as
@@ -30,10 +30,12 @@ import sys
 import re
 import os
 
-fn = sys.argv[1].strip()
+fn = sys.argv[1]
+weight = sys.argv[2] if len(sys.argv) == 3 else ""
 
 print("Running MetaFont.")
-os.system(f'mf "\\mode:=pixpt; mag:=300; input {fn}.mf"')
+os.system('mf "\\mode:=pixpt; mag:=300;{} input {}.mf"'.format(
+   f' weight:={weight};' if weight else '', fn))
 
 print("Generating enc, pe and gdh file.")
 charnames = ['.notdef'] * 256
@@ -61,7 +63,7 @@ with open(fn + '.log', 'r') as logfile:
          gf = match.group(1)
 with open(fn + '.pe', 'w') as pefile:
    pefile.write('\r\n'.join(pe))
-with open(fn + '.gdh', 'w') as gdhfile:
+with open(f'{fn}{weight}.gdh', 'w') as gdhfile:
    gdhfile.write('\r\n'.join(gdh))
 with open(fn + '.enc', 'w') as encfile:
    encfile.write(f'/{fn} [ \n')
@@ -70,4 +72,4 @@ with open(fn + '.enc', 'w') as encfile:
    encfile.write('] def\n')
 
 os.system(f'gftopk {gf} {fn}.pk')
-os.system(f'fontforge -script {fn}.pe {fn}')
+os.system(f'fontforge -script {fn}.pe')

@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2022 Johan Winge
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -23,6 +23,12 @@
 %% 
 %% You should have received a copy of the GNU General Public License
 %% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+input setup;
+font_ps_name:="tengtelclatin";
+font_name:="Tengwar Telcontar Latin";
+input tracing;
+input stroke;
 
 setspace(1.5pt);
 
@@ -2935,3 +2941,5 @@ beginchr("uni204A",0.5ten); % Tironian et
 endchr;
 
 message "";
+
+exit; end.

@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2022 Johan Winge
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -29,7 +29,7 @@ font_ps_name:="tengtelcunderlines";
 font_name:="Tengwar Telcontar Underlines";
 font_weight:="Regular";
 input tracing;
-tecil_w = 0.41pt; tecil_h = 0.17pt;
+tecil_w := 0.41pt; tecil_h := 0.17pt;
 input stroke;
 
 ulineh = -1.1pt;

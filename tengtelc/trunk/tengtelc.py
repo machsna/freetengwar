@@ -1,27 +1,33 @@
 import sys
+import subprocess
 import fontforge
 import psMat
 
-if sys.argv[1] == "regular":
-  font = fontforge.open("latinr.sfd")
-  font.mergeFonts("tengwarr.sfd")
-  font.fontname="tengtelc"
-  font.fullname="Tengwar Telcontar"
-  font.weight="Regular"
-  sfdfilename="tengtelc.sfd"
-  ttffilename="tengtelc_nogr.ttf"
-elif sys.argv[1] == "bold":
-  font=fontforge.open("latinb.sfd")
-  font.mergeFonts("tengwarb.sfd")
-  font.fontname="tengtelcb"
-  font.fullname="Tengwar Telcontar Bold"
-  font.weight="Bold"
-  sfdfilename="tengtelcb.sfd"
-  ttffilename="tengtelcb_nogr.ttf"
-# endif
+weights = {
+  100: 'Thin',
+  200: 'Extra-Light',
+  300: 'Light',
+  400: 'Regular',
+  500: 'Medium',
+  600: 'Semi-Bold',
+  700: 'Bold',
+  800: 'Extra-Bold',
+  900: 'Black'
+}
 
+weight = int(sys.argv[1])
+weightstring = weights[weight]
+
+font = fontforge.open(f"latin{weight}.sfd")
+font.mergeFonts(f"tengwar{weight}.sfd")
 font.mergeFonts("underline.sfd")
+
 font.familyname = "Tengwar Telcontar"
+font.fontname = f"TengwarTelcontar-{weightstring.replace('-', '')}"
+font.fullname = f"Tengwar Telcontar {weightstring}"
+font.weight = weightstring
+font.os2_weight = weight
+
 font.appendSFNTName(0x409, 3, f"FontForge: {font.fullname} {font.version}")
 font.appendSFNTName(0x409, 9, "Johan Winge")
 font.appendSFNTName(0x409, 11, "http://freetengwar.sourceforge.net/")
@@ -55,8 +61,10 @@ for char in font:
 font.selection.all()
 font.removeOverlap()
 font.transform(psMat.scale(1.25))  # Should match scale factor in tracing.mf
+font.round()
 font.simplify(1.5, ("setstarttoextremum", "removesingletonpoints"), 0, 0, 5000)
 font.round()
+font.simplify(0, (), 0, 0, 5000)
 
 font.mergeFonts("numerals.sfd")
 font.encoding="unicode"
@@ -64,5 +72,22 @@ font.encoding="compacted"
 
 font.os2_version=4  
 
-font.save(sfdfilename)
-font.generate(ttffilename,"",("omit-instructions"))
+font.save(font.fontname + ".sfd")
+font.generate(f"tengtelc{weight}.ttf", "", ("omit-instructions"))
+with open(f'tengtelc{weight}.gdl', 'w') as gdlfile:
+  gdlfile.write('\n'.join([
+    '#include "stddef.gdh"',
+    '#define ps postscript',
+    'AutoPseudo=0; // ?',
+    f'#include "latin{weight}.gdh"',
+    f'#include "tengwar{weight}.gdh"',
+    '#include "underline.gdh"',
+    '#include "latin.gdh"',
+    '#include "tengwar.gdh"',
+    '\n'
+  ]))
+subprocess.run(["grcompiler", "-v4", "-w3521", f"tengtelc{weight}.gdl", f"tengtelc{weight}.ttf", font.fontname + ".ttf"])
+
+font = fontforge.open(font.fontname + ".sfd")
+font.mergeFeature("tengtelc.fea")
+font.generate(font.fontname + ".otf", flags=("opentype"))

@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2010 Johan Winge
+%% Copyright (c) 2005-2022 Johan Winge
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -47,9 +47,9 @@ if tracing:
   message "pe: New();";
   message "pe: ScaleToEm(2048);";
   message "pe: SelectAll();";
-  message "pe: Import($1+" & ditto & ".pk" & ditto & ");";
-  message "pe: LoadEncodingFile($1+" & ditto & ".enc" & ditto & ");";
-  message "pe: Reencode($1,1);";
+  message "pe: Import(" & ditto & jobname & ".pk" & ditto & ");";
+  message "pe: LoadEncodingFile(" & ditto & jobname & ".enc" & ditto & ");";
+  message "pe: Reencode(" & ditto & jobname & ditto & ",1);";
   message "pe: SetFontNames(" & ditto & font_ps_name & ditto & ",\"; % These should be defined.
   message "pe:  " & ditto & font_name & ditto & ",\";
   message "pe:  " & ditto & font_name & ditto & ",\";
@@ -302,7 +302,7 @@ enddef;
 def exit =
   if tracing:
     message "gd: endtable;"; message "";
-    message "pe: Save($1+" & ditto & ".sfd" & ditto & ");";
+    message "pe: Save(" & ditto & jobname & if known weight: decimal weight else: "" fi & ".sfd" & ditto & ");";
     message "pe: Quit(0);";
     message "";
   fi

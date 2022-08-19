@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2017 Johan Winge, j. 'mach' wust
+%% Copyright (c) 2005-2022 Johan Winge, j. 'mach' wust
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -328,7 +328,7 @@ def draw_hyarmenyanta(expr style,secstyle) =
   else:
     padding(1.0pt,0.6pt+1.5pt);
     hg=ctex+o;
-    numeric stemshift; stemshift=if style=ascend: 1.50tecil_w else: 1.65tecil_w fi;
+    numeric stemshift; stemshift=if style=ascend: 1.096decsep + 1.155tecil_w else: 1.163decsep + 1.38tecil_w fi;
     a0=49; a1=59; a2=54; a3=39;
     ap1=ang(a0..a1..a2);
     ap3=ang(a1..a2..a3);
@@ -510,7 +510,7 @@ def draw_caproomen(expr number, secstyle, nuquerna) =
   a3=55; a4=a5=a6=a7=a8=35; a9=45;
   a21=a22=50;
   z1=(lpad,ctex);
-  z21-z20prim = 1.6tecil_w*dir(50);
+  z21-z20prim = (1.4decsep + 1.16tecil_w)*dir(50);
   z2=(0.5[x1,x5],0)-0.5*(z21-z20prim);
   z5=(w-rpad,0.65ctex);
   ap1=ang(a0..a1..a2);
@@ -639,7 +639,8 @@ def draw_lambe(expr style, number) =
   fi
   draw_stroke(p2,ap2);
   if style=capital:
-    a12=50; x10=0.6[x5,x4]; x11=x10-0.7tecil_w;
+    use(a5); rt x5 + 1.1decsep = x11;
+    use(50); rt x11 = lft x10;
     z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,1) of p2;
     z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,3) of p2;
     z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(0,1) of p2;
@@ -761,18 +762,18 @@ def draw_silme(expr side, style, lig, capital) =
     draw_stroke(p1 transformed t,ap1);
   fi
   if capital=true:
+    use(a3); rt x3 + 1.1decsep = x11;
+    use(50); rt x11 = lft x10;
     if style=nuquerna:
-      x10=x3+1.5tecil_w; x11=x10-0.7tecil_w;
       z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,1) of p1;
-      z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,2) of p1;
+      z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,3) of p1;
       z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(0,1) of p1;
-      z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(1,2) of p1;
+      z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(1,3) of p1;
     else:
-      x10=x3+1.5tecil_w; x11=x10-0.7tecil_w;
-      z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,2) of p1;
-      z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,3) of p1;
+      z12=if x10 > x2: (x10,y2) else: ((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,2) of p1 fi;
+      z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,4) of p1;
       z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(1,2) of p1;
-      z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(2,3) of p1;
+      z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(2,4) of p1;
     fi
     fill (z12--z13--z15--z14--cycle) transformed t;
   fi
@@ -820,7 +821,6 @@ pause;
 beginchr(SILME&".flat",1.2ten);
   draw_silme(leftside,flat,false,true);
 endchr;
-pause;
 beginchr(SILME&".open",1.2ten);
   draw_silme(leftside,open,false,true);
 endchr;
@@ -932,19 +932,12 @@ def draw_aare(expr side, style, capital) =
   draw_stroke(p1 transformed t,ap1);
   draw_stroke(p2 transformed t,ap2);
   if capital=true:
-    if style=nuquerna:
-      x20=x7+1.5tecil_w; x21=x20-0.7tecil_w;
-      z22=(x20,y4);
-      z23=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(1,2) of p2;
-      z24=(x21,y4);
-      z25=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(1,2) of p2;
-    else:
-      x20=x7+1.5tecil_w; x21=x20-0.7tecil_w;
-      z22=(x20,y4);
-      z23=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(1,2) of p2;
-      z24=(x21,y4);
-      z25=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(1,2) of p2;
-    fi
+    use(a7); rt x7 + 1.1decsep = x21;
+    use(50); rt x21 = lft x20;
+    z22=if x20>=x6: (x20,y4) else: ((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(0,1) of p2 fi;
+    z23=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(1,3) of p2;
+    z24=if x21>=x6: (x21,y4) else: ((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(0,1) of p2 fi;
+    z25=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(1,3) of p2;
     fill (z22--z23--z25--z24--cycle) transformed t;
   fi
   setap("cap",(1/2[lpad,w-rpad],1/2exheight));
@@ -1031,7 +1024,8 @@ def draw_atengwa(expr style) =
     draw_stroke(z1--z6,ang(a1--a6));
   fi
   if style=capital:
-    x10=0.25[x4,x3]; x11=x10-0.7tecil_w;
+    use(a3); rt x3 + 1.1decsep = x11;
+    use(50); rt x11 = lft x10;
     z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,2) of p1;
     z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,4) of p1;
     z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(0,2) of p1;
@@ -1253,11 +1247,9 @@ enddef;
 beginchr(sarince&".cross",1.8ten);
   draw_sarincecross(lower);
 endchr;
-pause;
 beginchr(sarince&".cross_high",2.0ten);
   draw_sarincecross(normal);
 endchr;
-pause;
 %beginchr(sarince&".cross_roomen",1.0ten);
 %  draw_sarincecross(roomenarda);
 %endchr;

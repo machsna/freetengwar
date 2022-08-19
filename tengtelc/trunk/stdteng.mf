@@ -1,5 +1,5 @@
 %% Tengwar Telcontar - a Unicode Tengwar font
-%% Copyright (c) 2005-2017 Johan Winge, j. 'mach' wust
+%% Copyright (c) 2005-2022 Johan Winge, j. 'mach' wust
 %% 
 %% Tengwar Telcontar is free software: you can redistribute it and/or
 %% modify it under the terms of the GNU General Public License as
@@ -333,7 +333,8 @@ def draw_declefttelco(expr sy,eya,eyb,h) =
   p1=ornpath(rounded,curved)(1,2);
   a3=a4=a5+1=42; a6=penangle infinity of ap1; a7=a6;
   x3=0.2[x1,x4]; z3=z4-whatever*dir(a4-5);
-  use(a4); top z4=z1+(1.2tecil_w,0);
+  use(penangle 1.5 of ap1); lft z4p = point 1.5 of p1;
+  use(a4); top lft z4 = (x4p + decsep, y1);
   use(a5); bot z5=(x4,eyb);
   z7=z2c+h*dir(angle(z2-z5)+5);
   ap2=ang(a3..a4..a5..a6..a7);
@@ -368,7 +369,8 @@ endchr;
 
 def draw_decrighttelco(expr style, secstyle) =
   padding(1.0pt,2.0pt);
-  x1=lpad; x2=x1; x4=x1+1.2tecil_w; x5=x4;
+  x1=lpad; x2=x1; x5=x4;
+  use(35); lft x4 = rt x1 + decsep;
   a3=a4=42;
   if style=ascend:
     y1=ctasc; y2=0;
@@ -626,13 +628,13 @@ endchr;
 beginchr("capclosingbar_high1",1.26cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high2",1.66cten+1.5*(tecil_w-0.93pt));
+beginchr("capclosingbar_high2",1.32cten + 0.85*tecil_w + decsep);
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 beginchr("capclosingbar_high3",2.06cten);
   draw_highclosingbar(truncated,ctex,ypart conpoint10);
 endchr;
-beginchr("capclosingbar_high4",2.46cten+1.5*(tecil_w-0.93pt));
+beginchr("capclosingbar_high4",2.12cten + 0.85*tecil_w + decsep);
   draw_highclosingbar(normal,ctex,ypart conpoint10);
 endchr;
 
