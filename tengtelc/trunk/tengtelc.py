@@ -2,12 +2,13 @@ import sys
 import subprocess
 import fontforge
 import psMat
+import re
 
 weights = {
   100: 'Thin',
   200: 'Extra-Light',
   300: 'Light',
-  400: 'Regular',
+  400: 'Book',  # Huh, LibreOffice seems to conflate Medium with both Regular and Normal
   500: 'Medium',
   600: 'Semi-Bold',
   700: 'Bold',
@@ -60,7 +61,9 @@ for char in font:
 
 font.selection.all()
 font.removeOverlap()
-font.transform(psMat.scale(1.25))  # Should match scale factor in tracing.mf
+with open('tracing.mf', 'r') as f:
+  scalefactor = float(re.search(r'^scalefactor\s*=\s*([\d.]+)', f.read(), re.MULTILINE).group(1))
+font.transform(psMat.scale(scalefactor))
 font.round()
 font.simplify(1.5, ("setstarttoextremum", "removesingletonpoints"), 0, 0, 5000)
 font.round()

@@ -39,7 +39,7 @@
 tracingtitles:=1;
 boolean tracing; tracing=(mode=pixpt);
 
-scalefactor=1.25; % Should match scale factor in tengtelc.py
+scalefactor=1.25; % This line is read in tengtelc.py
 
 un#:=1/2048em#; define_pixels(un);
 if tracing:

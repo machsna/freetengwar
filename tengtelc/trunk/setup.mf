@@ -69,7 +69,7 @@ elseif weight = 300:
   font_weight := "Light";
   tecil_w := 0.760pt; tecil_h := 0.17pt;
 elseif weight = 400:
-  font_weight := "Regular";
+  font_weight := "Book";
   tecil_w := 0.845pt; tecil_h := 0.19pt;
 elseif weight = 500:
   font_weight := "Medium";
