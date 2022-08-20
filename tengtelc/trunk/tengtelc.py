@@ -69,7 +69,6 @@ font.simplify(1.5, ("setstarttoextremum", "removesingletonpoints"), 0, 0, 5000)
 font.round()
 font.simplify(0, (), 0, 0, 5000)
 
-font.mergeFonts("numerals.sfd")
 font.encoding="unicode"
 font.encoding="compacted"
 
