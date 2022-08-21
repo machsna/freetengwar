@@ -63,7 +63,7 @@ with open(fn + '.log', 'r') as logfile:
          gf = match.group(1)
 with open(fn + '.pe', 'w') as pefile:
    pefile.write('\r\n'.join(pe))
-with open(f'{fn}{weight}.gdh', 'w') as gdhfile:
+with open(fn + '.gdh', 'w') as gdhfile:
    gdhfile.write('\r\n'.join(gdh))
 with open(fn + '.enc', 'w') as encfile:
    encfile.write(f'/{fn} [ \n')

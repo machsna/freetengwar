@@ -19,8 +19,8 @@ weights = {
 weight = int(sys.argv[1])
 weightstring = weights[weight]
 
-font = fontforge.open(f"latin{weight}.sfd")
-font.mergeFonts(f"tengwar{weight}.sfd")
+font = fontforge.open("latin.sfd")
+font.mergeFonts("tengwar.sfd")
 font.mergeFonts("underline.sfd")
 
 font.familyname = "Tengwar Telcontar"
@@ -75,20 +75,8 @@ font.encoding="compacted"
 font.os2_version=4  
 
 font.save(font.fontname + ".sfd")
-font.generate(f"tengtelc{weight}.ttf", "", ("omit-instructions"))
-with open(f'tengtelc{weight}.gdl', 'w') as gdlfile:
-  gdlfile.write('\n'.join([
-    '#include "stddef.gdh"',
-    '#define ps postscript',
-    'AutoPseudo=0; // ?',
-    f'#include "latin{weight}.gdh"',
-    f'#include "tengwar{weight}.gdh"',
-    '#include "underline.gdh"',
-    '#include "latin.gdh"',
-    '#include "tengwar.gdh"',
-    '\n'
-  ]))
-subprocess.run(["grcompiler", "-v4", "-w3521", f"tengtelc{weight}.gdl", f"tengtelc{weight}.ttf", font.fontname + ".ttf"])
+font.generate("tengtelc.ttf", "", ("omit-instructions"))
+subprocess.run(["grcompiler", "-v4", "-w3521", "tengtelc.gdl", "tengtelc.ttf", font.fontname + ".ttf"])
 
 font = fontforge.open(font.fontname + ".sfd")
 font.mergeFeature("tengtelc.fea")

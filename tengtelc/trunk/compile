@@ -16,6 +16,7 @@ rm -f underline.pe
 rm -f underline.pk
 rm -f underline.tfm
 rm -f underline.sfd
+rm -f underline.gdh
 
 rm -f latin.21681gf
 rm -f latin.log
@@ -23,8 +24,8 @@ rm -f latin.enc
 rm -f latin.pe
 rm -f latin.pk
 rm -f latin.tfm
-rm -f latin???.sfd
-rm -f latin???.gdh
+rm -f latin.sfd
+rm -f latin.gdh
 
 rm -f tengwar.21681gf
 rm -f tengwar.log
@@ -32,8 +33,7 @@ rm -f tengwar.enc
 rm -f tengwar.pe
 rm -f tengwar.pk
 rm -f tengwar.tfm
-rm -f tengwar???.sfd
-rm -f tengwar???.gdh
+rm -f tengwar.sfd
+rm -f tengwar.gdh
 
-rm -f tengtelc???.gdl
-rm -f tengtelc???.ttf
+rm -f tengtelc.ttf

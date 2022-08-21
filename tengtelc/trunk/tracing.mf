@@ -302,7 +302,7 @@ enddef;
 def exit =
   if tracing:
     message "gd: endtable;"; message "";
-    message "pe: Save(" & ditto & jobname & if known weight: decimal weight else: "" fi & ".sfd" & ditto & ");";
+    message "pe: Save(" & ditto & jobname & ".sfd" & ditto & ");";
     message "pe: Quit(0);";
     message "";
   fi
