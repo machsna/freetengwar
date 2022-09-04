@@ -150,6 +150,7 @@ def endchr =
     message "pe: Select("& ditto & ps[ps.n].name & ditto &"); SetWidth(" & decimal round(transformadjust(w)/un) & ");";
     if usealiasnames:
       message "pe: SetGlyphName("& ditto & ps_to_alias(ps[ps.n].name) & ditto &",0);";
+      message "al: " & ps[ps.n].name & " " & ps_to_alias(ps[ps.n].name);
     fi
     if not isrefchar:
       message "pe: Autotrace(); Scale(1000,0,0); AddExtrema(); Scale(10,0,0);";

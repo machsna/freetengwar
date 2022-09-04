@@ -6,6 +6,7 @@ for WEIGHT in 100 200 300 400 500 600 700 800 900
 do
 	python3 mf2sfd.py latin $WEIGHT
 	python3 mf2sfd.py tengwar $WEIGHT
+	python3 gdh2fea.py
 	fontforge -script tengtelc.py $WEIGHT
 done
 
