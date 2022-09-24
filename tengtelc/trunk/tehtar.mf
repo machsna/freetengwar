@@ -86,13 +86,13 @@ def draw_ytehta(expr width) =
   setap("rdap",(x1+0.5pt,tex+apy-0.1pt));
   setap("uap",(0,y0+(y0-tex)-apy));
 enddef;
-beginchr(ytehta&".norm",0);
+beginchr(ytehta&".wide",0);
   draw_ytehta(1.50pt);
 endchr;
-combinechr(ytehta,dottedcircle,"uap",ytehta&".norm","dap");
-beginchr(ytehta&".narrow",0);
-  draw_ytehta(1.30pt);
+beginchr(ytehta&".norm",0);
+  draw_ytehta(max(1.3pt, 1.18tecil_w));
 endchr;
+combinechr(ytehta,dottedcircle,"uap",ytehta&".norm","dap");
 
 def draw_downytehta(expr width) =
   y0=y1=-1.2pt;
@@ -105,13 +105,13 @@ def draw_downytehta(expr width) =
   setap("luap",(x0-0.4pt,-apy+0.1pt));
   setap("ruap",(x1+0.4pt,-apy+0.1pt));
 enddef;
-beginchr(downytehta&".norm",0);
+beginchr(downytehta&".wide",0);
   draw_downytehta(1.50pt);
 endchr;
-combinechr(downytehta,dottedcircle,"dap",downytehta&".norm","uap");
-beginchr(downytehta&".narrow",0);
-  draw_downytehta(1.30pt);
+beginchr(downytehta&".norm",0);
+  draw_downytehta(max(1.3pt, 1.18tecil_w));
 endchr;
+combinechr(downytehta,dottedcircle,"dap",downytehta&".norm","uap");
 
 beginchr(itehta&".norm",0);
   z0=(0,tex+1.4pt);

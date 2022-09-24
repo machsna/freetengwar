@@ -122,9 +122,9 @@ languagesystem latn dflt;
 @CombDownTehtar = [downatehta.norm downytehta.norm downitehta.norm downetehta.norm dblunderstroke.norm downotehta.norm downutehta.norm underbar.norm longcarr.lig sarincetehta.norm thinnas.norm];
 @CombTehtar = [@CombUpTehtar @CombCentralTehtar @CombDownTehtar];
 
-@VarUpTehtar = [eetehta.norm otehta.wide otehta.narrow ootehta.norm ootehta.wide ootehta.narrow uutehta.norm overbar.wide overbar.lambe overbar.silme wtehta.wide wtehta.narrow engytehta.wide otehtadot.norm utehtadot.norm];
+@VarUpTehtar = [ytehta.wide eetehta.norm otehta.wide otehta.narrow ootehta.norm ootehta.wide ootehta.narrow uutehta.norm overbar.wide overbar.lambe overbar.silme wtehta.wide wtehta.narrow engytehta.wide otehtadot.norm utehtadot.norm];
 @VarCentralTehtar = [dotinside.conu dotinside.cond];
-@VarDownTehtar = [downeetehta.norm downutehta.wide downutehta.narrow downutehta.long underbar.wide underbar.roomen underbar.silme underbar.lambe longcarr.lig_lambe];
+@VarDownTehtar = [downytehta.wide downeetehta.norm downutehta.wide downutehta.narrow downutehta.long underbar.wide underbar.roomen underbar.silme underbar.lambe longcarr.lig_lambe];
 @VarTehtar = [@VarUpTehtar @VarCentralTehtar @VarDownTehtar];
 
 @AnyUpTehta = [@CombUpTehtar @VarUpTehtar];
@@ -135,8 +135,8 @@ languagesystem latn dflt;
 @OverbarTehta = [overbar.norm overbar.wide overbar.lambe overbar.silme];
 @UnderbarTehta = [underbar.norm underbar.wide underbar.roomen underbar.silme underbar.lambe];
 
-@MayWidenTehta = [overbar.norm underbar.norm otehta.norm wtehta.norm engytehta.norm];
-@DoWidenTehta = [overbar.wide underbar.wide otehta.wide wtehta.wide engytehta.wide];
+@MayWidenTehta = [overbar.norm underbar.norm otehta.norm ytehta.norm downytehta.norm wtehta.norm engytehta.norm];
+@DoWidenTehta = [overbar.wide underbar.wide otehta.wide ytehta.wide downytehta.wide wtehta.wide engytehta.wide];
 @Otehta = [otehta.norm];
 @MayHaveLambeFormTehta = [otehta.norm overbar.norm underbar.norm engytehta.norm];
 @DoHaveLambeFormTehta = [otehta.wide overbar.lambe underbar.lambe engytehta.wide];

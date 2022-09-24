@@ -482,9 +482,9 @@ table(glyph)
   CombDownTehtar=(downatehta_norm,downytehta_norm,downitehta_norm,downetehta_norm,dblunderstroke_norm,downotehta_norm,downutehta_norm,underbar_norm,longcarr_lig,sarincetehta_norm,thinnas_norm);
   CombTehtar=(CombUpTehtar,CombCentralTehtar,CombDownTehtar);
 
-  VarUpTehtar=(eetehta_norm,otehta_wide,otehta_narrow,ootehta_norm,ootehta_wide,ootehta_narrow,uutehta_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
+  VarUpTehtar=(ytehta_wide,eetehta_norm,otehta_wide,otehta_narrow,ootehta_norm,ootehta_wide,ootehta_narrow,uutehta_norm,overbar_wide,overbar_lambe,overbar_silme,wtehta_wide,wtehta_narrow,engytehta_wide,otehtadot_norm,utehtadot_norm);
   VarCentralTehtar=(dotinside_conu,dotinside_cond);
-  VarDownTehtar=(downeetehta_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarr_lig_lambe);
+  VarDownTehtar=(downytehta_wide,downeetehta_norm,downutehta_wide,downutehta_narrow,downutehta_long,underbar_wide,underbar_roomen,underbar_silme,underbar_lambe,longcarr_lig_lambe);
   VarTehtar=(VarUpTehtar,VarCentralTehtar,VarDownTehtar);
 
   AnyUpTehta=(CombUpTehtar,VarUpTehtar);
@@ -616,7 +616,7 @@ table(sub)
     (underbar_norm) > underbar_roomen / Roomen _ ;
     (underbar_norm) > underbar_silme / (SilmeNuq,AareNuq) _ ;
     (overbar_norm) > overbar_silme / (Silme,Aare) AnyDownTehtar _ ;
-    (overbar_norm,underbar_norm,otehta_norm,wtehta_norm,engytehta_norm) > (overbar_wide,underbar_wide,otehta_wide,wtehta_wide,engytehta_wide)
+    (overbar_norm,underbar_norm,otehta_norm,ytehta_norm,downytehta_norm,wtehta_norm,engytehta_norm) > (overbar_wide,underbar_wide,otehta_wide,ytehta_wide,downytehta_wide,wtehta_wide,engytehta_wide)
            / WideTengwar ^ AnyTehtar _ ;
     otehta_norm > otehta_wide / (Tinco,Parma,Thuule,Formen,Oore,Vala,ExtThuule,ExtFormen,OpenAnna,BeleriandicMh) ^ AnyTehtar _ ;
     (otehta_norm,overbar_norm,underbar_norm,engytehta_norm) > (otehta_wide,overbar_lambe,underbar_lambe,engytehta_wide)
