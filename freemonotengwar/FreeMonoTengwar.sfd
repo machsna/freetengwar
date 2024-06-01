@@ -1,4 +1,4 @@
-SplineFontDB: 3.0
+SplineFontDB: 3.2
 FontName: FreeMonoTengwar
 FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
@@ -52,7 +52,6 @@ OS2StrikeYPos: 258
 OS2Vendor: 'GNU '
 OS2CodePages: 600001bf.dff70000
 OS2UnicodeRanges: e4000eff.50007fff.00048020.00000000
-Lookup: 4 0 1 "'liga' tengwar ligatures" { "'liga' tengwar ligatures subtable"  } ['liga' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Greek" { "'mark' Mark Positioning in Greek subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin 1" { "'mark' Mark Positioning in Latin 1 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Tengwar" { "'mark' Mark Positioning in Tengwar subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
@@ -54606,7 +54605,6 @@ SplineSet
  -260 625 -242 643 -220 643 c 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaI
 EndChar
 
 StartChar: tehtaEE
@@ -54621,7 +54619,6 @@ LayerCount: 2
 Fore
 Refer: 597 733 N 1 0 0 1 -600 60 0
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE
 LCarets2: 1 0
 EndChar
 
@@ -54713,7 +54710,6 @@ SplineSet
  -260 -158 -242 -140 -220 -140 c 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tehtaIB tehtaIB
 LCarets2: 1 0
 EndChar
 
@@ -54738,7 +54734,6 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 1 0
-Ligature2: "'liga' tengwar ligatures subtable" zwj longCarrier
 EndChar
 
 StartChar: tehtaO
@@ -55962,7 +55957,6 @@ Fore
 Refer: 597 733 N 1 0 0 1 -600 -765 0
 Validated: 32769
 LCarets2: 1 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaEB tehtaEB
 EndChar
 
 StartChar: tehtaYanta
@@ -56123,7 +56117,6 @@ SplineSet
  125 41 l 1xd6
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" malta tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56166,7 +56159,6 @@ SplineSet
  504 -37 477 0 444 0 c 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" vala tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56183,7 +56175,6 @@ Fore
 Refer: 110 175 N 1 0 0 1 11 -489 0
 Refer: 2284 57379 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" alda tehtaB
 LCarets2: 1 0
 EndChar
 
@@ -56200,7 +56191,6 @@ Fore
 Refer: 110 175 N 1 0 0 1 19 -373 0
 Refer: 2276 57378 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaB
 LCarets2: 1 0
 EndChar
 
@@ -56216,8 +56206,6 @@ Fore
 Refer: 2271 57420 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU
 LCarets2: 1 0
 EndChar
 
@@ -56256,7 +56244,6 @@ SplineSet
  -286 720 -268 725 -250 725 c 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaO
 LCarets2: 1 0
 EndChar
 
@@ -56301,7 +56288,6 @@ SplineSet
  -249 528 -262 534 -262 549 c 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaU
 LCarets2: 1 0
 EndChar
 
@@ -56390,8 +56376,6 @@ Fore
 Refer: 2257 57408 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaA
-Ligature2: "'liga' tengwar ligatures subtable" tehtaA tehtaW
 LCarets2: 1 0
 EndChar
 
@@ -56407,10 +56391,6 @@ Fore
 Refer: 2263 57410 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaY
-Ligature2: "'liga' tengwar ligatures subtable" tehtaY tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaI tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaI
 LCarets2: 2 0 0
 EndChar
 
@@ -56426,8 +56406,6 @@ Fore
 Refer: 2262 57412 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaW
 LCarets2: 1 0
 EndChar
 
@@ -56443,8 +56421,6 @@ Fore
 Refer: 115 180 N 1 0 0 1 -657 60 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE
-Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaW
 LCarets2: 1 0
 EndChar
 
@@ -56460,8 +56436,6 @@ Fore
 Refer: 597 733 N 1 0 0 1 -600 60 0
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaE tehtaE
-Ligature2: "'liga' tengwar ligatures subtable" tehtaE tehtaE tehtaW
 LCarets2: 2 0 0
 EndChar
 
@@ -56477,8 +56451,6 @@ Fore
 Refer: 2270 57418 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO
 LCarets2: 1 0
 EndChar
 
@@ -56517,10 +56489,6 @@ Fore
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Refer: 2324 57422 N 1 0 0 1 42 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaOO
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO tehtaO
-Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaO tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaOO tehtaW
 LCarets2: 2 0 0
 EndChar
 
@@ -56536,10 +56504,6 @@ Fore
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Refer: 2325 57423 N 1 0 0 1 18 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaUU
-Ligature2: "'liga' tengwar ligatures subtable" tehtaUU tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaU tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU tehtaU
 LCarets2: 2 0 0
 EndChar
 
@@ -56555,8 +56519,6 @@ Fore
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Refer: 2261 57427 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaBreve
-Ligature2: "'liga' tengwar ligatures subtable" tehtaBreve tehtaW
 LCarets2: 1 0
 EndChar
 
@@ -56572,8 +56534,6 @@ Fore
 Refer: 64 96 N 1 0 0 1 -532 52 0
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaGrave
 LCarets2: 1 0
 EndChar
 
@@ -56589,8 +56549,6 @@ Fore
 Refer: 2315 57429 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaYanta tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaYanta
 LCarets2: 1 0
 EndChar
 
@@ -56607,8 +56565,6 @@ Fore
 Refer: 2265 57430 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaAE tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaAE
 LCarets2: 1 0
 EndChar
 
@@ -56642,7 +56598,6 @@ SplineSet
  -433 653 l 2
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaGrave
 LCarets2: 1 0
 EndChar
 
@@ -56658,8 +56613,6 @@ Fore
 Refer: 2341 -1 N 1 0 0 1 0 0 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaGrave tehtaGrave
-Ligature2: "'liga' tengwar ligatures subtable" tehtaGrave tehtaGrave tehtaW
 LCarets2: 2 0 0
 EndChar
 
@@ -56675,7 +56628,6 @@ Fore
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Refer: 2316 57426 N 1 0 0 1 0 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaW
 LCarets2: 1 0
 EndChar
 
@@ -56692,7 +56644,6 @@ Fore
 Refer: 110 175 N 1 0 0 1 -72 -460 0
 Refer: 2276 57378 N -1 0 0 -1 604 329 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" lambeN tehtaB
 LCarets2: 1 0
 EndChar
 
@@ -56735,7 +56686,6 @@ SplineSet
  322 -12 l 0x6b
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tinco tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56779,7 +56729,6 @@ SplineSet
  144 41 l 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" parma tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56822,7 +56771,6 @@ SplineSet
  414 19 354 -16 279 -16 c 0xb5
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" calma tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56868,7 +56816,6 @@ SplineSet
  63 -29 104 17 153 24 c 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" quesse tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56924,7 +56871,6 @@ SplineSet
  504 -44 475 -15 442 -15 c 0x6b80
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" ando tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -56978,7 +56924,6 @@ SplineSet
  335 121 323 73 307 41 c 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" umbar tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57021,7 +56966,6 @@ SplineSet
  322 -12 l 2xdb
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" suule tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57063,7 +57007,6 @@ SplineSet
  144 41 l 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" formen tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57106,7 +57049,6 @@ SplineSet
  63 -28 106 19 156 24 c 1xdd
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" aha tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57154,7 +57096,6 @@ SplineSet
  271 376 l 2
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" hwesta tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57210,7 +57151,6 @@ SplineSet
  459 26 502 68 502 194 c 0xdb80
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" anto tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57262,7 +57202,6 @@ SplineSet
  335 121 323 73 307 41 c 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" ampa tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57318,7 +57257,6 @@ SplineSet
  459 26 502 68 502 194 c 0xcb80
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" nuumen tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57361,7 +57299,6 @@ SplineSet
  420 29 500 115 500 208 c 0xcb
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" oore tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57404,7 +57341,6 @@ SplineSet
  414 19 354 -16 279 -16 c 2xc5
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" anna tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57450,7 +57386,6 @@ SplineSet
  271 376 l 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" vilya tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57493,7 +57428,6 @@ SplineSet
  420 29 500 115 500 208 c 0x7b
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" tincoX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57537,7 +57471,6 @@ SplineSet
  144 41 l 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" parmaX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57580,7 +57513,6 @@ SplineSet
  414 19 354 -16 279 -16 c 2xbd
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" calmaX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57628,7 +57560,6 @@ SplineSet
  271 376 l 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" quesseX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57684,7 +57615,6 @@ SplineSet
  459 26 502 68 502 194 c 0x7b80
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" andoX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57738,7 +57668,6 @@ SplineSet
  335 121 323 73 307 41 c 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" umbarX tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57755,8 +57684,6 @@ Fore
 Refer: 2267 57413 N 1 0 0 1 80 0 2
 Refer: 2269 57431 N 1 0 0 1 -10 0 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" tehtaThinnas tehtaIB
-Ligature2: "'liga' tengwar ligatures subtable" tehtaIB tehtaThinnas
 LCarets2: 1 0
 EndChar
 
@@ -57773,7 +57700,6 @@ Fore
 Refer: 2276 57378 N 1 0 0 1 0 0 2
 Refer: 2267 57413 N 1 0 0 1 604 314 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaIB
 LCarets2: 1 0
 EndChar
 
@@ -57790,8 +57716,6 @@ Fore
 Refer: 2276 57378 N 1 0 0 1 0 0 2
 Refer: 2268 57411 N 1 0 0 1 606 320 2
 Validated: 32769
-Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaYB
-Ligature2: "'liga' tengwar ligatures subtable" lambe tehtaIB tehtaIB
 LCarets2: 2 0 0
 EndChar
 
@@ -57831,7 +57755,6 @@ SplineSet
  502 41 l 1
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" yanta tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57864,7 +57787,6 @@ SplineSet
  487 310 405 390 300 390 c 0
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" uure tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -57898,7 +57820,6 @@ SplineSet
  119 0 l 2
 EndSplineSet
 Validated: 3073
-Ligature2: "'liga' tengwar ligatures subtable" shortCarrier tehtaX
 LCarets2: 1 0
 EndChar
 
@@ -58036,8 +57957,6 @@ Refer: 2270 57418 N 1 0 0 1 0 13 2
 Refer: 2262 57412 S 1 0 0 1 5 -31 2
 Validated: 32769
 LCarets2: 1 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO
-Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI
 EndChar
 
 StartChar: tehtaU_tehtaI
@@ -58053,8 +57972,6 @@ Refer: 2271 57420 N 1 0 0 1 0 0 2
 Refer: 2262 57412 S 1 0 0 1 -76 -11 2
 Validated: 32769
 LCarets2: 1 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaU
 EndChar
 
 StartChar: tehtaW_tehtaO_tehtaI
@@ -58071,10 +57988,6 @@ Refer: 2262 57412 N 1 0 0 1 5 -20 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 LCarets2: 2 0 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaO tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaO tehtaI tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaO
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaO tehtaI
 EndChar
 
 StartChar: tehtaW_tehtaU_tehtaI
@@ -58091,10 +58004,6 @@ Refer: 2262 57412 N 1 0 0 1 -61 -3 2
 Refer: 2334 -1 N 1 0 0 1 0 0 2
 Validated: 32769
 LCarets2: 2 0 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaU tehtaI
-Ligature2: "'liga' tengwar ligatures subtable" tehtaW tehtaI tehtaU
-Ligature2: "'liga' tengwar ligatures subtable" tehtaU tehtaI tehtaW
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaU tehtaW
 EndChar
 
 StartChar: annaS
@@ -58158,7 +58067,6 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0
-Ligature2: "'liga' tengwar ligatures subtable" aha zwj tinco
 EndChar
 
 StartChar: silme_aha
@@ -58205,7 +58113,6 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0
-Ligature2: "'liga' tengwar ligatures subtable" silme zwj aha
 EndChar
 
 StartChar: tehtaI_tehtaE
@@ -58221,7 +58128,6 @@ Refer: 2262 57412 N 1 0 0 1 0 -47 2
 Refer: 115 180 N 1 0 0 1 -657 119 2
 Validated: 32769
 LCarets2: 1 0
-Ligature2: "'liga' tengwar ligatures subtable" tehtaI tehtaE
 EndChar
 
 StartChar: tehtaW_tehtaI_tehtaE
@@ -58289,7 +58195,6 @@ SplineSet
 EndSplineSet
 Validated: 3073
 LCarets2: 2 0 0
-Ligature2: "'liga' tengwar ligatures subtable" hwesta zwj tinco
 EndChar
 
 StartChar: uniE080
