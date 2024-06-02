@@ -3,8 +3,8 @@ FontName: FreeMonoTengwar
 FullName: FreeMonoTengwar
 FamilyName: FreeMonoTengwar
 Weight: Medium
-Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 - 2017 j. 'mach' wust, Johan Winge.
-Version: 2017-02-20
+Copyright: Copyleft 2002, 2003, 2005, 2008, 2009 Free Software Foundation; 2009 - 2024 j. 'mach' wust, Johan Winge.
+Version: 2024-06-01
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -53913,7 +53913,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tincoX
+StartChar: suuletinco
 Encoding: 57368 57368 2241
 Width: 600
 GlyphClass: 2
@@ -53948,7 +53948,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: parmaX
+StartChar: formemparma
 Encoding: 57369 57369 2242
 Width: 600
 GlyphClass: 2
@@ -53988,7 +53988,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: calmaX
+StartChar: ahacalma
 Encoding: 57370 57370 2243
 Width: 600
 GlyphClass: 2
@@ -54023,7 +54023,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: quesseX
+StartChar: hwestaquesse
 Encoding: 57371 57371 2244
 Width: 600
 GlyphClass: 2
@@ -54063,7 +54063,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: andoX
+StartChar: antando
 Encoding: 57372 57372 2245
 Width: 600
 VWidth: 1024
@@ -54112,7 +54112,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: umbarX
+StartChar: ampumbar
 Encoding: 57373 57373 2246
 Width: 600
 VWidth: 1024
@@ -54162,7 +54162,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: angaX
+StartChar: ancanga
 Encoding: 57374 57374 2247
 Width: 600
 VWidth: 1024
@@ -54211,7 +54211,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: ungweX
+StartChar: uncungwe
 Encoding: 57375 57375 2248
 Width: 600
 VWidth: 1024
@@ -54261,7 +54261,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: shortCarrier
+StartChar: telco
 Encoding: 57390 57390 2249
 Width: 600
 GlyphClass: 2
@@ -54302,7 +54302,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: longCarrier
+StartChar: andatelco
 Encoding: 57388 57388 2251
 Width: 600
 GlyphClass: 2
@@ -54380,7 +54380,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: esseN
+StartChar: essenuquerna
 Encoding: 57383 57383 2255
 Width: 600
 GlyphClass: 2
@@ -54423,7 +54423,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: lambeN
+StartChar: lambenuquerna
 Encoding: 57393 57393 2256
 Width: 600
 VWidth: 1024
@@ -54438,7 +54438,7 @@ Refer: 2276 57378 N -1 0 0 -1 604 329 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaA
+StartChar: atehta
 Encoding: 57408 57408 2257
 Width: 0
 GlyphClass: 4
@@ -54471,7 +54471,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaAB
+StartChar: unuatehta
 Encoding: 57409 57409 2258
 Width: 0
 VWidth: 200
@@ -54502,7 +54502,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaGrave
+StartChar: etehtanuquerna
 Encoding: 57428 57428 2259
 Width: 0
 GlyphClass: 4
@@ -54516,7 +54516,7 @@ Refer: 64 96 S 1 0 0 1 -532 52 0
 Validated: 32769
 EndChar
 
-StartChar: tehtaE
+StartChar: etehta
 Encoding: 57414 57414 2260
 Width: 0
 GlyphClass: 4
@@ -54530,7 +54530,7 @@ Refer: 115 180 N 1 0 0 1 -657 60 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaBreve
+StartChar: ytehta
 Encoding: 57427 57427 2261
 Width: 0
 GlyphClass: 4
@@ -54556,7 +54556,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaI
+StartChar: tixe
 Encoding: 57412 57412 2262
 Width: 0
 GlyphClass: 4
@@ -54578,7 +54578,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaY
+StartChar: yatehta
 Encoding: 57410 57410 2263
 Width: 0
 GlyphClass: 4
@@ -54607,7 +54607,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaEE
+StartChar: etehta_etehta
 Encoding: 57416 57416 2264
 Width: 0
 GlyphClass: 4
@@ -54622,7 +54622,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaAE
+StartChar: atehtanuquerna
 Encoding: 57430 57430 2265
 Width: 0
 VWidth: 200
@@ -54656,7 +54656,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaEB
+StartChar: unuetehta
 Encoding: 57415 57415 2266
 Width: 0
 VWidth: 200
@@ -54668,7 +54668,7 @@ Refer: 115 180 N 1 0 0 1 -657 -774 0
 Validated: 32769
 EndChar
 
-StartChar: tehtaIB
+StartChar: putta
 Encoding: 57413 57413 2267
 Width: 0
 GlyphClass: 4
@@ -54687,7 +54687,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaYB
+StartChar: unuyatehta
 Encoding: 57411 57411 2268
 Width: 0
 VWidth: 200
@@ -54713,7 +54713,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaThinnas
+StartChar: thinnas
 Encoding: 57431 57431 2269
 Width: 0
 VWidth: 0
@@ -54736,7 +54736,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaO
+StartChar: otehta
 Encoding: 57418 57418 2270
 Width: 0
 GlyphClass: 4
@@ -54765,7 +54765,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaU
+StartChar: utehta
 Encoding: 57420 57420 2271
 Width: 0
 GlyphClass: 4
@@ -54796,7 +54796,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaOB
+StartChar: unuotehta
 Encoding: 57419 57419 2272
 Width: 0
 GlyphClass: 4
@@ -54824,7 +54824,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaUB
+StartChar: unuutehta
 Encoding: 57421 57421 2273
 Width: 0
 GlyphClass: 4
@@ -54850,7 +54850,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaN
+StartChar: nengwetehta
 Encoding: 57424 57424 2274
 Width: 0
 GlyphClass: 4
@@ -54965,7 +54965,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: hwestaS
+StartChar: hwestasindarinwa
 Encoding: 57385 57385 2278
 Width: 600
 GlyphClass: 2
@@ -55014,7 +55014,7 @@ Refer: 67 99 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: annaX
+StartChar: telcotelco
 Encoding: 57398 57398 2280
 Width: 600
 GlyphClass: 2
@@ -55026,7 +55026,7 @@ Refer: 85 117 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: roomenN
+StartChar: roomennuquerna
 Encoding: 57401 57401 2281
 Width: 600
 GlyphClass: 2
@@ -55159,7 +55159,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: silmeN
+StartChar: silmenuquerna
 Encoding: 57381 57381 2285
 Width: 600
 GlyphClass: 2
@@ -55222,7 +55222,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: hallaRoomen
+StartChar: hallaroomen
 Encoding: 57404 57404 2287
 Width: 600
 GlyphClass: 2
@@ -55255,7 +55255,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: carrierX
+StartChar: telco.2
 Encoding: 57396 57396 2288
 Width: 600
 GlyphClass: 2
@@ -55450,7 +55450,7 @@ Refer: 1279 8776 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaB
+StartChar: andatehta
 Encoding: 57425 57425 2299
 Width: 0
 GlyphClass: 4
@@ -55947,7 +55947,7 @@ Refer: 594 730 N 1 0 0 1 -592 -748 0
 Validated: 32769
 EndChar
 
-StartChar: tehtaEEB
+StartChar: unuetehta_unuetehta
 Encoding: 57417 57417 2314
 Width: 0
 GlyphClass: 4
@@ -55959,7 +55959,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaYanta
+StartChar: yantatehta
 Encoding: 57429 57429 2315
 Width: 0
 GlyphClass: 4
@@ -55987,7 +55987,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaW
+StartChar: watehta
 Encoding: 57426 57426 2316
 Width: 0
 GlyphClass: 4
@@ -56018,7 +56018,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaX
+StartChar: combiningsarince
 Encoding: 57433 57433 2317
 Width: 0
 VWidth: 1024
@@ -56043,7 +56043,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaS
+StartChar: sarince
 Encoding: 57432 57432 2318
 Width: 600
 GlyphClass: 2
@@ -56069,7 +56069,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: maltaX
+StartChar: malta_combiningsarince
 Encoding: 57402 57402 2319
 Width: 600
 GlyphClass: 2
@@ -56120,7 +56120,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: valaX
+StartChar: vala_combiningsarince
 Encoding: 57403 57403 2320
 Width: 600
 GlyphClass: 2
@@ -56162,7 +56162,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: alda_tehtaB
+StartChar: alda_andatehta
 Encoding: 1114112 -1 2321
 Width: 600
 VWidth: 1024
@@ -56178,7 +56178,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: lambe_tehtaB
+StartChar: lambe_andatehta
 Encoding: 1114113 -1 2322
 Width: 600
 VWidth: 1024
@@ -56194,7 +56194,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaU
+StartChar: watehta_utehta
 Encoding: 1114120 -1 2323
 Width: 0
 GlyphClass: 4
@@ -56209,7 +56209,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaOO
+StartChar: otehta_otehta
 Encoding: 57422 57422 2324
 Width: 0
 GlyphClass: 4
@@ -56247,7 +56247,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaUU
+StartChar: utehta_utehta
 Encoding: 57423 57423 2325
 Width: 0
 GlyphClass: 4
@@ -56291,7 +56291,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: quesseC
+StartChar: quessenuquerna
 Encoding: 57399 57399 2326
 Width: 600
 GlyphClass: 2
@@ -56326,7 +56326,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: hwestaC
+StartChar: hwestanuquerna
 Encoding: 57400 57400 2327
 Width: 600
 GlyphClass: 2
@@ -56364,7 +56364,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaW_tehtaA
+StartChar: watehta_atehta
 Encoding: 1114114 -1 2328
 Width: 0
 GlyphClass: 4
@@ -56379,7 +56379,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaY
+StartChar: watehta_yatehta
 Encoding: 1114115 -1 2329
 Width: 0
 GlyphClass: 4
@@ -56394,7 +56394,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaI
+StartChar: watehta_tixe
 Encoding: 1114116 -1 2330
 Width: 0
 GlyphClass: 4
@@ -56409,7 +56409,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaE
+StartChar: watehta_etehta
 Encoding: 1114117 -1 2331
 Width: 0
 GlyphClass: 4
@@ -56424,7 +56424,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaEE
+StartChar: watehta_etehta_etehta
 Encoding: 1114118 -1 2332
 Width: 0
 GlyphClass: 4
@@ -56439,7 +56439,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaO
+StartChar: watehta_otehta
 Encoding: 1114119 -1 2333
 Width: 0
 GlyphClass: 4
@@ -56454,7 +56454,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW.alt
+StartChar: watehta.alt
 Encoding: 1114121 -1 2334
 Width: 0
 GlyphClass: 4
@@ -56477,7 +56477,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: tehtaW_tehtaOO
+StartChar: watehta_otehta_otehta
 Encoding: 1114122 -1 2335
 Width: 0
 GlyphClass: 4
@@ -56492,7 +56492,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaUU
+StartChar: watehta_utehta_utehta
 Encoding: 1114123 -1 2336
 Width: 0
 GlyphClass: 4
@@ -56507,7 +56507,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaBreve
+StartChar: watehta_ytehta
 Encoding: 1114124 -1 2337
 Width: 0
 GlyphClass: 4
@@ -56522,7 +56522,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaGrave
+StartChar: watehta_etehtanuquerna
 Encoding: 1114125 -1 2338
 Width: 0
 GlyphClass: 4
@@ -56537,7 +56537,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaYanta
+StartChar: watehta_yantatehta
 Encoding: 1114126 -1 2339
 Width: 0
 GlyphClass: 4
@@ -56552,7 +56552,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaAE
+StartChar: watehta_atehtanuquerna
 Encoding: 1114127 -1 2340
 Width: 0
 VWidth: 200
@@ -56568,7 +56568,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaGrave_tehtaGrave
+StartChar: etehtanuquerna_etehtanuquerna
 Encoding: 1114128 -1 2341
 Width: 0
 GlyphClass: 4
@@ -56601,7 +56601,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaGrave_tehtaGrave
+StartChar: watehta_etehtanuquerna_etehtanuquerna
 Encoding: 1114129 -1 2342
 Width: 0
 GlyphClass: 4
@@ -56616,7 +56616,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaW
+StartChar: watehta_watehta
 Encoding: 1114130 -1 2343
 Width: 0
 GlyphClass: 4
@@ -56631,7 +56631,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: lambeN_tehtaB
+StartChar: lambenuquerna_andatehta
 Encoding: 1114131 -1 2344
 Width: 600
 VWidth: 1024
@@ -56647,7 +56647,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tinco_tehtaX
+StartChar: tinco_combiningsarince
 Encoding: 1114132 -1 2345
 Width: 600
 GlyphClass: 2
@@ -56689,7 +56689,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: parma_tehtaX
+StartChar: parma_combiningsarince
 Encoding: 1114133 -1 2346
 Width: 600
 GlyphClass: 2
@@ -56732,7 +56732,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: calma_tehtaX
+StartChar: calma_combiningsarince
 Encoding: 1114134 -1 2347
 Width: 600
 GlyphClass: 2
@@ -56774,7 +56774,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: quesse_tehtaX
+StartChar: quesse_combiningsarince
 Encoding: 1114135 -1 2348
 Width: 600
 GlyphClass: 2
@@ -56819,7 +56819,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: ando_tehtaX
+StartChar: ando_combiningsarince
 Encoding: 1114136 -1 2349
 Width: 600
 VWidth: 1024
@@ -56874,7 +56874,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: umbar_tehtaX
+StartChar: umbar_combiningsarince
 Encoding: 1114137 -1 2350
 Width: 600
 VWidth: 1024
@@ -56927,7 +56927,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: suule_tehtaX
+StartChar: suule_combiningsarince
 Encoding: 1114138 -1 2351
 Width: 600
 GlyphClass: 2
@@ -56969,7 +56969,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: formen_tehtaX
+StartChar: formen_combiningsarince
 Encoding: 1114139 -1 2352
 Width: 600
 GlyphClass: 2
@@ -57010,7 +57010,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: aha_tehtaX
+StartChar: aha_combiningsarince
 Encoding: 1114140 -1 2353
 Width: 600
 GlyphClass: 2
@@ -57052,7 +57052,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: hwesta_tehtaX
+StartChar: hwesta_combiningsarince
 Encoding: 1114141 -1 2354
 Width: 600
 GlyphClass: 2
@@ -57099,7 +57099,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: anto_tehtaX
+StartChar: anto_combiningsarince
 Encoding: 1114142 -1 2355
 Width: 600
 VWidth: 1024
@@ -57154,7 +57154,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: ampa_tehtaX
+StartChar: ampa_combiningsarince
 Encoding: 1114143 -1 2356
 Width: 600
 VWidth: 1024
@@ -57205,7 +57205,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: nuumen_tehtaX
+StartChar: nuumen_combiningsarince
 Encoding: 1114144 -1 2357
 Width: 600
 VWidth: 1024
@@ -57260,7 +57260,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: oore_tehtaX
+StartChar: oore_combiningsarince
 Encoding: 1114145 -1 2358
 Width: 600
 GlyphClass: 2
@@ -57302,7 +57302,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: anna_tehtaX
+StartChar: anna_combiningsarince
 Encoding: 1114146 -1 2359
 Width: 600
 GlyphClass: 2
@@ -57344,7 +57344,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: vilya_tehtaX
+StartChar: vilya_combiningsarince
 Encoding: 1114147 -1 2360
 Width: 600
 GlyphClass: 2
@@ -57389,7 +57389,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tincoX_tehtaX
+StartChar: suuletinco_combiningsarince
 Encoding: 1114148 -1 2361
 Width: 600
 GlyphClass: 2
@@ -57431,7 +57431,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: parmaX_tehtaX
+StartChar: formemparma_combiningsarince
 Encoding: 1114149 -1 2362
 Width: 600
 GlyphClass: 2
@@ -57474,7 +57474,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: calmaX_tehtaX
+StartChar: ahacalma_combiningsarince
 Encoding: 1114150 -1 2363
 Width: 600
 GlyphClass: 2
@@ -57516,7 +57516,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: quesseX_tehtaX
+StartChar: hwestaquesse_combiningsarince
 Encoding: 1114151 -1 2364
 Width: 600
 GlyphClass: 2
@@ -57563,7 +57563,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: andoX_tehtaX
+StartChar: antando_combiningsarince
 Encoding: 1114152 -1 2365
 Width: 600
 VWidth: 1024
@@ -57618,7 +57618,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: umbarX_tehtaX
+StartChar: ampumbar_combiningsarince
 Encoding: 1114153 -1 2366
 Width: 600
 VWidth: 1024
@@ -57671,7 +57671,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaThinnas_tehtaIB
+StartChar: thinnas_putta
 Encoding: 1114154 -1 2367
 Width: 0
 VWidth: 0
@@ -57687,7 +57687,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: lambe_tehtaIB
+StartChar: lambe_putta
 Encoding: 1114155 -1 2368
 Width: 600
 VWidth: 1024
@@ -57703,7 +57703,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: lambe_tehtaYB
+StartChar: lambe_unuyatehta
 Encoding: 1114156 -1 2369
 Width: 600
 VWidth: 1024
@@ -57719,7 +57719,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: yanta_tehtaX
+StartChar: yanta_combiningsarince
 Encoding: 1114157 -1 2370
 Width: 600
 GlyphClass: 2
@@ -57758,7 +57758,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: uure_tehtaX
+StartChar: uure_combiningsarince
 Encoding: 1114158 -1 2371
 Width: 600
 GlyphClass: 2
@@ -57790,7 +57790,7 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: shortCarrier_tehtaX
+StartChar: telco_combiningsarince
 Encoding: 1114159 -1 2372
 Width: 600
 GlyphClass: 2
@@ -57833,7 +57833,7 @@ Refer: 118 183 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: osseN
+StartChar: ossenuquerna
 Encoding: 57392 57392 2374
 Width: 600
 GlyphClass: 2
@@ -57845,7 +57845,7 @@ Refer: 499 596 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaDotInside
+StartChar: tixeoverlay
 Encoding: 57434 57434 2375
 Width: 0
 GlyphClass: 4
@@ -57944,7 +57944,7 @@ Refer: 2293 57444 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: tehtaO_tehtaI
+StartChar: otehta_tixe
 Encoding: 1114160 -1 2381
 Width: 0
 GlyphClass: 4
@@ -57959,7 +57959,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaU_tehtaI
+StartChar: utehta_tixe
 Encoding: 1114161 -1 2382
 Width: 0
 GlyphClass: 4
@@ -57974,7 +57974,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaO_tehtaI
+StartChar: watehta_otehta_tixe
 Encoding: 1114162 -1 2383
 Width: 0
 GlyphClass: 4
@@ -57990,7 +57990,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaW_tehtaU_tehtaI
+StartChar: watehta_utehta_tixe
 Encoding: 1114163 -1 2384
 Width: 0
 GlyphClass: 4
@@ -58006,7 +58006,7 @@ Validated: 32769
 LCarets2: 2 0 0
 EndChar
 
-StartChar: annaS
+StartChar: anna.2
 Encoding: 57397 57397 2385
 Width: 600
 GlyphClass: 2
@@ -58115,7 +58115,7 @@ Validated: 3073
 LCarets2: 2 0 0
 EndChar
 
-StartChar: tehtaI_tehtaE
+StartChar: tixe_etehta
 Encoding: 1114167 -1 2388
 Width: 0
 GlyphClass: 4
@@ -58130,7 +58130,7 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tehtaW_tehtaI_tehtaE
+StartChar: watehta_tixe_etehta
 Encoding: 1114168 -1 2389
 Width: 0
 GlyphClass: 4
@@ -58197,7 +58197,7 @@ Validated: 3073
 LCarets2: 2 0 0
 EndChar
 
-StartChar: uniE080
+StartChar: TINCO
 Encoding: 57472 57472 2391
 Width: 600
 Flags: HW
@@ -58231,7 +58231,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE081
+StartChar: PARMA
 Encoding: 57473 57473 2392
 Width: 600
 Flags: HW
@@ -58270,7 +58270,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE082
+StartChar: CALMA
 Encoding: 57474 57474 2393
 Width: 600
 Flags: HW
@@ -58304,7 +58304,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE083
+StartChar: QUESSE
 Encoding: 57475 57475 2394
 Width: 600
 Flags: HW
@@ -58341,7 +58341,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE084
+StartChar: ANDO
 Encoding: 57476 57476 2395
 Width: 600
 VWidth: 1024
@@ -58389,7 +58389,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE085
+StartChar: UMBAR
 Encoding: 57477 57477 2396
 Width: 600
 VWidth: 1024
@@ -58438,7 +58438,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE086
+StartChar: ANGA
 Encoding: 57478 57478 2397
 Width: 600
 VWidth: 1024
@@ -58486,7 +58486,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE087
+StartChar: UNGWE
 Encoding: 57479 57479 2398
 Width: 600
 VWidth: 1024
@@ -58533,7 +58533,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE088
+StartChar: SUULE
 Encoding: 57480 57480 2399
 Width: 600
 Flags: HW
@@ -58567,7 +58567,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE089
+StartChar: FORMEN
 Encoding: 57481 57481 2400
 Width: 600
 Flags: HW
@@ -58604,7 +58604,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08A
+StartChar: AHA
 Encoding: 57482 57482 2401
 Width: 600
 Flags: HW
@@ -58638,7 +58638,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08B
+StartChar: HWESTA
 Encoding: 57483 57483 2402
 Width: 600
 Flags: HW
@@ -58677,7 +58677,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08C
+StartChar: ANTO
 Encoding: 57484 57484 2403
 Width: 600
 VWidth: 1024
@@ -58725,7 +58725,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08D
+StartChar: AMPA
 Encoding: 57485 57485 2404
 Width: 600
 VWidth: 1024
@@ -58772,7 +58772,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08E
+StartChar: ANCA
 Encoding: 57486 57486 2405
 Width: 600
 VWidth: 1024
@@ -58820,7 +58820,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE08F
+StartChar: UNQUE
 Encoding: 57487 57487 2406
 Width: 600
 VWidth: 1024
@@ -58869,7 +58869,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE090
+StartChar: NUUMEN
 Encoding: 57488 57488 2407
 Width: 600
 VWidth: 1024
@@ -58917,7 +58917,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE091
+StartChar: MALTA
 Encoding: 57489 57489 2408
 Width: 600
 VWidth: 1024
@@ -58964,7 +58964,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE092
+StartChar: NOLDO
 Encoding: 57490 57490 2409
 Width: 600
 VWidth: 1024
@@ -59012,7 +59012,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE093
+StartChar: NWALME
 Encoding: 57491 57491 2410
 Width: 600
 VWidth: 1024
@@ -59059,7 +59059,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE094
+StartChar: OORE
 Encoding: 57492 57492 2411
 Width: 600
 Flags: HW
@@ -59093,7 +59093,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE095
+StartChar: VALA
 Encoding: 57493 57493 2412
 Width: 600
 Flags: HW
@@ -59130,7 +59130,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE096
+StartChar: ANNA
 Encoding: 57494 57494 2413
 Width: 600
 Flags: HW
@@ -59164,7 +59164,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE097
+StartChar: VILYA
 Encoding: 57495 57495 2414
 Width: 600
 Flags: HW
@@ -59201,7 +59201,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE098
+StartChar: SUULETINCO
 Encoding: 57496 57496 2415
 Width: 600
 Flags: HW
@@ -59235,7 +59235,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE099
+StartChar: FORMEMPARMA
 Encoding: 57497 57497 2416
 Width: 600
 Flags: HW
@@ -59274,7 +59274,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09A
+StartChar: AHACALMA
 Encoding: 57498 57498 2417
 Width: 600
 Flags: HW
@@ -59308,7 +59308,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09B
+StartChar: HWESTAQUESSE
 Encoding: 57499 57499 2418
 Width: 600
 Flags: HW
@@ -59347,7 +59347,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09C
+StartChar: ANTANDO
 Encoding: 57500 57500 2419
 Width: 600
 VWidth: 1024
@@ -59395,7 +59395,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09D
+StartChar: AMPAMBA
 Encoding: 57501 57501 2420
 Width: 600
 VWidth: 1024
@@ -59444,7 +59444,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09E
+StartChar: ANCANGA
 Encoding: 57502 57502 2421
 Width: 600
 VWidth: 1024
@@ -59492,7 +59492,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE09F
+StartChar: UNCUNGWE
 Encoding: 57503 57503 2422
 Width: 600
 VWidth: 1024
@@ -59541,7 +59541,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A0
+StartChar: ROOMEN
 Encoding: 57504 57504 2423
 Width: 600
 Flags: HW
@@ -59576,7 +59576,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A1
+StartChar: ARDA
 Encoding: 57505 57505 2424
 Width: 600
 Flags: HW
@@ -59617,7 +59617,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A2
+StartChar: LAMBE
 Encoding: 57506 57506 2425
 Width: 600
 VWidth: 1024
@@ -59649,7 +59649,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A3
+StartChar: ALDA
 Encoding: 57507 57507 2426
 Width: 600
 VWidth: 1024
@@ -59682,7 +59682,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A4
+StartChar: SILME
 Encoding: 57508 57508 2427
 Width: 600
 Flags: HW
@@ -59713,7 +59713,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A5
+StartChar: SILMENUQUERNA
 Encoding: 57509 57509 2428
 Width: 600
 Flags: HW
@@ -59744,7 +59744,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A6
+StartChar: ESSE
 Encoding: 57510 57510 2429
 Width: 600
 Flags: HW
@@ -59786,7 +59786,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A7
+StartChar: ESSENUQUERNA
 Encoding: 57511 57511 2430
 Width: 600
 Flags: HW
@@ -59828,7 +59828,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A8
+StartChar: HYARMEN
 Encoding: 57512 57512 2431
 Width: 599
 Flags: HW
@@ -59869,7 +59869,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0A9
+StartChar: HWESTASINDARINWA
 Encoding: 57513 57513 2432
 Width: 600
 Flags: HW
@@ -59905,7 +59905,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0AA
+StartChar: YANTA
 Encoding: 57514 57514 2433
 Width: 600
 Flags: HW
@@ -59938,7 +59938,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0AB
+StartChar: UURE
 Encoding: 57515 57515 2434
 Width: 600
 Flags: HW
@@ -59960,7 +59960,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0AC
+StartChar: ANDATELCO
 Encoding: 57516 57516 2435
 Width: 600
 Flags: HW
@@ -59985,7 +59985,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0AD
+StartChar: HALLA
 Encoding: 57517 57517 2436
 Width: 600
 Flags: HW
@@ -60013,7 +60013,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0AE
+StartChar: TELCO
 Encoding: 57518 57518 2437
 Width: 600
 Flags: HW
@@ -60039,7 +60039,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B0
+StartChar: OSSENUQUERNA
 Encoding: 57520 57520 2438
 Width: 600
 Flags: HW
@@ -60067,7 +60067,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B1
+StartChar: LAMBENUQUERNA
 Encoding: 57521 57521 2439
 Width: 600
 VWidth: 1024
@@ -60081,7 +60081,7 @@ Refer: 2425 57506 N -1 0 0 -1 604 389 2
 Validated: 32769
 EndChar
 
-StartChar: uniE0B2
+StartChar: OSSE
 Encoding: 57522 57522 2440
 Width: 600
 Flags: HW
@@ -60110,7 +60110,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B4
+StartChar: TELCO.2
 Encoding: 57524 57524 2441
 Width: 600
 Flags: HW
@@ -60123,7 +60123,7 @@ Refer: 2437 57518 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: uniE0B5
+StartChar: ANNA.2
 Encoding: 57525 57525 2442
 Width: 600
 Flags: HW
@@ -60136,7 +60136,7 @@ Refer: 2413 57494 S 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: uniE0B6
+StartChar: TELCOTELCO
 Encoding: 57526 57526 2443
 Width: 600
 Flags: HW
@@ -60170,7 +60170,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B7
+StartChar: QUESSENUQUERNA
 Encoding: 57527 57527 2444
 Width: 600
 Flags: HW
@@ -60204,7 +60204,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B8
+StartChar: HWESTANUQUERNA
 Encoding: 57528 57528 2445
 Width: 600
 Flags: HW
@@ -60241,7 +60241,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0B9
+StartChar: ROOMENNUQUERNA
 Encoding: 57529 57529 2446
 Width: 600
 Flags: HW
@@ -60254,7 +60254,7 @@ Refer: 2423 57504 N -1 0 0 -1 600 476 2
 Validated: 32769
 EndChar
 
-StartChar: uniE0BA
+StartChar: MALTASILME
 Encoding: 57530 57530 2447
 Width: 600
 Flags: HW
@@ -60303,7 +60303,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0BB
+StartChar: VALASILME
 Encoding: 57531 57531 2448
 Width: 600
 Flags: HW
@@ -60343,7 +60343,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0BC
+StartChar: HALLAROOMEN
 Encoding: 57532 57532 2449
 Width: 600
 Flags: HW
@@ -60375,7 +60375,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: uniE0BD
+StartChar: VAIYA
 Encoding: 57533 57533 2450
 Width: 600
 Flags: HW

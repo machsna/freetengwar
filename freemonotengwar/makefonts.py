@@ -37,8 +37,8 @@ thefont.sfnt_names=tuple(newnames)
 for lookup in ("'mark' Mark Positioning in Greek", "'mark' Mark Positioning in Latin 1", "'mark' Mark Positioning in Latin 2"):
    thefont.removeLookup(lookup)
 
-for char in ("tehtaE","tehtaEB","tehtaEE","tehtaEEB","tehtaN","tehtaB","tehtaGrave",
-             "tengwarDoublesection","alda_tehtaB","lambe_tehtaB","lambeN_tehtaB"):
+for char in ("etehta","unuetehta","etehta_etehta","unuetehta_unuetehta","nengwetehta","andatehta","etehtanuquerna",
+             "tengwarDoublesection","alda_andatehta","lambe_andatehta","lambenuquerna_andatehta"):
    thefont[char].unlinkRef()
 
 thefont.selection.select(("ranges",None),0x0022,0xffff)
@@ -48,7 +48,7 @@ thefont.selection.select(("less",None),0x0028,0x0029,0x002c,0x002e,0x002f,0x003a
                                        0x204a,0x2058,0x205d,0x25cc,0x2e2c,0x2e2d,0x2e31)
 thefont.clear()
 
-thefont.selection.select("tehtaAE","tehtaEE","lambe","alda","lambeN","tehtaB","tehtaE","osseN")
+thefont.selection.select("atehtanuquerna","etehta_etehta","lambe","alda","lambenuquerna","andatehta","etehta","ossenuquerna")
 thefont.replaceWithReference()
 
 thefont.save("FreeMonoTengwar-embedding.sfd")
