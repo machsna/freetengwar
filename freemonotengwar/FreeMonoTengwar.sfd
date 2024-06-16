@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1487610925
+ModificationTime: 1718549168
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -393,7 +393,7 @@ NameList: Adobe Glyph List
 DisplaySize: -36
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 57344 16 12
+WinInfo: 1113984 16 12
 BeginPrivate: 8
 UniqueID 7 5020945
 BlueValues 31 [-20 0 417 437 563 583 603 623]
@@ -464,7 +464,7 @@ Grid
  -155 497 -164 490 -182 490 c 2
 EndSplineSet
 AnchorClass2: "mkmkTengwar" "'mkmk' Mark to Mark lookup in Tengwar subtable" "abovetengwar" "'mark' Mark Positioning in Tengwar subtable" "abovegk" "'mark' Mark Positioning in Greek subtable" "below" "'mark' Mark Positioning in Latin 1 subtable" "above" "'mark' Mark Positioning in Latin 2 subtable"
-BeginChars: 1114169 2451
+BeginChars: 1114173 2443
 
 StartChar: space
 Encoding: 32 32 0
@@ -53275,29 +53275,29 @@ AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-144 41 m 1
- 330 41 l 0
- 424 41 500 121 500 220 c 0
- 500 316 423 390 322 390 c 0
- 223 390 144 315 144 221 c 0
- 144 41 l 1
-144 603 m 1
- 144 335 l 1
- 197 404 247 431 323 431 c 0
- 447 431 541 340 541 221 c 0
- 541 145 513 94 444 41 c 1
- 514 41 l 2
- 532 41 541 34 541 21 c 0
- 541 7 532 0 514 0 c 2
- 49 0 l 2
- 31 0 22 7 22 21 c 0
- 22 34 31 41 49 41 c 2
- 103 41 l 1
- 103 562 l 1
- 49 562 l 2
- 31 562 22 569 22 583 c 0
- 22 596 31 603 49 603 c 2
- 144 603 l 1
+144 41 m 5
+ 330 41 l 4
+ 424 41 500 121 500 220 c 4
+ 500 316 423 390 322 390 c 4
+ 223 390 144 315 144 221 c 4
+ 144 41 l 5
+144 603 m 5
+ 144 335 l 5
+ 197 404 247 431 323 431 c 4
+ 447 431 541 340 541 221 c 4
+ 541 145 513 94 444 41 c 5
+ 514 41 l 6
+ 532 41 541 34 541 21 c 4
+ 541 7 532 0 514 0 c 6
+ 49 0 l 6
+ 31 0 22 7 22 21 c 4
+ 22 34 31 41 49 41 c 6
+ 103 41 l 5
+ 103 562 l 5
+ 49 562 l 6
+ 31 562 22 569 22 583 c 4
+ 22 596 31 603 49 603 c 6
+ 144 603 l 5
 EndSplineSet
 Validated: 3073
 EndChar
@@ -56163,7 +56163,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: alda_andatehta
-Encoding: 1114112 -1 2321
+Encoding: 1114171 -1 2321
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -56179,7 +56179,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: lambe_andatehta
-Encoding: 1114113 -1 2322
+Encoding: 1114172 -1 2322
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -56194,23 +56194,8 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: watehta_utehta
-Encoding: 1114120 -1 2323
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 699 41<-348.164 -263.727>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -254 42<597.496 689.389>
-LayerCount: 2
-Fore
-Refer: 2271 57420 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
 StartChar: otehta_otehta
-Encoding: 57422 57422 2324
+Encoding: 57422 57422 2323
 Width: 0
 GlyphClass: 4
 Flags: HW
@@ -56248,7 +56233,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: utehta_utehta
-Encoding: 57423 57423 2325
+Encoding: 57423 57423 2324
 Width: 0
 GlyphClass: 4
 Flags: HW
@@ -56292,7 +56277,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: quessenuquerna
-Encoding: 57399 57399 2326
+Encoding: 57399 57399 2325
 Width: 600
 GlyphClass: 2
 Flags: HW
@@ -56327,7 +56312,7 @@ Validated: 3073
 EndChar
 
 StartChar: hwestanuquerna
-Encoding: 57400 57400 2327
+Encoding: 57400 57400 2326
 Width: 600
 GlyphClass: 2
 Flags: HW
@@ -56364,98 +56349,8 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: watehta_atehta
-Encoding: 1114114 -1 2328
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 563 80<-415.607 -344.846 -255.607 -184.846> 673 80<-335.607 -264.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<567.393 638.581> -340 80<677.393 748.581> -260 80<567.393 638.581>
-LayerCount: 2
-Fore
-Refer: 2257 57408 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_yatehta
-Encoding: 1114115 -1 2329
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 563 80<-415.607 -344.846 -255.607 -184.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<567.393 638.581> -260 80<567.393 638.581>
-LayerCount: 2
-Fore
-Refer: 2263 57410 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_tixe
-Encoding: 1114116 -1 2330
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 563 80<-335.607 -264.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -340 80<567.393 638.581>
-LayerCount: 2
-Fore
-Refer: 2262 57412 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_etehta
-Encoding: 1114117 -1 2331
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
-LayerCount: 2
-Fore
-Refer: 115 180 N 1 0 0 1 -657 60 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_etehta_etehta
-Encoding: 1114118 -1 2332
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
-LayerCount: 2
-Fore
-Refer: 597 733 N 1 0 0 1 -600 60 0
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_otehta
-Encoding: 1114119 -1 2333
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 581 21<-220 -208> 654 41<-332.469 -247.242>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -236 40<581.04 641.699>
-LayerCount: 2
-Fore
-Refer: 2270 57418 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
 StartChar: watehta.alt
-Encoding: 1114121 -1 2334
+Encoding: 1114112 -1 2327
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -56477,99 +56372,8 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: watehta_otehta_otehta
-Encoding: 1114122 -1 2335
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 612 21<-137 -126.5> 685 40<-346.285 -288.338 -246.172 -168.485>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -404 41<528.008 668.432> -303 41<528.021 669.757> -155 41<612.038 670.726>
-LayerCount: 2
-Fore
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Refer: 2324 57422 N 1 0 0 1 42 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_utehta_utehta
-Encoding: 1114123 -1 2336
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 699 41<-413.164 -329.015 -284.599 -205.024>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -320 43<595.418 687.444> -196 43<595.418 691.088>
-LayerCount: 2
-Fore
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Refer: 2325 57423 N 1 0 0 1 18 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_ytehta
-Encoding: 1114124 -1 2337
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 552 41<-360.874 -235.319> 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -423 41<614.576 681.993> -214 41<614.576 681.993>
-LayerCount: 2
-Fore
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Refer: 2261 57427 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_etehtanuquerna
-Encoding: 1114125 -1 2338
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928>
-LayerCount: 2
-Fore
-Refer: 64 96 N 1 0 0 1 -532 52 0
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_yantatehta
-Encoding: 1114126 -1 2339
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 554 149 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -427 250<563 582>
-LayerCount: 2
-Fore
-Refer: 2315 57429 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
-StartChar: watehta_atehtanuquerna
-Encoding: 1114127 -1 2340
-Width: 0
-VWidth: 200
-GlyphClass: 4
-Flags: HW
-HStem: 547 80<-335.154 -264.846> 562 217<-548 -503> 657 80<-415.154 -344.846 -255.154 -184.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -420 80<661.393 732.395> -340 80<551.393 622.395> -260 80<661.393 732.395>
-LayerCount: 2
-Fore
-Refer: 2265 57430 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
 StartChar: etehtanuquerna_etehtanuquerna
-Encoding: 1114128 -1 2341
+Encoding: 1114116 -1 2328
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -56601,38 +56405,8 @@ Validated: 3073
 LCarets2: 1 0
 EndChar
 
-StartChar: watehta_etehtanuquerna_etehtanuquerna
-Encoding: 1114129 -1 2342
-Width: 0
-GlyphClass: 4
-Flags: W
-HStem: 550 143 562 217<-548 -503>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -445 290
-LayerCount: 2
-Fore
-Refer: 2341 -1 N 1 0 0 1 0 0 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_watehta
-Encoding: 1114130 -1 2343
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 659 41<-371.474 -289.338>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -425 41<712.734 773.979> -280 43<557.552 651.196>
-LayerCount: 2
-Fore
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Refer: 2316 57426 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 1 0
-EndChar
-
 StartChar: lambenuquerna_andatehta
-Encoding: 1114131 -1 2344
+Encoding: 1114173 -1 2329
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -56647,93 +56421,8 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: tinco_combiningsarince
-Encoding: 1114132 -1 2345
-Width: 600
-GlyphClass: 2
-Flags: W
-HStem: -186 41<22.0066 103> -176 41<417.007 487.745> -12 41<295.007 399.037> 376 41<22.0066 103> 390 41<237.682 399.871>
-VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 298.23 335 376> 504 41<-119.672 -29.2152 137.255 280.544>
-LayerCount: 2
-Fore
-SplineSet
-322 -12 m 0x6b
- 304 -12 295 -5 295 9 c 0
- 295 22 304 29 322 29 c 0
- 420 29 500 115 500 208 c 0
- 500 305 423 390 322 390 c 0
- 223 390 144 315 144 221 c 2
- 144 -186 l 1xab
- 49 -186 l 2
- 31 -186 22 -179 22 -165 c 0xad
- 22 -152 31 -145 49 -145 c 2
- 103 -145 l 1
- 103 376 l 1xb3
- 49 376 l 2
- 31 376 22 383 22 397 c 0xb5
- 22 410 31 417 49 417 c 2
- 144 417 l 1xb3
- 144 335 l 1
- 197 404 247 431 323 431 c 0
- 447 431 541 329 541 210 c 0
- 541 137 505 70 448 29 c 1
- 499 25 545 -24 545 -75 c 0
- 545 -123 495 -176 444 -176 c 0
- 426 -176 417 -169 417 -155 c 0
- 417 -142 426 -135 444 -135 c 0
- 478 -135 504 -106 504 -75 c 0
- 504 -43 477 -12 444 -12 c 1
- 322 -12 l 0x6b
-EndSplineSet
-Validated: 3073
-LCarets2: 1 0
-EndChar
-
-StartChar: parma_combiningsarince
-Encoding: 1114133 -1 2346
-Width: 600
-GlyphClass: 2
-Flags: W
-HStem: -186 41<22.0066 103> -176 41<417.007 485.704> 0 41<144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
-VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 41 298.23 335 376> 504 41<-116.078 -20.3553 145.536 290.195>
-LayerCount: 2
-Fore
-SplineSet
-444 41 m 1x2b
- 497 40 545 -17 545 -69 c 0
- 545 -117 495 -176 444 -176 c 0
- 426 -176 417 -169 417 -155 c 0
- 417 -142 426 -135 444 -135 c 0x6b
- 478 -135 504 -100 504 -69 c 0
- 504 -37 477 0 444 0 c 2
- 144 0 l 17
- 144 -186 l 1xa3
- 49 -186 l 2
- 31 -186 22 -179 22 -165 c 0xa5
- 22 -152 31 -145 49 -145 c 2
- 103 -145 l 1
- 103 376 l 1xb3
- 49 376 l 2
- 31 376 22 383 22 397 c 0xb5
- 22 410 31 417 49 417 c 2
- 144 417 l 1xb3
- 144 335 l 1
- 197 404 247 431 323 431 c 0
- 447 431 541 340 541 221 c 0
- 541 145 513 94 444 41 c 1x2b
-144 41 m 1
- 330 42 l 0
- 424 42 500 121 500 220 c 0
- 500 316 423 390 322 390 c 0
- 223 390 144 315 144 221 c 0
- 144 41 l 1
-EndSplineSet
-Validated: 3073
-LCarets2: 1 0
-EndChar
-
 StartChar: calma_combiningsarince
-Encoding: 1114134 -1 2347
+Encoding: 1114174 -1 2330
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -56775,7 +56464,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: quesse_combiningsarince
-Encoding: 1114135 -1 2348
+Encoding: 1114174 -1 2331
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -56820,7 +56509,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: ando_combiningsarince
-Encoding: 1114136 -1 2349
+Encoding: 1114175 -1 2332
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -56875,7 +56564,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: umbar_combiningsarince
-Encoding: 1114137 -1 2350
+Encoding: 1114176 -1 2333
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -56928,7 +56617,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: suule_combiningsarince
-Encoding: 1114138 -1 2351
+Encoding: 1114177 -1 2334
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -56970,7 +56659,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: formen_combiningsarince
-Encoding: 1114139 -1 2352
+Encoding: 1114178 -1 2335
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57011,7 +56700,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: aha_combiningsarince
-Encoding: 1114140 -1 2353
+Encoding: 1114179 -1 2336
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57053,7 +56742,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: hwesta_combiningsarince
-Encoding: 1114141 -1 2354
+Encoding: 1114141 -1 2337
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57100,7 +56789,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: anto_combiningsarince
-Encoding: 1114142 -1 2355
+Encoding: 1114142 -1 2338
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57155,7 +56844,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: ampa_combiningsarince
-Encoding: 1114143 -1 2356
+Encoding: 1114143 -1 2339
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57206,7 +56895,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: nuumen_combiningsarince
-Encoding: 1114144 -1 2357
+Encoding: 1114144 -1 2340
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57261,7 +56950,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: oore_combiningsarince
-Encoding: 1114145 -1 2358
+Encoding: 1114145 -1 2341
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57303,7 +56992,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: anna_combiningsarince
-Encoding: 1114146 -1 2359
+Encoding: 1114146 -1 2342
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57345,7 +57034,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: vilya_combiningsarince
-Encoding: 1114147 -1 2360
+Encoding: 1114147 -1 2343
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57390,7 +57079,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: suuletinco_combiningsarince
-Encoding: 1114148 -1 2361
+Encoding: 1114148 -1 2344
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57432,7 +57121,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: formemparma_combiningsarince
-Encoding: 1114149 -1 2362
+Encoding: 1114149 -1 2345
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57475,7 +57164,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: ahacalma_combiningsarince
-Encoding: 1114150 -1 2363
+Encoding: 1114150 -1 2346
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57517,7 +57206,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: hwestaquesse_combiningsarince
-Encoding: 1114151 -1 2364
+Encoding: 1114151 -1 2347
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57564,7 +57253,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: antando_combiningsarince
-Encoding: 1114152 -1 2365
+Encoding: 1114152 -1 2348
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57619,7 +57308,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: ampumbar_combiningsarince
-Encoding: 1114153 -1 2366
+Encoding: 1114153 -1 2349
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57672,7 +57361,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: thinnas_putta
-Encoding: 1114154 -1 2367
+Encoding: 1114154 -1 2350
 Width: 0
 VWidth: 0
 GlyphClass: 4
@@ -57688,7 +57377,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: lambe_putta
-Encoding: 1114155 -1 2368
+Encoding: 1114155 -1 2351
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57704,7 +57393,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: lambe_unuyatehta
-Encoding: 1114156 -1 2369
+Encoding: 1114156 -1 2352
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -57720,7 +57409,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: yanta_combiningsarince
-Encoding: 1114157 -1 2370
+Encoding: 1114157 -1 2353
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57759,7 +57448,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: uure_combiningsarince
-Encoding: 1114158 -1 2371
+Encoding: 1114158 -1 2354
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57791,7 +57480,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: telco_combiningsarince
-Encoding: 1114159 -1 2372
+Encoding: 1114159 -1 2355
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57824,7 +57513,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: uni2E31
-Encoding: 11825 11825 2373
+Encoding: 11825 11825 2356
 Width: 600
 Flags: W
 LayerCount: 2
@@ -57834,7 +57523,7 @@ Validated: 32769
 EndChar
 
 StartChar: ossenuquerna
-Encoding: 57392 57392 2374
+Encoding: 57392 57392 2357
 Width: 600
 GlyphClass: 2
 Flags: HW
@@ -57846,7 +57535,7 @@ Validated: 32769
 EndChar
 
 StartChar: tixeoverlay
-Encoding: 57434 57434 2375
+Encoding: 57434 57434 2358
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -57865,7 +57554,7 @@ Validated: 3073
 EndChar
 
 StartChar: tengwarQuoteleft
-Encoding: 57450 57450 2376
+Encoding: 57450 57450 2359
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57893,7 +57582,7 @@ Validated: 3073
 EndChar
 
 StartChar: tengwarQuoteright
-Encoding: 57451 57451 2377
+Encoding: 57451 57451 2360
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57901,12 +57590,12 @@ HStem: -124 198<216.25 255.75 344.25 383.75>
 VStem: 216 40<-123.993 73.9934> 344 40<-123.993 73.9934>
 LayerCount: 2
 Fore
-Refer: 2376 57450 S 1 0 0 1 0 -530 2
+Refer: 2359 57450 S 1 0 0 1 0 -530 2
 Validated: 32769
 EndChar
 
 StartChar: tengwarExclamationB
-Encoding: 57452 57452 2378
+Encoding: 57452 57452 2361
 Width: 600
 GlyphClass: 2
 Flags: W
@@ -57918,7 +57607,7 @@ Validated: 32769
 EndChar
 
 StartChar: uni2E2C
-Encoding: 11820 11820 2379
+Encoding: 11820 11820 2362
 Width: 600
 Flags: W
 LayerCount: 2
@@ -57929,7 +57618,7 @@ Validated: 32769
 EndChar
 
 StartChar: uni2E2D
-Encoding: 11821 11821 2380
+Encoding: 11821 11821 2363
 Width: 600
 Flags: W
 LayerCount: 2
@@ -57945,7 +57634,7 @@ Validated: 32769
 EndChar
 
 StartChar: otehta_tixe
-Encoding: 1114160 -1 2381
+Encoding: 1114117 -1 2364
 Width: 0
 GlyphClass: 4
 Flags: HW
@@ -57960,7 +57649,7 @@ LCarets2: 1 0
 EndChar
 
 StartChar: utehta_tixe
-Encoding: 1114161 -1 2382
+Encoding: 1114118 -1 2365
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -57974,40 +57663,8 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: watehta_otehta_tixe
-Encoding: 1114162 -1 2383
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 532 80<-330.607 -259.846> 562 217<-548 -503> 594 21<-220 -208> 667 41<-332.469 -247.242>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -335 80<536.393 607.581> -236 40<594.04 654.699>
-LayerCount: 2
-Fore
-Refer: 2270 57418 N 1 0 0 1 0 13 2
-Refer: 2262 57412 N 1 0 0 1 5 -20 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
-StartChar: watehta_utehta_tixe
-Encoding: 1114163 -1 2384
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 560 80<-396.607 -325.846> 562 217<-548 -503> 699 41<-348.164 -263.727>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -401 80<564.393 635.581> -254 42<597.496 689.389>
-LayerCount: 2
-Fore
-Refer: 2271 57420 N 1 0 0 1 0 0 2
-Refer: 2262 57412 N 1 0 0 1 -61 -3 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-LCarets2: 2 0 0
-EndChar
-
 StartChar: anna.2
-Encoding: 57397 57397 2385
+Encoding: 57397 57397 2366
 Width: 600
 GlyphClass: 2
 Flags: HW
@@ -58020,8 +57677,8 @@ Refer: 2239 57366 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
-StartChar: hwesta_tinco
-Encoding: 1114165 -1 2386
+StartChar: aha_tinco
+Encoding: 1114119 -1 2367
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -58070,7 +57727,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: silme_aha
-Encoding: 1114166 -1 2387
+Encoding: 1114120 -1 2368
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -58116,7 +57773,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: tixe_etehta
-Encoding: 1114167 -1 2388
+Encoding: 1114121 -1 2369
 Width: 0
 GlyphClass: 4
 Flags: HW
@@ -58130,23 +57787,8 @@ Validated: 32769
 LCarets2: 1 0
 EndChar
 
-StartChar: watehta_tixe_etehta
-Encoding: 1114168 -1 2389
-Width: 0
-GlyphClass: 4
-Flags: HW
-HStem: 562 217<-548 -503> 563 80<-335.607 -264.846>
-VStem: -570 41<677.983 736.841> -522 41<604.779 661.928> -340 80<567.393 638.581>
-LayerCount: 2
-Fore
-Refer: 2262 57412 S 1 0 0 1 0 -47 2
-Refer: 115 180 S 1 0 0 1 -657 119 2
-Refer: 2334 -1 N 1 0 0 1 0 0 2
-Validated: 32769
-EndChar
-
 StartChar: hwesta_tinco
-Encoding: 1114165 -1 2390
+Encoding: 1114122 -1 2370
 Width: 600
 VWidth: 1024
 GlyphClass: 2
@@ -58198,7 +57840,7 @@ LCarets2: 2 0 0
 EndChar
 
 StartChar: TINCO
-Encoding: 57472 57472 2391
+Encoding: 57472 57472 2371
 Width: 600
 Flags: HW
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 376 41<22.0066 103> 390 41<237.682 399.871>
@@ -58232,7 +57874,7 @@ Validated: 3073
 EndChar
 
 StartChar: PARMA
-Encoding: 57473 57473 2392
+Encoding: 57473 57473 2372
 Width: 600
 Flags: HW
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
@@ -58271,7 +57913,7 @@ Validated: 3073
 EndChar
 
 StartChar: CALMA
-Encoding: 57474 57474 2393
+Encoding: 57474 57474 2373
 Width: 600
 Flags: HW
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 376 41<502 582.993> 390 41<199.919 305.993>
@@ -58305,7 +57947,7 @@ Validated: 3073
 EndChar
 
 StartChar: QUESSE
-Encoding: 57475 57475 2394
+Encoding: 57475 57475 2374
 Width: 600
 Flags: HW
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461 502 582.993>
@@ -58342,7 +57984,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANDO
-Encoding: 57476 57476 2395
+Encoding: 57476 57476 2375
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58390,7 +58032,7 @@ Validated: 3073
 EndChar
 
 StartChar: UMBAR
-Encoding: 57477 57477 2396
+Encoding: 57477 57477 2376
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58439,7 +58081,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANGA
-Encoding: 57478 57478 2397
+Encoding: 57478 57478 2377
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58487,7 +58129,7 @@ Validated: 3073
 EndChar
 
 StartChar: UNGWE
-Encoding: 57479 57479 2398
+Encoding: 57479 57479 2378
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58534,7 +58176,7 @@ Validated: 3073
 EndChar
 
 StartChar: SUULE
-Encoding: 57480 57480 2399
+Encoding: 57480 57480 2379
 Width: 600
 Flags: HW
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 390 41<237.682 399.871> 562 41<22.0066 103>
@@ -58568,7 +58210,7 @@ Validated: 3073
 EndChar
 
 StartChar: FORMEN
-Encoding: 57481 57481 2400
+Encoding: 57481 57481 2380
 Width: 600
 Flags: HW
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 390 41<237.682 406.229> 562 41<22.0066 103>
@@ -58605,7 +58247,7 @@ Validated: 3073
 EndChar
 
 StartChar: AHA
-Encoding: 57482 57482 2401
+Encoding: 57482 57482 2381
 Width: 600
 Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 390 41<199.919 305.993> 563 41<502 582.993>
@@ -58639,7 +58281,7 @@ Validated: 3073
 EndChar
 
 StartChar: HWESTA
-Encoding: 57483 57483 2402
+Encoding: 57483 57483 2382
 Width: 600
 Flags: HW
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
@@ -58678,7 +58320,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANTO
-Encoding: 57484 57484 2403
+Encoding: 57484 57484 2383
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58726,7 +58368,7 @@ Validated: 3073
 EndChar
 
 StartChar: AMPA
-Encoding: 57485 57485 2404
+Encoding: 57485 57485 2384
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58773,7 +58415,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANCA
-Encoding: 57486 57486 2405
+Encoding: 57486 57486 2385
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58821,7 +58463,7 @@ Validated: 3073
 EndChar
 
 StartChar: UNQUE
-Encoding: 57487 57487 2406
+Encoding: 57487 57487 2386
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58870,7 +58512,7 @@ Validated: 3073
 EndChar
 
 StartChar: NUUMEN
-Encoding: 57488 57488 2407
+Encoding: 57488 57488 2387
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58918,7 +58560,7 @@ Validated: 3073
 EndChar
 
 StartChar: MALTA
-Encoding: 57489 57489 2408
+Encoding: 57489 57489 2388
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -58965,7 +58607,7 @@ Validated: 3073
 EndChar
 
 StartChar: NOLDO
-Encoding: 57490 57490 2409
+Encoding: 57490 57490 2389
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59013,7 +58655,7 @@ Validated: 3073
 EndChar
 
 StartChar: NWALME
-Encoding: 57491 57491 2410
+Encoding: 57491 57491 2390
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59060,7 +58702,7 @@ Validated: 3073
 EndChar
 
 StartChar: OORE
-Encoding: 57492 57492 2411
+Encoding: 57492 57492 2391
 Width: 600
 Flags: HW
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 376 41<22.0066 103> 390 41<237.682 399.871>
@@ -59094,7 +58736,7 @@ Validated: 3073
 EndChar
 
 StartChar: VALA
-Encoding: 57493 57493 2412
+Encoding: 57493 57493 2392
 Width: 600
 Flags: HW
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
@@ -59131,7 +58773,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANNA
-Encoding: 57494 57494 2413
+Encoding: 57494 57494 2393
 Width: 600
 Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
@@ -59165,7 +58807,7 @@ Validated: 3073
 EndChar
 
 StartChar: VILYA
-Encoding: 57495 57495 2414
+Encoding: 57495 57495 2394
 Width: 600
 Flags: HW
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461 502 582.993>
@@ -59202,7 +58844,7 @@ Validated: 3073
 EndChar
 
 StartChar: SUULETINCO
-Encoding: 57496 57496 2415
+Encoding: 57496 57496 2395
 Width: 600
 Flags: HW
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 390 41<237.682 399.871> 563 41<22.0066 103>
@@ -59236,7 +58878,7 @@ Validated: 3073
 EndChar
 
 StartChar: FORMEMPARMA
-Encoding: 57497 57497 2416
+Encoding: 57497 57497 2396
 Width: 600
 Flags: HW
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 390 41<237.682 406.229> 563 41<33.0066 103>
@@ -59275,7 +58917,7 @@ Validated: 3073
 EndChar
 
 StartChar: AHACALMA
-Encoding: 57498 57498 2417
+Encoding: 57498 57498 2397
 Width: 600
 Flags: HW
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 390 41<199.919 305.993> 563 41<502 582.993>
@@ -59309,7 +58951,7 @@ Validated: 3073
 EndChar
 
 StartChar: HWESTAQUESSE
-Encoding: 57499 57499 2418
+Encoding: 57499 57499 2398
 Width: 600
 Flags: HW
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
@@ -59348,7 +58990,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANTANDO
-Encoding: 57500 57500 2419
+Encoding: 57500 57500 2399
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59396,7 +59038,7 @@ Validated: 3073
 EndChar
 
 StartChar: AMPUMBAR
-Encoding: 57501 57501 2420
+Encoding: 57501 57501 2400
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59445,7 +59087,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANCANGA
-Encoding: 57502 57502 2421
+Encoding: 57502 57502 2401
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59493,7 +59135,7 @@ Validated: 3073
 EndChar
 
 StartChar: UNCUNGWE
-Encoding: 57503 57503 2422
+Encoding: 57503 57503 2402
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59542,7 +59184,7 @@ Validated: 3073
 EndChar
 
 StartChar: ROOMEN
-Encoding: 57504 57504 2423
+Encoding: 57504 57504 2403
 Width: 600
 Flags: HW
 HStem: -193 41<120.487 195.99> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
@@ -59577,7 +59219,7 @@ Validated: 3073
 EndChar
 
 StartChar: ARDA
-Encoding: 57505 57505 2424
+Encoding: 57505 57505 2404
 Width: 600
 Flags: HW
 HStem: -193 41<127.984 215.99> 133 42<63.0058 83> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
@@ -59618,7 +59260,7 @@ Validated: 3073
 EndChar
 
 StartChar: LAMBE
-Encoding: 57506 57506 2425
+Encoding: 57506 57506 2405
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59650,7 +59292,7 @@ Validated: 3073
 EndChar
 
 StartChar: ALDA
-Encoding: 57507 57507 2426
+Encoding: 57507 57507 2406
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -59683,7 +59325,7 @@ Validated: 3073
 EndChar
 
 StartChar: SILME
-Encoding: 57508 57508 2427
+Encoding: 57508 57508 2407
 Width: 600
 Flags: HW
 HStem: -16 41<215.321 384.322> 205 41<406.007 487> 492 38<435 444.988>
@@ -59714,7 +59356,7 @@ Validated: 3073
 EndChar
 
 StartChar: SILMENUQUERNA
-Encoding: 57509 57509 2428
+Encoding: 57509 57509 2408
 Width: 600
 Flags: HW
 HStem: -110 38<155.012 165> 169 41<113 193.993> 390 41<215.678 384.679>
@@ -59745,7 +59387,7 @@ Validated: 3073
 EndChar
 
 StartChar: ESSE
-Encoding: 57510 57510 2429
+Encoding: 57510 57510 2409
 Width: 600
 Flags: HW
 HStem: -17 41<229.379 413.203> -3 21G<467.5 480.5>
@@ -59787,7 +59429,7 @@ Validated: 3073
 EndChar
 
 StartChar: ESSENUQUERNA
-Encoding: 57511 57511 2430
+Encoding: 57511 57511 2410
 Width: 600
 Flags: HW
 HStem: 390 41<204.797 388.621> 397 20G<137.5 150.5>
@@ -59829,7 +59471,7 @@ Validated: 3073
 EndChar
 
 StartChar: HYARMEN
-Encoding: 57512 57512 2431
+Encoding: 57512 57512 2411
 Width: 599
 Flags: HW
 HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
@@ -59870,7 +59512,7 @@ Validated: 3073
 EndChar
 
 StartChar: HWESTASINDARINWA
-Encoding: 57513 57513 2432
+Encoding: 57513 57513 2412
 Width: 600
 Flags: HW
 HStem: -16 41<201.008 366.542 400 542> 390 41<200.29 365.006> 563 41<502 582.993>
@@ -59906,7 +59548,7 @@ Validated: 3073
 EndChar
 
 StartChar: YANTA
-Encoding: 57514 57514 2433
+Encoding: 57514 57514 2413
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -59939,7 +59581,7 @@ Validated: 3073
 EndChar
 
 StartChar: UURE
-Encoding: 57515 57515 2434
+Encoding: 57515 57515 2414
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -59961,7 +59603,7 @@ Validated: 3073
 EndChar
 
 StartChar: ANDATELCO
-Encoding: 57516 57516 2435
+Encoding: 57516 57516 2415
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -59986,7 +59628,7 @@ Validated: 3073
 EndChar
 
 StartChar: HALLA
-Encoding: 57517 57517 2436
+Encoding: 57517 57517 2416
 Width: 600
 Flags: HW
 HStem: 0 41<92.0066 279 320 507.993> 487 41<135.007 279>
@@ -60014,7 +59656,7 @@ Validated: 3073
 EndChar
 
 StartChar: TELCO
-Encoding: 57518 57518 2437
+Encoding: 57518 57518 2417
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -60040,7 +59682,7 @@ Validated: 3073
 EndChar
 
 StartChar: OSSENUQUERNA
-Encoding: 57520 57520 2438
+Encoding: 57520 57520 2418
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -60068,7 +59710,7 @@ Validated: 3073
 EndChar
 
 StartChar: LAMBENUQUERNA
-Encoding: 57521 57521 2439
+Encoding: 57521 57521 2419
 Width: 600
 VWidth: 1024
 Flags: HW
@@ -60077,12 +59719,12 @@ VStem: 488 41<119.038 287.216>
 AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2425 57506 N -1 0 0 -1 604 389 2
+Refer: 2405 57506 N -1 0 0 -1 604 389 2
 Validated: 32769
 EndChar
 
 StartChar: OSSE
-Encoding: 57522 57522 2440
+Encoding: 57522 57522 2420
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -60111,7 +59753,7 @@ Validated: 3073
 EndChar
 
 StartChar: TELCO.2
-Encoding: 57524 57524 2441
+Encoding: 57524 57524 2421
 Width: 600
 Flags: HW
 HStem: 0 41<320 507.993> 376 41<134.007 279 320 721.993>
@@ -60119,12 +59761,12 @@ VStem: 279 41<41 376>
 AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2437 57518 N 1 0 0 1 0 0 2
+Refer: 2417 57518 N 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
 StartChar: ANNA.2
-Encoding: 57525 57525 2442
+Encoding: 57525 57525 2422
 Width: 600
 Flags: HW
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
@@ -60132,12 +59774,12 @@ VStem: 63 41<125.218 290.386> 461 41<41 89 123.583 376> 461 122<0.251221 40.7501
 AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2413 57494 S 1 0 0 1 0 0 2
+Refer: 2393 57494 S 1 0 0 1 0 0 2
 Validated: 32769
 EndChar
 
 StartChar: TELCOTELCO
-Encoding: 57526 57526 2443
+Encoding: 57526 57526 2423
 Width: 600
 Flags: HW
 AnchorPoint: "abovetengwar" 300 550 basechar 0
@@ -60171,7 +59813,7 @@ Validated: 3073
 EndChar
 
 StartChar: QUESSENUQUERNA
-Encoding: 57527 57527 2444
+Encoding: 57527 57527 2424
 Width: 600
 Flags: HW
 HStem: -186 41<497 577.993> 0 42<59.0066 156 192.558 456> 390 41<193.771 362.604>
@@ -60205,7 +59847,7 @@ Validated: 3073
 EndChar
 
 StartChar: HWESTANUQUERNA
-Encoding: 57528 57528 2445
+Encoding: 57528 57528 2425
 Width: 600
 Flags: HW
 HStem: 0 41<59.0066 156 192.558 456 497 577.993> 390 41<193.771 362.318> 562 41<497 577.993>
@@ -60242,7 +59884,7 @@ Validated: 3073
 EndChar
 
 StartChar: ROOMENNUQUERNA
-Encoding: 57529 57529 2446
+Encoding: 57529 57529 2426
 Width: 600
 Flags: HW
 HStem: -13 41<134.854 214.99> -1 41<368.007 445 494 536.993> 568 41<404.01 479.513>
@@ -60250,12 +59892,12 @@ VStem: 62 41<58.5079 168.182> 496 41<423.256 551.337>
 AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
-Refer: 2423 57504 N -1 0 0 -1 600 476 2
+Refer: 2403 57504 N -1 0 0 -1 600 476 2
 Validated: 32769
 EndChar
 
 StartChar: MALTASILME
-Encoding: 57530 57530 2447
+Encoding: 57530 57530 2427
 Width: 600
 Flags: HW
 HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 269.564 307 477.564> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
@@ -60304,7 +59946,7 @@ Validated: 3073
 EndChar
 
 StartChar: VALASILME
-Encoding: 57531 57531 2448
+Encoding: 57531 57531 2428
 Width: 600
 Flags: HW
 HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
@@ -60344,7 +59986,7 @@ Validated: 3073
 EndChar
 
 StartChar: HALLAROOMEN
-Encoding: 57532 57532 2449
+Encoding: 57532 57532 2429
 Width: 600
 Flags: HW
 HStem: -193 41<120.487 195.99> 388 41<385.01 467.791> 487 41<63.0066 148>
@@ -60376,7 +60018,7 @@ Validated: 3073
 EndChar
 
 StartChar: VAIYA
-Encoding: 57533 57533 2450
+Encoding: 57533 57533 2430
 Width: 600
 Flags: HW
 HStem: -16 41<201.008 366.542 400 542> 390 41<199.502 356.395>
@@ -60406,9 +60048,9 @@ Validated: 3073
 EndChar
 
 StartChar: arrince
-Encoding: 57435 57435 2451
+Encoding: 57435 57435 2431
 Width: 600
-Flags: WO
+Flags: W
 HStem: -187 41<72.0066 145.024> 0 41<-124.993 159 200 304.365> 156 41<215.439 306.301>
 VStem: 159 41<-131.706 0 41 140.468> 320 41<56.2141 142.037>
 LayerCount: 2
@@ -60439,8 +60081,8 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: combiningsarince.2
-Encoding: 1114169 -1 2452
+StartChar: combiningsarince.alt
+Encoding: 1114113 -1 2432
 Width: 0
 VWidth: 1024
 GlyphClass: 4
@@ -60460,6 +60102,298 @@ SplineSet
  -175 -16 l 2
  -193 -16 -202 -9 -202 5 c 0
  -202 18 -193 25 -175 25 c 0
+EndSplineSet
+EndChar
+
+StartChar: parma.alt
+Encoding: 1114115 -1 2433
+Width: 600
+Flags: W
+HStem: -186 41<22.0066 103> 0 42<144 407.442> 376 41<22.0066 103> 390 41<237.682 406.229>
+VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 42 298.23 335 376> 500 41<137.005 298.785>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 221 m 4xd6
+ 541 97 449 0 330 0 c 5
+ 144 0 l 1
+ 144 -186 l 1xd6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xda
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 376 l 1xe6
+ 49 376 l 2
+ 31 376 22 383 22 397 c 0xea
+ 22 410 31 417 49 417 c 2
+ 144 417 l 1xe6
+ 144 335 l 1
+ 197 404 247 431 323 431 c 0
+ 447 431 541 340 541 221 c 4xd6
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 121 500 220 c 0
+ 500 316 423 390 322 390 c 0
+ 223 390 144 315 144 221 c 0
+ 144 42 l 1
+EndSplineSet
+EndChar
+
+StartChar: PARMA.alt
+Encoding: 1114114 -1 2434
+Width: 600
+Flags: W
+HStem: -186 41<22.0066 103> 0 42<144 395.518> 436 41<22.0066 103> 450 41<237.682 395.362>
+VStem: 22 122<-185.749 -145.25 436.251 476.75> 103 41<-145 0 42 358.23 395 436> 500 41<159.734 334.051>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 251 m 4xd6
+ 541 132 454 -0 330 0 c 6
+ 144 0 l 1
+ 144 -186 l 1xd6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xda
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 436 l 1xe6
+ 49 436 l 2
+ 31 436 22 443 22 457 c 0xea
+ 22 470 31 477 49 477 c 2
+ 144 477 l 1xe6
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 4xd6
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 42 l 1
+EndSplineSet
+EndChar
+
+StartChar: otehta_otehta_tixe
+Encoding: 1114123 -1 2435
+Width: 0
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 2262 57412 S 1 0 0 1 58 -26 2
+Refer: 2323 57422 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: utehta_utehta_tixe
+Encoding: 1114124 -1 2436
+Width: 0
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 2262 57412 S 1 0 0 1 -118 16 2
+Refer: 2324 57423 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: formen.alt
+Encoding: 1114125 -1 2437
+Width: 600
+Flags: W
+HStem: 0 41<22.0066 103 144 407.442> 390 41<237.682 406.229> 562 42<22.0066 103>
+VStem: 103 41<41 298.23 335 562> 500 41<136.889 298.785>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+500 220 m 0
+ 500 316 423 390 322 390 c 0
+ 223 390 144 315 144 221 c 0
+ 144 41 l 1
+ 330 41 l 1
+ 424 41 500 121 500 220 c 0
+541 221 m 0
+ 541 97 449 -0 330 0 c 2
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 562 l 1
+ 49 562 l 2
+ 31 562 22 569 22 583 c 0
+ 22 596 31 604 49 604 c 2
+ 144 604 l 1
+ 144 335 l 1
+ 197 404 247 431 323 431 c 0
+ 447 431 541 340 541 221 c 0
+EndSplineSet
+EndChar
+
+StartChar: vala.alt
+Encoding: 1114126 -1 2438
+Width: 600
+Flags: W
+HStem: 0 42<22.0066 103 144 407.442> 376 41<22.0066 103> 390 41<237.682 406.229>
+VStem: 103 41<42 298.23 335 376> 500 41<137.005 298.785>
+AnchorPoint: "abovetengwar" 300 490 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 221 m 0xb8
+ 541 97 449 -0 330 0 c 2
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 376 l 1
+ 49 376 l 2
+ 31 376 22 383 22 397 c 0
+ 22 410 31 417 49 417 c 2
+ 144 417 l 1xd8
+ 144 335 l 1
+ 197 404 247 431 323 431 c 0
+ 447 431 541 340 541 221 c 0xb8
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 121 500 220 c 0
+ 500 316 423 390 322 390 c 0xb8
+ 223 390 144 315 144 221 c 0
+ 144 42 l 1
+EndSplineSet
+EndChar
+
+StartChar: formemparma.alt
+Encoding: 1114127 -1 2439
+Width: 600
+Flags: W
+HStem: -186 41<22.0066 103> 0 42<144 407.442> 390 41<237.682 406.229> 563 41<22.0066 103>
+VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 0 42 298.23 335 563> 500 41<137.005 298.785>
+AnchorPoint: "abovetengwar" 340 490 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 221 m 0xf6
+ 541 97 449 0 330 0 c 1
+ 144 0 l 17
+ 144 -186 l 1xf6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xfa
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 563 l 1xf6
+ 49 563 l 2
+ 31 563 22 570 22 584 c 0xfa
+ 22 597 31 604 49 604 c 2
+ 144 604 l 1
+ 144 335 l 1
+ 197 404 247 431 323 431 c 0
+ 447 431 541 340 541 221 c 0xf6
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 121 500 220 c 0
+ 500 316 423 390 322 390 c 0
+ 223 390 144 315 144 221 c 0
+ 144 42 l 1
+EndSplineSet
+EndChar
+
+StartChar: FORMEN.alt
+Encoding: 1114128 -1 2440
+Width: 600
+Flags: W
+HStem: 0 41<22.0066 103 144 395.518> 450 41<237.682 395.362> 592 41<22.0066 103>
+VStem: 103 41<41 358.23 395 592> 500 41<159.618 334.051>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 251 m 0
+ 541 132 454 -0 330 0 c 2
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 592 l 1
+ 49 592 l 2
+ 31 592 22 599 22 613 c 0
+ 22 626 31 633 49 633 c 2
+ 144 633 l 1
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 0
+144 41 m 1
+ 330 41 l 0
+ 424 41 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 41 l 1
+EndSplineSet
+EndChar
+
+StartChar: VALA.alt
+Encoding: 1114129 -1 2441
+Width: 600
+Flags: W
+HStem: 0 42<22.0066 103 144 395.518> 436 41<22.0066 103> 450 41<237.682 395.362>
+VStem: 103 41<42 358.23 395 436> 500 41<159.734 334.051>
+AnchorPoint: "abovetengwar" 300 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 251 m 0xb8
+ 541 132 454 -0 330 0 c 2
+ 49 0 l 2
+ 31 0 22 7 22 21 c 0
+ 22 34 31 41 49 41 c 2
+ 103 41 l 1
+ 103 436 l 1
+ 49 436 l 2
+ 31 436 22 443 22 457 c 0
+ 22 470 31 477 49 477 c 2
+ 144 477 l 1xd8
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 0xb8
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0xb8
+ 223 450 144 375 144 281 c 0
+ 144 42 l 1
+EndSplineSet
+EndChar
+
+StartChar: FORMEMPARMA.alt
+Encoding: 1114130 -1 2442
+Width: 600
+Flags: W
+HStem: -186 41<22.0066 103> 0 42<144 395.518> 450 41<237.682 395.362> 593 41<22.0066 103>
+VStem: 22 122<-185.749 -145.25 593.251 633.75> 103 41<-145 0 42 358.23 395 593> 500 41<159.734 334.051>
+AnchorPoint: "abovetengwar" 340 550 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+541 251 m 0xf6
+ 541 132 454 -0 330 0 c 2
+ 144 0 l 17
+ 144 -186 l 1xf6
+ 49 -186 l 2
+ 31 -186 22 -179 22 -165 c 0xfa
+ 22 -152 31 -145 49 -145 c 2
+ 103 -145 l 1
+ 103 593 l 1xf6
+ 49 593 l 2
+ 31 593 22 600 22 614 c 0xfa
+ 22 627 31 634 49 634 c 2
+ 144 634 l 1
+ 144 395 l 1
+ 197 464 247 491 323 491 c 0
+ 447 491 541 370 541 251 c 0xf6
+144 42 m 1
+ 330 42 l 0
+ 424 42 500 151 500 250 c 0
+ 500 346 423 450 322 450 c 0
+ 223 450 144 375 144 281 c 0
+ 144 42 l 1
 EndSplineSet
 EndChar
 EndChars

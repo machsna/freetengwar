@@ -4,7 +4,9 @@ languagesystem latn dflt;
 
 @tehtarAbove = [atehta yatehta tixe etehta etehta_etehta otehta utehta
 otehta_otehta utehta_utehta nengwetehta watehta ytehta etehtanuquerna
-yantatehta atehtanuquerna];
+yantatehta atehtanuquerna otehta_otehta_tixe utehta_utehta_tixe];
+
+@parmaTeema = [parma formen vala formemparma PARMA FORMEN VALA FORMEMPARMA];
 
 @rightTengwar = [tinco parma ando umbar suule formen anto ampa oore vala
 suuletinco formemparma antando ampumbar yanta uure telco TINCO PARMA ANDO UMBAR
@@ -17,6 +19,7 @@ lookup tengwar_ligatures_ignoring_tehtar {
     lookupflag IgnoreMarks;
 
     # Ligatures proper
+    sub \aha \zwj \tinco by \aha_tinco;
     sub \hwesta \zwj \tinco by \hwesta_tinco;
     sub \silme \zwj \aha by \silme_aha;
 
@@ -27,35 +30,6 @@ lookup tengwar_ligatures_ignoring_tehtar {
     sub \lambe \unuyatehta by \lambe_unuyatehta;
     sub \alda \andatehta by \alda_andatehta;
     sub \lambenuquerna \andatehta by \lambenuquerna_andatehta;
-
-    # Combining sarince ligatures
-    sub \tinco \combiningsarince by \tinco_combiningsarince;
-    sub \parma \combiningsarince by \parma_combiningsarince;
-    sub \calma \combiningsarince by \calma_combiningsarince;
-    sub \quesse \combiningsarince by \quesse_combiningsarince;
-    sub \ando \combiningsarince by \ando_combiningsarince;
-    sub \umbar \combiningsarince by \umbar_combiningsarince;
-    sub \suule \combiningsarince by \suule_combiningsarince;
-    sub \formen \combiningsarince by \formen_combiningsarince;
-    sub \aha \combiningsarince by \aha_combiningsarince;
-    sub \hwesta \combiningsarince by \hwesta_combiningsarince;
-    sub \anto \combiningsarince by \anto_combiningsarince;
-    sub \ampa \combiningsarince by \ampa_combiningsarince;
-    sub \nuumen \combiningsarince by \nuumen_combiningsarince;
-    sub \malta \combiningsarince by \malta_combiningsarince;
-    sub \oore \combiningsarince by \oore_combiningsarince;
-    sub \vala \combiningsarince by \vala_combiningsarince;
-    sub \anna \combiningsarince by \anna_combiningsarince;
-    sub \vilya \combiningsarince by \vilya_combiningsarince;
-    sub \suuletinco \combiningsarince by \suuletinco_combiningsarince;
-    sub \formemparma \combiningsarince by \formemparma_combiningsarince;
-    sub \ahacalma \combiningsarince by \ahacalma_combiningsarince;
-    sub \hwestaquesse \combiningsarince by \hwestaquesse_combiningsarince;
-    sub \antando \combiningsarince by \antando_combiningsarince;
-    sub \ampumbar \combiningsarince by \ampumbar_combiningsarince;
-    sub \yanta \combiningsarince by \yanta_combiningsarince;
-    sub \uure \combiningsarince by \uure_combiningsarince;
-    sub \telco \combiningsarince by \telco_combiningsarince;
 } tengwar_ligatures_ignoring_tehtar;
 
 lookup tengwar_ligatures_regarding_tehtar {
@@ -63,6 +37,10 @@ lookup tengwar_ligatures_regarding_tehtar {
 
     # ZWJ magic
     sub \zwj \andatelco by \thinnas;
+
+    # Double tehta and tixe
+    sub \otehta \otehta \tixe by \otehta_otehta_tixe;
+    sub \utehta \utehta \tixe by \utehta_utehta_tixe;
 
     # Double tehta
     sub \tixe \tixe by \yatehta;
@@ -83,6 +61,21 @@ lookup tengwar_ligatures_regarding_tehtar {
     sub \thinnas \putta by \thinnas_putta;
 } tengwar_ligatures_regarding_tehtar;
 
+lookup SARINCE_ALT {
+    sub \combiningsarince by \combiningsarince.alt;
+} SARINCE_ALT;
+
+lookup PARMATEEMA_ALT {
+    sub \parma by \parma.alt;
+    sub \formen by \formen.alt;
+    sub \vala by \vala.alt;
+    sub \formemparma by \formemparma.alt;
+    sub \PARMA by \PARMA.alt;
+    sub \FORMEN by \FORMEN.alt;
+    sub \VALA by \VALA.alt;
+    sub \FORMEMPARMA by \FORMEMPARMA.alt;
+} PARMATEEMA_ALT;
+
 feature liga {
     substitute \watehta' [@tehtarAbove] by \watehta.alt;
 
@@ -90,5 +83,6 @@ feature liga {
     lookup tengwar_ligatures_regarding_tehtar;
 
     lookupflag IgnoreMarks;
-    substitute [@rightTengwar] \combiningsarince' by \combiningsarince.2;
+    substitute [@parmaTeema]' lookup PARMATEEMA_ALT \combiningsarince' lookup SARINCE_ALT;
+    substitute [@rightTengwar] \combiningsarince' lookup SARINCE_ALT;
 } liga;
