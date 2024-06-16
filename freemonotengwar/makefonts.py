@@ -19,6 +19,7 @@ thefont.familyname=thefont.familyname+"-draft"
 thefont.fullname=thefont.fullname+"-draft"
 
 thefont.mergeFeature("FreeMonoTengwar.fea")
+thefont.save("FreeMonoTengwar-mergeFeature.sfd")
 
 thefont.generate("FreeMonoTengwar.ttf","",("opentype","round"))
 

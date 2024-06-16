@@ -2,6 +2,15 @@
 languagesystem DFLT dflt;
 languagesystem latn dflt;
 
+@tehtarAbove = [atehta yatehta tixe etehta etehta_etehta otehta utehta
+otehta_otehta utehta_utehta nengwetehta watehta ytehta etehtanuquerna
+yantatehta atehtanuquerna];
+
+@rightTengwar = [tinco parma ando umbar suule formen anto ampa oore vala
+suuletinco formemparma antando ampumbar yanta uure telco TINCO PARMA ANDO UMBAR
+SUULE FORMEN ANTO AMPA OORE VALA SUULETINCO FORMEMPARMA ANTANDO AMPUMBAR YANTA
+UURE TELCO];
+
 # Class definitions
 
 lookup tengwar_ligatures_ignoring_tehtar {
@@ -55,55 +64,6 @@ lookup tengwar_ligatures_regarding_tehtar {
     # ZWJ magic
     sub \zwj \andatelco by \thinnas;
 
-    # Watehta and tixe + tehta
-    sub \tixe \otehta \watehta by \watehta_otehta_tixe;
-    sub \otehta \tixe \watehta by \watehta_otehta_tixe;
-    sub \watehta \tixe \otehta by \watehta_otehta_tixe;
-    sub \watehta \otehta \tixe by \watehta_otehta_tixe;
-    sub \tixe \utehta \watehta by \watehta_utehta_tixe;
-    sub \utehta \tixe \watehta by \watehta_utehta_tixe;
-    sub \watehta \tixe \utehta by \watehta_utehta_tixe;
-    sub \watehta \utehta \tixe by \watehta_utehta_tixe;
-
-    # Watehta and double tehta
-    sub \tixe \tixe \watehta by \watehta_yatehta;
-    sub \watehta \tixe \tixe by \watehta_yatehta;
-    sub \etehta \etehta \watehta by \watehta_etehta_etehta;
-    sub \watehta \etehta \etehta by \watehta_etehta_etehta;
-    sub \etehtanuquerna \etehtanuquerna \watehta by \watehta_etehtanuquerna_etehtanuquerna;
-    sub \watehta \etehtanuquerna \etehtanuquerna by \watehta_etehtanuquerna_etehtanuquerna;
-    sub \otehta \otehta \watehta by \watehta_otehta_otehta;
-    sub \watehta \otehta \otehta by \watehta_otehta_otehta;
-    sub \utehta \utehta \watehta by \watehta_utehta_utehta;
-    sub \watehta \utehta \utehta by \watehta_utehta_utehta;
-
-    # Watehta and tehta
-    sub \atehta \watehta by \watehta_atehta;
-    sub \watehta \atehta by \watehta_atehta;
-    sub \yatehta \watehta by \watehta_yatehta;
-    sub \watehta \yatehta by \watehta_yatehta;
-    sub \tixe \watehta by \watehta_tixe;
-    sub \watehta \tixe by \watehta_tixe;
-    sub \etehta \watehta by \watehta_etehta;
-    sub \watehta \etehta by \watehta_etehta;
-    sub \otehta \watehta by \watehta_otehta;
-    sub \watehta \otehta by \watehta_otehta;
-    sub \utehta \watehta by \watehta_utehta;
-    sub \watehta \utehta by \watehta_utehta;
-    sub \otehta_otehta \watehta by \watehta_otehta_otehta;
-    sub \watehta \otehta_otehta by \watehta_otehta_otehta;
-    sub \utehta_utehta \watehta by \watehta_utehta_utehta;
-    sub \watehta \utehta_utehta by \watehta_utehta_utehta;
-    sub \watehta \watehta by \watehta_watehta;
-    sub \ytehta \watehta by \watehta_ytehta;
-    sub \watehta \ytehta by \watehta_ytehta;
-    sub \etehtanuquerna \watehta by \watehta_etehtanuquerna;
-    sub \watehta \etehtanuquerna by \watehta_etehtanuquerna;
-    sub \watehta \yantatehta by \watehta_yantatehta;
-    sub \yantatehta \watehta by \watehta_yantatehta;
-    sub \atehtanuquerna \watehta by \watehta_atehtanuquerna;
-    sub \watehta \atehtanuquerna by \watehta_atehtanuquerna;
-
     # Double tehta
     sub \tixe \tixe by \yatehta;
     sub \putta \putta by \unuyatehta;
@@ -124,6 +84,11 @@ lookup tengwar_ligatures_regarding_tehtar {
 } tengwar_ligatures_regarding_tehtar;
 
 feature liga {
+    substitute \watehta' [@tehtarAbove] by \watehta.alt;
+
     lookup tengwar_ligatures_ignoring_tehtar;
     lookup tengwar_ligatures_regarding_tehtar;
+
+    lookupflag IgnoreMarks;
+    substitute [@rightTengwar] \combiningsarince' by \combiningsarince.2;
 } liga;

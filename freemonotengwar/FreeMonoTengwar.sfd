@@ -59395,7 +59395,7 @@ EndSplineSet
 Validated: 3073
 EndChar
 
-StartChar: AMPAMBA
+StartChar: AMPUMBAR
 Encoding: 57501 57501 2420
 Width: 600
 VWidth: 1024
@@ -60436,6 +60436,30 @@ SplineSet
  72 -153 81 -146 99 -146 c 0
  133 -146 159 -121 159 -90 c 2
  159 0 l 1
+EndSplineSet
+EndChar
+
+StartChar: combiningsarince.2
+Encoding: 1114169 -1 2452
+Width: 0
+VWidth: 1024
+GlyphClass: 4
+Flags: HW
+HStem: -176 41<-184.993 -114.125> -16 41<-201.993 -114.618>
+VStem: -98 41<-119.82 -32.3927>
+LayerCount: 2
+Fore
+SplineSet
+-175 25 m 0
+ -82 25 -57 -44 -57 -77 c 0
+ -57 -125 -107 -176 -158 -176 c 0
+ -176 -176 -185 -169 -185 -155 c 0
+ -185 -142 -176 -135 -158 -135 c 0
+ -124 -135 -98 -108 -98 -77 c 0
+ -98 -45 -125 -16 -158 -16 c 2
+ -175 -16 l 2
+ -193 -16 -202 -9 -202 5 c 0
+ -202 18 -193 25 -175 25 c 0
 EndSplineSet
 EndChar
 EndChars
