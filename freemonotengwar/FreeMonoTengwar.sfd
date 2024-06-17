@@ -54340,9 +54340,9 @@ EndChar
 
 StartChar: hyarmen
 Encoding: 57384 57384 2254
-Width: 599
+Width: 600
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
 VStem: 135 42<333.033 351>
 AnchorPoint: "abovetengwar" 340 550 basechar 0
@@ -59472,10 +59472,10 @@ EndChar
 
 StartChar: HYARMEN
 Encoding: 57512 57512 2411
-Width: 599
-Flags: HW
-HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
-VStem: 135 42<333.033 351>
+Width: 600
+Flags: W
+HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 547 41<237 255>
+VStem: 135 42<393.033 411>
 AnchorPoint: "abovetengwar" 340 610 basechar 0
 LayerCount: 2
 Fore
