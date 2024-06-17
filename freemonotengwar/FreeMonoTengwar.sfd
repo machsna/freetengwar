@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1718646206
+ModificationTime: 1718657119
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -464,7 +464,7 @@ Grid
  445 497 436 490 418 490 c 6
 EndSplineSet
 AnchorClass2: "mkmkTengwar" "'mkmk' Mark to Mark lookup in Tengwar subtable" "abovetengwar" "'mark' Mark Positioning in Tengwar subtable" "abovegk" "'mark' Mark Positioning in Greek subtable" "below" "'mark' Mark Positioning in Latin 1 subtable" "above" "'mark' Mark Positioning in Latin 2 subtable"
-BeginChars: 1114160 2443
+BeginChars: 1114161 2444
 
 StartChar: space
 Encoding: 32 32 0
@@ -61369,7 +61369,7 @@ StartChar: combiningsarince
 Encoding: 57433 57433 2317
 Width: 600
 VWidth: 1024
-GlyphClass: 5
+GlyphClass: 2
 Flags: W
 HStem: -176 41<114.125 184.993> -16 41<114.618 201.993>
 VStem: 57 41<-119.82 -32.3927>
@@ -65814,6 +65814,17 @@ SplineSet
  223 450 144 375 144 281 c 0
  144 42 l 1
 EndSplineSet
+EndChar
+
+StartChar: combiningsarince.mark
+Encoding: 1114160 -1 2443
+Width: 600
+VWidth: 1024
+GlyphClass: 4
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 2317 57433 N 1 0 0 1 0 0 2
 EndChar
 EndChars
 EndSplineFont
