@@ -1,21 +1,70 @@
 # Script and language coverage
+
 languagesystem DFLT dflt;
 languagesystem latn dflt;
 
-@tehtarAbove = [atehta yatehta tixe etehta etehta_etehta otehta utehta
-otehta_otehta utehta_utehta nengwetehta watehta ytehta etehtanuquerna
-yantatehta atehtanuquerna otehta_otehta_tixe utehta_utehta_tixe];
-
-@parmaTeema = [parma formen vala formemparma PARMA FORMEN VALA FORMEMPARMA];
-
-@rightTengwar = [tinco parma ando umbar suule formen anto ampa oore vala
-suuletinco formemparma antando ampumbar yanta uure telco TINCO PARMA ANDO UMBAR
-SUULE FORMEN ANTO AMPA OORE VALA SUULETINCO FORMEMPARMA ANTANDO AMPUMBAR YANTA
-UURE TELCO];
 
 # Class definitions
 
-lookup tengwar_ligatures_ignoring_tehtar {
+@tehtar_above = [atehta yatehta tixe tixe_etehta etehta etehta_etehta otehta utehta otehta_tixe utehta_tixe otehta_otehta utehta_utehta otehta_otehta_tixe utehta_utehta_tixe nengwetehta watehta watehta.alt ytehta etehtanuquerna etehtanuquerna_etehtanuquerna yantatehta atehtanuquerna];
+@tehtar_inside = [tixeoverlay];
+@tehtar_below = [unuatehta unuyatehta putta unuetehta unuetehta_unuetehta unuotehta unuutehta andatehta thinnas thinnas_putta combiningsarince combiningsarince.alt tengwardigitMark];
+@tehtar_all = [@tehtar_above @tehtar_inside @tehtar_below];
+
+@zerowidth = [@tehtar_all gravecomb acutecomb circumflexcmb tildecomb macroncomb overlinecmb brevecomb dotaccentcmb diaeresiscomb hookabovecomb ringcmb hungarumlautcmb caroncmb linevertnosp linevertdblnosp gravedblnosp breve_dotaccent uni0311 horncmb hooksubpalatnosp hooksubretronosp cedillacmb ogonekcmb strokeshortoverlaycmb strokelongoverlaycmb slashshortnosp slashlongnosp perispomenigreekcmb dialytikatonoscmb ypogegrammenigreekcmb commasubnosp leftharpoonaccent rightharpoonaccent uni20D2 uni20E1 uni20EC uni20ED uni20EE uni20EF uni20D6 uni20D7 zwnj zwj afii300 afii299 dotbelowcomb macronbelowcmb uni033A uni032a uni0346 uni20e2 uni20DD uni20DE uni20DF uni20E0 uni20DC uni20DB uni20e3 uni0312 uni0313 uni0314 uni031c uni0315 ringrighthalfsubnosp uni0340 uni0341 uni034c uni0351 uni0357 uni031d uni031e uni031f tildeoverlaycmb uni0316 uni0317 uni0324 uni0325 uni0329 uni032D uni032E uni032F uni032C uni0343 uni0348 uni034d uni0330 uni0332 uni0318 uni0319 uni0352 uni0320 uni0333 uni033b overscoredblnosp uni0347 uni031a uni032b uni033c uni033d uni033e uni0350 uni0353 uni0354 uni0355 uni0356 uni0358 uni0359 uni035a uni0349 uni034B];
+
+@tincoteema_small = [tinco ando suule anto nuumen oore suuletinco antando];
+@tincoteema_caps = [TINCO ANDO SUULE ANTO NUUMEN OORE SUULETINCO ANTANDO];
+@tincoteema = [@tincoteema_small @tincoteema_caps];
+
+@parmateema_small = [parma umbar formen ampa malta vala formemparma ampumbar];
+@parmateema_caps = [PARMA UMBAR FORMEN AMPA MALTA VALA FORMEMPARMA AMPUMBAR];
+@parmateema = [@parmateema_small @parmateema_caps];
+
+@parmateema_alt_small = [parma.alt parma.alt formen.alt formen.alt vala.alt vala.alt formemparma.alt formemparma.alt];
+@parmateema_alt_caps = [PARMA.alt PARMA.alt FORMEN.alt FORMEN.alt VALA.alt VALA.alt FORMEMPARMA.alt FORMEMPARMA.alt];
+@parmateema_alt = [@parmateema_alt_small @parmateema_alt_caps];
+
+@calmateema_small = [calma anga aha anca noldo anna ahacalma ancanga];
+@calmateema_caps = [CALMA ANGA AHA ANCA NOLDO ANNA AHACALMA ANCANGA];
+@calmateema = [@calmateema_small @calmateema_caps];
+
+@quesseteema_small = [quesse ungwe hwesta unque nwalme vilya hwestaquesse uncungwe];
+@quesseteema_caps = [QUESSE UNGWE HWESTA UNQUE NWALME VILYA HWESTAQUESSE UNCUNGWE];
+@quesseteema = [@quesseteema_small @quesseteema_caps];
+
+@additional_tengwar_small = [roomen arda lambe alda silme silmenuquerna esse essenuquerna hyarmen hwestasindarinwa yanta uure andatelco halla telco ossenuquerna lambenuquerna osse telco.2 anna.2 telcotelco quessenuquerna hwestanuquerna roomennuquerna malta_combiningsarince vala_combiningsarince hallaroomen vaiya];
+@additional_tengwar_caps = [ROOMEN ARDA LAMBE ALDA SILME SILMENUQUERNA ESSE ESSENUQUERNA HYARMEN HWESTASINDARINWA YANTA UURE ANDATELCO HALLA TELCO OSSENUQUERNA LAMBENUQUERNA OSSE TELCO.2 ANNA.2 TELCOTELCO QUESSENUQUERNA HWESTANUQUERNA ROOMENNUQUERNA MALTA_combiningsarince VALA_combiningsarince HALLAROOMEN VAIYA];
+@additional_tengwar = [@additional_tengwar_small @additional_tengwar_caps];
+
+@tengwar_ligatures = [aha_tinco silme_aha hwesta_tinco];
+
+@tengwar_hooks = [sarince arrince];
+
+@delete_sarince_ligatures = [calma_combiningsarince quesse_combiningsarince ando_combiningsarince umbar_combiningsarince suule_combiningsarince formen_combiningsarince aha_combiningsarince hwesta_combiningsarince anto_combiningsarince ampa_combiningsarince nuumen_combiningsarince oore_combiningsarince anna_combiningsarince vilya_combiningsarince suuletinco_combiningsarince formemparma_combiningsarince ahacalma_combiningsarince hwestaquesse_combiningsarince antando_combiningsarince ampumbar_combiningsarince yanta_combiningsarince uure_combiningsarince telco_combiningsarince];
+@delete_alda_lambe_ligatures = [lambe_putta alda_andatehta lambe_andatehta lambenuquerna_andatehta lambe_unuyatehta];
+
+@tengwar_all = [@tincoteema @parmateema @parmateema_alt @calmateema @quesseteema @additional_tengwar @tengwar_ligatures @tengwar_hooks @delete_sarince_ligatures @delete_alda_lambe_ligatures];
+
+
+@tengwar_rightsarince = [@tincoteema yanta uure telco YANTA UURE TELCO];
+
+
+@tengwar_puncutation = [tengwarPusta tengwarDoublepusta tengwarTriplepusta tengwarQuadruplepusta tengwarQuintuplepusta tengwarExclamation tengwarQuestion tengwarParanthesis tengwarSection tengwarDoublesection tengwarQuoteleft tengwarQuoteright tengwarExclamationB uni2E31 uni2E2C uni2E2D];
+
+@tengwar_digits = [tengwardigit0 tengwardigit1 tengwardigit2 tengwardigit3 tengwardigit4 tengwardigit5 tengwardigit6 tengwardigit7 tengwardigit8 tengwardigit9 tengwarduodecimal10 tengwarduodecimal11 tengwarduodecimal12];
+
+
+# Mark classes
+
+markClass [@tehtar_above] <anchor 300 490> @TOP_TEHTAR;
+markClass [@tehtar_inside] <anchor 300 220> @INSIDE_TEHTAR;
+markClass [@tehtar_below] <anchor 300 -70> @BOTTOM_TEHTAR;
+
+
+# Lookups
+
+lookup TENGWAR_LIGATURES_IGNORING_TEHTAR {
     lookupflag IgnoreMarks;
 
     # Ligatures proper
@@ -30,9 +79,9 @@ lookup tengwar_ligatures_ignoring_tehtar {
     sub \lambe \unuyatehta by \lambe_unuyatehta;
     sub \alda \andatehta by \alda_andatehta;
     sub \lambenuquerna \andatehta by \lambenuquerna_andatehta;
-} tengwar_ligatures_ignoring_tehtar;
+} TENGWAR_LIGATURES_IGNORING_TEHTAR;
 
-lookup tengwar_ligatures_regarding_tehtar {
+lookup TENGWAR_LIGATURES_REGARDING_TEHTAR {
     lookupflag 0;
 
     # ZWJ magic
@@ -59,30 +108,38 @@ lookup tengwar_ligatures_regarding_tehtar {
     sub \tixe \etehta by \tixe_etehta;
     sub \putta \thinnas by \thinnas_putta;
     sub \thinnas \putta by \thinnas_putta;
-} tengwar_ligatures_regarding_tehtar;
+} TENGWAR_LIGATURES_REGARDING_TEHTAR;
 
-lookup SARINCE_ALT {
+lookup RIGHT_SARINCE {
     sub \combiningsarince by \combiningsarince.alt;
-} SARINCE_ALT;
+} RIGHT_SARINCE;
 
 lookup PARMATEEMA_ALT {
-    sub \parma by \parma.alt;
-    sub \formen by \formen.alt;
-    sub \vala by \vala.alt;
-    sub \formemparma by \formemparma.alt;
-    sub \PARMA by \PARMA.alt;
-    sub \FORMEN by \FORMEN.alt;
-    sub \VALA by \VALA.alt;
-    sub \FORMEMPARMA by \FORMEMPARMA.alt;
+    sub @parmateema by @parmateema_alt;
 } PARMATEEMA_ALT;
 
-feature liga {
-    substitute \watehta' [@tehtarAbove] by \watehta.alt;
 
-    lookup tengwar_ligatures_ignoring_tehtar;
-    lookup tengwar_ligatures_regarding_tehtar;
+# Features
+
+feature liga {
+    substitute \watehta' [@tehtar_above] by \watehta.alt;
+
+    lookup TENGWAR_LIGATURES_IGNORING_TEHTAR;
+    lookup TENGWAR_LIGATURES_REGARDING_TEHTAR;
 
     lookupflag IgnoreMarks;
-    substitute [@parmaTeema]' lookup PARMATEEMA_ALT \combiningsarince' lookup SARINCE_ALT;
-    substitute [@rightTengwar] \combiningsarince' lookup SARINCE_ALT;
+    substitute [@parmateema]' lookup PARMATEEMA_ALT \combiningsarince' lookup RIGHT_SARINCE;
+    substitute [@tengwar_rightsarince] \combiningsarince' lookup RIGHT_SARINCE;
 } liga;
+
+feature mark {
+    pos base [@tengwar_all] <anchor 300 490> mark @TOP_TEHTAR
+                            <anchor 300 220> mark @INSIDE_TEHTAR
+                            <anchor 300 -70> mark @BOTTOM_TEHTAR;
+
+    # Make zero width characters true zero width, cf.
+    # https://fontforge.org/docs/faq.html#faq-monospace
+    # https://github.com/fontforge/fontforge/issues/5362
+    # https://forum.glyphsapp.com/t/coding-ligatures-in-monospaced-font/8595/6
+    pos @zerowidth <0 0 600 0>;
+} mark;
