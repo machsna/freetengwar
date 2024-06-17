@@ -68,46 +68,46 @@ lookup TENGWAR_LIGATURES_IGNORING_TEHTAR {
     lookupflag IgnoreMarks;
 
     # Ligatures proper
-    sub \aha \zwj \tinco by \aha_tinco;
-    sub \hwesta \zwj \tinco by \hwesta_tinco;
-    sub \silme \zwj \aha by \silme_aha;
+    sub aha zwj tinco by aha_tinco;
+    sub hwesta zwj tinco by hwesta_tinco;
+    sub silme zwj aha by silme_aha;
 
     # Tengwa and unutehta combinations
-    sub \lambe \putta \putta by \lambe_unuyatehta;
-    sub \lambe \andatehta by \lambe_andatehta;
-    sub \lambe \putta by \lambe_putta;
-    sub \lambe \unuyatehta by \lambe_unuyatehta;
-    sub \alda \andatehta by \alda_andatehta;
-    sub \lambenuquerna \andatehta by \lambenuquerna_andatehta;
+    sub lambe putta putta by lambe_unuyatehta;
+    sub lambe andatehta by lambe_andatehta;
+    sub lambe putta by lambe_putta;
+    sub lambe unuyatehta by lambe_unuyatehta;
+    sub alda andatehta by alda_andatehta;
+    sub lambenuquerna andatehta by lambenuquerna_andatehta;
 } TENGWAR_LIGATURES_IGNORING_TEHTAR;
 
 lookup TENGWAR_LIGATURES_REGARDING_TEHTAR {
     lookupflag 0;
 
     # ZWJ magic
-    sub \zwj \andatelco by \thinnas;
+    sub zwj andatelco by thinnas;
 
     # Double tehta and tixe
-    sub \otehta \otehta \tixe by \otehta_otehta_tixe;
-    sub \utehta \utehta \tixe by \utehta_utehta_tixe;
+    sub otehta otehta tixe by otehta_otehta_tixe;
+    sub utehta utehta tixe by utehta_utehta_tixe;
 
     # Double tehta
-    sub \tixe \tixe by \yatehta;
-    sub \putta \putta by \unuyatehta;
-    sub \etehta \etehta by \etehta_etehta;
-    sub \unuetehta \unuetehta by \unuetehta_unuetehta;
-    sub \otehta \otehta by \otehta_otehta;
-    sub \utehta \utehta by \utehta_utehta;
-    sub \etehtanuquerna \etehtanuquerna by \etehtanuquerna_etehtanuquerna;
+    sub tixe tixe by yatehta;
+    sub putta putta by unuyatehta;
+    sub etehta etehta by etehta_etehta;
+    sub unuetehta unuetehta by unuetehta_unuetehta;
+    sub otehta otehta by otehta_otehta;
+    sub utehta utehta by utehta_utehta;
+    sub etehtanuquerna etehtanuquerna by etehtanuquerna_etehtanuquerna;
 
     # Tixe/putta combinations
-    sub \tixe \otehta by \otehta_tixe;
-    sub \otehta \tixe by \otehta_tixe;
-    sub \tixe \utehta by \utehta_tixe;
-    sub \utehta \tixe by \utehta_tixe;
-    sub \tixe \etehta by \tixe_etehta;
-    sub \putta \thinnas by \thinnas_putta;
-    sub \thinnas \putta by \thinnas_putta;
+    sub tixe otehta by otehta_tixe;
+    sub otehta tixe by otehta_tixe;
+    sub tixe utehta by utehta_tixe;
+    sub utehta tixe by utehta_tixe;
+    sub tixe etehta by tixe_etehta;
+    sub putta thinnas by thinnas_putta;
+    sub thinnas putta by thinnas_putta;
 } TENGWAR_LIGATURES_REGARDING_TEHTAR;
 
 lookup LEFT_SARINCE {
@@ -115,7 +115,7 @@ lookup LEFT_SARINCE {
 } LEFT_SARINCE;
 
 lookup RIGHT_SARINCE {
-    sub \combiningsarince by \combiningsarince.alt;
+    sub combiningsarince by combiningsarince.alt;
 } RIGHT_SARINCE;
 
 lookup PARMATEEMA_ALT {
@@ -126,14 +126,14 @@ lookup PARMATEEMA_ALT {
 # Features
 
 feature liga {
-    substitute \watehta' [@tehtar_above] by \watehta.alt;
+    substitute watehta' [@tehtar_above] by watehta.alt;
 
     lookup TENGWAR_LIGATURES_IGNORING_TEHTAR;
     lookup TENGWAR_LIGATURES_REGARDING_TEHTAR;
 
     lookupflag IgnoreMarks;
-    substitute [@parmateema]' lookup PARMATEEMA_ALT \combiningsarince' lookup RIGHT_SARINCE;
-    substitute [@tengwar_rightsarince] \combiningsarince' lookup RIGHT_SARINCE;
+    substitute [@parmateema]' lookup PARMATEEMA_ALT combiningsarince' lookup RIGHT_SARINCE;
+    substitute [@tengwar_rightsarince] combiningsarince' lookup RIGHT_SARINCE;
     substitute [@tengwar_all] combiningsarince' lookup LEFT_SARINCE;
 } liga;
 
