@@ -125,7 +125,7 @@ lookup PARMATEEMA_ALT {
 
 # Features
 
-feature liga {
+feature ccmp {
     substitute watehta' [@tehtar_above] by watehta.alt;
 
     lookup TENGWAR_LIGATURES_IGNORING_TEHTAR;
@@ -135,7 +135,7 @@ feature liga {
     substitute [@parmateema]' lookup PARMATEEMA_ALT combiningsarince' lookup RIGHT_SARINCE;
     substitute [@tengwar_rightsarince] combiningsarince' lookup RIGHT_SARINCE;
     substitute [@tengwar_all] combiningsarince' lookup LEFT_SARINCE;
-} liga;
+} ccmp;
 
 feature mark {
     # Make zero width characters true zero width, cf.
