@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1203284335
-ModificationTime: 1718657119
+ModificationTime: 1718710704
 PfmFamily: 49
 TTFWeight: 400
 TTFWidth: 5
@@ -54,9 +54,7 @@ OS2CodePages: 600001bf.dff70000
 OS2UnicodeRanges: e4000eff.50007fff.00048020.00000000
 Lookup: 260 0 0 "'mark' Mark Positioning in Greek" { "'mark' Mark Positioning in Greek subtable"  } ['mark' ('grek' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin 1" { "'mark' Mark Positioning in Latin 1 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Tengwar" { "'mark' Mark Positioning in Tengwar subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Latin 2" { "'mark' Mark Positioning in Latin 2 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
-Lookup: 262 0 0 "'mkmk' Mark to Mark lookup in Tengwar" { "'mkmk' Mark to Mark lookup in Tengwar subtable"  } ['mkmk' ('DFLT' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 ShortTable: maxp 16
@@ -463,7 +461,7 @@ Grid
  436 530 445 523 445 510 c 4
  445 497 436 490 418 490 c 6
 EndSplineSet
-AnchorClass2: "mkmkTengwar" "'mkmk' Mark to Mark lookup in Tengwar subtable" "abovetengwar" "'mark' Mark Positioning in Tengwar subtable" "abovegk" "'mark' Mark Positioning in Greek subtable" "below" "'mark' Mark Positioning in Latin 1 subtable" "above" "'mark' Mark Positioning in Latin 2 subtable"
+AnchorClass2: "abovegk" "'mark' Mark Positioning in Greek subtable" "below" "'mark' Mark Positioning in Latin 1 subtable" "above" "'mark' Mark Positioning in Latin 2 subtable"
 BeginChars: 1114161 2444
 
 StartChar: space
@@ -16369,8 +16367,6 @@ Width: 600
 Flags: W
 HStem: 536 40<155.007 444.993>
 VStem: 155 290<536.25 575.75>
-AnchorPoint: "mkmkTengwar" 300 450 mark 0
-AnchorPoint: "mkmkTengwar" 300 600 basemark 0
 AnchorPoint: "above" 300 417 mark 0
 LayerCount: 2
 Fore
@@ -16427,8 +16423,6 @@ Width: 600
 Flags: W
 HStem: 511 100<149.396 230.604 370.396 451.604>
 VStem: 140 100<520.396 601.544> 361 100<520.396 601.544>
-AnchorPoint: "mkmkTengwar" 300 600 basemark 0
-AnchorPoint: "mkmkTengwar" 300 450 mark 0
 AnchorPoint: "above" 300 417 mark 0
 LayerCount: 2
 Fore
@@ -58163,7 +58157,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 298.23 335 376> 500 41<129.587 289.542>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58198,7 +58191,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 42 298.23 335 376> 500 41<135.491 298.785>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58238,7 +58230,6 @@ GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 376.251 416.75> 461 41<-146 89 123.583 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58273,7 +58264,6 @@ GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<119.447 287.313> 461 41<-146 89 123.583 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58312,7 +58302,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58361,7 +58350,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 376.25 416.749> 475 41<-149 40 80.9167 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58410,7 +58398,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<-189.75 -149.251 376.25 416.749> 84 41<-149 0 41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58460,7 +58447,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<516 577.993> -15 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
 VStem: 57 41<94.0504 347.434> 265 41<102.897 347.434> 475 103<-189.749 -149.25> 475 41<-149 41 81.9167 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58507,7 +58493,6 @@ GlyphClass: 2
 Flags: W
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 390 41<237.682 399.871> 562 41<22.0066 103>
 VStem: 22 122<0.251221 40.7501 562.251 602.75> 103 41<41 298.23 335 562> 500 41<129.587 289.542>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58542,7 +58527,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 390 41<237.682 406.229> 562 41<22.0066 103>
 VStem: 103 41<41 298.23 335 562> 500 41<135.375 298.785>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58580,7 +58564,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58615,7 +58598,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<119.447 287.313> 461 122<0.251221 40.7501 563.251 603.75> 461 41<41 89 123.583 376 417 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58656,7 +58638,6 @@ GlyphClass: 2
 Flags: W
 HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<0.249912 40.7488 567.25 607.749> 84 41<41 334.083 375 567> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58705,7 +58686,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 567 41<22.0066 84>
 VStem: 22 103<567.25 607.749> 84 41<41 334.083 375 567> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58753,7 +58733,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 389 41<131.997 184.993 339.997 392.993> 567 41<516 577.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249912 39.9951 567.25 607.749> 475 41<80.9167 567>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58802,7 +58781,6 @@ GlyphClass: 2
 Flags: W
 HStem: -15 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475> 567 41<516 577.993>
 VStem: 57 41<94.0504 347.434> 265 41<102.897 347.434> 475 103<0.251221 40.7501 567.251 607.75> 475 41<81.9167 376 417 567>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58852,7 +58830,6 @@ GlyphClass: 2
 Flags: W
 HStem: -15 41<207.007 260.003 415.007 468.003> 0 41<22.0066 84> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<0.249912 40.7488 376.25 416.749> 84 41<41 334.083 375 376> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58901,7 +58878,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<22.0066 84 125 269.564 307 477.564 515 560.993> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58949,7 +58925,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<516 577.993> 389 41<131.997 184.993 339.997 392.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<0.249912 39.9951 376.25 416.749> 475 41<80.9167 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -58998,7 +58973,6 @@ GlyphClass: 2
 Flags: W
 HStem: -15 42<142.074 224.168 349.442 426.14> 0 41<516 577.993> 376 41<39.0066 85 122.436 293 330.436 475 516 577.993>
 VStem: 57 41<94.0504 347.434> 265 41<102.897 347.434> 475 103<0.251221 40.7501> 475 41<81.9167 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59045,7 +59019,6 @@ GlyphClass: 2
 Flags: W
 HStem: -12 41<295.007 398.121> 0 41<22.0066 103> 376 41<22.0066 103> 390 41<237.682 399.871>
 VStem: 22 122<0.251221 40.7501 376.251 416.75> 103 41<41 298.23 335 376> 500 41<129.587 289.542>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59080,7 +59053,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<22.0066 103 144 407.442 444 540.993> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 103 41<41 298.23 335 376> 500 41<135.491 298.785>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59118,7 +59090,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 122<0.251221 40.7501 376.251 416.75> 461 41<41 89 123.583 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59153,7 +59124,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<198.546 363.507> 0 41<502 582.993> 376 41<63.0066 159 188.399 461 502 582.993>
 VStem: 63 41<119.447 287.313> 461 41<41 89 123.583 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59191,7 +59161,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> -12 41<295.007 398.121> 390 41<237.682 399.871> 563 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 298.23 335 563> 500 41<129.587 289.542>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59226,7 +59195,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 407.442 444 540.993> 390 41<237.682 406.229> 563 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 0 42 298.23 335 563> 500 41<135.491 298.785>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59266,7 +59234,6 @@ GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -16 41<200.463 363.507> 390 41<199.919 305.993> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59301,7 +59268,6 @@ GlyphClass: 2
 Flags: W
 HStem: -187 41<502 582.993> -16 41<198.546 363.507> 376 41<63.0066 159 188.399 461> 563 41<502 582.993>
 VStem: 63 41<119.447 287.313> 461 122<-186.749 -146.25 563.251 603.75> 461 41<-146 89 123.583 376 417 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59342,7 +59308,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> -15 41<207.007 260.003 415.007 468.003> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 334.083 375 563> 294 41<71.8074 313.103> 502 41<71.8074 321.95>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59391,7 +59356,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<22.0066 84> 0 41<125 269.564 307 477.564 515 560.993> 389 42<173.86 250.558 375.832 457.926> 563 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 563.25 603.749> 84 41<-149 0 41 334.083 375 563> 294 41<69.5847 313.103> 502 41<69.5847 321.95>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59441,7 +59405,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<516 577.993> -16 42<142.074 224.168 349.442 426.14> 389 41<131.997 184.993 339.997 392.993> 563 41<516 577.993>
 VStem: 57 41<93.0504 343.193> 265 41<101.897 343.193> 475 103<-189.75 -149.251 563.25 603.749> 475 41<-149 40 80.9167 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59490,7 +59453,6 @@ GlyphClass: 2
 Flags: W
 HStem: -190 41<516 577.993> -15 42<142.074 224.168 349.442 426.14> 376 41<39.0066 85 122.436 293 330.436 475> 563 41<516 577.993>
 VStem: 57 41<94.0504 347.434> 265 41<102.897 347.434> 475 103<-189.749 -149.25 563.251 603.75> 475 41<-149 41 81.9167 376 417 563>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59539,7 +59501,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 376 41<134.007 279>
 VStem: 279 41<41 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 240 305 N 1 0 0 1 0 0 2
@@ -59552,7 +59513,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 487 41<135.007 279>
 VStem: 279 41<41 487>
-AnchorPoint: "abovetengwar" 300 565 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59581,7 +59541,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<147.007 367.391> 376 41<149.007 417>
 VStem: 417 41<-94.9023 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 1602 567 N 1 0 0 1 0 0 2
@@ -59594,7 +59553,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<215.252 384.322> 390 41<215.252 385.175>
 VStem: 72 41<124.806 290.386> 487 41<125.565 289.617>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 79 111 N 1 0 0 1 0 0 2
@@ -59606,7 +59564,6 @@ Width: 600
 GlyphClass: 2
 Flags: W
 HStem: 0 41<30.0066 98 141 235.993 364.007 457 502 569.993> 376 41<288 307>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59641,7 +59598,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 487 41<237 255>
 VStem: 135 42<333.033 351>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59683,7 +59639,6 @@ GlyphClass: 2
 Flags: W
 HStem: 390 41<204.797 388.621> 397 20G<137.5 150.5>
 VStem: 124 41<293.007 354.67 385 416.992> 428 45<277.353 357.759> 454 40<69.5876 176.823>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59727,7 +59682,6 @@ GlyphClass: 2
 Flags: W
 HStem: -88 41<93.0066 270.561 310 532.995> 389 42<205.168 386.395>
 VStem: 488 41<119.038 287.216>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59758,9 +59712,6 @@ GlyphClass: 4
 Flags: W
 HStem: 563 80<184.393 255.154 344.393 415.154> 673 80<264.393 335.154>
 VStem: 180 80<567.393 638.581> 260 80<677.393 748.581> 340 80<567.393 638.581>
-AnchorPoint: "mkmkTengwar" 300 773 basemark 0
-AnchorPoint: "mkmkTengwar" 300 564 mark 0
-AnchorPoint: "abovetengwar" 300 564 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59820,9 +59771,6 @@ GlyphClass: 4
 Flags: W
 HStem: 542 149
 VStem: 223 165
-AnchorPoint: "mkmkTengwar" 300 542 mark 0
-AnchorPoint: "mkmkTengwar" 300 712 basemark 0
-AnchorPoint: "abovetengwar" 300 542 mark 0
 LayerCount: 2
 Fore
 Refer: 64 96 N 1 0 0 1 68 52 0
@@ -59835,9 +59783,6 @@ GlyphClass: 4
 Flags: W
 HStem: 550 149
 VStem: 223 165
-AnchorPoint: "mkmkTengwar" 300 551 mark 0
-AnchorPoint: "mkmkTengwar" 300 719 basemark 0
-AnchorPoint: "abovetengwar" 300 551 mark 0
 LayerCount: 2
 Fore
 Refer: 115 180 N 1 0 0 1 -57 60 2
@@ -59850,9 +59795,6 @@ GlyphClass: 4
 Flags: W
 HStem: 552 41<239.126 364.681>
 VStem: 177 41<614.576 681.993> 386 41<614.576 681.993>
-AnchorPoint: "abovetengwar" 302 553 mark 0
-AnchorPoint: "mkmkTengwar" 302 553 mark 0
-AnchorPoint: "mkmkTengwar" 302 702 basemark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59876,9 +59818,6 @@ GlyphClass: 4
 Flags: W
 HStem: 563 80<264.393 335.154>
 VStem: 260 80<567.393 638.581>
-AnchorPoint: "mkmkTengwar" 300 564 mark 0
-AnchorPoint: "mkmkTengwar" 300 663 basemark 0
-AnchorPoint: "abovetengwar" 300 564 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -59898,9 +59837,6 @@ GlyphClass: 4
 Flags: W
 HStem: 563 80<184.393 255.154 344.393 415.154>
 VStem: 180 80<567.393 638.581> 340 80<567.393 638.581>
-AnchorPoint: "mkmkTengwar" 300 564 mark 0
-AnchorPoint: "mkmkTengwar" 300 663 basemark 0
-AnchorPoint: "abovetengwar" 300 564 mark 0
 LayerCount: 2
 Back
 Refer: 608 776 N 1 0 0 1 0 0 2
@@ -59926,9 +59862,6 @@ GlyphClass: 4
 Flags: W
 HStem: 550 143
 VStem: 155 290
-AnchorPoint: "abovetengwar" 300 551 mark 0
-AnchorPoint: "mkmkTengwar" 300 719 basemark 0
-AnchorPoint: "mkmkTengwar" 300 551 mark 0
 LayerCount: 2
 Fore
 Refer: 597 733 N 1 0 0 1 0 60 0
@@ -59943,9 +59876,6 @@ GlyphClass: 4
 Flags: W
 HStem: 547 80<264.846 335.154> 657 80<184.846 255.154 344.846 415.154>
 VStem: 180 80<661.393 732.395> 260 80<551.393 622.395> 340 80<661.393 732.395>
-AnchorPoint: "mkmkTengwar" 300 548 mark 0
-AnchorPoint: "mkmkTengwar" 300 757 basemark 0
-AnchorPoint: "abovetengwar" 300 548 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60056,9 +59986,6 @@ GlyphClass: 4
 Flags: W
 HStem: 581 21G<380 392> 654 41<267.531 352.758>
 VStem: 364 40<581.04 641.699>
-AnchorPoint: "abovetengwar" 300 530 mark 0
-AnchorPoint: "mkmkTengwar" 300 715 basemark 0
-AnchorPoint: "mkmkTengwar" 300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60085,9 +60012,6 @@ GlyphClass: 4
 Flags: W
 HStem: 699 41<251.836 336.273>
 VStem: 346 42<597.496 689.389>
-AnchorPoint: "mkmkTengwar" 300 530 mark 0
-AnchorPoint: "mkmkTengwar" 300 760 basemark 0
-AnchorPoint: "abovetengwar" 300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60170,9 +60094,6 @@ GlyphClass: 4
 Flags: W
 HStem: 490 40<155.007 444.993>
 VStem: 155 290<490.25 529.75>
-AnchorPoint: "mkmkTengwar" 300 572 basemark 0
-AnchorPoint: "mkmkTengwar" 300 490 mark 0
-AnchorPoint: "abovetengwar" 300 490 mark 0
 LayerCount: 2
 Fore
 Refer: 110 175 N 1 0 0 1 0 -46 0
@@ -60185,7 +60106,6 @@ GlyphClass: 2
 Flags: W
 HStem: -193 41<120.487 195.99> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
 VStem: 63 41<-135.337 -7.25638> 497 41<247.818 357.492>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60222,7 +60142,6 @@ GlyphClass: 2
 Flags: W
 HStem: -102 42<217.605 398.832> 376 41<71.0051 294 333.439 510.993>
 VStem: 75 41<41.7838 209.962>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60254,7 +60173,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<215.321 384.322> 205 41<406.007 487> 492 38<435 444.988>
 VStem: 73 40<126.795 280.847> 487 41<126.27 205>
-AnchorPoint: "abovetengwar" 260 535 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60286,7 +60204,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<201.008 366.542 400 542> 390 41<200.29 365.006> 563 41<502 582.993>
 VStem: 63 41<125.218 290.386> 461 41<119.938 290.814 327 563> 542 41<-96.9934 -16>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60323,7 +60240,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<223.641 417.496> 390 41<222.326 406.567> 397 20G<484 497.5>
 VStem: 84 41<120.624 293.912> 470 41<271.007 338.484 376 416.993>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 67 99 N 1 0 0 1 0 0 2
@@ -60336,7 +60252,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<198.63 346.339> 0 41<480 540.993> 376 41<43.0066 124 337.007 439>
 VStem: 124 41<59.3106 376> 439 41<41 66 96.3892 376> 439 102<0.251221 40.7501>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 85 117 N 1 0 0 1 0 0 2
@@ -60349,7 +60264,6 @@ GlyphClass: 2
 Flags: W
 HStem: -13 41<134.854 214.99> -1 41<368.007 445 494 536.993> 568 41<404.01 479.513>
 VStem: 62 41<58.5079 168.182> 496 41<423.256 551.337>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60384,7 +60298,6 @@ GlyphClass: 2
 Flags: W
 HStem: -17 41<229.379 413.203> -3 21G<467.5 480.5>
 VStem: 124 40<237.177 341.241> 145 45<56.2409 136.647> 453 41<-2.99196 29 59.3304 120.993>
-AnchorPoint: "abovetengwar" 260 535 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60427,7 +60340,6 @@ GlyphClass: 2
 Flags: W
 HStem: -193 41<127.984 215.99> 133 42<63.0058 83> 376 41<63.0066 106 155 231.993> 388 41<385.01 465.146>
 VStem: 63 41<-129.644 -7.25638> 497 41<247.818 357.492>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60470,7 +60382,6 @@ GlyphClass: 2
 Flags: W
 HStem: -102 41<201.113 420.28> 376 41<71.0051 189 223.782 510.993>
 VStem: 100 41<-5.76546 87.9884> 164 41<256.029 358.725> 483 41<-4.26595 126.371>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60503,7 +60414,6 @@ GlyphClass: 2
 Flags: W
 HStem: -110 38<155.012 165> 169 41<113 193.993> 390 41<215.678 384.679>
 VStem: 72 41<210 288.73> 487 40<133.884 288.205>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60535,7 +60445,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<201.008 366.542 400 542> 390 41<199.502 356.395>
 VStem: 63 41<125.218 290.386> 461 41<120.986 286.66> 542 41<-96.9934 -16>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60566,7 +60475,6 @@ GlyphClass: 2
 Flags: W
 HStem: -193 41<120.487 195.99> 388 41<385.01 467.791> 487 41<63.0066 148>
 VStem: 63 41<-135.337 -7.81445> 148 41<96 487> 497 41<247.947 358.651>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60599,7 +60507,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 376 41<134.007 279>
 VStem: 279 41<41 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 240 305 N 1 0 0 1 0 0 2
@@ -60812,7 +60719,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<199.445 395.359> 390 41<212.433 396.674> 397 20G<121.5 135>
 VStem: 108 41<271.007 338.484 376 416.993> 494 41<120.624 293.912>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 499 596 N 1 0 0 1 0 0 2
@@ -60825,7 +60731,6 @@ GlyphClass: 2
 Flags: W
 HStem: -17 41<274.02 389.865> 376 41<146.009 214 255 382.991>
 VStem: 214 41<43.1584 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60855,7 +60760,6 @@ GlyphClass: 2
 Flags: W
 HStem: -17 41<210.02 298.291 337.422 453.865> 376 41<82.0088 150 191 278 319 446.991>
 VStem: 150 41<43.1584 376> 278 41<42.9602 376>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60895,7 +60799,6 @@ Flags: W
 HStem: -17 41<145.02 233.291 272.422 355.688 400.394 514.894> 376 41<17.0088 85 126 213 254 341 382 509.991>
 VStem: 85 41<43.1584 376> 213 41<42.9602 376> 341 41<42.9602 376>
 CounterMasks: 1 38
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60944,7 +60847,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<295.031 431.024> 567 41<251 312.993>
 VStem: 210 103<567.25 607.749> 210 41<-7.09534 567>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -60972,7 +60874,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<208.031 344.024> -17 41<311.02 426.865> 376 41<164 251 292 419.991> 567 41<164 225.993>
 VStem: 123 103<567.25 607.749> 123 41<-7.09534 376 417 567> 251 41<43.1584 376>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61013,7 +60914,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<150.031 286.024> -17 41<253.02 341.291 380.422 496.865> 376 41<106 193 234 321 362 489.991> 567 41<106 167.993>
 VStem: 65 103<567.25 607.749> 65 41<-7.09534 376 417 567> 193 41<43.1584 376> 321 41<42.9602 376>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61063,7 +60963,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<129.976 265.969> 567 41<351 412.993>
 VStem: 310 103<567.25 607.749> 310 41<-7.09534 567>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61091,7 +60990,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<29.9762 166.567> 0 41<251 395.564 433 478.993> 390 41<301.114 375.589> 567 41<251 312.993>
 VStem: 210 103<567.25 607.749> 210 41<42.4419 334.176 375 567> 420 41<69.4711 321.511>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61132,7 +61030,6 @@ GlyphClass: 2
 Flags: W
 HStem: -93 41<17.0066 92.1628> 0 41<147 291.564 329 499.564 537 582.993> 390 41<197.231 271.719 399.552 479.926> 567 41<147 208.993>
 VStem: 106 103<567.25 607.749> 106 41<-39.2113 0 41 334.176 375 567> 316 41<69.5847 313.318> 524 41<69.3631 322.165>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61180,7 +61077,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<216.678 385.679> 205 41<114 194.993>
 VStem: 73 41<126.27 205> 488 40<126.795 280.308>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61212,7 +61108,6 @@ GlyphClass: 2
 Flags: W
 HStem: -12 41<204.797 388.621>
 VStem: 124 41<2.00804 34 64.3304 125.993> 428 45<61.2409 141.647> 454 40<242.177 346.241>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61255,7 +61150,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<215.252 385.53> 390 41<215.252 385.175>
 VStem: 72 41<124.806 290.386> 487 41<125.825 289.617>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61313,9 +61207,6 @@ GlyphClass: 4
 Flags: W
 HStem: 554 149
 VStem: 173 250<563 582>
-AnchorPoint: "mkmkTengwar" 300 555 mark 0
-AnchorPoint: "mkmkTengwar" 300 723 basemark 0
-AnchorPoint: "abovetengwar" 300 555 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61341,9 +61232,6 @@ GlyphClass: 4
 Flags: W
 HStem: 659 41<228.526 310.662>
 VStem: 175 41<712.734 773.98> 320 43<557.552 651.196>
-AnchorPoint: "mkmkTengwar" 300 529 mark 0
-AnchorPoint: "mkmkTengwar" 300 794 basemark 0
-AnchorPoint: "abovetengwar" 300 529 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61368,26 +61256,13 @@ EndChar
 StartChar: combiningsarince
 Encoding: 57433 57433 2317
 Width: 600
-VWidth: 1024
 GlyphClass: 2
 Flags: W
-HStem: -176 41<114.125 184.993> -16 41<114.618 201.993>
-VStem: 57 41<-119.82 -32.3927>
+HStem: -156 41<233.007 306.024> 0 41<-124.993 304.365>
+VStem: 320 41<-101.037 -15.3071>
 LayerCount: 2
 Fore
-SplineSet
-175 25 m 0
- 193 25 202 18 202 5 c 0
- 202 -9 193 -16 175 -16 c 2
- 158 -16 l 2
- 125 -16 98 -45 98 -77 c 0
- 98 -108 124 -135 158 -135 c 0
- 176 -135 185 -142 185 -155 c 0
- 185 -169 176 -176 158 -176 c 0
- 107 -176 57 -125 57 -77 c 0
- 57 -44 82 25 175 25 c 0
-EndSplineSet
-Validated: 3073
+Refer: 2318 57432 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: sarince
@@ -61397,7 +61272,6 @@ GlyphClass: 2
 Flags: W
 HStem: -156 41<233.007 306.024> 0 41<-124.993 304.365>
 VStem: 320 41<-101.037 -15.3071>
-AnchorPoint: "abovetengwar" 300 90 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61423,7 +61297,6 @@ GlyphClass: 2
 Flags: W
 HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 269.564 307 477.564> 376 41<22.0066 84> 389 42<173.86 250.558 375.832 457.926>
 VStem: 22 103<376.25 416.749> 84 41<41 334.083 375 376> 294 41<69.5847 313.103> 502 41<68.9056 321.95> 542 41<-116.078 -19.7413>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61474,7 +61347,6 @@ GlyphClass: 2
 Flags: W
 HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 407.442 444 484.288> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 103 41<41 298.23 335 376> 504 41<-116.078 -20.3553 145.536 290.195>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61546,9 +61418,6 @@ GlyphClass: 4
 Flags: W
 HStem: 612 21G<421 431.5> 685 40<211.715 269.662 311.828 389.515>
 VStem: 154 41<528.008 668.432> 255 41<528.02 669.757> 403 41<612.038 670.726>
-AnchorPoint: "mkmkTengwar" 300 530 mark 0
-AnchorPoint: "mkmkTengwar" 300 745 basemark 0
-AnchorPoint: "abovetengwar" 300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61584,9 +61453,6 @@ GlyphClass: 4
 Flags: W
 HStem: 699 41<168.836 252.985 297.401 376.976>
 VStem: 262 43<595.418 687.444> 386 43<595.418 691.088>
-AnchorPoint: "mkmkTengwar" 300 530 mark 0
-AnchorPoint: "mkmkTengwar" 300 760 basemark 0
-AnchorPoint: "abovetengwar" 300 530 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61628,7 +61494,6 @@ GlyphClass: 2
 Flags: W
 HStem: -186 41<497 577.993> 0 42<59.0066 156 192.558 456> 390 41<193.771 362.604>
 VStem: 59 41<135.491 298.785> 456 41<-145 0 42 298.23>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -61663,7 +61528,6 @@ GlyphClass: 2
 Flags: W
 HStem: 0 41<59.0066 156 192.558 456 497 577.993> 390 41<193.771 362.318> 562 41<497 577.993>
 VStem: 59 41<135.375 298.785> 456 41<41 298.23 335 562>
-AnchorPoint: "abovetengwar" 260 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -62895,7 +62759,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<199.445 395.359> 390 41<212.433 396.674> 397 20G<121.5 135>
 VStem: 108 41<271.007 338.484 376 416.993> 494 41<120.624 293.912>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 499 596 N 1 0 0 1 0 0 2
@@ -63038,7 +62901,6 @@ GlyphClass: 2
 Flags: W
 HStem: -16 41<200.463 363.507> 0 41<502 582.993> 376 41<502 582.993> 390 41<199.919 305.993>
 VStem: 63 41<125.218 290.386> 461 41<41 89 123.583 376> 461 122<0.251221 40.7501 376.251 416.75>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 Refer: 2239 57366 N 1 0 0 1 0 0 2
@@ -63211,7 +63073,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> -12 41<295.007 387.885> 436 41<22.0066 103> 450 41<237.682 390.793>
 VStem: 22 122<-185.749 -145.25 436.251 476.75> 103 41<-145 358.23 395 436> 500 41<154.321 324.809>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63245,7 +63106,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 400.009 444 540.993> 436 41<22.0066 103> 450 41<237.682 395.362>
 VStem: 22 122<-185.749 -145.25 436.251 476.75> 103 41<-145 0 42 358.23 395 436> 500 41<158.001 334.051>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63284,7 +63144,6 @@ Width: 600
 Flags: W
 HStem: -187 41<502 582.993> -16 41<213.86 363.507> 436 41<502 582.993> 450 41<209.891 305.993>
 VStem: 63 41<147.169 328.427> 461 122<-186.749 -146.25 436.251 476.75> 461 41<-146 89 123.583 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63318,7 +63177,6 @@ Width: 600
 Flags: W
 HStem: -187 41<502 582.993> -16 41<209.34 363.507> 436 41<63.0066 159 199.365 461 502 582.993>
 VStem: 63 41<141.458 325.135> 461 41<-146 89 123.583 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63356,7 +63214,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<22.0066 84> -15 41<207.007 253.948 415.007 461.948> 436 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612>
 VStem: 22 103<-189.75 -149.251 436.25 476.749> 84 41<-149 394.083 435 436> 294 41<87.0134 364.541> 502 41<87.0134 363.476>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63404,7 +63261,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<22.0066 84> 0 41<125 267.925 307 475.925 515 560.993> 436 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612>
 VStem: 22 103<-189.75 -149.251 436.25 476.749> 84 41<-149 0 41 394.083 435 436> 294 41<76.9267 364.541> 502 41<76.9267 363.476>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63453,7 +63309,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<516 577.993> -16 42<145.388 218.196 353.623 426.14> 436 41<516 577.993> 449 41<138.052 184.993 346.052 392.993>
 VStem: 57 41<111.524 387.987> 265 41<115.456 387.987> 475 103<-189.75 -149.251 436.25 476.749> 475 41<-149 40 80.9167 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63501,7 +63356,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<516 577.993> -15 42<145.388 218.196 353.623 426.14> 436 41<39.0066 85 124.075 293 332.075 475 516 577.993>
 VStem: 57 41<112.524 400.082> 265 41<116.456 400.082> 475 103<-189.749 -149.25> 475 41<-149 41 81.9167 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63547,7 +63401,6 @@ Width: 600
 Flags: W
 HStem: -12 41<295.007 387.885> 0 41<22.0066 103> 450 41<237.682 390.793> 592 41<22.0066 103>
 VStem: 22 122<0.251221 40.7501 592.251 632.75> 103 41<41 358.23 395 592> 500 41<154.321 324.809>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63581,7 +63434,6 @@ Width: 600
 Flags: W
 HStem: 0 41<22.0066 103 144 396.219 444 540.993> 450 41<237.682 395.362> 592 41<22.0066 103>
 VStem: 103 41<41 358.23 395 592> 500 41<157.885 334.051>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63618,7 +63470,6 @@ Width: 600
 Flags: W
 HStem: -16 41<213.86 363.507> 0 41<502 582.993> 450 41<209.891 305.993> 593 41<502 582.993>
 VStem: 63 41<147.169 328.427> 461 122<0.251221 40.7501 593.251 633.75> 461 41<41 89 123.583 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63652,7 +63503,6 @@ Width: 600
 Flags: W
 HStem: -16 41<209.34 363.507> 0 41<502 582.993> 436 41<63.0066 159 199.365 461> 593 41<502 582.993>
 VStem: 63 41<141.458 325.135> 461 122<0.251221 40.7501 593.251 633.75> 461 41<41 89 123.583 436 477 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63692,7 +63542,6 @@ VWidth: 1024
 Flags: W
 HStem: -15 41<207.007 253.948 415.007 461.948> 0 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612> 597 41<22.0066 84>
 VStem: 22 103<0.249912 40.7488 597.25 637.749> 84 41<41 394.083 435 597> 294 41<87.0134 364.541> 502 41<87.0134 363.476>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63740,7 +63589,6 @@ VWidth: 1024
 Flags: W
 HStem: 0 41<22.0066 84 125 267.925 307 475.925 515 560.993> 449 42<173.86 246.377 375.832 454.612> 597 41<22.0066 84>
 VStem: 22 103<597.25 637.749> 84 41<41 394.083 435 597> 294 41<76.9267 364.541> 502 41<76.9267 363.476>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63787,7 +63635,6 @@ VWidth: 1024
 Flags: W
 HStem: -16 42<145.388 224.168 353.623 426.14> 0 41<516 577.993> 449 41<138.052 184.993 346.052 392.993> 597 41<516 577.993>
 VStem: 57 41<111.524 387.987> 265 41<110.459 387.987> 475 103<0.249912 39.9951 597.25 637.749> 475 41<80.9167 597>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63835,7 +63682,6 @@ VWidth: 1024
 Flags: W
 HStem: -15 42<145.388 224.168 353.623 426.14> 0 41<516 577.993> 436 41<39.0066 85 124.075 293 332.075 475> 597 41<516 577.993>
 VStem: 57 41<112.524 400.082> 265 41<111.459 400.082> 475 103<0.251221 40.7501 597.251 637.75> 475 41<81.9167 436 477 597>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63884,7 +63730,6 @@ VWidth: 1024
 Flags: W
 HStem: -15 41<207.007 253.948 415.007 461.948> 0 41<22.0066 84> 436 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612>
 VStem: 22 103<0.249912 40.7488 436.25 476.749> 84 41<41 394.083 435 436> 294 41<87.0134 364.541> 502 41<87.0134 363.476>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63932,7 +63777,6 @@ VWidth: 1024
 Flags: W
 HStem: 0 41<22.0066 84 125 267.925 307 475.925 515 560.993> 436 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612>
 VStem: 22 103<436.25 476.749> 84 41<41 394.083 435 436> 294 41<76.9267 364.541> 502 41<76.9267 363.476>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -63979,7 +63823,6 @@ VWidth: 1024
 Flags: W
 HStem: -16 42<145.388 224.168 353.623 426.14> 0 41<516 577.993> 436 41<516 577.993> 449 41<138.052 184.993 346.052 392.993>
 VStem: 57 41<111.524 387.987> 265 41<110.459 387.987> 475 103<0.249912 39.9951 436.25 476.749> 475 41<80.9167 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64027,7 +63870,6 @@ VWidth: 1024
 Flags: W
 HStem: -15 42<145.388 224.168 353.623 426.14> 0 41<516 577.993> 436 41<39.0066 85 124.075 293 332.075 475 516 577.993>
 VStem: 57 41<112.524 400.082> 265 41<111.459 400.082> 475 103<0.251221 40.7501> 475 41<81.9167 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64073,7 +63915,6 @@ Width: 600
 Flags: W
 HStem: -12 41<295.007 387.885> 0 41<22.0066 103> 436 41<22.0066 103> 450 41<237.682 390.793>
 VStem: 22 122<0.251221 40.7501 436.251 476.75> 103 41<41 358.23 395 436> 500 41<154.321 324.809>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64107,7 +63948,6 @@ Width: 600
 Flags: W
 HStem: 0 41<22.0066 103 144 396.219 444 540.993> 436 41<22.0066 103> 450 41<237.682 395.362>
 VStem: 103 41<41 358.23 395 436> 500 41<158.001 334.051>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64144,7 +63984,6 @@ Width: 600
 Flags: W
 HStem: -16 41<213.86 363.507> 0 41<502 582.993> 436 41<502 582.993> 450 41<209.891 305.993>
 VStem: 63 41<147.169 328.427> 461 122<0.251221 40.7501 436.251 476.75> 461 41<41 89 123.583 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64178,7 +64017,6 @@ Width: 600
 Flags: W
 HStem: -16 41<209.34 363.507> 0 41<502 582.993> 436 41<63.0066 159 199.365 461 502 582.993>
 VStem: 63 41<141.458 325.135> 461 41<41 89 123.583 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64215,7 +64053,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> -12 41<295.007 387.885> 450 41<237.682 390.793> 593 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 593.251 633.75> 103 41<-145 358.23 395 593> 500 41<154.321 324.809>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64249,7 +64086,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 400.009 444 540.993> 450 41<237.682 395.362> 593 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 593.251 633.75> 103 41<-145 0 42 358.23 395 593> 500 41<158.001 334.051>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64288,7 +64124,6 @@ Width: 600
 Flags: W
 HStem: -187 41<502 582.993> -16 41<213.86 363.507> 450 41<209.891 305.993> 593 41<502 582.993>
 VStem: 63 41<147.169 328.427> 461 122<-186.749 -146.25 593.251 633.75> 461 41<-146 89 123.583 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64322,7 +64157,6 @@ Width: 600
 Flags: W
 HStem: -187 41<502 582.993> -16 41<209.34 363.507> 436 41<63.0066 159 199.365 461> 593 41<502 582.993>
 VStem: 63 41<141.458 325.135> 461 122<-186.749 -146.25 593.251 633.75> 461 41<-146 89 123.583 436 477 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64362,7 +64196,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<22.0066 84> -15 41<207.007 253.948 415.007 461.948> 449 42<173.86 246.377 375.832 454.612> 593 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 593.25 633.749> 84 41<-149 394.083 435 593> 294 41<87.0134 364.541> 502 41<87.0134 363.476>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64410,7 +64243,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<22.0066 84> 0 41<125 267.925 307 475.925 515 560.993> 449 42<173.86 246.377 375.832 454.612> 593 41<22.0066 84>
 VStem: 22 103<-189.75 -149.251 593.25 633.749> 84 41<-149 0 41 394.083 435 593> 294 41<76.9267 364.541> 502 41<76.9267 363.476>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64459,7 +64291,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<516 577.993> -16 42<145.388 224.168 353.623 426.14> 449 41<138.052 184.993 346.052 392.993> 593 41<516 577.993>
 VStem: 57 41<111.524 387.987> 265 41<110.459 387.987> 475 103<-189.75 -149.251 593.25 633.749> 475 41<-149 40 80.9167 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64507,7 +64338,6 @@ VWidth: 1024
 Flags: W
 HStem: -190 41<516 577.993> -15 42<145.388 224.168 353.623 426.14> 436 41<39.0066 85 124.075 293 332.075 475> 593 41<516 577.993>
 VStem: 57 41<112.524 400.082> 265 41<111.459 400.082> 475 103<-189.749 -149.25 593.251 633.75> 475 41<-149 41 81.9167 436 477 593>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64555,7 +64385,6 @@ Width: 600
 Flags: W
 HStem: -193 41<120.487 195.99> 436 41<63.0066 106 155 231.993> 448 41<385.01 465.146>
 VStem: 63 41<-135.337 -4.46448> 497 41<300.398 417.492>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64590,7 +64419,6 @@ Width: 600
 Flags: W
 HStem: -193 41<127.984 215.99> 172 42<63.0058 83> 436 41<63.0066 106 155 231.993> 448 41<385.01 465.146>
 VStem: 63 41<-129.644 -4.46448> 497 41<300.398 417.492>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64632,7 +64460,6 @@ VWidth: 1024
 Flags: W
 HStem: -102 42<229.16 398.832> 436 41<71.0051 294 339.452 510.993>
 VStem: 75 41<66.517 243.406>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64664,7 +64491,6 @@ VWidth: 1024
 Flags: W
 HStem: -102 41<201.113 407.659> 436 41<71.0051 189 223.782 510.993>
 VStem: 100 41<-5.76546 87.9884> 164 41<312.521 418.725> 483 41<8.24166 145.822>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64696,7 +64522,6 @@ Width: 600
 Flags: W
 HStem: -16 41<226.735 372.914> 235 41<406.007 487> 552 38<435 444.988>
 VStem: 73 40<151.817 318.076> 487 41<150.486 235>
-AnchorPoint: "abovetengwar" 260 595 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64727,7 +64552,6 @@ Width: 600
 Flags: W
 HStem: -110 38<155.012 165> 199 41<113 193.993> 450 41<227.086 373.265>
 VStem: 72 41<240 324.514> 487 40<156.642 323.183>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64758,7 +64582,6 @@ Width: 600
 Flags: W
 HStem: -17 41<243.942 413.203> -3 21G<467.5 480.5>
 VStem: 124 40<275.982 393.832> 145 45<69.2803 163.755> 453 41<-2.99196 29 59.3304 120.993>
-AnchorPoint: "abovetengwar" 260 595 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64800,7 +64623,6 @@ Width: 600
 Flags: W
 HStem: 450 41<204.797 381.511>
 VStem: 124 41<353.007 414.67 445 476.992> 428 45<308.393 411.313> 454 40<80.7793 201.064>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64842,7 +64664,6 @@ Width: 600
 Flags: W
 HStem: 0 41<80.0102 154 199 243.992 400.008 468 512 562.992> 547 41<237 255>
 VStem: 135 42<393.033 411>
-AnchorPoint: "abovetengwar" 340 610 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64883,7 +64704,6 @@ Width: 600
 Flags: W
 HStem: -16 41<214.877 354.688 400 542> 450 41<211.129 352.495> 593 41<502 582.993>
 VStem: 63 41<147.169 328.427> 461 41<142.307 327.176 387 593> 542 41<-96.9934 -16>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64918,7 +64738,6 @@ Encoding: 57514 57514 2413
 Width: 600
 Flags: W
 HStem: 0 41<30.0066 98 141 235.993 364.007 457 502 569.993> 431 46<288 307>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64953,7 +64772,6 @@ Width: 600
 Flags: W
 HStem: -16 41<226.681 372.914> 450 41<226.681 373.723>
 VStem: 72 41<149.539 325.653> 487 41<150.587 324.884>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -64977,7 +64795,6 @@ Width: 600
 Flags: W
 HStem: -186 41<147.007 367.391> 436 41<149.007 417>
 VStem: 417 41<-94.9023 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65004,7 +64821,6 @@ Width: 600
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 547 41<135.007 279>
 VStem: 279 41<41 547>
-AnchorPoint: "abovetengwar" 300 625 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65032,7 +64848,6 @@ Width: 600
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 436 41<134.007 279>
 VStem: 279 41<41 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65060,7 +64875,6 @@ Width: 600
 Flags: W
 HStem: -16 41<199.445 386.007> 450 41<212.433 387.274>
 VStem: 108 41<331.007 398.484 436 476.993> 494 41<145.357 329.437>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65091,7 +64905,6 @@ VWidth: 1024
 Flags: W
 HStem: -88 41<93.0066 264.548 310 532.995> 449 42<205.168 374.84>
 VStem: 488 41<145.594 322.483>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65121,7 +64934,6 @@ Width: 600
 Flags: W
 HStem: -16 41<232.993 417.496> 450 41<231.726 406.567>
 VStem: 84 41<145.357 329.437> 470 41<331.007 398.484 436 476.993>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65152,7 +64964,6 @@ Width: 600
 Flags: W
 HStem: 0 41<92.0066 279 320 507.993> 436 41<134.007 279>
 VStem: 279 41<41 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 Refer: 2417 57518 N 1 0 0 1 0 0 2
@@ -65164,7 +64975,6 @@ Width: 600
 Flags: W
 HStem: -16 41<213.86 363.507> 0 41<502 582.993> 436 41<502 582.993> 450 41<209.891 305.993>
 VStem: 63 41<147.169 328.427> 461 41<41 89 123.583 436> 461 122<0.251221 40.7501 436.251 476.75>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 Refer: 2393 57494 N 1 0 0 1 0 0 2
@@ -65176,7 +64986,6 @@ Width: 600
 Flags: W
 HStem: -16 41<198.63 346.339> 0 41<480 540.993> 436 41<43.0066 124 337.007 439>
 VStem: 124 41<59.3106 436> 439 102<0.251221 40.7501> 439 41<41 66 96.3892 436>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65212,7 +65021,6 @@ Width: 600
 Flags: W
 HStem: -186 41<497 577.993> 0 42<59.0066 156 199.991 456> 450 41<204.638 351.349>
 VStem: 59 41<158.001 334.051> 456 41<-145 0 42 334.197>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65246,7 +65054,6 @@ Width: 600
 Flags: W
 HStem: 0 41<59.0066 156 203.781 456 497 577.993> 450 41<204.638 362.318> 592 41<497 577.993>
 VStem: 59 41<157.885 334.051> 456 41<41 358.23 395 592>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65283,7 +65090,6 @@ Width: 600
 Flags: W
 HStem: -13 41<134.854 214.99> -1 41<368.007 445 494 536.993> 628 41<404.01 479.513>
 VStem: 62 41<58.5079 175.602> 496 41<480.464 611.337>
-AnchorPoint: "abovetengwar" 260 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65317,7 +65123,6 @@ Width: 600
 Flags: W
 HStem: -176 41<455.007 523.704> 0 41<22.0066 84 125 267.925 307 475.925> 436 41<22.0066 84> 449 42<173.86 246.377 375.832 454.612>
 VStem: 22 103<436.25 476.749> 84 41<41 394.083 435 436> 294 41<76.9267 364.541> 502 41<75.5956 363.476> 542 41<-116.078 -19.7413>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65366,7 +65171,6 @@ Width: 600
 Flags: W
 HStem: -176 41<417.007 485.704> 0 41<22.0066 103 144 396.219 444 484.288> 436 41<22.0066 103> 450 41<237.682 395.362>
 VStem: 103 41<41 358.23 395 436> 504 41<-116.078 -20.3553 169.94 327.094>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65406,7 +65210,6 @@ Width: 600
 Flags: W
 HStem: -193 41<120.487 195.99> 448 41<385.01 467.791> 547 41<63.0066 148>
 VStem: 63 41<-135.337 -4.5332> 148 41<106 547> 497 41<304.051 418.651>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65438,7 +65241,6 @@ Width: 600
 Flags: W
 HStem: -16 41<214.877 354.688 400 542> 450 41<210.285 347.229>
 VStem: 63 41<147.169 328.427> 461 41<145.381 321.68> 542 41<-96.9934 -16>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65526,7 +65328,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 407.442> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 22 122<-185.749 -145.25 376.251 416.75> 103 41<-145 0 42 298.23 335 376> 500 41<137.005 298.785>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65561,7 +65362,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 395.518> 436 41<22.0066 103> 450 41<237.682 395.362>
 VStem: 22 122<-185.749 -145.25 436.251 476.75> 103 41<-145 0 42 358.23 395 436> 500 41<159.734 334.051>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65620,7 +65420,6 @@ Width: 600
 Flags: W
 HStem: 0 41<22.0066 103 144 407.442> 390 41<237.682 406.229> 562 42<22.0066 103>
 VStem: 103 41<41 298.23 335 562> 500 41<136.889 298.785>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65653,7 +65452,6 @@ Width: 600
 Flags: W
 HStem: 0 42<22.0066 103 144 407.442> 376 41<22.0066 103> 390 41<237.682 406.229>
 VStem: 103 41<42 298.23 335 376> 500 41<137.005 298.785>
-AnchorPoint: "abovetengwar" 300 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65686,7 +65484,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 407.442> 390 41<237.682 406.229> 563 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 563.251 603.75> 103 41<-145 0 42 298.23 335 563> 500 41<137.005 298.785>
-AnchorPoint: "abovetengwar" 340 490 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65721,7 +65518,6 @@ Width: 600
 Flags: W
 HStem: 0 41<22.0066 103 144 395.518> 450 41<237.682 395.362> 592 41<22.0066 103>
 VStem: 103 41<41 358.23 395 592> 500 41<159.618 334.051>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65754,7 +65550,6 @@ Width: 600
 Flags: W
 HStem: 0 42<22.0066 103 144 395.518> 436 41<22.0066 103> 450 41<237.682 395.362>
 VStem: 103 41<42 358.23 395 436> 500 41<159.734 334.051>
-AnchorPoint: "abovetengwar" 300 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65787,7 +65582,6 @@ Width: 600
 Flags: W
 HStem: -186 41<22.0066 103> 0 42<144 395.518> 450 41<237.682 395.362> 593 41<22.0066 103>
 VStem: 22 122<-185.749 -145.25 593.251 633.75> 103 41<-145 0 42 358.23 395 593> 500 41<159.734 334.051>
-AnchorPoint: "abovetengwar" 340 550 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -65821,10 +65615,23 @@ Encoding: 1114160 -1 2443
 Width: 600
 VWidth: 1024
 GlyphClass: 4
-Flags: HW
+Flags: W
+HStem: -176 41<114.125 184.993> -16 41<114.618 201.993>
+VStem: 57 41<-119.82 -32.3927>
 LayerCount: 2
 Fore
-Refer: 2317 57433 N 1 0 0 1 0 0 2
+SplineSet
+175 25 m 0
+ 193 25 202 18 202 5 c 0
+ 202 -9 193 -16 175 -16 c 2
+ 158 -16 l 2
+ 125 -16 98 -45 98 -77 c 0
+ 98 -108 124 -135 158 -135 c 0
+ 176 -135 185 -142 185 -155 c 0
+ 185 -169 176 -176 158 -176 c 0
+ 107 -176 57 -125 57 -77 c 0
+ 57 -44 82 25 175 25 c 0
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont

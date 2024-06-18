@@ -39,7 +39,7 @@ languagesystem latn dflt;
 
 @tengwar_ligatures = [aha_tinco silme_aha hwesta_tinco];
 
-@tengwar_hooks = [sarince arrince];
+@tengwar_hooks = [sarince arrince combiningsarince];
 
 @delete_sarince_ligatures = [calma_combiningsarince quesse_combiningsarince ando_combiningsarince umbar_combiningsarince suule_combiningsarince formen_combiningsarince aha_combiningsarince hwesta_combiningsarince anto_combiningsarince ampa_combiningsarince nuumen_combiningsarince oore_combiningsarince anna_combiningsarince vilya_combiningsarince suuletinco_combiningsarince formemparma_combiningsarince ahacalma_combiningsarince hwestaquesse_combiningsarince antando_combiningsarince ampumbar_combiningsarince yanta_combiningsarince uure_combiningsarince telco_combiningsarince];
 @delete_alda_lambe_ligatures = [lambe_putta alda_andatehta lambe_andatehta lambenuquerna_andatehta lambe_unuyatehta];
