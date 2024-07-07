@@ -24,8 +24,8 @@ languagesystem latn dflt;
 @parmateema_caps = [PARMA UMBAR FORMEN AMPA MALTA VALA FORMEMPARMA AMPUMBAR];
 @parmateema = [@parmateema_small @parmateema_caps];
 
-@parmateema_alt_small = [parma.alt parma.alt formen.alt formen.alt vala.alt vala.alt formemparma.alt formemparma.alt];
-@parmateema_alt_caps = [PARMA.alt PARMA.alt FORMEN.alt FORMEN.alt VALA.alt VALA.alt FORMEMPARMA.alt FORMEMPARMA.alt];
+@parmateema_alt_small = [parma.alt umbar.alt formen.alt ampa.alt malta.alt vala.alt formemparma.alt ampumbar.alt];
+@parmateema_alt_caps = [PARMA.alt UMBAR.alt FORMEN.alt AMPA.alt MALTA.alt VALA.alt FORMEMPARMA.alt AMPUMBAR.alt];
 @parmateema_alt = [@parmateema_alt_small @parmateema_alt_caps];
 
 @calmateema_small = [calma anga aha anca noldo anna ahacalma ancanga];
