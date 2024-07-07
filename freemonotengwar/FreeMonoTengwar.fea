@@ -11,7 +11,7 @@ languagesystem latn dflt;
 @andatehta = [andatehta];
 @dots_below = [putta unuyatehta];
 @tehtar_below_other = [unuatehta unuetehta unuetehta_unuetehta unuotehta unuutehta thinnas thinnas_putta combiningsarince.mark combiningsarince.alt tengwardigitMark];
-@tehtar_below = [@tehtar_below_other unuyatehta putta andatehta];
+@tehtar_below = [andatehta @dots_below @tehtar_below_other];
 @tehtar_all = [@tehtar_above @tehtar_inside @tehtar_below];
 
 @zerowidth = [@tehtar_all gravecomb acutecomb circumflexcmb tildecomb macroncomb overlinecmb brevecomb dotaccentcmb diaeresiscomb hookabovecomb ringcmb hungarumlautcmb caroncmb linevertnosp linevertdblnosp gravedblnosp breve_dotaccent uni0311 horncmb hooksubpalatnosp hooksubretronosp cedillacmb ogonekcmb strokeshortoverlaycmb strokelongoverlaycmb slashshortnosp slashlongnosp perispomenigreekcmb dialytikatonoscmb ypogegrammenigreekcmb commasubnosp leftharpoonaccent rightharpoonaccent uni20D2 uni20E1 uni20EC uni20ED uni20EE uni20EF uni20D6 uni20D7 zwnj zwj afii300 afii299 dotbelowcomb macronbelowcmb uni033A uni032a uni0346 uni20e2 uni20DD uni20DE uni20DF uni20E0 uni20DC uni20DB uni20e3 uni0312 uni0313 uni0314 uni031c uni0315 ringrighthalfsubnosp uni0340 uni0341 uni034c uni0351 uni0357 uni031d uni031e uni031f tildeoverlaycmb uni0316 uni0317 uni0324 uni0325 uni0329 uni032D uni032E uni032F uni032C uni0343 uni0348 uni034d uni0330 uni0332 uni0318 uni0319 uni0352 uni0320 uni0333 uni033b overscoredblnosp uni0347 uni031a uni032b uni033c uni033d uni033e uni0350 uni0353 uni0354 uni0355 uni0356 uni0358 uni0359 uni035a uni0349 uni034B];
@@ -49,9 +49,8 @@ languagesystem latn dflt;
 @tengwar_hooks = [sarince arrince combiningsarince];
 
 @delete_sarince_ligatures = [calma_combiningsarince quesse_combiningsarince ando_combiningsarince umbar_combiningsarince suule_combiningsarince formen_combiningsarince aha_combiningsarince hwesta_combiningsarince anto_combiningsarince ampa_combiningsarince nuumen_combiningsarince oore_combiningsarince anna_combiningsarince vilya_combiningsarince suuletinco_combiningsarince formemparma_combiningsarince ahacalma_combiningsarince hwestaquesse_combiningsarince antando_combiningsarince ampumbar_combiningsarince yanta_combiningsarince uure_combiningsarince telco_combiningsarince];
-@delete_alda_lambe_ligatures = [lambe_putta alda_andatehta lambe_andatehta lambenuquerna_andatehta lambe_unuyatehta];
 
-@tengwar_all_wo_lambe_alda = [@tincoteema @parmateema @parmateema_alt @calmateema @quesseteema @additional_tengwar_wo_lambe_alda @tengwar_ligatures @tengwar_hooks @delete_sarince_ligatures @delete_alda_lambe_ligatures];
+@tengwar_all_wo_lambe_alda = [@tincoteema @parmateema @parmateema_alt @calmateema @quesseteema @additional_tengwar_wo_lambe_alda @tengwar_ligatures @tengwar_hooks @delete_sarince_ligatures];
 
 @tengwar_all = [@tengwar_all_wo_lambe_alda @lambe_all @alda_all @lambenuquerna_all];
 
@@ -73,16 +72,6 @@ lookup TENGWAR_LIGATURES_IGNORING_TEHTAR {
     sub aha zwj tinco by aha_tinco;
     sub hwesta zwj tinco by hwesta_tinco;
     sub silme zwj aha by silme_aha;
-
-    #lookupflag 0;
-
-    # Tengwa and unutehta combinations
-    sub lambe putta putta by lambe_unuyatehta;
-    sub lambe andatehta by lambe_andatehta;
-    sub lambe putta by lambe_putta;
-    sub lambe unuyatehta by lambe_unuyatehta;
-    #sub alda andatehta by alda_andatehta;
-    sub lambenuquerna andatehta by lambenuquerna_andatehta;
 } TENGWAR_LIGATURES_IGNORING_TEHTAR;
 
 lookup TENGWAR_LIGATURES_REGARDING_TEHTAR {
@@ -146,9 +135,9 @@ feature ccmp {
 
 markClass [@tehtar_above] <anchor 0 0> @TOP_TEHTAR;
 markClass [@tehtar_inside] <anchor 0 0> @INSIDE_TEHTAR;
-markClass [@tehtar_below] <anchor 0 0> @ANDATEHTA_MARK;
-markClass [@tehtar_below] <anchor 0 0> @DOTS_BELOW_MARK;
-markClass [@tehtar_below] <anchor 0 0> @BOTTOM_TEHTAR;
+markClass [@andatehta] <anchor 0 0> @ANDATEHTA_MARK;
+markClass [@dots_below] <anchor 0 0> @DOTS_BELOW_MARK;
+markClass [@tehtar_below_other] <anchor 0 0> @BOTTOM_TEHTAR;
 
 feature mark {
     # Make zero width characters true zero width, cf.
@@ -161,21 +150,21 @@ feature mark {
         <anchor 600 0> mark @TOP_TEHTAR
         <anchor 600 0> mark @INSIDE_TEHTAR
         <anchor 600 273> mark @ANDATEHTA_MARK
-        <anchor 600 17> mark @DOTS_BELOW_MARK
+        <anchor 604 314> mark @DOTS_BELOW_MARK
         <anchor 600 0> mark @BOTTOM_TEHTAR;
 
     pos base [@alda_all]
         <anchor 600 0> mark @TOP_TEHTAR
         <anchor 600 0> mark @INSIDE_TEHTAR
-        <anchor 600-11 157> mark @ANDATEHTA_MARK
-        <anchor 600-11 157> mark @DOTS_BELOW_MARK
+        <anchor 611 157> mark @ANDATEHTA_MARK
+        <anchor 611 157> mark @DOTS_BELOW_MARK
         <anchor 600 0> mark @BOTTOM_TEHTAR;
 
     pos base [@lambenuquerna_all]
         <anchor 600 0> mark @TOP_TEHTAR
         <anchor 600 0> mark @INSIDE_TEHTAR
-        <anchor 600-72 186> mark @ANDATEHTA_MARK
-        <anchor 600-11 157> mark @DOTS_BELOW_MARK
+        <anchor 538 186> mark @ANDATEHTA_MARK
+        <anchor 589 157> mark @DOTS_BELOW_MARK
         <anchor 600 0> mark @BOTTOM_TEHTAR;
 
     pos base [@tengwar_all_wo_lambe_alda]

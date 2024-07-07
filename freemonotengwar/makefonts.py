@@ -45,7 +45,7 @@ for lookup in ("'mark' Mark Positioning in Greek", "'mark' Mark Positioning in L
    thefont.removeLookup(lookup)
 
 for char in ("etehta","unuetehta","etehta_etehta","unuetehta_unuetehta","nengwetehta","andatehta","etehtanuquerna",
-             "tengwarDoublesection","alda_andatehta","lambe_andatehta","lambenuquerna_andatehta"):
+             "tengwarDoublesection"):
    thefont[char].unlinkRef()
 
 thefont.selection.select(("ranges",None),0x0022,0xffff)
