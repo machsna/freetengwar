@@ -155,29 +155,33 @@ feature mark {
     # https://fontforge.org/docs/faq.html#faq-monospace
     # https://github.com/fontforge/fontforge/issues/5362
     # https://forum.glyphsapp.com/t/coding-ligatures-in-monospaced-font/8595/6
-    pos @zerowidth <0 0 600 0>;
+    #pos @zerowidth <0 0 600 0>;
 
-    pos base [@lambe_all] <anchor 0 0> mark @TOP_TEHTAR
-                          <anchor 0 0> mark @INSIDE_TEHTAR
-                          <anchor 0 273> mark @ANDATEHTA_MARK
-                          <anchor 0 17> mark @DOTS_BELOW_MARK
-                          <anchor 0 0> mark @BOTTOM_TEHTAR;
+    pos base [@lambe_all]
+        <anchor 600 0> mark @TOP_TEHTAR
+        <anchor 600 0> mark @INSIDE_TEHTAR
+        <anchor 600 273> mark @ANDATEHTA_MARK
+        <anchor 600 17> mark @DOTS_BELOW_MARK
+        <anchor 600 0> mark @BOTTOM_TEHTAR;
 
-    pos base [@alda_all] <anchor 0 0> mark @TOP_TEHTAR
-                         <anchor 0 0> mark @INSIDE_TEHTAR
-                         <anchor -11 157> mark @ANDATEHTA_MARK
-                         <anchor -11 157> mark @DOTS_BELOW_MARK
-                         <anchor 0 0> mark @BOTTOM_TEHTAR;
+    pos base [@alda_all]
+        <anchor 600 0> mark @TOP_TEHTAR
+        <anchor 600 0> mark @INSIDE_TEHTAR
+        <anchor 600-11 157> mark @ANDATEHTA_MARK
+        <anchor 600-11 157> mark @DOTS_BELOW_MARK
+        <anchor 600 0> mark @BOTTOM_TEHTAR;
 
-    pos base [@lambenuquerna_all] <anchor 0 0> mark @TOP_TEHTAR
-                                  <anchor 0 0> mark @INSIDE_TEHTAR
-                                  <anchor -72 186> mark @ANDATEHTA_MARK
-                                  <anchor -11 157> mark @DOTS_BELOW_MARK
-                                  <anchor 0 0> mark @BOTTOM_TEHTAR;
+    pos base [@lambenuquerna_all]
+        <anchor 600 0> mark @TOP_TEHTAR
+        <anchor 600 0> mark @INSIDE_TEHTAR
+        <anchor 600-72 186> mark @ANDATEHTA_MARK
+        <anchor 600-11 157> mark @DOTS_BELOW_MARK
+        <anchor 600 0> mark @BOTTOM_TEHTAR;
 
-    pos base [@tengwar_all_wo_lambe_alda] <anchor 0 0> mark @TOP_TEHTAR
-                                          <anchor 0 0> mark @INSIDE_TEHTAR
-                                          <anchor 0 0> mark @ANDATEHTA_MARK
-                                          <anchor 0 0> mark @DOTS_BELOW_MARK
-                                          <anchor 0 0> mark @BOTTOM_TEHTAR;
+    pos base [@tengwar_all_wo_lambe_alda]
+        <anchor 600 0> mark @TOP_TEHTAR
+        <anchor 600 0> mark @INSIDE_TEHTAR
+        <anchor 600 0> mark @ANDATEHTA_MARK
+        <anchor 600 0> mark @DOTS_BELOW_MARK
+        <anchor 600 0> mark @BOTTOM_TEHTAR;
 } mark;
