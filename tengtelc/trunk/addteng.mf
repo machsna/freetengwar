@@ -709,7 +709,7 @@ def draw_silme(expr side, style, lig, capital) =
   use(a1);
   if side=leftside:
     padding(0.7pt,if lig:-1.175pt else: 0.7pt fi);
-    t=identity;
+    t=if mirrorfig: identity reflectedabout((1/2w,0),(1/2w,1)) else: identity fi;
     top y1=if capital:ctasc else:tasc fi;
   else:
     padding(0.7pt,0.7pt);
@@ -869,8 +869,8 @@ def draw_aare(expr side, style, capital) =
   fi
   y8=-0.45exheight;
   if side=leftside:
-    padding(0.7pt,0.75pt);
-    t=identity;
+    padding(if mirrorfig: 0.75pt else: 0.7pt fi,if mirrorfig: 0.7pt else: 0.75pt fi);
+    t=if mirrorfig: identity reflectedabout((1/2w,0),(1/2w,1)) else: identity fi;
     use(a1); top y1=ascheight;
     x3=0.17[x7,x9];
   else:

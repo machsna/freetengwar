@@ -93,6 +93,7 @@ enddef;
 input tengenc;
 input stdteng;
 input addteng;
+input numerals;
 input tehtar;
 
 exit; end.
