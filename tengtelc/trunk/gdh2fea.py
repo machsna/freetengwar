@@ -20,7 +20,7 @@ def get_glyph_names(entries):
 
 def mark_class(markap):
 	output = []
-	for glyph in get_glyph_names(['@AnyTehta']):
+	for glyph in get_glyph_names(['@AnyTehta', '@FigureMark']):
 		if (glyph, markap) not in glyph_ap_pos:
 			continue
 		x, y = glyph_ap_pos[(glyph, markap)]
@@ -79,6 +79,7 @@ gpos.append(mark_to('base', 'UPTEHTA_LEFT', ['silme.flat', 'silme.lig_flat', 'aa
 gpos.append(mark_to('base', 'UPTEHTA_RIGHT', ['silme.open', 'silme.lig_open', 'aare.open', '@Hyarmen'], 'uap', '@AnyUpTehta', 'ldap'))
 gpos.append(mark_to('mark', 'UPTEHTA_UPTEHTA', '@AnyUpTehta', 'uap', '@AnyUpTehta', 'dap'))
 gpos.append(mark_to('base', 'DOWNTEHTA', '@AnyTengwa', 'dap', '@AnyDownTehta', 'uap'))
+gpos.append(mark_to('base', 'FIGUREMARK', '@AnyFigure', 'dap', '@FigureMark', 'uap'))
 gpos.append(mark_to('base', 'UNDERBAR_LEFT', '@StemDownRightTengwar', 'dap', '@UnderbarTehta', 'luap'))
 gpos.append(mark_to('base', 'UNDERBAR_RIGHT', '@StemDownLeftTengwar', 'dap', '@UnderbarTehta', 'ruap'))
 gpos.append(mark_to('base', 'DOWNTEHTA_LEFT', ['silmenuq', 'aarenuq', '@Alda', '@Mhtengwa'], 'dap', '@AnyDownTehta', 'ruap'))

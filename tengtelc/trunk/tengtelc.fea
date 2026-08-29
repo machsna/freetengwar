@@ -132,6 +132,9 @@ languagesystem latn dflt;
 @AnyDownTehta = [@CombDownTehtar @VarDownTehtar];
 @AnyTehta = [@CombTehtar @AnyCentralTehta @VarTehtar];
 
+@AnyFigure = [tengnumzero tengnumone tengnumtwo tengnumthree tengnumfour tengnumfive tengnumsix tengnumseven tengnumeight tengnumnine tengnumten tengnumeleven tengnumring];
+@FigureMark = [tengnumdot];
+
 @OverbarTehta = [overbar.norm overbar.wide overbar.lambe overbar.silme];
 @UnderbarTehta = [underbar.norm underbar.wide underbar.roomen underbar.silme underbar.lambe];
 
@@ -1309,6 +1312,7 @@ feature mark {
 ## ADJUST_SILME_UPTEHTA_RIGHT (implemented by mkmk) (second order lookup)
 # ADJUST_SILME_UPTEHTA (implemented by mkmk)
   lookup DOWNTEHTA;
+  lookup FIGUREMARK;
   lookup DOWNTEHTA_SHIFT_1;
   lookup DOWNTEHTA_SHIFT_2;
 ## DOWNTEHTA_SHIFT_3 (second order lookup)
@@ -1409,7 +1413,7 @@ feature kern {
 	atengwa.desc ATENGWA wtengwa wtengwa.desc hwestasin vaiya angwhtengwa
 	sarince sarince.high conncarr conncarr.long conncarr.conr
 	];
-@GDEF_Mark = [@AnyTehta];
+@GDEF_Mark = [@AnyTehta @FigureMark];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;
