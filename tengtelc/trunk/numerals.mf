@@ -175,8 +175,8 @@ beginchr(tengnumeleven,1ten);
   setap("dap",(0.5w,-2.45pt));
 endchr;
 mirrorfig:=false;
-beginrefchr(tengnumring,psc(silmenuq).width);
-  attach(silmenuq,"origo","origo");
+beginchr(tengnumring,1.0ten);
+  draw_sindarinytengwa;
   setap("dap",(0.5w,numdeep));
 endchr;
 
