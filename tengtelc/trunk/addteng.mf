@@ -78,39 +78,58 @@ beginchr("uniF8FF",2.6en); % The crown of Gondor, Telcontar's insignia.
 
 endchr;
 
-beginchr(mirroredosse,0.95en);
+def draw_mirroredosse(expr style) =
   padding(0.6pt,0.7pt);
+  numeric hgt; hgt=if style=capital: ctex else: tex fi;
   a1-10=a2-5=a3=a4=a5+3=35;
-  x1=lpad; z1=z2+whatever*dir 25; 
-  use(a2); top z2=(0.50[x1,x3],tex);
-  z3=(w-rpad,0.55tex);
+  x1=lpad; z1=z2+whatever*dir 25;
+  use(a2); top z2=(0.50[x1,x3],hgt);
+  z3=(w-rpad,0.55hgt);
   use(a4); bot z4=(0.40[x5,x3],0);
-  x5=0.1[x1,x3]; z5=z4+whatever*dir (180-25); 
+  x5=0.1[x1,x3]; z5=z4+whatever*dir (180-25);
   ap1=ang(a1..a2..a3..a4..a5);
   p1=z1{dir a1}..z2{right}..z3{down}..tension 1.05..z4{left}..z5{curl 2};
   draw_stroke(p1,ap1);
-  setap("uap",(x2,tex+apy));
-  setap("cap",(x2,1/2tex));
+  if style=capital:
+    use(a3); lft x3 - 1.1decsep = x11;
+    use(50); lft x11 = rt x10;
+    z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(1,2) of p1;
+    z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,3) of p1;
+    z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(1,2) of p1;
+    z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(2,3) of p1;
+    fill z12--z13--z15--z14--cycle;
+  fi
+  setap("uap",(x2,hgt+apy));
+  setap("cap",(x2,1/2hgt));
   setap("dap",(x4,-apy));
+  penlabels(range 1 thru 15);
+enddef;
+beginchr(mirroredosse,0.95en);
+  draw_mirroredosse(normal);
+endchr;
+beginchr(MIRROREDOSSE,0.95en*(ctex/tex));
+  draw_mirroredosse(capital);
 endchr;
 
-def draw_prefeanoreanqu(expr style) =
+def draw_prefeanoreanqu(expr style, sectype) =
 
+  numeric hgt,hdesc;
+  if sectype=capital: hgt=ctex; hdesc=ctdesc; else: hgt=tex; hdesc=tdesc; fi
   padding(0.2pt,if style=descend: 0.8pt else: 0.7pt fi);
   a2-2=a3+5=a4+5=a5+5=35;
   use(a2); z3=rt(0,0);
   use(a3); z4=rt(0,0);
-  z1=(w-rpad,0.3tex);
+  z1=(w-rpad,0.3hgt);
   if style=descend:
      x1-x2=0.5*xpart(z4-z3);
-     y2=-tdesc;
+     y2=-hdesc;
   elseif style=curved:
-     z2=(0.3[x11,x1],-tdesc);
+     z2=(0.3[x11,x1],-hdesc);
   fi
 
   a10=a11+2=a12+3=a13+10=a14-5=35;
-  use(a10); top z10=(if style=descend: 0.55 else: 0.5 fi [x11,x1],tex+o);
-  z11=(x13+0.65pt,0.50tex);
+  use(a10); top z10=(if style=descend: 0.55 else: 0.5 fi [x11,x1],hgt+o);
+  z11=(x13+0.65pt,0.50hgt);
   use(a12); bot z12=(0.27[x11,x1],0);
   use(a13); bot z13=(lpad,0);
 
@@ -130,17 +149,31 @@ def draw_prefeanoreanqu(expr style) =
   draw_stroke(p1,ap1);
   draw_stroke(p2,ap2);
 
-  setap("uap",(x10,tex+apy));
-  setap("cap",(x10,1/2tex));
+  if sectype=capital:
+    use(a11); rt x11 + 1.1decsep = x20;
+    use(50); rt x20 = lft x21;
+    z22=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(1,2) of p1;
+    z23=((x21,infinity)..(x21,-infinity)) intersectionpoint p2;
+    z24=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(1,2) of p1;
+    z25=((x20,infinity)..(x20,-infinity)) intersectionpoint p2;
+    fill z22--z23--z25--z24--cycle;
+  fi
+
+  setap("uap",(x10,hgt+apy));
+  setap("cap",(x10,1/2hgt));
   setap("dap",(0.4[x11,x1],-apy));
+  penlabels(range 1 thru 25);
 
 enddef;
   
 beginchr(prefeanoreanqu,1.25en);
-   draw_prefeanoreanqu(descend);
+   draw_prefeanoreanqu(descend,normal);
+endchr;
+beginchr(PREFEANOREANQU,1.25en*(ctex/tex));
+   draw_prefeanoreanqu(descend,capital);
 endchr;
 beginchr(prefeanoreanqu&".var",1.25en);
-   draw_prefeanoreanqu(curved);
+   draw_prefeanoreanqu(curved,normal);
 endchr;
 
 def draw_whtengwavarone(expr style, secstyle) =
@@ -231,17 +264,18 @@ beginchr(whtengwa&".var2",1.0ten);
   draw_whtengwavartwo(normal);
 endchr;
 
-def draw_whtengwavarthree(expr style) =
+def draw_whtengwavarthree(expr style, sectype) =
   padding(0.3pt,0.42pt);
+  numeric hgt,hdsc; if sectype=capital: hgt=ctex; hdsc=ctdesc; else: hgt=tex; hdsc=tdesc; fi
   a0=37; a1=52; a2=50;
 
   a3=60; a4-5=a5=a6=35; a7=40; a8=35;
 
   x3=x5-2.2pt; z3=z4+whatever*dir(35);
-  z4=(0.43[x5,x3],tex+0.85tdesc);
+  z4=(0.43[x5,x3],hgt+0.85hdsc);
   z5=(0.73[lpad,w-rpad],0.65[y6,y4]);
 
-  z6=(0.65[lpad,w-rpad],tex);
+  z6=(0.65[lpad,w-rpad],hgt);
   use(a7); bot z7=(lpad,0);
 
   p2=z3{dir a3}..z4{right}..z5..tension 1.0 and 1.5..z6..{-dir a7}z7;
@@ -257,17 +291,29 @@ def draw_whtengwavarthree(expr style) =
 
   draw_stroke(p1,ap1);
 
+  if sectype=capital:
+    use(a5); lft x5 - 1.1decsep = x21;
+    use(50); lft x21 = rt x20;
+    z22=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(0,2) of p2;
+    z23=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(2,4) of p2;
+    z24=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(0,2) of p2;
+    z25=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(2,4) of p2;
+    fill z22--z23--z25--z24--cycle;
+  fi
+
   setap("uap",(1/2[lpad,w-rpad],asc+apy));
-  setap("cap",(1/2[lpad,w-rpad],1/2tex));
+  setap("cap",(1/2[lpad,w-rpad],1/2hgt));
   setap("dap",(1/2[lpad,w-rpad],-apy));
 
-  penlabels(range 1 thru 12);
+  penlabels(range 1 thru 25);
 enddef;
 %beginchr(whtengwa&".var3",1.1ten);
-%  draw_whtengwavarthree(normal);
 %endchr;
 beginchr(whtengwa,1.2ten);
-  draw_whtengwavarthree(normal);
+  draw_whtengwavarthree(normal,normal);
+endchr;
+beginchr(WHTENGWA,1.2ten*(ctex/tex));
+  draw_whtengwavarthree(normal,capital);
 endchr;
 
 def draw_whtengwavarfour(expr style) =
@@ -979,23 +1025,33 @@ beginchr(AARENUQ,1.2ten);
 endchr;
 
 def draw_uure(expr style) =
-  if style=normal:
-     padding(0.7pt,0.7pt);
-  elseif style=conright:
+  if style=conright:
      padding(0.7pt,0.9pt);
+  else:
+     padding(0.7pt,0.7pt);
   fi
+  numeric hgt; hgt=if style=capital: ctex else: tex fi;
   a1=a2=a3=a4=35;
-  z1=(lpad,0.47tex);
-  use(a2); top z2=(0.51[x1,x3],tex+o);
-  z3=(w-rpad,0.53tex);
+  z1=(lpad,0.47hgt);
+  use(a2); top z2=(0.51[x1,x3],hgt+o);
+  z3=(w-rpad,0.53hgt);
   use(a4); bot z4=(0.49[x1,x3],-o);
   p1=z1{up}..z2{right}..z3{down}..z4{left}..cycle;
   ap1=ang(a1..a2..a3..a4..a1);
   draw_stroke(p1,ap1);
-  setap("uap",(x2,tex+apy));
-  setap("cap",(1/2[x2,x4],1/2tex));
+  if style=capital:
+    use(a1); rt x1 + 1.1decsep = x11;
+    use(50); rt x11 = lft x10;
+    z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(0,1) of p1;
+    z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(3,4) of p1;
+    z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(0,1) of p1;
+    z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(3,4) of p1;
+    fill z12--z13--z15--z14--cycle;
+  fi
+  setap("uap",(x2,hgt+apy));
+  setap("cap",(1/2[x2,x4],1/2hgt));
   setap("dap",(x4,-apy));
-  penlabels(range 1 thru 4);
+  penlabels(range 1 thru 15);
   if style=conright:
     draw_connection(7,2,false);
   fi
@@ -1005,6 +1061,9 @@ beginchr(uure,0.95ten);
 endchr;
 beginchr(uure&".conr",0.95ten);
   draw_uure(conright);
+endchr;
+beginchr(UURE,0.95ten*(ctex/tex));
+  draw_uure(capital);
 endchr;
 
 def draw_atengwa(expr style) =
@@ -1047,19 +1106,20 @@ beginchr(ATENGWA,1.05cten);
   draw_atengwa(capital);
 endchr;
 
-def draw_wtengwa(expr style) =
+def draw_wtengwa(expr style, sectype) =
   padding(0.6pt,if style=normal:0.3pt else: 0.25pt fi);
+  numeric hgt; hgt=if sectype=capital: ctex else: tex fi;
   a0=a1=a2=a3=35;
   x1=lpad;
-  use(a2); top z2=(0.58[x1,x3],tex+o);
+  use(a2); top z2=(0.58[x1,x3],hgt+o);
   x3=w-rpad-0.5pt;
   if style=normal:
     z0=z1+0.35pt*dir(-70);
-    y1=0.63tex; y3=0.68tex;
+    y1=0.63hgt; y3=0.68hgt;
     a4=30; x4=lpad; y9=0;
   elseif style=descend:
     z0=z1+0.55pt*dir(-60);
-    y1=0.58tex; y3=0.61tex;
+    y1=0.58hgt; y3=0.61hgt;
     a4=40; x4=0.5[0,lpad];y9=-0.7desc;
   fi
   use(a4); bot y4=y9;
@@ -1076,35 +1136,54 @@ def draw_wtengwa(expr style) =
     p2=z5{dir5}..z6{right}...z7{dir a7}; ap2=ang(a5--a6--a7);
 
   draw_stroke(p2,ap2);
-  setap("uap",(x2,tex+apy));
-  setap("cap",(x2,1/2tex));
+
+  if sectype=capital:
+    use(a3); lft x3 - 1.1decsep = x21;
+    use(50); lft x21 = rt x20;
+    z22=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(2,3) of p1;
+    z23=((x21,infinity)..(x21,-infinity)) intersectionpoint subpath(3,4) of p1;
+    z24=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(2,3) of p1;
+    z25=((x20,infinity)..(x20,-infinity)) intersectionpoint subpath(3,4) of p1;
+    fill z22--z23--z25--z24--cycle;
+  fi
+  setap("uap",(x2,hgt+apy));
+  setap("cap",(x2,1/2hgt));
   if style=normal:
     setap("dap",(x2,-apy));
   elseif style=descend:
     setap("dap",(x2,y6-apy));
   fi
-  penlabels(range 0 thru 7);
+  penlabels(range 0 thru 25);
 enddef;
 beginchr(wtengwa,1.05ten);
-  draw_wtengwa(normal);
+  draw_wtengwa(normal,normal);
+endchr;
+beginchr(WTENGWA,1.05ten*(ctex/tex));
+  draw_wtengwa(normal,capital);
 endchr;
 beginchr(wtengwa&".desc",1.05ten);
-  draw_wtengwa(descend);
+  draw_wtengwa(descend,normal);
+endchr;
+beginchr(WTENGWA&".desc",1.05ten*(ctex/tex));
+  draw_wtengwa(descend,capital);
 endchr;
 
-def draw_hwestasin(expr style) =
+def draw_hwestasin(expr style, sectype) =
   padding(0.7pt,-0.2pt);
+  numeric hgt,hasc,enw;
+  if sectype=capital: hgt=ctex; hasc=ctasc; enw=ten*(ctex/tex);
+  else: hgt=tex; hasc=tasc; enw=ten; fi
   a3=a4=a5=a6=a7=a8=a9=35;
-  z1=(x5+0.95ten,tasc); z2=(x1,0);
-  z5=(lpad,0.47tex);
+  z1=(x5+0.95enw,hasc); z2=(x1,0);
+  z5=(lpad,0.47hgt);
   x9=w-rpad; z9=z8+whatever*dir20;
   use(a8); bot z8=(0.6[x7,x9],-1/2o);
   ap1=ornang(rounded,narrcon);
   p1=ornpath(rounded,narrcon)(1,2);
-  z3=find_telcoap(0.55tex,a3,0,p1,ap1);
-  use(a4); top z4=(0.47[x5,x3],tex+o);
+  z3=find_telcoap(0.55hgt,a3,0,p1,ap1);
+  use(a4); top z4=(0.47[x5,x3],hgt+o);
   use(a6); bot z6=(0.47[x5,x3],-o);
-  t:=p1 heighttimes 0.10tex; if t=-1: t:=infinity; fi
+  t:=p1 heighttimes 0.10hgt; if t=-1: t:=infinity; fi
   if style=ascend:
     z7=change_angle(point t of p1,penangle t of ap1,a7);
   else:
@@ -1115,41 +1194,76 @@ def draw_hwestasin(expr style) =
   if style=ascend:
     draw_stroke(subpath(0,t) of p1,subpath(0,t) of ap1);
     draw_stroke(subpath(1,infinity) of p2,subpath(1,infinity) of ap2);
-    setap("uap",(0.7[x5,x4],tex+apy));
+    setap("uap",(0.7[x5,x4],hgt+apy));
     setap("dap",(0.1[x6,x7],-apy));
   else:
     draw_stroke(p2,ap2);
-    setap("uap",(x4,tex+apy));
+    setap("uap",(x4,hgt+apy));
     setap("dap",(0.1[x6,x7],-apy));
   fi
-  setap("cap",(0.5[x5,x3],1/2tex));
-  penlabels(range 1 thru 10);
+  if sectype=capital:
+    use(a5); rt x5 + 1.1decsep = x11;
+    use(50); rt x11 = lft x10;
+    z12=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(2,3) of p2;
+    z13=((x10,infinity)..(x10,-infinity)) intersectionpoint subpath(3,4) of p2;
+    z14=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(2,3) of p2;
+    z15=((x11,infinity)..(x11,-infinity)) intersectionpoint subpath(3,4) of p2;
+    fill z12--z13--z15--z14--cycle;
+  fi
+  setap("cap",(0.5[x5,x3],1/2hgt));
+  penlabels(range 1 thru 15);
 enddef;
 beginchr(hwestasin,1.5ten);
-  draw_hwestasin(ascend);
+  draw_hwestasin(ascend,normal);
+endchr;
+beginchr(HWESTASIN,1.5ten*(ctex/tex));
+  draw_hwestasin(ascend,capital);
 endchr;
 beginchr(vaiya,1.4ten);
-  draw_hwestasin(short);
+  draw_hwestasin(short,normal);
+endchr;
+beginchr(VAIYA,1.4ten*(ctex/tex));
+  draw_hwestasin(short,capital);
 endchr;
 
-def draw_angwhtengwa =
+def draw_angwhtengwa(expr sectype) =
   padding(0.0pt,0.7pt);
+  numeric hgt,hasc,hdesc;
+  if sectype=capital: hgt=ctex; hasc=ctasc; hdesc=ctdesc;
+  else: hgt=tex; hasc=tasc; hdesc=tdesc; fi
   a2=35;
   a3=55; a4=a5=a6+10=a7=a8=35; a9=45;
-  z1=(lpad+1.2pt,tasc);
+  z1=(lpad+1.2pt,hasc);
   z2=(x1,-o);
   ap1=ornang(rounded,noorn);
   p1=ornpath(rounded,noorn)(1,2);
   draw_stroke(p1,ang(ap1..a2));
-  z5=(w-rpad,0.65tex);
-  t:=p1 heighttimes 0.55tex;
-  z3=change_angle(point t of p1, penangle t of ap1, a3);
-  use(a4); top z4=(0.69[x3,x5],tex+1/2o);
-  z6=change_angle(z2,a2,a6);
+  z5=(w-rpad,0.65hgt);
+  if sectype=capital:
+    a10=a11+1=42;
+    use(penangle 1.5 of ap1); lft z16=point 1.5 of p1;
+    use(a10); top lft z10=(x16+decsep,y1);
+    use(a11); bot z11=(x10,+o);
+    x12=0.2[x1,x10]; z12=z10-whatever*dir(a10-5);
+    ap3=ang(a10..a10..a11..a2);
+    p3=z12..{dir a10}z10 & z10..z11 & z11..tension1.15..z2;
+    draw_stroke(p3,ap3);
+    t:=p3 heighttimes 0.55hgt;
+    z3=change_angle(point t of p3, penangle t of ap3, a3);
+  else:
+    t:=p1 heighttimes 0.55hgt;
+    z3=change_angle(point t of p1, penangle t of ap1, a3);
+  fi
+  use(a4); top z4=(0.69[x3,x5],hgt+1/2o);
+  if sectype=capital:
+    z6=change_angle(z11,a11,a6);
+  else:
+    z6=change_angle(z2,a2,a6);
+  fi
   ap2=ang(a3..a4..a5..a6..a7..a8..a9);
 %  if secstyle=normal:
     z7=(lpad,0.75[y6,y8]);
-    z8=(0.42[x7,x9],-0.85tdesc);
+    z8=(0.42[x7,x9],-0.85hdesc);
     x9=0.46[x7,x5]; z9=z8+whatever*dir(27);
     p2=z3{dir a3}..z4{right}..z5{down}..z6..z7{down}..tension 1.2..z8{right}..z9;
 %  elseif secstyle=open:
@@ -1159,13 +1273,16 @@ def draw_angwhtengwa =
 %    p2=z3{dir a3}..z4{right}..z5{down}..tension 1.2..z6..tension 2 and 1.2..z7{down}..tension 1.2..z8{right}..z9;
 %  fi
   draw_stroke(p2,ap2);
-  setap("uap",(x4,tex+apy));
-  setap("cap",(0.5[x3,x5],1/2tex));
+  setap("uap",(x4,hgt+apy));
+  setap("cap",(0.5[x3,x5],1/2hgt));
   setap("dap",(0.35[lpad,w-rpad],-apy));
-  penlabels(range 1 thru 12);
+  penlabels(range 1 thru 16);
 enddef;
 beginchr(angwhtengwa,1.15ten);
-  draw_angwhtengwa;
+  draw_angwhtengwa(normal);
+endchr;
+beginchr(ANGWHTENGWA,1.15cten+decsep+0.41tecil_w+(ctex-tex));
+  draw_angwhtengwa(capital);
 endchr;
 
 def draw_sarince(expr style) =
@@ -1280,5 +1397,11 @@ beginchr(conncarr&".long",0.7ten);
 endchr;
 beginchr(conncarr&".conr",0.7ten);
   draw_conncarr(conright);
+endchr;
+beginrefchr(CONNCARR,psc("captelco_leftshort").width);
+  padding(0.1pt,0.0pt);
+  attach("captelco_leftshort","lpad","origo");
+  setap("uap",(0.48[lpad,w-rpad],ctex+apy));
+  setap("dap",(0.5[lpad,w-rpad],-1.0pt));
 endchr;
 

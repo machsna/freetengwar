@@ -271,11 +271,11 @@ beginchr(shortcarr&".conb",0);
   setap("dap",(0.75[x2c,x2b],-apy));
 endchr;
 pause;
-%beginchr(extendedtelco,0);
-%  draw_telco(carrier, extended, normal, normal);
-%  setap("uap",(0.5[x1b,x1a],tasc+apy));
-%  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
-%endchr;
+beginchr(extendedtelco,0);
+  draw_telco(carrier, extended, normal, normal);
+  setap("uap",(0.5[x1b,x1a],tasc+apy));
+  setap("dap",(0.75[x2c,x2b],-tdesc-apy));
+endchr;
 
 forgd:=false;
 
@@ -1033,6 +1033,13 @@ beginrefchr(SHORTCARR,psc("captelco_leftshort").width);
   attach("captelco_leftshort","lpad","origo");
   setap("uap",(0.48[lpad,w-rpad],ctex+apy));
   setap("dap",(0.5[lpad,w-rpad],-1.0pt));
+endchr;
+
+beginrefchr(EXTENDEDTELCO,psc("captelco_leftext").width);
+  padding(0.1pt,0.0pt);
+  attach("captelco_leftext","lpad","origo");
+  setap("uap",(0.48[lpad,w-rpad],ctasc+apy));
+  setap("dap",(0.48[lpad,w-rpad],-ctdesc-apy));
 endchr;
 
 
