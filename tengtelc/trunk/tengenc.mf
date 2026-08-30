@@ -136,6 +136,21 @@ addalias(tengcb & "6A","startmodechange");
 addalias(tengcb & "6B","endmodechange");
 addalias(tengcb & "6C","bilboexclam");
 
+addalias(tengcb & "70","tengnumzero");
+addalias(tengcb & "71","tengnumone");
+addalias(tengcb & "72","tengnumtwo");
+addalias(tengcb & "73","tengnumthree");
+addalias(tengcb & "74","tengnumfour");
+addalias(tengcb & "75","tengnumfive");
+addalias(tengcb & "76","tengnumsix");
+addalias(tengcb & "77","tengnumseven");
+addalias(tengcb & "78","tengnumeight");
+addalias(tengcb & "79","tengnumnine");
+addalias(tengcb & "7A","tengnumten");
+addalias(tengcb & "7B","tengnumeleven");
+addalias(tengcb & "7C","tengnumring");
+addalias(tengcb & "7D","tengnumdot");
+
 addalias(tengcb & "80","TINCO");
 addalias(tengcb & "81","PARMA");
 addalias(tengcb & "82","CALMA");

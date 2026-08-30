@@ -1,0 +1,195 @@
+%% Tengwar Telcontar - a Unicode Tengwar font
+%% Copyright (c) 2005-2022 Johan Winge
+%% 
+%% Tengwar Telcontar is free software: you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation, either version 3 of
+%% the License, or (at your option) any later version.
+%% 
+%% As a special exception, if you create a document which uses this font,
+%% and embed this font or unaltered portions of this font into the
+%% document, this font does not by itself cause the resulting document
+%% to be covered by the GNU General Public License. This exception does
+%% not however invalidate any other reasons why the document might be
+%% covered by the GNU General Public License. If you modify this font,
+%% you may extend this exception to your version of the font, but you are
+%% not obligated to do so. If you do not wish to do so, delete this
+%% exception statement from your version.
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+footright=1; footleft=-1;
+
+forgd:=false;
+
+numeric numfootl; numfootl := 2.40pt;
+numeric numshallow; numshallow := -1.22pt;
+numeric numdeep;    numdeep    := -tdesc-0.65pt;
+
+def draw_numtelco(expr foot) =
+  padding(if foot=footleft: 2.8pt else: 1.0pt fi,
+          if foot=footright: 2.8pt else: 1.0pt fi);
+  a1-3=a2+1=35; a3+5=a4+5=35;
+  use(a2); z10=rt(0,0);
+  use(a3); z11=rt(0,0);
+  x1+x2=lpad+w-rpad;
+  x1-x2=0.5*xpart(z11-z10);
+  y1=tasc; y2=-tdesc;
+  z12=(x2,-0.24tdesc);
+  if foot=footleft:
+    a5+3=35;
+    ap1=ang(a1..a2..a3..a4..a5);
+    use(a4); bot z13=(x2-0.60numfootl,-tdesc);
+    z14=z13+0.66numfootl*dir(180-25);
+    p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)
+       ..z12{down}..tension 1.05..z13{left}..z14{curl 2};
+  else:
+    a5=35; a6=35;
+    ap1=ang(a1..a2..a3..a4..a5..a6);
+    use(a4); bot z13=(x2+0.54numfootl,-tdesc);
+    z14=(x2+numfootl,-0.50tdesc);
+    z15=z14+0.85pt*dir(180-50);
+    p1=topserif(1,2)(0.6pt, 0.5tex, 25, 0, ap1)
+       ..z12{down}..tension 1.15..z13{right}..tension 1.15..z14{up}..z15;
+  fi
+  draw_stroke(p1,ap1);
+  z3=find_telcoap(conpoint3,conpenangle3,180,p1,ap1); setap("lluuvap",z3);
+  z4=find_telcoap(conpoint4,conpenangle4,0,p1,ap1);   setap("lbarap",z4);
+  z5=find_telcoap(conpoint5,conpenangle5,0,p1,ap1);   setap("rluuvap",z5);
+  z6=find_telcoap(conpoint6,conpenangle6,180,p1,ap1); setap("rbarap",z6);
+  setap("uap",(0.5[x1,x2],tasc+apy));
+  setap("dap",(0.5[x1,x2],-tdesc-apy));
+enddef;
+
+beginchr("num_telcoR",0);
+  draw_numtelco(footright);
+endchr;
+beginchr("num_telcoL",0);
+  draw_numtelco(footleft);
+endchr;
+
+def draw_numbows(expr nbows, lead) =
+  padding(0.8pt,0.8pt);
+  numeric bw; bw=(w-rpad-lpad-lead)/nbows;
+  a1=36; a2=36;
+  use(a1); top z1=(lpad-0.3pt,tex);
+  use(a2); top z2=(w-rpad+0.3pt,tex);
+  ap1=ang(a1--a2);
+  p1=z1--z2;
+  draw_stroke(p1,ap1);
+  for i=1 upto nbows:
+    a[10i+4]=35; a[10i+5]=35; a[10i+6]=35; a[10i+7]=35; a[10i+8]=35;
+    x[10i+3]:=lpad+lead+(i-0.55)*bw;
+    t:=xpart(p1 intersectiontimes ((x[10i+3],infinity)--(x[10i+3],-infinity)));
+    z[10i+4]=change_angle(point t of p1,penangle t of ap1+180,a[10i+4]+180);
+    z[10i+5]=(lpad+lead+(i-1)*bw,0.63[y[10i+4],y[10i+6]]);
+    z[10i+6]=(0.47[x[10i+5],x[10i+7]],-0.09tdesc);
+    z[10i+7]=(lpad+lead+i*bw,0.66[y[10i+4],y[10i+6]]);
+    if i=nbows:
+      z[10i+8]=z[10i+7]+0.85pt*dir(180-50);
+      ap[10i+2]=ang(a[10i+4]..a[10i+5]..a[10i+6]..a[10i+7]..a[10i+8]);
+      p[10i+2]=z[10i+4]{curl 0.2}..z[10i+5]{down}..z[10i+6]{right}
+               ..tension 1.2..z[10i+7]{up}..z[10i+8];
+    else:
+      ap[10i+2]=ang(a[10i+4]..a[10i+5]..a[10i+6]..a[10i+7]);
+      p[10i+2]=z[10i+4]{curl 0.2}..z[10i+5]{down}..z[10i+6]{right}
+               ..tension 1.2..z[10i+7]{up};
+    fi
+    draw_stroke(p[10i+2],ap[10i+2]);
+  endfor
+  setap("rbarap",(lpad-0.3pt,ypart conpoint6));
+  setap("uap",(0.5w,tex+apy));
+  setap("dap",(0.5w,-apy));
+  setap("cap",(0.5w,0.5tex));
+enddef;
+
+numeric numlead; numlead := 0.50numfootl;
+
+beginchr("num_bows1",1.15ten);          draw_numbows(1,0);       endchr;
+beginchr("num_bows2",1.90ten);          draw_numbows(2,0);       endchr;
+beginchr("num_bows3",2.65ten);          draw_numbows(3,0);       endchr;
+beginchr("num_bows1t",1.15ten+numlead); draw_numbows(1,numlead); endchr;
+beginchr("num_bows2t",1.90ten+numlead); draw_numbows(2,numlead); endchr;
+
+forgd:=true;
+
+beginrefchr(tengnumone,psc("num_bows1").width);
+  attach("num_bows1","origo","origo");
+  setap("dap",(0.5w,numshallow));
+endchr;
+beginrefchr(tengnumtwo,psc("num_bows2").width);
+  attach("num_bows2","origo","origo");
+  setap("dap",(0.5w,numshallow));
+endchr;
+beginrefchr(tengnumthree,psc("num_bows3").width);
+  attach("num_bows3","origo","origo");
+  setap("dap",(0.5w,numshallow));
+endchr;
+
+beginrefchr(tengnumfour,psc("num_telcoR").width);
+  attach("num_telcoR","origo","origo");
+  setap("dap",(0.5w,numdeep));
+endchr;
+def build_numtengwa(expr s, t, f) =
+  beginrefchr(s,xpart(apt(t,"rbarap").pt-apt(f,"rbarap").pt)+psc(f).width);
+    attach(t,"origo","origo");
+    attach(f,"rbarap","rbarap");
+enddef;
+
+build_numtengwa(tengnumfive,"num_telcoR","num_bows1t");
+  setap("dap",(0.744w,numshallow));
+endchr;
+build_numtengwa(tengnumsix,"num_telcoR","num_bows2t");
+  setap("dap",(0.554w,numshallow));
+endchr;
+
+beginrefchr(tengnumseven,psc("num_telcoL").width);
+  attach("num_telcoL","origo","origo");
+  setap("dap",(0.5w,numdeep));
+endchr;
+
+build_tengwa(tengnumeight,"num_telcoL","closingbar_low1","teema2luuva");
+  setap("dap",(0.654w,numshallow));
+endchr;
+build_tengwa(tengnumnine,"num_telcoL","closingbar_low3","teema2luuvar");
+  setap("dap",(0.5w,numshallow));
+endchr;
+
+beginrefchr(tengnumzero,psc(mirroredosse).width);
+  attach(mirroredosse,"origo","origo");
+  setap("dap",(0.5w,numshallow));
+endchr;
+mirrorfig:=true;
+beginchr(tengnumten,1ten);
+  draw_silme(leftside,normal,false,false);
+  setap("dap",(0.5w,numshallow));
+endchr;
+beginchr(tengnumeleven,1ten);
+  draw_aare(leftside,normal,false);
+  setap("dap",(0.5w,-2.45pt));
+endchr;
+mirrorfig:=false;
+beginchr(tengnumring,1.0ten);
+  draw_sindarinytengwa;
+  setap("dap",(0.5w,numdeep));
+endchr;
+
+beginchr(tengnumdot,0);
+  numeric ringr, ringc; ringr=1.20pt; ringc=-0.60pt-ringr;
+  a1=a2=a3=a4=35;
+  use(a1); lft z1=(-ringr,ringc-0.06ringr);
+  use(a2); top z2=(0.02ringr,ringc+ringr);
+  use(a3); rt  z3=(ringr,ringc+0.06ringr);
+  use(a4); bot z4=(-0.02ringr,ringc-ringr);
+  p1=z1{up}..z2{right}..z3{down}..z4{left}..cycle;
+  ap1=ang(a1..a2..a3..a4..a1);
+  draw_stroke(p1,ap1);
+  setap("uap",(0,ringc+ringr));
+  setap("dap",(0,ringc-ringr-apy));
+endchr;
