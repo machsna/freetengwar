@@ -47,23 +47,24 @@ languagesystem latn dflt;
 @Aare = [aare aare.open aare.flat AARE AARE.open AARE.flat];
 @AareNuq = [aarenuq AARENUQ];
 @Hyarmen = [hyarmen hyarmen.conr HYARMEN];
-@HwestaSin = [hwestasin];
+@HwestaSin = [hwestasin HWESTASIN];
 @Yanta = [yanta yanta.conr YANTA];
-@Uure = [uure uure.conr];
+@Uure = [uure uure.conr UURE];
 @LongCarr = [longcarr longcarr.conl LONGCARR];
 @Halla = [halla HALLA];
 @ShortCarr = [shortcarr shortcarr.conr shortcarr.conl shortcarr.conb SHORTCARR];
-@MirroredOsse = [mirroredosse];
-@Wtengwa = [wtengwa wtengwa.desc];
+@ExtendedTelco = [extendedtelco EXTENDEDTELCO];
+@MirroredOsse = [mirroredosse MIRROREDOSSE];
+@Wtengwa = [wtengwa wtengwa.desc WTENGWA WTENGWA.desc];
 @Atengwa = [atengwa ATENGWA atengwa.desc];
-@ConnCarr = [conncarr conncarr.long conncarr.conr];
-@Whtengwa = [whtengwa whtengwa.var1 whtengwa.var2];
+@ConnCarr = [conncarr conncarr.long conncarr.conr CONNCARR];
+@Whtengwa = [whtengwa whtengwa.var1 whtengwa.var2 WHTENGWA];
 @OpenAnna = [openanna openanna.conl OPENANNA];
-@PreFeaQu = [prefeanoreanqu prefeanoreanqu.var];
+@PreFeaQu = [prefeanoreanqu prefeanoreanqu.var PREFEANOREANQU];
 @Mhtengwa = [mhtengwa MHTENGWA];
 @BeleriandicMh = [beleriandicmh BELERIANDICMH];
-@AngWhtengwa = [angwhtengwa];
-@Vaiya = [vaiya];
+@AngWhtengwa = [angwhtengwa ANGWHTENGWA];
+@Vaiya = [vaiya VAIYA];
 @SHook = [sarince sarince.high];
 
 @LargeInterp = [tenginterrog tengexlam tengparen];
@@ -73,27 +74,27 @@ languagesystem latn dflt;
                nuumen malta noldo nwalme oore vala anna vilya
                extthuule extformen extharma exthwesta extanto extampa extanca extunque
                lambe alda roomen arda silme silmenuq aare aarenuq
-               hyarmen yanta longcarr halla shortcarr
-               atengwa openanna mhtengwa beleriandicmh];
+               hyarmen hwestasin yanta uure longcarr halla shortcarr extendedtelco
+               atengwa openanna mhtengwa beleriandicmh conncarr angwhtengwa vaiya mirroredosse prefeanoreanqu wtengwa whtengwa];
 @dectengwar =   [TINCO PARMA CALMA QUESSE ANDO UMBAR ANGA UNGWE
                THUULE FORMEN HARMA HWESTA ANTO AMPA ANCA UNQUE
                NUUMEN MALTA NOLDO NWALME OORE VALA ANNA VILYA
                EXTTHUULE EXTFORMEN EXTHARMA EXTHWESTA EXTANTO EXTAMPA EXTANCA EXTUNQUE
                LAMBE ALDA ROOMEN ARDA SILME SILMENUQ AARE AARENUQ
-               HYARMEN YANTA LONGCARR HALLA SHORTCARR
-               ATENGWA OPENANNA MHTENGWA BELERIANDICMH];
+               HYARMEN HWESTASIN YANTA UURE LONGCARR HALLA SHORTCARR EXTENDEDTELCO
+               ATENGWA OPENANNA MHTENGWA BELERIANDICMH CONNCARR ANGWHTENGWA VAIYA MIRROREDOSSE PREFEANOREANQU WTENGWA WHTENGWA];
 
 @WideTengwar = [@Ando @Umbar @Anga @Ungwe @Anto @Ampa @Anca @Unque @Nuumen @Malta @Noldo @Nwalme @ExtAnto @ExtAmpa @ExtAnca @ExtUnque @Mhtengwa];
 @StemUpRightTengwar = [@Harma @Hwesta @Anca @Unque @ExtHarma @ExtHwesta @ExtAnca @ExtUnque silme.flat silme.lig_flat aare.flat @HwestaSin];
-@StemUpLeftTengwar = [@Thuule @Formen @Anto @Ampa @ExtThuule @ExtFormen @ExtAnto @ExtAmpa silme.open silme.lig_open aare.open @Hyarmen @AngWhtengwa tinco.lig @LargeInterp @LongCarr @Halla @ShortCarr];
+@StemUpLeftTengwar = [@Thuule @Formen @Anto @Ampa @ExtThuule @ExtFormen @ExtAnto @ExtAmpa silme.open silme.lig_open aare.open @Hyarmen @AngWhtengwa tinco.lig @LargeInterp @LongCarr @Halla @ShortCarr @ExtendedTelco];
 @StemDownRightTengwar = [@Calma @Quesse @Anga @Ungwe @ExtHarma @ExtHwesta @ExtAnca @ExtUnque silmenuq aarenuq];
 @StemDownLeftTengwar = [@Tinco @Parma @Ando @Umbar @ExtThuule @ExtFormen @ExtAnto @ExtAmpa @Roomen @Arda @AngWhtengwa];
-@NarrowTengwar = [@LongCarr @Halla @ShortCarr @ConnCarr @Atengwa @MirroredOsse];
+@NarrowTengwar = [@LongCarr @Halla @ShortCarr @ExtendedTelco @ConnCarr @Atengwa @MirroredOsse];
 
 @AnyTengwa = [@Tinco @Parma @Calma @Quesse @Ando @Umbar @Anga @Ungwe @Thuule @Formen @Harma @Hwesta
            @Anto @Ampa @Anca @Unque @Nuumen @Malta @Noldo @Nwalme @Oore @Vala @Anna @Vilya
            @ExtThuule @ExtFormen @ExtHarma @ExtHwesta @ExtAnto @ExtAmpa @ExtAnca @ExtUnque
-           @Roomen @Arda @Lambe @Alda @Silme @SilmeNuq @Aare @AareNuq @Hyarmen @HwestaSin @Yanta @Uure @LongCarr @Halla @ShortCarr
+           @Roomen @Arda @Lambe @Alda @Silme @SilmeNuq @Aare @AareNuq @Hyarmen @HwestaSin @Yanta @Uure @LongCarr @Halla @ShortCarr @ExtendedTelco
            @MirroredOsse @Wtengwa @Atengwa @ConnCarr @Whtengwa @OpenAnna @PreFeaQu @Mhtengwa @BeleriandicMh @AngWhtengwa @Vaiya @SHook
            dottedcircle];
 
@@ -821,11 +822,13 @@ feature cv03 {
 # (this is pointless; consider changing the metafont generation instead)
 lookup SIMPLE_SUBSTITUTIONS {
   sub wtengwa by wtengwa.desc;
+  sub WTENGWA by WTENGWA.desc;
 } SIMPLE_SUBSTITUTIONS;
 
 # cv04: descwtengwa (order after SIMPLE_SUBSTITUTIONS)
 feature cv04 {
   sub wtengwa.desc by wtengwa;
+  sub WTENGWA.desc by WTENGWA;
 } cv04;
 
 #cv05: whtengwavar (order after cv04)
